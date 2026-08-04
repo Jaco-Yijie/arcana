@@ -22,6 +22,8 @@ import type {
   StructuredReading,
 } from '@/types/reading'
 import { localMockReading } from './mockProvider'
+import { IS_STREAMLIT } from './streamlitTransport'
+import { StreamlitReadingError, generateViaStreamlit } from './streamlitReading'
 
 export interface ReadingOutcome {
   reading: StructuredReading
@@ -108,6 +110,28 @@ export async function requestReadingWithFallback(
   request: ReadingRequest,
   signal?: AbortSignal,
 ): Promise<ReadingOutcome> {
+  // Streamlit 形态下没有 /api 路由，走组件通信协议由 Python 代发
+  if (IS_STREAMLIT) {
+    try {
+      return { reading: await generateViaStreamlit(request), localFallback: false }
+    } catch (err) {
+      if (err instanceof StreamlitReadingError) {
+        throw new ReadingRequestError({
+          code: err.retryable ? 'upstream-error' : 'unauthorized',
+          message: err.message,
+          retryable: err.retryable,
+          canFallbackToMock: true,
+        })
+      }
+      throw new ReadingRequestError({
+        code: 'schema-invalid',
+        message: '这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。',
+        retryable: true,
+        canFallbackToMock: true,
+      })
+    }
+  }
+
   try {
     return await requestReading(request, signal)
   } catch (err) {

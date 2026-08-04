@@ -13,7 +13,8 @@
     "dev:all": "node scripts/dev.mjs",
     "start": "tsx server/index.ts",
     "reading:check": "tsx scripts/reading-eval.ts",
-    "deploy:build": "npm ci && npm run build"
+    "deploy:build": "npm ci && npm run build",
+    "build:streamlit": "tsc -b && vite build --config vite.streamlit.config.ts"
   },
   "dependencies": {
     "framer-motion": "^12.43.0",

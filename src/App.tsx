@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { SettingsProvider } from '@/store/SettingsContext'
 import { SessionProvider } from '@/store/SessionContext'
 import { StarfieldBackground } from '@/components/atoms/StarfieldBackground'
@@ -22,11 +22,18 @@ import SettingsPage from '@/pages/SettingsPage'
  * 沉浸区（/focus + /table/*）不渲染全局导航，由 ImmersiveShell 统一处理。
  * 这里只做装配 —— 任何业务逻辑都不应该出现在 App.tsx（Guardrail G-19）。
  */
+/**
+ * Streamlit 自定义组件跑在 iframe 里，路径是 Streamlit 分配的静态地址，
+ * BrowserRouter 的 history API 在那里改不动 URL，导航会直接失效 ——
+ * 所以这个形态下必须换成 HashRouter（地址会变成 `#/journal` 这样）。
+ */
+const Router = import.meta.env.VITE_DEPLOY_TARGET === 'streamlit' ? HashRouter : BrowserRouter
+
 export default function App() {
   return (
     <SettingsProvider>
       <SessionProvider>
-        <BrowserRouter>
+        <Router>
           <StarfieldBackground />
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -45,7 +52,7 @@ export default function App() {
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-        </BrowserRouter>
+        </Router>
       </SessionProvider>
     </SettingsProvider>
   )
