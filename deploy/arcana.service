@@ -1,0 +1,48 @@
+# Arcana 解读服务 —— systemd 单元
+#
+# 安装：
+#   sudo cp deploy/arcana.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now arcana
+#
+# 查看日志：  sudo journalctl -u arcana -f
+# 重启：      sudo systemctl restart arcana
+
+[Unit]
+Description=Arcana Tarot Reading Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/arcana
+# 直接监听 80，省掉一层反向代理。
+# 没有 nginx 就没有那个默认 60s 的 proxy_read_timeout ——
+# 而我们的解读最长要 180s，用 nginx 反而要专门去调它。
+Environment=PORT=80
+Environment=NODE_ENV=production
+# API Key 放在这个文件里，权限 600，不进仓库
+EnvironmentFile=/opt/arcana/.env
+ExecStart=/usr/bin/npm start
+
+Restart=always
+RestartSec=3
+# 单进程 MVP，日志交给 journald
+StandardOutput=journal
+StandardError=journal
+
+# 以普通用户运行，但允许绑定 80 这样的特权端口
+User=arcana
+Group=arcana
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+
+# 基本加固
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/arcana
+
+[Install]
+WantedBy=multi-user.target

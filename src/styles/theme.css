@@ -1,0 +1,365 @@
+/* =============================================================================
+ * Arcana — Design Tokens & Base Layer
+ * 视觉方向：Dreamlike / Surreal / Celestial / Quiet / Premium
+ * 心智模型：一座安静的深夜天文馆，不是一个算命 App。克制 > 华丽，留白 > 装饰。
+ *
+ * 本文件是唯一的 token 来源。业务组件不得写死颜色/圆角/时长字面量，
+ * 一律使用 Tailwind 原子类（由下方 @theme 生成）或 var(--token)。
+ * 文档见 docs/03-design-system.md
+ * ========================================================================== */
+
+@import 'tailwindcss';
+
+/* `static` = 无论是否被 Tailwind 原子类引用，所有 token 都会输出到 :root。
+   这是必要的：卡牌几何、动效时长会被组件通过内联 style 与 framer-motion 直接
+   以 var(--token) 读取，Tailwind 无法静态分析到它们。 */
+@theme static {
+  /* ---------------------------------------------------------------------
+   * 1. Color — 深色单一主题（不做浅色模式，见 G-18）
+   * 色域锁定：冷蓝夜空（hue 248–268），主强调冷银，次强调冷金（用量 < 5%）
+   * ------------------------------------------------------------------- */
+
+  /* Background 背景 3 档：越靠近用户视线中心越亮 */
+  --color-bg-void: oklch(0.145 0.022 265); /* #060a13 最深，页面最底层 / 专注模式 */
+  --color-bg-deep: oklch(0.195 0.028 265); /* #0f1522 应用默认底色 */
+  --color-bg-raised: oklch(0.255 0.03 266); /* #1c2331 抬升区域（牌桌台面） */
+
+  /* Surface 表面 3 档：浮在背景之上的实体 */
+  --color-surface-1: oklch(0.285 0.028 266); /* #242a38 面板 / 列表项 */
+  --color-surface-2: oklch(0.335 0.028 267); /* #303645 卡片 / 输入框内壁 */
+  --color-surface-3: oklch(0.395 0.026 268); /* #404655 抬起 / 拖拽中 / 弹层 */
+
+  /* Text 文字 4 档 */
+  --color-text-hi: oklch(0.955 0.008 260); /* #edf0f6 标题、牌名 */
+  --color-text-mid: oklch(0.8 0.014 262); /* #b9bec7 正文 */
+  --color-text-low: oklch(0.64 0.018 264); /* #878c97 次要说明、关键词 */
+  --color-text-faint: oklch(0.5 0.02 266); /* #5e636f 禁用、占位符、极弱标注 */
+
+  /* Accent 强调 */
+  --color-silver: oklch(0.87 0.022 248); /* #c9d6e2 主强调：选中、焦点、可交互边 */
+  --color-silver-dim: oklch(0.7 0.026 250); /* #93a0ae 主强调的静态/低态 */
+  --color-gold: oklch(0.845 0.058 88); /* #dccba1 次强调：仪式性瞬间（翻牌、完成） */
+  --color-gold-dim: oklch(0.7 0.052 86); /* #ad9d7a 次强调低态 */
+
+  /* Semantic 语义色（只有两个，克制） */
+  --color-affirm: oklch(0.78 0.06 178); /* #8ec4b7 成功 / 已确认 / 已保存 */
+  --color-caution: oklch(0.8 0.08 66); /* #e2b487 警示 / 安全边界提示 */
+
+  /* Card 牌面基础色（CardArt / CardBack 的共同底） */
+  --color-card-sky-a: oklch(0.24 0.045 258); /* #111f34 牌面天空上缘 */
+  --color-card-sky-b: oklch(0.36 0.055 262); /* #2d3d5a 牌面天空下缘 */
+
+  /* Line 描边（半透明，叠在任意底色上都成立） */
+  --color-line-hairline: color-mix(in oklab, var(--color-silver) 10%, transparent);
+  --color-line-soft: color-mix(in oklab, var(--color-silver) 18%, transparent);
+  --color-line-strong: color-mix(in oklab, var(--color-silver) 32%, transparent);
+
+  /* ---------------------------------------------------------------------
+   * 2. Typography 排版
+   * 全部使用系统字体栈（零网络请求、零 FOUT）。
+   * Sans 用于 UI，Serif 仅用于牌名与大标题（提供「典籍感」而非玄学感）。
+   * ------------------------------------------------------------------- */
+  --font-sans:
+    ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', Roboto, sans-serif;
+  --font-serif:
+    ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Songti SC', 'Source Han Serif SC',
+    Georgia, serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* 字号阶梯（Mobile First，基准 375×667；最小 13px） */
+  --text-caption: 0.8125rem; /* 13px 标注、时间戳、牌位名 */
+  --text-caption--line-height: 1.54;
+  --text-caption--letter-spacing: 0.02em;
+
+  --text-note: 0.875rem; /* 14px 辅助说明、按钮 md */
+  --text-note--line-height: 1.5;
+
+  --text-body: 0.9375rem; /* 15px 默认正文 */
+  --text-body--line-height: 1.72;
+
+  --text-read: 1rem; /* 16px 长文阅读（牌义、AI Reading）+ 防 iOS 聚焦缩放 */
+  --text-read--line-height: 1.8;
+
+  --text-title: 1.125rem; /* 18px 区块标题 */
+  --text-title--line-height: 1.45;
+
+  --text-heading: 1.375rem; /* 22px 页面标题 */
+  --text-heading--line-height: 1.36;
+  --text-heading--letter-spacing: -0.01em;
+
+  --text-display: 1.75rem; /* 28px 牌名、页面主标题 */
+  --text-display--line-height: 1.28;
+  --text-display--letter-spacing: -0.012em;
+
+  --text-hero: 2.125rem; /* 34px 首页唯一大字 */
+  --text-hero--line-height: 1.18;
+  --text-hero--letter-spacing: -0.018em;
+
+  --tracking-wide-caps: 0.16em; /* 小字全大写标签（牌位名） */
+
+  /* ---------------------------------------------------------------------
+   * 3. Spacing 间距 — 4px 基准（Tailwind 默认 --spacing 保持 0.25rem）
+   * 下列为语义别名，用于跨页面保持节奏一致
+   * ------------------------------------------------------------------- */
+  --space-gutter: 1.25rem; /* 20px 页面左右安全边距（375 屏） */
+  --space-block: 1.5rem; /* 24px 段落/区块之间 */
+  --space-section: 2.5rem; /* 40px 大区块之间 */
+  --space-breath: 4rem; /* 64px 仪式性留白（首页、专注模式） */
+  --space-tap: 2.75rem; /* 44px 最小触控目标 */
+
+  /* ---------------------------------------------------------------------
+   * 4. Border Radius 圆角 — 统一「柔和但不圆润卡通」
+   * ------------------------------------------------------------------- */
+  --radius-hair: 0.125rem; /* 2px 极小标记、进度条 */
+  --radius-xs: 0.375rem; /* 6px 小牌 sm / tag */
+  --radius-sm: 0.625rem; /* 10px 中牌 md / 输入框 / 按钮 md */
+  --radius-md: 0.875rem; /* 14px 大牌 lg / 按钮 lg */
+  --radius-lg: 1.125rem; /* 18px 面板 Panel */
+  --radius-xl: 1.5rem; /* 24px 底部弹层 / 大容器 */
+  --radius-pill: 999px;
+
+  /* ---------------------------------------------------------------------
+   * 5. Elevation 阴影 — 深色主题下阴影必须「吃光」而不是「发光」
+   * 只有 --shadow-ritual 带极轻微冷金辉光，仅用于翻牌落定瞬间
+   * ------------------------------------------------------------------- */
+  --shadow-flat: 0 1px 0 0 color-mix(in oklab, var(--color-silver) 6%, transparent) inset;
+  --shadow-card: 0 2px 10px -2px oklch(0.1 0.02 265 / 0.55), 0 8px 28px -12px oklch(0.08 0.02 265 / 0.6);
+  --shadow-lift: 0 6px 18px -4px oklch(0.08 0.02 265 / 0.6), 0 20px 48px -18px oklch(0.06 0.02 265 / 0.75);
+  --shadow-panel: 0 1px 0 0 color-mix(in oklab, var(--color-silver) 7%, transparent) inset,
+    0 12px 40px -24px oklch(0.06 0.02 265 / 0.9);
+  --shadow-ritual: 0 0 0 1px color-mix(in oklab, var(--color-gold) 22%, transparent),
+    0 0 24px -6px color-mix(in oklab, var(--color-gold) 20%, transparent);
+
+  /* ---------------------------------------------------------------------
+   * 6. Motion 动效 — 禁止强弹跳 spring。全部为「有重量的减速」。
+   * ------------------------------------------------------------------- */
+  --ease-drift: cubic-bezier(0.22, 0.61, 0.36, 1); /* 漂浮/位移：慢起慢收 */
+  --ease-settle: cubic-bezier(0.32, 0.72, 0, 1); /* 落定：前段快、末段极慢，有重量 */
+  --ease-veil: cubic-bezier(0.4, 0, 0.2, 1); /* 纯不透明度：中性 */
+  --ease-enter: cubic-bezier(0.16, 1, 0.3, 1); /* 页面进入：expo-out */
+  --ease-exit: cubic-bezier(0.7, 0, 0.84, 0); /* 页面离开：expo-in */
+
+  --duration-tap: 90ms; /* 按压反馈 */
+  --duration-quick: 160ms; /* hover/focus/颜色变化 */
+  --duration-base: 260ms; /* 常规位移、展开收起 */
+  --duration-page: 380ms; /* 页面转场 */
+  --duration-flip: 520ms; /* 翻牌（唯一超过 500ms 的交互动画） */
+  --duration-settle: 620ms; /* 摆牌落位 / 洗牌重组 */
+  --duration-ambient: 24s; /* 背景星空漂移 */
+
+  /* 环境动画（背景层专用，绝不用于内容） */
+  --animate-drift-slow: drift-slow var(--duration-ambient) var(--ease-drift) infinite alternate;
+  --animate-breathe: breathe 14s var(--ease-drift) infinite alternate;
+
+  @keyframes drift-slow {
+    from {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    to {
+      transform: translate3d(-1.5%, 1.2%, 0) scale(1.04);
+    }
+  }
+  @keyframes breathe {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 0.86;
+    }
+  }
+
+  /* ---------------------------------------------------------------------
+   * 7. Card 卡牌几何 — 标准塔罗比例 1 : 1.667
+   * ------------------------------------------------------------------- */
+  --card-ratio: 0.5999; /* = 1 / 1.667 */
+  --card-w-sm: 4rem; /* 64px  摊牌扇形 / 日记缩略图 */
+  --card-w-md: 7rem; /* 112px 牌阵牌位 / 选中预览 */
+  --card-w-lg: 11rem; /* 176px 单张聚焦 / 翻牌主体 */
+}
+
+/* =============================================================================
+ * Base Layer 全局基线
+ * ========================================================================== */
+@layer base {
+  :root {
+    color-scheme: dark;
+    /* 移动端拖拽时页面不得跟着滚 / 不得出现橡皮筋 */
+    overscroll-behavior: none;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overscroll-behavior: none;
+    scrollbar-color: var(--color-surface-3) transparent;
+  }
+
+  body {
+    min-height: 100dvh;
+    margin: 0;
+    background-color: var(--color-bg-deep);
+    color: var(--color-text-mid);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.72;
+    font-synthesis-weight: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overscroll-behavior: none;
+    /* 全局取消 300ms 双击缩放，但保留正常滚动；牌桌区域另用 .table-surface 关闭 */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #root {
+    position: relative;
+    min-height: 100dvh;
+    isolation: isolate;
+  }
+
+  /* 标题使用 serif，正文保持 sans */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    color: var(--color-text-hi);
+    font-weight: 400;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* 触控目标基线：任何交互元素至少 44×44 */
+  button,
+  [role='button'],
+  a[href],
+  summary {
+    min-height: var(--space-tap);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* 图片/SVG 不可拖出，避免与摆牌手势冲突 */
+  img,
+  svg {
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+
+  /* 焦点：只在键盘导航时出现，鼠标/触摸不出现 */
+  :focus-visible {
+    outline: 1px solid var(--color-silver);
+    outline-offset: 2px;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-silver) 24%, transparent);
+    color: var(--color-text-hi);
+  }
+
+  ::placeholder {
+    color: var(--color-text-faint);
+  }
+}
+
+/* =============================================================================
+ * Custom Utilities（上限 8 个，其余一律用 Tailwind 原子类）
+ * ========================================================================== */
+
+/* 1. 面板/表面：一层几乎看不见的渐变 + 发丝描边，是全站唯一的「实体感」来源 */
+@utility surface-veil {
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--color-surface-1) 92%, transparent),
+    color-mix(in oklab, var(--color-bg-raised) 92%, transparent)
+  );
+  border: 1px solid var(--color-line-hairline);
+  box-shadow: var(--shadow-panel);
+  backdrop-filter: blur(14px) saturate(1.05);
+}
+
+/* 2. 极淡文字辉光：只用于牌名与首页主标题，禁止用于正文/按钮 */
+@utility text-glow-soft {
+  text-shadow:
+    0 0 1px color-mix(in oklab, var(--color-silver) 22%, transparent),
+    0 0 18px color-mix(in oklab, var(--color-silver) 12%, transparent);
+}
+
+/* 3. 发丝分隔线（1 物理像素，避免高 DPI 下变粗） */
+@utility edge-hairline {
+  border: 0 solid var(--color-line-hairline);
+  border-width: 0.5px;
+}
+
+/* 4. 横向滚动容器两端淡出（摊牌扇形、牌阵横滑） */
+@utility mask-fade-x {
+  mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+/* 5. 牌桌/卡牌区域：禁选中、禁系统手势接管，交互全部交给 Pointer Events */
+@utility table-surface {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  overscroll-behavior: contain;
+}
+
+/* 6. 隐藏滚动条但保留滚动（摊牌横向浏览） */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* 7. 背景环境层的缓慢漂移（只允许背景使用） */
+@utility drift-slow {
+  animation: var(--animate-drift-slow);
+  will-change: transform;
+}
+
+/* 8. 交互焦点环（用于自定义可点元素，与 :focus-visible 同一视觉语言） */
+@utility ring-quiet {
+  box-shadow: 0 0 0 1px var(--color-line-strong), 0 0 0 4px color-mix(in oklab, var(--color-silver) 8%, transparent);
+}
+
+/* =============================================================================
+ * Reduced Motion 降级：所有动效退化为「立即到位 + 极短淡入」
+ * 关键：功能不得丢失，只是不再移动。
+ * ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    --duration-tap: 0ms;
+    --duration-quick: 0ms;
+    --duration-base: 0ms;
+    --duration-page: 0ms;
+    --duration-flip: 0ms;
+    --duration-settle: 0ms;
+    --duration-ambient: 0ms;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  // 真正的编译配置在 tsconfig.app.json。这里重复一份 paths 只为让 tsconfig.app
+  // 覆盖范围之外的工具（tsx 跑 scripts/ 下的脚本）也能解析 `@/` 别名 ——
+  // 否则脚本里凡是**值导入** `@/...` 的模块都会报 MODULE_NOT_FOUND
+  // （类型导入不会，因为 tsx 直接把它们剥掉了）。
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
