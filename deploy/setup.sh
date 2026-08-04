@@ -10,12 +10,17 @@ set -euo pipefail
 APP_DIR=/opt/arcana
 APP_USER=arcana
 
+echo "==> 更新软件源并安装基础工具"
+apt-get update -y
+apt-get install -y git curl ca-certificates
+
 echo "==> 安装 Node.js 22 LTS"
 if ! command -v node >/dev/null 2>&1; then
   curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
   apt-get install -y nodejs
 fi
 node -v
+git --version
 
 echo "==> 创建运行用户 $APP_USER（无登录权限）"
 id -u "$APP_USER" >/dev/null 2>&1 || useradd --system --shell /usr/sbin/nologin --home "$APP_DIR" "$APP_USER"
