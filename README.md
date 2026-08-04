@@ -1,3 +1,14 @@
+---
+title: Arcana
+emoji: 🌙
+colorFrom: indigo
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+short_description: 亲手洗牌、切牌、翻牌的沉浸式塔罗 —— LLM 只解读，不替你抽牌
+---
+
 # Arcana
 
 一个让用户在线上像线下一样，**亲手完成整个塔罗抽牌过程**的沉浸式数字塔罗 Web MVP。

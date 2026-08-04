@@ -68,8 +68,8 @@ sleep 3
 systemctl is-active arcana >/dev/null && echo "    服务已启动" || { journalctl -u arcana -n 30 --no-pager; exit 1; }
 
 echo "--> 健康检查"
-curl -fsS localhost/api/tarot/config && echo
+curl -fsS "localhost:\${PORT:-8080}/api/tarot/config" && echo
 EOF
 
 echo
-echo "完成 → http://$HOST  (commit $LOCAL_SHA)"
+echo "完成 → http://$HOST:${APP_PORT:-8080}  (commit $LOCAL_SHA)"

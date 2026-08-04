@@ -16,10 +16,13 @@ Wants=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/opt/arcana
-# 直接监听 80，省掉一层反向代理。
-# 没有 nginx 就没有那个默认 60s 的 proxy_read_timeout ——
-# 而我们的解读最长要 180s，用 nginx 反而要专门去调它。
-Environment=PORT=80
+# 端口从 .env 读（EnvironmentFile 在下面）。默认 8080。
+#
+# 为什么不是 80：大陆云服务器**未备案时 80/443 会被封**，
+# 而换成 8080 这类非标准端口 + IP 直连就不需要备案。
+# 对「发给朋友试用」这个阶段，这是把成本从 ¥300/年 降到 ¥99/年的关键。
+# 香港服务器不受此限制，那边可以直接用 80。
+Environment=PORT=8080
 Environment=NODE_ENV=production
 # API Key 放在这个文件里，权限 600，不进仓库
 EnvironmentFile=/opt/arcana/.env
@@ -31,11 +34,11 @@ RestartSec=3
 StandardOutput=journal
 StandardError=journal
 
-# 以普通用户运行，但允许绑定 80 这样的特权端口
+# 以普通用户运行。
+# 8080 不是特权端口，所以不需要 CAP_NET_BIND_SERVICE ——
+# 少一项权限就少一分风险。（若改回 80，需要把这两行加回来。）
 User=arcana
 Group=arcana
-AmbientCapabilities=CAP_NET_BIND_SERVICE
-CapabilityBoundingSet=CAP_NET_BIND_SERVICE
 
 # 基本加固
 NoNewPrivileges=true

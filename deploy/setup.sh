@@ -29,10 +29,11 @@ echo "==> 准备目录 $APP_DIR"
 mkdir -p "$APP_DIR"
 chown -R "$APP_USER:$APP_USER" "$APP_DIR"
 
-echo "==> 防火墙：只放行 80 与 SSH"
+APP_PORT="${APP_PORT:-8080}"
+echo "==> 防火墙：只放行 $APP_PORT 与 SSH"
 if command -v ufw >/dev/null 2>&1; then
   ufw allow OpenSSH >/dev/null 2>&1 || true
-  ufw allow 80/tcp >/dev/null 2>&1 || true
+  ufw allow "$APP_PORT/tcp" >/dev/null 2>&1 || true
   # 8787 是开发端口，生产不该对外暴露
   ufw deny 8787/tcp >/dev/null 2>&1 || true
   yes | ufw enable >/dev/null 2>&1 || true
@@ -46,5 +47,5 @@ echo "  2. 在 $APP_DIR 建 .env 并填入 DEEPSEEK_API_KEY（chmod 600）"
 echo "  3. sudo cp $APP_DIR/deploy/arcana.service /etc/systemd/system/"
 echo "     sudo systemctl daemon-reload && sudo systemctl enable --now arcana"
 echo
-echo "注意：腾讯云轻量还需要在**控制台的防火墙**里放行 80 端口，"
+echo "注意：腾讯云轻量还需要在**控制台的防火墙**里放行 $APP_PORT 端口，"
 echo "      服务器内部的 ufw 放行了不等于云平台放行了。"
