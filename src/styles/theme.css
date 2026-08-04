@@ -363,3 +363,33 @@
     --duration-ambient: 0ms;
   }
 }
+
+/* =============================================================================
+ * Streamlit 组件形态专用
+ *
+ * Streamlit 的自定义组件 iframe 带 `scrolling="no"`，
+ * **iframe 文档本身无法滚动**，内容超出固定高度就被直接裁掉。
+ * 所以这里必须把 #root 变成自己的滚动容器 ——
+ * `scrolling="no"` 只禁止文档级滚动，不影响内部元素的 overflow 滚动。
+ *
+ * 只在 <html class="in-streamlit"> 时生效，不影响独立部署形态。
+ * ========================================================================== */
+html.in-streamlit,
+html.in-streamlit body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html.in-streamlit #root {
+  height: 100%;
+  overflow-y: auto;
+  /* 滚到头时不要把滚动传给 Streamlit 父页面 */
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 沉浸区用的是 position: fixed，在 iframe 里它相对 iframe 视口定位，
+   本来就不需要滚动，这里显式关掉避免出现多余滚动条 */
+html.in-streamlit #root:has(> div > div[style*="100dvh"]) {
+  overflow-y: hidden;
+}
