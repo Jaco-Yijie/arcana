@@ -13,9 +13,16 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { Spread } from '@/types/spread'
 import type { TarotSession } from '@/types/session'
-import type { ReadingRequest, StructuredReading } from '@/types/reading'
+import type { ReadingMode, ReadingRequest, StructuredReading } from '@/types/reading'
 import { buildReadingRequest, isReadyForReading } from '@/features/reading/buildReadingRequest'
 import { ReadingRequestError, requestReadingWithFallback } from '@/features/reading/readingClient'
+import { IS_STREAMLIT } from '@/features/reading/streamlitTransport'
+import {
+  StreamReadingError,
+  extractPartial,
+  streamReading,
+} from '@/features/reading/streamClient'
+import type { StreamPhase } from '@/features/reading/streamClient'
 import { toLegacyReading } from '@/features/reading/legacyProjection'
 import { useSession } from './useSession'
 
@@ -30,6 +37,9 @@ export const READING_PHASES = [
   '正在结合你的问题',
   '正在整理解读',
 ] as const
+
+/** deep 模式的等待文案 —— 如实说明为什么更久，不假装在直播模型思考 */
+export const DEEP_THINKING_HINT = '正在进行更深入的牌面分析，这可能需要一些时间。'
 
 /**
  * 阶段推进间隔。
@@ -54,10 +64,18 @@ export interface UseReadingResult {
   error: { message: string; retryable: boolean } | null
   /** 本地兜底产出的解读（未连接解读服务），UI 必须如实标注 */
   localFallback: boolean
+  /** 流式：已经写好且可以提前上屏的片段。校验失败时会被清空。 */
+  partial: { theme: string | null; energy: string | null }
+  /** 流式阶段。deep 模式在推理期间为 thinking。 */
+  streamPhase: StreamPhase | null
   retry: () => void
 }
 
-export function useReading(session: TarotSession | null, spread: Spread | null): UseReadingResult {
+export function useReading(
+  session: TarotSession | null,
+  spread: Spread | null,
+  readingMode: ReadingMode = 'standard',
+): UseReadingResult {
   const { setReading } = useSession()
   const [status, setStatus] = useState<ReadingStatus>('idle')
   const [phase, setPhase] = useState(0)
@@ -65,6 +83,11 @@ export function useReading(session: TarotSession | null, spread: Spread | null):
   const [localFallback, setLocalFallback] = useState(false)
   const [attempt, setAttempt] = useState(0)
   const [elapsedSec, setElapsedSec] = useState(0)
+  const [partial, setPartial] = useState<{ theme: string | null; energy: string | null }>({
+    theme: null,
+    energy: null,
+  })
+  const [streamPhase, setStreamPhase] = useState<StreamPhase | null>(null)
 
   // 已有解读就不再请求（AC-V2-11：刷新 / 返回都不重新生成）
   const existing = session?.structuredReading ?? null
@@ -76,7 +99,7 @@ export function useReading(session: TarotSession | null, spread: Spread | null):
   /** 请求体只依赖已冻结的 session，且是纯函数产物 —— 重试时逐字节相同 */
   const requestRef = useRef<ReadingRequest | null>(null)
   if (session && spread && !requestRef.current) {
-    requestRef.current = buildReadingRequest(session, spread)
+    requestRef.current = buildReadingRequest(session, spread, readingMode)
   }
 
   useEffect(() => {
@@ -86,7 +109,8 @@ export function useReading(session: TarotSession | null, spread: Spread | null):
     // React StrictMode 在开发期会 mount → effect → cleanup(abort) → effect 再跑一次，
     // 有守卫的话第二次会被直接 return 掉，而第一次的请求已经被 abort —— 结果就是永远停在加载中。
     // 这里靠 `canRequest`（已有解读就不再请求）与 cleanup 的 abort 来保证不会重复提交。
-    const request = requestRef.current ?? buildReadingRequest(session, spread)
+    // 重试时用同一份 request（含同一个 readingMode），保证 payload 逐字节相同
+    const request = requestRef.current ?? buildReadingRequest(session, spread, readingMode)
     requestRef.current = request
 
     const controller = new AbortController()
@@ -106,7 +130,32 @@ export function useReading(session: TarotSession | null, spread: Spread | null):
 
     void (async () => {
       try {
-        const outcome = await requestReadingWithFallback(request, controller.signal)
+        // Streamlit 组件形态是一次性往返，不支持流式，走原路径
+        const useStream = !IS_STREAMLIT
+        let outcome: { reading: StructuredReading; localFallback: boolean }
+
+        if (useStream) {
+          setPartial({ theme: null, energy: null })
+          const streamed = await streamReading(
+            request,
+            {
+              onPhase: setStreamPhase,
+              onRestart: () => setPartial({ theme: null, energy: null }),
+              onDelta: (acc) => {
+                // 只把**已经闭合**的字段上屏，不显示写到一半的句子
+                setPartial({
+                  theme: extractPartial(acc, 'readingTheme'),
+                  energy: extractPartial(acc, 'overallEnergy'),
+                })
+              },
+            },
+            controller.signal,
+          )
+          outcome = { reading: streamed.reading, localFallback: false }
+        } else {
+          outcome = await requestReadingWithFallback(request, controller.signal)
+        }
+
         if (controller.signal.aborted) return
         setLocalFallback(outcome.localFallback)
         // 两份都写：V2 供本页渲染，V1 投影供日记摘要 / 详情 / 分享页
@@ -114,11 +163,13 @@ export function useReading(session: TarotSession | null, spread: Spread | null):
         setStatus('success')
       } catch (err) {
         if (controller.signal.aborted) return
-        const message =
-          err instanceof ReadingRequestError
-            ? err.message
-            : '这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。'
-        const retryable = err instanceof ReadingRequestError ? err.retryable : true
+        // 校验失败时必须撤回已展示的片段 —— 不能留半截让用户以为那是解读
+        setPartial({ theme: null, energy: null })
+        const known = err instanceof ReadingRequestError || err instanceof StreamReadingError
+        const message = known
+          ? (err as Error).message
+          : '这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。'
+        const retryable = known ? (err as { retryable: boolean }).retryable : true
         setError({ message, retryable })
         setStatus('error')
       } finally {
@@ -133,7 +184,7 @@ export function useReading(session: TarotSession | null, spread: Spread | null):
       controller.abort()
     }
     // attempt 变化即触发重试
-  }, [canRequest, attempt, session, spread, setReading])
+  }, [canRequest, attempt, session, spread, setReading, readingMode])
 
   const retry = useCallback(() => {
     abortRef.current?.abort()
@@ -148,6 +199,8 @@ export function useReading(session: TarotSession | null, spread: Spread | null):
     structured: existing,
     error,
     localFallback,
+    partial,
+    streamPhase,
     retry,
   }
 }

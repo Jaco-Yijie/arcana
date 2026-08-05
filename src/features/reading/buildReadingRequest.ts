@@ -14,14 +14,18 @@
 
 import type { TarotSession } from '@/types/session'
 import type { Spread } from '@/types/spread'
-import type { ReadingRequest, ReadingRequestCard } from '@/types/reading'
+import type { ReadingMode, ReadingRequest, ReadingRequestCard } from '@/types/reading'
 import { effectiveQuestion } from './buildReadingInput'
 
 /**
  * 组装请求体。只包含**已翻开**的牌 ——
  * 没翻开的牌连身份都还不该被读取，更不该发出去。
  */
-export function buildReadingRequest(session: TarotSession, spread: Spread): ReadingRequest {
+export function buildReadingRequest(
+  session: TarotSession,
+  spread: Spread,
+  readingMode: ReadingMode = 'standard',
+): ReadingRequest {
   const cards: ReadingRequestCard[] = spread.positions
     .map((pos) => {
       const placed = session.placements.find((p) => p.positionId === pos.id)
@@ -43,6 +47,7 @@ export function buildReadingRequest(session: TarotSession, spread: Spread): Read
     theme: session.theme,
     spreadId: spread.id,
     cards,
+    readingMode,
   }
 }
 

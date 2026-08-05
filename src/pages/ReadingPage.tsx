@@ -11,7 +11,9 @@ import { getCard } from '@/data/deck'
 import { answerFollowUp } from '@/features/reading'
 import { buildFollowUpContext } from '@/features/reading/buildReadingInput'
 import { StructuredReadingView } from '@/features/reading/ReadingSections'
-import { READING_PHASES, useReading } from '@/hooks/useReading'
+import { DEEP_THINKING_HINT, READING_PHASES, useReading } from '@/hooks/useReading'
+import { ReadingModePicker } from '@/features/reading/ReadingModePicker'
+import type { ReadingMode } from '@/types/reading'
 
 function Accordion({ title, children }: { title: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
@@ -39,15 +41,25 @@ function Accordion({ title, children }: { title: string; children: React.ReactNo
  */
 export default function ReadingPage() {
   const navigate = useNavigate()
-  const { session, addFollowUp, completeSession } = useSession()
+  const { session, patchSession, addFollowUp, completeSession } = useSession()
   const { markCompletedOnce } = useSettings()
   const [pending, setPending] = useState('')
   const [finishedId, setFinishedId] = useState<string | null>(null)
 
+  // 用户先选模式再开始 —— 不替他决定要不要多等一分钟。
+  // 老记录已有解读时直接跳过选择。
+  const [mode, setMode] = useState<ReadingMode>(
+    (session?.readingMode as ReadingMode | undefined) ?? 'standard',
+  )
+  const [started, setStarted] = useState(false)
+
   const spread = session?.spreadId ? getSpread(session.spreadId) : null
+  const hasReading = !!session?.structuredReading || !!session?.reading
+  const shouldAsk = !hasReading && !started
 
   // 解读由 hook 负责发起 / 重试 / 降级；它只读已冻结的牌，不写任何牌相关状态
-  const { status, phase, structured, error, localFallback, slow, elapsedSec, retry } = useReading(session, spread)
+  const { status, phase, structured, error, localFallback, slow, elapsedSec, partial, streamPhase, retry } =
+    useReading(shouldAsk ? null : session, shouldAsk ? null : spread, mode)
 
   useEffect(() => {
     if (status === 'success') markCompletedOnce()
@@ -119,12 +131,33 @@ export default function ReadingPage() {
       </div>
 
       <main className="flex-1 px-5 pb-4">
-        {status === 'loading' ? (
+        {shouldAsk ? (
+          <ReadingModePicker
+            value={mode}
+            onChange={setMode}
+            onStart={() => {
+              patchSession({ readingMode: mode })
+              setStarted(true)
+            }}
+          />
+        ) : status === 'loading' ? (
           /* 分阶段加载文案。注意：这是我们这一侧的等待状态，
              不是模型的思维链 —— 我们没有也不会去伪造模型的内部过程。 */
           <div className="flex flex-col gap-4 pt-10">
             <p className="text-read text-text-mid">正在解读牌面……</p>
-            <p className="text-note text-text-low">{READING_PHASES[phase]}</p>
+            <p className="text-note text-text-low">
+              {streamPhase === 'thinking' ? DEEP_THINKING_HINT : READING_PHASES[phase]}
+            </p>
+
+            {/* 流式：已经写好的字段提前上屏。校验失败时这些会被清掉。 */}
+            {(partial.theme || partial.energy) && (
+              <div className="mt-2 flex flex-col gap-3 border-l border-line-hairline pl-4">
+                {partial.theme && (
+                  <p className="font-serif text-title text-text-hi">{partial.theme}</p>
+                )}
+                {partial.energy && <p className="text-read text-text-mid">{partial.energy}</p>}
+              </div>
+            )}
             {/* 实测真实解读要 60–130s。与其让用户怀疑页面挂了，不如如实告诉他要等多久。 */}
             {slow && (
               <p className="text-caption text-text-faint">

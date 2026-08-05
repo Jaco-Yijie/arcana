@@ -42,7 +42,23 @@ export type ToneRuleKind =
   /** 空洞玄学 */
   | 'mysticism'
 
+/**
+ * 严重级别。
+ *
+ * block  —— 无论上下文都不该出现：宿命论断言、空洞玄学、把牌说成不可质疑的权威。
+ *           命中即整份作废。
+ * warn   —— 视上下文可能完全正常：描述牌面意象（「再加一枚币一定会掉」）、
+ *           条件句、引述用户自己的假设。**只记录，不阻断。**
+ *
+ * 为什么要分级：V2.3 之前任何一次命中都会让整份解读作废，
+ * 而实测平均每份 0.3–0.6 处命中，其中相当一部分是误杀 ——
+ * 等于凭空丢掉一半的真实解读。宁可放过一句措辞偏硬的话，
+ * 也不该让用户白等一分钟再看到失败。
+ */
+export type ToneSeverity = 'block' | 'warn'
+
 export interface ToneViolation {
+  severity: ToneSeverity
   /** 命中的原文片段（真实匹配到的字，不是规则名） */
   phrase: string
   /** 字段路径，例如 `narrative`、`cards[2].interpretation` */
@@ -89,6 +105,17 @@ const ANCHORED_NEGATION =
 const CONTAINS_NEGATION = /不|没|未必|并非|别|毋|莫|难以|绝非|从未|谈不上|算不上/
 
 /**
+ * 【V2.3 重要调整】
+ * 本文件从「拦截裸词」改成「只拦截确定性预测」。
+ *
+ * 原来的规则会因为出现「一定」「必须」「绝对」「确定」这些**单个词**就判违规，
+ * 结果把「这并不一定意味着」「这里不能确定」「你并不必须」这类**完全正常、
+ * 甚至是我们鼓励的表达**也挡掉了。误杀的代价是白丢一整份真实解读。
+ *
+ * 现在的判断标准是：**这句话是不是在对未来下定论**。
+ * 模型基于牌面做出明确判断（「目前阻力明显多于支持因素」「这段关系存在明显失衡」）
+ * 是正常的塔罗解读，不该被拦。
+ *
  * 否定敏感度。`strict` 走 Tier A + Tier B；`lexical` 只走 Tier A。
  *
  * 【为什么玄学类规则也必须用 strict】
@@ -117,6 +144,7 @@ function isNegated(text: string, matchStart: number, mode: NegationMode): boolea
 interface ToneRule {
   id: string
   kind: ToneRuleKind
+  severity: ToneSeverity
   /** 给人看的规则名，出现在重试提示里 */
   label: string
   /** 必须带 `g`（用 matchAll 遍历；matchAll 内部会复制正则，不污染 lastIndex） */
@@ -138,13 +166,15 @@ export const TONE_RULES: ToneRule[] = [
   {
     id: 'certainty-yiding',
     kind: 'determinism',
+    severity: 'warn',
     label: '一定 / 一定会',
-    pattern: /一定(?!程度|范围|条件|规律|阶段|时期|数量|基础|意义上|的距离|的空间|的余地)/g,
+    pattern: /一定(?=会|能|要|可以|能够|将)/g,
     negation: 'strict',
   },
   {
     id: 'certainty-biran',
     kind: 'determinism',
+    severity: 'warn',
     label: '必然 / 必定 / 势必 / 注定 / 终将',
     pattern: /必然|必定|势必|注定|终将|铁定/g,
     negation: 'strict',
@@ -152,20 +182,23 @@ export const TONE_RULES: ToneRule[] = [
   {
     id: 'certainty-bixu',
     kind: 'determinism',
+    severity: 'warn',
     label: '必须（替用户做决定）',
-    pattern: /必须/g,
+    pattern: /你必须|你一定要|你别无选择/g,
     negation: 'strict',
   },
   {
     id: 'certainty-juedui',
     kind: 'determinism',
+    severity: 'warn',
     label: '绝对',
-    pattern: /绝对/g,
+    pattern: /绝对(?=会|不会|是|能|可以|没有)/g,
     negation: 'strict',
   },
   {
     id: 'certainty-kending',
     kind: 'determinism',
+    severity: 'warn',
     label: '肯定会 / 肯定能',
     pattern: /肯定(?=会|能|是|要|有|可以|不)/g,
     negation: 'strict',
@@ -173,6 +206,7 @@ export const TONE_RULES: ToneRule[] = [
   {
     id: 'certainty-no-doubt',
     kind: 'determinism',
+    severity: 'block',
     label: '毫无疑问 / 百分之百 / 板上钉钉',
     pattern: /毫无疑问|毋庸置疑|百分之百|板上钉钉|铁板钉钉/g,
     negation: 'strict',
@@ -180,6 +214,7 @@ export const TONE_RULES: ToneRule[] = [
   {
     id: 'certainty-irreversible',
     kind: 'determinism',
+    severity: 'block',
     label: '不可避免 / 无法改变 / 已成定局',
     pattern: /不可避免|无法避免|无法改变|无法逆转|已成定局|结局已定|木已成舟|覆水难收/g,
     negation: 'strict',
@@ -187,13 +222,15 @@ export const TONE_RULES: ToneRule[] = [
   {
     id: 'certainty-assert',
     kind: 'determinism',
+    severity: 'warn',
     label: '断定 / 下定论 / 完全确定',
-    pattern: /断定|下定论|完全确定|确定无疑/g,
+    pattern: /可以断定|完全可以确定|确定无疑/g,
     negation: 'strict',
   },
   {
     id: 'certainty-guarantee',
     kind: 'determinism',
+    severity: 'warn',
     label: '保证会 / 保证能',
     pattern: /保证(?=会|能|你)/g,
     negation: 'strict',
@@ -201,6 +238,7 @@ export const TONE_RULES: ToneRule[] = [
   {
     id: 'certainty-sooner-or-later',
     kind: 'determinism',
+    severity: 'warn',
     label: '迟早会 / 早晚会',
     pattern: /迟早会|迟早都|早晚会|早晚都会/g,
     negation: 'strict',
@@ -210,34 +248,39 @@ export const TONE_RULES: ToneRule[] = [
   {
     id: 'mystic-universe',
     kind: 'mysticism',
+    severity: 'block',
     label: '宇宙',
-    pattern: /宇宙/g,
+    pattern: /宇宙(?:[已正在也都还]{0,3})(?:告诉|指引|安排|在说|要你|想让你|的安排|的旨意)/g,
     negation: 'strict',
   },
   {
     id: 'mystic-fate',
     kind: 'mysticism',
+    severity: 'block',
     label: '命运（「命运之轮」除外）',
-    pattern: /命运(?!之轮)/g,
+    pattern: /命运(?:[已正在也都还]{0,3})(?:决定|注定|安排|无法改变|早已写好)/g,
     negation: 'strict',
   },
   {
     id: 'mystic-destiny',
     kind: 'mysticism',
+    severity: 'block',
     label: '天意 / 天机 / 宿命 / 冥冥之中 / 业力',
-    pattern: /天意|天机|宿命|冥冥之中|因果业力|业力|轮回/g,
+    pattern: /天意|天机|宿命|冥冥之中|因果业力/g,
     negation: 'strict',
   },
   {
     id: 'mystic-heaven',
     kind: 'mysticism',
+    severity: 'block',
     label: '上天 / 老天 / 神谕 / 旨意',
-    pattern: /上天|老天|上苍|神谕|旨意/g,
+    pattern: /(?:上天|老天|上苍)(?:安排|注定|决定|要你)|神谕|天命难违/g,
     negation: 'strict',
   },
   {
     id: 'mystic-energy-speaks',
     kind: 'mysticism',
+    severity: 'block',
     label: '能量告诉你 / 能量指引',
     pattern: /能量(?:告诉|指引|指示|暗示|驱使|驱动|在说|说)/g,
     negation: 'strict',
@@ -245,6 +288,7 @@ export const TONE_RULES: ToneRule[] = [
   {
     id: 'mystic-field',
     kind: 'mysticism',
+    severity: 'block',
     label: '气场 / 磁场 / 振动频率 / 吸引力法则',
     pattern: /气场|磁场|能量场|高维|振动频率|吸引力法则/g,
     negation: 'strict',
@@ -252,6 +296,7 @@ export const TONE_RULES: ToneRule[] = [
   {
     id: 'mystic-card-authority',
     kind: 'mysticism',
+    severity: 'block',
     label: '牌绝对说明 / 牌无疑指出（把牌说成不可质疑的权威）',
     // 刻意不含「一定」「必然」：它们由 ① 组的 certainty-* 规则以 determinism 类别报出，
     // 放在这里会因为跨度更长而在去重时吃掉那条，导致「这张牌一定会…」被误归为空洞玄学。
@@ -325,6 +370,7 @@ export function checkText(field: string, text: string): ToneViolation[] {
       if (isNegated(text, start, rule.negation)) continue
 
       hits.push({
+        severity: rule.severity,
         phrase: match[0],
         field,
         excerpt: buildExcerpt(text, start, start + match[0].length),
@@ -387,6 +433,11 @@ const KIND_LABEL: Record<ToneRuleKind, string> = {
  * 2. 明确要求「改写整句」而不是「删掉这个词」——删词往往留下语义仍然确定的残句
  * 3. 重申牌面回填约束——防止模型借这次修改顺手改动 cards[]，那会直接撞上 AC-V2-10
  */
+/** 只有这些会让整份解读作废；warn 级只记录不阻断 */
+export function blockingViolations(v: ToneViolation[]): ToneViolation[] {
+  return v.filter((x) => x.severity === 'block')
+}
+
 export function summarizeViolations(v: ToneViolation[]): string {
   if (v.length === 0) return ''
 

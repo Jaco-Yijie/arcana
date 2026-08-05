@@ -21,8 +21,9 @@ import {
   extractJsonObject,
   validateReading,
 } from '../validation/readingSchema.ts'
-import { buildMessages } from '../prompts/tarotReadingPrompt.ts'
-import { checkTone, summarizeViolations } from '../validation/toneGuard.ts'
+import { buildMessages, resolveVersion } from '../prompts/index.ts'
+import { blockingViolations, checkTone, summarizeViolations } from '../validation/toneGuard.ts'
+import { thinkingParamFor } from './stream.ts'
 
 interface ChatMessage {
   role: 'system' | 'user' | 'assistant'
@@ -64,7 +65,10 @@ interface ChatCompletion {
   usage?: { completion_tokens?: number; completion_tokens_details?: { reasoning_tokens?: number } }
 }
 
-async function callDeepSeek(messages: ChatMessage[]): Promise<string> {
+async function callDeepSeek(
+  messages: ChatMessage[],
+  thinking: Record<string, unknown>,
+): Promise<string> {
   if (!config.apiKey) throw new UpstreamFailure('missing-api-key')
 
   // 自己持有 controller，才能在 catch 里分辨「超时中断」与「响应本身有问题」。
@@ -92,7 +96,8 @@ async function callDeepSeek(messages: ChatMessage[]): Promise<string> {
           // 实测一次三张牌的解读：推理 ~2100 + 正文 ~1700 = 3800+，
           // 给 4000 会正好在 JSON 写到一半时截断，表现为「上游响应不是合法 JSON」。
           max_tokens: config.maxTokens,
-          ...(config.reasoningEffort ? { reasoning_effort: config.reasoningEffort } : {}),
+          // standard → 关闭推理（首个正文 1.1s）；deep → 开启（更充分但更慢）
+          ...thinking,
           stream: false,
         }),
         signal: controller.signal,
@@ -149,6 +154,8 @@ export class DeepSeekReadingProvider implements ReadingProvider {
     const startedAt = Date.now()
     // buildMessages 保证：重试时牌面部分逐字不变，纠正要求只作为追加约束附在末尾（AC-V2-06）
     const base: ChatMessage[] = buildMessages(context)
+    const thinking = thinkingParamFor(context.readingMode)
+    const promptVersion = resolveVersion()
 
     let attempt = 0
     let toneAdjusted = false
@@ -160,7 +167,7 @@ export class DeepSeekReadingProvider implements ReadingProvider {
     while (attempt < 2) {
       attempt += 1
       try {
-        const content = await callDeepSeek(messages)
+        const content = await callDeepSeek(messages, thinking)
         const parsed = extractJsonObject(content)
         const outcome = validateReading(parsed, context)
 
@@ -170,15 +177,18 @@ export class DeepSeekReadingProvider implements ReadingProvider {
           generatedAt: Date.now(),
           latencyMs: Date.now() - startedAt,
           toneAdjusted,
+          readingMode: context.readingMode,
+          promptVersion,
         })
 
         // 语气红线：命中就带着具体违规词再要求它改一次
-        const violations = checkTone(reading)
+        // 只有 block 级才作废；warn 级记录但放行（见 toneGuard 的分级说明）
+        const violations = blockingViolations(checkTone(reading))
         if (violations.length > 0 && attempt < 2) {
           toneAdjusted = true
           messages = buildMessages(
             context,
-            `注意：上一次输出里出现了不该用的确定性或空洞表达：${summarizeViolations(violations)}\n请保持牌面判断与结构不变，只把这些措辞改写成更克制、可保留余地的说法，重新输出完整的 json。`,
+            { extraInstruction: `注意：上一次输出里出现了不该用的确定性或空洞表达：${summarizeViolations(violations)}\n请保持牌面判断与结构不变，只把这些措辞改写成更克制、可保留余地的说法，重新输出完整的 json。` },
           )
           continue
         }

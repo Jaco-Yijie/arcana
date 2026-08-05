@@ -139,6 +139,8 @@ export function rebuildContext(request: ReadingRequest): ReadingContext {
     },
     cards,
     stats: computeStats(cards),
+    // 用户选的模式。默认 standard —— 不替用户决定要不要多花一分钟
+    readingMode: request.readingMode === 'deep' ? 'deep' : 'standard',
     safetyNotice: risk.notice,
   }
 }

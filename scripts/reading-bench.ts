@@ -36,6 +36,7 @@ const FIXTURE: ReadingRequest = {
   mode: 'question',
   theme: null,
   spreadId: 'past-present-future',
+  readingMode: 'standard',
   cards: [
     { positionId: 'past', cardId: 'major-09', orientation: 'upright' },
     { positionId: 'present', cardId: 'swords-11', orientation: 'reversed' },

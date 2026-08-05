@@ -35,6 +35,17 @@ export const SUIT_ELEMENT: Record<Suit, TarotElement> = {
   pentacles: 'earth',
 }
 
+/**
+ * 解读模式 —— 由**用户**选择，不是系统替他决定。
+ *
+ * standard  更快拿到完整的牌面分析（thinking disabled）
+ * deep      花更多时间综合牌与牌之间的关系、矛盾和隐藏线索（thinking enabled）
+ *
+ * 注意 standard **不等于**短、浅、保守 —— 它同样要有完整分析、牌位、正逆位、
+ * 牌间关系、叙事，并真正回答问题，只是不过度探索次级象征。
+ */
+export type ReadingMode = 'standard' | 'deep'
+
 /** 问题类别。用于让模型知道该往哪个生活面向落地，不用于做任何预测。 */
 export type QuestionCategory =
   | 'relationship'
@@ -119,6 +130,7 @@ export interface ReadingContext {
   /** 顺序即牌位顺序 */
   cards: ReadingContextCard[]
   stats: ReadingStats
+  readingMode: ReadingMode
   /** 命中安全边界时的提示，由服务端原样透传到输出，不交给模型改写 */
   safetyNotice: string | null
 }
@@ -153,6 +165,18 @@ export interface ReadingRelationship {
   interpretation: string
 }
 
+/**
+ * 另一种同样说得通的读法。
+ *
+ * 塔罗解读本来就不一定存在唯一叙事 —— 牌与牌冲突时，硬把它们统一成一个结论
+ * 反而是失真。这个字段**不是每次都要有**，只在确实存在两种都站得住的解释时出现。
+ */
+export interface AlternativeInterpretation {
+  interpretation: string
+  /** 这个读法的依据是牌面上的什么 */
+  reason: string
+}
+
 export interface StructuredReadingCard {
   cardId: string
   cardName: string
@@ -168,6 +192,10 @@ export type ReadingProviderId = 'mock' | 'deepseek'
 
 export interface ReadingMeta {
   provider: ReadingProviderId
+  /** 这次用的是哪种解读模式 */
+  readingMode?: ReadingMode
+  /** 用的哪版 Prompt，A/B 期间需要能追溯 */
+  promptVersion?: 'v1' | 'v2'
   /** mock 时为 null */
   model: string | null
   generatedAt: number
@@ -197,6 +225,8 @@ export interface StructuredReading {
   narrative: string
   answerToQuestion: string
   reflectionQuestions: string[]
+  /** 可选。牌面存在多种合理读法时才出现，不强制。 */
+  alternativeInterpretations?: AlternativeInterpretation[]
   /** 由服务端从 ReadingContext 透传，模型无权改写 */
   safetyNotice: string | null
   meta: ReadingMeta
@@ -270,6 +300,8 @@ export interface ReadingRequest {
   spreadId: string
   /** 顺序即牌位顺序 */
   cards: ReadingRequestCard[]
+  /** 用户选择的解读模式。重试时保持不变，除非用户主动改。 */
+  readingMode: ReadingMode
 }
 
 /** `GET /api/tarot/config` —— 让前端知道服务端当前用哪个 Provider，避免前端持有任何密钥相关配置 */

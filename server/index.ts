@@ -14,7 +14,7 @@ import { createGzip } from 'node:zlib'
 import { createReadStream, existsSync, statSync } from 'node:fs'
 import { extname, join, normalize, resolve } from 'node:path'
 import { config, describeConfig } from './env.ts'
-import { handleConfig, handleReading } from './api/readingRoute.ts'
+import { handleConfig, handleReading, handleReadingStream } from './api/readingRoute.ts'
 import { sendJson } from './http.ts'
 
 const DIST = resolve(process.cwd(), 'dist')
@@ -82,6 +82,10 @@ const server = createServer((req, res) => {
     try {
       if (url.pathname === '/api/tarot/reading' && req.method === 'POST') {
         await handleReading(req, res)
+        return
+      }
+      if (url.pathname === '/api/tarot/reading/stream' && req.method === 'POST') {
+        await handleReadingStream(req, res)
         return
       }
       if (url.pathname === '/api/tarot/config' && req.method === 'GET') {

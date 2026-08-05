@@ -15,6 +15,7 @@
  */
 
 import type {
+  AlternativeInterpretation,
   ReadingContext,
   ReadingRelationship,
   RelationshipKind,
@@ -48,6 +49,7 @@ export interface ValidationOutcome {
   narrative: string
   answerToQuestion: string
   reflectionQuestions: string[]
+  alternativeInterpretations: AlternativeInterpretation[]
   repaired: boolean
 }
 
@@ -184,9 +186,29 @@ export function validateReading(payload: unknown, context: ReadingContext): Vali
     repaired = true
   }
 
-  // 多张牌阵却一条关系都没有 —— 这正是用户抱怨 V1 的那个毛病，不能放过
-  if (context.cards.length >= 2 && relationships.length === 0) {
-    throw new SchemaError('多张牌阵必须给出至少一条牌与牌之间的关系')
+  // V2.3：**不再强制关系数量**。
+  // 原来这里要求「多张牌阵必须至少一条关系」，本意是防止模型偷懒，
+  // 实际效果却是逼它在没有真实关系时硬凑一条 —— 那比没有更糟。
+  // 现在由模型自己判断 0..N，Prompt 里也明确写了「没有就不写」。
+
+  /* ── 另一种读法（可选，不强制存在）─────────────────────── */
+  const alternatives: AlternativeInterpretation[] = []
+  if (Array.isArray(raw.alternativeInterpretations)) {
+    for (const item of raw.alternativeInterpretations) {
+      if (typeof item !== 'object' || item === null) {
+        repaired = true
+        continue
+      }
+      const alt = item as Record<string, unknown>
+      const interpretation =
+        typeof alt.interpretation === 'string' ? alt.interpretation.trim() : ''
+      const reason = typeof alt.reason === 'string' ? alt.reason.trim() : ''
+      if (interpretation.length === 0) {
+        repaired = true
+        continue
+      }
+      alternatives.push({ interpretation, reason })
+    }
   }
 
   /* ── 反思问题：可修复 ─────────────────────────────────── */
@@ -207,6 +229,7 @@ export function validateReading(payload: unknown, context: ReadingContext): Vali
     narrative,
     answerToQuestion,
     reflectionQuestions,
+    alternativeInterpretations: alternatives,
     repaired,
   }
 }
@@ -226,6 +249,9 @@ export function assembleReading(
     narrative: outcome.narrative,
     answerToQuestion: outcome.answerToQuestion,
     reflectionQuestions: outcome.reflectionQuestions,
+    ...(outcome.alternativeInterpretations.length > 0
+      ? { alternativeInterpretations: outcome.alternativeInterpretations }
+      : {}),
     // 安全提示由服务端透传，模型无权改写
     safetyNotice: context.safetyNotice,
     meta: { ...meta, repaired: meta.repaired || outcome.repaired },

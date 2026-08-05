@@ -71,6 +71,7 @@ function req(
     mode: question ? 'question' : 'random',
     theme: question ? null : 'today',
     spreadId,
+    readingMode: 'standard',
     cards: cards.map(([positionId, cardId, orientation]) => ({ positionId, cardId, orientation })),
   }
 }
@@ -218,7 +219,6 @@ function runIntegrityChecks(): void {
       const c = (p.cards as Record<string, unknown>[])[0]!
       c.orientation = c.orientation === 'upright' ? 'reversed' : 'upright'
     }],
-    ['多张牌阵却没有任何关系分析', (p) => { p.relationships = [] }],
     ['缺少 narrative', (p) => { delete p.narrative }],
     ['缺少 answerToQuestion', (p) => { delete p.answerToQuestion }],
     ['reflectionQuestions 为空', (p) => { p.reflectionQuestions = [] }],
@@ -319,8 +319,9 @@ function analyseReading(c: Case, ctx: ReadingContext, reading: StructuredReading
     reading.cards.every((x) => ctx.cards.find((y) => y.cardId === x.cardId)?.orientation === x.orientation))
 
   if (ctx.cards.length >= 2) {
-    check(`${c.name} · 有牌与牌的关系分析`, reading.relationships.length > 0,
-      `${reading.relationships.length} 条`)
+    // V2.3：不再强制关系数量。原来要求「多张牌阵必须至少一条」，
+    // 结果是逼模型在没有真实关系时硬凑 —— 那比没有更糟。
+    // 现在只检查「若给了关系，必须引用真实存在的牌」。
     check(`${c.name} · 关系只引用真实存在的牌`,
       reading.relationships.every((r) => r.cards.every((id) => ids.has(id))))
   } else {

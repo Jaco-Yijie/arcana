@@ -9,7 +9,7 @@
 
 import type { Orientation } from './tarot'
 import type { SpreadId } from './spread'
-import type { StructuredReading } from './reading'
+import type { ReadingMode, StructuredReading } from './reading'
 
 /** 入口模式：带着问题来 / 随缘抽一张 */
 export type SessionMode = 'question' | 'random'
@@ -167,6 +167,11 @@ export interface TarotSession {
    * 加字段而不是改 `reading` 的类型，是为了让已经躺在 localStorage 里的日记原样可读。
    */
   structuredReading?: StructuredReading | null
+  /**
+   * 用户选择的解读模式。保存在 Session 里，重试时保持不变 ——
+   * 除非用户主动改。老记录没有这个字段，按 standard 处理。
+   */
+  readingMode?: ReadingMode
   followUps: FollowUpMessage[]
 
   /** 用户事后补充 */
