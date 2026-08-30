@@ -57,12 +57,35 @@ export type QuestionCategory =
   | 'general'
 
 /** 牌位信息 */
+/**
+ * 牌位信息。
+ *
+ * 【为什么字段是 id / name / meaning 而不是 positionId / positionName / …】
+ * 它已经嵌在 `position` 下面了，前缀纯属重复。更重要的是模型输出侧只有一个
+ * 模糊的 `position: string`（存的是中文名），两边一对照就分不清
+ * 「position 到底指 id 还是 name」。现在入参侧三者各有其名，不再有歧义。
+ *
+ * 旧的三个带前缀的字段作为 **deprecated 别名保留** —— 它们仍被赋值，
+ * 所以任何还没改过来的读取方不会突然拿到 undefined。
+ * 历史 session / 日记里存的是模型**输出**（`StructuredReadingCard.position`），
+ * 那个字段一个字都没动，历史数据零迁移。
+ */
 export interface ReadingContextPosition {
-  positionId: string
-  positionName: string
-  positionMeaning: string
+  /** 牌位 id，例如 'guidance' / 'past' */
+  id: string
+  /** 牌位名，例如 '指引' */
+  name: string
+  /** 这一格关心什么 */
+  meaning: string
   /** 在牌阵中的顺序，0 起。用于「开始 → 中间 → 结尾」的叙事推进。 */
   index: number
+
+  /** @deprecated 用 `id`。保留仅为兼容尚未迁移的读取方 */
+  positionId: string
+  /** @deprecated 用 `name` */
+  positionName: string
+  /** @deprecated 用 `meaning` */
+  positionMeaning: string
 }
 
 /** 一张已经抽定的牌。所有字段都来自本地 78 张牌数据，不让模型自己回忆牌义。 */
@@ -81,6 +104,29 @@ export interface ReadingContextCard {
     upright: string
     reversed: string
   }
+  /**
+   * 按 questionCategory 选出的领域牌义。
+   *
+   * 【为什么它必须存在】牌义数据里每张牌都写了五个领域的解释，
+   * 但此前只有 Mock provider 读得到 —— 真实 Prompt 只拿到通用牌义，
+   * 模型明明被告知「这是事业问题」，却要自己从通用义现推到职业语境，
+   * 而我们手上早就有一句专门为职业写好的。这一层把那句话递过去。
+   *
+   * 【它不改变牌义】只是从既有数据里选取，不生成任何文本。
+   * 问题未明确归类（general），或这张牌尚未写该领域时，为 null ——
+   * 如实缺席，不找替代。
+   *
+   * 【它与牌组无关】选取只依赖 cardId 与 questionCategory，
+   * 换牌组时这个字段逐字节不变（deck:check 语义不变性断言覆盖）。
+   */
+  domainMeaning: {
+    /** 'love' | 'career' | 'study' | 'finance' | 'personalGrowth' | 'advice' */
+    domain: string
+    /** 中文领域名，给模型看的 */
+    label: string
+    upright: string
+    reversed: string
+  } | null
   keywords: {
     upright: string[]
     reversed: string[]
@@ -131,6 +177,12 @@ export interface ReadingContext {
   cards: ReadingContextCard[]
   stats: ReadingStats
   readingMode: ReadingMode
+  /**
+   * 抽牌时用的牌组。**Presentation Context only**。
+   * Prompt 构造（server/prompts/*）逐字段读取 context，从不整体序列化，
+   * 所以这个字段结构上就到不了模型那里。
+   */
+  deckId: string | null
   /** 命中安全边界时的提示，由服务端原样透传到输出，不交给模型改写 */
   safetyNotice: string | null
 }
@@ -302,6 +354,12 @@ export interface ReadingRequest {
   cards: ReadingRequestCard[]
   /** 用户选择的解读模式。重试时保持不变，除非用户主动改。 */
   readingMode: ReadingMode
+  /**
+   * 抽牌时用的是哪副牌。**纯呈现信息**。
+   * 服务端只把它记进 ReadingContext 供日志与日记回看，
+   * 绝不写进 Prompt —— 换牌组不能改变解读的含义，也不能改变抽到的牌。
+   */
+  deckId?: string
 }
 
 /** `GET /api/tarot/config` —— 让前端知道服务端当前用哪个 Provider，避免前端持有任何密钥相关配置 */

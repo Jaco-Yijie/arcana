@@ -33,7 +33,7 @@ function deriveRelationships(context: ReadingContext): ReadingRelationship[] {
         cards: involved.map((c) => c.cardId),
         kind: 'suit-repetition',
         interpretation: `同一花色在这次牌面里出现了 ${count} 次（${involved
-          .map((c) => `「${c.position.positionName}」的${c.cardNameZh}`)
+          .map((c) => `「${c.position.name}」的${c.cardNameZh}`)
           .join('、')}）。如果把这几张牌联系起来看，它们更像是在反复指向同一类处境，而不是各说各的。`,
       })
     }
@@ -86,7 +86,7 @@ export class MockReadingProvider implements ReadingProvider {
     const startedAt = Date.now()
 
     const placements: ReadingPlacement[] = context.cards.map((c) => ({
-      positionId: c.position.positionId,
+      positionId: c.position.id,
       cardId: c.cardId,
       orientation: c.orientation,
     }))
@@ -101,15 +101,35 @@ export class MockReadingProvider implements ReadingProvider {
 
     const cards: StructuredReadingCard[] = context.cards.map((c) => {
       const analysis = v1.cardAnalyses.find((a) => a.cardId === c.cardId)
+      const up = c.orientation === 'upright'
+
+      /* 【Mock 也必须体现问题领域】
+         此前 Mock 走 V1 的旧逻辑（按花色挑领域：圣杯→感情、星币→财务…），
+         那是**牌决定领域**，与用户问的是什么无关 ——
+         于是五个不同领域的问题会得到一模一样的输出，
+         而真实 DeepSeek 早已按 questionCategory 拿到了正确的那一段。
+         两个 provider 的输入结构本该一致。
+
+         这里**不复制任何牌义知识**：domainMeaning 是 rebuildContext 已经
+         按 questionCategory 选好的，Mock 只是把它读出来。
+         问题未明确归类时它是 null，此时如实退回通用义 —— 与真实 Prompt 同样处理。 */
+      const domain = c.domainMeaning
+      const domainText = domain ? (up ? domain.upright : domain.reversed) : null
+
+      const connection = domainText
+        ? `你这个问题落在「${domain!.label}」上。这张牌在「${c.position.name}」这一格，` +
+          `在这类问题上通常指向：${domainText}`
+        : context.question
+          ? `在你当前的问题背景下，这张牌落在「${c.position.name}」上，更接近于在提醒你留意${c.position.meaning}`
+          : `这张牌落在「${c.position.name}」上，指向的是${c.position.meaning}`
+
       return {
         cardId: c.cardId,
         cardName: c.cardNameZh,
-        position: c.position.positionName,
+        position: c.position.name,
         orientation: c.orientation,
-        interpretation: analysis?.text ?? (c.orientation === 'upright' ? c.baseMeaning.upright : c.baseMeaning.reversed),
-        connectionToQuestion: context.question
-          ? `在你当前的问题背景下，这张牌落在「${c.position.positionName}」上，更接近于在提醒你留意${c.position.positionMeaning}`
-          : `这张牌落在「${c.position.positionName}」上，指向的是${c.position.positionMeaning}`,
+        interpretation: analysis?.text ?? (up ? c.baseMeaning.upright : c.baseMeaning.reversed),
+        connectionToQuestion: connection,
       }
     })
 

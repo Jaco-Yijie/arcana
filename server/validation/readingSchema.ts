@@ -22,6 +22,9 @@ import type {
   StructuredReading,
   StructuredReadingCard,
 } from '../../src/types/reading.ts'
+import type { Orientation } from '../../src/types/tarot.ts'
+
+import { parseWithRepair } from './jsonRepair.ts'
 
 export class SchemaError extends Error {}
 
@@ -60,6 +63,26 @@ function asString(value: unknown, field: string, { min = 1 }: { min?: number } =
   return text
 }
 
+/**
+ * 把模型写的朝向归一成 'upright' / 'reversed'。
+ *
+ * 20 次真实采样里出现过 `"up right"` —— 意思毫无歧义，
+ * 却被当成「模型改了正逆位」把整份解读作废了。这是误杀，不是红线。
+ * 归一化只抹平写法差异（空格、连字符、大小写、中文），
+ * **不会**让「明确写成相反方向」蒙混过关。
+ *
+ * @returns 认不出来时返回 null（交由调用方判断，不猜）
+ */
+function normalizeOrientation(value: unknown): Orientation | null {
+  if (typeof value !== 'string') return null
+  const t = value.toLowerCase().replace(/[\s\-_]/g, '')
+  if (t === 'upright' || t === 'up' || t === '正位' || t === '正') return 'upright'
+  if (t === 'reversed' || t === 'reverse' || t === '逆位' || t === '逆') return 'reversed'
+  return null
+}
+
+const opposite = (o: Orientation): Orientation => (o === 'upright' ? 'reversed' : 'upright')
+
 function asStringArray(value: unknown): string[] {
   if (!Array.isArray(value)) return []
   return value
@@ -68,8 +91,24 @@ function asStringArray(value: unknown): string[] {
     .filter((v) => v.length > 0)
 }
 
-/** 模型偶尔会把整份结果包一层，或者用 ```json 围栏。先剥掉再校验。 */
-export function extractJsonObject(raw: string): unknown {
+export interface ExtractOutcome {
+  value: unknown
+  /** 是否动用了 jsonRepair */
+  repaired: boolean
+  /** 具体修了什么，进 meta 与 QA 日志 */
+  fixes: string[]
+}
+
+/**
+ * 模型偶尔会把整份结果包一层、用 ```json 围栏，或者漏一个逗号。
+ * 这里依次尝试：直接解析 → 剥围栏 → 截首尾大括号 → 结构修复（见 jsonRepair.ts）。
+ *
+ * 【为什么值得修而不是直接判失败】
+ * V2.4 的真实采样里，唯一一次 JSON 失败是 4942 字符的完整解读**漏了一个逗号**。
+ * 为此丢掉整份内容、让用户重等 90 秒，代价远大于收益。
+ * 修复只动结构位置，正文一个字符不碰；牌面一致性仍由 validateReading 兜底。
+ */
+export function extractJsonObjectDetailed(raw: string): ExtractOutcome {
   const text = raw.trim()
   if (text.length === 0) throw new SchemaError('模型返回了空内容')
 
@@ -77,20 +116,35 @@ export function extractJsonObject(raw: string): unknown {
   const candidate = fenced?.[1]?.trim() ?? text
 
   try {
-    return JSON.parse(candidate)
+    return { value: JSON.parse(candidate), repaired: false, fixes: [] }
   } catch {
-    // 被截断或前后有噪声：退而求其次，截取第一个 { 到最后一个 }
-    const start = candidate.indexOf('{')
-    const end = candidate.lastIndexOf('}')
-    if (start !== -1 && end > start) {
-      try {
-        return JSON.parse(candidate.slice(start, end + 1))
-      } catch {
-        throw new SchemaError('模型返回的不是合法 JSON（可能被截断）')
-      }
-    }
-    throw new SchemaError('模型返回的不是合法 JSON')
+    /* 继续往下试 */
   }
+
+  // 前后有噪声（「好的，结果如下：」之类）：先截到第一个 { 与最后一个 }
+  const start = candidate.indexOf('{')
+  const end = candidate.lastIndexOf('}')
+  const sliced = start !== -1 && end > start ? candidate.slice(start, end + 1) : candidate
+
+  if (sliced !== candidate) {
+    try {
+      return { value: JSON.parse(sliced), repaired: true, fixes: ['去掉了 JSON 前后的多余文字'] }
+    } catch {
+      /* 继续 */
+    }
+  }
+
+  const repaired = parseWithRepair(sliced)
+  if (repaired) {
+    return { value: repaired.value, repaired: true, fixes: repaired.fixes }
+  }
+
+  throw new SchemaError('模型返回的不是合法 JSON')
+}
+
+/** 只要结果、不关心是否修过时用这个。 */
+export function extractJsonObject(raw: string): unknown {
+  return extractJsonObjectDetailed(raw).value
 }
 
 /**
@@ -125,24 +179,33 @@ export function validateReading(payload: unknown, context: ReadingContext): Vali
     )
     if (!got) throw new SchemaError(`模型的输出里缺少这张牌：${want.cardId}`)
 
-    // 模型擅自改了朝向 —— 直接作废，绝不能把改过的牌当成用户抽的牌
-    if (typeof got.orientation === 'string' && got.orientation !== want.orientation) {
+    /* 模型擅自把牌翻过来 —— 直接作废。
+     * 但只有**明确写成相反方向**才算改牌：`up right`、`UPRIGHT`、「正位」
+     * 都是同一个意思的不同写法，判成改牌是误杀。
+     * 最终 orientation 本来就以我们的数据为准，模型这个值只用来检测它有没有跑偏。 */
+    const said = normalizeOrientation(got.orientation)
+    if (said === opposite(want.orientation)) {
       throw new SchemaError(
-        `模型改变了 ${want.cardId} 的正逆位（应为 ${want.orientation}，返回 ${got.orientation}）`,
+        `模型改变了 ${want.cardId} 的正逆位（应为 ${want.orientation}，返回 ${String(got.orientation)}`,
       )
     }
+    if (said === null && got.orientation !== undefined) repaired = true
+
+    /* connectionToQuestion 偶尔会整个漏掉。牌面是对的，只是少了一段文字 ——
+     * 这属于可修复：留空并标记，让前端跳过这一段，
+     * 而不是为了一段说明把 5000 字的解读整份作废。绝不编造内容填进去。 */
+    const connection =
+      typeof got.connectionToQuestion === 'string' ? got.connectionToQuestion.trim() : ''
+    if (connection.length === 0) repaired = true
 
     return {
       cardId: want.cardId,
       // 牌名与牌位一律以我们的数据为准，不用模型回填的
       cardName: want.cardNameZh,
-      position: want.position.positionName,
+      position: want.position.name,
       orientation: want.orientation,
       interpretation: asString(got.interpretation, `cards[${want.cardId}].interpretation`),
-      connectionToQuestion: asString(
-        got.connectionToQuestion,
-        `cards[${want.cardId}].connectionToQuestion`,
-      ),
+      connectionToQuestion: connection,
     }
   })
 

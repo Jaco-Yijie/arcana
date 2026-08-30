@@ -19,15 +19,9 @@ import { MockReadingProvider } from '../providers/mock.ts'
 import { ContextError, rebuildContext } from '../context/rebuild.ts'
 import { readingError, statusFor } from '../errors.ts'
 import { readJsonBody, sendJson, tooManyRequests } from '../http.ts'
-import { StreamFailure, streamCompletion } from '../providers/stream.ts'
-import { buildMessages, resolveVersion } from '../prompts/index.ts'
-import {
-  SchemaError,
-  assembleReading,
-  extractJsonObject,
-  validateReading,
-} from '../validation/readingSchema.ts'
-import { blockingViolations, checkTone } from '../validation/toneGuard.ts'
+import { StreamFailure } from '../providers/stream.ts'
+import { SchemaError } from '../validation/readingSchema.ts'
+import { generateStructuredReading } from '../reading/generateReading.ts'
 import { MockReadingProvider as _Mock } from '../providers/mock.ts'
 void _Mock
 
@@ -147,57 +141,23 @@ export async function handleReadingStream(
     res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`)
   }
 
-  const startedAt = Date.now()
   send('phase', { phase: context.readingMode === 'deep' ? 'thinking' : 'writing' })
 
   /**
-   * 偶发失败重试一次。
-   * A/B 实测 deep 模式 10 次里出现 1 次空响应、1 次结构错误的 JSON ——
-   * 都是模型侧偶发，重试一次就能救回来。
-   * 代价是用户多等一轮，但比让他看到失败再自己点重试要好。
+   * 生成逻辑（含「最多重试一次」）在 server/reading/generateReading.ts，
+   * 与 20 次稳定性测试脚本共用同一份 —— 测的就是线上真正跑的东西。
    */
-  const attempt = async () => {
-    const result = await streamCompletion(context, buildMessages(context), {
-      onReasoningStart: () => send('phase', { phase: 'thinking' }),
-      onContent: (delta) => send('delta', { text: delta }),
-    })
-    return validateReading(extractJsonObject(result.content), context)
-  }
+  const outcome = await generateStructuredReading(context, {
+    onReasoningStart: () => send('phase', { phase: 'thinking' }),
+    onContent: (delta) => send('delta', { text: delta }),
+    // 重试前告诉前端把已展示的片段清掉，避免两轮内容拼在一起
+    onRestart: () => send('restart', {}),
+  })
 
-  try {
-    let outcome
-    try {
-      outcome = await attempt()
-    } catch (first) {
-      const transient =
-        (first instanceof StreamFailure &&
-          ['empty-response', 'invalid-json', 'upstream-error', 'network-error'].includes(first.code)) ||
-        first instanceof SchemaError
-      if (!transient) throw first
-      // 重试前告诉前端把已展示的片段清掉，避免两轮内容拼在一起
-      send('restart', {})
-      outcome = await attempt()
-    }
-    const reading = assembleReading(outcome, context, {
-      provider: 'deepseek',
-      model: config.model,
-      generatedAt: Date.now(),
-      latencyMs: Date.now() - startedAt,
-      toneAdjusted: false,
-      readingMode: context.readingMode,
-      promptVersion: resolveVersion(),
-    })
-
-    // 只有 block 级才作废；warn 级放行（分级理由见 toneGuard）
-    const violations = blockingViolations(checkTone(reading))
-    if (violations.length > 0) {
-      // 流式下不做「带违规词重问一次」——那要用户再等一整轮。
-      // 直接判失败，前端撤回已展示片段并允许重试。
-      send('failed', { error: readingError('schema-invalid', '解读措辞未能通过语气校验') })
-    } else {
-      send('done', { reading })
-    }
-  } catch (err) {
+  if (outcome.reading) {
+    send('done', { reading: outcome.reading })
+  } else {
+    const err = outcome.error
     const code =
       err instanceof StreamFailure
         ? (err.code as Parameters<typeof readingError>[0])
@@ -206,7 +166,6 @@ export async function handleReadingStream(
           : 'unknown'
     const detail = err instanceof Error ? err.message : undefined
     send('failed', { error: readingError(code, detail) })
-  } finally {
-    res.end()
   }
+  res.end()
 }

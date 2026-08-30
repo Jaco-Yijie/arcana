@@ -8,6 +8,7 @@ import { TarotCardFace } from '@/components/card/TarotCardFace'
 import { getEntry } from '@/store/journalStore'
 import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
+import { resolveDeckId } from '@/decks/ids'
 
 /**
  * 分享预览。不接任何真实社交网络 SDK。
@@ -76,8 +77,15 @@ export default function SharePage() {
           <div className="flex flex-wrap gap-3">
             {cards.map(({ pos, card, orientation }) => (
               <div key={pos.id} className="flex flex-col items-center gap-1">
-                <CardFrame size="sm" state="locked">
-                  <TarotCardFace card={card} orientation={orientation} size="sm" showName={false} />
+                <CardFrame size="sm" state="locked" deckId={resolveDeckId(entry.deckId, entry.deckSchema)}>
+                  <TarotCardFace
+                    card={card}
+                    orientation={orientation}
+                    /* 历史保真：用当时那副牌 */
+                    deckId={resolveDeckId(entry.deckId, entry.deckSchema)}
+                    size="sm"
+                    showName={false}
+                  />
                 </CardFrame>
                 <span className="text-[10px] text-text-faint">{pos.label}</span>
                 <span className="text-[10px] text-text-low">

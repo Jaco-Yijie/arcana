@@ -19,7 +19,13 @@ import type {
 import { rebuildContext } from '../server/context/rebuild.ts'
 import { MockReadingProvider } from '../server/providers/mock.ts'
 import { DeepSeekReadingProvider } from '../server/providers/deepseek.ts'
-import { validateReading, extractJsonObject, SchemaError } from '../server/validation/readingSchema.ts'
+import {
+  validateReading,
+  extractJsonObject,
+  extractJsonObjectDetailed,
+  SchemaError,
+} from '../server/validation/readingSchema.ts'
+import { parseWithRepair, repairJson } from '../server/validation/jsonRepair.ts'
 import { checkTone } from '../server/validation/toneGuard.ts'
 import { config } from '../server/env.ts'
 
@@ -236,6 +242,58 @@ function runIntegrityChecks(): void {
     check(`拒绝：${name}`, rejected)
   }
 
+  /* ── 红线的边界在哪 ────────────────────────────────────────
+   * 20 次真实采样暴露出两个**误杀**：模型把 upright 写成 `up right`、
+   * 某张牌漏了 connectionToQuestion —— 牌面完全正确，却被判成「模型改牌」
+   * 把 5000 字的解读整份作废。红线要守的是「模型动了牌」，不是「模型写法不标准」。 */
+
+  const orientationWritings: [string, unknown, boolean][] = [
+    ['up right（多了空格）不算改牌', 'up right', true],
+    ['UPRIGHT（大写）不算改牌', 'UPRIGHT', true],
+    ['up-right（连字符）不算改牌', 'up-right', true],
+    ['「正位」（中文）不算改牌', '正位', true],
+    ['认不出来的写法不整份作废', '???', true],
+    ['orientation 缺失不整份作废', undefined, true],
+    ['明确写成 reversed 仍然作废', 'reversed', false],
+    ['明确写成「逆位」仍然作废', '逆位', false],
+  ]
+  for (const [name, written, shouldPass] of orientationWritings) {
+    const payload = baseValidPayload(ctx)
+    const card = (payload.cards as Record<string, unknown>[])[0]!
+    // 第一张牌在 02 号用例里是 upright
+    if (written === undefined) delete card.orientation
+    else card.orientation = written
+    let passed = false
+    try {
+      validateReading(payload, ctx)
+      passed = true
+    } catch {
+      passed = false
+    }
+    check(name, passed === shouldPass)
+  }
+
+  check('缺少 connectionToQuestion 时标 repaired 而不是作废', (() => {
+    const payload = baseValidPayload(ctx)
+    delete (payload.cards as Record<string, unknown>[])[0]!.connectionToQuestion
+    try {
+      return validateReading(payload, ctx).repaired === true
+    } catch {
+      return false
+    }
+  })())
+
+  check('缺少 interpretation 仍然作废（那张牌就没内容了）', (() => {
+    const payload = baseValidPayload(ctx)
+    delete (payload.cards as Record<string, unknown>[])[0]!.interpretation
+    try {
+      validateReading(payload, ctx)
+      return false
+    } catch (err) {
+      return err instanceof SchemaError
+    }
+  })())
+
   // 可修复项不应导致整份失败
   const repairable = baseValidPayload(ctx)
   ;(repairable.relationships as Record<string, unknown>[])[0]!.cards = [ctx.cards[0]!.cardId, 'NOT-A-CARD']
@@ -255,9 +313,52 @@ function runIntegrityChecks(): void {
   check('空内容被判为失败', (() => {
     try { extractJsonObject('   '); return false } catch { return true }
   })())
-  check('截断的 JSON 被判为失败', (() => {
-    try { extractJsonObject('{"readingTheme":"abc"'); return false } catch { return true }
+
+  /* ── JSON 结构修复（jsonRepair）────────────────────────────
+   * V2.4：Deep 模式 10 次真实采样里唯一一次 JSON 失败，是完整 4942 字符
+   * 只漏了一个逗号。修复器为此而生，但它必须满足两个条件：
+   *   ① 能修好这类结构错误
+   *   ② 对本来就合法的内容**一个字符都不改**
+   * ② 比 ① 重要 —— 改错了就是篡改用户看到的解读。 */
+
+  const missingComma = '{"a": "x"\n  "b": "y"}'
+  check('漏逗号能被补上', (() => {
+    const r = parseWithRepair(missingComma)
+    return !!r && (r.value as Record<string, string>).b === 'y'
   })())
+
+  check('多余逗号能被删掉', (() => {
+    const r = parseWithRepair('{"a": 1, "b": [1, 2,], }')
+    const v = r?.value as Record<string, unknown> | undefined
+    return !!v && Array.isArray(v.b) && (v.b as number[]).length === 2
+  })())
+
+  check('截断能回退到最后一条完整内容', (() => {
+    const r = parseWithRepair('{"a":"完整","b":["第一条","第二条","第三条被截断到一半')
+    const v = r?.value as Record<string, unknown> | undefined
+    return !!v && v.a === '完整' && Array.isArray(v.b) && (v.b as string[]).length === 2
+  })())
+
+  check('正文里的逗号和引号不会被当成结构', (() => {
+    const payload = { narrative: '他说：「先停一下」，然后，{也许} 是对的 [也许不是]' }
+    const r = repairJson(JSON.stringify(payload))
+    return r.text === JSON.stringify(payload) && r.changed === false
+  })())
+
+  check('合法 JSON 不会被修复器改动', (() => {
+    const s = JSON.stringify(baseValidPayload(ctx))
+    const r = repairJson(s)
+    return r.changed === false && JSON.stringify(JSON.parse(r.text)) === s
+  })())
+
+  check('修不好的输入仍然判失败', parseWithRepair('这不是 JSON，一个括号都没有') === null)
+
+  check('用过修复器时会如实标记 repaired', (() => {
+    const out = extractJsonObjectDetailed(missingComma)
+    return out.repaired === true && out.fixes.length > 0
+  })())
+
+  check('没修过时 repaired 为 false', extractJsonObjectDetailed('{"a":1}').repaired === false)
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -289,6 +390,9 @@ function runToneChecks(): void {
     '你必须马上离开现在的公司。',
     '宇宙正在告诉你答案。',
     '这张牌绝对说明他还爱你。',
+    // 让步句里没有把选择权还回来的，仍然是宿命论
+    '虽然你很累，但这件事已成定局，无法改变。',
+    '虽然天意如此，但你可以选择怎么走。',
   ]
   for (const t of shouldFlag) check(`判违规：${t}`, toneOf(t) > 0)
 
@@ -300,6 +404,11 @@ function runToneChecks(): void {
     '没有什么是注定的，这里仍然有调整余地。',
     '这组牌不能绝对说明什么，更像是一种提醒。',
     '在一定程度上，这反映了你目前的犹豫。',
+    /* 让步转折句。20 次真实采样里唯一一次语气拦截就是第一条 ——
+       整句在强调「你仍然可以选」，却因为「不可避免」四个字被判宿命论。 */
+    '虽然加速不可避免，但你可以选择在开始加速前，先把方向对准。',
+    '尽管这次调整无法避免，不过你仍然决定要往哪边走。',
+    '即使有些事已成定局，你还是可以决定接下来怎么做。',
   ]
   for (const t of shouldPass) check(`不误杀：${t}`, toneOf(t) === 0)
 }

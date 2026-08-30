@@ -48,6 +48,9 @@ export function buildReadingRequest(
     spreadId: spread.id,
     cards,
     readingMode,
+    // 纯呈现信息：服务端只记录，不写进 Prompt。
+    // 它是 session 的固定字段，所以重试时 payload 依然逐字节相同（AC-V2-06）。
+    deckId: session.deckId,
   }
 }
 

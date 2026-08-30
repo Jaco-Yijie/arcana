@@ -47,6 +47,7 @@ export default function DrawPage() {
 
   return (
     <ImmersiveShell
+      variant="table"
       step="draw"
       interacting={interacting}
       counter={`${session.placements.length}/${spread.cardCount}`}

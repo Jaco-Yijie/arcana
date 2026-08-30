@@ -31,3 +31,4 @@ dist-ssr
 # Benchmark 输出（含各次模型原始返回，体积大且无复用价值）
 bench-out/
 ab-out/
+deep-stability-out/

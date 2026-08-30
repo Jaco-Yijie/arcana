@@ -5,6 +5,7 @@ import { useSession } from '@/hooks/useSession'
 import { getSpread } from '@/data/spreads'
 import { truncate } from '@/utils/format'
 import type { SessionStage } from '@/types/session'
+import { WIDTH_STYLE } from '@/components/layout/AppShell'
 
 /** Session 中断时停在哪一步 → 回到哪个路由 */
 const STAGE_ROUTE: Record<SessionStage, string> = {
@@ -39,7 +40,10 @@ export default function HomePage() {
   const progress = session && spread ? `${session.placements.length}/${spread.cardCount}` : null
 
   return (
-    <div className="relative mx-auto flex min-h-[100dvh] w-full max-w-[420px] flex-col px-5">
+    <div className="relative mx-auto flex min-h-[100dvh] w-full flex-col px-5"
+      /* 与 AppShell 的 column 用同一个连续宽度令牌 —— 这两页有自己的根容器，
+         不经过 AppShell，但内容列宽度必须和全站一致 */
+      style={{ maxWidth: WIDTH_STYLE.column }}>
       {/* 未完成 Session：写清楚问题 + 牌阵 + 进度，用户才敢点「继续」 */}
       {hasUnfinished && session && (
         <Panel tone="veil" pad="sm" className="mt-4 flex flex-col gap-2">
@@ -75,7 +79,7 @@ export default function HomePage() {
         <nav className="flex flex-col gap-3">
           <button
             type="button"
-            onClick={() => navigate('/question?mode=question')}
+            onClick={() => navigate('/decks')}
             className="surface-veil flex h-24 flex-col justify-center gap-1 rounded-lg px-5 text-left transition-transform duration-[var(--duration-quick)] active:scale-[0.985]"
           >
             <span className="font-serif text-title text-text-hi">带着问题来</span>
@@ -98,7 +102,7 @@ export default function HomePage() {
         style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
       >
         <Link to="/journal" className="flex items-center">塔罗日记</Link>
-        <Link to="/deck" className="flex items-center">牌组</Link>
+        <Link to="/decks" className="flex items-center">牌组</Link>
         <Link to="/settings" className="flex items-center">设置</Link>
       </footer>
     </div>

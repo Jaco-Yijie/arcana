@@ -11,7 +11,7 @@
  * 每次状态变更都同步写入 localStorage，保证「未完成 Session」可原样恢复（AC-08 / G-22）。
  */
 
-import { createContext, useCallback, useMemo, useRef, useState } from 'react'
+import { createContext, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import type {
   FollowUpMessage,
@@ -37,6 +37,8 @@ import { getSpread } from '@/data/spreads'
 import { StorageKeys, readJSON, remove, writeJSON } from '@/utils/storage'
 import { upsertEntry } from '@/store/journalStore'
 import { createId } from '@/utils/id'
+import { useDeck } from '@/hooks/useDeck'
+import { DECK_SCHEMA_VERSION } from '@/decks/ids'
 
 export interface StartSessionInput {
   mode: SessionMode
@@ -78,6 +80,12 @@ interface SessionContextValue {
   /** 用户主动翻开某个牌位的牌 */
   revealCard: (positionId: string) => void
 
+  /**
+   * 冻结本次会话使用的牌组。进入牌桌时调用一次，之后再换牌组不影响这次抽牌。
+   * 幂等：已冻结时调用不产生任何变化。
+   */
+  lockDeck: () => void
+
   setReading: (reading: Reading, structuredReading?: StructuredReading | null) => void
   addFollowUp: (message: Omit<FollowUpMessage, 'id' | 'createdAt'>) => void
   /** 写入日记并结束会话 */
@@ -100,6 +108,10 @@ function persist(session: TarotSession | null) {
 }
 
 export function SessionProvider({ children }: { children: ReactNode }) {
+  // 当前选中的牌组。SessionProvider 嵌在 DeckProvider 里面，所以这里读得到。
+  // 【它只被记录，不参与任何决策】牌序与正逆位由 buildHiddenDeck(seed, …) 决定，
+  // 那个调用的参数里根本没有 deckId —— 换牌组不可能改变你抽到什么。
+  const { deckId } = useDeck()
   const [session, setSession] = useState<TarotSession | null>(() => loadSession())
   // 保存最新引用，供 completeSession 等需要读当前值的场景使用
   const sessionRef = useRef(session)
@@ -135,7 +147,11 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       optimizedQuestion: input.optimizedQuestion,
       usedOptimized: input.usedOptimized,
       theme: input.theme,
-      deckId: 'dreamlike',
+      // 抽牌当时用的是哪副牌 —— 存进日记，日后回看时画面能对得上。
+      // 此刻还没进牌桌，所以尚未冻结：用户在选牌阵前反悔换牌组仍然算数。
+      deckId,
+      deckSchema: DECK_SCHEMA_VERSION,
+      deckLocked: false,
       spreadId: input.spreadId,
       shuffleSeed: seed,
       entropy: createEntropy(),
@@ -158,7 +174,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     sessionRef.current = next
     setSession(next)
     return next
-  }, [])
+  }, [deckId])
 
   const discardSession = useCallback(() => {
     persist(null)
@@ -275,6 +291,30 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     [commit],
   )
 
+  const lockDeck = useCallback(
+    () => commit((prev) => (prev.deckLocked ? prev : { ...prev, deckLocked: true })),
+    [commit],
+  )
+
+  /**
+   * 未冻结前，会话的 deckId 跟随用户当前选择。
+   *
+   * 【为什么需要这一段】用户在问题页选了牌阵，回头去换了副牌组，
+   * 再回来继续 —— 如果 session 还记着创建时那副，牌桌和他刚选的不一致。
+   * 冻结之后（进入牌桌）这里就不再生效，这正是「开始抽牌后不再变」。
+   *
+   * 【它绝不触碰牌序】只改 deckId 一个字段。deck / placements / drawn
+   * 一个字节都不动 —— 换牌组不可能改变你已经抽到的牌。
+   */
+  useEffect(() => {
+    const current = sessionRef.current
+    if (!current) return
+    if (current.status !== 'in-progress') return
+    if (current.deckLocked) return
+    if (current.deckId === deckId) return
+    commit((prev) => ({ ...prev, deckId }))
+  }, [deckId, commit])
+
   /**
    * Reading 生成即视为「这次占卜已完成」：status 转为 completed，
    * commit 会把它写进日记（见上方注释）。首页的「未完成的抽牌」提示也就自然消失。
@@ -348,6 +388,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       placeCard,
       liftCard,
       revealCard,
+      lockDeck,
       setReading,
       addFollowUp,
       completeSession,
@@ -368,6 +409,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       placeCard,
       liftCard,
       revealCard,
+      lockDeck,
       setReading,
       addFollowUp,
       completeSession,

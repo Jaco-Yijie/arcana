@@ -1,14 +1,23 @@
 /**
- * 梦幻超现实塔罗牌组（Dreamlike Tarot Deck）—— 78 张完整体系
+ * Layer 1 · 塔罗语义层数据（Tarot Meaning Layer）—— 78 张完整体系
  *
  * 数据层必须 78 张齐全：摊牌阶段用户面对的是一整副牌，
  * 若数据不全会直接破坏「这是我自己从整副牌里抽出来的」这一核心感受。
  *
- * 图像层不在此处：每张牌只声明 `art.motif / art.hue / art.tier`，
- * 由 CardArt 组件程序化生成画面（MVP 不做 78 张原创插画）。
+ * 【这一层与牌组无关】
+ * 本目录只回答「这张牌是什么」：id、牌名、编号、大小阿卡纳、花色、正逆位牌义、
+ * keywords、symbols。它**不回答「它长什么样」** —— 那属于 Layer 2（src/decks）。
+ *
+ * 所以这里没有任何 deckId，也没有任何视觉字段。
+ * 五套牌组画的是同一批 cardId，牌义逐字节相同，由 MEANING_FINGERPRINT 与
+ * deck:check 的 D 组断言共同钉死。
+ *
+ * 【路径为什么不改】
+ * server/context/rebuild.ts 依赖 `src/data/deck/index.ts` 这个路径，
+ * 而它属于绝对不可修改的红线文件。分层靠规则与断言成立，不靠目录改名。
  */
 
-import type { TarotCard, TarotDeck } from '@/types/tarot'
+import type { TarotCard } from '@/types/tarot'
 import { majorArcana } from './majorArcana'
 import { minorArcana } from './minorArcana'
 
@@ -52,16 +61,6 @@ export function getCard(id: string): TarotCard {
     throw new Error(`[deck] 未找到牌：${id}`)
   }
   return card
-}
-
-/** MVP 唯一牌组 */
-export const dreamlikeDeck: TarotDeck = {
-  id: 'dreamlike',
-  name: '梦幻超现实塔罗牌组',
-  nameEn: 'Dreamlike Tarot',
-  description:
-    '深夜、星空、雾与星轨构成的超现实空间。底层为标准 78 张体系，牌面以统一的冷色调程序化绘制，牌背完全一致。',
-  cards: allCards,
 }
 
 export { majorArcana, minorArcana }

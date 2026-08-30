@@ -17,6 +17,7 @@
   "ignorePatterns": [
     "dist/**",
     "node_modules/**",
-    "streamlit_build/**"
+    "streamlit_build/**",
+    ".claude/**"
   ]
 }

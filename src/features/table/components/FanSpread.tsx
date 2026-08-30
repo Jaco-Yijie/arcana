@@ -1,13 +1,66 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CardFrame } from '@/components/card/CardFrame'
-import { CardBack } from '@/components/card/CardBack'
+import { ThemedCardBack as CardBack } from '@/components/card/ThemedCardBack'
 import { capturePointer } from './pointer'
 import { computeFanMetrics, computeFanLayout, hitTestFan } from '@/features/table/engine'
 import type { FanCardLayout } from '@/features/table/engine'
 
-const CARD_W = 76
-const CARD_H = 130
+/**
+ * 扇形几何随容器宽度求解。
+ *
+ * 【为什么不能写死】
+ * 旧版是 `CARD_W = 76 / CARD_H = 130 / arcDepth = 22 / maxTilt = 12°`，
+ * 四个常量都是按 375px 竖屏调的。沉浸区放宽到 1120px 之后，
+ * 同一组常量摊在 1150px 上得到的是**一条几乎笔直的窄条**：
+ * 22px 的弧深除以 1150px 的跨度，矢高比只有 1.9%，人眼读不出弧。
+ * 牌也小得看不清卡背 —— 而卡背正是牌组视觉身份最主要的载体。
+ *
+ * 【为什么按宽度而不是按断点】
+ * 断点是给结构切换用的（底部抽屉 vs 右侧栏）。扇形是连续几何，
+ * 用断点会在 767→768 处突然跳一下。这里全部走连续函数，
+ * 720 / 1120 / 1440 之间是平滑过渡。
+ */
+function clamp(v: number, lo: number, hi: number): number {
+  return v < lo ? lo : v > hi ? hi : v
+}
+
+/** 卡牌宽高比，与 theme.css 的 --card-ratio 一致 */
+const CARD_RATIO = 0.5999
+
+interface FanGeometry {
+  cardW: number
+  cardH: number
+  arcDepth: number
+  maxTiltDeg: number
+  focusLift: number
+  focusScale: number
+  sidePadding: number
+}
+
+function fanGeometry(containerW: number, containerH: number): FanGeometry {
+  /* 卡宽由两条约束取小：
+       宽度侧 —— 小屏保底 72（拇指点得中），宽屏最大 124（再大就喧宾夺主）
+       高度侧 —— 卡 + 弧深 + 上浮必须装得进容器，否则底部会被裁掉
+     只按宽度算时，1512px 宽 / 176px 高的桌面扇形区会算出 197px 高的牌，
+     直接被容器切掉三分之一 —— 实测就是这个样子。 */
+  const byWidth = clamp(containerW * 0.078, 72, 124)
+  const byHeight = containerH > 0 ? containerH * 0.78 * CARD_RATIO : byWidth
+  const cardW = clamp(Math.min(byWidth, byHeight), 56, 124)
+  /* 弧深随跨度走：矢高比稳定在 5.5% 左右，任何宽度上都读得出是一道弧 */
+  const arcDepth = clamp(containerW * 0.055, 18, 88)
+  /* 跨度越大，边缘牌的倾角越大 —— 否则两端会显得是被硬掰直的 */
+  const maxTiltDeg = clamp(8 + containerW / 110, 12, 26)
+  return {
+    cardW,
+    cardH: cardW / CARD_RATIO,
+    arcDepth,
+    maxTiltDeg,
+    focusLift: clamp(containerW * 0.022, 12, 30),
+    focusScale: clamp(1.04 + containerW / 24000, 1.06, 1.12),
+    sidePadding: clamp(containerW * 0.03, 16, 56),
+  }
+}
 /** 位移死区：手指刚落下的抖动不触发任何事（UX Spec §6.2 防线 3） */
 const DEAD_ZONE = 12
 /** 上滑抽牌的最小位移 */
@@ -78,13 +131,19 @@ export function FanSpread({
     return () => ro.disconnect()
   }, [])
 
+  const geo = fanGeometry(size.w, size.h)
   const metrics = computeFanMetrics({
     count,
     containerWidth: size.w,
     containerHeight: size.h,
     scrollOffset: 0,
-    cardWidth: CARD_W,
-    cardHeight: CARD_H,
+    cardWidth: geo.cardW,
+    cardHeight: geo.cardH,
+    arcDepth: geo.arcDepth,
+    maxTiltDeg: geo.maxTiltDeg,
+    focusLift: geo.focusLift,
+    focusScale: geo.focusScale,
+    sidePadding: geo.sidePadding,
   })
 
   // 进入时停在扇形中点：用户第一眼看到的是「一整副牌的中间」，而不是第 1 张
@@ -129,8 +188,13 @@ export function FanSpread({
     containerWidth: size.w,
     containerHeight: size.h,
     scrollOffset,
-    cardWidth: CARD_W,
-    cardHeight: CARD_H,
+    cardWidth: geo.cardW,
+    cardHeight: geo.cardH,
+    arcDepth: geo.arcDepth,
+    maxTiltDeg: geo.maxTiltDeg,
+    focusLift: geo.focusLift,
+    focusScale: geo.focusScale,
+    sidePadding: geo.sidePadding,
   })
 
   const localPoint = (e: React.PointerEvent) => {
@@ -223,7 +287,7 @@ export function FanSpread({
       {layouts.map((l) => {
         if (takenIndexes.includes(l.index)) return null
         // 视口外的牌不渲染（78 张全渲染在低端机上会掉帧）
-        if (l.x < -CARD_W * 1.5 || l.x > size.w + CARD_W * 0.5) return null
+        if (l.x < -geo.cardW * 1.5 || l.x > size.w + geo.cardW * 0.5) return null
         return (
           <motion.div
             key={l.index}

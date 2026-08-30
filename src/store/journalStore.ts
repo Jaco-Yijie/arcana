@@ -62,5 +62,7 @@ export function toSummary(entry: JournalEntry): JournalEntrySummary {
       orientation: entry.deck[p.deckIndex]?.orientation ?? 'upright',
     })),
     headline: entry.reading?.headline[0] ?? '',
+    deckId: entry.deckId,
+    deckSchema: entry.deckSchema,
   }
 }

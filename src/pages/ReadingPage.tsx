@@ -8,12 +8,14 @@ import { useSession } from '@/hooks/useSession'
 import { useSettings } from '@/hooks/useSettings'
 import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
+import { resolveDeckId } from '@/decks/ids'
 import { answerFollowUp } from '@/features/reading'
 import { buildFollowUpContext } from '@/features/reading/buildReadingInput'
 import { StructuredReadingView } from '@/features/reading/ReadingSections'
 import { DEEP_THINKING_HINT, READING_PHASES, useReading } from '@/hooks/useReading'
 import { ReadingModePicker } from '@/features/reading/ReadingModePicker'
 import type { ReadingMode } from '@/types/reading'
+import { WIDTH_STYLE } from '@/components/layout/AppShell'
 
 function Accordion({ title, children }: { title: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
@@ -101,7 +103,8 @@ export default function ReadingPage() {
   }
 
   return (
-    <div className="relative mx-auto flex min-h-[100dvh] w-full max-w-[420px] flex-col">
+    <div className="relative mx-auto flex min-h-[100dvh] w-full flex-col"
+      style={{ maxWidth: WIDTH_STYLE.column }}>
       <header
         className="flex items-center justify-between px-4 py-2"
         style={{ paddingTop: 'max(0.5rem, env(safe-area-inset-top))' }}
@@ -122,8 +125,15 @@ export default function ReadingPage() {
       <div className="flex gap-2 overflow-x-auto px-4 pb-3 scrollbar-none">
         {cards.map(({ pos, card, orientation }) => (
           <div key={pos.id} className="flex shrink-0 flex-col items-center gap-1">
-            <CardFrame size="sm" state="locked" className="w-10">
-              <TarotCardFace card={card} orientation={orientation} size="sm" showName={false} />
+            <CardFrame size="sm" state="locked" className="w-10" deckId={resolveDeckId(session.deckId, session.deckSchema)}>
+              <TarotCardFace
+                card={card}
+                orientation={orientation}
+                /* 本次会话冻结的牌组 */
+                deckId={resolveDeckId(session.deckId, session.deckSchema)}
+                size="sm"
+                showName={false}
+              />
             </CardFrame>
             <span className="text-[10px] text-text-faint">{pos.label}</span>
           </div>
@@ -171,14 +181,41 @@ export default function ReadingPage() {
             </div>
           </div>
         ) : status === 'error' ? (
-          /* 失败：牌一定还在，页面绝不白屏 */
+          /* 失败：牌一定还在，页面绝不白屏。
+             后端已经自动重试过一次了，走到这里说明两次都没成 ——
+             接下来给什么选项，由用户决定，我们不替他降级。 */
           <div className="flex flex-col gap-4 pt-10">
             <Panel tone="caution" pad="md">
-              <p className="text-read text-text-mid">{error?.message}</p>
+              <p className="text-read text-text-mid">
+                {mode === 'deep'
+                  ? '这次深度解读没有完整生成，你抽出的牌已经保留。'
+                  : error?.message}
+              </p>
+              {mode === 'deep' && error?.message && (
+                <p className="mt-2 text-caption text-text-faint">{error.message}</p>
+              )}
             </Panel>
+
             <Button size="lg" variant="primary" block onClick={retry}>
-              重新尝试解读
+              {mode === 'deep' ? '再次尝试深度解读' : '重新尝试解读'}
             </Button>
+
+            {/* 换成标准解读是**用户主动**做的选择，不是我们背着他偷偷降级。
+                牌一张都不动，只是换一种读法。 */}
+            {mode === 'deep' && (
+              <Button
+                size="lg"
+                variant="ghost"
+                block
+                onClick={() => {
+                  setMode('standard')
+                  patchSession({ readingMode: 'standard' })
+                }}
+              >
+                改用标准解读
+              </Button>
+            )}
+
             <button
               type="button"
               onClick={() => navigate('/table/reveal')}
@@ -280,22 +317,26 @@ export default function ReadingPage() {
         )}
       </main>
 
-      {/* 追问：Context 只限于本次抽牌，不是通用 Chatbot */}
-      <div
-        className="sticky bottom-0 flex items-end gap-2 border-t border-line-hairline bg-bg-deep/90 px-4 pt-2 backdrop-blur"
-        style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
-      >
-        <input
-          value={pending}
-          onChange={(e) => setPending(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && send()}
-          placeholder="关于这次抽牌继续问…"
-          className="h-11 flex-1 rounded-sm border border-line-hairline bg-bg-void/50 px-3 text-read text-text-hi outline-none placeholder:text-text-faint"
-        />
-        <Button size="md" variant="quiet" onClick={send} disabled={!pending.trim()}>
-          发送
-        </Button>
-      </div>
+      {/* 追问：Context 只限于本次抽牌，不是通用 Chatbot。
+          【只在解读出来之后才出现】还在选模式、还在等结果、或者失败了的时候，
+          用户根本没有可追问的内容 —— 那时候摆一个输入框只会挡住真正要做的选择。 */}
+      {(structured || reading) && (
+        <div
+          className="sticky bottom-0 flex items-end gap-2 border-t border-line-hairline bg-bg-deep/90 px-4 pt-2 backdrop-blur"
+          style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
+        >
+          <input
+            value={pending}
+            onChange={(e) => setPending(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && send()}
+            placeholder="关于这次抽牌继续问…"
+            className="h-11 flex-1 rounded-sm border border-line-hairline bg-bg-void/50 px-3 text-read text-text-hi outline-none placeholder:text-text-faint"
+          />
+          <Button size="md" variant="quiet" onClick={send} disabled={!pending.trim()}>
+            发送
+          </Button>
+        </div>
+      )}
     </div>
   )
 }

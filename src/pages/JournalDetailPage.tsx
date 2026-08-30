@@ -9,6 +9,7 @@ import { getEntry, patchEntry } from '@/store/journalStore'
 import type { JournalEntry } from '@/store/journalStore'
 import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
+import { resolveDeckId } from '@/decks/ids'
 import { formatDateTime } from '@/utils/format'
 
 /** 失焦即存，不放「保存」按钮 —— 与日记自动保存的逻辑保持一致 */
@@ -103,8 +104,15 @@ export default function JournalDetailPage() {
         <section className="flex flex-wrap gap-3">
           {cards.map(({ pos, card, orientation }) => (
             <div key={pos.id} className="flex flex-col items-center gap-1">
-              <CardFrame size="sm" state="locked">
-                <TarotCardFace card={card} orientation={orientation} size="sm" showName={false} />
+              <CardFrame size="sm" state="locked" deckId={resolveDeckId(entry.deckId, entry.deckSchema)}>
+                <TarotCardFace
+                  card={card}
+                  orientation={orientation}
+                  /* 历史保真：用当时那副牌 */
+                  deckId={resolveDeckId(entry.deckId, entry.deckSchema)}
+                  size="sm"
+                  showName={false}
+                />
               </CardFrame>
               <span className="text-[10px] text-text-faint">{pos.label}</span>
               <span className="text-[10px] text-text-low">

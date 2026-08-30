@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ImmersiveShell } from '@/components/layout/ImmersiveShell'
@@ -17,10 +17,16 @@ import type { ShuffleGesture } from '@/features/table/engine'
  */
 export default function ShufflePage() {
   const navigate = useNavigate()
-  const { session, shuffle, shuffleCount, markShuffled } = useSession()
+  const { session, shuffle, shuffleCount, markShuffled, lockDeck } = useSession()
   const feedback = useFeedback()
   const [interacting, setInteracting] = useState(false)
   const [cooldown, setCooldown] = useState(false)
+
+  /* 进入牌桌 = 开始抽牌 → 冻结本次会话的牌组。
+     从这一刻起再换牌组，只影响下一次抽牌，不影响这一次。 */
+  useEffect(() => {
+    lockDeck()
+  }, [lockDeck])
 
   if (!session) return <Navigate to="/" replace />
 

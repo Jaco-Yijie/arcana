@@ -1,0 +1,22 @@
+{
+  "public/assets/decks/ethereal/thumbs/major-00.webp": {
+    "srcHash": "800f5e57e1c3111e2029b31bc784e719d686a2eb8c76f3e8e425be6a30803b8c",
+    "spec": "240x400q72"
+  },
+  "public/assets/decks/ethereal/thumbs/major-01.webp": {
+    "srcHash": "0dde70959cfdf5ccde44390a09fdd53a93059824776c95db7c60e6361442676f",
+    "spec": "240x400q72"
+  },
+  "public/assets/decks/ethereal/thumbs/major-13.webp": {
+    "srcHash": "88fe5305c57ad943749d36458260fea93f6e42e62ed083124a5916b76a6ded1f",
+    "spec": "240x400q72"
+  },
+  "public/assets/decks/ethereal/deck/cover-thumb.webp": {
+    "srcHash": "5ab4af1d992ef08cb9f5e3c765fb5d530663531ba754b1e77b7e69721a4251ae",
+    "spec": "320x534q72"
+  },
+  "public/assets/decks/ethereal/deck/back-thumb.webp": {
+    "srcHash": "869ea77b26a50dd2b9eadc43a37763b26c543d7f49ce04c27c9e9815218e6192",
+    "spec": "240x400q72"
+  }
+}

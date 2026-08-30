@@ -136,7 +136,22 @@ export interface TarotSession {
   /** 随缘模式的轻主题 */
   theme: RandomThemeId | null
 
+  /**
+   * 抽牌当时用的是哪副牌。**只影响呈现，不参与任何决策。**
+   *
+   * 【冻结规则】
+   * - 会话创建时记录当前牌组，此时仍可跟随用户切换（还没开始抽）
+   * - 一旦进入牌桌（首次进入洗牌页），`deckLocked` 置为 true 并永久冻结
+   * - 会话 completed 之后写进日记，日记回看永远用这个值渲染牌面
+   *
+   * 冻结的理由：真美术时代，抽到一半换牌组会看到整桌的画全变了，
+   * 心理上非常接近「重抽」。牌一张没动，但那个念头一旦成立就很难消除。
+   */
   deckId: string
+  /** deckId 的 schema 版本。缺失或 < 2 表示这是 V2.4 的记录，需经 resolveDeckId 映射 */
+  deckSchema?: number
+  /** 是否已冻结。进入牌桌后为 true */
+  deckLocked?: boolean
   spreadId: SpreadId | null
 
   /** 系统随机种子（十六进制字符串），Session 创建时生成 */
@@ -189,4 +204,10 @@ export interface JournalEntrySummary {
   mode: SessionMode
   cards: { cardId: string; orientation: Orientation }[]
   headline: string
+  /**
+   * 当时用的哪副牌。**日记回看必须用它渲染牌面，不能用当前牌组** ——
+   * 否则用户三个月前用蛋白潮汐抽的牌，今天打开会变成另一副牌的画。
+   */
+  deckId: string
+  deckSchema?: number
 }

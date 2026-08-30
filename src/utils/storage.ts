@@ -10,6 +10,18 @@ export const StorageKeys = {
   activeSession: `${PREFIX}active-session`,
   journal: `${PREFIX}journal`,
   settings: `${PREFIX}settings`,
+  /**
+   * 当前牌组（schema v2）。
+   *
+   * 【为什么要换 key 而不是原地迁移】
+   * V2.4 的 `arcana:deck` 里存的是 moonlight/classic/forest/celestial/shadow，
+   * 而新版本里 `classic` 是**另一副完全不同的牌**（还没画完、不能抽）。
+   * 复用同一个 key 会让老用户的选择被静默解析成一副错误的牌。
+   * 换 key 之后，v1 的值只会经 resolveDeckId 映射到 legacy-*，不会误判。
+   */
+  deck: `${PREFIX}deck-v2`,
+  /** V2.4 的旧 key。只读不写，保留原值以便映射表将来可修正 */
+  deckV1: `${PREFIX}deck`,
   guidance: `${PREFIX}guidance`,
 } as const
 

@@ -43,7 +43,20 @@ export const majorArcana: TarotCard[] = [
       reversed: '可以把「我到底在怕什么」和「我到底想要什么」分开写，会清楚很多。',
     },
     symbols: ['悬崖边缘', '轻便的行囊', '未被踩出的路', '白色的犬'],
-    art: { motif: 'threshold', hue: 210, tier: 'signature' },
+    personalGrowth: {
+      upright:
+        '你正处在一个可以重新定义自己的位置。经验不足在这里不是短板 —— 还没有被过去的做法框住，本身就是一种自由。这个阶段最需要的许可是：允许自己当一个新手。',
+      reversed:
+        '想开始的心是真的，但一直在等一个「准备好了」的信号。那个信号不会自己来。有时候拦住人的也不是风险，是怕被看见自己不熟练的样子 —— 先把第一步缩小到今天就能做完、且没人会看的程度。',
+    },
+    symbolism: [
+      { title: '悬崖边缘', meaning: '选择的临界点。往前一步是未知，但站着不动也不会更安全。' },
+      { title: '轻便的行囊', meaning: '带得少才走得动。这个阶段需要的不是万全准备，是可移动性。' },
+      { title: '未被踩出的路', meaning: '没有前人的脚印，也就没有必须遵守的走法。' },
+      { title: '白色的犬', meaning: '本能的提醒。它不阻止你，只是让你别忘了看脚下。' },
+    ],
+    element: 'air',
+    astrology: '天王星',
   },
   {
     id: 'major-01',
@@ -78,7 +91,20 @@ export const majorArcana: TarotCard[] = [
       reversed: '停下来问一句：我做这件事，最终想换到什么？',
     },
     symbols: ['四元素法器', '无限符号', '高举的手杖', '桌面'],
-    art: { motif: 'flame', hue: 275, tier: 'signature' },
+    personalGrowth: {
+      upright:
+        '你已经具备了做成这件事的条件，缺的只是把它们连起来的那个意图。这张牌在说：不用再攒了，可以开始用了。',
+      reversed:
+        '能力还在，但用错了地方 —— 可能花在说服别人、维持形象，而不是把事情推进一寸。把注意力收回到具体动作上。',
+    },
+    symbolism: [
+      { title: '四元素法器', meaning: '工具已经齐了。这张牌讨论的从来不是资源够不够。' },
+      { title: '无限符号', meaning: '能量本身不稀缺，稀缺的是给它一个方向。' },
+      { title: '高举的手杖', meaning: '把想法接到现实上的那个动作 —— 意图必须被执行才算数。' },
+      { title: '桌面', meaning: '工作台。想法要落到一个具体的、有边界的地方才能成形。' },
+    ],
+    element: 'air',
+    astrology: '水星',
   },
   {
     id: 'major-02',
@@ -91,7 +117,7 @@ export const majorArcana: TarotCard[] = [
     meaningUpright:
       '帷幕之后还有内容尚未展示。这张牌描述的是一个「信息未完全公开」的时刻，此时观察比表态更有价值。',
     meaningReversed:
-      '逆位可能是把内心的提醒当作噪音压了下去，也可能是秘密本身已经开始造成负担。',
+      '逆位可能是把内心的提醒当作噪音压了下去；也可能是信息太多反而听不见自己的判断 —— 看了十个人的说法之后，最先丢掉的往往是最初那个直觉。秘密本身开始造成负担，也是这张牌逆位的常见形状。',
     love: {
       upright: '有些感受还没被说出口，双方都在读对方的沉默。给彼此一点解释的机会会更好。',
       reversed: '隐瞒或回避正在消耗信任，哪怕出发点是善意的。',
@@ -113,7 +139,20 @@ export const majorArcana: TarotCard[] = [
       reversed: '把模糊的不安写成具体的一句话，它通常没有想象中那么难面对。',
     },
     symbols: ['双柱之间的帷幕', '新月', '卷轴', '静水'],
-    art: { motif: 'veil', hue: 250, tier: 'signature' },
+    personalGrowth: {
+      upright:
+        '你其实已经知道了，只是还没准备好承认。这个阶段适合观察和记录，不适合表态 —— 有些东西要等它自己浮上来。',
+      reversed:
+        '直觉一直在提示，而你一直在用道理把它压下去。不是要你凭感觉行事，是别再假装没听见。',
+    },
+    symbolism: [
+      { title: '双柱之间的帷幕', meaning: '知道与未知的交界。帷幕没有被拉开，因为时候未到。' },
+      { title: '新月', meaning: '尚未成形的开始。它已经存在，只是还看不全。' },
+      { title: '卷轴', meaning: '部分露出的知识 —— 你掌握的比自己以为的多，但还不是全部。' },
+      { title: '静水', meaning: '潜意识。水面越静，越能照出下面有什么。' },
+    ],
+    element: 'water',
+    astrology: '月亮',
   },
   {
     id: 'major-03',
@@ -148,7 +187,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '先照顾好自己的状态，再谈能给出多少。',
     },
     symbols: ['麦田', '流水', '缀星的冠', '柔软的靠垫'],
-    art: { motif: 'seed', hue: 292, tier: 'placeholder' },
   },
   {
     id: 'major-04',
@@ -183,7 +221,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '检查一下哪些规则是当初有用、现在已经过期的。',
     },
     symbols: ['石座', '权杖', '公羊纹饰', '远山'],
-    art: { motif: 'gate', hue: 224, tier: 'placeholder' },
   },
   {
     id: 'major-05',
@@ -218,7 +255,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '可以质疑规则，但先弄清它当初为什么被建立。',
     },
     symbols: ['三重冠', '交叉的钥匙', '石阶', '两名聆听者'],
-    art: { motif: 'gate', hue: 262, tier: 'placeholder' },
   },
   {
     id: 'major-06',
@@ -240,12 +276,18 @@ export const majorArcana: TarotCard[] = [
       upright: '面临一个需要取舍的机会，判断标准应该是「哪个更接近我想成为的样子」。',
       reversed: '两边都不想放弃的结果，往往是两边都没做好。',
     },
+    /* 原文是「与合适的伙伴一起学习会形成正向推力」—— 审计判 C 级：
+       它换成圣杯三、星币三都同样成立，完全没带上恋人牌的「取舍与价值观」内核。
+       现在改成「选哪条路」，而不是「和谁一起学」。 */
     study: {
-      upright: '与合适的伙伴一起学习会形成正向推力。',
-      reversed: '在多个方向之间反复横跳，消耗掉了本可以积累的时间。',
+      upright:
+        '摆在面前的两个方向可能都值得学，但时间只够把一个学到能用。判断标准不是哪个更有前途，是哪个你在枯燥阶段也还愿意继续。',
+      reversed:
+        '在几个方向之间反复横跳，每个都停在最轻松的入门段。真正被消耗掉的不是时间，是每次重新开始时那点劲。',
     },
     finance: {
-      upright: '涉及共同财务的安排适合现在讲清楚。',
+      upright:
+        '涉及两个人的钱，最好在还没有分歧的时候就讲清楚。把「各自出多少」和「怎么算才算公平」分开谈，通常比一次谈完顺利。',
       reversed: '因人情而做的财务决定，事后容易两边都不舒服。',
     },
     advice: {
@@ -253,7 +295,20 @@ export const majorArcana: TarotCard[] = [
       reversed: '不做选择本身也是一种选择，而且通常代价更高。',
     },
     symbols: ['两株树', '天使的注视', '山峰', '分岔'],
-    art: { motif: 'mirror', hue: 300, tier: 'signature' },
+    personalGrowth: {
+      upright:
+        '这是一张关于「你到底看重什么」的牌，不只是关于感情。当选择让你为难，通常不是选项难分高下，是你还没承认自己更在意哪一边。',
+      reversed:
+        '你在同时朝两个方向用力，而它们要的东西不一样。不是要你立刻取舍，是先承认这中间有冲突，别再假装能两全。',
+    },
+    symbolism: [
+      { title: '两株树', meaning: '两种同样成立的可能。它们不是对与错，是两条不同的路。' },
+      { title: '天使的注视', meaning: '更高的视角。提醒这次选择关乎的是价值，不只是利弊。' },
+      { title: '山峰', meaning: '远处的目标。判断该往哪边走，要看它对不对着你真正想去的地方。' },
+      { title: '分岔', meaning: '选了一条就意味着放下另一条 —— 代价是选择的一部分，不是失败。' },
+    ],
+    element: 'air',
+    astrology: '双子座',
   },
   {
     id: 'major-07',
@@ -288,7 +343,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '检查一下：我在用力，还是我在较劲？',
     },
     symbols: ['两匹异色的兽', '星幕华盖', '城墙', '缰绳'],
-    art: { motif: 'path', hue: 218, tier: 'placeholder' },
   },
   {
     id: 'major-08',
@@ -323,7 +377,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '先承认「我现在很累」，再谈下一步。',
     },
     symbols: ['狮与手', '无限符号', '花环', '沉静的目光'],
-    art: { motif: 'flame', hue: 42, tier: 'placeholder' },
   },
   {
     id: 'major-09',
@@ -358,7 +411,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '找一个你信任的人说一次，说出来的过程本身就有整理作用。',
     },
     symbols: ['提灯', '雪原', '长杖', '独行的背影'],
-    art: { motif: 'path', hue: 232, tier: 'signature' },
   },
   {
     id: 'major-10',
@@ -393,7 +445,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '记录一下最近三次相似情况的经过，模式通常会自己浮现。',
     },
     symbols: ['转动的轮', '四方守望者', '云端', '不断变化的刻度'],
-    art: { motif: 'orbit', hue: 268, tier: 'placeholder' },
   },
   {
     id: 'major-11',
@@ -428,7 +479,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '先分清哪部分确实不是你的责任，再谈剩下的那部分。',
     },
     symbols: ['天平', '直立的剑', '双柱', '垂帘'],
-    art: { motif: 'mirror', hue: 206, tier: 'placeholder' },
   },
   {
     id: 'major-12',
@@ -463,7 +513,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '给等待设一个期限，到期就重新评估。',
     },
     symbols: ['倒悬的姿态', '发光的头部', '树枝', '静止的水面'],
-    art: { motif: 'veil', hue: 244, tier: 'placeholder' },
   },
   {
     id: 'major-13',
@@ -483,7 +532,10 @@ export const majorArcana: TarotCard[] = [
     },
     career: {
       upright: '结束一个项目、一段合作或一个角色，是为了腾出精力。',
-      reversed: '迟迟不做决定，成本会继续累积。',
+      /* 原文「迟迟不做决定，成本会继续累积」审计判 B：太泛，换成任何牌都成立。
+         死神逆位的特征不是「拖延」，是**维持一个已经结束的形式**。 */
+      reversed:
+        '那个角色其实已经结束了，但流程还在走、会还在开、称呼还没改。维持形式的成本是隐性的，所以最容易被一直付下去。',
     },
     study: {
       upright: '放弃不适合的方向不是失败，是把时间还给自己。',
@@ -498,7 +550,23 @@ export const majorArcana: TarotCard[] = [
       reversed: '给告别一个具体的动作，比如删掉、退订、说清楚。',
     },
     symbols: ['黑色旗帜', '白玫瑰', '地平线上的双塔', '缓慢的行进'],
-    art: { motif: 'threshold', hue: 256, tier: 'signature' },
+    personalGrowth: {
+      upright:
+        '有一个阶段确实结束了。不必假装它还能继续 —— 承认结束，是让位置空出来给下一样东西的唯一方式。',
+      reversed:
+        '该放的一直没放，所以新的也进不来。卡住的往往不是那件事本身，是「结束就等于失败」这个念头。',
+    },
+    symbolism: [
+      {
+        title: '黑色旗帜',
+        meaning: '变化本身，不是灾祸。旗上是白玫瑰而非骷髅 —— 这张牌讲的是转化，不是终结。',
+      },
+      { title: '白玫瑰', meaning: '结束里保留下来的那部分。不是全都要丢掉。' },
+      { title: '地平线上的双塔', meaning: '还没走到的下一段。它已经在那里，只是要穿过这一程。' },
+      { title: '缓慢的行进', meaning: '转变不会一夜完成，它按自己的速度走，催不动也拦不住。' },
+    ],
+    element: 'water',
+    astrology: '天蝎座',
   },
   {
     id: 'major-14',
@@ -533,7 +601,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '把「全部或没有」的选项，改写成「先做百分之三十」。',
     },
     symbols: ['交换的双杯', '一足踏水', '前方的小径', '天边的光'],
-    art: { motif: 'tide', hue: 200, tier: 'placeholder' },
   },
   {
     id: 'major-15',
@@ -568,7 +635,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '把已经做到的部分写下来，它比你以为的多。',
     },
     symbols: ['松开的锁链', '倒悬的火把', '基座', '低垂的角'],
-    art: { motif: 'veil', hue: 286, tier: 'placeholder' },
   },
   {
     id: 'major-16',
@@ -603,7 +669,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '主动拆掉一小块，好过等它整体塌下来。',
     },
     symbols: ['断裂的塔顶', '闪电', '坠落的冠', '暗色的天'],
-    art: { motif: 'flame', hue: 36, tier: 'placeholder' },
   },
   {
     id: 'major-17',
@@ -638,7 +703,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '先补觉、先吃饭、先减负，判断力会自己回来。',
     },
     symbols: ['八角星', '倾注的双瓶', '静湖', '夜色中的鸟'],
-    art: { motif: 'star', hue: 212, tier: 'signature' },
   },
   {
     id: 'major-18',
@@ -673,7 +737,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '相信已经浮现的证据，而不是最初的假设。',
     },
     symbols: ['半掩的月', '两座塔', '水中的路', '仰首的犬与狼'],
-    art: { motif: 'moon', hue: 248, tier: 'signature' },
   },
   {
     id: 'major-19',
@@ -708,7 +771,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '允许自己状态一般，不必每天都是高光。',
     },
     symbols: ['正面的日轮', '向日葵', '白马', '围墙内的花园'],
-    art: { motif: 'sun', hue: 46, tier: 'signature' },
   },
   {
     id: 'major-20',
@@ -743,7 +805,6 @@ export const majorArcana: TarotCard[] = [
       reversed: '把「我当时很糟糕」改写成「我当时只有那些信息」。',
     },
     symbols: ['号角', '升起的人群', '远山', '灰白的浪'],
-    art: { motif: 'orbit', hue: 238, tier: 'placeholder' },
   },
   {
     id: 'major-21',
@@ -778,6 +839,5 @@ export const majorArcana: TarotCard[] = [
       reversed: '列出「还差什么才算完」，通常只有两三项。',
     },
     symbols: ['环形花冠', '四方守望者', '飘带', '舞动的身姿'],
-    art: { motif: 'orbit', hue: 282, tier: 'signature' },
   },
 ]

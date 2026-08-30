@@ -188,7 +188,12 @@ TarotSession: id, createdAt, updatedAt, status, mode, question, optimizedQuestio
 
 ## 26. MVP 明确不做（提出即拒绝，进 Future Backlog）
 
-付费、订阅、商城、社区、排行榜、好友、Google Login、云同步、Push Notification、完整后台、多语言、多套完整牌组、几十种牌阵、长期 AI 用户画像、AI 自动读取过去占卜、塔罗师 Marketplace、NFT、Live Streaming。
+付费、订阅、商城、社区、排行榜、好友、Google Login、云同步、Push Notification、完整后台、多语言、~~多套完整牌组~~、几十种牌阵、长期 AI 用户画像、AI 自动读取过去占卜、塔罗师 Marketplace、NFT、Live Streaming。
+
+> **V2.5 修订**：「多套完整牌组」已解禁，但**只解禁"多套画"，不解禁"多套牌"**。
+> 五副牌的 cardId、牌名编号、大小阿卡纳、花色、正逆位含义、keywords、
+> 抽牌概率、牌阵规则、Prompt 与历史记录语义**完全共用**。
+> 完整规则见 `docs/01-product-spec.md` §6.1（修订后的 G-16）。
 
 ## 27. 开发优先顺序
 

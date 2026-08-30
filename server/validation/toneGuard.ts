@@ -137,6 +137,48 @@ function isNegated(text: string, matchStart: number, mode: NegationMode): boolea
   return CONTAINS_NEGATION.test(nearWindow)
 }
 
+/* ── 让步转折：「虽然 X 不可避免，但你可以选择 Y」 ──────────────
+ *
+ * 【为什么要单独处理它】
+ * 20 次真实 Deep 采样里，唯一一次被语气拦截的是这句：
+ *
+ *     「虽然加速不可避免，但你可以选择在开始加速前，先把方向对准。」
+ *
+ * 整句读下来是**在强调用户仍然有选择权** —— 恰恰是我们要求模型写的反宿命表达，
+ * 却因为里面有「不可避免」四个字被判成宿命论，把 5000 字解读整份作废。
+ *
+ * 【为什么不是加黑名单 / 加白名单短语】
+ * 这不是词的问题，是句法结构的问题：让步从句里的「不可避免」描述的是**前提**，
+ * 真正的主句在「但」后面。识别结构，比枚举短语稳得多，也不会越滚越长。
+ *
+ * 【它不会放过真正的宿命论】
+ * 必须同时满足：命中词**前面**有让步标记、**后面**有转折标记。
+ * 「这个局面已成定局，无法改变。」两个条件都不满足，照样拦。
+ *
+ * 【只对确定性类规则开放】
+ * 玄学词（宇宙 / 天意 / 命运）包在让步句里仍然是空洞玄学，不给豁免。 */
+
+/** 让步标记必须落在命中词前这么多字以内 */
+const CONCESSIVE_BEFORE = 14
+/** 转折标记必须落在命中词后这么多字以内 */
+const CONCESSIVE_AFTER = 20
+
+const CONCESSION_MARK = /虽然|虽说|尽管|即便|即使|纵然|就算|哪怕|固然/
+const PIVOT_MARK = /但|不过|然而|可是|仍然|仍旧|依然|还是|取决于|由你|你可以|你仍/
+
+function isConcessive(
+  text: string,
+  matchStart: number,
+  matchEnd: number,
+  kind: ToneRuleKind,
+): boolean {
+  if (kind !== 'determinism') return false
+  const before = text.slice(Math.max(0, matchStart - CONCESSIVE_BEFORE), matchStart)
+  if (!CONCESSION_MARK.test(before)) return false
+  const after = text.slice(matchEnd, matchEnd + CONCESSIVE_AFTER)
+  return PIVOT_MARK.test(after)
+}
+
 /* ═══════════════════════════════════════════════════════════════════
  * 三、V2 规则集
  * ═══════════════════════════════════════════════════════════════ */
@@ -368,6 +410,7 @@ export function checkText(field: string, text: string): ToneViolation[] {
       const start = match.index
       if (typeof start !== 'number') continue
       if (isNegated(text, start, rule.negation)) continue
+      if (isConcessive(text, start, start + match[0].length, rule.kind)) continue
 
       hits.push({
         severity: rule.severity,

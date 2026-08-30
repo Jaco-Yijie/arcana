@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CardFrame } from '@/components/card/CardFrame'
 import type { CardSize } from '@/components/card/CardFrame'
-import { CardBack } from '@/components/card/CardBack'
+import { ThemedCardBack as CardBack } from '@/components/card/ThemedCardBack'
 import { TarotCardFace } from '@/components/card/TarotCardFace'
 import { capturePointer } from './pointer'
 import type { Orientation, TarotCard } from '@/types/tarot'
+import type { DeckId } from '@/decks/ids'
 
 const FLIP_MS = 520
 /** 翻到一半才切换牌面 —— 提前切换会在动画中泄露牌面（AC-07） */
@@ -15,11 +16,32 @@ const SWIPE_UP = 32
 interface FlipCardProps {
   card: TarotCard
   orientation: Orientation
+  /**
+   * 本次会话冻结的牌组。**必须来自 session.deckId，不能来自 DeckContext** ——
+   * 抽到一半换牌组时，牌桌上已经翻开的牌不该跟着变。
+   */
+  deckId: DeckId
   revealed: boolean
   size?: CardSize
+  /**
+   * 显式像素宽度。牌桌由布局引擎按实际尺寸反解卡宽时用它。
+   *
+   * 【为什么牌背与牌面必须共用这一个宽度】
+   * 翻牌前后如果尺寸有任何差异，整个牌阵会在翻转瞬间重排 —— 那正是
+   * L-06 禁止的结构性跳动。这里传一次，`CardFrame` 两态同用。
+   * 圆角与牌名字号仍按 size 档位走，由 width 自动推导出合适的档。
+   */
+  width?: number
   /** 用户主动触发翻牌。未提供 = 不可翻（例如动画锁定期间） */
   onReveal?: () => void
   idleDelay?: number
+}
+
+/** 由实际像素宽度推导圆角与字号档位。断点取自 theme.css 的 --card-w-* */
+function sizeForWidth(w: number): CardSize {
+  if (w < 88) return 'sm'
+  if (w < 144) return 'md'
+  return 'lg'
 }
 
 /**
@@ -31,11 +53,14 @@ interface FlipCardProps {
 export function FlipCard({
   card,
   orientation,
+  deckId,
   revealed,
-  size = 'md',
+  size: sizeProp,
+  width,
   onReveal,
   idleDelay = 0,
 }: FlipCardProps) {
+  const size: CardSize = sizeProp ?? (width ? sizeForWidth(width) : 'md')
   const reduceMotion = useReducedMotion()
   const [showFace, setShowFace] = useState(revealed)
   const [flipping, setFlipping] = useState(false)
@@ -107,9 +132,21 @@ export function FlipCard({
         }
       >
         <div style={{ transform: showFace ? 'rotateY(180deg)' : undefined }}>
-          <CardFrame size={size} state={revealed ? 'locked' : 'resting'}>
+          <CardFrame
+            size={size}
+            width={width !== undefined ? `${width}px` : undefined}
+            state={revealed ? 'locked' : 'resting'}
+            deckId={deckId}
+          >
+            {/* showFace 为真才挂载牌面 —— 这同时是 G-05 的 R1 防线：
+                牌面资产的网络请求只可能发生在这张牌翻开之后。 */}
             {showFace ? (
-              <TarotCardFace card={card} orientation={orientation} size={size} />
+              <TarotCardFace
+                card={card}
+                orientation={orientation}
+                deckId={deckId}
+                size={size}
+              />
             ) : (
               <CardBack simplified={size === 'sm'} />
             )}

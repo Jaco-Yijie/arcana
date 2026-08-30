@@ -7,6 +7,7 @@ import { TarotCardFace } from '@/components/card/TarotCardFace'
 import { listEntries, toSummary } from '@/store/journalStore'
 import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
+import { resolveDeckId } from '@/decks/ids'
 import { formatRelative, truncate } from '@/utils/format'
 
 export default function JournalPage() {
@@ -44,18 +45,25 @@ export default function JournalPage() {
               </span>
             </div>
 
+            {/* 缩略图带可横向滚动，牌阵名固定在右侧不参与压缩。
+                旧版牌阵名是同一个 flex 行里唯一可收缩的元素 ——
+                五张牌的条目会把「二选一」挤成单字竖排。 */}
             <div className="flex items-center gap-2">
+              <div className="flex min-w-0 flex-1 items-center gap-2 overflow-x-auto">
               {s.cards.slice(0, 5).map((c, i) => (
-                <CardFrame key={i} size="sm" state="locked" className="w-7">
+                <CardFrame key={i} size="sm" state="locked" className="w-7 shrink-0" deckId={resolveDeckId(s.deckId, s.deckSchema)}>
                   <TarotCardFace
                     card={getCard(c.cardId)}
                     orientation={c.orientation}
+                    /* 历史保真：用当时那副牌渲染，不是当前选中的那副 */
+                    deckId={resolveDeckId(s.deckId, s.deckSchema)}
                     size="sm"
                     showName={false}
                   />
                 </CardFrame>
               ))}
-              <span className="ml-1 text-caption text-text-faint">
+              </div>
+              <span className="shrink-0 whitespace-nowrap text-caption text-text-faint">
                 {s.spreadId ? getSpread(s.spreadId).name : ''}
               </span>
             </div>

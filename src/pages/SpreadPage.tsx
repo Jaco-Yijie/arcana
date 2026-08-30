@@ -6,15 +6,31 @@ import { recommendSpreads, spreadById, spreads } from '@/data/spreads'
 import { truncate } from '@/utils/format'
 import type { Spread, SpreadId } from '@/types/spread'
 
-/** 牌位缩略示意图：用点阵表示牌阵形状，让用户在选之前就看懂结构 */
+/**
+ * 牌位缩略示意图：用点阵表示牌阵形状，让用户在选之前就看懂结构。
+ *
+ * 直接用 CSS Grid 铺 spread.grid —— 缩略图和真实牌桌读的是**同一份逻辑网格**，
+ * 所以「示意图长这样、摆出来却是另一样」在结构上不会发生。
+ */
 function SpreadThumb({ spread }: { spread: Spread }) {
   return (
-    <div className="relative h-12 w-16 shrink-0">
+    <div
+      className="grid h-12 w-16 shrink-0 gap-[2px]"
+      style={{
+        gridTemplateColumns: `repeat(${spread.grid.cols}, 1fr)`,
+        gridTemplateRows: `repeat(${spread.grid.rows}, 1fr)`,
+      }}
+    >
       {spread.positions.map((p) => (
         <span
           key={p.id}
-          className="absolute h-3.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-[2px] border border-line-soft bg-surface-2"
-          style={{ left: `${p.x * 100}%`, top: `${p.y * 100}%` }}
+          className="place-self-center rounded-[2px] border border-line-soft bg-surface-2"
+          style={{
+            gridColumn: `${p.col + 1} / span ${p.colSpan ?? 1}`,
+            gridRow: `${p.row + 1} / span ${p.rowSpan ?? 1}`,
+            width: '62%',
+            aspectRatio: 'var(--card-ratio)',
+          }}
         />
       ))}
     </div>
@@ -59,7 +75,7 @@ export default function SpreadPage() {
   )
 
   return (
-    <AppShell back="/question?mode=question" title="选择牌阵">
+    <AppShell back="/question?mode=question" title="选择牌阵" centered>
       <div className="flex flex-col gap-4 pt-2">
         {session.question && (
           <p className="truncate text-caption text-text-faint">

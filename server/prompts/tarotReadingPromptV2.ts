@@ -178,7 +178,7 @@ export const OUTPUT_EXAMPLE = `{
     }
   ],
   "narrative": "这组牌读下来，更像一段被自己拖住的过程，而不是一件正在逼近的外部事件。开始的位置是逆位的隐士：那段本该用来想清楚的时间没有真正发生，问题没有被处理，只是被带着往前走。走到中间，宝剑八接住了这些没处理完的东西 —— 剑围了一圈，眼睛被蒙上，选项看起来全都不成立；但把它和前一格连起来看，「选项不成立」这个判断本身，很可能是在缺少核实的情况下做出的。结尾的圣杯六逆位没有给出一个事件，它给出的是一个趋势：过去用来安抚自己的那套方式正在失效。三张牌里两张逆位且集中在首尾，重心因此落在了「怎么来的」和「往哪去」，中间反而是唯一还站着的地方。",
-  "answerToQuestion": "回到你最初的问题 —— 要不要继续留在现在这份工作。这组牌没有给出「留」或「走」，它给的是另一个东西：你手上可能还缺少做这个判断所需要的信息。宝剑八描述的处境是选项被提前判了死刑，而不是选项真的不存在；隐士逆位提示这种判断的来源，是一段没有被留出来的整理时间。所以比「决定去留」更靠前的一步，是把那些你默认「反正也不行」的可能性，一条一条拿出来核实 —— 问清楚具体条件，而不是凭印象。圣杯六逆位在这里的作用是提醒时间成本：靠熟悉感撑下去这条路正在变得更费力。就目前的牌面而言，阻力这一侧的分量更重，所以我会更倾向于先做核实，而不是先做决定。",
+  "answerToQuestion": "要不要继续留在现在这份工作，这组牌没有给出「留」或「走」，它给的是另一个东西：你手上可能还缺少做这个判断所需要的信息。宝剑八描述的处境是选项被提前判了死刑，而不是选项真的不存在；隐士逆位提示这种判断的来源，是一段没有被留出来的整理时间。所以比「决定去留」更靠前的一步，是把那些你默认「反正也不行」的可能性，一条一条拿出来核实 —— 问清楚具体条件，而不是凭印象。圣杯六逆位在这里的作用是提醒时间成本：靠熟悉感撑下去这条路正在变得更费力。就目前的牌面而言，阻力这一侧的分量更重，所以我会更倾向于先做核实，而不是先做决定。",
   "reflectionQuestions": [
     "你觉得「走不了」的那些理由里，有哪几条是你真正核实过的，哪几条只是印象？",
     "上一次你为自己留出完整的时间想清楚一件事，是什么时候？后来发生了什么？",
@@ -285,6 +285,16 @@ const INTERPRETIVE_FREEDOM_SECTION = `# 你的解释空间（这一节比上面�
 
 绝对不要出现「前面分析了一大堆塔罗理论，最后对用户的问题只说两句」这种结构。
 answerToQuestion 应当是整段分析自然收束出来的结论之一，而不是补在末尾的礼貌收尾。
+
+【不要复述小节标题】
+界面已经在每个字段上方渲染了小标题（「回到你的问题」「每张牌的分析」
+「牌与牌之间的关系」「整体走向」「可以再想想的问题」）。
+正文再以同样的话开头，用户会连着读到两遍同一句。
+所以每个字段都**直接从内容写起**：
+  ✗ answerToQuestion: "回到你的问题：A 方向会……"
+  ✓ answerToQuestion: "A 方向会……"
+  ✗ narrative: "整体走向是……"
+  ✓ narrative: "三张牌连起来看……"
 
 如果牌面确实给不出单一方向 —— 直接解释**为什么**给不出：是牌在互相拉扯，还是缺少某个关键的现实信息，
 还是这个问题本身问的方式让牌无从回答。说清楚这一点，本身就是有价值的回答；
@@ -527,18 +537,37 @@ function renderCard(card: ReadingContextCard, total: number): string {
   const meaning = card.orientation === 'upright' ? card.baseMeaning.upright : card.baseMeaning.reversed
   const keywords = card.orientation === 'upright' ? card.keywords.upright : card.keywords.reversed
 
+  /* 领域牌义：按用户问题的类型选出来的那一段。
+     它与通用牌义是**两层**，不是替代关系 ——
+     通用义说「这张牌在讲什么」，领域义说「这张牌在这类问题上通常指向什么」。
+     两层都给，模型才不用自己从通用义现推到具体语境。
+     问题未明确归类、或这张牌还没写该领域时，这一行整段缺席，不硬凑。 */
+  const domain = card.domainMeaning
+  const domainLine = domain
+    ? `- 这张牌在「${domain.label}」这类问题上的常见指向（${orientation}）：${
+        card.orientation === 'upright' ? domain.upright : domain.reversed
+      }`
+    : null
+
   return [
-    `### 第 ${card.position.index + 1} / ${total} 格：${card.position.positionName}`,
-    `- 牌位 id：${card.position.positionId}`,
-    `- 这一格关心的是：${card.position.positionMeaning}`,
+    /* 牌位三要素分开给：id 用来原样回填，name 用来叙述，meaning 用来理解。
+       此前 meaning 混在句子里、id 与 name 也没有明确标注各自的用途，
+       模型要靠猜；现在三者各有其名。 */
+    `### 第 ${card.position.index + 1} / ${total} 格：${card.position.name}`,
+    `- 牌位 id（原样回填用）：${card.position.id}`,
+    `- 牌位名（叙述时用这个）：${card.position.name}`,
+    `- 这一格关心的是：${card.position.meaning}`,
     `- 落在这一格的牌：${card.cardNameZh}（${card.cardName}）`,
     `- **cardId：${card.cardId}**（输出时原样回填，不得改动）`,
     `- **朝向：${orientation}（orientation: ${card.orientation}）**（输出时原样回填，不得改动）`,
     `- 阿卡纳：${arcana}｜花色：${suit}｜元素：${element}｜数字：${card.number}`,
     `- 这个朝向下的牌义：${meaning}`,
+    domainLine,
     `- 这个朝向下的关键词（供你理解，不要原样列进输出）：${keywords.join('、')}`,
     `- 象征意象（可抓一两个用来说话）：${card.symbols.join('、')}`,
-  ].join('\n')
+  ]
+    .filter((line): line is string => line !== null)
+    .join('\n')
 }
 
 /* ------------------------- 四、牌面统计 -------------------------- */

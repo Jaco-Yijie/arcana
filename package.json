@@ -4,17 +4,23 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && tsc -p tsconfig.server.json --noEmit && vite build",
+    "dev": "node scripts/dev.mjs",
+    "dev:web": "vite",
+    "dev:reading": "tsx watch server/index.ts",
+    "build": "tsc -b && tsc -p tsconfig.server.json --noEmit && npm run deck:check && npm run layout:check && npm run artwork:check && vite build",
     "lint": "oxlint",
     "engine:check": "tsx scripts/engine-selfcheck.ts",
     "preview": "vite preview",
-    "server": "tsx watch server/index.ts",
-    "dev:all": "node scripts/dev.mjs",
     "start": "tsx server/index.ts",
     "reading:check": "tsx scripts/reading-eval.ts",
+    "deck:check": "tsx scripts/deck-check.ts",
+    "layout:check": "tsx scripts/layout-check.ts",
+    "artwork:check": "tsx scripts/artwork-check.ts",
+    "deep:stability": "tsx scripts/deep-stability.ts",
     "deploy:build": "npm ci && npm run build",
-    "build:streamlit": "tsc -b && vite build --config vite.streamlit.config.ts"
+    "build:streamlit": "tsc -b && npm run deck:check && vite build --config vite.streamlit.config.ts",
+    "thumbs": "tsx scripts/generate-thumbnails.ts",
+    "spec:fool": "tsx scripts/fool-spec.ts"
   },
   "dependencies": {
     "framer-motion": "^12.43.0",
@@ -30,6 +36,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "oxlint": "^1.75.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4.3.3",
     "typescript": "~6.0.2",
     "vite": "^8.2.0"

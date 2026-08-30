@@ -35,7 +35,6 @@ const wands: TarotCard[] = [
     finance: { upright: '出现一个值得小额尝试的方向。', reversed: '冲动型支出值得先放两天。' },
     advice: { upright: '今天就做这件事的第一步，哪怕很小。', reversed: '把想法写下来，先降低启动门槛。' },
     symbols: ['刚点燃的火', '手中的新枝', '远处的高地'],
-    art: { motif: 'flame', hue: 38, tier: 'placeholder' },
   },
   {
     id: 'wands-02',
@@ -54,7 +53,6 @@ const wands: TarotCard[] = [
     finance: { upright: '可以规划一份跨年度的资金安排。', reversed: '因为害怕不确定而完全不动。' },
     advice: { upright: '把「可能性」缩减成两个具体选项再比较。', reversed: '给决定设一个截止日期。' },
     symbols: ['手中的地球仪', '城垛', '远方的海岸线'],
-    art: { motif: 'path', hue: 36, tier: 'placeholder' },
   },
   {
     id: 'wands-03',
@@ -73,7 +71,6 @@ const wands: TarotCard[] = [
     finance: { upright: '中长期安排比短期波动更值得关注。', reversed: '预期收益需要下调一个档次。' },
     advice: { upright: '在等待期做好接住结果的准备。', reversed: '重新算一次时间表，把缓冲加进去。' },
     symbols: ['背影与海', '三支立杖', '远航的船'],
-    art: { motif: 'path', hue: 34, tier: 'placeholder' },
   },
   {
     id: 'wands-04',
@@ -92,7 +89,6 @@ const wands: TarotCard[] = [
     finance: { upright: '基础财务结构比较扎实。', reversed: '固定支出偏重，弹性不足。' },
     advice: { upright: '给已经完成的部分一个正式的确认。', reversed: '先把地基补齐再往上加。' },
     symbols: ['花环拱门', '四根立柱', '远处的屋舍'],
-    art: { motif: 'gate', hue: 40, tier: 'placeholder' },
   },
   {
     id: 'wands-05',
@@ -111,7 +107,6 @@ const wands: TarotCard[] = [
     finance: { upright: '涉及分账或分摊的事情需要谈清楚。', reversed: '为了不伤和气而吃下的成本在累积。' },
     advice: { upright: '先约定规则，再讨论谁对谁错。', reversed: '把不满写成一句具体的请求。' },
     symbols: ['交错的五杖', '扬起的尘', '各自的站位'],
-    art: { motif: 'flame', hue: 33, tier: 'placeholder' },
   },
   {
     id: 'wands-06',
@@ -130,7 +125,6 @@ const wands: TarotCard[] = [
     finance: { upright: '收入或回报出现正向进展。', reversed: '为了面子的支出可以先缓一缓。' },
     advice: { upright: '记录下这次奏效的具体做法。', reversed: '把评价标准从别人的口中拿回自己手里。' },
     symbols: ['桂冠', '前行的马', '沿途的旗'],
-    art: { motif: 'path', hue: 44, tier: 'placeholder' },
   },
   {
     id: 'wands-07',
@@ -149,7 +143,6 @@ const wands: TarotCard[] = [
     finance: { upright: '守住既定预算，不被临时提议动摇。', reversed: '拒绝不了的支出请求正在变多。' },
     advice: { upright: '明确哪一条是绝不退让的，其余可以谈。', reversed: '找一个可以站在你这边的人。' },
     symbols: ['高处的立足点', '举起的杖', '下方的六支杖'],
-    art: { motif: 'threshold', hue: 35, tier: 'placeholder' },
   },
   {
     id: 'wands-08',
@@ -168,7 +161,6 @@ const wands: TarotCard[] = [
     finance: { upright: '资金周转顺畅，适合处理待办事项。', reversed: '收付款延迟，留出缓冲。' },
     advice: { upright: '趁着势头把最关键的一件推到底。', reversed: '找出堵住的那一点，只处理它。' },
     symbols: ['并行的飞杖', '开阔的天空', '下方的河'],
-    art: { motif: 'orbit', hue: 39, tier: 'placeholder' },
   },
   {
     id: 'wands-09',
@@ -187,7 +179,6 @@ const wands: TarotCard[] = [
     finance: { upright: '谨慎的态度当前是合适的。', reversed: '过度担心让你错过了合理的机会。' },
     advice: { upright: '把剩下的路程具体量化，会没那么可怕。', reversed: '先休息一天，再决定要不要继续。' },
     symbols: ['包扎的额头', '倚靠的杖', '身后的栅栏'],
-    art: { motif: 'threshold', hue: 32, tier: 'placeholder' },
   },
   {
     id: 'wands-10',
@@ -206,7 +197,6 @@ const wands: TarotCard[] = [
     finance: { upright: '负债或长期支出压力偏大。', reversed: '把债务重新排序，先处理成本最高的。' },
     advice: { upright: '问一句：这些是不是都得由我来扛？', reversed: '现在就放下最不重要的那一件。' },
     symbols: ['成捆的杖', '弯下的背', '不远处的村落'],
-    art: { motif: 'path', hue: 37, tier: 'placeholder' },
   },
   {
     id: 'wands-11',
@@ -225,7 +215,6 @@ const wands: TarotCard[] = [
     finance: { upright: '可以用很小的金额去试新方向。', reversed: '对不熟悉的领域投入过多。' },
     advice: { upright: '允许自己做得不好，先做完一次。', reversed: '选一件已经开始的事，把它收尾。' },
     symbols: ['注视杖端的少年', '沙地', '羽饰'],
-    art: { motif: 'seed', hue: 41, tier: 'placeholder' },
   },
   {
     id: 'wands-12',
@@ -244,7 +233,6 @@ const wands: TarotCard[] = [
     finance: { upright: '果断行动可能抓住时机。', reversed: '冲动决策带来的风险偏高。' },
     advice: { upright: '把冲劲用在最需要突破的那一处。', reversed: '出发前多花十分钟看一眼地图。' },
     symbols: ['扬蹄的马', '飘动的披风', '荒原'],
-    art: { motif: 'flame', hue: 34, tier: 'placeholder' },
   },
   {
     id: 'wands-13',
@@ -263,7 +251,6 @@ const wands: TarotCard[] = [
     finance: { upright: '有能力主动经营自己的收入结构。', reversed: '为形象付出的成本偏高。' },
     advice: { upright: '把这份笃定分一点给正在犹豫的自己。', reversed: '先确认「我为什么想被认可」。' },
     symbols: ['向日葵', '黑猫', '狮纹座椅'],
-    art: { motif: 'sun', hue: 43, tier: 'placeholder' },
   },
   {
     id: 'wands-14',
@@ -282,7 +269,6 @@ const wands: TarotCard[] = [
     finance: { upright: '有清晰的长期财务判断。', reversed: '对风险的自信可能超出了实际把握。' },
     advice: { upright: '把方向说清楚，然后把执行交出去。', reversed: '这一次先听完再说话。' },
     symbols: ['蜥蜴纹章', '火焰袍', '稳坐的姿态'],
-    art: { motif: 'flame', hue: 45, tier: 'placeholder' },
   },
 ]
 
@@ -308,7 +294,6 @@ const cups: TarotCard[] = [
     finance: { upright: '与人共享资源的意愿在上升。', reversed: '因情绪而做的消费需要留意。' },
     advice: { upright: '把此刻的感受如实说出来一次。', reversed: '先承认自己有感觉，再谈怎么处理。' },
     symbols: ['溢出的杯', '静水', '白鸽'],
-    art: { motif: 'tide', hue: 250, tier: 'placeholder' },
   },
   {
     id: 'cups-02',
@@ -327,7 +312,6 @@ const cups: TarotCard[] = [
     finance: { upright: '共同的财务安排可以推进。', reversed: '分摊比例需要重新谈。' },
     advice: { upright: '直接问对方「你怎么想」，不要替他回答。', reversed: '把默认的期待说出来。' },
     symbols: ['交杯', '双蛇杖', '狮首'],
-    art: { motif: 'mirror', hue: 252, tier: 'placeholder' },
   },
   {
     id: 'cups-03',
@@ -346,7 +330,6 @@ const cups: TarotCard[] = [
     finance: { upright: '人情往来带来机会。', reversed: '聚会性支出超出预算。' },
     advice: { upright: '把好消息告诉一个真正会替你高兴的人。', reversed: '筛掉一些不必要的场合。' },
     symbols: ['举杯的三人', '果实', '环绕的舞步'],
-    art: { motif: 'orbit', hue: 254, tier: 'placeholder' },
   },
   {
     id: 'cups-04',
@@ -365,7 +348,6 @@ const cups: TarotCard[] = [
     finance: { upright: '对理财缺乏关注，账目久未整理。', reversed: '重新开始打理财务。' },
     advice: { upright: '不必强迫自己兴奋，先允许低电量。', reversed: '把之前拒绝过的那个提议再看一次。' },
     symbols: ['云中递来的杯', '树下的人', '三只未取的杯'],
-    art: { motif: 'veil', hue: 247, tier: 'placeholder' },
   },
   {
     id: 'cups-05',
@@ -384,7 +366,6 @@ const cups: TarotCard[] = [
     finance: { upright: '为一笔损失反复自责。', reversed: '接受损失，重新规划。' },
     advice: { upright: '允许自己难过，但也数一数还剩什么。', reversed: '把还立着的那两只杯写下来。' },
     symbols: ['倾倒的三杯', '身后的两杯', '灰色斗篷', '远处的桥'],
-    art: { motif: 'tide', hue: 246, tier: 'placeholder' },
   },
   {
     id: 'cups-06',
@@ -403,7 +384,6 @@ const cups: TarotCard[] = [
     finance: { upright: '旧有的储备在此时起了作用。', reversed: '怀旧型消费值得节制。' },
     advice: { upright: '联系一个很久没说话但你还惦记的人。', reversed: '问自己：我怀念的是那个人还是那时的自己？' },
     symbols: ['递花的孩子', '旧庭院', '石阶'],
-    art: { motif: 'seed', hue: 249, tier: 'placeholder' },
   },
   {
     id: 'cups-07',
@@ -422,7 +402,6 @@ const cups: TarotCard[] = [
     finance: { upright: '被高回报的描述吸引，缺乏核实。', reversed: '开始要求看具体条款与数据。' },
     advice: { upright: '选一只杯子拿起来，其余先放下。', reversed: '给每个选项写一行「代价是什么」。' },
     symbols: ['云中的七杯', '剪影', '各异的内容物'],
-    art: { motif: 'veil', hue: 253, tier: 'placeholder' },
   },
   {
     id: 'cups-08',
@@ -441,7 +420,6 @@ const cups: TarotCard[] = [
     finance: { upright: '主动退出一项不再合适的安排。', reversed: '拖延止损让成本继续上升。' },
     advice: { upright: '离开不需要理由充分到能说服所有人。', reversed: '给自己一个明确的判断标准和期限。' },
     symbols: ['背影', '整齐的八杯', '缺角的月', '夜路'],
-    art: { motif: 'path', hue: 248, tier: 'placeholder' },
   },
   {
     id: 'cups-09',
@@ -460,7 +438,6 @@ const cups: TarotCard[] = [
     finance: { upright: '物质层面比较宽裕。', reversed: '奖励自己的支出超出了合理范围。' },
     advice: { upright: '把这份满足具体记下来，它会成为参照。', reversed: '重新确认这个愿望是谁的。' },
     symbols: ['排列的九杯', '弧形长桌', '满意的坐姿'],
-    art: { motif: 'orbit', hue: 251, tier: 'placeholder' },
   },
   {
     id: 'cups-10',
@@ -479,7 +456,6 @@ const cups: TarotCard[] = [
     finance: { upright: '家庭或共同财务状况稳定。', reversed: '为了维持某种生活标准而勉强。' },
     advice: { upright: '把注意力放在能重复的小事上。', reversed: '与其修补形象，不如问一次真实的感受。' },
     symbols: ['彩虹', '相拥的两人', '远处的屋', '孩子们'],
-    art: { motif: 'sun', hue: 250, tier: 'placeholder' },
   },
   {
     id: 'cups-11',
@@ -498,7 +474,6 @@ const cups: TarotCard[] = [
     finance: { upright: '对小的理财尝试保持好奇。', reversed: '按心情花钱的模式明显。' },
     advice: { upright: '把想说的话写下来，先给自己看。', reversed: '分清「我感觉」和「事实是」。' },
     symbols: ['杯中的鱼', '海边', '花纹长衣'],
-    art: { motif: 'seed', hue: 254, tier: 'placeholder' },
   },
   {
     id: 'cups-12',
@@ -517,7 +492,6 @@ const cups: TarotCard[] = [
     finance: { upright: '愿意为有意义的事投入资源。', reversed: '为情怀买单的比例偏高。' },
     advice: { upright: '把心意转成一件具体的事去做。', reversed: '在承诺之前先确认自己能做到多少。' },
     symbols: ['缓行的白马', '举起的杯', '翼形头饰'],
-    art: { motif: 'tide', hue: 247, tier: 'placeholder' },
   },
   {
     id: 'cups-13',
@@ -536,7 +510,6 @@ const cups: TarotCard[] = [
     finance: { upright: '花钱时兼顾感受与实际。', reversed: '因为不忍心而做的资助超出能力。' },
     advice: { upright: '继续保持这种稳，但也留一份给自己。', reversed: '练习说「这不是我的课题」。' },
     symbols: ['贝壳形的杯', '静谧的海', '临水的宝座'],
-    art: { motif: 'mirror', hue: 249, tier: 'placeholder' },
   },
   {
     id: 'cups-14',
@@ -555,7 +528,6 @@ const cups: TarotCard[] = [
     finance: { upright: '不被情绪影响财务判断。', reversed: '回避谈钱，问题积压。' },
     advice: { upright: '你的稳定本身就是给别人的支持。', reversed: '把不舒服直接说出来，比暗示有效。' },
     symbols: ['海上的宝座', '鱼形吊坠', '起伏的浪'],
-    art: { motif: 'tide', hue: 252, tier: 'placeholder' },
   },
 ]
 
@@ -581,7 +553,6 @@ const swords: TarotCard[] = [
     finance: { upright: '把账目理清后方向就明确了。', reversed: '数据口径不一致，先统一再判断。' },
     advice: { upright: '用一句话概括你真正想解决的问题。', reversed: '先写下来再说出口。' },
     symbols: ['直立的剑', '冠冕', '锐利的云缘'],
-    art: { motif: 'threshold', hue: 210, tier: 'placeholder' },
   },
   {
     id: 'swords-02',
@@ -600,7 +571,6 @@ const swords: TarotCard[] = [
     finance: { upright: '资金安排上举棋不定。', reversed: '外部变化迫使你重新配置。' },
     advice: { upright: '先承认「我不想选」，再谈为什么。', reversed: '把已知信息摊开，答案未必难。' },
     symbols: ['蒙眼', '交叉的双剑', '身后的海与月'],
-    art: { motif: 'mirror', hue: 208, tier: 'placeholder' },
   },
   {
     id: 'swords-03',
@@ -619,7 +589,6 @@ const swords: TarotCard[] = [
     finance: { upright: '一笔损失让判断变得清醒。', reversed: '接受结果，重新做规划。' },
     advice: { upright: '让自己难过一段合理的时间，不必立刻振作。', reversed: '把这次学到的写下来，然后合上。' },
     symbols: ['贯穿的三剑', '雨云', '灰色的天'],
-    art: { motif: 'veil', hue: 206, tier: 'placeholder' },
   },
   {
     id: 'swords-04',
@@ -638,7 +607,6 @@ const swords: TarotCard[] = [
     finance: { upright: '暂不做新决策，先观望。', reversed: '疲惫状态下的财务决定容易出错。' },
     advice: { upright: '把休息正式排进日程里。', reversed: '现在就停十五分钟，什么都不做。' },
     symbols: ['卧像', '悬挂的三剑', '彩窗', '静室'],
-    art: { motif: 'veil', hue: 212, tier: 'placeholder' },
   },
   {
     id: 'swords-05',
@@ -657,7 +625,6 @@ const swords: TarotCard[] = [
     finance: { upright: '为了争一口气而付出的代价偏高。', reversed: '重新计算这场争执的实际成本。' },
     advice: { upright: '问自己：我想赢，还是我想解决？', reversed: '主动说一句话，往往比等着有用。' },
     symbols: ['收剑的人', '远去的背影', '风起的云'],
-    art: { motif: 'flame', hue: 205, tier: 'placeholder' },
   },
   {
     id: 'swords-06',
@@ -676,7 +643,6 @@ const swords: TarotCard[] = [
     finance: { upright: '财务状况正在缓慢转好。', reversed: '搬迁或变动带来的成本被低估了。' },
     advice: { upright: '接受这段路会有点安静和不确定。', reversed: '先处理好要带走的，再谈出发。' },
     symbols: ['渡船', '插在船头的六剑', '平静的水面'],
-    art: { motif: 'tide', hue: 214, tier: 'placeholder' },
   },
   {
     id: 'swords-07',
@@ -695,7 +661,6 @@ const swords: TarotCard[] = [
     finance: { upright: '有些财务安排刻意低调。', reversed: '不透明的部分最好主动说明。' },
     advice: { upright: '如果方法不能公开说，先想想为什么。', reversed: '主动讲出来的成本，通常低于被发现。' },
     symbols: ['抱剑离开的人', '身后的营帐', '留下的两剑'],
-    art: { motif: 'path', hue: 209, tier: 'placeholder' },
   },
   {
     id: 'swords-08',
@@ -714,7 +679,6 @@ const swords: TarotCard[] = [
     finance: { upright: '认定现状改不动，于是放弃了规划。', reversed: '发现有可以调整的空间。' },
     advice: { upright: '把「我不能」改写成「我目前还没有」。', reversed: '先迈半步试试，不必一次到位。' },
     symbols: ['环绕的八剑', '松散的束缚', '蒙眼的布', '泥泞地'],
-    art: { motif: 'gate', hue: 207, tier: 'placeholder' },
   },
   {
     id: 'swords-09',
@@ -733,7 +697,6 @@ const swords: TarotCard[] = [
     finance: { upright: '对钱的恐惧感强于实际状况。', reversed: '算清楚数字之后心里踏实了些。' },
     advice: { upright: '把凌晨想到的事，留到白天再判断。', reversed: '找一个人把这件事说完整一遍。' },
     symbols: ['掩面而坐', '墙上的九剑', '深色被面', '夜'],
-    art: { motif: 'moon', hue: 211, tier: 'placeholder' },
   },
   {
     id: 'swords-10',
@@ -752,7 +715,6 @@ const swords: TarotCard[] = [
     finance: { upright: '损失已成定局，重点是止住。', reversed: '财务状况开始缓慢修复。' },
     advice: { upright: '接受结束，然后只看下一步。', reversed: '不必急着好起来，恢复需要时间。' },
     symbols: ['伏地的身影', '插满的十剑', '天边的一线光'],
-    art: { motif: 'threshold', hue: 205, tier: 'placeholder' },
   },
   {
     id: 'swords-11',
@@ -771,7 +733,6 @@ const swords: TarotCard[] = [
     finance: { upright: '愿意研究规则和条款。', reversed: '听来的消息不要当依据。' },
     advice: { upright: '把好奇心变成一份具体的调研。', reversed: '发出去之前先核实一次。' },
     symbols: ['迎风站立', '高举的剑', '飞鸟', '起伏的草地'],
-    art: { motif: 'seed', hue: 213, tier: 'placeholder' },
   },
   {
     id: 'swords-12',
@@ -790,7 +751,6 @@ const swords: TarotCard[] = [
     finance: { upright: '决策果断，行动迅速。', reversed: '来不及尽调就下手。' },
     advice: { upright: '把这股冲劲对准最关键的那一件事。', reversed: '说之前先停两秒。' },
     symbols: ['疾驰的马', '前倾的姿态', '狂风中的云'],
-    art: { motif: 'orbit', hue: 208, tier: 'placeholder' },
   },
   {
     id: 'swords-13',
@@ -809,7 +769,6 @@ const swords: TarotCard[] = [
     finance: { upright: '理性判断，不被情绪带偏。', reversed: '过度警惕让机会全部被排除。' },
     advice: { upright: '相信你已经看清的部分。', reversed: '锋利可以留给问题，不必留给人。' },
     symbols: ['侧向的剑', '云上的宝座', '伸出的手', '飞鸟'],
-    art: { motif: 'mirror', hue: 210, tier: 'placeholder' },
   },
   {
     id: 'swords-14',
@@ -828,7 +787,6 @@ const swords: TarotCard[] = [
     finance: { upright: '有清晰的原则与纪律。', reversed: '过于教条会忽略实际变化。' },
     advice: { upright: '把判断的依据写清楚，别人才跟得上。', reversed: '这一次，先问对方的处境。' },
     symbols: ['正持的剑', '石座', '整齐的云', '蝶形纹饰'],
-    art: { motif: 'gate', hue: 212, tier: 'placeholder' },
   },
 ]
 
@@ -854,7 +812,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '有一笔可作为起点的资源。', reversed: '预算规划迟迟没有真正开始。' },
     advice: { upright: '把这个机会拆成本周可执行的第一步。', reversed: '先补齐最基础的条件。' },
     symbols: ['掌中的金币', '花园', '拱门与远山'],
-    art: { motif: 'seed', hue: 285, tier: 'placeholder' },
   },
   {
     id: 'pentacles-02',
@@ -873,7 +830,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '收支在动态中维持平衡。', reversed: '现金流紧张，需要重新排序。' },
     advice: { upright: '维持现状即可，别再往里加东西。', reversed: '主动放下一个，剩下的才做得好。' },
     symbols: ['无限符号的绶带', '起伏的浪与船', '交替的双币'],
-    art: { motif: 'orbit', hue: 283, tier: 'placeholder' },
   },
   {
     id: 'pentacles-03',
@@ -892,7 +848,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '合作带来的收益结构清晰。', reversed: '合作中的分配比例需要书面化。' },
     advice: { upright: '把自己最擅长的那一块做到位。', reversed: '先开一次对齐标准的会。' },
     symbols: ['施工中的拱顶', '图纸', '三枚嵌入的币'],
-    art: { motif: 'gate', hue: 288, tier: 'placeholder' },
   },
   {
     id: 'pentacles-04',
@@ -911,7 +866,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '储蓄意识强，支出严格控制。', reversed: '该花的钱也不花，生活质量受影响。' },
     advice: { upright: '确认一下：我在保护什么，又在错过什么？', reversed: '试着松开其中一枚。' },
     symbols: ['紧抱的币', '头顶的币', '脚下的两枚', '身后的城'],
-    art: { motif: 'gate', hue: 281, tier: 'placeholder' },
   },
   {
     id: 'pentacles-05',
@@ -930,7 +884,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '资金紧张，压力真实存在。', reversed: '出现可以缓解的渠道。' },
     advice: { upright: '把「我需要帮助」说出口不是失败。', reversed: '主动联系那个可能帮得上的人。' },
     symbols: ['雪夜', '彩窗的光', '拄拐前行', '窗外的两人'],
-    art: { motif: 'threshold', hue: 282, tier: 'placeholder' },
   },
   {
     id: 'pentacles-06',
@@ -949,7 +902,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '适合借出、捐助或接受支持。', reversed: '金钱往来最好写清楚条件。' },
     advice: { upright: '如实说出你需要多少、能给多少。', reversed: '接受帮助不需要立刻等价偿还。' },
     symbols: ['天平', '施予的手', '跪坐的两人', '散落的币'],
-    art: { motif: 'mirror', hue: 287, tier: 'placeholder' },
   },
   {
     id: 'pentacles-07',
@@ -968,7 +920,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '长期投入需要给它足够的周期。', reversed: '重新评估这笔投入是否值得继续。' },
     advice: { upright: '设一个复查时间点，中间不要反复看。', reversed: '算一次实际投入产出，再做决定。' },
     symbols: ['倚锄的人', '结满果的藤', '六枚在枝上的币'],
-    art: { motif: 'seed', hue: 289, tier: 'placeholder' },
   },
   {
     id: 'pentacles-08',
@@ -987,7 +938,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '靠稳定劳动积累收入。', reversed: '投入的时间与回报不成正比。' },
     advice: { upright: '今天再做一遍，不用做得更花哨。', reversed: '找人给一次真实的反馈。' },
     symbols: ['工作台', '刻凿的锤', '排列的成品', '远处的城'],
-    art: { motif: 'flame', hue: 284, tier: 'placeholder' },
   },
   {
     id: 'pentacles-09',
@@ -1006,7 +956,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '财务独立，有安全边际。', reversed: '收入来源过于单一。' },
     advice: { upright: '允许自己享受一下已经拥有的。', reversed: '建立第二条支撑线。' },
     symbols: ['花园', '手上的隼', '成熟的葡萄藤', '长袍'],
-    art: { motif: 'sun', hue: 286, tier: 'placeholder' },
   },
   {
     id: 'pentacles-10',
@@ -1025,7 +974,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '资产结构完整，适合做长期配置。', reversed: '家庭财务安排需要说清楚。' },
     advice: { upright: '用十年的尺度看一次现在的选择。', reversed: '把模糊的家庭财务约定书面化。' },
     symbols: ['拱门下的家族', '犬', '老者', '排布的十枚币'],
-    art: { motif: 'gate', hue: 290, tier: 'placeholder' },
   },
   {
     id: 'pentacles-11',
@@ -1044,7 +992,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '开始学习理财基础知识。', reversed: '对数字缺乏耐心。' },
     advice: { upright: '选一件事，认真做完一整轮。', reversed: '今天做十分钟，比明天做两小时可靠。' },
     symbols: ['专注端详的币', '翻耕过的田', '远处的林'],
-    art: { motif: 'seed', hue: 283, tier: 'placeholder' },
   },
   {
     id: 'pentacles-12',
@@ -1063,7 +1010,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '保守稳健的策略适合当前。', reversed: '过度谨慎让资金效率很低。' },
     advice: { upright: '不必加速，把节奏保持住就好。', reversed: '给自己一个明确的截止时间。' },
     symbols: ['静立的马', '手中的币', '耕地', '厚重的甲'],
-    art: { motif: 'path', hue: 288, tier: 'placeholder' },
   },
   {
     id: 'pentacles-13',
@@ -1082,7 +1028,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '善于精打细算并留有余量。', reversed: '在别人的开支上操心过多。' },
     advice: { upright: '先把身体和日常照顾好，其余才谈得上。', reversed: '这一周，把一件事交给别人做。' },
     symbols: ['花木环绕的座椅', '兔', '怀中的币', '沃土'],
-    art: { motif: 'seed', hue: 287, tier: 'placeholder' },
   },
   {
     id: 'pentacles-14',
@@ -1101,7 +1046,6 @@ const pentacles: TarotCard[] = [
     finance: { upright: '财务判断成熟，结构稳固。', reversed: '过于看重积累，忽略了使用。' },
     advice: { upright: '把经验整理出来，它比资产更值钱。', reversed: '问一次：钱之外，我在乎什么？' },
     symbols: ['葡萄纹长袍', '公牛雕饰', '手中的权杖与币', '城堡'],
-    art: { motif: 'gate', hue: 285, tier: 'placeholder' },
   },
 ]
 

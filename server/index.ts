@@ -28,6 +28,11 @@ const MIME: Record<string, string> = {
   '.woff2': 'font/woff2',
   '.png': 'image/png',
   '.ico': 'image/x-icon',
+  /* 牌面/卡背/封面全部是 WebP。缺了它，390 张资产会按
+     application/octet-stream 发出 —— <img> 靠嗅探通常还能显示，
+     但一旦配合 fetch()、<picture> 或 CSP 就会炸。 */
+  '.webp': 'image/webp',
+  '.avif': 'image/avif',
 }
 
 /** 值得压缩的类型。图片和 woff2 本身已压缩，再压是浪费 CPU。 */
@@ -54,6 +59,11 @@ function serveStatic(
   const ext = extname(filePath)
   const headers: Record<string, string> = {
     'Content-Type': MIME[ext] ?? 'application/octet-stream',
+    /* immutable 长缓存的前提是「这个 URL 的内容永不改变」。
+       Vite 产物靠内容哈希文件名满足它；牌面资产靠**路径里的 r<rev>** 满足它
+       （见 src/decks/artwork/paths.ts）。返修一版画 = rev+1 = 新 URL。
+       没有 rev 的时候这里是个陷阱：牌面文件名按设计恒定，
+       于是资产在架构上不可更新，老用户一年看不到返修结果。 */
     'Cache-Control': filePath.includes(`${'assets'}/`)
       ? 'public, max-age=31536000, immutable'
       : 'no-cache',

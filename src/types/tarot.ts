@@ -1,5 +1,11 @@
 /**
- * 塔罗静态数据类型（Static tarot data types）
+ * Layer 1 · 塔罗语义层类型（Tarot Meaning Layer）
+ *
+ * 【这一层的宪法】
+ * 本文件描述「这张牌是什么」，**不描述「它长什么样」**。
+ * 它对 deckId 完全无感知 —— 全文件不允许出现 deckId 这个标识符，
+ * 也不允许 import 任何 `@/decks/**` 或 `@/atmosphere/**` 的东西。
+ * 换一副牌组，本层的任何取值都不得发生一个字节的变化（deck:check D 组断言）。
  *
  * 设计约定：
  * - `TarotCard` 只描述「牌本身」的静态含义，**不带 orientation（正逆位）**。
@@ -26,34 +32,10 @@ export interface OrientedText {
 }
 
 /**
- * 牌面美术母题（Art motif）。
- * MVP 不做 78 张原创插画，牌面由程序化 SVG 生成，`motif` 决定构图母题。
+ * 元素名。与 `types/reading.ts` 的 `TarotElement` 取值一致，
+ * 但在这里独立声明 —— 牌义层不 import reading 层（那是解读侧的类型）。
  */
-export type ArtMotif =
-  | 'moon'
-  | 'star'
-  | 'sun'
-  | 'gate'
-  | 'path'
-  | 'mirror'
-  | 'orbit'
-  | 'veil'
-  | 'seed'
-  | 'tide'
-  | 'flame'
-  | 'threshold'
-
-/** 牌面美术描述（Art spec） */
-export interface CardArt {
-  motif: ArtMotif
-  /** 色相偏移 0–360，用于在统一设计系统内区分每张牌 */
-  hue: number
-  /**
-   * signature = 代表性 Mock Card（有专门构图）
-   * placeholder = 统一风格占位牌（同一设计系统，构图程序化生成）
-   */
-  tier: 'signature' | 'placeholder'
-}
+export type TarotElementName = 'fire' | 'water' | 'air' | 'earth' | 'spirit'
 
 /** 一张塔罗牌的完整静态定义 */
 export interface TarotCard {
@@ -80,18 +62,56 @@ export interface TarotCard {
   finance: OrientedText
   advice: OrientedText
 
-  /** 象征元素，例如 ['提灯', '雪原', '独行'] */
+  /**
+   * 自我状态与成长方向。
+   *
+   * 【为什么新增而不是把 study 改名】
+   * `study`（学业与考试）与「自我成长」是两回事：前者是外部任务，
+   * 后者是内在状态。改名会让 78 张牌里已写好的学业牌义全部错位。
+   *
+   * optional：目前只有 5 张代表牌写了。
+   * `selectDomainMeaning` 在缺失时返回 null 而不是找替代 ——
+   * 找替代会让「这段是专门为这个领域写的」这个前提失效。
+   */
+  personalGrowth?: OrientedText
+
+  /**
+   * 象征元素，例如 ['提灯', '雪原', '独行']。
+   *
+   * 【它是牌义，不是画面描述】symbols 会进 Prompt（server/prompts），
+   * 所以它**必须与牌组无关** —— 一旦让某套牌组改写 symbols，
+   * 「换牌组后 Prompt 逐字节相同」这条断言立刻失败，产品哲学随之瓦解。
+   * 各牌组画面上实际画了什么，属于 Layer 2，与本字段无关。
+   */
   symbols: string[]
 
-  /** 牌面视觉（程序化生成，非位图） */
-  art: CardArt
-}
+  /**
+   * 结构化象征：每个意象配一句它在这张牌里意味着什么。
+   *
+   * 与上面扁平的 `symbols` 并存而不是取代它 —— `symbols` 已经进了 Prompt
+   * 并被「换牌组后 Prompt 逐字节相同」那条断言覆盖，动它风险大于收益。
+   * 这一份是给**界面**用的：牌义详情页可以逐条展开，而不是甩一串词。
+   *
+   * optional：目前只有 5 张代表牌写了。
+   */
+  symbolism?: { title: string; meaning: string }[]
 
-/** 牌组（Deck）。MVP 只有一套。 */
-export interface TarotDeck {
-  id: string
-  name: string
-  nameEn: string
-  description: string
-  cards: TarotCard[]
+  /**
+   * 元素归属。
+   *
+   * 【为什么牌上要存，明明 SUIT_ELEMENT 能推】
+   * 花色能推出小阿卡纳的元素，但**大阿卡纳没有花色** ——
+   * 现在它们在 ReadingContext 里一律被兜底成 'spirit'，
+   * 等于 22 张大牌的元素信息是假的。存在牌上才能给对。
+   *
+   * optional：目前只有 5 张代表牌写了；未写的仍走 SUIT_ELEMENT 推导。
+   */
+  element?: TarotElementName
+
+  /** 占星对应，例如 '天王星' / '水星'。传统塔罗体系的一部分，纯参考。optional */
+  astrology?: string
+
+  /* ★ 这里曾经有 `art: CardArt`。它已被移除 —— 见 src/decks/legacy/proceduralArt.ts。
+     牌面长什么样属于视觉层；把它长在牌义上，会让一张牌结构上只能有一套美术。
+     deck:check 的 D 组断言会阻止任何人把它加回来。 */
 }

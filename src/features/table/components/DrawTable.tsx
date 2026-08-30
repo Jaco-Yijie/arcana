@@ -1,9 +1,11 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CardFrame } from '@/components/card/CardFrame'
-import { CardBack } from '@/components/card/CardBack'
+import { ThemedCardBack as CardBack } from '@/components/card/ThemedCardBack'
 import { capturePointer } from './pointer'
 import { FanSpread } from './FanSpread'
+import { computeSpreadLayout } from '@/features/table/layout/spreadLayout'
+import { useElementSize } from '@/hooks/useElementSize'
 import type { Spread } from '@/types/spread'
 import type { Placement } from '@/types/session'
 
@@ -14,8 +16,16 @@ const DRAG_THRESHOLD = 6
 /** 手指偏移：卡牌相对手指上移，保证牌和目标牌位都不被手指遮住 */
 const FINGER_OFFSET = 40
 
-const ZONE_W = 64
-const ZONE_H = 110
+/**
+ * 拖拽中跟手那张牌的尺寸。
+ *
+ * 【为什么它是常量，而牌位尺寸不是】
+ * 牌位尺寸必须随牌桌走（否则就回到了「写死尺寸 + 归一化坐标 = 必然重叠」的老问题）；
+ * 而跟手的牌是**手势反馈**，它的大小应该跟手指有关，不该跟牌桌大小有关。
+ * 牌桌越大跟手的牌越大，反而会挡住落点。
+ */
+const DRAG_CARD_W = 72
+const DRAG_CARD_H = Math.round(DRAG_CARD_W / 0.5999)
 
 interface DragState {
   /** 从手牌拖出 = deckIndex；从牌位拖回 = 该牌位 id */
@@ -66,7 +76,8 @@ export function DrawTable({
 }: DrawTableProps) {
   const reduceMotion = useReducedMotion()
   const rootRef = useRef<HTMLDivElement>(null)
-  const boardRef = useRef<HTMLDivElement>(null)
+  /* 牌桌尺寸是布局的输入，必须实测。fallback 只在 SSR / 首帧无 DOM 时短暂生效 */
+  const [boardRef, boardSize] = useElementSize<HTMLDivElement>({ w: 328, h: 420 })
   const zoneRefs = useRef(new Map<string, HTMLDivElement>())
   const zoneCenters = useRef<{ id: string; x: number; y: number; empty: boolean }[]>([])
   const [drag, setDrag] = useState<DragState | null>(null)
@@ -185,19 +196,42 @@ export function DrawTable({
 
   const boardFull = placements.length === spread.cardCount
 
+  /* 牌位像素位置由牌桌实际尺寸反解。空间不足时整体等比缩小，
+     绝不会退化成重叠 —— 见 spreadLayout.ts 顶部注释。 */
+  const layout = useMemo(
+    () => computeSpreadLayout(spread, boardSize.w, boardSize.h),
+    [spread, boardSize.w, boardSize.h],
+  )
+  const slotById = useMemo(
+    () => new Map(layout.slots.map((s) => [s.id, s])),
+    [layout],
+  )
+  /* 牌阵在牌桌里居中：boardW/H 可能小于可用尺寸（受 MAX_CARD_W 或另一条约束限制） */
+  const padX = Math.max(0, (boardSize.w - layout.boardW) / 2)
+  const padY = Math.max(0, (boardSize.h - layout.boardH) / 2)
+
   return (
     <div ref={rootRef} className="relative flex min-h-0 flex-1 flex-col">
       {/* ── Board 牌阵画布 ─────────────────────────────── */}
+      {/* 高度分配：移动端 board:fan = 3:2；桌面端扇形已经横向铺开，
+          不再需要 40% 的高度，把它让给牌桌 → 5:2。
+          （牌桌在宽屏上是**高度受限**的：3 行牌阵除以可用高度才是卡宽的瓶颈，
+            宽度那一侧早就够用了。） */}
+      {/* 牌桌左右内边距与高度分配都连续化：
+          旧版 mx-4 在 320px 上吃掉 10% 宽度，flex-[2]/lg:flex-[5] 又是断点阶跃。
+          现在 padding 用 clamp，扇形区高度用 clamp(vh)，牌桌吃剩余空间。 */}
       <div
         ref={boardRef}
-        className="relative mx-4 shrink-0"
-        style={{ height: 288 }}
+        className="relative min-h-0 flex-1"
+        style={{ paddingInline: 'clamp(0.5rem, 3vw, 1.5rem)' }}
       >
         {spread.positions.map((pos) => {
           const placed = placementOf(pos.id)
           const hovering = hoverZone === pos.id
           const draggingThis =
             drag?.started && drag.source.kind === 'zone' && drag.source.positionId === pos.id
+          const slot = slotById.get(pos.id)
+          if (!slot) return null
           return (
             <div
               key={pos.id}
@@ -205,18 +239,18 @@ export function DrawTable({
                 if (el) zoneRefs.current.set(pos.id, el)
                 else zoneRefs.current.delete(pos.id)
               }}
-              className="absolute flex flex-col items-center gap-1"
+              className="absolute flex flex-col items-center"
               style={{
-                left: `${pos.x * 100}%`,
-                top: `${pos.y * 100}%`,
-                width: ZONE_W,
-                transform: 'translate(-50%, -50%)',
+                left: padX + slot.card.x,
+                top: padY + slot.card.y,
+                width: slot.card.w,
+                transform: slot.rotation ? `rotate(${slot.rotation}deg)` : undefined,
               }}
             >
               <motion.div
                 animate={{ scale: hovering ? 1.06 : 1 }}
                 transition={{ duration: 0.16, ease: [0.22, 0.61, 0.36, 1] }}
-                style={{ width: ZONE_W, height: ZONE_H }}
+                style={{ width: slot.card.w, height: slot.card.h }}
               >
                 {placed ? (
                   // 拖拽期间**不能卸载**这个元素：它持有 pointer capture，
@@ -250,14 +284,28 @@ export function DrawTable({
                   />
                 )}
               </motion.div>
-              <span className="text-[11px] tracking-wide-caps text-text-faint">{pos.label}</span>
+              {/* 标签带宽度取自布局引擎：它属于这个单元格，
+                  结构上不可能压到邻居的牌上（L-02） */}
+              <span
+                className="flex select-none items-center justify-center overflow-hidden text-center text-[11px] leading-tight tracking-wide-caps text-text-faint"
+                style={{
+                  width: slot.label.w,
+                  height: slot.label.h,
+                  marginLeft: slot.label.x - slot.card.x,
+                }}
+              >
+                {pos.label}
+              </span>
             </div>
           )
         })}
       </div>
 
       {/* ── Hand 手牌区：始终回答「现在轮到我做什么」 ────── */}
-      <div className="relative flex shrink-0 items-center justify-center gap-3 px-5" style={{ height: 96 }}>
+      {/* 手牌区高度 96 → 64：空手时这里只放一行提示，
+          而 800px 的手机上每 32px 都要从牌桌那边抢。
+          手上有牌时卡片会溢出这条带子，属于预期 —— 它本来就是「拿在手上」。 */}
+      <div className="relative flex h-16 shrink-0 items-center justify-center gap-3 px-5">
         {handIndex !== null && (
           // 同上：拖拽中只隐藏、不卸载，否则 pointer capture 随元素一起消失
           <div
@@ -273,11 +321,14 @@ export function DrawTable({
             </CardFrame>
           </div>
         )}
-        <p className="max-w-[190px] text-caption text-text-low">{handHint}</p>
+        <p className="max-w-[min(48vw,12rem)] text-caption text-text-low">{handHint}</p>
       </div>
 
       {/* ── Fan 扇形区：拇指舒适区 ──────────────────────── */}
-      <div className="relative min-h-0 flex-1">
+      <div
+        className="relative shrink-0"
+        style={{ height: 'clamp(8.5rem, 24vh, 15rem)' }}
+      >
         {!boardFull && (
           <FanSpread
             count={deckCount}
@@ -293,8 +344,8 @@ export function DrawTable({
       {drag?.started && (
         <motion.div
           className="pointer-events-none absolute top-0 left-0 z-50"
-          style={{ width: ZONE_W }}
-          animate={{ x: drag.x - ZONE_W / 2, y: drag.y - ZONE_H / 2 }}
+          style={{ width: DRAG_CARD_W }}
+          animate={{ x: drag.x - DRAG_CARD_W / 2, y: drag.y - DRAG_CARD_H / 2 }}
           transition={reduceMotion ? { duration: 0 } : { duration: 0.06, ease: 'linear' }}
         >
           <CardFrame size="sm" fluid state="lifted" selected>

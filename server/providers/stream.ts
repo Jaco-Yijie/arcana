@@ -171,12 +171,12 @@ export async function streamCompletion(
       }
     }
 
-    if (finishReason === 'length') {
-      throw new StreamFailure('invalid-json', 0, `输出被 max_tokens=${config.maxTokens} 截断`)
-    }
     if (content.trim().length === 0) {
       throw new StreamFailure('empty-response')
     }
+    // 被 max_tokens 截断时**不在这里判死**：jsonRepair 会回退到最后一条完整内容，
+    // 若回退后仍缺字段，validateReading 自然会拒绝，再由上层重试一次。
+    // 直接抛错等于把「本来能救回来的一份」也扔掉。
 
     return {
       content,

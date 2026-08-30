@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CardFrame } from '@/components/card/CardFrame'
-import { CardBack } from '@/components/card/CardBack'
+import { ThemedCardBack as CardBack } from '@/components/card/ThemedCardBack'
 import { capturePointer } from './pointer'
 import { MIN_SHUFFLE_DISTANCE } from '@/features/table/engine'
 import type { ShuffleGesture, ShuffleResult } from '@/features/table/engine'
