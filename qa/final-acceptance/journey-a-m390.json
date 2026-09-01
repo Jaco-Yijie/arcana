@@ -1,0 +1,930 @@
+{
+  "viewport": "m390",
+  "depth": "标准解读",
+  "steps": [
+    {
+      "n": 1,
+      "name": "home",
+      "ok": true,
+      "ms": 2436,
+      "url": "/",
+      "urlChanged": true,
+      "controls": [
+        "带着问题来\n有想问的事，让牌帮你把它摊开",
+        "随缘抽一张\n没有具体问题，看看今天会遇到什么",
+        "塔罗日记",
+        "牌组",
+        "设置"
+      ],
+      "smallTargets": [
+        "牌组(27×44)",
+        "设置(27×44)"
+      ],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 2,
+      "name": "choose-question-entry",
+      "ok": true,
+      "ms": 2265,
+      "url": "/decks",
+      "urlChanged": true,
+      "controls": [
+        "返回",
+        "月光\n使用中\n夜里最安静的那一段",
+        "看看这套",
+        "古典\n象牙纸面与暗金压边",
+        "看看这套",
+        "森语\n林子里的光会自己找路",
+        "看看这套",
+        "星图\n你在一张很大的图上",
+        "看看这套",
+        "幽影\n往回看的那一面",
+        "看看这套",
+        "就用这副"
+      ],
+      "smallTargets": [],
+      "imgs": 25,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 3,
+      "name": "deck-library",
+      "ok": true,
+      "ms": 2493,
+      "url": "/decks",
+      "urlChanged": false,
+      "controls": [
+        "返回",
+        "月光\n使用中\n夜里最安静的那一段",
+        "看看这套",
+        "古典\n象牙纸面与暗金压边",
+        "看看这套",
+        "森语\n林子里的光会自己找路",
+        "看看这套",
+        "星图\n你在一张很大的图上",
+        "看看这套",
+        "幽影\n往回看的那一面",
+        "看看这套",
+        "就用这副"
+      ],
+      "smallTargets": [],
+      "imgs": 25,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 4,
+      "name": "pick-deck",
+      "ok": true,
+      "ms": 1799,
+      "url": "/question?mode=question",
+      "urlChanged": true,
+      "controls": [
+        "返回",
+        "我想知道……",
+        "没有想好怎么问？",
+        "继续",
+        "我暂时没有具体问题"
+      ],
+      "smallTargets": [
+        "我想知道……(319×38)"
+      ],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 5,
+      "name": "type-question",
+      "ok": true,
+      "ms": 1171,
+      "url": "/question?mode=question",
+      "urlChanged": false,
+      "controls": [
+        "返回",
+        "我想知道……",
+        "没有想好怎么问？",
+        "继续",
+        "我暂时没有具体问题"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 6,
+      "name": "optimize-question",
+      "ok": true,
+      "ms": 2441,
+      "url": "/question?mode=question",
+      "urlChanged": false,
+      "controls": [
+        "返回",
+        "我想知道……",
+        "没有想好怎么问？",
+        "继续",
+        "我暂时没有具体问题",
+        "用优化后的",
+        "保留我的问题",
+        "再改一下"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 7,
+      "name": "confirm-question",
+      "ok": true,
+      "ms": 3564,
+      "url": "/spread",
+      "urlChanged": true,
+      "controls": [
+        "返回",
+        "单张牌\n1 张\n适合一个笼统的、想先看看方向的问题，也用于随缘抽一张。",
+        "二选一\n5 张\n适合面前有两个具体选项、想比较各自代价的问题。",
+        "关系\n5 张\n适合想看清两个人各自的位置、之间的状态与可能走向的问题。",
+        "查看全部牌阵"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 8,
+      "name": "pick-spread-5card",
+      "ok": true,
+      "ms": 1748,
+      "url": "/focus",
+      "urlChanged": true,
+      "controls": [
+        "返回",
+        "直接开始",
+        "专注一下"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 9,
+      "name": "focus-ritual",
+      "ok": true,
+      "ms": 1795,
+      "url": "/table/shuffle",
+      "urlChanged": true,
+      "controls": [
+        "退出",
+        "牌堆。滑动可以洗牌；用键盘时按 Enter 或空格洗一次"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 10,
+      "name": "shuffle",
+      "ok": true,
+      "ms": 5738,
+      "url": "/table/shuffle",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "牌堆，已洗 8 次。继续滑动，或按 Enter 或空格再洗一次",
+        "洗好了"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 11,
+      "name": "cut",
+      "ok": true,
+      "ms": 1719,
+      "url": "/table/cut",
+      "urlChanged": true,
+      "controls": [
+        "退出",
+        "重新洗牌"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 12,
+      "name": "cut-pick",
+      "ok": true,
+      "ms": 1242,
+      "url": "/table/cut",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "从这里切开",
+        "重新洗牌"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 13,
+      "name": "cut-confirm",
+      "ok": true,
+      "ms": 2234,
+      "url": "/table/cut",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "合起来"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 14,
+      "name": "cut-close",
+      "ok": true,
+      "ms": 2009,
+      "url": "/table/cut",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "摊开牌"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 15,
+      "name": "fan-spread",
+      "ok": true,
+      "ms": 3380,
+      "url": "/table/draw",
+      "urlChanged": true,
+      "controls": [
+        "退出",
+        "重新切牌"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 16,
+      "name": "place-card-1",
+      "ok": true,
+      "ms": 2283,
+      "url": "/table/draw",
+      "urlChanged": false,
+      "controls": [
+        "退出"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 17,
+      "name": "place-card-2",
+      "ok": true,
+      "ms": 2284,
+      "url": "/table/draw",
+      "urlChanged": false,
+      "controls": [
+        "退出"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 18,
+      "name": "place-card-3",
+      "ok": true,
+      "ms": 2291,
+      "url": "/table/draw",
+      "urlChanged": false,
+      "controls": [
+        "退出"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 19,
+      "name": "place-card-4",
+      "ok": true,
+      "ms": 2382,
+      "url": "/table/draw",
+      "urlChanged": false,
+      "controls": [
+        "退出"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 20,
+      "name": "place-card-5",
+      "ok": true,
+      "ms": 2228,
+      "url": "/table/draw",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "去翻牌"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 21,
+      "name": "go-reveal",
+      "ok": true,
+      "ms": 2408,
+      "url": "/table/reveal",
+      "urlChanged": true,
+      "controls": [
+        "退出",
+        "翻开这张牌",
+        "翻开这张牌",
+        "翻开这张牌",
+        "翻开这张牌",
+        "翻开这张牌"
+      ],
+      "smallTargets": [],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 22,
+      "name": "reveal-1",
+      "ok": true,
+      "ms": 2972,
+      "url": "/table/reveal",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "翻开这张牌",
+        "翻开这张牌",
+        "翻开这张牌",
+        "翻开这张牌"
+      ],
+      "smallTargets": [],
+      "imgs": 1,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 23,
+      "name": "reveal-2",
+      "ok": true,
+      "ms": 2964,
+      "url": "/table/reveal",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "翻开这张牌",
+        "翻开这张牌",
+        "翻开这张牌"
+      ],
+      "smallTargets": [],
+      "imgs": 2,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 24,
+      "name": "reveal-3",
+      "ok": true,
+      "ms": 2967,
+      "url": "/table/reveal",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "翻开这张牌",
+        "翻开这张牌"
+      ],
+      "smallTargets": [],
+      "imgs": 3,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 25,
+      "name": "reveal-4",
+      "ok": true,
+      "ms": 2977,
+      "url": "/table/reveal",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "翻开这张牌"
+      ],
+      "smallTargets": [],
+      "imgs": 4,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 26,
+      "name": "reveal-5",
+      "ok": true,
+      "ms": 2992,
+      "url": "/table/reveal",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "开始完整解读"
+      ],
+      "smallTargets": [],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 27,
+      "name": "card-meaning-sheet",
+      "ok": true,
+      "ms": 2263,
+      "url": "/table/reveal",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "开始完整解读",
+        "收起牌义",
+        "收起",
+        "查看详细牌义"
+      ],
+      "smallTargets": [],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 28,
+      "name": "close-meaning-sheet",
+      "ok": true,
+      "ms": 1148,
+      "url": "/table/reveal",
+      "urlChanged": false,
+      "controls": [
+        "退出",
+        "开始完整解读"
+      ],
+      "smallTargets": [],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 29,
+      "name": "go-reading-page",
+      "ok": true,
+      "ms": 1757,
+      "url": "/reading",
+      "urlChanged": true,
+      "controls": [
+        "看牌阵",
+        "存入日记",
+        "标准解读\n逐张读牌，给出完整的牌面分析和对你问题的回应。\n每张牌 · 整体叙事 ",
+        "深度解读\n在此之上，再去看牌与牌之间的呼应、矛盾和转折点。\n以上全部 · 牌阵内",
+        "开始解读"
+      ],
+      "smallTargets": [
+        "看牌阵(40×44)"
+      ],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 30,
+      "name": "pick-depth",
+      "ok": true,
+      "ms": 1228,
+      "url": "/reading",
+      "urlChanged": false,
+      "controls": [
+        "看牌阵",
+        "存入日记",
+        "标准解读\n逐张读牌，给出完整的牌面分析和对你问题的回应。\n每张牌 · 整体叙事 ",
+        "深度解读\n在此之上，再去看牌与牌之间的呼应、矛盾和转折点。\n以上全部 · 牌阵内",
+        "开始解读"
+      ],
+      "smallTargets": [
+        "看牌阵(40×44)"
+      ],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 31,
+      "name": "ai-reading",
+      "ok": true,
+      "ms": 42257,
+      "url": "/reading",
+      "urlChanged": false,
+      "controls": [
+        "看牌阵",
+        "存入日记",
+        "每张牌的分析\n展开",
+        "牌与牌之间的关系\n展开",
+        "整体走向\n展开",
+        "可以再想想的问题\n展开",
+        "继续问这次牌阵",
+        "发送"
+      ],
+      "smallTargets": [
+        "看牌阵(40×44)"
+      ],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 32,
+      "name": "follow-up-1",
+      "ok": true,
+      "ms": 21931,
+      "url": "/reading",
+      "urlChanged": false,
+      "controls": [
+        "看牌阵",
+        "存入日记",
+        "每张牌的分析\n展开",
+        "牌与牌之间的关系\n展开",
+        "整体走向\n展开",
+        "可以再想想的问题\n展开",
+        "继续问这次牌阵",
+        "发送"
+      ],
+      "smallTargets": [
+        "看牌阵(40×44)"
+      ],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 33,
+      "name": "follow-up-2",
+      "ok": true,
+      "ms": 19972,
+      "url": "/reading",
+      "urlChanged": false,
+      "controls": [
+        "看牌阵",
+        "存入日记",
+        "每张牌的分析\n展开",
+        "牌与牌之间的关系\n展开",
+        "整体走向\n展开",
+        "可以再想想的问题\n展开",
+        "继续问这次牌阵",
+        "发送"
+      ],
+      "smallTargets": [
+        "看牌阵(40×44)"
+      ],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 34,
+      "name": "save-journal",
+      "ok": true,
+      "ms": 2222,
+      "url": "/journal/ses_mtiq1pfo_483011063146",
+      "urlChanged": true,
+      "controls": [
+        "返回",
+        "分享",
+        "抽这次牌的时候，我的状态是…",
+        "我自己看到的东西…",
+        "过一段时间再回来写…"
+      ],
+      "smallTargets": [
+        "分享(27×44)"
+      ],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 35,
+      "name": "journal-list",
+      "ok": true,
+      "ms": 2917,
+      "url": "/journal",
+      "urlChanged": true,
+      "controls": [
+        "返回",
+        "在「我最近在考虑要不要换一份工作」这个…\n2 分钟前\n⌃\n⌃\n⌃\n⌃\n二选一\n\n"
+      ],
+      "smallTargets": [],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 36,
+      "name": "journal-detail",
+      "ok": true,
+      "ms": 2232,
+      "url": "/journal/ses_mtiq1pfo_483011063146",
+      "urlChanged": true,
+      "controls": [
+        "返回",
+        "分享",
+        "抽这次牌的时候，我的状态是…",
+        "我自己看到的东西…",
+        "过一段时间再回来写…"
+      ],
+      "smallTargets": [
+        "分享(27×44)"
+      ],
+      "imgs": 5,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "n": 37,
+      "name": "leave-and-return",
+      "ok": true,
+      "ms": 3484,
+      "url": "/",
+      "urlChanged": true,
+      "controls": [
+        "带着问题来\n有想问的事，让牌帮你把它摊开",
+        "随缘抽一张\n没有具体问题，看看今天会遇到什么",
+        "塔罗日记",
+        "牌组",
+        "设置"
+      ],
+      "smallTargets": [
+        "牌组(27×44)",
+        "设置(27×44)"
+      ],
+      "imgs": 0,
+      "brokenImgs": 0,
+      "overflowX": false,
+      "devStrings": []
+    }
+  ],
+  "findings": [],
+  "devStrings": [],
+  "answers": {
+    "deckBeforeQuestion": true,
+    "optimizedQuestionText": [
+      "「我最近在考虑要不要换一份工作」"
+    ],
+    "sessionAfterPlace": {
+      "id": "ses_mtiq1pfo_483011063146",
+      "deckId": "legacy-moonlight",
+      "spreadId": "two-choices",
+      "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+      "mode": "question",
+      "stage": "draw",
+      "placements": [
+        {
+          "pos": "current",
+          "idx": 38,
+          "rev": false
+        },
+        {
+          "pos": "a-process",
+          "idx": 40,
+          "rev": false
+        },
+        {
+          "pos": "a-result",
+          "idx": 41,
+          "rev": false
+        },
+        {
+          "pos": "b-process",
+          "idx": 43,
+          "rev": false
+        },
+        {
+          "pos": "b-result",
+          "idx": 37,
+          "rev": false
+        }
+      ],
+      "orientations": [
+        "reversed",
+        "reversed",
+        "upright",
+        "reversed",
+        "reversed"
+      ],
+      "cardIds": [
+        "swords-03",
+        "cups-09",
+        "cups-13",
+        "major-08",
+        "cups-05"
+      ],
+      "followUps": 0,
+      "hasStructured": false
+    },
+    "meaningSheetText": "退出\n洗\n切\n抽\n翻\n⌃\n现状 · 逆位\n⌃\nA 方向发展 · 逆位\nA 结果\n⌃\nB 方向发展 · 逆位\n⌃\nB 结果 · 逆位\n开始完整解读\n收起\n宝剑三\nThree of Swords\n\n逆位\n\n开始复原 · 仍在反刍 · 释放\n\n查看详细牌义",
+    "revealText": "退出\n洗\n切\n抽\n翻\n⌃\n现状 · 逆位\n⌃\nA 方向发展 · 逆位\nA 结果\n⌃\nB 方向发展 · 逆位\n⌃\nB 结果 · 逆位\n开始完整解读",
+    "revealCLS": 0,
+    "readingSeconds": 42.3,
+    "readingFirstPaintMs": 40105,
+    "readingText": "看牌阵\n存入日记\n⌃\n现状\n⌃\nA 方向发展\nA 结果\n⌃\nB 方向发展\n⌃\nB 结果\n两条路都不是捷径，但一个在教你安顿，一个在逼你转身\n\n五张牌里四张逆位，只有 A 结果的圣杯皇后正位。整体能量偏内收，带着明显的「尚未完成」感：现状的伤口还在结痂，A 方向的过程可能失望，B 方向的过程充满自我怀疑。但两条分支的结果都指向某种缓慢的复原，只是路径和代价不同。\n\n回到你的问题\n\n你问两个方向各自带你去哪里，牌面给出的答案很清晰：A 方向会带你去一个「内在安定」的位置，但过程里你会先经历「得到了却不满足」的失望；B 方向会带你去一个「与损失和解」的位置，但过程里你会被自我怀疑反复折磨。如果只看结果，A 的圣杯皇后正位比 B 的圣杯五逆位更明亮、更主动；但 A 的过程（圣杯九逆位）可能让你觉得「白忙一场」，而 B 的过程（力量逆位）虽然痛苦，却逼你直面自己。牌面没有替你选，它只是把两条路的代价摊开：A 是先失望后安定，B 是先怀疑后释怀。结合你现状的宝剑三逆位——你还在愈合期，可能更需要一个能让你慢慢恢复的环境，而不是一个立刻给你压力、逼你证明自己的环境。从这个角度看，A 的路径更温和一些，但它的陷阱是「外在满足填不了内心」。你需要问自己：你换工作是为了逃离伤口，还是为了走向真正适合你的生活？\n\n每张牌的分析\n展开\n牌与牌之间的关系\n展开\n整体走向\n展开\n可以再想想的问题\n展开\n继续问这次牌阵\n\n如果还有没想明白的地方，可以沿着这组牌继续问。牌不会变，也不会重抽。\n\n发送",
+    "sessionBeforeFollowUp": {
+      "id": "ses_mtiq1pfo_483011063146",
+      "deckId": "legacy-moonlight",
+      "spreadId": "two-choices",
+      "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+      "mode": "question",
+      "stage": "reading",
+      "placements": [
+        {
+          "pos": "current",
+          "idx": 38,
+          "rev": true
+        },
+        {
+          "pos": "a-process",
+          "idx": 40,
+          "rev": true
+        },
+        {
+          "pos": "a-result",
+          "idx": 41,
+          "rev": true
+        },
+        {
+          "pos": "b-process",
+          "idx": 43,
+          "rev": true
+        },
+        {
+          "pos": "b-result",
+          "idx": 37,
+          "rev": true
+        }
+      ],
+      "orientations": [
+        "reversed",
+        "reversed",
+        "upright",
+        "reversed",
+        "reversed"
+      ],
+      "cardIds": [
+        "swords-03",
+        "cups-09",
+        "cups-13",
+        "major-08",
+        "cups-05"
+      ],
+      "followUps": 0,
+      "hasStructured": true
+    },
+    "sessionAfterFollowUp": {
+      "id": "ses_mtiq1pfo_483011063146",
+      "deckId": "legacy-moonlight",
+      "spreadId": "two-choices",
+      "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+      "mode": "question",
+      "stage": "reading",
+      "placements": [
+        {
+          "pos": "current",
+          "idx": 38,
+          "rev": true
+        },
+        {
+          "pos": "a-process",
+          "idx": 40,
+          "rev": true
+        },
+        {
+          "pos": "a-result",
+          "idx": 41,
+          "rev": true
+        },
+        {
+          "pos": "b-process",
+          "idx": 43,
+          "rev": true
+        },
+        {
+          "pos": "b-result",
+          "idx": 37,
+          "rev": true
+        }
+      ],
+      "orientations": [
+        "reversed",
+        "reversed",
+        "upright",
+        "reversed",
+        "reversed"
+      ],
+      "cardIds": [
+        "swords-03",
+        "cups-09",
+        "cups-13",
+        "major-08",
+        "cups-05"
+      ],
+      "followUps": 4,
+      "hasStructured": true
+    },
+    "followUpText": "看牌阵\n存入日记\n⌃\n现状\n⌃\nA 方向发展\nA 结果\n⌃\nB 方向发展\n⌃\nB 结果\n两条路都不是捷径，但一个在教你安顿，一个在逼你转身\n\n五张牌里四张逆位，只有 A 结果的圣杯皇后正位。整体能量偏内收，带着明显的「尚未完成」感：现状的伤口还在结痂，A 方向的过程可能失望，B 方向的过程充满自我怀疑。但两条分支的结果都指向某种缓慢的复原，只是路径和代价不同。\n\n回到你的问题\n\n你问两个方向各自带你去哪里，牌面给出的答案很清晰：A 方向会带你去一个「内在安定」的位置，但过程里你会先经历「得到了却不满足」的失望；B 方向会带你去一个「与损失和解」的位置，但过程里你会被自我怀疑反复折磨。如果只看结果，A 的圣杯皇后正位比 B 的圣杯五逆位更明亮、更主动；但 A 的过程（圣杯九逆位）可能让你觉得「白忙一场」，而 B 的过程（力量逆位）虽然痛苦，却逼你直面自己。牌面没有替你选，它只是把两条路的代价摊开：A 是先失望后安定，B 是先怀疑后释怀。结合你现状的宝剑三逆位——你还在愈合期，可能更需要一个能让你慢慢恢复的环境，而不是一个立刻给你压力、逼你证明自己的环境。从这个角度看，A 的路径更温和一些，但它的陷阱是「外在满足填不了内心」。你需要问自己：你换工作是为了逃离伤口，还是为了走向真正适合你的生活？\n\n每张牌的分析\n展开\n牌与牌之间的关系\n展开\n整体走向\n展开\n可以再想想的问题\n展开\n继续问这次牌阵\n\n如果还有没想明白的地方，可以沿着这组牌继续问。牌不会变，也不会重抽。\n\n你问\n\n那我接下来最需要注意什么？\n\n牌阵延伸\n\n接下来最需要注意的是别把换工作当成止痛药。宝剑三逆位说明伤口还在收尾，这时候做的决定容易带着补偿心理——想用新环境证明自己已经好起来了。但A方向的圣杯九逆位提醒，如果内在的空没被看见，外在条件再好也填不满；B方向的力量逆位则提醒，你可能会在自我怀疑最重的时候低估自己的承受力，把正常的适应期误判为“我不适合”。所以下一步不是急着在A和B之间二选一，而是先把“这份工作让我难受”和“我还在愈合”分开。等你不再需要靠换工作来止血，能像圣杯皇后正位那样接住自己的情绪、守住自己的界限时，那个选择才会真正属于你，而不是被伤口推着走。\n\n你问\n\n如果我先不做决定，只是再观察一个月呢？\n\n牌阵延伸\n\n这一个月其实正好对应你现状的宝剑三逆位——它说的是伤口在结痂，最怕的不是等待，而是反复撕开。所以先不决定，不是逃避，而是让愈合期走完。这段时间可以做的两件事，就藏在两张发展牌里：A方向的圣杯九逆位在提醒你，去分辨想换工作的愿望里有多少是别人的标准、外在的期待，得到之后是否真的会开心；B方向的力量逆位在提醒你，观察自己每天冒出来的“我不行”“我做不到”的声音，它们可能不是能力的真相，而是焦虑的反弹。等到一个月后再看，如果你发现A方向的“不满足”依然清晰，或者B方向的“自我怀疑”开始松动，那本身就是有用的信号。结果牌不会因为你等待就失效，圣杯皇后正位和圣杯五逆位都允许你慢：一个说界限会让你稳定，一个说回头看见剩下的东西需要时间。所以这一个月，与其说是在拖延，不如说是在给牌面里的“逆位”松绑。\n\n发送",
+    "journal": {
+      "count": 1,
+      "last": {
+        "id": "ses_mtiq1pfo_483011063146",
+        "deckId": "legacy-moonlight",
+        "spreadId": "two-choices",
+        "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+        "cards": 5,
+        "followUps": 4
+      }
+    },
+    "journalDetailText": "2026/09/01 21:47\n分享\n问题\n\n我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？\n\n优化版本：在「我最近在考虑要不要换一份工作」这个选择上，两个方向各自会带我去到什么样的处境？（已采用）\n\n二选一\n\n⌃\n现状\n宝剑三·逆\n⌃\nA 方向发展\n圣杯九·逆\nA 结果\n圣杯皇后\n⌃\nB 方向发展\n力量·逆\n⌃\nB 结果\n圣杯五·逆\n\n两条路都不是捷径，但一个在教你安顿，一个在逼你转身\n\n五张牌里四张逆位，只有 A 结果的圣杯皇后正位。整体能量偏内收，带着明显的「尚未完成」感：现状的伤口还在结痂，A 方向的过程可能失望，B 方向的过程充满自我怀疑。但两条分支的结果都指向某种缓慢的复原，只是路径和代价不同。\n\n后续追问\n\n问：那我接下来最需要注意什么？\n\n接下来最需要注意的是别把换工作当成止痛药。宝剑三逆位说明伤口还在收尾，这时候做的决定容易带着补偿心理——想用新环境证明自己已经好起来了。但A方向的圣杯九逆位提醒，如果内在的空没被看见，外在条件再好也填不满；B方向的力量逆位则提醒，你可能会在自我怀疑最重的时候低估自己的承受力，把正常的适应期误判为“我不适合”。所以下一步不是急着在A和B之间二选一，而是先把“这份工作让我难受”和“我还在愈合”分开。等你不再需要靠换工作来止血，能像圣杯皇后正位那样接住自己的情绪、守住自己的界限时，那个选择才会真正属于你，而不是被伤口推着走。\n\n问：如果我先不做决定，只是再观察一个月呢？\n\n这一个月其实正好对应你现状的宝剑三逆位——它说的是伤口在结痂，最怕的不是等待，而是反复撕开。所以先不决定，不是逃避，而是让愈合期走完。这段时间可以做的两件事，就藏在两张发展牌里：A方向的圣杯九逆位在提醒你，去分辨想换工作的愿望里有多少是别人的标准、外在的期待，得到之后是否真的会开心；B方向的力量逆位在提醒你，观察自己每天冒出来的“我不行”“我做不到”的声音，它们可能不是能力的真相，而是焦虑的反弹。等到一个月后再看，如果你发现A方向的“不满足”依然清晰，或者B方向的“自我怀疑”开始松动，那本身就是有用的信号。结果牌不会",
+    "homeAfterReturnText": "Arcana\n\n亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。\n\n带着问题来\n有想问的事，让牌帮你把它摊开\n随缘抽一张\n没有具体问题，看看今天会遇到什么\n塔罗日记\n牌组\n设置",
+    "resumeVisible": false
+  },
+  "consoleErrors": [],
+  "failedRequests": [],
+  "apiCalls": [
+    "POST /api/tarot/reading/stream",
+    "POST /api/tarot/followup",
+    "POST /api/tarot/followup"
+  ],
+  "cls": 0
+}

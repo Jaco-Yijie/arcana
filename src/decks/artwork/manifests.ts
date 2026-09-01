@@ -21,12 +21,15 @@
  * 那样 git diff 本身就是 review artifact，还能看出「这张图尺寸不对」。
  *
  * ═══════════════════════════════════════════════════════════
- * 当前状态：**5 套 artwork 牌组全部为空（0/78），5 套 legacy 共用一个程序化美术包**
+ * 当前状态（Phase C3）：**canonical five 全部 78/78 真实原画，5 套 artwork 牌组仍为空**
  *
- * 仓库里没有任何一张塔罗插画。artwork 牌组不可用于抽牌；
- * legacy 牌组可用，但它们共用 `legacy-procedural` 这一个包 ——
- * 这件事现在**写在数据里**（artPackId），而不是藏在代码分支中，
- * deck:check 会断言它，不会再悄悄变成常态。
+ *   legacy-moonlight / legacy-classic / legacy-forest
+ *   legacy-celestial / legacy-shadow          78/78  approved  → 可抽、可翻、可解读
+ *   classic / elysian / opaline / wonderland   0/78            → 不可抽牌
+ *   ethereal                                   3 张 DEV FIXTURE → 不可抽牌
+ *
+ * 390 张登记数据在 `production.generated.ts`（codegen 产物），
+ * 五套各自持有独立文件，`artPackId` 现在只是 fallback 落点而非日常路径。
  * ═══════════════════════════════════════════════════════════
  */
 
@@ -34,6 +37,7 @@ import type { ArtworkCoverage, CardAsset, DeckArtworkManifest } from '../types'
 import { isDeliveredStatus } from '../art/types'
 import type { DeckId } from '../ids'
 import { ARTWORK_DECK_IDS, LEGACY_DECK_IDS } from '../ids'
+import { DECKS_WITH_BAKED_TEXT, PRODUCTION_CARDS } from './production.generated'
 
 /**
  * 22 张大阿卡纳的 canonical id，用于 coverage 判定。
@@ -96,24 +100,24 @@ function emptyRasterManifest(deckId: DeckId): DeckArtworkManifest {
  * Phase C1B-1 · Benchmark 试产原画的登记位。
  *
  * ══════════════════════════════════════════════════════════════
- * 【现在是空的，而且必须是空的】
- * 五张 The Fool Style Anchor 的**图像尚未生成**（本环境无图像生成能力）。
- * 在这里登记一条指向不存在文件的记录，就是「声称图片已经完成」——
- * 它会让 deck:check 的路径一致性、Deck Library 的进度、
- * 以及 Visual QA 页面同时说谎。所以宁可空着。
+ * 【Phase C3 起为空 —— 但原因和之前完全不同】
+ * C1B 时它空着是因为「图还没画」。现在 390 张全部生产完成并登记在
+ * `production.generated.ts` 里，状态直接是 approved，
+ * 那 25 张 benchmark 已经被同一批正式资产覆盖（同源，见下），
+ * 所以不再需要一个独立的 benchmark 暂存层。
  *
- * 【图到位之后怎么接】
- * 1. 把 master 转成 1080×1800 WebP 放进
- *      public/assets/decks/<deckId>/cards/major-00.webp
- *    以及 240×400 的 public/assets/decks/<deckId>/thumbs/major-00.webp
- * 2. 在下面每套加一行：
- *      'legacy-moonlight': { 'major-00': { w: 1080, h: 1800, thumb: true, status: 'benchmark' } },
- * 3. `npm run artwork:check` —— B 组会断言：状态必须是 benchmark、
- *    五条路径互不相同、且**文件在磁盘上真实存在**。
+ * 【为什么 benchmark 直接升级而不是并存】
+ * 生产阶段复用了这 25 张 benchmark 作为 master（progress.json:reusedBenchmark=25），
+ * 我逐张比对过 master PNG 与 C1B 交付的 WebP：结构一致，
+ * 差异（灰度平均绝对差 1.3–5.4/255）全部来自 WebP 有损编码，
+ * 线描风格的 classic/forest 差异高于柔和风格的 moonlight/shadow —— 符合预期。
+ * 既然同源，保留两份同 cardId 的 artwork 只会制造冲突，
+ * 因此统一从 master 派生，25 张与其余 365 张走同一套编码参数。
+ * 原始交付件备份在 Arcana_Full_390/qa/benchmark-web-original/。
  *
- * 登记为 benchmark 之后，正式产品仍然看不到它们（resolver 的 status 门槛），
- * 只有 /dev/benchmark 传 previewBenchmark 才渲染。人工评审通过后
- * 才把 status 改成 approved —— 那一刻起 Deck Library 的 n/78 才会变成 1/78。
+ * 这个常量保留而不删除：下一批试产（第六套牌、或某张返修的试验版）
+ * 仍然需要一个「登记了但正式产品看不到」的暂存层，
+ * 而 resolver 的 status 门槛与 B 组断言都还在。
  * ══════════════════════════════════════════════════════════ */
 export const BENCHMARK_STAGED: Readonly<Record<string, Readonly<Record<string, CardAsset>>>> =
   Object.freeze({})
@@ -122,30 +126,57 @@ export const BENCHMARK_STAGED: Readonly<Record<string, Readonly<Record<string, C
 export const STYLE_ANCHOR_CARD_ID = 'major-00'
 
 /**
+ * 牌组级缓存修订号。
+ *
+ * Phase C4.1 只替换了 classic / forest / shadow 的牌面；提升这三套即可让
+ * 已访问过 r=1 的浏览器请求新资产，同时不让未变化的两套产生无意义缓存失效。
+ */
+export const PRODUCTION_REVISION_BY_DECK: Readonly<Partial<Record<DeckId, number>>> =
+  Object.freeze({
+    'legacy-classic': 2,
+    'legacy-forest': 2,
+    'legacy-shadow': 2,
+  })
+
+/**
  * canonical five（月光 / 古典 / 森语 / 星图 / 幽影）。
  *
  * 【Phase C1A：从 procedural 升级为 hybrid】
  * 这五套从「只能程序化」变成「可承载真实原画，缺的逐张回退到程序化」。
- * 目前 cards 为空 —— 25 张 Benchmark 原画尚未生产（Phase C1B），
- * 所以全部 78 张仍由 ProceduralCardArt 顶着，牌可抽、可翻、可解读。
+ *
+ * 【Phase C3：78/78 全部到位】
+ * 390 张正式原画（5 × 78）已登记在 `production.generated.ts`，
+ * 状态 approved，coverage 由 deriveCoverage 推导为 'full'。
+ * 正常流程中不再出现 ProceduralCardArt —— 但它**没有被删除**：
+ * source 仍是 hybrid，所以任何一张图在运行期缺失或损坏时，
+ * 那一张（且只有那一张）会静默回退到程序化，牌不会坏。
  *
  * artPackId 保留：它记录的是「回退时用哪个程序化包」，
- * 这层间接在原画逐步到位的过程中仍然有意义。
+ * 这层间接在原画逐步到位之后仍然是 fallback 的落点。
  */
 function hybridManifest(deckId: DeckId): DeckArtworkManifest {
-  return {
+  /* 已交付的原画（approved/final）+ 试产中的 benchmark 都登记在 cards 里。
+     区分它们的是 status，不是两个字段 —— 两个字段迟早会有一个被漏读。 */
+  const cards: Readonly<Record<string, CardAsset>> = {
+    ...NO_CARDS,
+    ...(PRODUCTION_CARDS[deckId] ?? {}),
+    ...(BENCHMARK_STAGED[deckId] ?? {}),
+  }
+  const base: DeckArtworkManifest = {
     deckId,
     source: 'hybrid',
-    rev: 1,
-    /* hybrid 的 coverage 表示**已交付的真实原画**数量档位；
-       回退用的程序化图不计入 —— 它们不是原画。 */
+    rev: PRODUCTION_REVISION_BY_DECK[deckId] ?? 1,
     coverage: 'none',
-    /* 已交付的原画（approved/final）+ 试产中的 benchmark 都登记在 cards 里。
-       区分它们的是 status，不是两个字段 —— 两个字段迟早会有一个被漏读。 */
-    cards: { ...NO_CARDS, ...(BENCHMARK_STAGED[deckId] ?? {}) },
+    cards,
     deck: { cover: null, back: null },
     artPackId: LEGACY_ART_PACK,
   }
+  /* coverage **推导而不手写**：它决定这副牌能不能抽，
+     手写的值会随登记条目变动而脱节，而脱节的方向永远是「谎报可用」。
+     deck:check 有一条断言正是 `manifest.coverage === deriveCoverage(manifest)`，
+     在这里推导等于让那条断言恒真 —— 不是为了让它变绿，
+     而是让「声明」与「实际」在结构上无法分叉。 */
+  return { ...base, coverage: deriveCoverage(base) }
 }
 
 /**
@@ -235,6 +266,21 @@ export function artworkCardCount(deckId: DeckId): number {
   const manifest = getManifest(deckId)
   if (!manifest) return 0
   return countDelivered(manifest)
+}
+
+/**
+ * 这副牌的原画是否自带牌名与编号。
+ *
+ * 【为什么这是一个查询而不是一个 if (deckId.startsWith('legacy-'))】
+ * 「烘焙了文字」是**资产的属性**，不是 deckId 的属性。
+ * 同一批 legacy 牌组以后完全可能返修成不烘焙文字的版本，
+ * 而新加的牌组也可能烘焙。按前缀判断会在那两天里都判错，
+ * 且错的方向是「牌面上出现两个编号」——一眼可见但没人会去查代码。
+ *
+ * 数据源是 codegen 产物，跟着资产一起更新。
+ */
+export function artworkHasBakedText(deckId: DeckId): boolean {
+  return DECKS_WITH_BAKED_TEXT.includes(deckId)
 }
 
 export { ARTWORK_DECK_IDS }

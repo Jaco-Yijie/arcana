@@ -46,6 +46,29 @@ function RasterArtwork({
   }
 
   if (state.status === 'error') {
+    /* 【已登记的牌加载失败 → 程序化兜底，而不是「加载失败」方块】
+       这两种情况看起来都是「没有图」，但对用户的意义完全相反：
+       素材从未交付（missing 分支）是待办事项，必须如实显示；
+       而这里是素材已交付、已登记，只是这一次没拿到 —— 弱网、CDN 抖动、文件被误删。
+       用户此刻正在读自己的占卜结果，「加载失败」对他不可操作，
+       牌阵的完整性才是全部意义。所以有兜底就用兜底，并留一条 warn 给开发者。
+
+       没有 fallback 的（raster 牌组）行为完全不变，仍然如实显示失败。 */
+    if (plan.fallback) {
+      if (import.meta.env?.DEV) {
+        console.warn(
+          `[artwork] 已登记的牌面加载失败，已回退到程序化牌面：${plan.deckId}/${plan.cardId} ← ${plan.path}`,
+        )
+      }
+      return (
+        <ProceduralCardArt
+          deckId={plan.deckId}
+          motif={plan.fallback.motif as ArtMotif}
+          hue={plan.fallback.hue}
+          tier={plan.fallback.tier}
+        />
+      )
+    }
     return (
       <MissingArtwork cardId={plan.cardId} path={plan.path} showPath={showPath} reason="加载失败" />
     )

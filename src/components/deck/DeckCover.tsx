@@ -23,6 +23,7 @@ import type { AssetVariant } from '@/decks/types'
 import type { DeckId } from '@/decks/ids'
 import { getManifest } from '@/decks/artwork/manifests'
 import { deckCoverRepoPath, deckCoverUrl } from '@/decks/artwork/paths'
+import { DeckCardBack } from '@/components/card/DeckCardBack'
 
 interface Props {
   deckId: DeckId
@@ -61,6 +62,29 @@ export function DeckCover({ deckId, showPath = true, variant = 'thumb', classNam
     )
   }
 
+  /* ── 缺席时回退到卡背，而不是「封面未提供」虚线框 ──
+     【为什么是卡背，不是某一张牌】
+     本文件顶部那条规则没有松动：封面**绝不能**是 78 张里的某一张，
+     否则那张牌会获得不当的分量，用户会记住「经典那套的封面是死神」。
+     卡背不在这条规则里 —— 它不是任何一张牌，而且它正是用户在
+     洗牌、切牌、摊牌全程盯着看 78 次的那一面，用它代表这副牌最诚实。
+
+     【为什么不再显示「封面未提供」】
+     D1 实测：5 套 78/78 全交付的牌组，封面位全是虚线空框（9 次），
+     而封面是这一页自己定义的「第一视觉入口」。
+     一个空框旁边挂着五张真实原画 —— 视觉重心完全错位，
+     且它把一个**已完成**的产品说成了半成品。
+
+     开发期的路径提示保留在 showPath 后面：只有显式要求时才出现，
+     正式页面（showPath={false}）不会看到任何工程信息。 */
+  if (!showPath) {
+    return (
+      <div className={`h-full w-full ${className}`}>
+        <DeckCardBack deckId={deckId} simplified />
+      </div>
+    )
+  }
+
   return (
     <div
       className={`relative flex h-full w-full flex-col items-center justify-center gap-1 bg-bg-void/92 p-2 text-center ${className}`}
@@ -72,11 +96,9 @@ export function DeckCover({ deckId, showPath = true, variant = 'thumb', classNam
       <span className="text-[10px] leading-none tracking-wide-caps text-text-faint">
         {failed ? '封面加载失败' : '封面未提供'}
       </span>
-      {showPath && (
-        <span className="font-mono text-[8px] leading-tight break-all text-text-faint">
-          {deckCoverRepoPath(deckId)}
-        </span>
-      )}
+      <span className="font-mono text-[8px] leading-tight break-all text-text-faint">
+        {deckCoverRepoPath(deckId)}
+      </span>
     </div>
   )
 }

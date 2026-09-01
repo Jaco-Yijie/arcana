@@ -15,6 +15,7 @@ import { createReadStream, existsSync, statSync } from 'node:fs'
 import { extname, join, normalize, resolve } from 'node:path'
 import { config, describeConfig } from './env.ts'
 import { handleConfig, handleReading, handleReadingStream } from './api/readingRoute.ts'
+import { handleFollowUp } from './api/followUpRoute.ts'
 import { sendJson } from './http.ts'
 
 const DIST = resolve(process.cwd(), 'dist')
@@ -96,6 +97,10 @@ const server = createServer((req, res) => {
       }
       if (url.pathname === '/api/tarot/reading/stream' && req.method === 'POST') {
         await handleReadingStream(req, res)
+        return
+      }
+      if (url.pathname === '/api/tarot/followup' && req.method === 'POST') {
+        await handleFollowUp(req, res)
         return
       }
       if (url.pathname === '/api/tarot/config' && req.method === 'GET') {

@@ -271,6 +271,41 @@ export function DrawTable({
                       <CardBack simplified />
                     </CardFrame>
                   </div>
+                ) : handIndex !== null ? (
+                  /* ── 手上有牌时，空牌位是一个真正的按钮 ──
+                     【为什么必须有这条路径】
+                     原本落位只有拖拽一条路：`endDrag` 里 `if (!prev || !prev.started) return`，
+                     没超过 DRAG_THRESHOLD 的点击直接被丢掉。
+                     这意味着抽牌 —— 产品的核心动作 —— 对以下人群完全不可完成：
+                     用键盘的人、用辅助技术的人、拖拽有困难的人，
+                     以及任何一个「点了牌位发现没反应」的普通用户。
+
+                     【为什么不改 endDrag 去接受点击】
+                     那会让「轻微抖动的拖拽」和「点击」变成同一件事，
+                     阈值附近的行为会变得不可预测。落位是一个明确的意图，
+                     它应该有一个明确的控件，而不是从手势的失败态里推断出来。
+
+                     拖拽路径一行未动：拖拽时 pointer capture 在手牌上，
+                     事件不会走到这个按钮，两条路径互不干扰。 */
+                  <button
+                    type="button"
+                    onClick={() => onPlace(handIndex, pos.id)}
+                    aria-label={`把这张牌放到「${pos.label}」`}
+                    className={[
+                      'h-full w-full rounded-sm outline-none',
+                      'focus-visible:ring-2 focus-visible:ring-silver/70',
+                    ].join(' ')}
+                  >
+                    <CardFrame
+                      size="sm"
+                      fluid
+                      placeholder
+                      className={[
+                        'h-full w-full transition-colors duration-[var(--duration-quick)]',
+                        hovering ? 'border-silver/75 border-solid' : 'border-line-soft',
+                      ].join(' ')}
+                    />
+                  </button>
                 ) : (
                   <CardFrame
                     size="sm"
@@ -279,7 +314,6 @@ export function DrawTable({
                     className={[
                       'h-full w-full transition-colors duration-[var(--duration-quick)]',
                       hovering ? 'border-silver/75 border-solid' : '',
-                      handIndex !== null && !hovering ? 'border-line-soft' : '',
                     ].join(' ')}
                   />
                 )}

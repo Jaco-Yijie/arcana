@@ -1,0 +1,35 @@
+✅ home-带着问题来                 Tab× 1  聚焦=带着问题来
+有想问的事，让牌帮你把它摊开  焦点环=有  → /
+✅ decks-就用这副                 Tab×12  聚焦=就用这副  焦点环=有  → /decks
+✅ question-键盘输入              Tab× 0  聚焦=我想知道……  焦点环=无  → /question?mode=question
+✅ question-继续                Tab× 2  聚焦=继续  焦点环=有  → /question?mode=question
+✅ question-用优化后的             Tab× 2  聚焦=用优化后的  焦点环=有  → /question?mode=question
+✅ spread-二选一                 Tab× 3  聚焦=二选一
+5 张
+适合面前有两个具体选项、想比较各自代价的问题。  焦点环=有  → /spread
+✅ focus-直接开始                 Tab× 2  聚焦=直接开始  焦点环=有  → /focus
+✅ shuffle-聚焦牌堆               Tab× 2  聚焦=牌堆。滑动可以洗牌；用键盘时按 Enter 或空格洗一次  焦点环=有  → /table/shuffle
+   键盘洗牌：按 8 次 Enter → 页面显示「已洗 8 次」
+✅ shuffle-洗好了                Tab× 1  聚焦=洗好了  焦点环=有  → /table/shuffle
+✅ cut-聚焦牌堆                   Tab× 2  聚焦=切牌位置。上下方向键调整，Enter 或空格在这里切开  焦点环=有  → /table/cut
+   键盘切牌：大约第 45 张
+✅ cut-从这里切开                  Tab× 1  聚焦=从这里切开  焦点环=有  → /table/cut
+✅ cut-合起来                    Tab× 1  聚焦=合起来  焦点环=有  → /table/cut
+✅ cut-摊开牌                    Tab× 1  聚焦=摊开牌  焦点环=有  → /table/cut
+✅ draw-键盘摆牌                  Tab× 0  聚焦=(无)  焦点环=无  → /table/draw
+   键盘摆牌成功 5/5 张
+✅ draw-去翻牌                   Tab× 1  聚焦=去翻牌  焦点环=有  → /table/draw
+✅ reveal-键盘翻牌                Tab× 0  聚焦=(无)  焦点环=无  → /table/reveal
+   键盘翻牌成功 5/5 张 · Escape 关闭牌义面板 = ✅
+✅ reveal-开始完整解读              Tab× 2  聚焦=开始完整解读  焦点环=有  → /table/reveal
+   Shift+Tab 反向聚焦: ✅
+   prefers-reduced-motion 生效=true 溢出=false console error=0
+
+findings 1
+[
+ {
+  "sev": "P2",
+  "step": "question-键盘输入",
+  "issue": "聚焦时无可见焦点环：我想知道……"
+ }
+]

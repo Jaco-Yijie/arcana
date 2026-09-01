@@ -250,6 +250,10 @@ export function resolvePlanFrom(
     const rev = revOf(manifest, entry)
     const fullUrl = cardArtworkUrl(deckId, cardId, rev, 'full')
     const hasThumb = entry.thumb === true
+    /* 运行期兜底：只有 hybrid 牌组带，且只指向本牌组自己声明的程序化包。
+       这不是「缺素材回退」（那是 missing 分支，必须如实显示），
+       而是「已交付但这次没加载到」时不让用户的牌阵开天窗。见 types.ts。 */
+    const art = manifest.source === 'hybrid' ? LEGACY_CARD_ART[cardId] : undefined
     return {
       kind: 'raster',
       deckId,
@@ -259,6 +263,7 @@ export function resolvePlanFrom(
       width: entry.w,
       height: entry.h,
       hasThumb,
+      ...(art ? { fallback: { motif: art.motif, hue: art.hue, tier: art.tier } } : {}),
       load: (variant: AssetVariant = 'full') => {
         const useThumb = variant === 'thumb' && hasThumb
         return loadAsset(

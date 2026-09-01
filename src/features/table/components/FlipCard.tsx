@@ -101,6 +101,24 @@ export function FlipCard({
     if (isTap || isSwipeUp) onReveal?.()
   }
 
+  /* ── 键盘翻牌 ──
+     【为什么必须有】
+     这个元素本来就声明了 `role="button"` + `aria-label="翻开这张牌"`，
+     但只挂了 onPointerUp，也没有 tabIndex —— 于是辅助技术会把它读成一个按钮，
+     用户按下 Enter 却什么都不会发生，而且键盘根本聚焦不到它。
+     翻牌是这个产品的核心动作，它不能只对鼠标和手指开放
+     （D2-05 已经给「摆牌」补过同一条路径，翻牌当时没覆盖到）。
+
+     Enter 与 Space 都接：role=button 的原生语义是两个键都能激活。
+     Space 必须 preventDefault，否则页面会同时滚动一屏。 */
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!canReveal) return
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+      e.preventDefault()
+      onReveal?.()
+    }
+  }
+
   return (
     // 未翻开的牌轻微上下浮动，告诉用户「可以翻」。idleDelay 让各张牌错开，
     // 避免整齐划一显得像在播放动画而不是在等你动手。
@@ -108,10 +126,14 @@ export function FlipCard({
       onPointerDown={handleDown}
       onPointerUp={handleUp}
       onPointerCancel={() => (start.current = null)}
-      className="table-surface relative"
+      onKeyDown={handleKeyDown}
+      className="table-surface relative rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70"
       style={{ perspective: 900 }}
       role={canReveal ? 'button' : undefined}
       aria-label={canReveal ? '翻开这张牌' : undefined}
+      /* 已翻开的牌退出 Tab 序列 —— 它不再是一个可操作的控件，
+         留在序列里只会让键盘用户多按几次 Tab 才走完牌阵 */
+      tabIndex={canReveal ? 0 : undefined}
       animate={canReveal && !reduceMotion ? { y: [0, -2, 0] } : { y: 0 }}
       transition={
         canReveal && !reduceMotion
@@ -146,6 +168,10 @@ export function FlipCard({
                 orientation={orientation}
                 deckId={deckId}
                 size={size}
+                /* 牌桌知道这张牌到底多宽（布局引擎算出来的），
+                   把它传下去，资产档位就能按真实设备像素选，而不是按三个粗档。
+                   见 TarotCardFace 的 displayWidth 注释。 */
+                displayWidth={width}
               />
             ) : (
               <CardBack simplified={size === 'sm'} />

@@ -81,6 +81,48 @@ export function ShuffleStack({ onGesture, onInteractingChange, shuffleCount }: S
     if (result?.applied) setLayerSeed((s) => s + 1)
   }
 
+  /* ── 键盘洗牌 ──
+     【为什么必须有】D4 实测：只用键盘走流程，到洗牌页就走不下去了。
+     牌堆没有 tabIndex、没有 role、没有键盘处理，而「洗好了」只在
+     shuffleCount > 0 时才渲染 —— 于是键盘用户能 Tab 到的只有「退出」。
+     核心流程对键盘与辅助技术用户是一条死路。
+     （D2-05 补过「摆牌」、D3 补过「翻牌」，但那两处都在洗牌之后，够不着。）
+
+     【熵仍然来自用户，G-03 没有松动】
+     这里绝不调 Math.random()，也绝不用常量手势 —— 那等于系统替用户洗牌。
+     键盘用户提供的是**按住的时长**：从 keydown 到 keyup 的毫秒数，
+     再叠加 performance.now() 的亚毫秒抖动。和 pointer 手势一样，
+     牌序的改变仍然由用户这一次动作决定，按两次也不会得到同一个手势。
+
+     指针路径一行未改：两条路径共用同一个 onGesture 出口。 */
+  const keyDownAt = useRef<number | null>(null)
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return
+    e.preventDefault()          // 空格否则会滚动页面
+    if (e.repeat) return        // 按住不放不算连续洗牌
+    if (keyDownAt.current === null) keyDownAt.current = performance.now()
+  }
+
+  const handleKeyUp = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return
+    const t0 = keyDownAt.current
+    keyDownAt.current = null
+    if (t0 === null) return
+    const t1 = performance.now()
+    const held = Math.max(1, t1 - t0)
+    const jitter = (t1 * 1000) % 1000 / 1000          // 亚毫秒抖动，0–1
+    /* 距离必须越过 MIN_SHUFFLE_DISTANCE，否则引擎判定手势无效、牌堆原样返回 */
+    const dxK = MIN_SHUFFLE_DISTANCE + held * 0.7 + jitter * 40
+    const dyK = (jitter - 0.5) * 60
+    const startRatio = jitter
+    const endRatio = Math.min(1, Math.max(0, startRatio + ((held % 97) / 97 - 0.5) * 0.6))
+
+    setSettling(true)
+    const result = onGesture({ dx: dxK, dy: dyK, durationMs: held, startRatio, endRatio })
+    if (result?.applied) setLayerSeed((s) => s + 1)
+  }
+
   const { dx, dy } = drag
   const distance = Math.hypot(dx, dy)
   const willApply = distance >= MIN_SHUFFLE_DISTANCE
@@ -93,7 +135,16 @@ export function ShuffleStack({ onGesture, onInteractingChange, shuffleCount }: S
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerCancel={handlePointerUp}
-      className="table-surface relative flex h-full w-full cursor-grab items-center justify-center active:cursor-grabbing"
+      onKeyDown={handleKeyDown}
+      onKeyUp={handleKeyUp}
+      role="button"
+      tabIndex={0}
+      aria-label={
+        shuffleCount === 0
+          ? '牌堆。滑动可以洗牌；用键盘时按 Enter 或空格洗一次'
+          : `牌堆，已洗 ${shuffleCount} 次。继续滑动，或按 Enter 或空格再洗一次`
+      }
+      className="table-surface relative flex h-full w-full cursor-grab items-center justify-center rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70 active:cursor-grabbing"
     >
       {/* 待机轻推（Idle Nudge）：整堆轻微摆动，告诉用户「这个东西可以动」。洗过一次后停止。 */}
       <motion.div

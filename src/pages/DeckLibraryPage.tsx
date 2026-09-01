@@ -33,7 +33,7 @@ import { CardFrame } from '@/components/card/CardFrame'
 import { DeckCardBack } from '@/components/card/DeckCardBack'
 import { DeckCover } from '@/components/deck/DeckCover'
 import { TarotCardFace } from '@/components/card/TarotCardFace'
-import { artworkDecks, getDeck, legacyDecks } from '@/decks/registry'
+import { decks, getDeck } from '@/decks/registry'
 import type { DeckDefinition } from '@/decks/types'
 import { getAtmosphere } from '@/atmosphere/registry'
 import { PREVIEW_CARD_IDS } from '@/decks/artwork/manifests'
@@ -88,12 +88,14 @@ function DeckRow({
   deck,
   active,
   expanded,
+  showProgress,
   onSelect,
   onToggleExpand,
 }: {
   deck: DeckDefinition
   active: boolean
   expanded: boolean
+  showProgress: boolean
   onSelect: () => void
   onToggleExpand: () => void
 }) {
@@ -157,14 +159,22 @@ function DeckRow({
           白白多占 44px 高度，而右侧还空着 300px。合并之后行高降下来，
           一屏能看到的牌组从 1.5 套变成 2 套以上 —— 画廊要能扫视才成立。 */}
       <div className="flex h-11 w-full items-center justify-between gap-4 border-t border-line-hairline px-[var(--deck-pad)]">
-        {/* Meta 是事实备注，不是卖点也不是评级，压到最低视觉重量 */}
-        <span className="flex items-center gap-2 text-[11px] tracking-wide-caps text-text-faint">
-          <span>
-            {progress.done} / {progress.total}
+        {/* 【正式页不显示进度】
+            这一行原本是 `78 / 78 · 可用`。在「有些牌组还没画完」的年代它有意义 ——
+            用户需要知道哪副能用。现在正式页只陈列能用的，这行就退化成
+            每一行都一样的噪声，而且把交付进度这种工程信息摆给了用户看。
+            dev route（showAll）保留它，那里确实需要一眼看出谁差多少。 */}
+        {showProgress ? (
+          <span className="flex items-center gap-2 text-[11px] tracking-wide-caps text-text-faint">
+            <span>
+              {progress.done} / {progress.total}
+            </span>
+            <span aria-hidden="true">·</span>
+            <span>{playable ? '可用' : '素材备齐后开放'}</span>
           </span>
-          <span aria-hidden="true">·</span>
-          <span>{playable ? '可用' : '素材备齐后开放'}</span>
-        </span>
+        ) : (
+          <span aria-hidden="true" />
+        )}
 
         <button
           type="button"
@@ -209,7 +219,7 @@ function DeckHeading({ deck, active }: { deck: DeckDefinition; active: boolean }
   )
 }
 
-export default function DeckLibraryPage() {
+export default function DeckLibraryPage({ showAll = false }: { showAll?: boolean } = {}) {
   const navigate = useNavigate()
   const { deckId, setDeckId } = useDeck()
   const current = getDeck(deckId)
@@ -219,12 +229,26 @@ export default function DeckLibraryPage() {
   const [expandedId, setExpandedId] = useState<string | null>(null)
   const toggle = (id: string) => setExpandedId((prev) => (prev === id ? null : id))
 
+  /* ── 正式页只陈列**能用**的牌组 ──
+     【为什么是过滤而不是删数据】
+     未开工的牌组仍然登记在 registry 里，它们是后续产能，
+     `/dev/decks` 仍然能看到全部十套。删掉数据会让下一批开工时无处落脚。
+
+     【为什么按 isDeckPlayable 而不是写死五个 id】
+     写死的话，那五套画完的那天需要有人记得回来改这一行 ——
+     而「记得」正是这次出问题的原因：C3 交付 390 张之后，
+     这一页仍然把 0/78 的空壳摆在主位，标题写着「现行牌组」，
+     文案说「上面五套的插画还在制作中」，而事实已经完全反过来了。
+     改成数据驱动之后，牌组能不能抽由资产决定，这一页自动跟上。 */
+  const shelf = showAll ? decks : decks.filter((d) => isDeckPlayable(d.deckId))
+
   /* key 刻意**不**放进这个对象：藏在 spread 里的 key 静态检查看不到，
      React 19 也不再推荐这种写法。调用处显式写 key。 */
   const rowProps = (deck: DeckDefinition) => ({
     deck,
     active: deck.deckId === deckId,
     expanded: expandedId === deck.deckId,
+    showProgress: showAll,
     onSelect: () => setDeckId(deck.deckId),
     onToggleExpand: () => toggle(deck.deckId),
   })
@@ -266,26 +290,9 @@ export default function DeckLibraryPage() {
         <p className="text-note text-text-mid">选一个你想待着的氛围。</p>
 
         <div role="radiogroup" aria-label="牌组" className="flex flex-col gap-[var(--deck-gap)]">
-          {artworkDecks.map((deck) => (
+          {shelf.map((deck) => (
             <DeckRow key={deck.deckId} {...rowProps(deck)} />
           ))}
-        </div>
-
-        {/* 现行牌组。它们是 V2.4 的既有实现，保证现在就能抽牌。
-            单独成组、明确标注，避免与上面五套并排造成「两个质量档次」的观感。 */}
-        <div className="mt-2 flex flex-col gap-[var(--deck-gap)]">
-          <div className="flex items-center gap-3">
-            <span className="text-[11px] tracking-wide-caps text-text-faint">现行牌组</span>
-            <span aria-hidden="true" className="h-px flex-1 bg-line-hairline" />
-          </div>
-          <p className="-mt-1 text-caption text-text-faint">
-            上面五套的插画还在制作中，这几套现在就能用。
-          </p>
-          <div role="radiogroup" aria-label="现行牌组" className="flex flex-col gap-[var(--deck-gap)]">
-            {legacyDecks.map((deck) => (
-              <DeckRow key={deck.deckId} {...rowProps(deck)} />
-            ))}
-          </div>
         </div>
 
         {/* 全站唯一一处直说。放页脚 = 事实备注，不是免责声明。

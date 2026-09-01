@@ -1,0 +1,174 @@
+{
+  "case": "unavailable",
+  "revealOk": true,
+  "revealText": "退出\n洗\n切\n抽\n翻\n⌃\n现状 · 逆位\n⌃\nA 方向发展 · 逆位\nA 结果\nB 方向发展\n⌃\nB 结果 · 逆位\n开始完整解读",
+  "revealBroken": 0,
+  "revealOverflowX": false,
+  "sessionBeforeError": {
+    "id": "ses_mtiq5m9j_775f65fc9749",
+    "deckId": "legacy-moonlight",
+    "spreadId": "two-choices",
+    "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+    "mode": "question",
+    "stage": "reveal",
+    "placements": [
+      {
+        "pos": "current",
+        "idx": 38,
+        "rev": true
+      },
+      {
+        "pos": "a-process",
+        "idx": 40,
+        "rev": true
+      },
+      {
+        "pos": "a-result",
+        "idx": 41,
+        "rev": true
+      },
+      {
+        "pos": "b-process",
+        "idx": 43,
+        "rev": true
+      },
+      {
+        "pos": "b-result",
+        "idx": 37,
+        "rev": true
+      }
+    ],
+    "orientations": [
+      "reversed",
+      "reversed",
+      "upright",
+      "upright",
+      "reversed"
+    ],
+    "cardIds": [
+      "wands-04",
+      "wands-10",
+      "major-20",
+      "cups-02",
+      "pentacles-09"
+    ],
+    "followUps": 0,
+    "hasStructured": false
+  },
+  "errorText": "看牌阵\n存入日记\n⌃\n现状\n⌃\nA 方向发展\nA 结果\nB 方向发展\n⌃\nB 结果\n\n这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。\n\n重新尝试解读\n先回去看牌阵",
+  "errorControls": [
+    "看牌阵",
+    "存入日记",
+    "重新尝试解读",
+    "先回去看牌阵"
+  ],
+  "showsHttpCode": false,
+  "saysCardsKept": true,
+  "sessionAfterError": {
+    "id": "ses_mtiq5m9j_775f65fc9749",
+    "deckId": "legacy-moonlight",
+    "spreadId": "two-choices",
+    "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+    "mode": "question",
+    "stage": "reading",
+    "placements": [
+      {
+        "pos": "current",
+        "idx": 38,
+        "rev": true
+      },
+      {
+        "pos": "a-process",
+        "idx": 40,
+        "rev": true
+      },
+      {
+        "pos": "a-result",
+        "idx": 41,
+        "rev": true
+      },
+      {
+        "pos": "b-process",
+        "idx": 43,
+        "rev": true
+      },
+      {
+        "pos": "b-result",
+        "idx": 37,
+        "rev": true
+      }
+    ],
+    "orientations": [
+      "reversed",
+      "reversed",
+      "upright",
+      "upright",
+      "reversed"
+    ],
+    "cardIds": [
+      "wands-04",
+      "wands-10",
+      "major-20",
+      "cups-02",
+      "pentacles-09"
+    ],
+    "followUps": 0,
+    "hasStructured": false
+  },
+  "sessionUnchangedAfterError": false,
+  "sessionAfterRetry": {
+    "id": "ses_mtiq5m9j_775f65fc9749",
+    "deckId": "legacy-moonlight",
+    "spreadId": "two-choices",
+    "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+    "mode": "question",
+    "stage": "reading",
+    "placements": [
+      {
+        "pos": "current",
+        "idx": 38,
+        "rev": true
+      },
+      {
+        "pos": "a-process",
+        "idx": 40,
+        "rev": true
+      },
+      {
+        "pos": "a-result",
+        "idx": 41,
+        "rev": true
+      },
+      {
+        "pos": "b-process",
+        "idx": 43,
+        "rev": true
+      },
+      {
+        "pos": "b-result",
+        "idx": 37,
+        "rev": true
+      }
+    ],
+    "orientations": [
+      "reversed",
+      "reversed",
+      "upright",
+      "upright",
+      "reversed"
+    ],
+    "cardIds": [
+      "wands-04",
+      "wands-10",
+      "major-20",
+      "cups-02",
+      "pentacles-09"
+    ],
+    "followUps": 0,
+    "hasStructured": true
+  },
+  "cardsSameAfterRetry": true,
+  "consoleErrors": [
+    "Failed to load resource: net::ERR_FAILED"
+  ]
+}

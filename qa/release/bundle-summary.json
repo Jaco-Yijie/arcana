@@ -1,0 +1,86 @@
+{
+  "phase": "D3",
+  "note": "牌面资产以静态文件形式随 dist 一起产出，不进 JS chunk；配置 VITE_DECK_ASSET_BASE_URL 后可整体移出到 CDN。",
+  "js": {
+    "count": 11,
+    "rawBytes": 690543,
+    "gzipBytes": 222112,
+    "budgetRawBytes": 778240
+  },
+  "css": {
+    "count": 1,
+    "rawBytes": 77761,
+    "gzipBytes": 14284,
+    "budgetRawBytes": 122880
+  },
+  "chunks": [
+    {
+      "file": "index-BN45vfod.js",
+      "raw": 297508,
+      "gzip": 93530
+    },
+    {
+      "file": "vendor-react-D7na9t8R.js",
+      "raw": 181719,
+      "gzip": 56491
+    },
+    {
+      "file": "vendor-motion-CzgqfOgb.js",
+      "raw": 132863,
+      "gzip": 43063
+    },
+    {
+      "file": "index-fjLlqK4C.css",
+      "raw": 77761,
+      "gzip": 14284
+    },
+    {
+      "file": "vendor-router-n74s6wUN.js",
+      "raw": 39155,
+      "gzip": 14015
+    },
+    {
+      "file": "ReadingPage-PBEw9vjq.js",
+      "raw": 20792,
+      "gzip": 6897
+    },
+    {
+      "file": "DeckLibraryPage-3_4d53Sb.js",
+      "raw": 6230,
+      "gzip": 2498
+    },
+    {
+      "file": "JournalDetailPage-UxeurkD4.js",
+      "raw": 3915,
+      "gzip": 1657
+    },
+    {
+      "file": "SharePage-BFh4y3EJ.js",
+      "raw": 3035,
+      "gzip": 1418
+    },
+    {
+      "file": "SettingsPage-X2KxYZE5.js",
+      "raw": 2530,
+      "gzip": 1148
+    },
+    {
+      "file": "JournalPage-CHPxcce0.js",
+      "raw": 1895,
+      "gzip": 884
+    },
+    {
+      "file": "rolldown-runtime-B0Z9INg1.js",
+      "raw": 901,
+      "gzip": 511
+    }
+  ],
+  "artwork": {
+    "dirBytes": 144028549,
+    "dirMB": 137.4,
+    "files": 807
+  },
+  "distTotalBytes": 144812410,
+  "distTotalMB": 138.1,
+  "inlinedImageDataUris": 0
+}

@@ -369,3 +369,46 @@ export interface ReadingConfigResponse {
   /** 服务端是否具备真正调用 DeepSeek 的条件（有 Key） */
   ready: boolean
 }
+
+/* ══════════════════════════════════════════════════════════════
+ * 追问（Follow-up）—— D2 起接入真实模型
+ *
+ * 【为什么这里刻意不是「对话」】
+ * V2 把追问接 LLM 收进了 Backlog，重启条件写得很清楚：
+ * 「单轮、无累积、Context 仍受 AC-12 限制」。这三条在类型层就落死：
+ *
+ *   1. 载荷里**没有 history 字段** —— 结构上就拼不出多轮上下文，
+ *      第二次追问与第一次看到的 Context 逐字节相同（G-13）
+ *   2. 复用 `ReadingRequestCard[]`，与解读同一套服务端重建路径 ——
+ *      模型永远拿不到客户端臆造的牌义
+ *   3. 只多带一个 `reading`（本次解读的摘要），不带日记、不带过往 Session
+ *
+ * 无 Key 环境下服务端回落到规则式 `answerFollowUp`，
+ * 克隆下来直接能跑这条承诺不变（GV2-09）。
+ * ══════════════════════════════════════════════════════════════ */
+
+export interface FollowUpRequest {
+  sessionId: string
+  /** 本次抽牌采用的问题（随缘模式可为空串） */
+  question: string
+  spreadId: string
+  /** 顺序即牌位顺序。与 ReadingRequest 同构，走同一条重建路径 */
+  cards: ReadingRequestCard[]
+  /** 用户这一次问的话 */
+  ask: string
+  /** 本次解读的摘要与结论，让追问能接着已经说过的话讲，而不是从零重读 */
+  readingDigest: {
+    headline: string
+    summary: string
+    answer: string
+  }
+}
+
+export type FollowUpResponse =
+  | {
+      ok: true
+      /** 单段回答。**不分节、不返回 Markdown** —— 前端不做任何文本解析（GV2-06） */
+      answer: string
+      provider: ReadingProviderId
+    }
+  | { ok: false; error: ReadingError }

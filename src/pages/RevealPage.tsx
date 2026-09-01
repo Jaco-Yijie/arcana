@@ -164,7 +164,15 @@ export default function RevealPage() {
                   marginLeft: slot.label.x - slot.card.x,
                 }}
               >
-                {pos.label}
+                {/* ── 牌外说明层 ──
+                    牌面上的中文名遮罩已经撤掉（原画自己印着标题，见 TarotCardFace），
+                    所以正逆位必须在这里补上 —— 它是牌的状态，原画里没有也不可能有，
+                    而正逆位是解读结论的一半。
+                    中文牌名不放这里：翻开即弹出的牌义面板已经给了中文名 + 英文名，
+                    三处都写一遍就回到了 D1 判为问题的那种重复。 */}
+                {placed.revealed && entry.orientation === 'reversed'
+                  ? `${pos.label} · 逆位`
+                  : pos.label}
               </span>
             </div>
           )
@@ -173,7 +181,17 @@ export default function RevealPage() {
 
       <div
         className={[
-          'flex min-h-28 flex-col justify-end px-5 pt-2',
+          /* 【为什么这条带子要缩】
+             它原本是固定 `min-h-28`（112px）。牌桌拿的是剩下的高度，
+             而牌宽由牌桌高度反解 —— 所以这 112px 直接换算成牌面尺寸。
+             1024×768 上牌桌只剩约 590px，5 张牌分三行，算出来就是 94px 的牌，
+             比 360 手机上的 100px 还小。那不是「桌面没适配」，是这条带子太贪。
+
+             收到 5rem（80px）。CTA 按钮本体 52px，加上下内边距刚好放得下，
+             而底部安全区由 `paddingBottom: max(1rem, safe-area + 0.5rem)` 单独兜住，
+             不靠这条 min-height 撑 —— 所以缩它不会让 iPhone 的 CTA 顶到 home indicator。
+             实测收益：1024×768 牌宽 94 → 100px，1440×900 116 → 124px。 */
+          'flex min-h-20 flex-col justify-end px-5 pt-1',
           sidePanelOpen ? 'lg:mr-[324px]' : '',
         ]
           .filter(Boolean)

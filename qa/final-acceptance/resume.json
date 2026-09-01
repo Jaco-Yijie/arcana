@@ -1,0 +1,138 @@
+{
+  "cases": [
+    {
+      "stage": "shuffle",
+      "hasResume": true,
+      "homeSnippet": "你有一次未完成的抽牌 | 我最近在考虑要不要换一份工作，但又怕现在这份的… · 二选一 · 已摆 0/5 | 继续（洗牌） | 重新开始 | Arcana | 亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。 | 带着问题来 | 有想问的事，让牌帮你把它摊开",
+      "sessionBefore": {
+        "id": "ses_mtip5yf7_6d97ed58c1de",
+        "deckId": "legacy-moonlight",
+        "spreadId": "two-choices",
+        "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+        "mode": "question",
+        "stage": "shuffle",
+        "placements": [],
+        "orientations": [],
+        "cardIds": [],
+        "followUps": 0,
+        "hasStructured": false
+      },
+      "resumedUrl": "/table/shuffle",
+      "sessionAfter": {
+        "id": "ses_mtip5yf7_6d97ed58c1de",
+        "deckId": "legacy-moonlight",
+        "spreadId": "two-choices",
+        "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+        "mode": "question",
+        "stage": "shuffle",
+        "placements": [],
+        "orientations": [],
+        "cardIds": [],
+        "followUps": 0,
+        "hasStructured": false
+      },
+      "identical": true
+    },
+    {
+      "stage": "cut",
+      "hasResume": true,
+      "homeSnippet": "你有一次未完成的抽牌 | 我最近在考虑要不要换一份工作，但又怕现在这份的… · 二选一 · 已摆 0/5 | 继续（切牌） | 重新开始 | Arcana | 亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。 | 带着问题来 | 有想问的事，让牌帮你把它摊开",
+      "sessionBefore": {
+        "id": "ses_mtip6cad_1862eb3a9c46",
+        "deckId": "legacy-moonlight",
+        "spreadId": "two-choices",
+        "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+        "mode": "question",
+        "stage": "cut",
+        "placements": [],
+        "orientations": [],
+        "cardIds": [],
+        "followUps": 0,
+        "hasStructured": false
+      },
+      "resumedUrl": "/table/cut",
+      "sessionAfter": {
+        "id": "ses_mtip6cad_1862eb3a9c46",
+        "deckId": "legacy-moonlight",
+        "spreadId": "two-choices",
+        "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+        "mode": "question",
+        "stage": "cut",
+        "placements": [],
+        "orientations": [],
+        "cardIds": [],
+        "followUps": 0,
+        "hasStructured": false
+      },
+      "identical": true
+    },
+    {
+      "stage": "draw-partial",
+      "hasResume": true,
+      "homeSnippet": "你有一次未完成的抽牌 | 我最近在考虑要不要换一份工作，但又怕现在这份的… · 二选一 · 已摆 2/5 | 继续（摆牌） | 重新开始 | Arcana | 亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。 | 带着问题来 | 有想问的事，让牌帮你把它摊开",
+      "sessionBefore": {
+        "id": "ses_mtip6v3g_fd3a6eb17a27",
+        "deckId": "legacy-moonlight",
+        "spreadId": "two-choices",
+        "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+        "mode": "question",
+        "stage": "draw",
+        "placements": [
+          {
+            "pos": "current",
+            "idx": 38,
+            "rev": false
+          },
+          {
+            "pos": "a-process",
+            "idx": 40,
+            "rev": false
+          }
+        ],
+        "orientations": [
+          "reversed",
+          "reversed"
+        ],
+        "cardIds": [
+          "major-07",
+          "major-20"
+        ],
+        "followUps": 0,
+        "hasStructured": false
+      },
+      "resumedUrl": "/table/draw",
+      "sessionAfter": {
+        "id": "ses_mtip6v3g_fd3a6eb17a27",
+        "deckId": "legacy-moonlight",
+        "spreadId": "two-choices",
+        "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+        "mode": "question",
+        "stage": "draw",
+        "placements": [
+          {
+            "pos": "current",
+            "idx": 38,
+            "rev": false
+          },
+          {
+            "pos": "a-process",
+            "idx": 40,
+            "rev": false
+          }
+        ],
+        "orientations": [
+          "reversed",
+          "reversed"
+        ],
+        "cardIds": [
+          "major-07",
+          "major-20"
+        ],
+        "followUps": 0,
+        "hasStructured": false
+      },
+      "identical": true
+    }
+  ],
+  "consoleErrors": []
+}

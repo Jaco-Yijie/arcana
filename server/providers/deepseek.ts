@@ -47,7 +47,7 @@ function sleep(ms: number): Promise<void> {
 type FailureCode = Parameters<typeof readingError>[0]
 
 /** 不用构造函数参数属性 —— tsconfig 开了 `erasableSyntaxOnly`，那是不可擦除语法 */
-class UpstreamFailure extends Error {
+export class UpstreamFailure extends Error {
   code: FailureCode
   detail?: string
   constructor(code: FailureCode, detail?: string) {
@@ -65,7 +65,14 @@ interface ChatCompletion {
   usage?: { completion_tokens?: number; completion_tokens_details?: { reasoning_tokens?: number } }
 }
 
-async function callDeepSeek(
+/**
+ * 【为什么导出】追问（server/api/followUpRoute.ts）要打同一个上游，
+ * 需要的是完全相同的超时、中断、截断、空响应处理 —— 那是这个函数里
+ * 逐条踩出来的三十行，复制一份必然漂移。所以是导出而不是复制。
+ *
+ * 追问传 `{}` 作为 thinking：它是一段话，不需要推理模式。
+ */
+export async function callDeepSeek(
   messages: ChatMessage[],
   thinking: Record<string, unknown>,
 ): Promise<string> {

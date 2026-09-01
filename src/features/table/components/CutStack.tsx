@@ -36,6 +36,8 @@ export function CutStack({ phase, ratio, onRatioChange, onInteractingChange }: C
 
   const locked = phase === 'split' || phase === 'done'
 
+  const clampRatio = (r: number) => Math.min(MAX_CUT_RATIO, Math.max(MIN_CUT_RATIO, r))
+
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     if (locked) return
     capturePointer(e)
@@ -54,6 +56,47 @@ export function CutStack({ phase, ratio, onRatioChange, onInteractingChange }: C
     onInteractingChange?.(false)
   }
 
+  /* ── 键盘切牌 ──
+     【为什么必须有】与 ShuffleStack 同一个问题：切牌只有 pointer 事件，
+     而「从这里切开」只在用户指定过切点之后才渲染 —— 键盘用户到这里同样是死路。
+
+     【G-04 没有松动：系统仍然不会替用户选切点】
+     初始 ratio 依旧是 null，指示线停在中点但语义是「未选择」，
+     按键之前不会有任何切点被写入。用户必须**自己按一下**才产生第一个切点，
+     那一下的时机（performance.now 的亚毫秒抖动）决定切在哪里 ——
+     和用手指落在牌堆某个高度上是同一件事，不是系统给的默认值。
+     之后可以用上下方向键逐格微调，Enter/空格确认。 */
+  const nudge = (delta: number) => {
+    if (locked) return
+    const base = ratio ?? clampRatio((performance.now() * 1000) % 1000 / 1000)
+    onRatioChange(clampRatio(base + delta))
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (locked) return
+    switch (e.key) {
+      case 'ArrowUp':
+      case 'ArrowLeft':
+        e.preventDefault(); nudge(-0.02); break
+      case 'ArrowDown':
+      case 'ArrowRight':
+        e.preventDefault(); nudge(0.02); break
+      case 'Home':
+        e.preventDefault(); onRatioChange(MIN_CUT_RATIO); break
+      case 'End':
+        e.preventDefault(); onRatioChange(MAX_CUT_RATIO); break
+      case 'Enter':
+      case ' ':
+      case 'Spacebar':
+        e.preventDefault()
+        /* 还没选过就用这一按的时机定切点；已经选过就是确认当前位置 */
+        if (ratio === null) nudge(0)
+        break
+      default:
+        break
+    }
+  }
+
   // 指示线位置：未选择时停在中点，但语义上是「未选择」
   const displayRatio = ratio ?? 0.5
   const lineY = displayRatio * STACK_HEIGHT
@@ -63,11 +106,19 @@ export function CutStack({ phase, ratio, onRatioChange, onInteractingChange }: C
 
   return (
     <div
-      className="table-surface relative flex h-full w-full items-center justify-center"
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={endDrag}
       onPointerCancel={endDrag}
+      onKeyDown={handleKeyDown}
+      role={locked ? undefined : 'slider'}
+      tabIndex={locked ? undefined : 0}
+      aria-label="切牌位置。上下方向键调整，Enter 或空格在这里切开"
+      aria-valuemin={MIN_CUT_RATIO}
+      aria-valuemax={MAX_CUT_RATIO}
+      aria-valuenow={ratio ?? undefined}
+      aria-valuetext={ratio === null ? '还没有选择切点' : `大约第 ${Math.max(1, Math.round(ratio * 78))} 张`}
+      className="table-surface relative flex h-full w-full items-center justify-center rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70"
     >
       <div
         ref={stackRef}

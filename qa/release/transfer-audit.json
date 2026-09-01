@@ -1,0 +1,165 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "dir": "mobile"
+  },
+  "marks": {
+    "home": {
+      "js": {
+        "entries": 5,
+        "overNetwork": 5,
+        "transferBytes": 209110,
+        "decodedBytes": 652146
+      },
+      "css": {
+        "entries": 1,
+        "overNetwork": 1,
+        "transferBytes": 14584,
+        "decodedBytes": 77761
+      },
+      "other": {
+        "entries": 1,
+        "overNetwork": 1,
+        "transferBytes": 1804,
+        "decodedBytes": 9522
+      }
+    },
+    "deck-library（累计）": {
+      "js": {
+        "entries": 6,
+        "overNetwork": 6,
+        "transferBytes": 211908,
+        "decodedBytes": 658376
+      },
+      "css": {
+        "entries": 1,
+        "overNetwork": 1,
+        "transferBytes": 14584,
+        "decodedBytes": 77761
+      },
+      "other": {
+        "entries": 2,
+        "overNetwork": 2,
+        "transferBytes": 3608,
+        "decodedBytes": 19044
+      },
+      "artwork-thumb": {
+        "entries": 25,
+        "overNetwork": 25,
+        "transferBytes": 426138,
+        "decodedBytes": 418638
+      }
+    },
+    "draw · 摊开78张（累计）": {
+      "js": {
+        "entries": 6,
+        "overNetwork": 6,
+        "transferBytes": 211908,
+        "decodedBytes": 658376
+      },
+      "css": {
+        "entries": 1,
+        "overNetwork": 1,
+        "transferBytes": 14584,
+        "decodedBytes": 77761
+      },
+      "other": {
+        "entries": 9,
+        "overNetwork": 9,
+        "transferBytes": 16236,
+        "decodedBytes": 85698
+      },
+      "artwork-thumb": {
+        "entries": 25,
+        "overNetwork": 25,
+        "transferBytes": 426138,
+        "decodedBytes": 418638
+      }
+    },
+    "reveal · 翻牌前（累计）": {
+      "js": {
+        "entries": 6,
+        "overNetwork": 6,
+        "transferBytes": 211908,
+        "decodedBytes": 658376
+      },
+      "css": {
+        "entries": 1,
+        "overNetwork": 1,
+        "transferBytes": 14584,
+        "decodedBytes": 77761
+      },
+      "other": {
+        "entries": 10,
+        "overNetwork": 10,
+        "transferBytes": 18040,
+        "decodedBytes": 95220
+      },
+      "artwork-thumb": {
+        "entries": 25,
+        "overNetwork": 25,
+        "transferBytes": 426138,
+        "decodedBytes": 418638
+      }
+    },
+    "reveal · 5张全翻开（累计）": {
+      "js": {
+        "entries": 6,
+        "overNetwork": 6,
+        "transferBytes": 211908,
+        "decodedBytes": 658376
+      },
+      "css": {
+        "entries": 1,
+        "overNetwork": 1,
+        "transferBytes": 14584,
+        "decodedBytes": 77761
+      },
+      "other": {
+        "entries": 10,
+        "overNetwork": 10,
+        "transferBytes": 18040,
+        "decodedBytes": 95220
+      },
+      "artwork-thumb": {
+        "entries": 30,
+        "overNetwork": 29,
+        "transferBytes": 472308,
+        "decodedBytes": 476064
+      }
+    }
+  },
+  "display": [
+    {
+      "src": "thumbs/major-06.webp?r=1",
+      "cssW": 112,
+      "natW": 240,
+      "dpr": 2
+    },
+    {
+      "src": "thumbs/swords-06.webp?r=1",
+      "cssW": 112,
+      "natW": 240,
+      "dpr": 2
+    },
+    {
+      "src": "thumbs/major-08.webp?r=1",
+      "cssW": 112,
+      "natW": 240,
+      "dpr": 2
+    },
+    {
+      "src": "thumbs/major-07.webp?r=1",
+      "cssW": 112,
+      "natW": 240,
+      "dpr": 2
+    },
+    {
+      "src": "thumbs/pentacles-12.webp?r=1",
+      "cssW": 112,
+      "natW": 240,
+      "dpr": 2
+    }
+  ]
+}

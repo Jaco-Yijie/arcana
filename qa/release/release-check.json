@@ -1,0 +1,234 @@
+{
+  "suite": "release:check",
+  "phase": "D3",
+  "total": 45,
+  "passed": 45,
+  "failed": 0,
+  "checks": [
+    {
+      "id": "REL-00",
+      "result": "PASS",
+      "name": "至少有 5 套可用牌组（防止断言被架空成遍历 0 个）  5 套: legacy-moonlight, legacy-classic, legacy-forest, legacy-celestial, legacy-shadow"
+    },
+    {
+      "id": "REL-01",
+      "result": "PASS",
+      "name": "全部可用牌组的 full artwork URL 都能解析到真实文件  390 张"
+    },
+    {
+      "id": "REL-02",
+      "result": "PASS",
+      "name": "全部可用牌组的 thumb URL 都能解析到真实文件  390 张"
+    },
+    {
+      "id": "REL-02b",
+      "result": "PASS",
+      "name": "每一张可用牌都有 thumb —— 否则小尺寸场景会退回 full  full 390 · thumb 390"
+    },
+    {
+      "id": "REL-02c",
+      "result": "PASS",
+      "name": "卡背：登记进 manifest 的必须在磁盘上（未登记 = 程序化 SVG，零网络）  5 套全部走程序化卡背，不产生网络请求"
+    },
+    {
+      "id": "REL-02d",
+      "result": "PASS",
+      "name": "封面：登记进 manifest 的必须在磁盘上（未登记 = 回退到卡背）  5 套全部回退到卡背"
+    },
+    {
+      "id": "REL-03",
+      "result": "PASS",
+      "name": "src/ 不读取任何 API Key（读了就会进前端 bundle）  扫描 114 个文件"
+    },
+    {
+      "id": "REL-03b",
+      "result": "PASS",
+      "name": "dist/ 产物不含 API Key 字面量  扫描 12 个产物"
+    },
+    {
+      "id": "REL-04",
+      "result": "PASS",
+      "name": "src/ 不直连 api.deepseek.com（注释不算，只查字符串字面量）"
+    },
+    {
+      "id": "REL-04b",
+      "result": "PASS",
+      "name": "dist/ 产物不含 api.deepseek.com"
+    },
+    {
+      "id": "REL-04c",
+      "result": "PASS",
+      "name": "前端 fetch 的全部是同源 /api/ 相对路径  /api/tarot/followup /api/tarot/config /api/tarot/reading /api/tarot/reading/stream"
+    },
+    {
+      "id": "REL-05",
+      "result": "PASS",
+      "name": "未配置 VITE_DECK_ASSET_BASE_URL 时回落到本地 /assets/decks  /assets/decks"
+    },
+    {
+      "id": "REL-06",
+      "result": "PASS",
+      "name": "full URL 形状  /assets/decks/legacy-moonlight/cards/major-00.webp?r=3"
+    },
+    {
+      "id": "REL-06",
+      "result": "PASS",
+      "name": "thumb URL 形状  /assets/decks/legacy-moonlight/thumbs/major-00.webp?r=3"
+    },
+    {
+      "id": "REL-06",
+      "result": "PASS",
+      "name": "back URL 形状  /assets/decks/legacy-moonlight/deck/back.webp?r=2"
+    },
+    {
+      "id": "REL-06",
+      "result": "PASS",
+      "name": "cover URL 形状  /assets/decks/legacy-moonlight/deck/cover-thumb.webp?r=2"
+    },
+    {
+      "id": "REL-06b",
+      "result": "PASS",
+      "name": "远端 base 拼接后路径结构不变  https://assets.example.com/arcana/decks/legacy-moonlight/cards/major-00.webp?r=3"
+    },
+    {
+      "id": "REL-06c",
+      "result": "PASS",
+      "name": "assetBaseUrl 去掉末尾斜杠（否则会拼出双斜杠）  /assets/decks"
+    },
+    {
+      "id": "REL-06d",
+      "result": "PASS",
+      "name": "rev 是 query 参数，不是路径段（磁盘上没有 r<N>/ 这一层）  /assets/decks/legacy-moonlight/cards/major-00.webp?r=3"
+    },
+    {
+      "id": "REL-07",
+      "result": "PASS",
+      "name": "首页不挂载任何会请求牌面资产的组件  HomePage.tsx"
+    },
+    {
+      "id": "REL-08",
+      "result": "PASS",
+      "name": "FanSpread 只渲染卡背，不渲染任何正面 artwork  FanSpread.tsx"
+    },
+    {
+      "id": "REL-09",
+      "result": "PASS",
+      "name": "Deck Library 预览用 sm/thumb 档，不显式请求 full  DeckLibraryPage.tsx"
+    },
+    {
+      "id": "REL-09b",
+      "result": "PASS",
+      "name": "TarotCardFace 档位规则：sm 恒为 thumb  TarotCardFace.tsx · pickVariant"
+    },
+    {
+      "id": "REL-09c",
+      "result": "PASS",
+      "name": "档位按真实设备像素决定，阈值引用 THUMB_SPEC（不写死数字）  TarotCardFace.tsx · pickVariant"
+    },
+    {
+      "id": "REL-09e",
+      "result": "PASS",
+      "name": "档位计算修正了 CardFrame 的边框放大（否则边界视口会选错档）  TarotCardFace.tsx · FRAME_INFLATION"
+    },
+    {
+      "id": "REL-09d",
+      "result": "PASS",
+      "name": "牌桌把布局引擎算出的真实牌宽透给 TarotCardFace  FlipCard.tsx"
+    },
+    {
+      "id": "REL-10",
+      "result": "PASS",
+      "name": "牌面请求由 FlipCard 的 showFace 门控（未翻开不请求正面）  FlipCard.tsx"
+    },
+    {
+      "id": "REL-10b",
+      "result": "PASS",
+      "name": "useCardArtwork 仍然是「挂载即请求」，因此门控责任在调用方  useCardArtwork.ts"
+    },
+    {
+      "id": "REL-10c",
+      "result": "PASS",
+      "name": "整副牌预取只走 thumb 档，绝不预取 full  resolver.ts · prefetchDeck"
+    },
+    {
+      "id": "REL-10d",
+      "result": "PASS",
+      "name": "整副预取若被启用，调用方必须在牌桌之外（当前无调用方）  当前无调用方，整副预取实际未发生"
+    },
+    {
+      "id": "REL-11",
+      "result": "PASS",
+      "name": "已登记的牌加载失败 → 程序化牌面兜底（不是空白、不是崩溃）  CardArtworkLayer.tsx"
+    },
+    {
+      "id": "REL-11b",
+      "result": "PASS",
+      "name": "从未交付的牌仍然如实显示缺失态（不用占位图冒充成品）  CardArtworkLayer.tsx"
+    },
+    {
+      "id": "REL-11c",
+      "result": "PASS",
+      "name": "<img> 写死 width/height，避免加载完成时的布局跳动（CLS）  CardArtworkLayer.tsx"
+    },
+    {
+      "id": "REL-11d",
+      "result": "PASS",
+      "name": "<img> 使用 decoding=\"async\"，解码不阻塞主线程  CardArtworkLayer.tsx"
+    },
+    {
+      "id": "REL-12",
+      "result": "PASS",
+      "name": "产物里没有内联的 webp/png/jpeg data URI  扫描 12 个产物"
+    },
+    {
+      "id": "REL-12b",
+      "result": "PASS",
+      "name": "牌面以原路径静态存在于 dist/assets/decks（未被打包器改名）  dist/assets/decks/legacy-moonlight/cards/major-00.webp"
+    },
+    {
+      "id": "REL-12c",
+      "result": "PASS",
+      "name": "JS 总体积在预算内（760KB 未压缩）  674.4KB / 760KB · 11 个 chunk"
+    },
+    {
+      "id": "REL-12d",
+      "result": "PASS",
+      "name": "CSS 总体积在预算内（120KB 未压缩）  75.9KB"
+    },
+    {
+      "id": "REL-13",
+      "result": "PASS",
+      "name": ".env.example 存在"
+    },
+    {
+      "id": "REL-13b",
+      "result": "PASS",
+      "name": ".env.example 里 DEEPSEEK_API_KEY 是空的（绝不能提交真 Key）"
+    },
+    {
+      "id": "REL-13c",
+      "result": "PASS",
+      "name": ".env.example 列出了 VITE_DECK_ASSET_BASE_URL"
+    },
+    {
+      "id": "REL-13d",
+      "result": "PASS",
+      "name": ".env 不在 git 追踪范围内"
+    },
+    {
+      "id": "REL-14",
+      "result": "PASS",
+      "name": "README 里提到的每个 npm 脚本都真实存在  7 个脚本"
+    },
+    {
+      "id": "REL-14b",
+      "result": "PASS",
+      "name": "存在生产启动脚本 npm start"
+    },
+    {
+      "id": "REL-14c",
+      "result": "PASS",
+      "name": "存在 release:check 脚本"
+    }
+  ]
+}

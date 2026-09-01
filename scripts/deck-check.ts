@@ -458,15 +458,35 @@ function checkArtwork(): void {
   check('artwork 牌组永远不会回退到程序化牌面', noProceduralFallback)
   check('缺图时给出的是本牌组自己的路径（不指向别的牌组）', missingReportsPath)
 
-  /* legacy 牌组必须 78 张程序化牌面齐全，否则老用户的抽牌流程会开天窗 */
-  check('legacy 程序化牌面 78 张齐全', Object.keys(LEGACY_CARD_ART).length === 78)
+  /* legacy 牌组必须 78 张牌面齐全，否则老用户的抽牌流程会开天窗。
+     【Phase C3 修订】这条断言的**意图没变**（5 × 78 不许开天窗），
+     变的是它的前提：C1A 时代 legacy 全部走程序化，所以当时判定
+     `kind === 'procedural'`；390 张真实原画到位后正常路径是 raster，
+     再按 procedural 判定就成了「断言正常状态不存在」。
+     所以判定条件改为「不是 missing」，并在下面补一条更强的：
+     正常路径必须是 raster —— 那才是 C3 真正要守住的东西。 */
+  check('legacy 程序化牌面 78 张齐全（fallback 落点仍完整）', Object.keys(LEGACY_CARD_ART).length === 78)
   let legacyComplete = true
+  const legacyByKind = { raster: 0, procedural: 0, missing: 0 }
   for (const deck of legacyDecks) {
     for (const id of cardIds) {
-      if (resolveCardArtwork(deck.deckId, id).kind !== 'procedural') legacyComplete = false
+      const kind = resolveCardArtwork(deck.deckId, id).kind
+      legacyByKind[kind as keyof typeof legacyByKind] += 1
+      if (kind === 'missing') legacyComplete = false
     }
   }
   check('legacy 牌组 5 × 78 全部可渲染', legacyComplete)
+
+  /* FULL-ART-14 · Production 正常流程不得出现 procedural source。
+     ProceduralCardArt **没有被删除**（上一条断言仍要求它 78 张齐全），
+     它继续作为 runtime / corrupted / development fallback 存在；
+     这里断言的是「正常解析路径不会走到它」—— 两件事必须分开断言，
+     否则「fallback 还在吗」和「日常会不会用到它」会互相掩盖。 */
+  check(
+    'FULL-ART-14 legacy 正常流程全部 raster，无 procedural',
+    legacyByKind.procedural === 0 && legacyByKind.missing === 0,
+    `raster ${legacyByKind.raster} · procedural ${legacyByKind.procedural} · missing ${legacyByKind.missing}`,
+  )
 
   /* 解析是纯函数：同样入参必须给出逐字相同的结果 */
   const once = JSON.stringify(resolveCardArtwork('ethereal', 'major-00'))

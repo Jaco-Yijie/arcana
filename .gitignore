@@ -32,3 +32,24 @@ dist-ssr
 bench-out/
 ab-out/
 deep-stability-out/
+
+# 美术源素材暂存目录（1.4GB）。它是 Phase C 的外部交付物落地区，
+# 运行期真正用到的是 public/assets/decks 下的成品 —— 源素材不进仓库。
+# 【为什么必须显式忽略】它此刻是 untracked 的，一次 `git add .` 就会把 1.4GB
+# 永久写进历史，而那之后只能靠改写历史才能拿掉。
+Arcana_Full_390/
+
+# QA 截图与逐条网络记录（D1–D4 合计约 151MB，可随时重跑复现）。
+# 【保留什么、丢掉什么】
+# 结论进仓库：JSON 汇总、驱动脚本、报告 —— 它们是可复核的证据链。
+# 截图不进仓库：体积占 QA 目录的 99%，而且任何一次重跑都能重新生成。
+# 第一版规则只写了 qa/release/*.png 与 qa/product-polish/**/*.png，
+# 漏掉了 qa/final-acceptance/ 与直接躺在 qa/product-polish/ 下的图 ——
+# 实测仍有 188 个文件、151MB 会被提交。所以这里改成按扩展名兜底。
+qa/**/*.png
+qa/**/*.jpg
+qa/**/*.gif
+qa/release/network-*.txt
+
+# 本地 agent / 编辑器配置，与产品无关
+.claude/

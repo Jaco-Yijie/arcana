@@ -1,0 +1,630 @@
+{
+  "pages": {
+    "home": [
+      {
+        "vp": "m360",
+        "w": 360,
+        "h": 800,
+        "overflowX": false,
+        "scrollH": 800,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [
+          "牌组(27×44)",
+          "设置(27×44)"
+        ],
+        "devStrings": []
+      },
+      {
+        "vp": "m390",
+        "w": 390,
+        "h": 844,
+        "overflowX": false,
+        "scrollH": 844,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [
+          "牌组(27×44)",
+          "设置(27×44)"
+        ],
+        "devStrings": []
+      },
+      {
+        "vp": "m430",
+        "w": 430,
+        "h": 932,
+        "overflowX": false,
+        "scrollH": 932,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [
+          "牌组(27×44)",
+          "设置(27×44)"
+        ],
+        "devStrings": []
+      },
+      {
+        "vp": "t768",
+        "w": 768,
+        "h": 1024,
+        "overflowX": false,
+        "scrollH": 1024,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [
+          "牌组(27×44)",
+          "设置(27×44)"
+        ],
+        "devStrings": []
+      },
+      {
+        "vp": "d1024",
+        "w": 1024,
+        "h": 768,
+        "overflowX": false,
+        "scrollH": 768,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [
+          "牌组(27×44)",
+          "设置(27×44)"
+        ],
+        "devStrings": []
+      },
+      {
+        "vp": "d1440",
+        "w": 1440,
+        "h": 900,
+        "overflowX": false,
+        "scrollH": 900,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [
+          "牌组(27×44)",
+          "设置(27×44)"
+        ],
+        "devStrings": []
+      },
+      {
+        "vp": "d1920",
+        "w": 1920,
+        "h": 1080,
+        "overflowX": false,
+        "scrollH": 1080,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [
+          "牌组(27×44)",
+          "设置(27×44)"
+        ],
+        "devStrings": []
+      }
+    ],
+    "decks": [
+      {
+        "vp": "m360",
+        "w": 360,
+        "h": 800,
+        "overflowX": false,
+        "scrollH": 2339,
+        "screens": 2.9,
+        "imgs": 25,
+        "broken": 0,
+        "maxImgW": 60,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "m390",
+        "w": 390,
+        "h": 844,
+        "overflowX": false,
+        "scrollH": 2339,
+        "screens": 2.8,
+        "imgs": 25,
+        "broken": 0,
+        "maxImgW": 60,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "m430",
+        "w": 430,
+        "h": 932,
+        "overflowX": false,
+        "scrollH": 2339,
+        "screens": 2.5,
+        "imgs": 25,
+        "broken": 0,
+        "maxImgW": 60,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "t768",
+        "w": 768,
+        "h": 1024,
+        "overflowX": false,
+        "scrollH": 1999,
+        "screens": 2,
+        "imgs": 25,
+        "broken": 0,
+        "maxImgW": 86,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "d1024",
+        "w": 1024,
+        "h": 768,
+        "overflowX": false,
+        "scrollH": 2263,
+        "screens": 2.9,
+        "imgs": 25,
+        "broken": 0,
+        "maxImgW": 106,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "d1440",
+        "w": 1440,
+        "h": 900,
+        "overflowX": false,
+        "scrollH": 2263,
+        "screens": 2.5,
+        "imgs": 25,
+        "broken": 0,
+        "maxImgW": 106,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "d1920",
+        "w": 1920,
+        "h": 1080,
+        "overflowX": false,
+        "scrollH": 2263,
+        "screens": 2.1,
+        "imgs": 25,
+        "broken": 0,
+        "maxImgW": 106,
+        "smallTargets": [],
+        "devStrings": []
+      }
+    ],
+    "journal": [
+      {
+        "vp": "m360",
+        "w": 360,
+        "h": 800,
+        "overflowX": false,
+        "scrollH": 800,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "m390",
+        "w": 390,
+        "h": 844,
+        "overflowX": false,
+        "scrollH": 844,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "m430",
+        "w": 430,
+        "h": 932,
+        "overflowX": false,
+        "scrollH": 932,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "t768",
+        "w": 768,
+        "h": 1024,
+        "overflowX": false,
+        "scrollH": 1024,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "d1024",
+        "w": 1024,
+        "h": 768,
+        "overflowX": false,
+        "scrollH": 768,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "d1440",
+        "w": 1440,
+        "h": 900,
+        "overflowX": false,
+        "scrollH": 900,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": []
+      },
+      {
+        "vp": "d1920",
+        "w": 1920,
+        "h": 1080,
+        "overflowX": false,
+        "scrollH": 1080,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": []
+      }
+    ],
+    "settings": [
+      {
+        "vp": "m360",
+        "w": 360,
+        "h": 800,
+        "overflowX": false,
+        "scrollH": 800,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": [
+          [
+            "即将推出",
+            1
+          ]
+        ]
+      },
+      {
+        "vp": "m390",
+        "w": 390,
+        "h": 844,
+        "overflowX": false,
+        "scrollH": 844,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": [
+          [
+            "即将推出",
+            1
+          ]
+        ]
+      },
+      {
+        "vp": "m430",
+        "w": 430,
+        "h": 932,
+        "overflowX": false,
+        "scrollH": 932,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": [
+          [
+            "即将推出",
+            1
+          ]
+        ]
+      },
+      {
+        "vp": "t768",
+        "w": 768,
+        "h": 1024,
+        "overflowX": false,
+        "scrollH": 1024,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": [
+          [
+            "即将推出",
+            1
+          ]
+        ]
+      },
+      {
+        "vp": "d1024",
+        "w": 1024,
+        "h": 768,
+        "overflowX": false,
+        "scrollH": 768,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": [
+          [
+            "即将推出",
+            1
+          ]
+        ]
+      },
+      {
+        "vp": "d1440",
+        "w": 1440,
+        "h": 900,
+        "overflowX": false,
+        "scrollH": 900,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": [
+          [
+            "即将推出",
+            1
+          ]
+        ]
+      },
+      {
+        "vp": "d1920",
+        "w": 1920,
+        "h": 1080,
+        "overflowX": false,
+        "scrollH": 1080,
+        "screens": 1,
+        "imgs": 0,
+        "broken": 0,
+        "maxImgW": 0,
+        "smallTargets": [],
+        "devStrings": [
+          [
+            "即将推出",
+            1
+          ]
+        ]
+      }
+    ],
+    "draw": [
+      {
+        "vp": "m360",
+        "overflowX": false,
+        "imgs": 0,
+        "broken": 0
+      },
+      {
+        "vp": "m390",
+        "overflowX": false,
+        "imgs": 0,
+        "broken": 0
+      },
+      {
+        "vp": "m430",
+        "overflowX": false,
+        "imgs": 0,
+        "broken": 0
+      },
+      {
+        "vp": "t768",
+        "overflowX": false,
+        "imgs": 0,
+        "broken": 0
+      },
+      {
+        "vp": "d1024",
+        "overflowX": false,
+        "imgs": 0,
+        "broken": 0
+      },
+      {
+        "vp": "d1440",
+        "overflowX": false,
+        "imgs": 0,
+        "broken": 0
+      },
+      {
+        "vp": "d1920",
+        "overflowX": false,
+        "imgs": 0,
+        "broken": 0
+      }
+    ],
+    "reveal": [
+      {
+        "vp": "m360",
+        "w": 360,
+        "h": 800,
+        "dpr": 3,
+        "overflowX": false,
+        "cards": 5,
+        "maxCardW": 103,
+        "variant": "full",
+        "sourcePx": 1080,
+        "neededPx": 309,
+        "broken": 0,
+        "devStrings": [],
+        "sharpEnough": true
+      },
+      {
+        "vp": "m390",
+        "w": 390,
+        "h": 844,
+        "dpr": 3,
+        "overflowX": false,
+        "cards": 5,
+        "maxCardW": 112,
+        "variant": "full",
+        "sourcePx": 1080,
+        "neededPx": 336,
+        "broken": 0,
+        "devStrings": [],
+        "sharpEnough": true
+      },
+      {
+        "vp": "m430",
+        "w": 430,
+        "h": 932,
+        "dpr": 3,
+        "overflowX": false,
+        "cards": 5,
+        "maxCardW": 124,
+        "variant": "full",
+        "sourcePx": 1080,
+        "neededPx": 372,
+        "broken": 0,
+        "devStrings": [],
+        "sharpEnough": true
+      },
+      {
+        "vp": "t768",
+        "w": 768,
+        "h": 1024,
+        "dpr": 2,
+        "overflowX": false,
+        "cards": 5,
+        "maxCardW": 142,
+        "variant": "full",
+        "sourcePx": 1080,
+        "neededPx": 284,
+        "broken": 0,
+        "devStrings": [],
+        "sharpEnough": true
+      },
+      {
+        "vp": "d1024",
+        "w": 1024,
+        "h": 768,
+        "dpr": 2,
+        "overflowX": false,
+        "cards": 5,
+        "maxCardW": 100,
+        "variant": "full",
+        "sourcePx": 1080,
+        "neededPx": 200,
+        "broken": 0,
+        "devStrings": [],
+        "sharpEnough": true
+      },
+      {
+        "vp": "d1440",
+        "w": 1440,
+        "h": 900,
+        "dpr": 2,
+        "overflowX": false,
+        "cards": 5,
+        "maxCardW": 122,
+        "variant": "full",
+        "sourcePx": 1080,
+        "neededPx": 244,
+        "broken": 0,
+        "devStrings": [],
+        "sharpEnough": true
+      },
+      {
+        "vp": "d1920",
+        "w": 1920,
+        "h": 1080,
+        "dpr": 2,
+        "overflowX": false,
+        "cards": 5,
+        "maxCardW": 152,
+        "variant": "full",
+        "sourcePx": 1080,
+        "neededPx": 304,
+        "broken": 0,
+        "devStrings": [],
+        "sharpEnough": true
+      }
+    ]
+  },
+  "findings": [
+    {
+      "sev": "P1",
+      "page": "settings",
+      "vp": "m360",
+      "issue": "开发痕迹 [[\"即将推出\",1]]"
+    },
+    {
+      "sev": "P1",
+      "page": "settings",
+      "vp": "m390",
+      "issue": "开发痕迹 [[\"即将推出\",1]]"
+    },
+    {
+      "sev": "P1",
+      "page": "settings",
+      "vp": "m430",
+      "issue": "开发痕迹 [[\"即将推出\",1]]"
+    },
+    {
+      "sev": "P1",
+      "page": "settings",
+      "vp": "t768",
+      "issue": "开发痕迹 [[\"即将推出\",1]]"
+    },
+    {
+      "sev": "P1",
+      "page": "settings",
+      "vp": "d1024",
+      "issue": "开发痕迹 [[\"即将推出\",1]]"
+    },
+    {
+      "sev": "P1",
+      "page": "settings",
+      "vp": "d1440",
+      "issue": "开发痕迹 [[\"即将推出\",1]]"
+    },
+    {
+      "sev": "P1",
+      "page": "settings",
+      "vp": "d1920",
+      "issue": "开发痕迹 [[\"即将推出\",1]]"
+    }
+  ],
+  "cls": 0,
+  "consoleErrors": [],
+  "failedRequests": []
+}

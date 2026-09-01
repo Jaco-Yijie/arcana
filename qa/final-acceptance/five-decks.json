@@ -1,0 +1,103 @@
+{
+  "decks": [
+    {
+      "name": "月光",
+      "detailUrl": "/decks",
+      "detailImgs": 25,
+      "detailBroken": 0,
+      "drawImgs": 0,
+      "drawArtworkRequests": 0,
+      "drawOverflowX": false,
+      "sessionDeckId": "legacy-moonlight",
+      "cardId": "major-03",
+      "orientation": "upright",
+      "revealImg": "/assets/decks/legacy-moonlight/cards/major-03.webp?r=1",
+      "revealBroken": 0,
+      "revealOverflowX": false,
+      "deckMatches": true
+    },
+    {
+      "name": "古典",
+      "detailUrl": "/decks",
+      "detailImgs": 25,
+      "detailBroken": 0,
+      "drawImgs": 0,
+      "drawArtworkRequests": 0,
+      "drawOverflowX": false,
+      "sessionDeckId": "legacy-classic",
+      "cardId": "major-05",
+      "orientation": "reversed",
+      "revealImg": "/assets/decks/legacy-classic/cards/major-05.webp?r=2",
+      "revealBroken": 0,
+      "revealOverflowX": false,
+      "deckMatches": true
+    },
+    {
+      "name": "森语",
+      "detailUrl": "/decks",
+      "detailImgs": 25,
+      "detailBroken": 0,
+      "drawImgs": 0,
+      "drawArtworkRequests": 0,
+      "drawOverflowX": false,
+      "sessionDeckId": "legacy-forest",
+      "cardId": "wands-02",
+      "orientation": "upright",
+      "revealImg": "/assets/decks/legacy-forest/cards/wands-02.webp?r=2",
+      "revealBroken": 0,
+      "revealOverflowX": false,
+      "deckMatches": true
+    },
+    {
+      "name": "星图",
+      "detailUrl": "/decks",
+      "detailImgs": 25,
+      "detailBroken": 0,
+      "drawImgs": 0,
+      "drawArtworkRequests": 0,
+      "drawOverflowX": false,
+      "sessionDeckId": "legacy-celestial",
+      "cardId": "wands-02",
+      "orientation": "upright",
+      "revealImg": "/assets/decks/legacy-celestial/cards/wands-02.webp?r=1",
+      "revealBroken": 0,
+      "revealOverflowX": false,
+      "deckMatches": true
+    },
+    {
+      "name": "幽影",
+      "detailUrl": "/decks",
+      "detailImgs": 25,
+      "detailBroken": 0,
+      "drawImgs": 0,
+      "drawArtworkRequests": 0,
+      "drawOverflowX": false,
+      "sessionDeckId": "legacy-shadow",
+      "cardId": "cups-13",
+      "orientation": "reversed",
+      "revealImg": "/assets/decks/legacy-shadow/cards/cups-13.webp?r=2",
+      "revealBroken": 0,
+      "revealOverflowX": false,
+      "deckMatches": true
+    }
+  ],
+  "findings": [],
+  "devStrings": [],
+  "library": {
+    "text": "选择牌组\n\n选一个你想待着的氛围。\n\n月光\n使用中\n夜里最安静的那一段\n看看这套\n古典\n象牙纸面与暗金压边\n看看这套\n森语\n林子里的光会自己找路\n看看这套\n星图\n你在一张很大的图上\n看看这套\n幽影\n往回看的那一面\n看看这套\n\n所有牌组的牌义、牌序、正逆位完全一样 —— 变的只有画和光。\n\n就用这副",
+    "deckNames": [
+      "月光",
+      "古典",
+      "森语",
+      "星图",
+      "幽影"
+    ],
+    "imgs": 25,
+    "broken": 0,
+    "overflowX": false,
+    "scrollH": 2339,
+    "allThumb": true
+  },
+  "consoleErrors": [],
+  "failedRequests": []
+}

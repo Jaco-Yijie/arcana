@@ -1,0 +1,127 @@
+{
+  "phase": "D3",
+  "method": "PerformanceResourceTiming.transferSize —— 缓存命中记 0，不把缓存重复计入过网字节",
+  "server": "npm start（生产构建 + immutable 缓存头）",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "dpr": 2
+  },
+  "cumulative": true,
+  "before": {
+    "reveal-5-flipped": {
+      "artworkRequests": 35,
+      "artworkKB": 1687.1,
+      "fullOverNetwork": 5,
+      "totalKB": 1925.6
+    }
+  },
+  "after": {
+    "home": {
+      "artworkRequests": 0,
+      "artworkKB": 0.0,
+      "fullOverNetwork": 0,
+      "totalKB": 220.0
+    },
+    "deck-library": {
+      "artworkRequests": 25,
+      "artworkKB": 416.2,
+      "fullOverNetwork": 0,
+      "totalKB": 640.8
+    },
+    "draw-fan-78": {
+      "artworkRequests": 25,
+      "artworkKB": 416.2,
+      "fullOverNetwork": 0,
+      "totalKB": 653.1,
+      "note": "摊开 78 张牌新增 0 个 artwork 请求 —— 牌背是程序化 SVG，且未翻开的牌按 G-05 不请求正面"
+    },
+    "reveal-before-flip": {
+      "artworkRequests": 25,
+      "artworkKB": 416.2,
+      "fullOverNetwork": 0,
+      "totalKB": 654.9
+    },
+    "reveal-5-flipped": {
+      "artworkRequests": 29,
+      "artworkKB": 461.2,
+      "fullOverNetwork": 0,
+      "totalKB": 700.0
+    }
+  },
+  "delta": {
+    "revealArtworkKB": -1225.9,
+    "revealArtworkPct": -72.7,
+    "journeyTotalKB": -1225.6,
+    "journeyTotalPct": -63.6
+  },
+  "variantRule": {
+    "rule": "needed = displayWidth × FRAME_INFLATION(1.08) × devicePixelRatio；needed ≤ THUMB_SPEC.card.width(240) 时取 thumb，否则取 full",
+    "guarantee": "只在 thumb 的真实像素足以覆盖所需设备像素时降档 —— 按构造不会变糊",
+    "verified": [
+      {
+        "viewport": "360×800",
+        "dpr": 2,
+        "cardCssW": 103,
+        "needed": 206,
+        "variant": "thumb",
+        "sourcePx": 240,
+        "ratio": 1.17
+      },
+      {
+        "viewport": "390×844",
+        "dpr": 2,
+        "cardCssW": 112,
+        "needed": 224,
+        "variant": "thumb",
+        "sourcePx": 240,
+        "ratio": 1.07
+      },
+      {
+        "viewport": "390×844",
+        "dpr": 3,
+        "cardCssW": 112,
+        "needed": 336,
+        "variant": "full",
+        "sourcePx": 1080,
+        "ratio": 3.21
+      },
+      {
+        "viewport": "768×1024",
+        "dpr": 2,
+        "cardCssW": 142,
+        "needed": 284,
+        "variant": "full",
+        "sourcePx": 1080,
+        "ratio": 3.8
+      },
+      {
+        "viewport": "1024×768",
+        "dpr": 2,
+        "cardCssW": 100,
+        "needed": 200,
+        "variant": "thumb",
+        "sourcePx": 240,
+        "ratio": 1.2
+      },
+      {
+        "viewport": "1440×900",
+        "dpr": 2,
+        "cardCssW": 122,
+        "needed": 244,
+        "variant": "full",
+        "sourcePx": 1080,
+        "ratio": 4.43
+      },
+      {
+        "viewport": "1920×1080",
+        "dpr": 2,
+        "cardCssW": 152,
+        "needed": 304,
+        "variant": "full",
+        "sourcePx": 1080,
+        "ratio": 3.55
+      }
+    ]
+  }
+}

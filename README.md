@@ -21,11 +21,12 @@ short_description: 亲手洗牌、切牌、翻牌的沉浸式塔罗 —— LLM �
 ```bash
 npm install
 
-# 只跑前端（解读会用本地示例数据，UI 完整可用）
-npm run dev
+# 前端 + 解读服务，一条命令全起
+npm run dev            # Vite 5173 · 解读服务 8787
 
-# 前端 + 解读服务（推荐）
-npm run dev:all        # Vite 5173 · 解读服务 8787
+# 只想单独起其中一个时
+npm run dev:web        # 只跑前端（解读会用本地示例数据，UI 完整可用）
+npm run dev:reading    # 只跑解读服务
 ```
 
 ### 接入 DeepSeek
@@ -33,7 +34,7 @@ npm run dev:all        # Vite 5173 · 解读服务 8787
 ```bash
 cp .env.example .env
 # 填入 DEEPSEEK_API_KEY
-npm run dev:all
+npm run dev
 ```
 
 `.env`：
@@ -66,7 +67,7 @@ npm start              # 单进程同时托管 dist/ 与 /api，默认 8787
 
 ```bash
 npm run engine:check   # 抽牌引擎自检：64 项断言，验证「牌不是点击后才生成的」
-npm run reading:check  # 解读评测：106 项断言（牌面完整性 / 语气红线 / 10 组用例）
+npm run reading:check  # 解读评测：118 项断言（牌面完整性 / 语气红线 / 10 组用例）
 npm run reading:check -- --live   # 用真实 DeepSeek 跑同一批用例（需 Key）
 npm run build
 npm run lint

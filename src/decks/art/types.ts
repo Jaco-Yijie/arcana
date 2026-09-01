@@ -192,6 +192,13 @@ export interface CardArtBrief {
   mustInclude: string[]
   optional: string[]
   forbidden: string[]
+  /**
+   * 图像生产阶段必须逐字下发的硬约束。
+   *
+   * 与 mustInclude 不同：这里放的是可机械核验、不能用近似表达替代的条件，
+   * 例如数字牌的精确数量与关键 Major 的主体姿态。
+   */
+  visualProductionConstraints: readonly string[]
   /** 缩到 60px 宽时，仍然必须认得出的那一个东西（A-05） */
   thumbnailAnchor: string
 }

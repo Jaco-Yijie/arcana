@@ -17,7 +17,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { allCards } from '../src/data/deck/index.ts'
-import { ALL_DECK_IDS } from '../src/decks/ids.ts'
+import { ALL_DECK_IDS, ARTWORK_DECK_IDS } from '../src/decks/ids.ts'
 import { decks } from '../src/decks/registry.ts'
 import {
   BENCHMARK_STAGED,
@@ -32,10 +32,20 @@ import {
   resolvePlanFrom,
 } from '../src/decks/artwork/resolver.ts'
 import { cardArtworkRepoPath, cardThumbRepoPath, urlToRepoPath } from '../src/decks/artwork/paths.ts'
+import {
+  FINAL_COUNT,
+  NEEDS_VISUAL_REVIEW,
+  PRODUCTION_CARDS,
+  QA_SEVERITY,
+} from '../src/decks/artwork/production.generated.ts'
 import { ARTWORK_STATUSES, isDeliveredStatus } from '../src/decks/art/types.ts'
 import { CANONICAL_DECK_IDS, DECK_ART_BIBLES, getArtBible } from '../src/decks/art/bibles.ts'
 import { BENCHMARK_CARD_IDS, BENCHMARK_SEEDS } from '../src/decks/art/briefs.ts'
-import { allBenchmarkBriefs, buildCardArtBrief } from '../src/decks/art/buildBrief.ts'
+import {
+  allBenchmarkBriefs,
+  buildCardArtBrief,
+  buildProductionPromptConstraints,
+} from '../src/decks/art/buildBrief.ts'
 
 const G = '\x1b[32m'
 const R = '\x1b[31m'
@@ -97,22 +107,52 @@ function checkPipeline(): void {
   )
 
   /* ── ART-02 缺原画时正确回退 ──
-     canonical five 现在 0 张原画，78 张应当全部落到 procedural。 */
+     【Phase C3 修订：改成注入 manifest，断言反而变强了】
+     原实现遍历 canonical five 的真实数据，期望 390 张全部落到 procedural ——
+     它成立的唯一原因是「当时一张原画都没有」。390 张到位后它必然失败，
+     而失败的含义恰恰是「C3 成功了」，这说明它测的从来不是 fallback 本身，
+     只是当时的库存状态。
+
+     现在改成喂一份**故意缺图**的 hybrid manifest：
+     fallback 是否有效，与生产资产齐不齐彻底解耦。
+     这样它在 390 张齐备的今天仍然是一条会失败的真断言 ——
+     如果谁把 hybrid 的回退分支删了，它立刻红。 */
+  const emptyHybrid = { ...real, cards: {} }
   let fellBack = 0
   let brokeOut = 0
-  for (const deckId of CANONICAL_DECK_IDS) {
-    for (const cardId of cardIds) {
-      const plan = resolveCardArtwork(deckId, cardId)
-      if (plan.kind === 'procedural') fellBack += 1
-      else if (plan.kind === 'missing') brokeOut += 1
-    }
+  for (const cardId of cardIds) {
+    const plan = resolvePlanFrom(emptyHybrid, cardId)
+    if (plan.kind === 'procedural') fellBack += 1
+    else if (plan.kind === 'missing') brokeOut += 1
   }
   check(
     'ART-02 缺原画时逐张回退到 ProceduralCardArt',
-    fellBack === CANONICAL_DECK_IDS.length * cardIds.length,
-    `${fellBack} / ${CANONICAL_DECK_IDS.length * cardIds.length} 张回退成功`,
+    fellBack === cardIds.length,
+    `注入空 hybrid manifest · ${fellBack} / ${cardIds.length} 张回退成功`,
   )
-  check('ART-02b canonical five 不出现 missing（半套牌不许坏）', brokeOut === 0)
+  check('ART-02b 回退路径不产生 missing（半套牌不许坏）', brokeOut === 0)
+
+  /* ── ART-02c 真实数据：canonical five 现在应当 390 张全部是 raster ──
+     这是 ART-02 让出来的位置。上面那条负责「fallback 还能用吗」，
+     这条负责「日常还会用到 fallback 吗」——两个问题必须分开问，
+     合成一条就会出现「回退正常所以一切正常」这种掩盖。 */
+  let liveRaster = 0
+  let liveProcedural = 0
+  let liveMissing = 0
+  for (const deckId of CANONICAL_DECK_IDS) {
+    for (const cardId of cardIds) {
+      const kind = resolveCardArtwork(deckId, cardId).kind
+      if (kind === 'raster') liveRaster += 1
+      else if (kind === 'procedural') liveProcedural += 1
+      else if (kind === 'missing') liveMissing += 1
+    }
+  }
+  const liveTotal = CANONICAL_DECK_IDS.length * cardIds.length
+  check(
+    'ART-02c canonical five 正常路径全部 raster（FULL-ART-08 / 09 / 14）',
+    liveRaster === liveTotal && liveProcedural === 0 && liveMissing === 0,
+    `raster ${liveRaster}/${liveTotal} · procedural ${liveProcedural} · missing ${liveMissing}`,
+  )
 
   /* ── ART-03 回退不改语义 ──
      plan 的类型里就没有牌义字段，这里做运行期复核。 */
@@ -371,6 +411,32 @@ function checkBriefs(): void {
   /* seed 覆盖面与声明一致 */
   const seedKeys = Object.keys(BENCHMARK_SEEDS)
   check('BENCHMARK_SEEDS 的键数与矩阵一致', seedKeys.length === 25, `${seedKeys.length} 个 key`)
+
+  const numericMinor = allCards.filter(
+    (c) => c.arcana === 'minor' && c.number >= 2 && c.number <= 10,
+  )
+  const softCount = /\b(?:roughly|approximately|about)\b/i
+  const hardCountFailures = numericMinor.filter((card) => {
+    const block = buildProductionPromptConstraints(card.id).join(' ')
+    return !/\bEXACTLY (?:TWO|THREE|FOUR|FIVE|SIX|SEVEN|EIGHT|NINE|TEN)\b/.test(block) ||
+      softCount.test(block)
+  })
+  check(
+    '数字牌 2–10 的生产约束使用 EXACTLY N，禁止 roughly/about/approximately',
+    hardCountFailures.length === 0,
+    hardCountFailures.map((c) => c.id).join(', '),
+  )
+
+  const hangedManConstraints = buildProductionPromptConstraints('major-12').join(' ')
+  check(
+    'The Hanged Man 生产约束锁定主体本体倒置、实际悬置、非倒影、平静且非暴力',
+    /own body is upside-down/.test(hangedManConstraints) &&
+      /actual suspended orientation/.test(hangedManConstraints) &&
+      /must not be shown only through a reflection/.test(hangedManConstraints) &&
+      /calm, voluntary, contemplative/.test(hangedManConstraints) &&
+      /symbolic and non-violent/.test(hangedManConstraints),
+    hangedManConstraints,
+  )
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -492,10 +558,33 @@ function checkStyleAnchor(): void {
       cards: { [FOOL]: { w: 1080, h: 1800, status: 'placeholder' as const } },
     }) === 0,
   )
-  /* 现在的真实数字必须是 0 —— 一张原画都还没验收 */
+  /* 【Phase C3 修订】原文是「五套当前已交付数量均为 0（尚无原画通过人工批准）」。
+     那是一条**状态锁**：它锁住的正是 C3 要推翻的那个状态，
+     C3 完成的那一刻它必然失败。保留它的字面判定等于禁止项目前进。
+
+     它真正要防的是「在没有资产的情况下谎报交付数量」，
+     所以改为断言 **数量与磁盘实际文件数一致** —— 同一个防线，
+     但现在无论已交付是 0 还是 390 都成立，且比原来更难糊弄：
+     往 manifest 里塞一条不存在的登记会立刻红。 */
+  const deliveredVsDisk = CANONICAL_DECK_IDS.map((d) => {
+    const delivered = countDelivered(getManifest(d)!)
+    const dir = resolve(REPO_ROOT, 'public/assets/decks', d, 'cards')
+    const onDisk = existsSync(dir)
+      ? readdirSync(dir).filter((f) => f.endsWith('.webp')).length
+      : 0
+    return { d, delivered, onDisk }
+  })
   check(
-    'B-03d 五套当前已交付数量均为 0（尚无原画通过人工批准）',
-    CANONICAL_DECK_IDS.every((d) => countDelivered(getManifest(d)!) === 0),
+    'B-03d 五套已交付数量与磁盘实际牌面文件数一致（不许谎报交付）',
+    deliveredVsDisk.every((x) => x.delivered === x.onDisk),
+    deliveredVsDisk.map((x) => `${x.d.replace('legacy-', '')} ${x.delivered}/${x.onDisk}`).join(' · '),
+  )
+  /* FULL-ART-01 / 02 / 03：数量本身也要断言，否则「一致」可以在 0=0 时成立 */
+  check(
+    'FULL-ART-01/02 五套均为 78/78，合计 390',
+    deliveredVsDisk.every((x) => x.delivered === 78) &&
+      deliveredVsDisk.reduce((a, x) => a + x.delivered, 0) === 390,
+    `${deliveredVsDisk.reduce((a, x) => a + x.delivered, 0)} / 390`,
   )
 
   /* ── B-04 production resolver 默认不把 benchmark 当 approved ── */
@@ -654,6 +743,229 @@ function checkStyleAnchor(): void {
   )
 }
 
+/* ══════════════════════════════════════════════════════════════
+ * FULL-ART · Phase C3 全量原画导入
+ *
+ * 这一组断言的对象是**磁盘上真实的 780 个 runtime 文件**，
+ * 不是 manifest 里的声明。上面 B-09 已经查过「登记的文件存在」，
+ * 这里查的是反方向与更深一层：文件本身是不是一张合格的图。
+ *
+ * 【为什么 decode 默认只抽样】
+ * 全量 decode 390 张约 10 秒，cards + thumbs 就是 20 秒 ——
+ * 而 artwork:check 在 `npm run build` 的关键路径上。
+ * metadata 是全量的（283ms，能抓到尺寸/格式/损坏头），
+ * 完整 decode 每套抽 10 张；`--deep` 走全量，用于导入与返修后的验收。
+ * ══════════════════════════════════════════════════════════ */
+
+const DEEP = process.argv.includes('--deep')
+
+async function checkFullArtwork(): Promise<void> {
+  section(`FULL-ART · 390 张正式原画${DEEP ? '（--deep 全量 decode）' : ''}`)
+
+  const EXPECTED_IDS = cardIds
+  const cardsOf = (d: string, dir: 'cards' | 'thumbs'): string[] => {
+    const p = resolve(REPO_ROOT, 'public/assets/decks', d, dir)
+    return existsSync(p)
+      ? readdirSync(p).filter((f) => f.endsWith('.webp')).map((f) => f.replace(/\.webp$/, ''))
+      : []
+  }
+
+  /* FULL-ART-03 每个 canonical deckId 都有完整 78 cardIds
+     FULL-ART-04 不存在重复 cardId（readdir 天然去重，所以这里查的是
+     「文件名集合 === 期望集合」，多一个少一个都会红） */
+  let allComplete = true
+  let noExtra = true
+  for (const d of CANONICAL_DECK_IDS) {
+    const ids = cardsOf(d, 'cards')
+    const set = new Set(ids)
+    if (set.size !== 78 || !EXPECTED_IDS.every((id) => set.has(id))) allComplete = false
+    if (ids.some((id) => !EXPECTED_IDS.includes(id))) noExtra = false
+  }
+  check('FULL-ART-03 五套各有完整 78 个 canonical cardId', allComplete)
+  check('FULL-ART-04 不存在多余或重复的 cardId 文件', noExtra)
+
+  /* FULL-ART-07 所有 Thumb 均存在 */
+  check(
+    'FULL-ART-07 五套 thumbs 各 78 张，合计 390',
+    CANONICAL_DECK_IDS.every((d) => cardsOf(d, 'thumbs').length === 78),
+    `${CANONICAL_DECK_IDS.reduce((a, d) => a + cardsOf(d, 'thumbs').length, 0)} / 390`,
+  )
+
+  /* FULL-ART-06 比例 / 尺寸 / 格式，FULL-ART-15 可 decode */
+  const sharp = (await import('sharp')).default
+  const bad: string[] = []
+  let decoded = 0
+  for (const d of CANONICAL_DECK_IDS) {
+    for (const [dir, spec] of [
+      ['cards', { w: 1080, h: 1800 }],
+      ['thumbs', { w: 240, h: 400 }],
+    ] as const) {
+      const ids = cardsOf(d, dir as 'cards' | 'thumbs').sort()
+      const sample = DEEP ? ids : ids.filter((_, i) => i % 8 === 0)
+      for (const id of ids) {
+        const file = resolve(REPO_ROOT, 'public/assets/decks', d, dir, `${id}.webp`)
+        const m = await sharp(file).metadata()
+        if (m.format !== 'webp') bad.push(`${d}/${dir}/${id} format=${m.format}`)
+        if (m.width !== spec.w || m.height !== spec.h) {
+          bad.push(`${d}/${dir}/${id} ${m.width}×${m.height}`)
+        }
+        if (m.orientation && m.orientation !== 1) bad.push(`${d}/${dir}/${id} exif=${m.orientation}`)
+        if (sample.includes(id)) {
+          try {
+            await sharp(file).raw().toBuffer()
+            decoded += 1
+          } catch (e) {
+            bad.push(`${d}/${dir}/${id} decode 失败: ${(e as Error).message.slice(0, 40)}`)
+          }
+        }
+      }
+    }
+  }
+  check(
+    'FULL-ART-06 全部 runtime WebP 尺寸/格式/EXIF 正确',
+    bad.length === 0,
+    bad.length === 0 ? 'cards 1080×1800 · thumbs 240×400 · 780 个文件' : bad.slice(0, 3).join(' | '),
+  )
+  check(
+    `FULL-ART-15 runtime WebP 可成功 decode${DEEP ? '' : '（抽样）'}`,
+    bad.filter((b) => b.includes('decode')).length === 0,
+    `${decoded} 个文件`,
+  )
+
+  /* 运行期兜底：已登记的牌加载失败时必须能落到程序化牌面，
+     而不是给用户一个「加载失败」方块。这条断言查的是 plan 里带没带兜底数据 ——
+     渲染分支由 CardArtworkLayer 消费（见该文件 error 分支）。
+
+     注意它与 ART-02 的分工：ART-02 管「素材从未交付」（missing → procedural），
+     这条管「素材已交付但这次没加载到」。两者都不许让牌阵开天窗，
+     但前者的 plan 是 procedural，后者的 plan 是 raster + fallback。 */
+  let withFallback = 0
+  let raster = 0
+  for (const d of CANONICAL_DECK_IDS) {
+    for (const id of cardIds) {
+      const plan = resolveCardArtwork(d, id)
+      if (plan.kind !== 'raster') continue
+      raster += 1
+      if (plan.fallback) withFallback += 1
+    }
+  }
+  check(
+    'FULL-ART-08b 已登记的牌都带运行期程序化兜底（弱网/误删不开天窗）',
+    raster > 0 && withFallback === raster,
+    `${withFallback} / ${raster}`,
+  )
+  /* 反向：raster 牌组（没有 artPackId）不许有兜底 ——
+     那会变成「用程序化图冒充还没画的牌」，正是 MissingArtworkPlan 要防的事。 */
+  const artworkRasterHasNoFallback = ARTWORK_DECK_IDS.every((d) =>
+    cardIds.every((id) => {
+      const plan = resolveCardArtwork(d, id)
+      return plan.kind !== 'raster' || !plan.fallback
+    }),
+  )
+  check('FULL-ART-08c 未开工的 raster 牌组没有兜底（不许冒充成品）', artworkRasterHasNoFallback)
+
+  /* ── Phase C4 视觉 QA 分级 ──
+     【这一组断言存在的理由：让 final 无法靠跑测试拿到】
+     程序化校验（尺寸/格式/decode）证明的是「文件是好的」，
+     它对「画的是不是这张牌」一无所知 —— pentacles-09 画了 12 个五芒星，
+     所有自动断言依然全绿。所以 final 的门槛必须挂在人工复核上，
+     并且**有未修复 P0 的牌永远不能是 final**，否则这条门槛形同虚设。 */
+  const finalCards: string[] = []
+  const p0Cards: string[] = []
+  for (const [deckId, cards] of Object.entries(PRODUCTION_CARDS)) {
+    for (const [cardId, asset] of Object.entries(cards)) {
+      const key = `${deckId}/${cardId}`
+      if ((asset.status ?? 'final') === 'final') finalCards.push(key)
+      if (QA_SEVERITY[key] === 'P0') p0Cards.push(key)
+    }
+  }
+  check(
+    'C4-01 存在未修复 P0 的牌一律不是 final',
+    p0Cards.every((k) => !finalCards.includes(k)),
+    `P0 ${p0Cards.length} 张 · final ${finalCards.length} 张`,
+  )
+  check(
+    'C4-02 每张待复核牌都有明确的 severity 分级',
+    NEEDS_VISUAL_REVIEW.every((k) => QA_SEVERITY[k] !== undefined),
+    `${NEEDS_VISUAL_REVIEW.length} 张待复核`,
+  )
+  /* 这条断言会在 P0 清零时**主动失败**，提醒把门槛推进到下一档 ——
+     一条永远绿的断言等于没有断言。 */
+  check(
+    'C4-03 P0 清单与 QA 结论一致（Phase C4.1 门槛）',
+    p0Cards.length === 0,
+    p0Cards.length === 0 ? 'P0 = 0' : p0Cards.join(' · '),
+  )
+  check(
+    'C4-04 final 数量等于 codegen 记录（防止手工改 status）',
+    finalCards.length === FINAL_COUNT,
+    `${finalCards.length} / ${FINAL_COUNT}`,
+  )
+
+  /* FULL-ART-10 五套切换后相同 cardId 的 artwork URL 必须不同。
+     这条是「五套是不是真的五套」在**资产层**的证据 ——
+     identity 不同但 URL 相同，就是同一张图换了个名字。 */
+  let urlsDistinct = true
+  for (const id of EXPECTED_IDS) {
+    const urls = new Set(
+      CANONICAL_DECK_IDS.map((d) => {
+        const plan = resolveCardArtwork(d, id)
+        return plan.kind === 'raster' ? plan.path : `non-raster:${d}`
+      }),
+    )
+    if (urls.size !== CANONICAL_DECK_IDS.length) urlsDistinct = false
+  }
+  check('FULL-ART-10 同一 cardId 在五套下的 artwork URL 两两不同', urlsDistinct, `78 张 × 5 套`)
+
+  /* FULL-ART-11 五套相同 cardId 的 Semantic Data 必须完全一致。
+     B-08 只验了 The Fool 一张；390 张原画到位后，
+     「牌组只改变画面」这条产品承诺必须在**全部 78 张**上成立。
+     做法是拿语义层的牌逐张比对自身 —— resolver 拿不到牌义，
+     所以这里真正验的是：没有任何代码路径能让 deckId 改写牌义。 */
+  const semanticStable = allCards.every((card) => {
+    const seen = CANONICAL_DECK_IDS.map(() =>
+      JSON.stringify({
+        id: card.id,
+        nameZh: card.nameZh,
+        arcana: card.arcana,
+        number: card.number,
+        up: card.meaningUpright,
+        rev: card.meaningReversed,
+        kwUp: card.keywordsUpright,
+        kwRev: card.keywordsReversed,
+      }),
+    )
+    return new Set(seen).size === 1
+  })
+  check('FULL-ART-11 五套下 78 张牌义逐字段相同', semanticStable, `${allCards.length} 张`)
+
+  /* FULL-ART-12 Artwork 变化不能影响 upright / reversed。
+     resolver 的签名里根本没有 orientation —— 这条断言把
+     「结构上不可能」变成「可被证伪」：如果谁给 plan 加了朝向字段，它会红。 */
+  const planKeys = new Set(Object.keys(resolveCardArtwork(CANONICAL_DECK_IDS[0]!, cardIds[0]!)))
+  check(
+    'FULL-ART-12 artwork plan 不携带 orientation（正逆位不受牌面影响）',
+    !planKeys.has('orientation') && !planKeys.has('reversed') && !planKeys.has('upright'),
+    [...planKeys].join(','),
+  )
+
+  /* FULL-ART-13 已由 ART-03「artwork plan 不携带任何牌义字段」覆盖，
+     此处补一条方向相反的：Reading 侧的 prompt 构造不得 import 牌面路径。
+     上面第 251 行已有 `!/from '.*decks\//` 对 prompt 源码的检查，
+     这里只断言那条检查覆盖到了 artwork 路径模块。 */
+  const promptSrcAll = [
+    resolve(REPO_ROOT, 'server/prompts/tarotReadingPromptV2.ts'),
+    resolve(REPO_ROOT, 'server/context/rebuild.ts'),
+  ]
+    .filter((f) => existsSync(f))
+    .map((f) => readFileSync(f, 'utf8'))
+    .join('\n')
+  check(
+    'FULL-ART-13 Reading prompt 不引用任何 artwork 路径/资产模块',
+    !/artwork\/paths|artwork\/resolver|artwork\/manifests|assets\/decks/.test(promptSrcAll),
+  )
+}
+
 /* ══════════════════════════════════════════════════════════════ */
 
 console.log(`${B}Artwork Pipeline 自检${X}`)
@@ -662,6 +974,7 @@ checkDifferentiation()
 checkBriefs()
 checkStyleAnchor()
 checkNoRegression()
+await checkFullArtwork()
 
 console.log(`\n${'─'.repeat(64)}`)
 if (fail === 0) {

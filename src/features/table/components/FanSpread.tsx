@@ -104,6 +104,20 @@ export function FanSpread({
   const [size, setSize] = useState({ w: 375, h: 214 })
   const [scrollOffset, setScrollOffset] = useState(0)
   const [nudgeIndex, setNudgeIndex] = useState<number | null>(null)
+  /* ── 键盘游标（roving tabindex）──
+     【为什么是一个 Tab 停靠点，而不是 78 个】
+     D4 实测：只用键盘走流程，到摊牌页就走不下去了 ——
+     78 张牌全是 pointer-only 的 motion.div，键盘既聚焦不到牌，也就拿不起来。
+     （D2-05 补的是「手上有牌之后往哪放」，前提是先拿得起来；这一步当时没覆盖。）
+
+     但让 78 张牌各自成为一个 Tab 停靠点同样不可用：键盘用户要按 78 次 Tab
+     才能走到「去翻牌」。所以用标准的 roving tabindex：
+     整个扇形是一个控件，方向键在牌之间移动游标，Enter / 空格拿起当前这张。
+
+     【游标不泄露牌的身份，G-05 未松动】
+     游标只表示「扇形里的第几张」—— 这是所有人肉眼都能看到的位置，
+     不是牌面。aria 播报的也只有位置，绝不含 cardId 或牌名。 */
+  const [cursor, setCursor] = useState<number | null>(null)
 
   const gesture = useRef({
     active: false,
@@ -274,6 +288,48 @@ export function FanSpread({
     }
   }
 
+  /* 还能拿的牌（已拿走的不参与键盘游标） */
+  const available = layouts.map((l) => l.index).filter((i) => !takenIndexes.includes(i))
+  const cursorIndex = cursor !== null && available.includes(cursor) ? cursor : (available[0] ?? null)
+
+  const moveCursor = (delta: number) => {
+    if (!available.length) return
+    const at = cursorIndex === null ? 0 : available.indexOf(cursorIndex)
+    const next = Math.min(available.length - 1, Math.max(0, (at === -1 ? 0 : at) + delta))
+    setCursor(available[next]!)
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    switch (e.key) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+        e.preventDefault(); moveCursor(1); break
+      case 'ArrowLeft':
+      case 'ArrowUp':
+        e.preventDefault(); moveCursor(-1); break
+      case 'Home':
+        e.preventDefault(); if (available.length) setCursor(available[0]!); break
+      case 'End':
+        e.preventDefault(); if (available.length) setCursor(available[available.length - 1]!); break
+      case 'Enter':
+      case ' ':
+      case 'Spacebar': {
+        e.preventDefault()
+        if (cursorIndex === null) return
+        if (locked) {
+          /* 手上已经有牌 —— 与指针路径同一个反馈：抖一下，不拿起 */
+          setNudgeIndex(cursorIndex)
+          window.setTimeout(() => setNudgeIndex(null), 240)
+        } else {
+          onPick(cursorIndex)
+        }
+        break
+      }
+      default:
+        break
+    }
+  }
+
   return (
     <div
       ref={containerRef}
@@ -281,7 +337,16 @@ export function FanSpread({
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerCancel={handlePointerUp}
-      className="table-surface relative h-full w-full overflow-hidden"
+      onKeyDown={handleKeyDown}
+      role="listbox"
+      tabIndex={0}
+      aria-label={
+        locked
+          ? '摊开的牌。手上已经有一张牌了，先把它放到牌位上'
+          : `摊开的牌，共 ${available.length} 张可选。左右方向键移动，Enter 或空格拿起`
+      }
+      aria-activedescendant={cursorIndex === null ? undefined : `fan-card-${cursorIndex}`}
+      className="table-surface relative h-full w-full overflow-hidden rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70"
       style={{ touchAction: 'none' }}
     >
       {layouts.map((l) => {
@@ -291,8 +356,21 @@ export function FanSpread({
         return (
           <motion.div
             key={l.index}
+            id={`fan-card-${l.index}`}
+            role="option"
+            aria-selected={l.index === cursorIndex}
+            /* 只播报位置，不播报牌面 —— 牌还没翻开（G-05） */
+            aria-label={`扇形里的第 ${available.indexOf(l.index) + 1} 张`}
             className="absolute top-0 left-0"
-            style={{ width: l.width, height: l.height, zIndex: l.zIndex }}
+            style={{
+              width: l.width,
+              height: l.height,
+              zIndex: l.zIndex,
+              /* 键盘游标的可见标记：只有用键盘操作时才会出现 */
+              outline: l.index === cursorIndex && cursor !== null ? '2px solid rgba(203,211,225,.75)' : undefined,
+              outlineOffset: 2,
+              borderRadius: 4,
+            }}
             // initial={false}：牌必须先「在」。逐张展开的入场动画只是加分项，
             // 一旦它没跑完（低端机、后台标签页、rAF 节流），整副牌会停在 opacity 0 —— 那是致命的。
             // 宁可没有入场动画，也不能出现「牌堆是空的」。

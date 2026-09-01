@@ -1,0 +1,98 @@
+{
+  "reveal": [
+    {
+      "vp": "d1024",
+      "cards": 5,
+      "maxCardW": 100,
+      "leftGap": 218,
+      "rightGap": 218,
+      "spanW": 589,
+      "vw": 1024,
+      "usedPct": 58,
+      "overflowX": false
+    },
+    {
+      "vp": "d1440",
+      "cards": 5,
+      "maxCardW": 122,
+      "leftGap": 361,
+      "rightGap": 361,
+      "spanW": 717,
+      "vw": 1440,
+      "usedPct": 50,
+      "overflowX": false
+    },
+    {
+      "vp": "d1920",
+      "cards": 5,
+      "maxCardW": 152,
+      "leftGap": 514,
+      "rightGap": 514,
+      "spanW": 892,
+      "vw": 1920,
+      "usedPct": 46,
+      "overflowX": false
+    }
+  ],
+  "reading": [
+    {
+      "vp": "d1024",
+      "textColW": 600,
+      "approxCharsPerLine": 38,
+      "stripCards": 5,
+      "stripMaxW": 82,
+      "clipped": false,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "vp": "d1440",
+      "textColW": 600,
+      "approxCharsPerLine": 38,
+      "stripCards": 5,
+      "stripMaxW": 95,
+      "clipped": false,
+      "overflowX": false,
+      "devStrings": []
+    },
+    {
+      "vp": "d1920",
+      "textColW": 600,
+      "approxCharsPerLine": 38,
+      "stripCards": 5,
+      "stripMaxW": 110,
+      "clipped": false,
+      "overflowX": false,
+      "devStrings": []
+    }
+  ],
+  "journal": [
+    {
+      "vp": "d1024",
+      "overflowX": false,
+      "imgs": 5,
+      "scrollH": 768,
+      "devStrings": [],
+      "text": "塔罗日记\n在「我最近在考虑要不要换一份工作」这个…\n1 分钟前\n⌃\n⌃\n⌃\n二选一\n\n两条路都通向情绪，但一边是收束，一边是消耗"
+    },
+    {
+      "vp": "d1440",
+      "overflowX": false,
+      "imgs": 5,
+      "scrollH": 900,
+      "devStrings": [],
+      "text": "塔罗日记\n在「我最近在考虑要不要换一份工作」这个…\n1 分钟前\n⌃\n⌃\n⌃\n二选一\n\n两条路都通向情绪，但一边是收束，一边是消耗"
+    },
+    {
+      "vp": "d1920",
+      "overflowX": false,
+      "imgs": 5,
+      "scrollH": 1080,
+      "devStrings": [],
+      "text": "塔罗日记\n在「我最近在考虑要不要换一份工作」这个…\n1 分钟前\n⌃\n⌃\n⌃\n二选一\n\n两条路都通向情绪，但一边是收束，一边是消耗"
+    }
+  ],
+  "findings": [],
+  "consoleErrors": [],
+  "failedRequests": []
+}

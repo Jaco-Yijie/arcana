@@ -233,6 +233,28 @@ export interface RasterArtworkPlan {
   height: number
   /** 是否有独立缩略图。没有时 thumb 档会回退到 full */
   hasThumb: boolean
+  /**
+   * 运行期加载失败时的程序化兜底。**只有 hybrid 牌组有**。
+   *
+   * 【它和 MissingArtworkPlan 解决的不是同一个问题】
+   * `missing` 说的是「这张牌的素材从来没交付过」—— 那是待办事项，
+   * 必须如实显示，绝不能用程序化图冒充成品（见 MissingArtworkPlan 注释）。
+   *
+   * 这里说的是「素材已交付并已登记，但这一次没加载到」——
+   * 弱网、CDN 抖动、文件被误删。用户此刻正在读自己的占卜结果，
+   * 让他在三张牌中间看到一张写着「加载失败」的方块，
+   * 和让他看到一张能读的程序化牌面，前者没有任何额外价值：
+   * 缺失的事实对他不可操作，而牌阵的完整性对他是全部意义。
+   *
+   * 所以只在**已登记**的牌上兜底，且只兜底到本牌组自己声明的
+   * artPackId（不会串到别的牌组），并在 console 留一条 warn 供开发者定位。
+   * raster 牌组没有 artPackId，拿不到这个字段，行为完全不变。
+   */
+  fallback?: {
+    motif: string
+    hue: number
+    tier: 'signature' | 'placeholder'
+  }
 }
 
 /**

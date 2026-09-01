@@ -31,6 +31,48 @@ function trimTail(text: string): string {
   return text.replace(/[?？。.!！,，、\s]+$/u, '').trim()
 }
 
+/**
+ * 从原问题里取出一个**能读通**的片段，用于引用。
+ *
+ * 【为什么不是 slice】
+ * 原实现是 `trimTail(raw).slice(0, 20)` —— 按字符数硬切。
+ * D1 实测输入「我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？」
+ * 得到的引用是「我最近在考虑要不要换一份工作，但又怕现在」——
+ * 断在「但又怕现在」，语义被切坏，而且这个破损版本会被写进 session，
+ * 一路出现在牌阵页标题、Journal 列表，最终进入 Reading 的 Prompt。
+ * 一个显示层的截断污染了整条数据链。
+ *
+ * 【现在怎么切】
+ * 1. 先在第一个子句边界处断开（，。；！？等）—— 那才是一个完整的意思单元
+ * 2. 子句本身就短于上限时，直接用它，不再补齐到上限
+ * 3. 第一个子句仍然超长时，退到上限内**最后一个**边界
+ * 4. 完全没有边界可用（一句大白话）时才按字符截，并加省略号如实表示被截过
+ */
+function clipPhrase(text: string, max: number): string {
+  const src = trimTail(text)
+  if (src.length <= max) return src
+
+  const BOUNDARY = /[，,。.；;！!？?、\n]/u
+
+  /* 1–2. 第一个子句 */
+  const first = src.split(BOUNDARY)[0]?.trim() ?? ''
+  if (first.length > 0 && first.length <= max) return first
+
+  /* 3. 上限内最后一个边界 */
+  const head = src.slice(0, max)
+  let cut = -1
+  for (let i = head.length - 1; i >= Math.floor(max * 0.4); i--) {
+    if (BOUNDARY.test(head[i]!)) {
+      cut = i
+      break
+    }
+  }
+  if (cut > 0) return trimTail(head.slice(0, cut))
+
+  /* 4. 实在没有边界 —— 如实标注截断，不假装这是完整的话 */
+  return `${head.trim()}…`
+}
+
 /** 粗略提取问题里的「对象」，失败时返回 null */
 function extractSubject(raw: string): string | null {
   const match = raw.match(/(他|她|对方|前任|前男友|前女友|老板|同事|朋友|家人)/u)
@@ -61,7 +103,7 @@ const RULES: Rule[] = [
     id: 'when',
     test: (raw) => /(什么时候|何时|多久|几月|多长时间|when will)/iu.test(raw),
     build: (raw) => ({
-      optimized: `关于「${trimTail(raw).slice(0, 20)}」这件事，目前进展到哪一步，还缺什么条件？`,
+      optimized: `关于「${clipPhrase(raw, 20)}」这件事，目前进展到哪一步，还缺什么条件？`,
       rationale: '把「什么时候」换成「还缺什么」，答案才是你能着手处理的部分。',
     }),
   },
@@ -71,7 +113,7 @@ const RULES: Rule[] = [
     test: (raw) =>
       /(会成功|能成吗|能不能成|会不会成|有没有希望|能通过吗|会顺利吗|能拿到吗)/u.test(raw),
     build: (raw) => ({
-      optimized: `想让「${trimTail(raw).slice(0, 18)}」这件事往好的方向走，我目前的哪些做法在起作用、哪些在拖后腿？`,
+      optimized: `想让「${clipPhrase(raw, 18)}」这件事往好的方向走，我目前的哪些做法在起作用、哪些在拖后腿？`,
       rationale: '成不成取决于接下来的动作，所以更值得问的是「什么在起作用」。',
     }),
   },
@@ -80,7 +122,7 @@ const RULES: Rule[] = [
     id: 'binary-choice',
     test: (raw) => /(还是|要不要|该不该|应不应该|选哪个|哪一个更好|要不要换)/u.test(raw),
     build: (raw) => ({
-      optimized: `在「${trimTail(raw).slice(0, 20)}」这个选择上，两个方向各自会带我去到什么样的处境？`,
+      optimized: `在「${clipPhrase(raw, 20)}」这个选择上，两个方向各自会带我去到什么样的处境？`,
       rationale: '与其求一个答案，不如把两条路各自的代价都摊开来看。',
     }),
   },
@@ -89,7 +131,7 @@ const RULES: Rule[] = [
     id: 'self-judgement',
     test: (raw) => /(我是不是|我是否|是不是我|我做错了吗|我不好吗)/u.test(raw),
     build: (raw) => ({
-      optimized: `在「${trimTail(raw).slice(0, 18)}」这件事里，我的哪些感受是真实的，哪些是我自己加上去的？`,
+      optimized: `在「${clipPhrase(raw, 18)}」这件事里，我的哪些感受是真实的，哪些是我自己加上去的？`,
       rationale: '把「是不是」换成「哪些是真的」，可以避免一开始就给自己下判决。',
     }),
   },
@@ -98,7 +140,7 @@ const RULES: Rule[] = [
     id: 'why-blame',
     test: (raw) => /(为什么总是|为什么老是|为什么他|为什么她|凭什么|为何总)/u.test(raw),
     build: (raw) => ({
-      optimized: `在反复出现的这个局面里（${trimTail(raw).slice(0, 16)}），有哪些部分是我可以改变的？`,
+      optimized: `在反复出现的这个局面里（${clipPhrase(raw, 16)}），有哪些部分是我可以改变的？`,
       rationale: '把追问原因换成寻找可控部分，比追责更有机会打破循环。',
     }),
   },
@@ -108,7 +150,7 @@ const RULES: Rule[] = [
     test: (raw) => /(吗|嘛|么|会不会|是否|可不可以|能不能)\s*[?？]?$/u.test(trimTail(raw) + '？') ||
       /(吗|会不会|是否|能不能|可不可以)/u.test(raw),
     build: (raw) => ({
-      optimized: `关于「${trimTail(raw).slice(0, 20)}」，我现在最需要弄清楚的是什么？`,
+      optimized: `关于「${clipPhrase(raw, 20)}」，我现在最需要弄清楚的是什么？`,
       rationale: '是非问句只有两个答案，而开放式的问法能让这次抽牌给出更多可用的信息。',
     }),
   },
@@ -155,7 +197,7 @@ export function optimizeQuestion(raw: string): OptimizedQuestion | null {
   // 兜底：陈述式的诉说也可以被整理成一个可被塔罗回应的问题。
   if (text.length >= 10) {
     return {
-      optimized: `关于「${trimTail(text).slice(0, 20)}」，此刻有什么是我还没看清的？`,
+      optimized: `关于「${clipPhrase(text, 20)}」，此刻有什么是我还没看清的？`,
       rationale: '把描述整理成一个开放的问题，这次抽牌才有可以回应的落点。',
     }
   }

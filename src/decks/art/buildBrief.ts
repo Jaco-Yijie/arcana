@@ -22,8 +22,62 @@ import type { BriefTarot, CardArtBrief } from './types'
 
 const cardById = new Map(allCards.map((c) => [c.id, c]))
 
+const COUNT_WORDS: Readonly<Record<number, string>> = {
+  2: 'TWO',
+  3: 'THREE',
+  4: 'FOUR',
+  5: 'FIVE',
+  6: 'SIX',
+  7: 'SEVEN',
+  8: 'EIGHT',
+  9: 'NINE',
+  10: 'TEN',
+}
+
+const SUIT_SYMBOLS: Readonly<Record<string, string>> = {
+  wands: 'wands',
+  cups: 'cups',
+  swords: 'swords',
+  pentacles: 'pentacle symbols (coin/disks with a clear five-pointed pentagram)',
+}
+
 export function briefKey(deckId: DeckId, cardId: string): string {
   return `${deckId}:${cardId}`
+}
+
+/**
+ * 未来生产 Prompt 的硬约束入口。
+ *
+ * 这些条件不能退化成 `roughly` / `about` / `canonical symbols`：
+ * 它们描述的是画面必须满足的可核验事实，而不是创作建议。
+ */
+export function buildProductionPromptConstraints(cardId: string): readonly string[] {
+  const card = cardById.get(cardId)
+  if (!card) return []
+
+  if (card.arcana === 'minor' && card.number >= 2 && card.number <= 10 && card.suit) {
+    const count = COUNT_WORDS[card.number]
+    const symbol = SUIT_SYMBOLS[card.suit]
+    if (count && symbol) {
+      return [
+        `EXACTLY ${count} clearly identifiable ${symbol}.`,
+        'Every counted symbol must be individually visible, non-overlapping, and inside the frame.',
+        'No border ornament, background object, reflection, or shadow may be mistaken for an additional counted symbol.',
+      ]
+    }
+  }
+
+  if (cardId === 'major-12') {
+    return [
+      "HARD ARCHETYPE: the human subject's own body is upside-down.",
+      'The person is in an actual suspended orientation: head lower than hips and feet higher than head.',
+      'The inversion must not be shown only through a reflection, shadow, landscape, architecture, or a rotated whole image.',
+      'The posture and expression are calm, voluntary, contemplative, and clearly awake.',
+      'The scene is symbolic and non-violent, with no injury, pain, struggle, or execution imagery.',
+    ]
+  }
+
+  return []
 }
 
 /** 从语义层读出牌义部分。**唯一来源，不接受任何覆盖参数** */
@@ -77,6 +131,7 @@ export function buildCardArtBrief(deckId: DeckId, cardId: string): CardArtBrief 
       ...bible.forbidden,
       ...bible.palette.forbidden.map((c) => `禁用颜色：${c}`),
     ],
+    visualProductionConstraints: buildProductionPromptConstraints(cardId),
     thumbnailAnchor: seed.thumbnailAnchor,
   }
 }

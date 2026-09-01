@@ -1,0 +1,10 @@
+[注入] Slow 3G · 400kbps · RTT 400ms
+[首页可交互] 5.3s
+[Deck Library 首个牌组名可见] 0.8s
+[Deck Library] img=25 加载失败=0 overflowX=false 高度=2339
+[摊开 78 张] 到达
+[5 张全部翻开] 12.8s
+[Reveal] img=5 加载失败=0 svg=1 overflowX=false CTA可见=true
+[Reveal 文本] 退出 | 洗 | 切 | 抽 | 翻 | 现状 | ⌃ | A 方向发展 · 逆位 | A 结果 | B 方向发展 | B 结果 | 开始完整解读
+
+✅ 无 console error

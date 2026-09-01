@@ -9,8 +9,9 @@ import { useSettings } from '@/hooks/useSettings'
 import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
 import { resolveDeckId } from '@/decks/ids'
-import { answerFollowUp } from '@/features/reading'
 import { buildFollowUpContext } from '@/features/reading/buildReadingInput'
+import { requestFollowUp } from '@/features/reading/followUpClient'
+import { FollowUpSection } from '@/features/reading/FollowUpSection'
 import { StructuredReadingView } from '@/features/reading/ReadingSections'
 import { DEEP_THINKING_HINT, READING_PHASES, useReading } from '@/hooks/useReading'
 import { ReadingModePicker } from '@/features/reading/ReadingModePicker'
@@ -45,7 +46,8 @@ export default function ReadingPage() {
   const navigate = useNavigate()
   const { session, patchSession, addFollowUp, completeSession } = useSession()
   const { markCompletedOnce } = useSettings()
-  const [pending, setPending] = useState('')
+  const [followUpBusy, setFollowUpBusy] = useState(false)
+  const [followUpError, setFollowUpError] = useState<string | null>(null)
   const [finishedId, setFinishedId] = useState<string | null>(null)
 
   // 用户先选模式再开始 —— 不替他决定要不要多等一分钟。
@@ -89,12 +91,31 @@ export default function ReadingPage() {
     })
     .filter((x): x is NonNullable<typeof x> => x !== null)
 
-  const send = () => {
-    const text = pending.trim()
-    if (!text || !followUpContext) return
+  /* 追问：单轮，不累积。每次都用**同一份**上下文重新发送 ——
+     界面上的历史只是阅读顺序，不进 Prompt（G-13 在类型与载荷两层都不给它机会）。 */
+  const send = async (text: string) => {
+    if (!followUpContext || !session || followUpBusy) return
+    setFollowUpBusy(true)
+    setFollowUpError(null)
     addFollowUp({ role: 'user', content: text })
-    addFollowUp({ role: 'assistant', content: answerFollowUp(text, followUpContext) })
-    setPending('')
+
+    /* digest 优先取结构化解读 —— 它才是用户屏幕上真正读到的那一份。
+       取不到才回落到 V1 结构（老日记恢复出来的会话）。 */
+    const digest = structured
+      ? {
+          headline: structured.readingTheme,
+          summary: structured.overallEnergy,
+          answer: structured.answerToQuestion,
+        }
+      : undefined
+
+    try {
+      const result = await requestFollowUp(session.id, followUpContext, text, digest)
+      addFollowUp({ role: 'assistant', content: result.answer })
+      if (result.degradedReason) setFollowUpError(`${result.degradedReason}（下面是本地回答）`)
+    } finally {
+      setFollowUpBusy(false)
+    }
   }
 
   const finish = () => {
@@ -227,6 +248,12 @@ export default function ReadingPage() {
         ) : structured ? (
           <>
             <StructuredReadingView reading={structured} localFallback={localFallback} />
+            <FollowUpSection
+              messages={session.followUps}
+              busy={followUpBusy}
+              error={followUpError}
+              onSend={send}
+            />
           </>
         ) : !reading ? (
           <div className="flex flex-col gap-3 pt-6">
@@ -291,22 +318,12 @@ export default function ReadingPage() {
               ))}
             </Accordion>
 
-            {session.followUps.length > 0 && (
-              <div className="mt-6 flex flex-col gap-3">
-                {session.followUps.map((m) => (
-                  <div
-                    key={m.id}
-                    className={
-                      m.role === 'user'
-                        ? 'self-end rounded-lg bg-surface-2 px-3.5 py-2 text-note text-text-hi'
-                        : 'text-read text-text-mid'
-                    }
-                  >
-                    {m.content}
-                  </div>
-                ))}
-              </div>
-            )}
+            <FollowUpSection
+              messages={session.followUps}
+              busy={followUpBusy}
+              error={followUpError}
+              onSend={send}
+            />
 
             <div className="mt-8">
               <Button size="lg" variant="ghost" block onClick={finish}>
@@ -317,26 +334,6 @@ export default function ReadingPage() {
         )}
       </main>
 
-      {/* 追问：Context 只限于本次抽牌，不是通用 Chatbot。
-          【只在解读出来之后才出现】还在选模式、还在等结果、或者失败了的时候，
-          用户根本没有可追问的内容 —— 那时候摆一个输入框只会挡住真正要做的选择。 */}
-      {(structured || reading) && (
-        <div
-          className="sticky bottom-0 flex items-end gap-2 border-t border-line-hairline bg-bg-deep/90 px-4 pt-2 backdrop-blur"
-          style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
-        >
-          <input
-            value={pending}
-            onChange={(e) => setPending(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && send()}
-            placeholder="关于这次抽牌继续问…"
-            className="h-11 flex-1 rounded-sm border border-line-hairline bg-bg-void/50 px-3 text-read text-text-hi outline-none placeholder:text-text-faint"
-          />
-          <Button size="md" variant="quiet" onClick={send} disabled={!pending.trim()}>
-            发送
-          </Button>
-        </div>
-      )}
     </div>
   )
 }

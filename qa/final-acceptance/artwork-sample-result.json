@@ -1,0 +1,489 @@
+{
+  "total": 50,
+  "decks": [
+    "legacy-moonlight",
+    "legacy-classic",
+    "legacy-forest",
+    "legacy-celestial",
+    "legacy-shadow"
+  ],
+  "brokenFull": 0,
+  "brokenThumb": 0,
+  "sizeMismatch": 0,
+  "crossDeckDuplicates": 0,
+  "crossDeckFingerprints": {
+    "total": 50,
+    "failed": 0,
+    "valid": "✅ 全部取到，串套检测真实生效"
+  },
+  "coverage": {
+    "arcana": [
+      "major",
+      "minor"
+    ],
+    "suits": [
+      "wands",
+      "cups",
+      "swords",
+      "pentacles"
+    ],
+    "orientations": [
+      "upright",
+      "reversed"
+    ],
+    "courtCards": 15
+  },
+  "problems": [],
+  "rows": [
+    {
+      "deck": "legacy-moonlight",
+      "card": "major-00",
+      "name": "愚者",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-moonlight",
+      "card": "major-13",
+      "name": "死神",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-moonlight",
+      "card": "major-21",
+      "name": "世界",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-moonlight",
+      "card": "wands-01",
+      "name": "权杖首牌",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-moonlight",
+      "card": "cups-07",
+      "name": "圣杯七",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-moonlight",
+      "card": "swords-10",
+      "name": "宝剑十",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-moonlight",
+      "card": "pentacles-05",
+      "name": "星币五",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-moonlight",
+      "card": "wands-11",
+      "name": "权杖侍从",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-moonlight",
+      "card": "cups-14",
+      "name": "圣杯国王",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-moonlight",
+      "card": "swords-12",
+      "name": "宝剑骑士",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "major-00",
+      "name": "愚者",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "major-13",
+      "name": "死神",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "major-21",
+      "name": "世界",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "wands-01",
+      "name": "权杖首牌",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "cups-07",
+      "name": "圣杯七",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "swords-10",
+      "name": "宝剑十",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "pentacles-05",
+      "name": "星币五",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "wands-11",
+      "name": "权杖侍从",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "cups-14",
+      "name": "圣杯国王",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-classic",
+      "card": "swords-12",
+      "name": "宝剑骑士",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "major-00",
+      "name": "愚者",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "major-13",
+      "name": "死神",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "major-21",
+      "name": "世界",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "wands-01",
+      "name": "权杖首牌",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "cups-07",
+      "name": "圣杯七",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "swords-10",
+      "name": "宝剑十",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "pentacles-05",
+      "name": "星币五",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "wands-11",
+      "name": "权杖侍从",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "cups-14",
+      "name": "圣杯国王",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-forest",
+      "card": "swords-12",
+      "name": "宝剑骑士",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "major-00",
+      "name": "愚者",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "major-13",
+      "name": "死神",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "major-21",
+      "name": "世界",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "wands-01",
+      "name": "权杖首牌",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "cups-07",
+      "name": "圣杯七",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "swords-10",
+      "name": "宝剑十",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "pentacles-05",
+      "name": "星币五",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "wands-11",
+      "name": "权杖侍从",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "cups-14",
+      "name": "圣杯国王",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-celestial",
+      "card": "swords-12",
+      "name": "宝剑骑士",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "major-00",
+      "name": "愚者",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "major-13",
+      "name": "死神",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "major-21",
+      "name": "世界",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "wands-01",
+      "name": "权杖首牌",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "cups-07",
+      "name": "圣杯七",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "swords-10",
+      "name": "宝剑十",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "pentacles-05",
+      "name": "星币五",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "wands-11",
+      "name": "权杖侍从",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "cups-14",
+      "name": "圣杯国王",
+      "orientation": "upright",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    },
+    {
+      "deck": "legacy-shadow",
+      "card": "swords-12",
+      "name": "宝剑骑士",
+      "orientation": "reversed",
+      "full": "1080×1800",
+      "thumb": "240×400",
+      "ok": true
+    }
+  ]
+}

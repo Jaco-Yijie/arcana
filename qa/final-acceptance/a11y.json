@@ -1,0 +1,259 @@
+{
+  "steps": [
+    {
+      "name": "home-带着问题来",
+      "found": true,
+      "tabs": 1,
+      "el": {
+        "tag": "BUTTON",
+        "label": "带着问题来\n有想问的事，让牌帮你把它摊开",
+        "ring": true
+      },
+      "url": "/"
+    },
+    {
+      "name": "decks-就用这副",
+      "found": true,
+      "tabs": 12,
+      "el": {
+        "tag": "BUTTON",
+        "label": "就用这副",
+        "ring": true
+      },
+      "url": "/decks"
+    },
+    {
+      "name": "question-键盘输入",
+      "found": true,
+      "tabs": 0,
+      "el": {
+        "tag": "TEXTAREA",
+        "label": "我想知道……",
+        "ring": false
+      },
+      "url": "/question?mode=question"
+    },
+    {
+      "name": "question-继续",
+      "found": true,
+      "tabs": 2,
+      "el": {
+        "tag": "BUTTON",
+        "label": "继续",
+        "ring": true
+      },
+      "url": "/question?mode=question"
+    },
+    {
+      "name": "question-用优化后的",
+      "found": true,
+      "tabs": 2,
+      "el": {
+        "tag": "BUTTON",
+        "label": "用优化后的",
+        "ring": true
+      },
+      "url": "/question?mode=question"
+    },
+    {
+      "name": "spread-二选一",
+      "found": true,
+      "tabs": 3,
+      "el": {
+        "tag": "BUTTON",
+        "label": "二选一\n5 张\n适合面前有两个具体选项、想比较各自代价的问题。",
+        "ring": true
+      },
+      "url": "/spread"
+    },
+    {
+      "name": "focus-直接开始",
+      "found": true,
+      "tabs": 2,
+      "el": {
+        "tag": "BUTTON",
+        "label": "直接开始",
+        "ring": true
+      },
+      "url": "/focus"
+    },
+    {
+      "name": "shuffle-聚焦牌堆",
+      "found": true,
+      "tabs": 2,
+      "el": {
+        "tag": "DIV",
+        "label": "牌堆。滑动可以洗牌；用键盘时按 Enter 或空格洗一次",
+        "ring": true
+      },
+      "url": "/table/shuffle"
+    },
+    {
+      "name": "shuffle-洗好了",
+      "found": true,
+      "tabs": 1,
+      "el": {
+        "tag": "BUTTON",
+        "label": "洗好了",
+        "ring": true
+      },
+      "url": "/table/shuffle"
+    },
+    {
+      "name": "cut-聚焦牌堆",
+      "found": true,
+      "tabs": 2,
+      "el": {
+        "tag": "DIV",
+        "label": "切牌位置。上下方向键调整，Enter 或空格在这里切开",
+        "ring": true
+      },
+      "url": "/table/cut"
+    },
+    {
+      "name": "cut-从这里切开",
+      "found": true,
+      "tabs": 1,
+      "el": {
+        "tag": "BUTTON",
+        "label": "从这里切开",
+        "ring": true
+      },
+      "url": "/table/cut"
+    },
+    {
+      "name": "cut-合起来",
+      "found": true,
+      "tabs": 1,
+      "el": {
+        "tag": "BUTTON",
+        "label": "合起来",
+        "ring": true
+      },
+      "url": "/table/cut"
+    },
+    {
+      "name": "cut-摊开牌",
+      "found": true,
+      "tabs": 1,
+      "el": {
+        "tag": "BUTTON",
+        "label": "摊开牌",
+        "ring": true
+      },
+      "url": "/table/cut"
+    },
+    {
+      "name": "draw-键盘摆牌",
+      "found": true,
+      "tabs": 0,
+      "el": null,
+      "url": "/table/draw",
+      "placed": 5
+    },
+    {
+      "name": "draw-去翻牌",
+      "found": true,
+      "tabs": 1,
+      "el": {
+        "tag": "BUTTON",
+        "label": "去翻牌",
+        "ring": true
+      },
+      "url": "/table/draw"
+    },
+    {
+      "name": "reveal-键盘翻牌",
+      "found": true,
+      "tabs": 0,
+      "el": null,
+      "url": "/table/reveal",
+      "flipped": 5
+    },
+    {
+      "name": "reveal-开始完整解读",
+      "found": true,
+      "tabs": 2,
+      "el": {
+        "tag": "BUTTON",
+        "label": "开始完整解读",
+        "ring": true
+      },
+      "url": "/table/reveal"
+    }
+  ],
+  "findings": [
+    {
+      "sev": "P2",
+      "step": "question-键盘输入",
+      "issue": "聚焦时无可见焦点环：我想知道……"
+    }
+  ],
+  "shuffleControls": [
+    "退出",
+    "牌堆。滑动可以洗牌；用键盘时按 Enter 或空格洗一次"
+  ],
+  "keyboardShuffleCount": 8,
+  "cutPickedText": "大约第 45 张",
+  "keyboardPlaced": 5,
+  "escapeClosesSheet": true,
+  "keyboardFlipped": 5,
+  "sessionAfterKeyboard": {
+    "id": "ses_mtipylcr_b9e46900afa9",
+    "deckId": "legacy-moonlight",
+    "spreadId": "two-choices",
+    "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+    "mode": "question",
+    "stage": "reveal",
+    "placements": [
+      {
+        "pos": "current",
+        "idx": 0,
+        "rev": true
+      },
+      {
+        "pos": "a-process",
+        "idx": 4,
+        "rev": true
+      },
+      {
+        "pos": "a-result",
+        "idx": 8,
+        "rev": true
+      },
+      {
+        "pos": "b-process",
+        "idx": 12,
+        "rev": true
+      },
+      {
+        "pos": "b-result",
+        "idx": 16,
+        "rev": true
+      }
+    ],
+    "orientations": [
+      "reversed",
+      "upright",
+      "upright",
+      "reversed",
+      "reversed"
+    ],
+    "cardIds": [
+      "major-10",
+      "pentacles-03",
+      "wands-09",
+      "major-17",
+      "cups-01"
+    ],
+    "followUps": 0,
+    "hasStructured": false
+  },
+  "shiftTabWorks": true,
+  "reducedMotion": {
+    "active": true,
+    "overflowX": false,
+    "consoleErrors": 0
+  },
+  "consoleErrors": []
+}

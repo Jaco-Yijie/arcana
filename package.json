@@ -20,7 +20,8 @@
     "deploy:build": "npm ci && npm run build",
     "build:streamlit": "tsc -b && npm run deck:check && vite build --config vite.streamlit.config.ts",
     "thumbs": "tsx scripts/generate-thumbnails.ts",
-    "spec:fool": "tsx scripts/fool-spec.ts"
+    "spec:fool": "tsx scripts/fool-spec.ts",
+    "release:check": "tsx scripts/release-check.ts"
   },
   "dependencies": {
     "framer-motion": "^12.43.0",

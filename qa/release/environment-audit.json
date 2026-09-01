@@ -1,0 +1,61 @@
+{
+  "phase": "D3",
+  "secrets": {
+    "apiKeyInClientBundle": false,
+    "directUpstreamInClientBundle": false,
+    "srcReadsApiKey": false,
+    "clientEndpoints": [
+      "/api/tarot/reading",
+      "/api/tarot/reading/stream",
+      "/api/tarot/followup",
+      "/api/tarot/config"
+    ],
+    "configEndpointExposes": [
+      "provider",
+      "model",
+      "ready"
+    ],
+    "note": "Key 只在 server/env.ts 读取，只存在于 Node 进程内。任何 VITE_ 前缀的密钥都会被打进前端产物，因此被 REL-03 静态禁止。"
+  },
+  "envVars": [
+    "DEEPSEEK_API_KEY",
+    "DEEPSEEK_BASE_URL",
+    "DEEPSEEK_MAX_TOKENS",
+    "DEEPSEEK_MODEL",
+    "DEEPSEEK_REASONING_EFFORT",
+    "DEEPSEEK_TEMPERATURE",
+    "DEEPSEEK_TIMEOUT_MS",
+    "PORT",
+    "READING_PROVIDER",
+    "VITE_DECK_ASSET_BASE_URL"
+  ],
+  "assetDelivery": {
+    "variable": "VITE_DECK_ASSET_BASE_URL",
+    "appliedAt": "build-time（Vite 静态替换 import.meta.env，不是运行期读取）",
+    "devDefault": "/assets/decks（走 public/，零配置可跑）",
+    "productionExample": "https://assets.example.com/arcana/decks",
+    "urlShape": "<base>/<deckId>/cards/<cardId>.webp?r=<rev>  ·  <base>/<deckId>/thumbs/<cardId>.webp?r=<rev>",
+    "vendorNeutral": true
+  },
+  "cacheHeaders": {
+    "artwork": "public, max-age=31536000, immutable",
+    "hashedJsCss": "public, max-age=31536000, immutable",
+    "indexHtml": "no-cache",
+    "invalidation": "牌面文件名恒定（=cardId），靠 URL 上的 ?r=<rev> 失效；rev+1 即新 URL。"
+  },
+  "timeoutMatrix": {
+    "serverToDeepSeekMs": 180000,
+    "browserToServerMs": null,
+    "browserNote": "客户端不自设超时，由服务端 180s 封顶 —— 避免「上游还在跑，浏览器先断」。",
+    "streamlitTransportMs": 240000,
+    "ordering": "server 180s < streamlit 240s（外层必须比内层长，否则外层会误杀正常请求）"
+  },
+  "serviceWorker": {
+    "present": false,
+    "note": "本轮刻意不引入 —— 390 张资产的缓存管理会迅速复杂化；优先 browser cache + CDN。"
+  },
+  "fonts": {
+    "webFonts": 0,
+    "note": "全部使用系统字体栈（含五套牌组的 nameFont），零字体字节。原画里的题字已烘焙进图片。"
+  }
+}

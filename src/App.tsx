@@ -106,6 +106,11 @@ export default function App() {
               {BenchmarkReviewPage && (
                 <Route path="/dev/benchmark" element={<BenchmarkReviewPage />} />
               )}
+              {/* 未开工的牌组仍然要能看 —— 但只在 dev，不污染用户正式页面。
+                  生产构建里 import.meta.env.DEV 为 false，这一行整体不渲染。 */}
+              {import.meta.env.DEV && (
+                <Route path="/dev/decks" element={<DeckLibraryPage showAll />} />
+              )}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             </Suspense>
