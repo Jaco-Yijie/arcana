@@ -1,0 +1,240 @@
+{
+  "generatedAt": "2026-09-01T16:12:51.720Z",
+  "summary": {
+    "mode": "standard",
+    "cards": 3,
+    "runs": 5,
+    "promptChars": 10313,
+    "systemChars": 7962,
+    "userChars": 2351,
+    "estInputTokens": 6446,
+    "firstDeltaMs": {
+      "min": 704,
+      "median": 868,
+      "p80": 1201,
+      "max": 1201
+    },
+    "firstMeaningfulMs": {
+      "min": 1066,
+      "median": 1283,
+      "p80": 1523,
+      "max": 1523
+    },
+    "totalMs": {
+      "min": 16668,
+      "median": 19197,
+      "p80": 20561,
+      "max": 20561
+    },
+    "outputChars": {
+      "min": 1914,
+      "median": 2120,
+      "p80": 2270,
+      "max": 2270
+    },
+    "estOutputTokens": {
+      "min": 1196,
+      "median": 1325,
+      "p80": 1419,
+      "max": 1419
+    },
+    "deltaCount": {
+      "min": 942,
+      "median": 1064,
+      "p80": 1184,
+      "max": 1184
+    }
+  },
+  "runs": [
+    {
+      "mode": "standard",
+      "cards": 3,
+      "run": 0,
+      "promptChars": 10313,
+      "systemChars": 7962,
+      "userChars": 2351,
+      "estInputTokens": 6446,
+      "t": {
+        "T0_start": 0,
+        "T1_requestSent": 0,
+        "T5_responseHeaders": 72,
+        "T6_firstDelta": 1049,
+        "T7_themeClosed": 1283,
+        "T9_done": 16668
+      },
+      "outputChars": 1914,
+      "estOutputTokens": 1196,
+      "phases": [
+        {
+          "phase": "writing",
+          "at": 73
+        }
+      ],
+      "deltaCount": 942,
+      "firstThemeClosedMs": 1283,
+      "firstDeltaMs": 1049,
+      "ok": true
+    },
+    {
+      "mode": "standard",
+      "cards": 3,
+      "run": 1,
+      "promptChars": 10310,
+      "systemChars": 7962,
+      "userChars": 2348,
+      "estInputTokens": 6444,
+      "t": {
+        "T0_start": 0,
+        "T1_requestSent": 0,
+        "T5_responseHeaders": 9,
+        "T6_firstDelta": 1201,
+        "T7_themeClosed": 1523,
+        "T9_done": 17952
+      },
+      "outputChars": 2043,
+      "estOutputTokens": 1277,
+      "phases": [
+        {
+          "phase": "writing",
+          "at": 9
+        }
+      ],
+      "deltaCount": 1010,
+      "firstThemeClosedMs": 1523,
+      "firstDeltaMs": 1201,
+      "ok": true
+    },
+    {
+      "mode": "standard",
+      "cards": 3,
+      "run": 2,
+      "promptChars": 10298,
+      "systemChars": 7962,
+      "userChars": 2336,
+      "estInputTokens": 6436,
+      "t": {
+        "T0_start": 0,
+        "T1_requestSent": 0,
+        "T5_responseHeaders": 6,
+        "T6_firstDelta": 868,
+        "T7_themeClosed": 1146,
+        "T9_done": 19197
+      },
+      "outputChars": 2151,
+      "estOutputTokens": 1344,
+      "phases": [
+        {
+          "phase": "writing",
+          "at": 6
+        }
+      ],
+      "deltaCount": 1107,
+      "firstThemeClosedMs": 1146,
+      "firstDeltaMs": 868,
+      "ok": true
+    },
+    {
+      "mode": "standard",
+      "cards": 3,
+      "run": 3,
+      "promptChars": 10293,
+      "systemChars": 7962,
+      "userChars": 2331,
+      "estInputTokens": 6433,
+      "t": {
+        "T0_start": 0,
+        "T1_requestSent": 0,
+        "T5_responseHeaders": 6,
+        "T6_firstDelta": 704,
+        "T7_themeClosed": 1066,
+        "T9_done": 20561
+      },
+      "outputChars": 2270,
+      "estOutputTokens": 1419,
+      "phases": [
+        {
+          "phase": "writing",
+          "at": 6
+        }
+      ],
+      "deltaCount": 1184,
+      "firstThemeClosedMs": 1066,
+      "firstDeltaMs": 704,
+      "ok": true
+    },
+    {
+      "mode": "standard",
+      "cards": 3,
+      "run": 4,
+      "promptChars": 10296,
+      "systemChars": 7962,
+      "userChars": 2334,
+      "estInputTokens": 6435,
+      "t": {
+        "T0_start": 0,
+        "T1_requestSent": 0,
+        "T5_responseHeaders": 4,
+        "T6_firstDelta": 853,
+        "T7_themeClosed": 1369,
+        "T9_done": 20320
+      },
+      "outputChars": 2120,
+      "estOutputTokens": 1325,
+      "phases": [
+        {
+          "phase": "writing",
+          "at": 4
+        }
+      ],
+      "deltaCount": 1064,
+      "firstThemeClosedMs": 1369,
+      "firstDeltaMs": 853,
+      "ok": true
+    }
+  ],
+  "previous": {
+    "mode": "standard",
+    "cards": 3,
+    "runs": 2,
+    "promptChars": 10313,
+    "systemChars": 7962,
+    "userChars": 2351,
+    "estInputTokens": 6446,
+    "firstDeltaMs": {
+      "min": 1893,
+      "median": 2122,
+      "p80": 2122,
+      "max": 2122
+    },
+    "firstMeaningfulMs": {
+      "min": 2241,
+      "median": 2430,
+      "p80": 2430,
+      "max": 2430
+    },
+    "totalMs": {
+      "min": 17590,
+      "median": 19169,
+      "p80": 19169,
+      "max": 19169
+    },
+    "outputChars": {
+      "min": 1945,
+      "median": 1956,
+      "p80": 1956,
+      "max": 1956
+    },
+    "estOutputTokens": {
+      "min": 1216,
+      "median": 1223,
+      "p80": 1223,
+      "max": 1223
+    },
+    "deltaCount": {
+      "min": 985,
+      "median": 1009,
+      "p80": 1009,
+      "max": 1009
+    }
+  }
+}

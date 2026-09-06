@@ -386,8 +386,11 @@ function checkLoadingPolicy(): void {
   /* 【记录当前事实】prefetchDeck 目前没有任何调用方，
      且对 hybrid manifest 直接 return —— 也就是说整副预取实际从未发生。
      这条断言锁的是「哪天有人接上它时，它只能取 thumb」。 */
+  /* 查**调用**而不是提及 —— D5 新增的 useSelectedArtworkPrefetch 在注释里
+     正当地写了「prefetchDeck 至今没有调用方」，第一版把那句注释当成了调用。
+     要守的性质是「牌桌上不会预取整副牌」，那由调用形式决定，不由注释决定。 */
   const callers = srcText.filter(
-    ({ p, t }) => !p.endsWith('resolver.ts') && /prefetchDeck/.test(t),
+    ({ p, t }) => !p.endsWith('resolver.ts') && /\bprefetchDeck\s*\(/.test(t),
   )
   check(
     'REL-10d 整副预取若被启用，调用方必须在牌桌之外（当前无调用方）',
@@ -448,13 +451,31 @@ function checkBundle(): void {
     inlined.length ? inlined.join(', ') : `扫描 ${distJs.length} 个产物`,
   )
 
-  /* 牌面必须以静态文件形式存在于 dist/assets/decks，而不是被 hash 改名后散落 */
+  /* ── REL-12b 牌面的存在性按**资产模式**判定 ──
+     本地模式：牌面必须以原路径静态存在于 dist/assets/decks，且未被打包器改名 ——
+     那是「克隆下来直接能跑」与单机部署的依赖。
+     远端模式：牌面走 CDN，vite.config 的 dropLocalArtworkWhenRemote 会把那 139MB
+     从产物里剔掉。此时 dist 里**不应该**还有牌面 —— 留着是纯死重量。
+
+     第一版无条件断言「必须存在」，于是每一次为 CDN 做的生产构建都会让它失败。
+     一个在生产构建下必然红的 gate，最后一定会被当成噪音忽略掉。 */
   const deckDir = join(DIST, 'assets', 'decks')
-  check(
-    'REL-12b 牌面以原路径静态存在于 dist/assets/decks（未被打包器改名）',
-    existsSync(join(deckDir, 'legacy-moonlight', 'cards', 'major-00.webp')),
-    'dist/assets/decks/legacy-moonlight/cards/major-00.webp',
-  )
+  const remoteBase = (process.env.VITE_DECK_ASSET_BASE_URL ?? '').trim()
+  const isRemoteMode = remoteBase.length > 0 && remoteBase !== '/assets/decks'
+  const localArtworkPresent = existsSync(join(deckDir, 'legacy-moonlight', 'cards', 'major-00.webp'))
+  if (isRemoteMode) {
+    check(
+      'REL-12b 远端资产模式：产物里不留本地牌面副本（139MB 死重量）',
+      !existsSync(deckDir),
+      `资产根 ${remoteBase}`,
+    )
+  } else {
+    check(
+      'REL-12b 本地资产模式：牌面以原路径静态存在于 dist/assets/decks（未被改名）',
+      localArtworkPresent,
+      'dist/assets/decks/legacy-moonlight/cards/major-00.webp',
+    )
+  }
 
   /* JS 预算。D2 收尾时 index chunk 约 292KB、JS 合计约 640KB。
      给 15% 余量：超了必须解释，而不是悄悄长大。 */

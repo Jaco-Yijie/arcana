@@ -1,0 +1,140 @@
+{
+  "phase": "D5",
+  "method": "生产构建 + 真实 DeepSeek；牌面用 CDP 限速，冷缓存=会话开始时清空缓存但缓存可用",
+  "cardReveal": {
+    "note": "点击「翻开这张牌」→ 牌面首次可见。空白采样帧 = 100ms 采样中牌面未绘制的帧数",
+    "before": {
+      "fast4g_cold": {
+        "visibleMs": 835,
+        "blank": "7/17"
+      },
+      "slow4g_cold": {
+        "visibleMs": 1878,
+        "blank": "17/18"
+      },
+      "slow3g_cold": {
+        "visibleMs": 6482,
+        "blank": "61/62"
+      }
+    },
+    "after": {
+      "fast4g_cold": {
+        "visibleMs": 323,
+        "blank": "2/17",
+        "variant": "full"
+      },
+      "slow4g_cold": {
+        "visibleMs": 320,
+        "blank": "2/17",
+        "variant": "full"
+      },
+      "slow3g_cold": {
+        "visibleMs": 318,
+        "blank": "2/17",
+        "variant": "thumb"
+      },
+      "fast4g_warm": {
+        "visibleMs": 316,
+        "blank": "2/17",
+        "variant": "full"
+      }
+    },
+    "prefetchFiresAtPlacement": true
+  },
+  "standardReading": {
+    "baselineSingleRun": {
+      "1card": {
+        "ttfmtMs": 1641,
+        "totalMs": 16315,
+        "chars": 1549
+      },
+      "3card": {
+        "ttfmtMs": 2005,
+        "totalMs": 26532,
+        "chars": 2968
+      },
+      "5card": {
+        "ttfmtMs": 1341,
+        "totalMs": 38919,
+        "chars": 4404
+      }
+    },
+    "after5Runs3Card": {
+      "firstDeltaMs": {
+        "min": 704,
+        "median": 868,
+        "p80": 1201,
+        "max": 1201
+      },
+      "firstMeaningfulMs": {
+        "min": 1066,
+        "median": 1283,
+        "p80": 1523,
+        "max": 1523
+      },
+      "totalMs": {
+        "min": 16668,
+        "median": 19197,
+        "p80": 20561,
+        "max": 20561
+      },
+      "outputChars": {
+        "median": 2120
+      }
+    },
+    "after1Card": {
+      "ttfmtMs": 1378,
+      "totalMs": 13288,
+      "chars": 1312
+    },
+    "after5Card": {
+      "ttfmtMs": 1260,
+      "totalMs": 22667,
+      "chars": 2693
+    }
+  },
+  "deepRegression": {
+    "baseline": {
+      "totalMs": 101116,
+      "chars": 3471
+    },
+    "after": {
+      "totalMs": 101839,
+      "chars": 3735
+    }
+  },
+  "browserPerceived": {
+    "before": {
+      "firstMeaningfulMs": 1555,
+      "doneMs": 27282,
+      "frozenWindowMs": 22700,
+      "slowHintAtMs": 20225
+    },
+    "after": {
+      "firstMeaningfulMs": 2058,
+      "doneMs": 22769,
+      "frozenWindowMs": 10100,
+      "slowHintAtMs": null
+    }
+  },
+  "artworkSize": {
+    "full": {
+      "count": 390,
+      "min": 113.1,
+      "p50": 294.9,
+      "p75": 464.8,
+      "p90": 564.8,
+      "p95": 585,
+      "max": 635.9,
+      "average": 343.9,
+      "totalMB": 131
+    },
+    "thumb": {
+      "p50": 12.9,
+      "max": 31.2,
+      "totalMB": 6.3
+    },
+    "outlierRule": "> 3 × average (1031.6 KB)",
+    "outliers": []
+  }
+}

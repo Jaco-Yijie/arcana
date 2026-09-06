@@ -1,0 +1,129 @@
+{
+  "profile": "slow4g",
+  "servedFrom": "deployment/frontend",
+  "prefetch": {
+    "full": 1,
+    "thumb": 1,
+    "total": 2
+  },
+  "reveal": {
+    "clickToVisibleMs": 315,
+    "variant": "full",
+    "blankSamples": 2,
+    "requestsAfterClick": 1
+  },
+  "standard": {
+    "firstTextMs": 4587,
+    "doneMs": 13158,
+    "slowHintAtMs": null,
+    "timeline": [
+      {
+        "at": 547,
+        "len": 33
+      },
+      {
+        "at": 1051,
+        "len": 33
+      },
+      {
+        "at": 1557,
+        "len": 33
+      },
+      {
+        "at": 2063,
+        "len": 59
+      },
+      {
+        "at": 2568,
+        "len": 59
+      },
+      {
+        "at": 3075,
+        "len": 111
+      },
+      {
+        "at": 3578,
+        "len": 111
+      },
+      {
+        "at": 4082,
+        "len": 111
+      },
+      {
+        "at": 4587,
+        "len": 212
+      },
+      {
+        "at": 5092,
+        "len": 216
+      },
+      {
+        "at": 5599,
+        "len": 216
+      },
+      {
+        "at": 6102,
+        "len": 216
+      },
+      {
+        "at": 6607,
+        "len": 216
+      },
+      {
+        "at": 7110,
+        "len": 216
+      },
+      {
+        "at": 7615,
+        "len": 216
+      },
+      {
+        "at": 8118,
+        "len": 216
+      },
+      {
+        "at": 8623,
+        "len": 216
+      },
+      {
+        "at": 9127,
+        "len": 216
+      },
+      {
+        "at": 9632,
+        "len": 216
+      },
+      {
+        "at": 10136,
+        "len": 212
+      },
+      {
+        "at": 10640,
+        "len": 212
+      },
+      {
+        "at": 11142,
+        "len": 212
+      },
+      {
+        "at": 11648,
+        "len": 212
+      },
+      {
+        "at": 12151,
+        "len": 212
+      },
+      {
+        "at": 12655,
+        "len": 212
+      },
+      {
+        "at": 13158,
+        "len": 341
+      }
+    ]
+  },
+  "apiCalls": [
+    "POST /api/tarot/reading/stream"
+  ]
+}

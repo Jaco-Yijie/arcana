@@ -20,9 +20,10 @@ import { IS_STREAMLIT } from '@/features/reading/streamlitTransport'
 import {
   StreamReadingError,
   extractPartial,
+  extractPartialCards,
   streamReading,
 } from '@/features/reading/streamClient'
-import type { StreamPhase } from '@/features/reading/streamClient'
+import type { PartialCard, StreamPhase } from '@/features/reading/streamClient'
 import { toLegacyReading } from '@/features/reading/legacyProjection'
 import { useSession } from './useSession'
 
@@ -42,14 +43,23 @@ export const READING_PHASES = [
 export const DEEP_THINKING_HINT = '正在进行更深入的牌面分析，这可能需要一些时间。'
 
 /**
- * 阶段推进间隔。
- * 实测一次真实解读要 60–130s，所以不能每 3 秒跳一格 —— 那样 13 秒就会走完四格，
- * 然后停在最后一句上再干等一分多钟，反而显得卡死了。
+ * 阶段推进间隔与「这次会久一点」的提示时机。
+ *
+ * 【为什么必须按模式分开 —— 这是 D5 实测抓到的感知问题】
+ * 这两个常量原本是按 deep-pro 时代校准的：一次解读 60–130s，所以 14 秒跳一格、
+ * 20 秒提示「通常需要 1–2 分钟」都合理。
+ *
+ * 但标准模式实测只要 19 秒。用旧参数的后果是：
+ * 20.2 秒时弹出「通常需要 1–2 分钟」，而解读 19 秒就已经写完了 ——
+ * 一句本来用来安抚的文案，反而在最后一刻告诉用户「还早着呢」。
+ * 四段阶段文案也只来得及走完两段。
+ *
+ * 所以标准模式用更短的节奏，深度模式保持原样。
  */
-const PHASE_INTERVAL_MS = 14_000
+const PHASE_INTERVAL_MS: Record<ReadingMode, number> = { standard: 5_000, deep: 14_000 }
 
-/** 超过这个时长就如实告诉用户「这次会久一点」，不要让他以为页面挂了 */
-const SLOW_HINT_AFTER_MS = 20_000
+/** 超过这个时长就如实告诉用户「这次会久一点」。标准模式本来就快，门槛相应提高到接近它的实际耗时 */
+const SLOW_HINT_AFTER_MS: Record<ReadingMode, number> = { standard: 25_000, deep: 20_000 }
 
 export type ReadingStatus = 'idle' | 'loading' | 'success' | 'error'
 
@@ -65,7 +75,7 @@ export interface UseReadingResult {
   /** 本地兜底产出的解读（未连接解读服务），UI 必须如实标注 */
   localFallback: boolean
   /** 流式：已经写好且可以提前上屏的片段。校验失败时会被清空。 */
-  partial: { theme: string | null; energy: string | null }
+  partial: { theme: string | null; energy: string | null; cards: PartialCard[] }
   /** 流式阶段。deep 模式在推理期间为 thinking。 */
   streamPhase: StreamPhase | null
   retry: () => void
@@ -83,10 +93,11 @@ export function useReading(
   const [localFallback, setLocalFallback] = useState(false)
   const [attempt, setAttempt] = useState(0)
   const [elapsedSec, setElapsedSec] = useState(0)
-  const [partial, setPartial] = useState<{ theme: string | null; energy: string | null }>({
-    theme: null,
-    energy: null,
-  })
+  const [partial, setPartial] = useState<{
+    theme: string | null
+    energy: string | null
+    cards: PartialCard[]
+  }>({ theme: null, energy: null, cards: [] })
   const [streamPhase, setStreamPhase] = useState<StreamPhase | null>(null)
 
   // 已有解读就不再请求（AC-V2-11：刷新 / 返回都不重新生成）
@@ -123,7 +134,7 @@ export function useReading(
     const startedAt = Date.now()
     const timer = window.setInterval(() => {
       setPhase((p) => Math.min(p + 1, READING_PHASES.length - 1))
-    }, PHASE_INTERVAL_MS)
+    }, PHASE_INTERVAL_MS[readingMode])
     const ticker = window.setInterval(() => {
       setElapsedSec(Math.floor((Date.now() - startedAt) / 1000))
     }, 1000)
@@ -135,17 +146,19 @@ export function useReading(
         let outcome: { reading: StructuredReading; localFallback: boolean }
 
         if (useStream) {
-          setPartial({ theme: null, energy: null })
+          setPartial({ theme: null, energy: null, cards: [] })
           const streamed = await streamReading(
             request,
             {
               onPhase: setStreamPhase,
-              onRestart: () => setPartial({ theme: null, energy: null }),
+              onRestart: () => setPartial({ theme: null, energy: null, cards: [] }),
               onDelta: (acc) => {
                 // 只把**已经闭合**的字段上屏，不显示写到一半的句子
                 setPartial({
                   theme: extractPartial(acc, 'readingTheme'),
                   energy: extractPartial(acc, 'overallEnergy'),
+                  /* 每张牌写完就上屏 —— 否则等待期会有二十多秒屏上一个字都不变 */
+                  cards: extractPartialCards(acc),
                 })
               },
             },
@@ -164,7 +177,7 @@ export function useReading(
       } catch (err) {
         if (controller.signal.aborted) return
         // 校验失败时必须撤回已展示的片段 —— 不能留半截让用户以为那是解读
-        setPartial({ theme: null, energy: null })
+        setPartial({ theme: null, energy: null, cards: [] })
         const known = err instanceof ReadingRequestError || err instanceof StreamReadingError
         const message = known
           ? (err as Error).message
@@ -195,7 +208,7 @@ export function useReading(
     status: existing ? 'success' : status,
     phase,
     elapsedSec,
-    slow: elapsedSec * 1000 >= SLOW_HINT_AFTER_MS,
+    slow: elapsedSec * 1000 >= SLOW_HINT_AFTER_MS[readingMode],
     structured: existing,
     error,
     localFallback,

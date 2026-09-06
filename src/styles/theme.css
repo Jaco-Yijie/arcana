@@ -10,6 +10,21 @@
 
 @import 'tailwindcss';
 
+/* ── 不要扫描构建产物 ──
+   【为什么需要这一行 —— E1.1 实测出来的】
+   Tailwind v4 默认扫描整个项目（除 .gitignore 掉的路径）。
+   `streamlit_build/` 是**已提交**的一份应用产物副本，于是它也被扫了，
+   凭空多生成 3603 B CSS（48250 → 51853）。
+
+   更糟的是那份副本可能是旧的：E1 首次打包时 streamlit_build 里还是 D2 之前的产物，
+   当时 CSS 被撑到 77761 B —— 也就是说**发出去的 CSS 体积取决于
+   仓库里有没有一份陈旧的产物副本**，而不是取决于源码。那不该是可部署产物的性质。
+
+   dist/ 与 deployment/ 已被 .gitignore 排除，本来就不会被扫；
+   streamlit_build/ 因为必须提交（Streamlit Cloud 不跑 npm build）而躲不掉，
+   所以在这里显式排除。 */
+@source not "../../streamlit_build";
+
 /* `static` = 无论是否被 Tailwind 原子类引用，所有 token 都会输出到 :root。
    这是必要的：卡牌几何、动效时长会被组件通过内联 style 与 framer-motion 直接
    以 var(--token) 读取，Tailwind 无法静态分析到它们。 */

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ImmersiveShell } from '@/components/layout/ImmersiveShell'
@@ -8,6 +8,8 @@ import { useSession } from '@/hooks/useSession'
 import { useSettings } from '@/hooks/useSettings'
 import { useFeedback } from '@/hooks/useFeedback'
 import { getSpread } from '@/data/spreads'
+import { resolveDeckId } from '@/decks/ids'
+import { useSelectedArtworkPrefetch } from '@/features/table/useSelectedArtworkPrefetch'
 
 /**
  * 摊牌 · 选牌 · 摆牌。
@@ -21,6 +23,30 @@ export default function DrawPage() {
   const { shouldGuide, markGuidanceSeen } = useSettings()
   const feedback = useFeedback()
   const [interacting, setInteracting] = useState(false)
+
+  /* ── 摆满就开始准备这几张牌的原画（Phase D5）──
+     牌的身份在用户放下最后一张的那一刻就已经确定，而他还要点「去翻牌」、
+     再逐张点开 —— 中间那几秒本来是白等的。不预取时实测：Slow 4G 冷缓存下
+     点击到牌面可见 1662ms，17 个采样帧里 15 帧是空白卡面。
+     只取 placements 里的 1/3/5 张，绝不碰整副牌（见 hook 注释与 PERF-02）。
+
+     【为什么写在早退之前】hooks 必须无条件调用且顺序稳定。
+     session 为空时传空数组 + enabled=false，hook 自己什么都不做。 */
+  const spreadForPrefetch = session?.spreadId ? getSpread(session.spreadId) : null
+  const placedCards = useMemo(
+    () =>
+      session && session.deck.length
+        ? session.placements.map((pl) => ({
+            deckId: resolveDeckId(session.deckId, session.deckSchema),
+            cardId: session.deck[pl.deckIndex]!.cardId,
+          }))
+        : [],
+    [session],
+  )
+  useSelectedArtworkPrefetch(
+    placedCards,
+    !!spreadForPrefetch && placedCards.length === spreadForPrefetch.cardCount,
+  )
 
   if (!session || !session.spreadId) return <Navigate to="/" replace />
 

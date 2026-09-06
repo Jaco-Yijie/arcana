@@ -53,3 +53,11 @@ qa/release/network-*.txt
 
 # 本地 agent / 编辑器配置，与产品无关
 .claude/
+
+# Deployment Package 的**生成物**（npm run deployment:build 重建）。
+# frontend/ 是 dist 的副本、artwork/ 是 public 的副本、manifests 与 secret-audit 是算出来的 ——
+# 四样都能一条命令重建，进仓库只会让 137MB 再翻一倍。
+# README.md 与 production-checklist.md 是手写文档，必须入库，所以显式放行。
+deployment/*
+!deployment/README.md
+!deployment/production-checklist.md

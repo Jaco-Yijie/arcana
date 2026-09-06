@@ -180,19 +180,36 @@ export default function ReadingPage() {
               {streamPhase === 'thinking' ? DEEP_THINKING_HINT : READING_PHASES[phase]}
             </p>
 
-            {/* 流式：已经写好的字段提前上屏。校验失败时这些会被清掉。 */}
-            {(partial.theme || partial.energy) && (
+            {/* ── 流式：写完一段就上屏一段。校验失败时这些会被清掉 ──
+                【为什么连每张牌也要上屏】
+                只上屏主题与基调时实测：4.6 秒后屏上文本停在 211 字符，
+                然后一直冻结到 27.3 秒 —— 模型明明一直在吐字，用户却什么都看不到。
+                现在每张牌写完就出现一张，等待期从「两段话 + 22 秒空白」
+                变成逐张浮现。没有加任何人为延迟：写完即显示。 */}
+            {(partial.theme || partial.energy || partial.cards.length > 0) && (
               <div className="mt-2 flex flex-col gap-3 border-l border-line-hairline pl-4">
                 {partial.theme && (
                   <p className="font-serif text-title text-text-hi">{partial.theme}</p>
                 )}
                 {partial.energy && <p className="text-read text-text-mid">{partial.energy}</p>}
+                {partial.cards.map((c, i) => (
+                  <div key={`${c.cardName}-${i}`} className="flex flex-col gap-1">
+                    <p className="text-caption tracking-wide-caps text-text-faint">
+                      {c.position} · {c.cardName}
+                    </p>
+                    <p className="text-read text-text-mid">{c.interpretation}</p>
+                  </div>
+                ))}
               </div>
             )}
             {/* 实测真实解读要 60–130s。与其让用户怀疑页面挂了，不如如实告诉他要等多久。 */}
             {slow && (
               <p className="text-caption text-text-faint">
-                这次解读比较完整，通常需要 1–2 分钟 · 已等待 {elapsedSec} 秒
+                {/* 文案按模式分开：标准模式实测约 19 秒，再说「1–2 分钟」
+                    会在它快写完的时候告诉用户「还早着呢」。 */}
+                {mode === 'deep'
+                  ? `深度解读比较完整，通常需要 1–2 分钟 · 已等待 ${elapsedSec} 秒`
+                  : `这次比平时久一些 · 已等待 ${elapsedSec} 秒`}
               </p>
             )}
             <div className="mt-2 flex flex-col gap-3">

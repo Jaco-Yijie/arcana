@@ -1,0 +1,23 @@
+{
+  "profile": "slow3g",
+  "cache": "cold",
+  "net": {
+    "latency": 400,
+    "downloadThroughput": 50000,
+    "uploadThroughput": 50000
+  },
+  "selectToPlacedMs": 964,
+  "prefetchFullAfterPlacement": 1,
+  "clickToFirstPaintMs": 318,
+  "firstPaintVariant": "thumb",
+  "blankSamples": 2,
+  "totalSamples": 17,
+  "requestsAfterClick": [
+    {
+      "variant": "thumb",
+      "afterClickMs": 270,
+      "durationMs": 0,
+      "kb": 11.6
+    }
+  ]
+}

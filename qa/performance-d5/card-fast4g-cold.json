@@ -1,0 +1,23 @@
+{
+  "profile": "fast4g",
+  "cache": "cold",
+  "net": {
+    "latency": 60,
+    "downloadThroughput": 500000,
+    "uploadThroughput": 125000
+  },
+  "selectToPlacedMs": 975,
+  "prefetchFullAfterPlacement": 1,
+  "clickToFirstPaintMs": 323,
+  "firstPaintVariant": "full",
+  "blankSamples": 2,
+  "totalSamples": 17,
+  "requestsAfterClick": [
+    {
+      "variant": "full",
+      "afterClickMs": 269,
+      "durationMs": 0,
+      "kb": 273.9
+    }
+  ]
+}

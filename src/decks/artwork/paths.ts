@@ -47,12 +47,35 @@
 import type { AssetVariant } from '../types'
 import type { DeckId } from '../ids'
 
+/** 未配置 CDN 时的本地资产根。走 public/，克隆下来直接能跑。 */
+export const LOCAL_ASSET_BASE = '/assets/decks'
+
+/**
+ * 把 `VITE_DECK_ASSET_BASE_URL` 的原始值归一成资产根。
+ *
+ * 【为什么单独提出来】
+ * 这条规则决定了 390 张牌面在生产环境的每一个 URL —— 一个多余的斜杠就是 780 个 404。
+ * 但 `assetBaseUrl()` 直接读 `import.meta.env`，在 Node 里根本没有这个对象，
+ * 于是它**在测试里只有「未配置」这一条分支可走**：远端根、末尾斜杠、空白串
+ * 这三种真实会出事的输入，一条都测不到。
+ *
+ * 把纯逻辑摘出来之后，deployment:check 可以拿任意输入直接喂给**产品代码本身**，
+ * 而不是喂给一份抄写在测试里的规则副本（两份迟早不同步，那正是本项目一贯避免的）。
+ *
+ * 归一规则只有两条，但两条都必须成立：
+ *   1. 空、纯空白、未配置 → 回落本地根（保证不配 CDN 也能跑）
+ *   2. 去掉**所有**末尾斜杠 → 拼接时不可能产生 `//`
+ */
+export function normalizeAssetBase(raw: string | undefined | null): string {
+  const trimmed = typeof raw === 'string' ? raw.trim() : ''
+  const base = trimmed.length > 0 ? trimmed : LOCAL_ASSET_BASE
+  return base.replace(/\/+$/, '')
+}
+
 /** 资产根。末尾不带斜杠。 */
 export function assetBaseUrl(): string {
   const env = (import.meta as { env?: Record<string, string | undefined> }).env
-  const configured = env?.VITE_DECK_ASSET_BASE_URL
-  const base = configured && configured.trim().length > 0 ? configured.trim() : '/assets/decks'
-  return base.replace(/\/+$/, '')
+  return normalizeAssetBase(env?.VITE_DECK_ASSET_BASE_URL)
 }
 
 /**

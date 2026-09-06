@@ -12,6 +12,7 @@ import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
 import { resolveDeckId } from '@/decks/ids'
 import { computeSpreadLayout } from '@/features/table/layout/spreadLayout'
+import { useSelectedArtworkPrefetch } from '@/features/table/useSelectedArtworkPrefetch'
 import { useElementSize } from '@/hooks/useElementSize'
 import { useIsDesktop } from '@/hooks/useMediaQuery'
 
@@ -39,6 +40,22 @@ export default function RevealPage() {
   const allRevealed =
     !!session && !!spread && session.placements.length === spread.cardCount &&
     session.placements.every((p) => p.revealed)
+
+  /* ── 进入翻牌页就开始准备这几张牌的原画（Phase D5）──
+     DrawPage 摆满时已经预取过一轮；这里再挂一次是为了覆盖
+     「Resume 直接恢复到翻牌页」的路径 —— 那条路不经过 DrawPage。
+     `loadAsset` 按 URL 缓存 Promise，重复挂载不会产生第二次请求。 */
+  const placedCards = useMemo(
+    () =>
+      session && session.deck.length
+        ? session.placements.map((pl) => ({
+            deckId: resolveDeckId(session.deckId, session.deckSchema),
+            cardId: session.deck[pl.deckIndex]!.cardId,
+          }))
+        : [],
+    [session],
+  )
+  useSelectedArtworkPrefetch(placedCards, placedCards.length > 0)
 
   /* 牌位像素位置由牌桌实测尺寸反解。
      hooks 必须在早退之前调用，所以这里对 spread 为 null 的情况给一个空布局。 */

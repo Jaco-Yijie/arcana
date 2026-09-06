@@ -1,0 +1,128 @@
+{
+  "generatedAt": "2026-09-02T03:08:37.638Z",
+  "summary": {
+    "mode": "deep",
+    "cards": 3,
+    "runs": 1,
+    "promptChars": 10849,
+    "systemChars": 8509,
+    "userChars": 2340,
+    "estInputTokens": 6781,
+    "firstDeltaMs": {
+      "min": 102468,
+      "median": 102468,
+      "p80": 102468,
+      "max": 102468
+    },
+    "firstMeaningfulMs": {
+      "min": 102866,
+      "median": 102866,
+      "p80": 102866,
+      "max": 102866
+    },
+    "totalMs": {
+      "min": 128631,
+      "median": 128631,
+      "p80": 128631,
+      "max": 128631
+    },
+    "outputChars": {
+      "min": 3761,
+      "median": 3761,
+      "p80": 3761,
+      "max": 3761
+    },
+    "estOutputTokens": {
+      "min": 2351,
+      "median": 2351,
+      "p80": 2351,
+      "max": 2351
+    },
+    "deltaCount": {
+      "min": 2044,
+      "median": 2044,
+      "p80": 2044,
+      "max": 2044
+    }
+  },
+  "runs": [
+    {
+      "mode": "deep",
+      "cards": 3,
+      "run": 0,
+      "promptChars": 10849,
+      "systemChars": 8509,
+      "userChars": 2340,
+      "estInputTokens": 6781,
+      "t": {
+        "T0_start": 0,
+        "T1_requestSent": 0,
+        "T5_responseHeaders": 35,
+        "T6_firstDelta": 102468,
+        "T7_themeClosed": 102866,
+        "T9_done": 128631
+      },
+      "outputChars": 3761,
+      "estOutputTokens": 2351,
+      "phases": [
+        {
+          "phase": "thinking",
+          "at": 35
+        },
+        {
+          "phase": "thinking",
+          "at": 754
+        }
+      ],
+      "deltaCount": 2044,
+      "firstThemeClosedMs": 102866,
+      "firstDeltaMs": 102468,
+      "ok": true
+    }
+  ],
+  "previous": {
+    "mode": "deep",
+    "cards": 3,
+    "runs": 1,
+    "promptChars": 10849,
+    "systemChars": 8509,
+    "userChars": 2340,
+    "estInputTokens": 6781,
+    "firstDeltaMs": {
+      "min": 79722,
+      "median": 79722,
+      "p80": 79722,
+      "max": 79722
+    },
+    "firstMeaningfulMs": {
+      "min": 79976,
+      "median": 79976,
+      "p80": 79976,
+      "max": 79976
+    },
+    "totalMs": {
+      "min": 101839,
+      "median": 101839,
+      "p80": 101839,
+      "max": 101839
+    },
+    "outputChars": {
+      "min": 3735,
+      "median": 3735,
+      "p80": 3735,
+      "max": 3735
+    },
+    "estOutputTokens": {
+      "min": 2334,
+      "median": 2334,
+      "p80": 2334,
+      "max": 2334
+    },
+    "deltaCount": {
+      "min": 2107,
+      "median": 2107,
+      "p80": 2107,
+      "max": 2107
+    }
+  }
+}

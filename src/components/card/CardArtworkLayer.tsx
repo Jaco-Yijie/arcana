@@ -28,11 +28,30 @@ function RasterArtwork({
   variant: AssetVariant
 }) {
   const state = useCardArtwork(plan, variant)
+  /* ── thumb 兜底（Phase D5）──
+     【为什么需要】实测 Slow 4G 冷缓存下，点「翻开这张牌」到牌面真正可见要 1662ms，
+     其中 15/17 个采样帧是**空白卡面** —— 翻牌动画放完了，画还没到。
+     原实现在 full 未就绪时只铺一层卡面底色，那就是那片空白。
 
-  if (state.status === 'ready') {
+     【为什么用 thumb 而不是别的占位】
+     thumb 是**同一张画**，只是 240px 宽，中位数 12.9 KB（full 是 294.9 KB，23 倍差距）。
+     它几乎总是先到，而且比例、构图、颜色与 full 完全一致 ——
+     换成 full 时是同一个 <img> 换 src，盒子不动、不重播翻牌动画、不产生 CLS。
+     用灰块或模糊占位都做不到这一点。
+
+     【为什么不做长时间 blur 过渡】
+     用户要的是立刻看见牌，不是看一张糊牌慢慢变清楚。所以没有 transition，
+     thumb → full 是直接替换。240px 的图放在 112 CSS px 的盒子里本来就不糊。 */
+  const wantsFull = variant === 'full' && plan.hasThumb
+  const thumb = useCardArtwork(plan, wantsFull ? 'thumb' : variant)
+  const fallbackThumb =
+    wantsFull && state.status === 'loading' && thumb.status === 'ready' ? thumb.asset : null
+
+  if (state.status === 'ready' || fallbackThumb) {
+    const asset = state.status === 'ready' ? state.asset : fallbackThumb!
     return (
       <img
-        src={state.asset.src}
+        src={asset.src}
         alt=""
         aria-hidden="true"
         draggable={false}

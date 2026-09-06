@@ -149,3 +149,45 @@ export function extractPartial(raw: string, field: string): string | null {
   // 字符串还没闭合 —— 说明这个字段正在写，不展示半句
   return null
 }
+
+/**
+ * 从流里抽出**已经写完**的每张牌解释。
+ *
+ * 【为什么需要它 —— 实测出来的】
+ * 原来只有 `readingTheme` 与 `overallEnergy` 会提前上屏。实测（390×844，标准模式）：
+ * 4.6 秒时屏上文本停在 211 个字符，然后**一直冻结到 27.3 秒**，
+ * 中间 22.7 秒里骨架屏一直在跳，用户看不到任何新东西。
+ * 模型其实一直在吐字（1000+ 个 delta），只是没有一个字被显示出来。
+ *
+ * `cards[]` 紧跟在 overallEnergy 之后输出，每张牌写完就可以上屏。
+ * 这样等待期从「两段话 + 22 秒空白」变成「一张一张出现」。
+ *
+ * 【只取写完的，不显示半句】
+ * 与 extractPartial 同一条原则：`interpretation` 的字符串必须已经闭合。
+ * 半截 JSON、写到一半的句子、转义符残片，一律不上屏 ——
+ * 首屏要的是 First Meaningful Text，不是 First Raw Token。
+ */
+export interface PartialCard {
+  cardName: string
+  position: string
+  interpretation: string
+}
+
+export function extractPartialCards(raw: string): PartialCard[] {
+  const at = raw.indexOf('"cards"')
+  if (at === -1) return []
+  const out: PartialCard[] = []
+  /* 逐个对象扫。这里刻意不做 JSON.parse —— 流是不完整的，parse 一定失败；
+     而按字段名取值只依赖模型按 schema 顺序输出，这一点由输出契约保证。 */
+  const re = /"cardName"\s*:\s*"((?:[^"\\]|\\.)*)"[\s\S]*?"position"\s*:\s*"((?:[^"\\]|\\.)*)"[\s\S]*?"interpretation"\s*:\s*"((?:[^"\\]|\\.)*)"\s*,/g
+  const tail = raw.slice(at)
+  for (;;) {
+    const m = re.exec(tail)
+    if (!m) break
+    const unesc = (x: string) => x.replace(/\\n/g, '\n').replace(/\\(.)/g, '$1').trim()
+    const interpretation = unesc(m[3] ?? '')
+    if (!interpretation) continue
+    out.push({ cardName: unesc(m[1] ?? ''), position: unesc(m[2] ?? ''), interpretation })
+  }
+  return out
+}

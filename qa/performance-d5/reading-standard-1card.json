@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-09-01T16:13:05.449Z",
+  "summary": {
+    "mode": "standard",
+    "cards": 1,
+    "runs": 1,
+    "promptChars": 9313,
+    "systemChars": 7962,
+    "userChars": 1351,
+    "estInputTokens": 5821,
+    "firstDeltaMs": {
+      "min": 948,
+      "median": 948,
+      "p80": 948,
+      "max": 948
+    },
+    "firstMeaningfulMs": {
+      "min": 1378,
+      "median": 1378,
+      "p80": 1378,
+      "max": 1378
+    },
+    "totalMs": {
+      "min": 13288,
+      "median": 13288,
+      "p80": 13288,
+      "max": 13288
+    },
+    "outputChars": {
+      "min": 1312,
+      "median": 1312,
+      "p80": 1312,
+      "max": 1312
+    },
+    "estOutputTokens": {
+      "min": 820,
+      "median": 820,
+      "p80": 820,
+      "max": 820
+    },
+    "deltaCount": {
+      "min": 624,
+      "median": 624,
+      "p80": 624,
+      "max": 624
+    }
+  },
+  "runs": [
+    {
+      "mode": "standard",
+      "cards": 1,
+      "run": 0,
+      "promptChars": 9313,
+      "systemChars": 7962,
+      "userChars": 1351,
+      "estInputTokens": 5821,
+      "t": {
+        "T0_start": 0,
+        "T1_requestSent": 0,
+        "T5_responseHeaders": 36,
+        "T6_firstDelta": 948,
+        "T7_themeClosed": 1378,
+        "T9_done": 13288
+      },
+      "outputChars": 1312,
+      "estOutputTokens": 820,
+      "phases": [
+        {
+          "phase": "writing",
+          "at": 37
+        }
+      ],
+      "deltaCount": 624,
+      "firstThemeClosedMs": 1378,
+      "firstDeltaMs": 948,
+      "ok": true
+    }
+  ],
+  "previous": {
+    "mode": "standard",
+    "cards": 1,
+    "runs": 1,
+    "promptChars": 9574,
+    "systemChars": 8223,
+    "userChars": 1351,
+    "estInputTokens": 5984,
+    "firstDeltaMs": {
+      "min": 1331,
+      "median": 1331,
+      "p80": 1331,
+      "max": 1331
+    },
+    "firstMeaningfulMs": {
+      "min": 1641,
+      "median": 1641,
+      "p80": 1641,
+      "max": 1641
+    },
+    "totalMs": {
+      "min": 16315,
+      "median": 16315,
+      "p80": 16315,
+      "max": 16315
+    },
+    "outputChars": {
+      "min": 1549,
+      "median": 1549,
+      "p80": 1549,
+      "max": 1549
+    },
+    "estOutputTokens": {
+      "min": 968,
+      "median": 968,
+      "p80": 968,
+      "max": 968
+    },
+    "deltaCount": {
+      "min": 803,
+      "median": 803,
+      "p80": 803,
+      "max": 803
+    }
+  }
+}

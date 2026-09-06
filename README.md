@@ -61,17 +61,44 @@ Provider 由服务端 `READING_PROVIDER` 决定：
 ```bash
 npm run build
 npm start              # 单进程同时托管 dist/ 与 /api，默认 8787
+curl -s localhost:8787/health
 ```
 
-## 其他命令
+牌面默认走 `public/assets/decks`。要改用 CDN，**在构建期**给一个环境变量：
 
 ```bash
-npm run engine:check   # 抽牌引擎自检：64 项断言，验证「牌不是点击后才生成的」
-npm run reading:check  # 解读评测：118 项断言（牌面完整性 / 语气红线 / 10 组用例）
+VITE_DECK_ASSET_BASE_URL=https://assets.example.com/arcana/decks npm run build
+```
+
+> 这个变量由 Vite 在构建期静态替换，`npm start` 时才设置**不会有任何效果**。
+
+## 验证
+
+```bash
+npm run engine:check      # 抽牌引擎：64 项，验证「牌不是点击后才生成的」
+npm run deck:check        # 牌组契约：338 项
+npm run layout:check      # 牌阵布局：119 项
+npm run artwork:check     # 美术管线：89 项
+npm run reading:check     # 解读评测：118 项（语气红线 / 10 组用例）
+npm run release:check     # 发布边界：45 项（密钥 / 资产路径 / 加载时机 / 打包）
+npm run deployment:check  # 部署包：53 项（包内容 / 资产根契约 / 服务器契约）
+npm run assets:check      # 本地 390 张牌面是否齐备
+
 npm run reading:check -- --live   # 用真实 DeepSeek 跑同一批用例（需 Key）
-npm run build
 npm run lint
 ```
+
+## 部署
+
+```bash
+npm run build             # 本地资产模式
+npm run deployment:build  # 产出 deployment/（前端包 + 牌面包 + manifest + 密钥审计）
+npm run deployment:check  # 验证包
+```
+
+部署架构、环境变量、CDN 路径契约、缓存策略、回滚机制见
+**[`deployment/README.md`](deployment/README.md)**，
+上线勾选清单见 **[`deployment/production-checklist.md`](deployment/production-checklist.md)**。
 
 ## 文档
 

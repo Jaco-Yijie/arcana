@@ -1,0 +1,113 @@
+{
+  "phase": "E2 Preflight",
+  "generatedAt": "2026-09-02T03:26:21Z",
+  "checks": {
+    "1_package_is_e11_latest": {
+      "ok": true,
+      "frontendManifest": "2026-09-02T03:10:10Z",
+      "files": 15,
+      "kb": 741.4,
+      "entryChunkMatchesDist": true
+    },
+    "2_git_working_tree": {
+      "branch": "main",
+      "head": "d620cef feat(v2.6): D2–D4 产品打磨、发布工程与最终验收",
+      "dirtyEntries": 27
+    },
+    "3_frontend_package_runnable": {
+      "ok": true,
+      "indexHtml": 200,
+      "spaFallback": 200
+    },
+    "4_artwork_complete": {
+      "full": 390,
+      "thumb": 390,
+      "total": 780
+    },
+    "5_artwork_manifest": {
+      "contract": "v1",
+      "decks": 5,
+      "sha256Coverage": "780/780",
+      "revisions": {
+        "legacy-moonlight": 1,
+        "legacy-classic": 2,
+        "legacy-forest": 2,
+        "legacy-celestial": 1,
+        "legacy-shadow": 2
+      }
+    },
+    "6_env_example": {
+      "ok": true,
+      "keyEmpty": true,
+      "hasAssetBaseVar": true
+    },
+    "7_local_key_configured": {
+      "ok": true,
+      "note": "仅确认存在，不记录内容"
+    },
+    "8_secret_not_in_artifacts": {
+      "distHasKey": false,
+      "frontendPkgHasKey": false,
+      "skShapeLiteral": false
+    },
+    "9_deployment_check": {
+      "pass": true,
+      "assertions": 54
+    },
+    "10_performance_check": {
+      "pass": true,
+      "assertions": 24
+    }
+  },
+  "blockingIssuesFound": [
+    {
+      "id": "build-size",
+      "issue": "vite 把 public/ 整个复制进 dist，牌面走 CDN 时 dist 仍是 151MB",
+      "fix": "vite.config 新增 dropLocalArtworkWhenRemote 插件：配了远端资产根才移除 dist/assets/decks",
+      "verified": {
+        "localMode": "151MB（兜底保留）",
+        "remoteMode": "772KB"
+      },
+      "assertion": "DEP-03d"
+    },
+    {
+      "id": "rel-12b-conflict",
+      "issue": "REL-12b 无条件要求牌面存在于 dist，与远端模式直接冲突，生产构建必然红",
+      "fix": "按资产模式分支判定",
+      "verified": "两种模式各自 PASS"
+    }
+  ],
+  "fullRegression": {
+    "engine": "64/64",
+    "deck": "338/338",
+    "layout": "119/119",
+    "artwork": "89/89",
+    "reading": "118/118",
+    "release": "45/45",
+    "performance": "24/24",
+    "deployment": "54/54",
+    "total": "851/851",
+    "typecheckApp": 0,
+    "typecheckServer": 0,
+    "lint": 0,
+    "build": "PASS"
+  },
+  "cloudTooling": {
+    "wrangler": false,
+    "rclone": false,
+    "aws": false,
+    "render": false,
+    "gh": true,
+    "existingCredentials": {
+      "wrangler": false,
+      "aws": false,
+      "rclone": false,
+      "envVars": 0
+    }
+  },
+  "serverBinding": {
+    "port": "process.env.PORT ?? 8787",
+    "host": "未指定 → 监听所有接口（含 0.0.0.0）",
+    "healthPath": "/health"
+  }
+}

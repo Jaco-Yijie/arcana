@@ -107,6 +107,23 @@ const server = createServer((req, res) => {
         await handleConfig(res)
         return
       }
+      /* ── GET /health ──
+         给部署平台用的存活/就绪探针（负载均衡、容器编排、监控都要它）。
+         `/api/tarot/config` 也能反映就绪状态，但它在 `/api/` 命名空间下，
+         语义是「前端要用的配置」；探针不该和业务接口共用一条路径 ——
+         哪天业务接口加了鉴权或限流，探针会跟着一起挂。
+
+         【只回可以公开的三件事】
+         绝不返回 Key、baseUrl、模型参数或任何环境变量原文。
+         `readingProviderConfigured` 是布尔值，不是「配了什么」。 */
+      if (url.pathname === '/health' && (req.method === 'GET' || req.method === 'HEAD')) {
+        sendJson(res, 200, {
+          status: 'ok',
+          readingProviderConfigured: config.ready,
+          provider: config.provider,
+        })
+        return
+      }
       if (url.pathname.startsWith('/api/')) {
         sendJson(res, 404, { ok: false, error: { code: 'bad-request', message: '接口不存在' } })
         return

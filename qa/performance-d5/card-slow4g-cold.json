@@ -1,0 +1,23 @@
+{
+  "profile": "slow4g",
+  "cache": "cold",
+  "net": {
+    "latency": 150,
+    "downloadThroughput": 187500,
+    "uploadThroughput": 93750
+  },
+  "selectToPlacedMs": 967,
+  "prefetchFullAfterPlacement": 1,
+  "clickToFirstPaintMs": 320,
+  "firstPaintVariant": "full",
+  "blankSamples": 2,
+  "totalSamples": 17,
+  "requestsAfterClick": [
+    {
+      "variant": "full",
+      "afterClickMs": 269,
+      "durationMs": 0,
+      "kb": 300.2
+    }
+  ]
+}
