@@ -17,6 +17,7 @@ import { config, describeConfig } from './env.ts'
 import { handleConfig, handleReading, handleReadingStream } from './api/readingRoute.ts'
 import { handleFollowUp } from './api/followUpRoute.ts'
 import { sendJson } from './http.ts'
+import { applySecurityHeaders, assetOrigin, cspMode, handleCspReport } from './security.ts'
 
 const DIST = resolve(process.cwd(), 'dist')
 
@@ -89,6 +90,10 @@ function serveStatic(
 const server = createServer((req, res) => {
   const url = new URL(req.url ?? '/', `http://${req.headers.host ?? 'localhost'}`)
 
+  /* 安全头挂在入口，一处覆盖静态、API 与 SSE 三条出口。
+     setHeader 会与之后 writeHead 传入的头合并，所以下面各处都不用重复写。 */
+  applySecurityHeaders(req, res)
+
   void (async () => {
     try {
       if (url.pathname === '/api/tarot/reading' && req.method === 'POST') {
@@ -124,6 +129,12 @@ const server = createServer((req, res) => {
         })
         return
       }
+      /* CSP 违规上报。浏览器发这个请求时不带凭证、不看响应体，
+         回 204 即可。它必须排在 `/api/` 兜底 404 之前。 */
+      if (url.pathname === '/api/csp-report' && req.method === 'POST') {
+        handleCspReport(req, res)
+        return
+      }
       if (url.pathname.startsWith('/api/')) {
         sendJson(res, 404, { ok: false, error: { code: 'bad-request', message: '接口不存在' } })
         return
@@ -152,6 +163,9 @@ const server = createServer((req, res) => {
 server.listen(config.port, () => {
   console.log(`[arcana] 解读服务已启动 http://localhost:${config.port}`)
   console.log(`[arcana] ${describeConfig()}`)
+  console.log(
+    `[arcana] CSP=${cspMode} · 牌面来源=${assetOrigin ?? "'self'（本地资产模式）"}`,
+  )
   if (config.provider === 'deepseek' && !config.apiKey) {
     // 显式要求 deepseek 却没有 Key —— 这一定是配置错误，必须吼出来，
     // 而不是悄悄降级成 Mock 让人以为在用真模型

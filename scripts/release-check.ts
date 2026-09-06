@@ -464,13 +464,26 @@ function checkBundle(): void {
      资产根是**构建期**写进 bundle 的。如果按 `process.env` 判断，
      「构建时设了变量、检查时没设」就会误判 —— E2 实测踩到过这一次：
      产物明明是远端模式，release:check 却按本地模式要求牌面存在，于是红了。
-     产物里那个绝对 URL 才是这次构建真正的事实。 */
-  const bundleJs = distJs.filter((p) => p.endsWith('.js')).map((p) => readFileSync(p, 'utf8')).join('')
-  const remoteBase = (/https?:\/\/[^"'`\s]+/.exec(
-    /["'`](https?:\/\/[^"'`\s]*)["'`]/.exec(bundleJs.match(/["'`]https?:\/\/[^"'`\s]*\/?["'`]/)?.[0] ?? '')?.[1] ?? '',
-  )?.[0] ?? '')
-  const isRemoteMode = !existsSync(deckDir) || /assetBase|r2\.dev|cloudflarestorage/.test(bundleJs)
+
+     上一版的做法是从 bundle 文本里正则捞第一个 http 字面量，并把
+     `r2\.dev|cloudflarestorage` 写进判据 —— 那是**绑定到当前供应商**的：
+     E2.1 换成自有域名后，这条正则就不再认识自己的资产根。
+     现在由构建期直接写 `dist/arcana-build.json`，产物自己说出用的是哪个根。 */
+  const buildManifestPath = join(DIST, 'arcana-build.json')
+  check('REL-12b0 产物自带 arcana-build.json（资产根的唯一事实来源）', existsSync(buildManifestPath))
+  const buildManifest = existsSync(buildManifestPath)
+    ? (JSON.parse(readFileSync(buildManifestPath, 'utf8')) as {
+        assetBase?: string; assetMode?: string; localArtworkInBundle?: boolean
+      })
+    : {}
+  const remoteBase = (buildManifest.assetBase ?? '').startsWith('http') ? buildManifest.assetBase! : ''
+  const isRemoteMode = buildManifest.assetMode === 'remote'
   const localArtworkPresent = existsSync(join(deckDir, 'legacy-moonlight', 'cards', 'major-00.webp'))
+  check(
+    'REL-12b1 manifest 声明的资产模式与产物实际状态一致',
+    isRemoteMode !== localArtworkPresent,
+    `assetMode=${buildManifest.assetMode ?? '?'} · dist 内有牌面=${localArtworkPresent}`,
+  )
   if (isRemoteMode) {
     check(
       'REL-12b 远端资产模式：产物里不留本地牌面副本（139MB 死重量）',
@@ -545,6 +558,88 @@ function checkEnvDocs(): void {
   check('REL-14c 存在 release:check 脚本', typeof pkg.scripts['release:check'] === 'string')
 }
 
+/* ══════════════════════════════════════════════════════════════
+ * SEC —— 安全响应头与 CSP（Phase E2.1）
+ *
+ * 【为什么这些断言直接 import 产品代码，而不是正则扫源码】
+ * CSP 是一条字符串，任何一个指令写错都不会报错，只会让产品悄悄坏掉。
+ * 正则扫源码只能证明「文件里出现过这几个字」；这里 import `buildCsp()`
+ * 拿到的是**服务器真正会发出去的那一条**，然后逐条解析它。
+ * ════════════════════════════════════════════════════════════ */
+async function checkSecurityHeaders(): Promise<void> {
+  section('SEC · 安全响应头与 CSP')
+
+  const { buildCsp, assetOrigin, cspMode } = await import('../server/security.ts')
+  const csp = buildCsp()
+  const directives = new Map(
+    csp.split(';').map((d) => d.trim()).filter(Boolean).map((d) => {
+      const [name, ...values] = d.split(/\s+/)
+      return [name!, values] as const
+    }),
+  )
+  const dir = (name: string) => directives.get(name) ?? []
+
+  /* SEC-01 入口只挂一次。分散到各个 writeHead 里迟早漏一处，
+     而漏掉的那处通常是 SSE —— 唯一的长连接。 */
+  const serverSrc = readFileSync(join(REPO_ROOT, 'server', 'index.ts'), 'utf8')
+  check(
+    'SEC-01 安全头在请求入口统一挂载（覆盖静态 / API / SSE 三条出口）',
+    /applySecurityHeaders\(req, res\)/.test(serverSrc)
+      && serverSrc.indexOf('applySecurityHeaders(req, res)') < serverSrc.indexOf("url.pathname === '/api/tarot/reading'"),
+  )
+
+  /* SEC-02 是整条安全边界在浏览器侧的强制版本。
+     `DEEPSEEK_API_KEY` 待在服务端，所以泄漏路径不是「读到 Key」，
+     而是「让浏览器把 session、问题文本或解读内容发到第三方」。
+     connect-src 一旦被放宽成 `*`，这条边界就只剩一句注释。 */
+  check(
+    "SEC-02 connect-src 只有 'self'（浏览器不可能向任何第三方发请求）",
+    dir('connect-src').length === 1 && dir('connect-src')[0] === "'self'",
+    csp.match(/connect-src[^;]*/)?.[0] ?? '（缺失）',
+  )
+  check(
+    'SEC-03 script-src 不含 unsafe-inline / unsafe-eval',
+    !dir('script-src').some((v) => v.includes('unsafe')),
+    csp.match(/script-src[^;]*/)?.[0] ?? '（缺失）',
+  )
+  check("SEC-04 default-src 兜底为 'self'", dir('default-src')[0] === "'self'")
+  check("SEC-05 object-src 为 'none'", dir('object-src')[0] === "'none'")
+  check("SEC-06 frame-ancestors 为 'none'（不可被嵌进 iframe）", dir('frame-ancestors')[0] === "'none'")
+  check("SEC-07 base-uri 与 form-action 锁在 'self'",
+    dir('base-uri')[0] === "'self'" && dir('form-action')[0] === "'self'")
+
+  /* SEC-08 —— 这一条是 390 张牌面会不会被自己的 CSP 拦掉。
+     img-src 必须放行**产物里那个**资产根，而不是检查时环境变量里的那个。 */
+  const imgSrc = dir('img-src')
+  check("SEC-08 img-src 含 'self'", imgSrc.includes("'self'"))
+  if (assetOrigin) {
+    check(
+      'SEC-08b img-src 放行了产物声明的牌面来源（否则 390 张牌被自己的 CSP 拦掉）',
+      imgSrc.includes(assetOrigin),
+      assetOrigin,
+    )
+  } else {
+    check('SEC-08b 本地资产模式：牌面就在 self，img-src 无需额外来源',
+      imgSrc.length === 1, "img-src 'self'")
+  }
+  check('SEC-08c img-src 不是通配符', !imgSrc.includes('*'), imgSrc.join(' '))
+
+  /* SEC-09 HSTS 必须按协议判断。对 localhost 误发一次 HSTS，
+     整台开发机上所有跑在 localhost 的项目都会被强制升级到 https。 */
+  const secSrc = readFileSync(join(REPO_ROOT, 'server', 'security.ts'), 'utf8')
+  const hstsIdx = secSrc.indexOf('Strict-Transport-Security')
+  check(
+    'SEC-09 HSTS 只在 x-forwarded-proto=https 时发送（不污染 localhost）',
+    hstsIdx > 0 && secSrc.lastIndexOf("x-forwarded-proto", hstsIdx) > 0
+      && secSrc.lastIndexOf("proto === 'https'", hstsIdx) > 0,
+  )
+  check('SEC-10 CSP 违规有上报出口（report-uri）', /report-uri \/api\/csp-report/.test(csp))
+  check('SEC-11 CSP 模式可由 CSP_MODE 切换，无需改代码',
+    ['report-only', 'enforce', 'off'].includes(cspMode)
+      && /CSP_MODE/.test(readFileSync(join(REPO_ROOT, '.env.example'), 'utf8')),
+    `当前 ${cspMode}`)
+}
+
 /* ══════════════════════════════════════════════════════════════ */
 console.log(`${B}Release 自检 · Phase D3${X}`)
 checkAssetPaths()
@@ -554,6 +649,7 @@ checkLoadingPolicy()
 checkFailureFallback()
 checkBundle()
 checkEnvDocs()
+await checkSecurityHeaders()
 
 const line = '─'.repeat(64)
 console.log(`\n${line}`)

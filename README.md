@@ -84,6 +84,9 @@ npm run release:check     # 发布边界：45 项（密钥 / 资产路径 / 加�
 npm run deployment:check  # 部署包：53 项（包内容 / 资产根契约 / 服务器契约）
 npm run assets:check      # 本地 390 张牌面是否齐备
 
+npm run assets:origin -- <资产根 URL>   # 对真实 CDN／对象存储做核验：
+                                        # 200 / WebP 魔数 / sha256 / 缓存头
+
 npm run reading:check -- --live   # 用真实 DeepSeek 跑同一批用例（需 Key）
 npm run lint
 ```
@@ -114,7 +117,21 @@ npm run deployment:check  # 验证包
 | `docs/v2/10-product-scope.md` | V2 Scope / AC-V2 / GV2 红线 |
 | `docs/v2/11-architecture.md` | V2 架构：后端形态 / 错误契约 / 兼容层 |
 | `docs/v2/12-qa-report.md` | V2 QA 报告 |
+| `docs/v2/32-e2-real-deployment.md` | 真实部署报告（R2 + Render） |
+| `docs/v2/33-e21-asset-domain-and-csp.md` | 资产域名切换 Runbook · CSP · 产物自述资产根 |
 | `docs/agent-development-log.md` | Multi-Agent 开发记录（V1 + V2） |
+
+## 安全
+
+服务端对所有响应挂 `nosniff` / `Referrer-Policy` / `X-Frame-Options` /
+`Permissions-Policy`，HTTPS 下另加 HSTS。
+
+CSP 默认 **Report-Only**（`CSP_MODE=report-only`），违规上报到 `/api/csp-report`
+并打进服务端日志；确认零违规后设 `CSP_MODE=enforce` 切强制，**不需要改代码**。
+
+`connect-src 'self'` 是「浏览器永远只跟本站说话」这句承诺的浏览器强制版本。
+`img-src` 里的牌面来源从构建产物 `dist/arcana-build.json` 读 ——
+那是构建期的事实，不是运行期环境变量。
 
 ## 数据
 

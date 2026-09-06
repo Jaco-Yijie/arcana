@@ -6,8 +6,11 @@
     "types": ["node"],
     "skipLibCheck": true,
 
-    /* Bundler mode */
-    "module": "nodenext",
+    /* Bundler mode —— vite.config.ts 由 esbuild 打包，不是 Node 直接 require。
+       用 bundler 解析才与真实构建行为一致；也因此它能直接 import `src/` 里的
+       产品代码（资产根归一规则只有一份，不在构建配置里抄第二遍）。 */
+    "moduleResolution": "bundler",
+    "module": "esnext",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
@@ -17,7 +20,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["vite.config.ts"]
 }
