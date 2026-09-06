@@ -1,0 +1,30 @@
+{
+  "url": "https://arcana-e190.onrender.com/health",
+  "httpStatus": 200,
+  "body": {
+    "status": "ok",
+    "readingProviderConfigured": true,
+    "provider": "deepseek"
+  },
+  "leakCheck": {
+    "containsApiKey": false,
+    "containsBaseUrl": false,
+    "containsEnvVarValues": false
+  },
+  "spaFallback": {
+    "/": 200,
+    "/reading": 200,
+    "/table/draw": 200
+  },
+  "artworkNotServedByRender": {
+    "path": "/assets/decks/legacy-moonlight/cards/major-00.webp",
+    "contentType": "text/html; charset=utf-8",
+    "note": "返回 SPA fallback 的 HTML，证明 Render 上不存在牌面文件"
+  },
+  "configEndpoint": {
+    "provider": "deepseek",
+    "model": "deepseek-v4-pro",
+    "ready": true
+  },
+  "clientBundleAssetRoot": "https://pub-17c0bf59be5e46f2a771ac7d2f068072.r2.dev"
+}

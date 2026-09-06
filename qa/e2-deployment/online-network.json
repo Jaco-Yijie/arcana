@@ -1,0 +1,28 @@
+{
+  "mode": "Render public URL + Cloudflare R2 artwork",
+  "profile": "slow4g",
+  "r2Base": "https://pub-17c0bf59be5e46f2a771ac7d2f068072.r2.dev",
+  "deckLibrary": {
+    "requests": 25,
+    "fromR2": 25,
+    "fromLocal": 0,
+    "broken": 0
+  },
+  "prefetch": {
+    "placed": 5,
+    "fullAfterPlacement": 5,
+    "thumbAfterPlacement": 5,
+    "allFromR2": true
+  },
+  "reveal": {
+    "clickToVisibleMs": 314,
+    "variant": "thumb",
+    "blankSamples": 2,
+    "requestsAfterClick": 1,
+    "src": "https://pub-17c0bf59be5e46f2a771ac7d2f068072.r2.dev/legacy-moonlight/thumbs/wands-01.webp?r=1",
+    "fromR2": true
+  },
+  "anyLocalArtworkRequest": false,
+  "failedRequests": [],
+  "consoleErrors": []
+}

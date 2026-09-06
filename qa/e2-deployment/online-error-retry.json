@@ -1,0 +1,52 @@
+{
+  "appUrl": "https://arcana-e190.onrender.com",
+  "injected": "route.abort on /api/tarot/reading**（不删除真实 Secret）",
+  "errorText": "看牌阵\n存入日记\n现状\n⌃\nA 方向发展\n⌃\nA 结果\n⌃\nB 方向发展\n⌃\nB 结果\n\n这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。\n\n重新尝试解读\n先回去看牌阵",
+  "controls": [
+    "看牌阵",
+    "存入日记",
+    "重新尝试解读",
+    "先回去看牌阵"
+  ],
+  "showsHttpCode": false,
+  "saysCardsKept": true,
+  "sessionUnchanged": true,
+  "before": {
+    "id": "ses_mtp7obzu_13f207999062",
+    "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+    "spreadId": "two-choices",
+    "cards": [
+      "pentacles-13",
+      "pentacles-01",
+      "major-03",
+      "wands-13",
+      "wands-03"
+    ],
+    "orientations": [
+      "upright",
+      "reversed",
+      "reversed",
+      "reversed",
+      "reversed"
+    ]
+  },
+  "after": {
+    "id": "ses_mtp7obzu_13f207999062",
+    "question": "我最近在考虑要不要换一份工作，但又怕现在这份的稳定是我唯一的依靠。我该怎么想这件事？",
+    "spreadId": "two-choices",
+    "cards": [
+      "pentacles-13",
+      "pentacles-01",
+      "major-03",
+      "wands-13",
+      "wands-03"
+    ],
+    "orientations": [
+      "upright",
+      "reversed",
+      "reversed",
+      "reversed",
+      "reversed"
+    ]
+  }
+}

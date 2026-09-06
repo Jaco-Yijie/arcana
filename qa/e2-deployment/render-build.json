@@ -1,0 +1,49 @@
+{
+  "service": {
+    "name": "arcana",
+    "type": "Web Service",
+    "runtime": "Node",
+    "region": "Oregon (US West)",
+    "plan": "Free ($0/month, 0.1 CPU, 512MB RAM)",
+    "planNote": "STAGING ONLY —— 免费实例会在闲置后休眠",
+    "repo": "Jaco-Yijie/arcana",
+    "branch": "main",
+    "autoDeploy": "On Commit"
+  },
+  "commands": {
+    "build": "npm ci && npm run build",
+    "start": "npm run start",
+    "healthCheckPath": "/health"
+  },
+  "envVars": [
+    {
+      "name": "DEEPSEEK_API_KEY",
+      "scope": "server runtime",
+      "valueRecorded": false,
+      "note": "绝不加 VITE_ 前缀；值不记录在任何产物中"
+    },
+    {
+      "name": "VITE_DECK_ASSET_BASE_URL",
+      "scope": "build-time",
+      "value": "https://pub-17c0bf59be5e46f2a771ac7d2f068072.r2.dev",
+      "note": "非 secret，允许进入 client bundle"
+    }
+  ],
+  "deploy": {
+    "status": "Deploy succeeded",
+    "durationSeconds": 68,
+    "sourceCommit": "93b3e44",
+    "trigger": "First Deploy",
+    "deployedAt": "2026-09-06T10:36:26+08:00"
+  },
+  "buildLogHighlights": [
+    "artwork:check 全部通过 89 项断言，0 失败",
+    "vite build ✓ 532 modules · index-CzDTRivC.js 301.51 kB (gzip 96.47 kB) · CSS 48.25 kB (gzip 9.39 kB)",
+    "[arcana] 资产根指向 https://pub-...r2.dev —— 已从产物中移除本地牌面副本（dist/assets/decks）",
+    "[arcana] 解读服务已启动 http://localhost:10000",
+    "[arcana] provider=deepseek · model=deepseek-v4-pro · apiKey=已配置 · ready=true",
+    "==> Your service is live"
+  ],
+  "primaryUrl": "https://arcana-e190.onrender.com",
+  "portBinding": "process.env.PORT（Render 注入 10000）"
+}

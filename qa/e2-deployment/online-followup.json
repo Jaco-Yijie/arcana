@@ -1,0 +1,44 @@
+{
+  "appUrl": "https://arcana-e190.onrender.com",
+  "readingOk": true,
+  "followUps": [
+    {
+      "n": 1,
+      "httpStatus": 200,
+      "ok": true,
+      "ms": 14422,
+      "provider": "deepseek",
+      "answerChars": 334,
+      "answerHead": "接下来最需要注意的，是别让“怕失去稳定”变成“什么都不做”的理由。权杖首牌逆位还在现在这个位置，说明那股想动的火苗没有熄灭，只是缺一个具体出口。你越是在脑子里反复权衡，它就越容易变",
+      "error": null
+    },
+    {
+      "n": 2,
+      "httpStatus": 200,
+      "ok": true,
+      "ms": 18077,
+      "provider": "deepseek",
+      "answerChars": 307,
+      "answerHead": "观察一个月本身不是坏事，尤其教皇正位还在过去的位置撑着，你不需要立刻放弃稳定。但这组牌里“现在”的权杖首牌逆位和“未来”的圣杯四正位，都暗示单纯等待会让那股没落地的能量继续散掉。如",
+      "error": null
+    }
+  ],
+  "cardsUnchanged": true,
+  "cards": [
+    {
+      "positionId": "past",
+      "cardId": "major-05",
+      "orientation": "upright"
+    },
+    {
+      "positionId": "present",
+      "cardId": "wands-01",
+      "orientation": "reversed"
+    },
+    {
+      "positionId": "future",
+      "cardId": "cups-04",
+      "orientation": "upright"
+    }
+  ]
+}

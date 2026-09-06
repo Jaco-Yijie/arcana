@@ -1,0 +1,169 @@
+{
+  "appUrl": "https://arcana-e190.onrender.com",
+  "summary": {
+    "mode": "standard",
+    "cards": 3,
+    "runs": 3,
+    "firstDeltaMs": {
+      "min": 1740,
+      "median": 1857,
+      "max": 2408
+    },
+    "firstMeaningfulMs": {
+      "min": 2076,
+      "median": 2308,
+      "max": 2693
+    },
+    "totalMs": {
+      "min": 19865,
+      "median": 23429,
+      "max": 24098
+    },
+    "outputChars": {
+      "min": 1944,
+      "median": 2259,
+      "max": 2319
+    },
+    "maxEventGapMs": {
+      "min": 1016,
+      "median": 1129,
+      "max": 1654
+    },
+    "sseHeldSeconds": 24
+  },
+  "runs": [
+    {
+      "run": 1,
+      "mode": "standard",
+      "cards": 3,
+      "httpStatus": 200,
+      "headersMs": 722,
+      "contentType": "text/event-stream; charset=utf-8",
+      "phases": [
+        {
+          "phase": "writing",
+          "at": 723
+        }
+      ],
+      "firstDeltaMs": 1740,
+      "firstMeaningfulMs": 2076,
+      "doneMs": 19865,
+      "ok": true,
+      "outputChars": 1944,
+      "deltaCount": 1013,
+      "maxGapMs": 1016,
+      "totalMs": 19865
+    },
+    {
+      "run": 2,
+      "mode": "standard",
+      "cards": 3,
+      "httpStatus": 200,
+      "headersMs": 754,
+      "contentType": "text/event-stream; charset=utf-8",
+      "phases": [
+        {
+          "phase": "writing",
+          "at": 754
+        }
+      ],
+      "firstDeltaMs": 2408,
+      "firstMeaningfulMs": 2693,
+      "doneMs": 24098,
+      "ok": true,
+      "outputChars": 2259,
+      "deltaCount": 1141,
+      "maxGapMs": 1654,
+      "totalMs": 24098
+    },
+    {
+      "run": 3,
+      "mode": "standard",
+      "cards": 3,
+      "httpStatus": 200,
+      "headersMs": 727,
+      "contentType": "text/event-stream; charset=utf-8",
+      "phases": [
+        {
+          "phase": "writing",
+          "at": 728
+        }
+      ],
+      "firstDeltaMs": 1857,
+      "firstMeaningfulMs": 2308,
+      "doneMs": 23429,
+      "ok": true,
+      "outputChars": 2319,
+      "deltaCount": 1173,
+      "maxGapMs": 1129,
+      "totalMs": 23429
+    }
+  ],
+  "sampleReading": {
+    "version": 2,
+    "readingTheme": "换工作的冲动卡在“稳定”与“启动”之间",
+    "overallEnergy": "三张牌构成一条从依赖到停滞的线索：过去靠既定路径获得安全感，现在有想法却点不着火，未来若不加干预会滑向倦怠。整体是内收的，动力不足，但并非没有转机。",
+    "cards": [
+      {
+        "cardId": "major-05",
+        "cardName": "教皇",
+        "position": "过去",
+        "orientation": "upright",
+        "interpretation": "教皇正位落在“过去”，指向一段依赖外部秩序与既有规范的时间。你很可能在过去的工作中习惯了按流程走、向有经验的人请教，这种稳妥给了你安全感，但也可能让你较少主动试探其他可能。",
+        "connectionToQuestion": "现在这份“稳定”正是从这条路径里长出来的，它既是你的依靠，也成了你衡量新机会时的参照系。"
+      },
+      {
+        "cardId": "wands-01",
+        "cardName": "权杖首牌",
+        "position": "现在",
+        "orientation": "reversed",
+        "interpretation": "权杖首牌逆位，火苗刚点起来就有点发蔫。你心里确实有换工作的念头，甚至可能有一些初步的想法，但能量没跟上，缺一个具体的起步动作。",
+        "connectionToQuestion": "你不是没有方向，而是卡在“想动又不敢动”的那一下，担心一动就失去现有的依靠。"
+      },
+      {
+        "cardId": "cups-04",
+        "cardName": "圣杯四",
+        "position": "未来",
+        "orientation": "upright",
+        "interpretation": "圣杯四正位在“未来”提示：如果维持现在的状态，你对工作的倦怠感可能会加重，甚至对递到眼前的机会也提不起兴趣。云中递来的杯子就是那些可能被忽略的新选项。",
+        "connectionToQuestion": "继续待在稳定里，未必是安稳，反而可能变成一种“懒得看、懒得动”的疲乏。"
+      }
+    ],
+    "relationships": [
+      {
+        "cards": [
+          "major-05",
+          "wands-01"
+        ],
+        "kind": "turning-point",
+        "interpretation": "教皇正位到权杖首牌逆位的转折很关键：过去你靠外部秩序获得稳定，现在这股秩序感反而压住了你内在的行动火苗。想动，但被“稳定”这个旧框架困住了。"
+      },
+      {
+        "cards": [
+          "wands-01",
+          "cups-04"
+        ],
+        "kind": "arc",
+        "interpretation": "权杖首牌逆位是能量没起来，圣杯四正位是情绪开始倦怠，两者连成一条线：如果起步的阻力不被处理，未来很可能从“没动力”滑向“没兴趣”，连机会都懒得接。"
+      }
+    ],
+    "narrative": "这组牌讲的是“稳定”如何从依靠变成困住你的壳。教皇正位代表你过去在既有体系里获得的安全感，这份安全感让你对“换工作”天然警惕；到了现在，权杖首牌逆位显示你其实有想动的念头，但火苗被“怕失去稳定”的念头压着，迟迟没有具体动作；如果继续这样，未来圣杯四正位预示你会陷入一种对工作提不起劲、对机会也视而不见的倦怠状态。三张牌里只有一张逆位，但逆位恰好卡在“现在”这个关键节点，说明你正处在一个想动又动不了的僵持期。",
+    "answerToQuestion": "这组牌没有直接说“该换”或“不该换”，它指出你现在的核心矛盾是：稳定给了你安全感，但也让你不敢启动新的尝试。权杖首牌逆位说明你不是没有想法，而是缺一个具体的起步动作；圣杯四正位则提醒，如果一直不动，倦怠会慢慢吞掉你对工作的热情。所以比“换不换”更靠前的一步，是先给那个“想动”的念头一个落点——哪怕只是去了解一个新领域、投一份简历、跟人聊一次。就牌面看，阻力更多来自内部对稳定的依赖，而不是外部真的没有机会。",
+    "reflectionQuestions": [
+      "如果这份稳定突然消失，你最害怕失去的是什么？",
+      "你心里那个“想动”的念头，具体指向什么方向？哪怕很模糊，它最像什么？",
+      "过去有没有哪一次你鼓起勇气做了改变，结果并没有想象中那么糟？"
+    ],
+    "safetyNotice": null,
+    "meta": {
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
+      "generatedAt": 1788662426711,
+      "latencyMs": 19177,
+      "toneAdjusted": false,
+      "readingMode": "standard",
+      "promptVersion": "v2",
+      "repaired": false
+    }
+  }
+}

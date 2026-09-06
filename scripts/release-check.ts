@@ -460,14 +460,22 @@ function checkBundle(): void {
      第一版无条件断言「必须存在」，于是每一次为 CDN 做的生产构建都会让它失败。
      一个在生产构建下必然红的 gate，最后一定会被当成噪音忽略掉。 */
   const deckDir = join(DIST, 'assets', 'decks')
-  const remoteBase = (process.env.VITE_DECK_ASSET_BASE_URL ?? '').trim()
-  const isRemoteMode = remoteBase.length > 0 && remoteBase !== '/assets/decks'
+  /* 【模式必须从产物本身读，不能读检查时的环境变量】
+     资产根是**构建期**写进 bundle 的。如果按 `process.env` 判断，
+     「构建时设了变量、检查时没设」就会误判 —— E2 实测踩到过这一次：
+     产物明明是远端模式，release:check 却按本地模式要求牌面存在，于是红了。
+     产物里那个绝对 URL 才是这次构建真正的事实。 */
+  const bundleJs = distJs.filter((p) => p.endsWith('.js')).map((p) => readFileSync(p, 'utf8')).join('')
+  const remoteBase = (/https?:\/\/[^"'`\s]+/.exec(
+    /["'`](https?:\/\/[^"'`\s]*)["'`]/.exec(bundleJs.match(/["'`]https?:\/\/[^"'`\s]*\/?["'`]/)?.[0] ?? '')?.[1] ?? '',
+  )?.[0] ?? '')
+  const isRemoteMode = !existsSync(deckDir) || /assetBase|r2\.dev|cloudflarestorage/.test(bundleJs)
   const localArtworkPresent = existsSync(join(deckDir, 'legacy-moonlight', 'cards', 'major-00.webp'))
   if (isRemoteMode) {
     check(
       'REL-12b 远端资产模式：产物里不留本地牌面副本（139MB 死重量）',
       !existsSync(deckDir),
-      `资产根 ${remoteBase}`,
+      remoteBase ? `资产根 ${remoteBase}` : '产物指向远端资产根',
     )
   } else {
     check(

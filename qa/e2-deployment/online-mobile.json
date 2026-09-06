@@ -1,0 +1,56 @@
+{
+  "appUrl": "https://arcana-e190.onrender.com",
+  "viewport": "390x844 dpr3",
+  "steps": [
+    {
+      "name": "home",
+      "url": "/",
+      "overflowX": false,
+      "broken": 0,
+      "text": "Arcana\n\n亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。\n\n带着问题来\n有想问的事，让牌帮你把它摊开\n随缘抽一张\n没有具体问题，看看今天会遇到什么\n塔罗日记\n牌组\n设置"
+    },
+    {
+      "name": "deck-library",
+      "url": "/decks",
+      "overflowX": false,
+      "broken": 0,
+      "text": "选择牌组\n\n选一个你想待着的氛围。\n\n月光\n使用中\n夜里最安静的那一段\n看看这套\n古典\n象牙纸面与暗金压边\n看看这套\n森语\n林子里的光会自己找路\n看看这套\n星图\n你在一张很大的图上\n看看这套\n幽影\n往回看的那一面\n看看这套\n\n所有牌组的牌义"
+    },
+    {
+      "name": "spread",
+      "url": "/spread",
+      "overflowX": false,
+      "broken": 0,
+      "text": "选择牌阵\n\n在「我最近在考虑要不要换一份工作」这个选择上，两个方向各自…\n\n这几个可能适合\n单张牌\n1 张\n适合一个笼统的、想先看看方向的问题，也用于随缘抽一张。\n二选一\n5 张\n适合面前有两个具体选项、想比较各自代价的问题。\n关系\n5 张"
+    },
+    {
+      "name": "draw",
+      "url": "/table/draw",
+      "overflowX": false,
+      "broken": 0,
+      "text": "退出\n洗\n切\n抽\n翻\n0/5\n现状\nA 方向发展\nA 结果\nB 方向发展\nB 结果\n\n慢慢浏览，选择你想拿起的牌。\n\n重新切牌"
+    },
+    {
+      "name": "reveal",
+      "url": "/table/reveal",
+      "overflowX": false,
+      "broken": 0,
+      "text": "退出\n洗\n切\n抽\n翻\n现状\n⌃\nA 方向发展 · 逆位\n⌃\nA 结果 · 逆位\n⌃\nB 方向发展 · 逆位\nB 结果\n开始完整解读"
+    },
+    {
+      "name": "reading",
+      "url": "/reading",
+      "overflowX": false,
+      "broken": 0,
+      "text": "看牌阵\n存入日记\n现状\n⌃\nA 方向发展\n⌃\nA 结果\n⌃\nB 方向发展\nB 结果\n两条路都累，但累的性质完全不同\n\n五张牌里三张逆位，且两张逆位大阿卡纳分别落在两个分支上，整组牌的重心不在「哪个机会更好」，而在「你现在已经耗到什么程度」。"
+    }
+  ],
+  "reading": {
+    "firstMeaningfulMs": 4080,
+    "doneMs": 29803
+  },
+  "consoleErrors": [],
+  "failedRequests": [],
+  "directUpstreamRequests": [],
+  "mixedContent": []
+}
