@@ -352,16 +352,112 @@ Cloudflare Dashboard
 
 ---
 
+## 10.5 免费架构下的生产 Smoke Test（收口验证）
+
+> 环境：**Render `*.onrender.com`（Free）+ Cloudflare R2 `.r2.dev`**。
+> 本轮不购买域名、不绑 custom domain、不改 DNS/nameserver。
+
+部署：`f3e635d` push 后 Render **auto-deploy 自动触发**，约 56 秒后新产物上线。
+探针用的是 `/arcana-build.json` —— 这个文件只有本轮之后的构建才会产出，
+拿它判断「新产物是否真的上线」，比看部署面板的状态更硬。
+
+```json
+GET https://arcana-e190.onrender.com/arcana-build.json
+{ "assetBase": "https://pub-…r2.dev", "assetMode": "remote",
+  "localArtworkInBundle": false, "builtAt": "2026-09-06T04:18:08.447Z" }
+```
+
+### 线上响应头（实测）
+
+六个安全头全部就位，HSTS 在真实 HTTPS 下正确发出（本地 http 时不发）：
+
+```
+content-security-policy-report-only: default-src 'self'; script-src 'self';
+  style-src 'self' 'unsafe-inline'; img-src 'self' https://pub-…r2.dev;
+  font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self';
+  form-action 'self'; frame-ancestors 'none'; report-uri /api/csp-report
+strict-transport-security: max-age=31536000; includeSubDomains
+x-content-type-options: nosniff · x-frame-options: DENY
+referrer-policy: strict-origin-when-cross-origin · permissions-policy: …全关
+```
+
+`img-src` 自动跟上了产物声明的 R2 根 —— 这正是「产物自述资产根」在生产里生效的证据。
+
+### 逐项结果
+
+| # | 项目 | 结果 |
+|---:|---|---|
+| 1 | 首页加载 | ✅ |
+| 2 | Deck Library 加载 | ✅ |
+| 3 | 五套 Deck 可访问 | ✅ 月光 / 古典 / 森语 / 星图 / 幽影 |
+| 4 | 卡牌封面（卡背） | ✅ 五套全部渲染 |
+| 5 | 卡牌正面 | ✅ |
+| 6 | 抽牌流程 | ✅ 三张牌阵 过去/现在/未来 |
+| 7 | 洗牌 | ✅ 拖动 3 次 |
+| 8 | 切牌 | ✅ 第 32 张切开 → 合起来 → 摊开牌 |
+| 9 | 选牌 + 摆牌 | ✅ 3/3 |
+| 10 | 翻牌 | ✅ 星星(逆位) / 正义 / 女皇 |
+| 11 | R2 图片 403 / 404 | ✅ **0** |
+| 12 | Console error | ✅ **0** |
+| 13 | CSP 阻断必要资源 | ✅ **0** |
+| 14 | SSE 解读 | ✅ `POST /api/tarot/reading/stream` → 200，真实 DeepSeek 流式上屏，四个折叠段与追问框齐全 |
+| 15 | connect-src | ✅ 未拦 SSE；浏览器直连 `api.deepseek.com` **0 次** |
+| 16 | `release:check` | ✅ **60 / 60** |
+| 17 | `assets:origin`（当前 r2.dev） | ✅ **9 / 9** |
+
+### 网络总账
+
+整场 Journey **90 个请求，全部 200**，无一 4xx / 5xx：
+
+| 来源 | 数量 | 状态 |
+|---|---:|---|
+| R2（牌面 thumb + full） | **64** | 全部 200 |
+| Render（HTML / JS / CSS / favicon） | 25 | 全部 200 |
+| `POST /api/tarot/reading/stream` | 1 | 200 |
+| `POST /api/csp-report` | **0** | —— 零违规 |
+| `api.deepseek.com` | **0** | 浏览器从未直连上游 |
+
+其中 Deck Library 单页即产生 **25 个跨源 R2 请求，覆盖五套牌组，全部 200** ——
+满足本轮「至少抽查 25 个 R2 资源」的要求。
+
+`/api/csp-report` 一次都没被调用，是「CSP 没有拦掉任何必要资源」最直接的证据：
+不是「没看到报错」，而是浏览器**主动上报通道全程沉默**。
+
+### 供应商无关性复核
+
+`src/` `server/` `index.html` `vite.config.ts` `scripts/` 内：
+`onrender.com` **0 命中**、`r2.dev` / `cloudflare` / `pub-17c0bf…` **0 命中**。
+
+全仓库仅存的 4 处绝对 URL，无一构成绑定：
+
+| 位置 | 内容 | 性质 |
+|---|---|---|
+| `server/env.ts` | `https://api.deepseek.com` | `DEEPSEEK_BASE_URL` 的默认值，可被环境变量覆盖 |
+| `server/index.ts` / `security.ts` | `http://localhost` | 启动日志与注释 |
+| `src/decks/artwork/paths.ts` | `https://cdn.example.com` | 文档注释里的示例 |
+
+前端调 API 全部走相对路径（`/api/tarot/*`）= 同源，**API origin 随部署自动跟随**；
+资产 origin 由 `VITE_DECK_ASSET_BASE_URL` 单一构建期变量控制。
+
+**结论：未来换域名或迁移云厂商，路径是「改配置 → build → deploy」，不需要动业务代码。**
+本轮据此**不做任何重构**。
+
+---
+
 ## 11. 状态
 
 | E2 遗留项 | 本轮 |
 |---|---|
 | R2 自定义域名（E2.1） | **代码侧全部就绪 + runbook + 前后对比工具**；等域名 |
 | Security headers / CSP | ✅ **完成**，Report-Only 上线即生效，切 enforce 只改环境变量 |
-| 吊销 `arcana-e2-upload` token | ⏳ 需你在 Cloudflare 控制台操作（§8.1） |
+| 吊销 `arcana-e2-upload` token | ⏳ 需你在 Cloudflare 控制台操作（§8.1）。已确认仓库内**零依赖**：无云 SDK、无 CI、无上传脚本，仅文档中提及其名字 |
 | Render 计划升级 | 未动（$7/月决策留给你） |
 | 仓库瘦身 / 模型档位 / 限流 | 未动 |
 
 **READY FOR PUBLIC BETA?** 仍然 **NO** —— 挡路的还是那两件基础设施：
 Render Free 休眠、资产走 `.r2.dev`。
 但第二件现在只差一个域名，切换本身已是一步操作，且有前后对比证据。
+
+**可以作为免费测试环境长期使用吗？** **可以**（§10.5 已在真实公网验证）。
+唯一需要预期的是 Render Free 闲置后休眠 —— 第一个访问者要等 50 秒以上。
+自己用、发给朋友试、演示，都成立；公开发布或任何会带来突发流量的场合，不成立。
