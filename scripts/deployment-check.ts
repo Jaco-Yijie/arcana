@@ -158,6 +158,41 @@ function checkArtwork(): void {
   check('DEP-04h manifest 记录了每套牌的 revision（回滚依据）',
     playable.every((d) => typeof man.revisions[d] === 'number'),
     Object.entries(man.revisions).map(([k, v]) => `${k}=r${v}`).join(' '))
+
+  /* ── DEP-04i / DEP-04j 牌面包 与 artwork.lock.json ──
+     两份文件都在说「正确的 780 个字节流是哪些」，来源却不同：
+     manifest 是 deployment:build **刚刚从 public/ 拷进包里那一份**的实测值，
+     lock 是**进 git 的期望值**（assets:sync 拿它校验从对象存储取回的字节）。
+
+     两份必须相等。不等只有两种可能，而且都必须在上传前发现：
+       · 有人换了牌面却没跑 assets:lock —— 锁还停在旧版，
+         于是 assets:sync 会把刚上传的新牌面判成「sha256 不符」而拒收
+       · 包是用一份被改坏的 public/ 构建的 —— 那正是锁存在的理由
+
+     没有这一条，两份真值就会各自漂移，而漂移只会在别人 clone 之后才炸。 */
+  const lockPath = join(ROOT, 'artwork.lock.json')
+  if (!existsSync(lockPath)) {
+    check('DEP-04i artwork.lock.json 存在（新 clone 恢复牌面的唯一期望值来源）', false,
+      '先跑 npm run assets:lock')
+  } else {
+    const lock = JSON.parse(readFileSync(lockPath, 'utf8')) as {
+      contract: string; counts: { total: number }
+      files: Record<string, { bytes: number; sha256: string }>
+    }
+    check('DEP-04i artwork.lock.json 存在（新 clone 恢复牌面的唯一期望值来源）', true,
+      `${Object.keys(lock.files).length} 个对象 · contract ${lock.contract}`)
+    const onlyInPkg = man.files.filter((f) => !lock.files[f.path])
+    const onlyInLock = Object.keys(lock.files).filter((k) => !man.files.some((f) => f.path === k))
+    const drifted = man.files.filter((f) => {
+      const e = lock.files[f.path]
+      return e && (e.bytes !== f.bytes || e.sha256 !== f.sha256)
+    })
+    check('DEP-04j 牌面包与 artwork.lock.json 逐字节一致（两份真值没有漂移）',
+      onlyInPkg.length === 0 && onlyInLock.length === 0 && drifted.length === 0,
+      onlyInPkg.length || onlyInLock.length || drifted.length
+        ? `包里多 ${onlyInPkg.length} · 锁里多 ${onlyInLock.length} · sha256 不符 ${drifted.length} —— 跑 npm run assets:lock`
+        : `${man.files.length} 个对象逐一比对`)
+  }
 }
 
 /* ══ DEPLOY-01 … DEPLOY-04 资产根契约 ══ */

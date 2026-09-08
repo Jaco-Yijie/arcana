@@ -1,0 +1,3147 @@
+{
+  "contract": "v1",
+  "generatedAt": "2026-09-06T07:38:32.889Z",
+  "note": "牌面完整性锁。进 git —— 刚 clone、牌面还没下载时，它是唯一可信的期望值来源。 由 npm run assets:lock 生成，被 npm run assets:check / assets:sync 校验。",
+  "decks": [
+    "legacy-moonlight",
+    "legacy-classic",
+    "legacy-forest",
+    "legacy-celestial",
+    "legacy-shadow"
+  ],
+  "revisions": {
+    "legacy-moonlight": 1,
+    "legacy-classic": 2,
+    "legacy-forest": 2,
+    "legacy-celestial": 1,
+    "legacy-shadow": 2
+  },
+  "counts": {
+    "full": 390,
+    "thumb": 390,
+    "total": 780,
+    "bytes": 143900140
+  },
+  "files": {
+    "legacy-celestial/cards/cups-01.webp": {
+      "bytes": 291394,
+      "sha256": "f9974f6605401b24acde2a8ee2dd77d99931134bf3058099e5c3005506a0d82b"
+    },
+    "legacy-celestial/cards/cups-02.webp": {
+      "bytes": 303992,
+      "sha256": "8dfb58275b7143d892419fd3b6c3d2a363f41efec0f5c0be4a23653ef6a465c6"
+    },
+    "legacy-celestial/cards/cups-03.webp": {
+      "bytes": 364600,
+      "sha256": "341959b6d4ca5c355165a6a3569b59eda617277ea0b63ba37abd838b505e74c8"
+    },
+    "legacy-celestial/cards/cups-04.webp": {
+      "bytes": 289172,
+      "sha256": "f5406d02dba5bfaa55cf40a8ea3ea70fd4721955f3cf1618d950ce8e254499d2"
+    },
+    "legacy-celestial/cards/cups-05.webp": {
+      "bytes": 256292,
+      "sha256": "feba7104b5e2d991184ecdb56f95e47d0b39a9d7fe214bf5898b315347a25b4c"
+    },
+    "legacy-celestial/cards/cups-06.webp": {
+      "bytes": 344656,
+      "sha256": "7d71483613f8d07f1a9f8c1a9d32b66bee104aa6d67d69c7b196026412945650"
+    },
+    "legacy-celestial/cards/cups-07.webp": {
+      "bytes": 318694,
+      "sha256": "a9ba908c5f0de0d7fbf4d7c05a5980bf2685fe365191e64ec240232f427b8dd1"
+    },
+    "legacy-celestial/cards/cups-08.webp": {
+      "bytes": 278960,
+      "sha256": "de421986507749713ac34cfde39aa4e79c8c4c82710573fbd335c0fc7ba6738d"
+    },
+    "legacy-celestial/cards/cups-09.webp": {
+      "bytes": 266308,
+      "sha256": "de580c48717d6f07d21b037e156e7b1a41711b22465354991fc4567d8d79d5b9"
+    },
+    "legacy-celestial/cards/cups-10.webp": {
+      "bytes": 298960,
+      "sha256": "cb1dafb25da185258221d8c85f61bc62f095b9db06146fc38734cdb299b9eb17"
+    },
+    "legacy-celestial/cards/cups-11.webp": {
+      "bytes": 298074,
+      "sha256": "212c18ef1a51d23232097374712544508b7a7373f793c1f41aa8cc758f5055a3"
+    },
+    "legacy-celestial/cards/cups-12.webp": {
+      "bytes": 302978,
+      "sha256": "715119b1905a1236c13e2df62b9aa9fd959acb5011bba9f975bce40c50a3d7c4"
+    },
+    "legacy-celestial/cards/cups-13.webp": {
+      "bytes": 303378,
+      "sha256": "1701af834883228ba9f419b1fcb190d33e370f3c8c432a7c409b9ae6bd2e2793"
+    },
+    "legacy-celestial/cards/cups-14.webp": {
+      "bytes": 346268,
+      "sha256": "46c03558f569928aa2b3a834ccb43b37b23f30683ab0a55a1ab18928979b510f"
+    },
+    "legacy-celestial/cards/major-00.webp": {
+      "bytes": 276584,
+      "sha256": "14c5b8c0ae9ac15c2c7795005ad662946e11dd09f1d8af9c903585edc1b56bc1"
+    },
+    "legacy-celestial/cards/major-01.webp": {
+      "bytes": 311514,
+      "sha256": "5d0194987bc20f4c2007301029fb1b57753198695e375377cdf55922ca05b93d"
+    },
+    "legacy-celestial/cards/major-02.webp": {
+      "bytes": 369380,
+      "sha256": "2698a7590ff886cdf704d76259d105cdf9e47be74e25ed76e7d9c5a13cafae28"
+    },
+    "legacy-celestial/cards/major-03.webp": {
+      "bytes": 314324,
+      "sha256": "7444abd26d0843a89aff0ac98c4c5c70c7c1ce07613d67b066db8a1e19630a8a"
+    },
+    "legacy-celestial/cards/major-04.webp": {
+      "bytes": 290912,
+      "sha256": "4528a056876b6c395ea2d484fd2ac4bd092c5633cfb065e6abade393ff075867"
+    },
+    "legacy-celestial/cards/major-05.webp": {
+      "bytes": 283026,
+      "sha256": "7c722c9c658ac88ccd89de6e69f2e470a5deee6b192a656c505e189f80666690"
+    },
+    "legacy-celestial/cards/major-06.webp": {
+      "bytes": 306410,
+      "sha256": "52a39973e348afe282aaabedb8b638bd3ccbc0993a78e8ca5c8846160f6d7a88"
+    },
+    "legacy-celestial/cards/major-07.webp": {
+      "bytes": 345294,
+      "sha256": "996bb524903523277332baa9d2b68a5b6b6cae3b54760285e31cc4f9f5a60510"
+    },
+    "legacy-celestial/cards/major-08.webp": {
+      "bytes": 271540,
+      "sha256": "402d7c1c29e929ac4d5ef4b62a3d403f5c9a13377ea5e85449b5159af906fe39"
+    },
+    "legacy-celestial/cards/major-09.webp": {
+      "bytes": 220810,
+      "sha256": "55d9d1d9a3128c567055411966db213928e7a26d9d372204c6dad8fd034641eb"
+    },
+    "legacy-celestial/cards/major-10.webp": {
+      "bytes": 333648,
+      "sha256": "2b6e967fe90cff177a97b250326cb9e4b6625095c12078fc9b1acf3e6a7c11fc"
+    },
+    "legacy-celestial/cards/major-11.webp": {
+      "bytes": 277202,
+      "sha256": "ac021ddb96840df3cb936649c71fa2910d10be6b1a6d98e7f2f3cf9f247c3561"
+    },
+    "legacy-celestial/cards/major-12.webp": {
+      "bytes": 322002,
+      "sha256": "ac2f13e28e84bd90d0694b44f8c5b9a103e0e3eb076e34e637266f1824df3b5d"
+    },
+    "legacy-celestial/cards/major-13.webp": {
+      "bytes": 284952,
+      "sha256": "d6419d0ecf8d5bfdb86a348e14aea10f23da1f05e65630378e41d84770cc9504"
+    },
+    "legacy-celestial/cards/major-14.webp": {
+      "bytes": 289078,
+      "sha256": "08113ead72494b763473fdd05f1137913ae126fa9b7f51c8cb03a1edeb09d4da"
+    },
+    "legacy-celestial/cards/major-15.webp": {
+      "bytes": 273842,
+      "sha256": "6644f94d8f09c1623d4eb0d0578e220bdef2abfa5be6f07858884647fc25075a"
+    },
+    "legacy-celestial/cards/major-16.webp": {
+      "bytes": 280114,
+      "sha256": "14af740f526e5ad8fedbedc6dae7964fdd0f3b24e511d422ab000fa956dad31e"
+    },
+    "legacy-celestial/cards/major-17.webp": {
+      "bytes": 346484,
+      "sha256": "b63fffe9aea500094f83a5159b443a7d72576041e25f321019cb8cf707297bf8"
+    },
+    "legacy-celestial/cards/major-18.webp": {
+      "bytes": 267730,
+      "sha256": "3a80ade6bd026ccb5cdf94a970d91efa9fdc1ba67f5b5623865c36392b9f2757"
+    },
+    "legacy-celestial/cards/major-19.webp": {
+      "bytes": 394052,
+      "sha256": "df3015666d6a59869cfea2472e463e053ebd27e198f3f16453389d57fb4299c6"
+    },
+    "legacy-celestial/cards/major-20.webp": {
+      "bytes": 317972,
+      "sha256": "06fb9866787ca2aab15e5cde670fa2ae8edd1a4806f2a0bc8acff402ee43e213"
+    },
+    "legacy-celestial/cards/major-21.webp": {
+      "bytes": 389282,
+      "sha256": "3cdeab7a485910c828dde85b8d96f0a17f2f3a4f470c060fa69266c2e535e538"
+    },
+    "legacy-celestial/cards/pentacles-01.webp": {
+      "bytes": 313778,
+      "sha256": "01d334d32470c45a858a18c1d4e94f7593c317219f69d422ec513100e0132a4b"
+    },
+    "legacy-celestial/cards/pentacles-02.webp": {
+      "bytes": 312540,
+      "sha256": "61a5346589e2ffde5f84034126e7635fa6a48825b276bb2df37d7d1a9204e6a4"
+    },
+    "legacy-celestial/cards/pentacles-03.webp": {
+      "bytes": 295942,
+      "sha256": "d0b2a20546b7458d3657e66ca3538363339cdc179c3acb535577cc3708b81e57"
+    },
+    "legacy-celestial/cards/pentacles-04.webp": {
+      "bytes": 280096,
+      "sha256": "7683479bc9114d5fa7a5b7c24990cf6d2684fc92da511aa63ea7f172d19be809"
+    },
+    "legacy-celestial/cards/pentacles-05.webp": {
+      "bytes": 304532,
+      "sha256": "7ed45fccd982d91893007a0946fd568c7f014b8ce540a8121a7f9792315dd090"
+    },
+    "legacy-celestial/cards/pentacles-06.webp": {
+      "bytes": 291926,
+      "sha256": "0cd9c516ab84b05c63dea8f6533ade710afc3f1f4bd95f3ae3b1e6df92e5742f"
+    },
+    "legacy-celestial/cards/pentacles-07.webp": {
+      "bytes": 304540,
+      "sha256": "526081834d3ad0acb59ab33c10948906aa2deb9ff7e78e3ede1d6a890d559697"
+    },
+    "legacy-celestial/cards/pentacles-08.webp": {
+      "bytes": 302144,
+      "sha256": "81b201b0094dbb01c1f2bbaa98964be3ff78f726279a30ed5fe145c89220cd36"
+    },
+    "legacy-celestial/cards/pentacles-09.webp": {
+      "bytes": 302086,
+      "sha256": "a7b6dcb41fa391d4b291e6d7bb9f6d7c50ece0c157504d9eac444e8ba6764018"
+    },
+    "legacy-celestial/cards/pentacles-10.webp": {
+      "bytes": 294590,
+      "sha256": "0b615446108638563e44ed45d6a2e37b6bbe98cf9d49bb814a062aa5b5861edb"
+    },
+    "legacy-celestial/cards/pentacles-11.webp": {
+      "bytes": 268146,
+      "sha256": "4fa62df5c8b5eed7527a80bae57e36498e6035558fd3d0ccfa0ac76dbb6fc81c"
+    },
+    "legacy-celestial/cards/pentacles-12.webp": {
+      "bytes": 260548,
+      "sha256": "252075dafcd1286844b739ee0bc6e6561eed3152818fdc14ff3093a6bac58385"
+    },
+    "legacy-celestial/cards/pentacles-13.webp": {
+      "bytes": 294374,
+      "sha256": "9152149e6923c256afba3ab3f74dfca84eed43cbfdceb9823f9f5b7c0282ead3"
+    },
+    "legacy-celestial/cards/pentacles-14.webp": {
+      "bytes": 302018,
+      "sha256": "818f0924b5448e31dfc8400e1b54ad9f75baa4db4b0ad44bb69d5f54148fcc4a"
+    },
+    "legacy-celestial/cards/swords-01.webp": {
+      "bytes": 320400,
+      "sha256": "11e7c71c791c5d8bb2d219211b1e0ae7c7cafef9087e6e8227f3375458740ad1"
+    },
+    "legacy-celestial/cards/swords-02.webp": {
+      "bytes": 301948,
+      "sha256": "646c3a42f0dd0249588280de6adc80b7864ae70441658eeeae08323559ed167b"
+    },
+    "legacy-celestial/cards/swords-03.webp": {
+      "bytes": 283770,
+      "sha256": "b86055d8a8e73a4991ba3dcf1aca0ab407a065b15c128d7e9c740fb4c3c918ae"
+    },
+    "legacy-celestial/cards/swords-04.webp": {
+      "bytes": 302674,
+      "sha256": "6dddd0be1eca8965c8d9b56455b15d5a48e7e75b3412792127cb3883831cba82"
+    },
+    "legacy-celestial/cards/swords-05.webp": {
+      "bytes": 295604,
+      "sha256": "fa7ea358c150a4f37e3e27abdc1bb8ef268f3c2d687245b5b2389846678e1e5f"
+    },
+    "legacy-celestial/cards/swords-06.webp": {
+      "bytes": 248234,
+      "sha256": "06cdec7fc19b2f13b9fef198297fa8dd36410104802dc53e219489f21431bd55"
+    },
+    "legacy-celestial/cards/swords-07.webp": {
+      "bytes": 313386,
+      "sha256": "7a0370728027567da7d01382784d4ed9bf545d96d928f3c1caa196e6fe58cf34"
+    },
+    "legacy-celestial/cards/swords-08.webp": {
+      "bytes": 301148,
+      "sha256": "b5fee14ab02d8eb581ab0eb6e92a078ab0587f1cc044d2aeb43300710a27fd25"
+    },
+    "legacy-celestial/cards/swords-09.webp": {
+      "bytes": 260388,
+      "sha256": "dec36e7bb1a90817b2cd254a158ea507d5b3efedda66811b2799e00c2dfb317f"
+    },
+    "legacy-celestial/cards/swords-10.webp": {
+      "bytes": 298538,
+      "sha256": "b4ebb3b29b7ee7b540a5e117d8d34fe75e1263fed7834dd95eeb63b87f3f4a7c"
+    },
+    "legacy-celestial/cards/swords-11.webp": {
+      "bytes": 295644,
+      "sha256": "609267116464db44e47e1981af0fc7ff65c185680f2142a7217d544547eef8b6"
+    },
+    "legacy-celestial/cards/swords-12.webp": {
+      "bytes": 330524,
+      "sha256": "01eafa33c7733d7eb97d34882d967dcb15d4a882ce5af28f0656df8ae4d60a78"
+    },
+    "legacy-celestial/cards/swords-13.webp": {
+      "bytes": 293664,
+      "sha256": "4c81d54d8e29bc54427e5b475fd3856cea7646b85a0c208b6232b0c7c732fd86"
+    },
+    "legacy-celestial/cards/swords-14.webp": {
+      "bytes": 305258,
+      "sha256": "c5b4970242c3964aa68bbeb2353e355bf5e352d1caa520b7792036af6cd34e51"
+    },
+    "legacy-celestial/cards/wands-01.webp": {
+      "bytes": 271934,
+      "sha256": "7f8e4ab94637a01a1afb9997081fd439073e120c6cabf233007382410e6092b7"
+    },
+    "legacy-celestial/cards/wands-02.webp": {
+      "bytes": 305850,
+      "sha256": "e6b9d51ddd40e83d8ea25c588b4b84c3860da537b0bd38c6de8346a8e2d07a97"
+    },
+    "legacy-celestial/cards/wands-03.webp": {
+      "bytes": 284154,
+      "sha256": "6a977c696be4f4461ecc79e3029b0bfd1c7c1ec3a4827e24817562abc50c0ae2"
+    },
+    "legacy-celestial/cards/wands-04.webp": {
+      "bytes": 331326,
+      "sha256": "60898ed074612a5847847f2943776c26e9b7a11515521194f84fcaf994b10238"
+    },
+    "legacy-celestial/cards/wands-05.webp": {
+      "bytes": 306372,
+      "sha256": "fd8fb1f82bac9f14337023cee06dbed6054baa041821dc0552f01695c768d246"
+    },
+    "legacy-celestial/cards/wands-06.webp": {
+      "bytes": 329424,
+      "sha256": "3a5353569b1a0226c24cdb4680bd42e4a92944317c21f9724ee8e8b65fb53a09"
+    },
+    "legacy-celestial/cards/wands-07.webp": {
+      "bytes": 293094,
+      "sha256": "fa16d370e508a7755557febdcf5e237a01e962fa02cefb0d4f67e12e6cbaca4d"
+    },
+    "legacy-celestial/cards/wands-08.webp": {
+      "bytes": 260854,
+      "sha256": "d2f554d439b639cdca56833db95c82d6063dbc9ab19e74b05ee399cba0fd5604"
+    },
+    "legacy-celestial/cards/wands-09.webp": {
+      "bytes": 296490,
+      "sha256": "eb5066a2e2eecdcf6460152f338dde573a59cff5f1c0a5f71a1650dc7e6e29dc"
+    },
+    "legacy-celestial/cards/wands-10.webp": {
+      "bytes": 314604,
+      "sha256": "b9f255487fe6a5cec6d6c86a67f87faeec918c957285600811bc364787b9d921"
+    },
+    "legacy-celestial/cards/wands-11.webp": {
+      "bytes": 271444,
+      "sha256": "6447c55bee1de891020e876a12e8d8379c661149dcfbffce488be6088793b980"
+    },
+    "legacy-celestial/cards/wands-12.webp": {
+      "bytes": 324926,
+      "sha256": "0724c04dd44b77683b2a4caba776fc769edca8f5e2b3d08ed722e31abf5bce08"
+    },
+    "legacy-celestial/cards/wands-13.webp": {
+      "bytes": 354724,
+      "sha256": "564366fe37d56a6c2d1a7b4764752e701fffa652727d6d5599015b030222ff39"
+    },
+    "legacy-celestial/cards/wands-14.webp": {
+      "bytes": 296536,
+      "sha256": "ef97fc5dea261fd98dfb8f1253e53dcf41e96fd18917c3c1a042e6338479c962"
+    },
+    "legacy-celestial/thumbs/cups-01.webp": {
+      "bytes": 12936,
+      "sha256": "7c9d86f387c2d198d4cec93a99ae49100c35f75becf82a23774bddce0ac4a309"
+    },
+    "legacy-celestial/thumbs/cups-02.webp": {
+      "bytes": 12052,
+      "sha256": "987cfdeba0760734a2e12426d328ae707198b6d4c5c1502d408d2154d9ae3e94"
+    },
+    "legacy-celestial/thumbs/cups-03.webp": {
+      "bytes": 15840,
+      "sha256": "010f77ee48b64fe92c5f35892ab1cb78fb6f4b585807aa97b2df009f52d4c96e"
+    },
+    "legacy-celestial/thumbs/cups-04.webp": {
+      "bytes": 11604,
+      "sha256": "bd0643af7c05a166afa2a514e7d168fd7c3a61a1948f8fa332df89da14cf8829"
+    },
+    "legacy-celestial/thumbs/cups-05.webp": {
+      "bytes": 10302,
+      "sha256": "25b295fb70c6ba0b5bbbe85b90a1cb42383ba22ae96d8e1d29317138d188f78e"
+    },
+    "legacy-celestial/thumbs/cups-06.webp": {
+      "bytes": 15332,
+      "sha256": "5fc294e8ecd91b944f089cfd4f42f9745d7f51881ce4c231a450ea55089612e1"
+    },
+    "legacy-celestial/thumbs/cups-07.webp": {
+      "bytes": 15096,
+      "sha256": "119b17d3c2f9ab98e622731dcb875d9ece30f2dcc319b26ef2ce5e50f13efaab"
+    },
+    "legacy-celestial/thumbs/cups-08.webp": {
+      "bytes": 11234,
+      "sha256": "b8132b4964072c685a7b6665ff75fce6afef5b71a49b1f75889d1a146a9759dc"
+    },
+    "legacy-celestial/thumbs/cups-09.webp": {
+      "bytes": 11940,
+      "sha256": "4dac13b2b326668644769e212a9dd7a9c7decaac75e489d80ec41f80dcddea77"
+    },
+    "legacy-celestial/thumbs/cups-10.webp": {
+      "bytes": 13204,
+      "sha256": "b59b3b95a1db5e103190bd3c0a6187a637aeccb8cf8a3a591d0efb24c22260e0"
+    },
+    "legacy-celestial/thumbs/cups-11.webp": {
+      "bytes": 13416,
+      "sha256": "02aa01e17b16027e68e34ecd4ff179527aa82aa763c0f94e8023a6736f8f08b4"
+    },
+    "legacy-celestial/thumbs/cups-12.webp": {
+      "bytes": 12960,
+      "sha256": "ca3597e8b89ba321617b8e5f4172e6adf69412a2d8db8b9f93208d0fca46356d"
+    },
+    "legacy-celestial/thumbs/cups-13.webp": {
+      "bytes": 12992,
+      "sha256": "04b4ce8dde002db50bbff5021450ff32e7632b53067f8c4172d63fb2272e5dd7"
+    },
+    "legacy-celestial/thumbs/cups-14.webp": {
+      "bytes": 15042,
+      "sha256": "d961a152f8cb0c645d89db53d06393171de8a20c787f850555ed1a233aad2478"
+    },
+    "legacy-celestial/thumbs/major-00.webp": {
+      "bytes": 12018,
+      "sha256": "a11ab2bbec227db13d5c53b242f3fef93fa2cd176f9d315e269c63d6d2e329aa"
+    },
+    "legacy-celestial/thumbs/major-01.webp": {
+      "bytes": 13026,
+      "sha256": "e57bed431e6f75afa34cb4b0fe897c260b87f3563bb0a23d83f7512068c84d9d"
+    },
+    "legacy-celestial/thumbs/major-02.webp": {
+      "bytes": 15858,
+      "sha256": "03f7eccb5b91b318a33cb5fb08e6eadd13261c2e2524c57986dc73e3013db14d"
+    },
+    "legacy-celestial/thumbs/major-03.webp": {
+      "bytes": 14464,
+      "sha256": "e04e240ead02e831cc0304925d30cae0cf4bf4d700dff3dc28da4ba1edeca1ff"
+    },
+    "legacy-celestial/thumbs/major-04.webp": {
+      "bytes": 11536,
+      "sha256": "5e16e7639cacd905c0f9b4ee2d5ecf4e70179c83b88dca6a6da6bc5d8c3b41c7"
+    },
+    "legacy-celestial/thumbs/major-05.webp": {
+      "bytes": 12244,
+      "sha256": "09557ce5462e9f8b15c6d0a8b533535a785efbe12b21815b87154e0762157a96"
+    },
+    "legacy-celestial/thumbs/major-06.webp": {
+      "bytes": 13252,
+      "sha256": "5cfcc80ef46692e5aeb782b28e40d10d3855fb9b7b3fe12d1d1051502a014e98"
+    },
+    "legacy-celestial/thumbs/major-07.webp": {
+      "bytes": 14780,
+      "sha256": "fd56496b64c72754d865f433e194e355a1c9ca36df1f31fb2e01db776ff122c4"
+    },
+    "legacy-celestial/thumbs/major-08.webp": {
+      "bytes": 10676,
+      "sha256": "c46fc6c7aaf89a10881bfceb0eae001a75e05c15cf7d28b8ad9a6df7ae7d74d5"
+    },
+    "legacy-celestial/thumbs/major-09.webp": {
+      "bytes": 8532,
+      "sha256": "a6d2034a65c0b4b00a48f3c86fbe5dd47763174a8f84eef36edb9edc42e63654"
+    },
+    "legacy-celestial/thumbs/major-10.webp": {
+      "bytes": 13950,
+      "sha256": "943d68d622768b5b31d390a72a1e6f249612fef070ecd1514ba689a01510e2f8"
+    },
+    "legacy-celestial/thumbs/major-11.webp": {
+      "bytes": 11418,
+      "sha256": "0fdb0707c13667651e5fd6cd79120629ae00947c78512f96cc70fb76c78d884a"
+    },
+    "legacy-celestial/thumbs/major-12.webp": {
+      "bytes": 13994,
+      "sha256": "7d819394f5fa0bdc81f55b9f3df1d2c5bc70ebd6ba0e563dfdb6158d62191b09"
+    },
+    "legacy-celestial/thumbs/major-13.webp": {
+      "bytes": 11206,
+      "sha256": "1c4ba25fd90d98bb8d343f9daee68ab8b2ae0c534fbb3bb6a1ac8a1ef9915999"
+    },
+    "legacy-celestial/thumbs/major-14.webp": {
+      "bytes": 10926,
+      "sha256": "69eac8569d4ac2925ca862edc37becb06c2350dad75a469e284945dc662be091"
+    },
+    "legacy-celestial/thumbs/major-15.webp": {
+      "bytes": 10578,
+      "sha256": "e7808ff55b5e97ab5fa87ec67c5944bfd6955775512346092b81092ceadac509"
+    },
+    "legacy-celestial/thumbs/major-16.webp": {
+      "bytes": 12118,
+      "sha256": "6718cca96f5601d21e742c0b0c5a97a41c0adc5b9723b81d8d64fe0154d7d1ad"
+    },
+    "legacy-celestial/thumbs/major-17.webp": {
+      "bytes": 13638,
+      "sha256": "887d5ed86d81d574975a79f63dfa3d5f315fcbb7aea7ac369017c25ca01663a5"
+    },
+    "legacy-celestial/thumbs/major-18.webp": {
+      "bytes": 11592,
+      "sha256": "02c8cdcd15dc8b67e74418912dd980c1643f4dfe4b7733f8acdae964f719e9e7"
+    },
+    "legacy-celestial/thumbs/major-19.webp": {
+      "bytes": 19500,
+      "sha256": "30ffa543a3d9b92da31159ad7f7b2f0df34077c787e679c543fffc97719f2c40"
+    },
+    "legacy-celestial/thumbs/major-20.webp": {
+      "bytes": 12888,
+      "sha256": "25f7aec3a22f46e8be84619383369184586e4d53e65b0f869b1501b6f70f7cfc"
+    },
+    "legacy-celestial/thumbs/major-21.webp": {
+      "bytes": 16148,
+      "sha256": "efabd0fc8798e10eb36509f49c97c2885c9d3821d1229ce9f7cd9cd3dabb68a7"
+    },
+    "legacy-celestial/thumbs/pentacles-01.webp": {
+      "bytes": 13518,
+      "sha256": "ae15f3cd2d8ad9d814832fc31916bbe9fa375065bc43c6ab5bd2e079102cead4"
+    },
+    "legacy-celestial/thumbs/pentacles-02.webp": {
+      "bytes": 13878,
+      "sha256": "de9462835611ca90d03f63101443e16e04056af11f94534af1fe74bf8a85be4f"
+    },
+    "legacy-celestial/thumbs/pentacles-03.webp": {
+      "bytes": 12782,
+      "sha256": "6e737ad88d06d2c91030d932073f3ce9d993280a539cb8f6b3974b2d9eb15787"
+    },
+    "legacy-celestial/thumbs/pentacles-04.webp": {
+      "bytes": 12730,
+      "sha256": "19d2e4c202cd2afdc8cd011e23fccd86a80194b6bba28f2190f07821dde264cb"
+    },
+    "legacy-celestial/thumbs/pentacles-05.webp": {
+      "bytes": 13472,
+      "sha256": "82b74ff6bf9786bbea0f632e535d1cd18ddf3d0354d6fea7fd835a468cd3be6a"
+    },
+    "legacy-celestial/thumbs/pentacles-06.webp": {
+      "bytes": 12166,
+      "sha256": "b007b30ceeb5e7c317a95bd30a655e2203f173f5dba53b63f35812d4030289b8"
+    },
+    "legacy-celestial/thumbs/pentacles-07.webp": {
+      "bytes": 13590,
+      "sha256": "fc618da06229866b9e8bd8d8f0a07b7d76692870095ec6acb1ee14e9e6e8fd18"
+    },
+    "legacy-celestial/thumbs/pentacles-08.webp": {
+      "bytes": 13248,
+      "sha256": "7ae4afbd1349012c40928d551b5b3177f934001c6cccda0cf7ae932a6d2c3265"
+    },
+    "legacy-celestial/thumbs/pentacles-09.webp": {
+      "bytes": 13100,
+      "sha256": "03a5a79bebcc519a98a248965e45f81979fd4ed4b48f39a79335e17308850c7b"
+    },
+    "legacy-celestial/thumbs/pentacles-10.webp": {
+      "bytes": 12558,
+      "sha256": "e9573dab334bceda90c675d2d7e3206024757409fb799f0a7217295f35dadcfc"
+    },
+    "legacy-celestial/thumbs/pentacles-11.webp": {
+      "bytes": 10968,
+      "sha256": "817c16c80376e2eb5312e4705d3f26ecbba6f5c292397f40647bc9f80dd27cdb"
+    },
+    "legacy-celestial/thumbs/pentacles-12.webp": {
+      "bytes": 10066,
+      "sha256": "99c099c60a9b64a4e4f6e1fd08c177f0341995ff82329dc3028efa14ddf1efd4"
+    },
+    "legacy-celestial/thumbs/pentacles-13.webp": {
+      "bytes": 13066,
+      "sha256": "f4d2d4325db7a87ddd9a812fe6619b625a71d0cdb8d0f636a1f7392df5e11e9b"
+    },
+    "legacy-celestial/thumbs/pentacles-14.webp": {
+      "bytes": 13284,
+      "sha256": "c155cbd59a3b671f69064de05deebbd5eb718fc91811412b26b7276cdd13fd93"
+    },
+    "legacy-celestial/thumbs/swords-01.webp": {
+      "bytes": 14090,
+      "sha256": "d56977c3ed8444ba027a871349641dcdf35b3922547e48c35980b918b27137c7"
+    },
+    "legacy-celestial/thumbs/swords-02.webp": {
+      "bytes": 13494,
+      "sha256": "e0eb000125a5d99d219e63508c6b9e29d921bb5aea76a8ae699037f800f3d2f3"
+    },
+    "legacy-celestial/thumbs/swords-03.webp": {
+      "bytes": 13708,
+      "sha256": "207e6414c0c1e2bca2b1bd8d08c86be50585d59439f249eaa55e114847b35dda"
+    },
+    "legacy-celestial/thumbs/swords-04.webp": {
+      "bytes": 10292,
+      "sha256": "b7355e40788eaa1c12445c1b00b36b7a9a559fec9c7a955726954e5f46b88f30"
+    },
+    "legacy-celestial/thumbs/swords-05.webp": {
+      "bytes": 12384,
+      "sha256": "9f570d326a4236012e61dd0da93f82ac71b9f15cc1f809bd3177bf260d573b9a"
+    },
+    "legacy-celestial/thumbs/swords-06.webp": {
+      "bytes": 10116,
+      "sha256": "0649d0174432def64147d0e150c037200ff43f35ef338cd9ace1374f2566c0da"
+    },
+    "legacy-celestial/thumbs/swords-07.webp": {
+      "bytes": 12002,
+      "sha256": "6bf196fcade8384b0f4b24776bf152db0fd5cec518061b20a6b8f83eee289996"
+    },
+    "legacy-celestial/thumbs/swords-08.webp": {
+      "bytes": 14134,
+      "sha256": "4bdb5c860849d0b4250b09d39e7d7e13dcfb48acbbc92c2cfd10e2d8eb026282"
+    },
+    "legacy-celestial/thumbs/swords-09.webp": {
+      "bytes": 11378,
+      "sha256": "6129d32c901841a257b3b9fb65384e6a04a6757205ae69c9e22d0ee6a5a20014"
+    },
+    "legacy-celestial/thumbs/swords-10.webp": {
+      "bytes": 11762,
+      "sha256": "2c5da81969998128c6658050c0c53c1c7bf35e72a28dcf7d8420384976a73846"
+    },
+    "legacy-celestial/thumbs/swords-11.webp": {
+      "bytes": 12804,
+      "sha256": "42f9afa98bbe8706899ff074996a70f874f7a54611302fce94d58188e0c4f95e"
+    },
+    "legacy-celestial/thumbs/swords-12.webp": {
+      "bytes": 15154,
+      "sha256": "d95595b7d2028c08e240c83c23172421359d94924f8342f1c70bf584aef8b081"
+    },
+    "legacy-celestial/thumbs/swords-13.webp": {
+      "bytes": 13224,
+      "sha256": "c583694214902cc6e52ebd08ed37d1832e4b325c1a99a2849d245d163e8fbad9"
+    },
+    "legacy-celestial/thumbs/swords-14.webp": {
+      "bytes": 13800,
+      "sha256": "8844a61e35f1a934afae29d56e2f5f27d7c6613e7afa9362757c0999c14b3f31"
+    },
+    "legacy-celestial/thumbs/wands-01.webp": {
+      "bytes": 11204,
+      "sha256": "6ed7d9a25e9eb328a0a8f4890826fcffb726b0b72fa9a47f4724f52ca8039147"
+    },
+    "legacy-celestial/thumbs/wands-02.webp": {
+      "bytes": 12522,
+      "sha256": "018f0bf6e6e9794b150d196a80b64d17df53e50f15ca339287f766344caded40"
+    },
+    "legacy-celestial/thumbs/wands-03.webp": {
+      "bytes": 11848,
+      "sha256": "5cc2b535c35d31972267aca678a97f817048300b3f9bf4fa3c215bb859363986"
+    },
+    "legacy-celestial/thumbs/wands-04.webp": {
+      "bytes": 15396,
+      "sha256": "f804ad74547132aeb639d1a93245c625038e324134504b00d5c3b8aba3287c9e"
+    },
+    "legacy-celestial/thumbs/wands-05.webp": {
+      "bytes": 12282,
+      "sha256": "6ee7f5317afa232103ff0b7392bc93cbe04250bb72585b8fba26faa5a4d2d415"
+    },
+    "legacy-celestial/thumbs/wands-06.webp": {
+      "bytes": 13462,
+      "sha256": "4e2b0c1e5a7dabaaa20479633930990e78a3d54ca71ad6e3efb76a5d524a0c86"
+    },
+    "legacy-celestial/thumbs/wands-07.webp": {
+      "bytes": 11740,
+      "sha256": "1f2acfe219658ab83ded8439d8810a671ca52b1eea82312117bc57178f367f54"
+    },
+    "legacy-celestial/thumbs/wands-08.webp": {
+      "bytes": 10712,
+      "sha256": "4356bfa25272a5c43c57d3ddd96e67200c22c5091f9737a6bd9bb21779f8b170"
+    },
+    "legacy-celestial/thumbs/wands-09.webp": {
+      "bytes": 13362,
+      "sha256": "1a0840ee45c037512c1cdd6acc8730cc8229f69c7973c5c1fae462264829de37"
+    },
+    "legacy-celestial/thumbs/wands-10.webp": {
+      "bytes": 13750,
+      "sha256": "c23955f445e190bd15c340f1ce179559918aae62c9feb1a7fb62acd647de0e5e"
+    },
+    "legacy-celestial/thumbs/wands-11.webp": {
+      "bytes": 11956,
+      "sha256": "8b2e25ab1abb58b7c5fe2ee6240d7d64277d04b6d483410d9fc899c3903991ad"
+    },
+    "legacy-celestial/thumbs/wands-12.webp": {
+      "bytes": 15142,
+      "sha256": "19f2cb65ff2285f911d6cab7a12cef2dcc6b61f301397b8512982ba55c14c58b"
+    },
+    "legacy-celestial/thumbs/wands-13.webp": {
+      "bytes": 15772,
+      "sha256": "3801e0c89fb6e7a1ae2837b33ba70c65670d957d826d4a9c84f319bb183c991d"
+    },
+    "legacy-celestial/thumbs/wands-14.webp": {
+      "bytes": 13068,
+      "sha256": "b642d21f6686c4ce3137cf7f78237994f52652bdec83540e418147014d450f99"
+    },
+    "legacy-classic/cards/cups-01.webp": {
+      "bytes": 551092,
+      "sha256": "6c367f2bcc9075e3f8e6a24b3f3bfb455fd2038270f138d1b1325f1001056ebe"
+    },
+    "legacy-classic/cards/cups-02.webp": {
+      "bytes": 575328,
+      "sha256": "f3b217ceb7de3b0905e5b0c619173328b84707ea99b19d864768c561a9808953"
+    },
+    "legacy-classic/cards/cups-03.webp": {
+      "bytes": 584584,
+      "sha256": "9253e2b4c2f7a3db28c4ca070a2e9b6523f7814a0d980bfdd6cfe7cdb1baa105"
+    },
+    "legacy-classic/cards/cups-04.webp": {
+      "bytes": 627556,
+      "sha256": "f385453e24e6e4cc7da373525428d31f279a235610c550f380823d9157fd02df"
+    },
+    "legacy-classic/cards/cups-05.webp": {
+      "bytes": 508740,
+      "sha256": "2e494aee14027535b9025bcb2c587c80241c6c13325e9f1e67b6bc73070e8f4c"
+    },
+    "legacy-classic/cards/cups-06.webp": {
+      "bytes": 579692,
+      "sha256": "4ce9fde3f57909a6a48e4e38915a4aa44ad4145695fe4c4abec095c4bd821853"
+    },
+    "legacy-classic/cards/cups-07.webp": {
+      "bytes": 620614,
+      "sha256": "e76e60df6f09f786585d10cfabe773c5afeabce42e4ef06976495ee368f7b547"
+    },
+    "legacy-classic/cards/cups-08.webp": {
+      "bytes": 494230,
+      "sha256": "c08216d503f725e22b5054303e58c3399944adbc48a33be014d12e37296cb66f"
+    },
+    "legacy-classic/cards/cups-09.webp": {
+      "bytes": 574672,
+      "sha256": "4f66985ba53abfc8c87cd191da783b3b93d6e76f6f899cfd93338d3dbd658cfe"
+    },
+    "legacy-classic/cards/cups-10.webp": {
+      "bytes": 553586,
+      "sha256": "f26c53220bfde087f01f0b6bb4e6b408389c836d03df7fbb8a12c692e8325127"
+    },
+    "legacy-classic/cards/cups-11.webp": {
+      "bytes": 531774,
+      "sha256": "447492ad3de5b4406d4a02118976dc96a4f1c1381ad8af1059023f683c7f1531"
+    },
+    "legacy-classic/cards/cups-12.webp": {
+      "bytes": 551920,
+      "sha256": "4e70412209bce3088311fc339d15d6e31972910e5a15f7f28f4c170739203e90"
+    },
+    "legacy-classic/cards/cups-13.webp": {
+      "bytes": 572790,
+      "sha256": "c58b79b2eab2f17357a28d25a30f3a7cd62b6044399e7255ea48f4d02db70332"
+    },
+    "legacy-classic/cards/cups-14.webp": {
+      "bytes": 589940,
+      "sha256": "208fc342e39fa138767891a356e02b2fc65c085fa2996fefa85bec63031f5e05"
+    },
+    "legacy-classic/cards/major-00.webp": {
+      "bytes": 651156,
+      "sha256": "4addebe148b7053d2c1eca0be33e531ee3ef3113043899919ed3715c52672a11"
+    },
+    "legacy-classic/cards/major-01.webp": {
+      "bytes": 578356,
+      "sha256": "a553ccec6a6649649588c033a84607ecc3b5bf9e1b4edc4a4e886a9efd2de280"
+    },
+    "legacy-classic/cards/major-02.webp": {
+      "bytes": 504100,
+      "sha256": "d8d40027e9628fe36c923a935c4be2d782a54e0a396c8ed2a4b6b7206aab48a4"
+    },
+    "legacy-classic/cards/major-03.webp": {
+      "bytes": 604472,
+      "sha256": "90419de6b3319f22ae612283cab5128b3fb7575dcb2aa95a80f8dd68287af827"
+    },
+    "legacy-classic/cards/major-04.webp": {
+      "bytes": 561552,
+      "sha256": "e661b1eecce82a3412c8f7bb1517a383b025e128ee8ac1cf3663181d5dbdbb16"
+    },
+    "legacy-classic/cards/major-05.webp": {
+      "bytes": 596656,
+      "sha256": "e972e0ba0d83e58f1b8571ec81a7b72140677f2cc852c14e52bae3ca013663be"
+    },
+    "legacy-classic/cards/major-06.webp": {
+      "bytes": 625418,
+      "sha256": "b183ce6b18ca6ee913cc53bd6c93f426c12162829e58144a8cd552bfa4bfee90"
+    },
+    "legacy-classic/cards/major-07.webp": {
+      "bytes": 599014,
+      "sha256": "8a0af58de65bdb8eeb024f446f3368f8f892465d91f6b33dc9724555795bd067"
+    },
+    "legacy-classic/cards/major-08.webp": {
+      "bytes": 590782,
+      "sha256": "0ad26c4bbaec396a6b9c2224406a4598652e4fcf2411fc0f53222bdaa0d4ae85"
+    },
+    "legacy-classic/cards/major-09.webp": {
+      "bytes": 508108,
+      "sha256": "1b4fa8587b2f44d2f5c485da0e87bb1388960c746c12f05dc0435e8baf3d976b"
+    },
+    "legacy-classic/cards/major-10.webp": {
+      "bytes": 618126,
+      "sha256": "aaef24ab4a8ac978875c322528877bc75c6d1436c5b708e63b1f9a2a74aad3ba"
+    },
+    "legacy-classic/cards/major-11.webp": {
+      "bytes": 559482,
+      "sha256": "2ca6f3a79ee20eb6b2d1ce6dce3f90606c1dbf987f903eccc4ef6f247212782a"
+    },
+    "legacy-classic/cards/major-12.webp": {
+      "bytes": 597332,
+      "sha256": "65e9e0b3cdfe5fa7666e36283372a9f7af4f46c34d0351a47df7ed1c18c7ae8f"
+    },
+    "legacy-classic/cards/major-13.webp": {
+      "bytes": 481382,
+      "sha256": "fcb4e5321c8cb52e2eb248de1c00756ff93069a4f2e73ea80a0762053fac4d5a"
+    },
+    "legacy-classic/cards/major-14.webp": {
+      "bytes": 558836,
+      "sha256": "172164de77461cc412bbfce2fac0163cbde8c66e6e0696d1b67a71a95c23e580"
+    },
+    "legacy-classic/cards/major-15.webp": {
+      "bytes": 535398,
+      "sha256": "4d4665d92489b1c59ebc5172bb71b5d8d6da6517999239a7808a97e6a3565963"
+    },
+    "legacy-classic/cards/major-16.webp": {
+      "bytes": 599850,
+      "sha256": "ae42a3c08fdd4081941369d6b13bb564445463833513cb2000f17535eee6f651"
+    },
+    "legacy-classic/cards/major-17.webp": {
+      "bytes": 621388,
+      "sha256": "0be467b03f3bad12f9f1e74153940c9909c971ff65b1f13d07f1ccc828cad318"
+    },
+    "legacy-classic/cards/major-18.webp": {
+      "bytes": 571334,
+      "sha256": "21e890f47228021ca642eb4437b7d6c819dc645fe95059fa88e5a6fde423287a"
+    },
+    "legacy-classic/cards/major-19.webp": {
+      "bytes": 601294,
+      "sha256": "aeffb2acf746fe87fe5ed1634bcc3c19e5da9d5cefbdc631b811d7bbed52f1c2"
+    },
+    "legacy-classic/cards/major-20.webp": {
+      "bytes": 646750,
+      "sha256": "8fc8e046e4cd8a805fa6832f92058684ef780492599325b1ee3ab295a733b546"
+    },
+    "legacy-classic/cards/major-21.webp": {
+      "bytes": 597130,
+      "sha256": "be6f42d13f2a6fdc917d26f9c800ee8b41d78308199302b27379e10aa0a6e1be"
+    },
+    "legacy-classic/cards/pentacles-01.webp": {
+      "bytes": 624212,
+      "sha256": "2631c54c1db8a4851266def93aee6c5a66eddd5df685a2c004425ca49b3265dc"
+    },
+    "legacy-classic/cards/pentacles-02.webp": {
+      "bytes": 592704,
+      "sha256": "841bc166a43ddb5fb086ad32084ec1dcdc07fe498061e77560463453a86d16f9"
+    },
+    "legacy-classic/cards/pentacles-03.webp": {
+      "bytes": 563882,
+      "sha256": "d6b68584d544be7abc289a7ea689c33dc7f32a42b43a7d50c4f80f83f6804346"
+    },
+    "legacy-classic/cards/pentacles-04.webp": {
+      "bytes": 555962,
+      "sha256": "5b0c3b2f549d45d9f5b55d7332bb5b4969814d5f43b2568f818b90472c05244f"
+    },
+    "legacy-classic/cards/pentacles-05.webp": {
+      "bytes": 530634,
+      "sha256": "d732a4bf64187f3915cd025191d935ad8b0a8f517e5d0f745d7637bcbfad800b"
+    },
+    "legacy-classic/cards/pentacles-06.webp": {
+      "bytes": 560512,
+      "sha256": "6ebbb5334760006684d4625bc56ed2c61de0f4c257193b66c73197a49e1be174"
+    },
+    "legacy-classic/cards/pentacles-07.webp": {
+      "bytes": 572216,
+      "sha256": "284223cb51ec512af40ea4bc0aeeb35b4b5ab85dc32039bad3d2433cdfe8a0a3"
+    },
+    "legacy-classic/cards/pentacles-08.webp": {
+      "bytes": 586384,
+      "sha256": "03fc5d440b7b67c261060f6671b5a3a55b0d7c9d0f3b44f160ec4181a9a1c3b2"
+    },
+    "legacy-classic/cards/pentacles-09.webp": {
+      "bytes": 609424,
+      "sha256": "f07b966da4e8cda8d8c742119d4116622748cbb87be7a2c901999a2bc2ee06e0"
+    },
+    "legacy-classic/cards/pentacles-10.webp": {
+      "bytes": 613356,
+      "sha256": "8ba730b1844b1428804a7df3b70f340368f278f480065ef66451a90ca51cea1e"
+    },
+    "legacy-classic/cards/pentacles-11.webp": {
+      "bytes": 589876,
+      "sha256": "8c0db7bb53a62cd14d891947d68269ac8e0ca6dadde24dab70f031337310de3d"
+    },
+    "legacy-classic/cards/pentacles-12.webp": {
+      "bytes": 556902,
+      "sha256": "8fdb9a81d41e93353c873940e56429a43e66211c8160c37e1efc0c32dd875ce5"
+    },
+    "legacy-classic/cards/pentacles-13.webp": {
+      "bytes": 582140,
+      "sha256": "9b5597ae49ebe84bfc458ecdd5e4351e42a5fdc5ab3f21fad433ecebbe86396d"
+    },
+    "legacy-classic/cards/pentacles-14.webp": {
+      "bytes": 584730,
+      "sha256": "26b27037501ba5203a282891629761f519fcf7d49ea64e780261438c3a5b11b0"
+    },
+    "legacy-classic/cards/swords-01.webp": {
+      "bytes": 591702,
+      "sha256": "2ba19f5e03b1b4faa8df369f11a48d3dca7280aaf08bb39c9a3b548ad0c27b24"
+    },
+    "legacy-classic/cards/swords-02.webp": {
+      "bytes": 584516,
+      "sha256": "e9b558959b6f508b22c5370e111a6e49213d4dbf15462e4ae5fb8c89bbce3627"
+    },
+    "legacy-classic/cards/swords-03.webp": {
+      "bytes": 469438,
+      "sha256": "856db2832fe97a656181536c09ec6aeee484eddbe7b264ff1b9bf1dc8406ef77"
+    },
+    "legacy-classic/cards/swords-04.webp": {
+      "bytes": 607108,
+      "sha256": "6aab58b21801ebd47461fd88b04444ac056989ee6cc8b58a9f1d0ef58978ac96"
+    },
+    "legacy-classic/cards/swords-05.webp": {
+      "bytes": 531690,
+      "sha256": "5b3fd3a888e8148588afc8402dd28290b30efacbfa3628b9bd7e97bd58aa30de"
+    },
+    "legacy-classic/cards/swords-06.webp": {
+      "bytes": 509650,
+      "sha256": "369ad4438f653d32c4010f3fe73c86809b8d800eb991051d82fff054e96765b7"
+    },
+    "legacy-classic/cards/swords-07.webp": {
+      "bytes": 556168,
+      "sha256": "a95bc2736897eddfe684d4b50e3b5bc0ca080ce8d037b37d2354bac7cdbd4ab4"
+    },
+    "legacy-classic/cards/swords-08.webp": {
+      "bytes": 539516,
+      "sha256": "312997738fdc3015bab6814cd0b282a11ccd5184555da5b03f049def23da0a4e"
+    },
+    "legacy-classic/cards/swords-09.webp": {
+      "bytes": 507952,
+      "sha256": "7611e7778d9fc7d67ca5f17e7d3550dba3bb9ca7b56e76355c564e7ec953f113"
+    },
+    "legacy-classic/cards/swords-10.webp": {
+      "bytes": 546818,
+      "sha256": "0f9fe72ac4fa19e90794cf8fed660d5123cf2b9ce5614d62a2f23051bdcc6268"
+    },
+    "legacy-classic/cards/swords-11.webp": {
+      "bytes": 571792,
+      "sha256": "893d44b796a56a380a86fe36d1c72f4524b957435735af5638e33463cda49991"
+    },
+    "legacy-classic/cards/swords-12.webp": {
+      "bytes": 610034,
+      "sha256": "835015d7c1d394640d59cfbd7881c9e0440dc4bba8d950037c9b1a66d7f27e01"
+    },
+    "legacy-classic/cards/swords-13.webp": {
+      "bytes": 569344,
+      "sha256": "cf4c9e45b34f04e4f9f4fd425e129380018e3309426a694522149a164076dc2f"
+    },
+    "legacy-classic/cards/swords-14.webp": {
+      "bytes": 540998,
+      "sha256": "b377476b05ca9b2a2001378a7c11ffd030cd7f9d0901c1e5a3ad7d8a221d714a"
+    },
+    "legacy-classic/cards/wands-01.webp": {
+      "bytes": 517824,
+      "sha256": "cd01afff604ae717b01b5875569a1709275c1fe3e7d2aa7c3c8a10153401897d"
+    },
+    "legacy-classic/cards/wands-02.webp": {
+      "bytes": 550650,
+      "sha256": "3235f80f57a83d28c3e0f6b0f2031f4952ddc49340e27c2ee3b6e84ee005c8a0"
+    },
+    "legacy-classic/cards/wands-03.webp": {
+      "bytes": 557194,
+      "sha256": "bae463f695f5dd9cc4ea2adf8a9126b883a04f7401aed4770cf85a4b278afb7a"
+    },
+    "legacy-classic/cards/wands-04.webp": {
+      "bytes": 615628,
+      "sha256": "908cf0e2b06c8a183b3ba65d2269979122f846709dc77980ae6d0e84d4af1c77"
+    },
+    "legacy-classic/cards/wands-05.webp": {
+      "bytes": 611570,
+      "sha256": "0cb08853e95e558bede707939d6869e6119208be0746b0b5d2bcc7dffbc54008"
+    },
+    "legacy-classic/cards/wands-06.webp": {
+      "bytes": 607554,
+      "sha256": "54b383cc108637c0878f4ccd0abd3cb7e038dd1118621a3139b8c8740b92661d"
+    },
+    "legacy-classic/cards/wands-07.webp": {
+      "bytes": 568048,
+      "sha256": "4c2bf201373dcd6457a8d28e615a3dd95b9d843aaabf8e131c4c26948ae037d6"
+    },
+    "legacy-classic/cards/wands-08.webp": {
+      "bytes": 601494,
+      "sha256": "806dc4df14d73d09d4c72e0c5731c84bc9d1a1b6fb91c0e81ed6851f4b5eff2d"
+    },
+    "legacy-classic/cards/wands-09.webp": {
+      "bytes": 519494,
+      "sha256": "1f530bfb6616fae25abdef1461fc2efe0f7aa8b2552ea85a3cc38206ce7929e9"
+    },
+    "legacy-classic/cards/wands-10.webp": {
+      "bytes": 581062,
+      "sha256": "b91f76b42dd8733070610c24ab6d27579fce49de3a36f9ce350c0d06ddf5c26c"
+    },
+    "legacy-classic/cards/wands-11.webp": {
+      "bytes": 586532,
+      "sha256": "e8cec9002d25313c21d4ef69fbf4adcf78e5d0be668aafb55def32c5ff045ab5"
+    },
+    "legacy-classic/cards/wands-12.webp": {
+      "bytes": 570296,
+      "sha256": "7febc7850da6dc540f2b59bf0d75b9c1af446ad909a5509df8531ba02143f2c7"
+    },
+    "legacy-classic/cards/wands-13.webp": {
+      "bytes": 583372,
+      "sha256": "0b112b7677e553b10de8e6a5ad006bc532fb4b1f5039f3dc7fa07f5f02f4c164"
+    },
+    "legacy-classic/cards/wands-14.webp": {
+      "bytes": 583146,
+      "sha256": "8f1e12963e66ac5ad72058bcd6962b282f0dcf6fc0a867ca783aa84fa0f16ddd"
+    },
+    "legacy-classic/thumbs/cups-01.webp": {
+      "bytes": 20894,
+      "sha256": "63dbdef4088b1e42857f8ecc5dcbb142c65f80239af29a75a69b780f4c585439"
+    },
+    "legacy-classic/thumbs/cups-02.webp": {
+      "bytes": 22432,
+      "sha256": "27385e2283bcbe48afd419cc0c0536e03c8276e8582d9eccdab487e9d56b0466"
+    },
+    "legacy-classic/thumbs/cups-03.webp": {
+      "bytes": 24556,
+      "sha256": "f0cdadef10aeffaa7aba9d89efa84b680db69ae802d031320f264751cf109cf8"
+    },
+    "legacy-classic/thumbs/cups-04.webp": {
+      "bytes": 25216,
+      "sha256": "77affef058eaeb74cc59da12f88422c3d985785c1a9cfaca88ce90a867b4f827"
+    },
+    "legacy-classic/thumbs/cups-05.webp": {
+      "bytes": 19308,
+      "sha256": "cde06be847f1fdf86b209564759571d823c851308f8633b66a62c73915e8fc2c"
+    },
+    "legacy-classic/thumbs/cups-06.webp": {
+      "bytes": 23704,
+      "sha256": "6247297abd55934fe28c32aaa9e6db564450bf65c8423c2123703e3dd2f00cae"
+    },
+    "legacy-classic/thumbs/cups-07.webp": {
+      "bytes": 23286,
+      "sha256": "adae9431e1875ab67bdd58b474a99beb391847b3e172b23c2d7488276cb012d6"
+    },
+    "legacy-classic/thumbs/cups-08.webp": {
+      "bytes": 19924,
+      "sha256": "744382bbb75545ed02b33538d9fcf52ce084253679543e07f40a435ae2ae74a7"
+    },
+    "legacy-classic/thumbs/cups-09.webp": {
+      "bytes": 23978,
+      "sha256": "8c205c53d7d404d636cf04ab0fbca08e90cfb081a16637728c581c3e934cc5db"
+    },
+    "legacy-classic/thumbs/cups-10.webp": {
+      "bytes": 22590,
+      "sha256": "1de0b0eef8e7160fa3964f80963552a7e9f4231e81147e4e65a76317245c6f66"
+    },
+    "legacy-classic/thumbs/cups-11.webp": {
+      "bytes": 21670,
+      "sha256": "4d6f83917b82a5ac03077544a030ab3c19803b260ec68dc92a4e498f7c1e5415"
+    },
+    "legacy-classic/thumbs/cups-12.webp": {
+      "bytes": 22230,
+      "sha256": "acaec758a01f58d6caf5bbaa133fcf042a3adb4d6e8ee34aa5de773726eab59c"
+    },
+    "legacy-classic/thumbs/cups-13.webp": {
+      "bytes": 23156,
+      "sha256": "e7c49bd193a9b1602466ca749f6e0787fb8e2da399ddd4f3d20307256c600c55"
+    },
+    "legacy-classic/thumbs/cups-14.webp": {
+      "bytes": 22910,
+      "sha256": "d5bd67aa6919d63a762f0b30bb3af77b8c35db04acb55946c25e221f705e6b23"
+    },
+    "legacy-classic/thumbs/major-00.webp": {
+      "bytes": 23834,
+      "sha256": "8808c2817a413c7e9595c2d7da687bdf06236ceacf5d053ecef7881fc03c77f6"
+    },
+    "legacy-classic/thumbs/major-01.webp": {
+      "bytes": 25160,
+      "sha256": "e9bc1601f736000ffb2287d1cf645a7d212d9fab06755d73c1aec9589e9c0238"
+    },
+    "legacy-classic/thumbs/major-02.webp": {
+      "bytes": 19816,
+      "sha256": "87571fd1030010d50239b3308b8928f2a8544cb55aade7d640aa9313c9b8376b"
+    },
+    "legacy-classic/thumbs/major-03.webp": {
+      "bytes": 26042,
+      "sha256": "48827d2a6ea832826e0fc69c2217cc964c6e2978d20d9ea83459457a6d571430"
+    },
+    "legacy-classic/thumbs/major-04.webp": {
+      "bytes": 22236,
+      "sha256": "c15dd0d5222db646d7a43caacbc3e77be5daf9a05b5f15240054fac7a33b9f3e"
+    },
+    "legacy-classic/thumbs/major-05.webp": {
+      "bytes": 22780,
+      "sha256": "37a4de2b2d162f61b8e36e2cd472ff3a4dc7da92418c408d23352f4f2581a7fb"
+    },
+    "legacy-classic/thumbs/major-06.webp": {
+      "bytes": 25952,
+      "sha256": "138233fd93908e1fef31e07ef2fb4cb26c3f2bc8a5035370f87469cb0d3b7782"
+    },
+    "legacy-classic/thumbs/major-07.webp": {
+      "bytes": 24596,
+      "sha256": "19125751f13e29786cb458a7af60a7ad1c15cd2e4c6764831f0b869e88e803a0"
+    },
+    "legacy-classic/thumbs/major-08.webp": {
+      "bytes": 23846,
+      "sha256": "e8b2da566b6ba1c5ff6fee992ce90535ab035182e16eb3cd7b363e7e950b00f9"
+    },
+    "legacy-classic/thumbs/major-09.webp": {
+      "bytes": 20126,
+      "sha256": "5dd18bd69c97b576c103121ff21ba30c5b7a10eccca880e2e3b1b47bf978c3f5"
+    },
+    "legacy-classic/thumbs/major-10.webp": {
+      "bytes": 25046,
+      "sha256": "1749426c1900d248d24fa3f4df2bcb183ec26c9d8044620c101fa78496d73bba"
+    },
+    "legacy-classic/thumbs/major-11.webp": {
+      "bytes": 20298,
+      "sha256": "2945ee1f70a16d7d3e5ac96c8694c249c1407fde7f0e27abe1ea797f7edc11f8"
+    },
+    "legacy-classic/thumbs/major-12.webp": {
+      "bytes": 24332,
+      "sha256": "ae63adbe3d927ca7d96b70368b528fd7513710dc8e5ee446ce6ab17b813c7e30"
+    },
+    "legacy-classic/thumbs/major-13.webp": {
+      "bytes": 19602,
+      "sha256": "9d4c49142a6ecac526fbc6b0fb2c2206fcbc9ef1cde9972a0a9fdc4467f8529c"
+    },
+    "legacy-classic/thumbs/major-14.webp": {
+      "bytes": 22970,
+      "sha256": "c9ccae9fe1542f6aa22b1312d57ddc7c02282bedd0c0247a7e814f60aed5d4f1"
+    },
+    "legacy-classic/thumbs/major-15.webp": {
+      "bytes": 21344,
+      "sha256": "5e38821c53271dbaf41daebe8966603b1059c5293024c84bcf24b6812cc05884"
+    },
+    "legacy-classic/thumbs/major-16.webp": {
+      "bytes": 23266,
+      "sha256": "3b376aba21e31a40911a5852e2aa24cfe18dbea04c1c38143cc5669b1ad5cd55"
+    },
+    "legacy-classic/thumbs/major-17.webp": {
+      "bytes": 23072,
+      "sha256": "abc4aa71c57e19a5ba691629434db0fc9e8a31f38d554a03b5a8707dc5465643"
+    },
+    "legacy-classic/thumbs/major-18.webp": {
+      "bytes": 22358,
+      "sha256": "ba9765a9b64afce7b5cf9e38a4fcdc62352631ace59a8c90196e05ee347aa348"
+    },
+    "legacy-classic/thumbs/major-19.webp": {
+      "bytes": 23786,
+      "sha256": "14a47a53367d71a0151d77b68bf5fd69d9adb88a698ae0872b6ae50401dfecd7"
+    },
+    "legacy-classic/thumbs/major-20.webp": {
+      "bytes": 25014,
+      "sha256": "23d99425482a057c9adc082e08f5b77b6c5a2aad0e5473463efdc6bc2bdb1f89"
+    },
+    "legacy-classic/thumbs/major-21.webp": {
+      "bytes": 26214,
+      "sha256": "65b0a9005aff77ec6ac2cf37d0ab6e5e6b51b08e9ba0f92668e1fc27bda70116"
+    },
+    "legacy-classic/thumbs/pentacles-01.webp": {
+      "bytes": 25722,
+      "sha256": "878778819f19ef63046f08215dd0407a8da8e9c7fdb66ed0c1293252ec5d72e4"
+    },
+    "legacy-classic/thumbs/pentacles-02.webp": {
+      "bytes": 23694,
+      "sha256": "a605efeb5a85ae98fef5b07b00a3ab10e6321beb2ec7047381fe7ba45e2101b8"
+    },
+    "legacy-classic/thumbs/pentacles-03.webp": {
+      "bytes": 22552,
+      "sha256": "51fc5ee82184854a22b663a9d47fe1717d9eea899b7ab6ef4db93e18fd6060d7"
+    },
+    "legacy-classic/thumbs/pentacles-04.webp": {
+      "bytes": 22700,
+      "sha256": "24ae22a29c6f1e4e717a1e213a919a36f785700ad4f717b64f5488fa45d7b371"
+    },
+    "legacy-classic/thumbs/pentacles-05.webp": {
+      "bytes": 24148,
+      "sha256": "7c67bb9f1c6832c0817b5a5b4b1326c6ad705036836c8ee5bb2cac9c69f8b2e3"
+    },
+    "legacy-classic/thumbs/pentacles-06.webp": {
+      "bytes": 22546,
+      "sha256": "c1827355e6fd2b43fa9412079b063d85dbb8dd3ad8ba7746b1a683d656509e07"
+    },
+    "legacy-classic/thumbs/pentacles-07.webp": {
+      "bytes": 25920,
+      "sha256": "cd141d4311b0b24e6d5fbc2f774541f3f3a50f9dffe8213b194ca83060209996"
+    },
+    "legacy-classic/thumbs/pentacles-08.webp": {
+      "bytes": 22994,
+      "sha256": "883dcdbba91ec0b2186cfb90a41fec7fb49442b9c1de6d09c59b632d00c142e0"
+    },
+    "legacy-classic/thumbs/pentacles-09.webp": {
+      "bytes": 26200,
+      "sha256": "9e748e67546556a363954534253c0b4271e591856e204f26fd9eea0273bb28f8"
+    },
+    "legacy-classic/thumbs/pentacles-10.webp": {
+      "bytes": 24856,
+      "sha256": "44e7fc567ca0ca445e8f339de8171977010ed7705d2209b840bf7dfb25b2ee06"
+    },
+    "legacy-classic/thumbs/pentacles-11.webp": {
+      "bytes": 23292,
+      "sha256": "ef1ca0a3cfce1981ff7f04260da49192e3be68615bc4278c7091becc3b3b8ecc"
+    },
+    "legacy-classic/thumbs/pentacles-12.webp": {
+      "bytes": 21276,
+      "sha256": "8de6e9b1cd4de163be8a6d8e8fa5fb05147b5528fcaba1a67ce357f9d26195db"
+    },
+    "legacy-classic/thumbs/pentacles-13.webp": {
+      "bytes": 24348,
+      "sha256": "182a6020efb157b92bdaebfa094fc6e0196befa5c97efc2bb50060c646541f68"
+    },
+    "legacy-classic/thumbs/pentacles-14.webp": {
+      "bytes": 24422,
+      "sha256": "371c6e8da43528dd2379b7a1bab42d38276fc6da0b9c9283bd1d3993cb537cd4"
+    },
+    "legacy-classic/thumbs/swords-01.webp": {
+      "bytes": 22212,
+      "sha256": "dba3b07042258a63d7ecbcb4030c657cfb681c0d3e2564cd98439fbb33c886c3"
+    },
+    "legacy-classic/thumbs/swords-02.webp": {
+      "bytes": 21116,
+      "sha256": "c05e3df5674a6ae906474c61e5c8ecb4df029effdd004f613ca96d4fcc73c4cd"
+    },
+    "legacy-classic/thumbs/swords-03.webp": {
+      "bytes": 19850,
+      "sha256": "76a9635455c03f0146983336ff23d09510382502edbca785838b664fb1e2f925"
+    },
+    "legacy-classic/thumbs/swords-04.webp": {
+      "bytes": 22166,
+      "sha256": "706af06c6a4eac69df54924024dfaf82cd7f22b1c496ae2a21b8fd8cf19a9fe6"
+    },
+    "legacy-classic/thumbs/swords-05.webp": {
+      "bytes": 22162,
+      "sha256": "03d8d3d995575fa4558252212e334b124ccbafa0babbc6064330696016169c02"
+    },
+    "legacy-classic/thumbs/swords-06.webp": {
+      "bytes": 21318,
+      "sha256": "225e009a2f858ff4890a834c3e13936a2e4147a9d11091982f7e0f6d8b2f41c0"
+    },
+    "legacy-classic/thumbs/swords-07.webp": {
+      "bytes": 23846,
+      "sha256": "98d4fcbf32f53d04e8e19c209ba073c4dbeb6a8d32b7220a0ed97cf4cbd160a5"
+    },
+    "legacy-classic/thumbs/swords-08.webp": {
+      "bytes": 21246,
+      "sha256": "ff04216f1532a496217a91b9af909d67513410d2994a71387c7acfa316a6243c"
+    },
+    "legacy-classic/thumbs/swords-09.webp": {
+      "bytes": 16576,
+      "sha256": "bb42e432ada9fc84d1d3def1cf2938afa20a06e01f22107f66d412c883d5247e"
+    },
+    "legacy-classic/thumbs/swords-10.webp": {
+      "bytes": 20514,
+      "sha256": "814da5fadce4f72649854fce2dc8ad5adc633e11871909d8908e8011291dc65e"
+    },
+    "legacy-classic/thumbs/swords-11.webp": {
+      "bytes": 20970,
+      "sha256": "aef526ed19ff591898850b031f07f573a6c4c5c061b32bda935da2903bc24fc6"
+    },
+    "legacy-classic/thumbs/swords-12.webp": {
+      "bytes": 27352,
+      "sha256": "ad840cd16f2092d61e25f0c7a2bce5bfff84ccd21af2ed07c8651588af823632"
+    },
+    "legacy-classic/thumbs/swords-13.webp": {
+      "bytes": 21034,
+      "sha256": "65f82aaf83ace1b17892d2c3555d8d2ef69497664abc1172fcd353f9b63d2cb0"
+    },
+    "legacy-classic/thumbs/swords-14.webp": {
+      "bytes": 20514,
+      "sha256": "a67df3d0e8502186f5b8b9593cf5775cf482aff63851811bc0dccfce479a9e73"
+    },
+    "legacy-classic/thumbs/wands-01.webp": {
+      "bytes": 19174,
+      "sha256": "7cfc649f4a5771786a1584abc28713248687947052d6f6ea60149d64e656fb21"
+    },
+    "legacy-classic/thumbs/wands-02.webp": {
+      "bytes": 20136,
+      "sha256": "7829ea71c2fb0dd93a3670842add54d693395259b0e250d11e09cdf79f3a8a41"
+    },
+    "legacy-classic/thumbs/wands-03.webp": {
+      "bytes": 21326,
+      "sha256": "f1cdae531b30fd6529f5dc2219aa44689e535cb37e0d863ebf37231d6666d950"
+    },
+    "legacy-classic/thumbs/wands-04.webp": {
+      "bytes": 24596,
+      "sha256": "8e275625493cb0fad8b10b7934d34713431e97c93140f8543666e22bb296173d"
+    },
+    "legacy-classic/thumbs/wands-05.webp": {
+      "bytes": 24300,
+      "sha256": "966fceab03a3b53dd3e7b7562242095b946f0458944be7885f66f023da03cc4a"
+    },
+    "legacy-classic/thumbs/wands-06.webp": {
+      "bytes": 22770,
+      "sha256": "4bfc46d8c8af118a7257defb3c18894f57b2cf6ac481e476f32045a9ae1ed7cb"
+    },
+    "legacy-classic/thumbs/wands-07.webp": {
+      "bytes": 20880,
+      "sha256": "38ce3dc66a963b9a7261ac6f3c480ea21240a123e2e64b8e233931f0cf6b30b2"
+    },
+    "legacy-classic/thumbs/wands-08.webp": {
+      "bytes": 23114,
+      "sha256": "cf0202ef8476759199f03c8f75a012696ecf779cf25b87063c502813d6e4eeb4"
+    },
+    "legacy-classic/thumbs/wands-09.webp": {
+      "bytes": 21996,
+      "sha256": "a0a5080131c3efb16b22e2151f920d30b6606d8931f97a85c7f908ad32c9754e"
+    },
+    "legacy-classic/thumbs/wands-10.webp": {
+      "bytes": 22860,
+      "sha256": "32684a53700c69fd9166b0dd2d9a276b4b932112db3d79393eca84317d9058e3"
+    },
+    "legacy-classic/thumbs/wands-11.webp": {
+      "bytes": 22106,
+      "sha256": "169bc2bcf4a0cee1aeb7a2e7c51cacdb08efae79b8199f3568fa9df1090fc49d"
+    },
+    "legacy-classic/thumbs/wands-12.webp": {
+      "bytes": 21852,
+      "sha256": "6d5c56b16983508948739a1e09c03fcb53123958e5203c41dfa431d99d49ddfc"
+    },
+    "legacy-classic/thumbs/wands-13.webp": {
+      "bytes": 23992,
+      "sha256": "6595bb837d8d2dd74c478587f47b4d4b456a6eb65fc04565bee25390e6946f23"
+    },
+    "legacy-classic/thumbs/wands-14.webp": {
+      "bytes": 22088,
+      "sha256": "0e0fa0dbb6acb10fe973de2fe3f80a9e7e11ee7afce3440c9ed4a5d03c18e5ad"
+    },
+    "legacy-forest/cards/cups-01.webp": {
+      "bytes": 422392,
+      "sha256": "5ebc99f4e7ee4a7154d24ce5fd0d9f0d8f974da65dc4ce6d08178e4c956d04af"
+    },
+    "legacy-forest/cards/cups-02.webp": {
+      "bytes": 442820,
+      "sha256": "e6d5d849b8515f55dc4dee67f34cfc9f10dd1f10759b7aba28b785706a4c9519"
+    },
+    "legacy-forest/cards/cups-03.webp": {
+      "bytes": 483136,
+      "sha256": "307ab9a34228402c6e5957b5fe08fb1d97d25db5b87f0c611d49575d296cd6f0"
+    },
+    "legacy-forest/cards/cups-04.webp": {
+      "bytes": 424622,
+      "sha256": "7072e77525a87bec3237e350e0e42eec221f3dcdb01fd16ff9c5381e03331cda"
+    },
+    "legacy-forest/cards/cups-05.webp": {
+      "bytes": 457754,
+      "sha256": "afea0dad6b3ff31a081c4fa5b6eb58137f4f6e2bbb71cabbd51bce336ad5df62"
+    },
+    "legacy-forest/cards/cups-06.webp": {
+      "bytes": 494676,
+      "sha256": "2851ffb5ef78f3a382f1e40a09964ea9292af0e04b7a9a4fd2aded4788b0d5a2"
+    },
+    "legacy-forest/cards/cups-07.webp": {
+      "bytes": 450450,
+      "sha256": "edfaf246d2a630264c4546eb002e7e20bfb9284fb3fcbf96d63a3af3d93606f7"
+    },
+    "legacy-forest/cards/cups-08.webp": {
+      "bytes": 438398,
+      "sha256": "2a5b9fbcb2f643dbb6e2e577a6f1844a59d53abc3b5eab4b35953fe7e995dd82"
+    },
+    "legacy-forest/cards/cups-09.webp": {
+      "bytes": 429534,
+      "sha256": "6361c63cf5830322f54fc47a39d657b6a49964b23fae73db74a07bebcc5eb791"
+    },
+    "legacy-forest/cards/cups-10.webp": {
+      "bytes": 488844,
+      "sha256": "2703f01c13fdb07899259565e32d1fa9d488545e7bb8882d74a3f43661843670"
+    },
+    "legacy-forest/cards/cups-11.webp": {
+      "bytes": 373830,
+      "sha256": "57678899232c493d1698154982ec25cbcd883260d04187d72b5847cf10c6e64b"
+    },
+    "legacy-forest/cards/cups-12.webp": {
+      "bytes": 430638,
+      "sha256": "fb9b1fc8d5291e1391d80ce7c3bcd3dca208b3d5b0ba1c4f92c68d5343742520"
+    },
+    "legacy-forest/cards/cups-13.webp": {
+      "bytes": 400740,
+      "sha256": "79c2a8f4c540447f380c399f2428126e9518999b12114946ca22a5dd17437a40"
+    },
+    "legacy-forest/cards/cups-14.webp": {
+      "bytes": 430472,
+      "sha256": "6a70061865ad63c25e30ff6addcbf13761b2c9bf8de160c90c22a09dce040ca7"
+    },
+    "legacy-forest/cards/major-00.webp": {
+      "bytes": 451806,
+      "sha256": "1ff9fc407385a4b4ea2e42233afc98dc7c4ae84a8973a00fd6604db08e6ddf02"
+    },
+    "legacy-forest/cards/major-01.webp": {
+      "bytes": 467314,
+      "sha256": "4f9c152efc1f7e9de61c654a524b12c6c7526747ad870559d8c016e324da6569"
+    },
+    "legacy-forest/cards/major-02.webp": {
+      "bytes": 464324,
+      "sha256": "43649b7090d06335f712eca5febfce7b1e34cf7b9cac086c064afa05d2d3508e"
+    },
+    "legacy-forest/cards/major-03.webp": {
+      "bytes": 494178,
+      "sha256": "ac437aa02d2a7764b8d15d7d3a6f7d15b4a374d41025e03a6ca8e3bd790d2fa1"
+    },
+    "legacy-forest/cards/major-04.webp": {
+      "bytes": 427994,
+      "sha256": "d8283a020ef62498f35cb76e4447b2efd93687c729727d0409ded66c14e6b00c"
+    },
+    "legacy-forest/cards/major-05.webp": {
+      "bytes": 471930,
+      "sha256": "6a516adf98346b61c187d6fa7fe52c5b95dc22a098ad45deb7c841e5940c570a"
+    },
+    "legacy-forest/cards/major-06.webp": {
+      "bytes": 494458,
+      "sha256": "f72c40602c1b02f0889d246ff2b8dc4f029352ded20317644c770ef8c2e8f750"
+    },
+    "legacy-forest/cards/major-07.webp": {
+      "bytes": 497850,
+      "sha256": "215ac6bebb43cd7ca55d5c92c40d63614eba59035c4cdeab09e863875450b108"
+    },
+    "legacy-forest/cards/major-08.webp": {
+      "bytes": 439382,
+      "sha256": "b30584cc8112de025a9d1835871b44cbd1b620139740f9cde73beba0f6b0b9f5"
+    },
+    "legacy-forest/cards/major-09.webp": {
+      "bytes": 457398,
+      "sha256": "ecae53d52fa8bc6675d96908c613d19391b4184002dc193fb352862aca5235a3"
+    },
+    "legacy-forest/cards/major-10.webp": {
+      "bytes": 500798,
+      "sha256": "2269d35f4016a2e060934ec2f35582835276fdd23c0a7ca47ffc5446dd78c756"
+    },
+    "legacy-forest/cards/major-11.webp": {
+      "bytes": 439202,
+      "sha256": "dab279bb1ebdf54cbec3e76868d7519c4b018538183e064d4a7a33b0b4ce0e57"
+    },
+    "legacy-forest/cards/major-12.webp": {
+      "bytes": 531874,
+      "sha256": "7e7425eedf9a23580a65a51d9536ce5a720c5bccf406160291a49da079cf171c"
+    },
+    "legacy-forest/cards/major-13.webp": {
+      "bytes": 482454,
+      "sha256": "8039fd439fcc3b3a979c9c14c6abeddac157f1f5543c0c7bf4a90dbb96f38683"
+    },
+    "legacy-forest/cards/major-14.webp": {
+      "bytes": 432514,
+      "sha256": "2e471712818a685c0ffe754223ca0c6b0a83156bfcd237fd2e3061f198ff7089"
+    },
+    "legacy-forest/cards/major-15.webp": {
+      "bytes": 465672,
+      "sha256": "f354e12ca3687675f2e1b1bd7d88bf14ae3d0b2c0f3da36ca8c20664df953ef1"
+    },
+    "legacy-forest/cards/major-16.webp": {
+      "bytes": 459780,
+      "sha256": "6123645f703b4e72e25cd60e1797abc264341c801aca3c8a9f8cb72f800836f9"
+    },
+    "legacy-forest/cards/major-17.webp": {
+      "bytes": 461672,
+      "sha256": "4960acef9a79de15920d4dd8cb871b8660bf0435e7ac84a71ff215ab5bc7480a"
+    },
+    "legacy-forest/cards/major-18.webp": {
+      "bytes": 465732,
+      "sha256": "7a30ee597f94f3ef11d01b6b1919a86d2af9c4ed71f5ffacdd252ace242ceb26"
+    },
+    "legacy-forest/cards/major-19.webp": {
+      "bytes": 476786,
+      "sha256": "e5d0fef0cbcad01c1b0a19fbc9b07f62c31a51afb69d2b44ddb17f81bf6ded8c"
+    },
+    "legacy-forest/cards/major-20.webp": {
+      "bytes": 475944,
+      "sha256": "c8e14bd235a86c0fff2ecf1b44075905f4cad3419e59932bd110751dbc2edf7e"
+    },
+    "legacy-forest/cards/major-21.webp": {
+      "bytes": 508306,
+      "sha256": "5721def5f3fbc8745ad26ddd11a6fd2a7f6891233c7514d596f7e4d3f09955c0"
+    },
+    "legacy-forest/cards/pentacles-01.webp": {
+      "bytes": 446592,
+      "sha256": "384e7b87a910fa7e80325535a769a37d123b571376a558510a04efec0f75978a"
+    },
+    "legacy-forest/cards/pentacles-02.webp": {
+      "bytes": 488590,
+      "sha256": "ddf0dbfeca67a31fd19d7428846466655a79a1f6bb6c97157ea039b4611bdf01"
+    },
+    "legacy-forest/cards/pentacles-03.webp": {
+      "bytes": 470658,
+      "sha256": "61fcc372e5679f9c61b082bb0fad348833752be2173f0bbf51cb73c49070c0dd"
+    },
+    "legacy-forest/cards/pentacles-04.webp": {
+      "bytes": 463120,
+      "sha256": "e2c2d0833dbed68cb5adbea3106fb1fbd6c8bab79d985d5374460b153ea2b2da"
+    },
+    "legacy-forest/cards/pentacles-05.webp": {
+      "bytes": 499584,
+      "sha256": "ef7d21b2b7743a1e5de2505e3844963e12e1c8a97446c729e925fea75c7879d4"
+    },
+    "legacy-forest/cards/pentacles-06.webp": {
+      "bytes": 473992,
+      "sha256": "b2e97513eac84940bba778472965b82eb431390ab46a9dd92872556b13c15273"
+    },
+    "legacy-forest/cards/pentacles-07.webp": {
+      "bytes": 479500,
+      "sha256": "0cdbb37a15a2f080ea528e455cbb137acc1430ea26e4ad2e279d4e3b039acd2f"
+    },
+    "legacy-forest/cards/pentacles-08.webp": {
+      "bytes": 455564,
+      "sha256": "9a7b19fb10e476db529f171b679fc8fbb496399feab01ba1060fbec230235753"
+    },
+    "legacy-forest/cards/pentacles-09.webp": {
+      "bytes": 555596,
+      "sha256": "d3fc4b45e31d65708ba990ae4072c1709fc2b90cdd21801e2493678297205aca"
+    },
+    "legacy-forest/cards/pentacles-10.webp": {
+      "bytes": 522404,
+      "sha256": "a2e5363d0b36ba8e7a78cc24298733de33de39f4ce0c11f7be443546edd5fa9d"
+    },
+    "legacy-forest/cards/pentacles-11.webp": {
+      "bytes": 466730,
+      "sha256": "1f0ce2d17ac003a0f55fcaa95ddeb1349959ab7d2cb033c460fdec334e515a39"
+    },
+    "legacy-forest/cards/pentacles-12.webp": {
+      "bytes": 459576,
+      "sha256": "453b15ccd59f0acaf4775ee5a5bd6b487675128e26ee968b873f1e800ccccd5a"
+    },
+    "legacy-forest/cards/pentacles-13.webp": {
+      "bytes": 508766,
+      "sha256": "503ee9a3eaa6c7d394894cc698410283bbeb7ad62c9464fa9187bb7c71245e74"
+    },
+    "legacy-forest/cards/pentacles-14.webp": {
+      "bytes": 482400,
+      "sha256": "0295a4ba2735ebd8d3f5ae72cb63d7bb0246172001fb88cc7c93b2d4f620edd0"
+    },
+    "legacy-forest/cards/swords-01.webp": {
+      "bytes": 395578,
+      "sha256": "aa8904955ef74d29000bff65257d06b519de80e8971d9c1ab2ff27a5abbd3e4d"
+    },
+    "legacy-forest/cards/swords-02.webp": {
+      "bytes": 415898,
+      "sha256": "0485950c094ae0b3238b69a13cc78b6f5a260faadd45b03cd55353444a6ae686"
+    },
+    "legacy-forest/cards/swords-03.webp": {
+      "bytes": 379110,
+      "sha256": "2742ac692153f406c7856c6f8536a4dd909dc0472b5fb3d11aefbc12d2ce7c8d"
+    },
+    "legacy-forest/cards/swords-04.webp": {
+      "bytes": 426108,
+      "sha256": "c97101556363dbfebd1f7459dabdf5d90db8b292b91e4fc494e66fc5f61d39c3"
+    },
+    "legacy-forest/cards/swords-05.webp": {
+      "bytes": 391752,
+      "sha256": "dfaf1579ceedec11391be514194083a9e39886b7dfc9a9bffaf428d6c91e224a"
+    },
+    "legacy-forest/cards/swords-06.webp": {
+      "bytes": 452516,
+      "sha256": "b06580d488c8ca817a9584a5ea12a575d02efdc50c4f0da3a30ad0c7292da57d"
+    },
+    "legacy-forest/cards/swords-07.webp": {
+      "bytes": 436856,
+      "sha256": "d6772c20f2c36033fdae0e95cd75c8f78159bbc5867250cbb2019e38d81c3edc"
+    },
+    "legacy-forest/cards/swords-08.webp": {
+      "bytes": 459888,
+      "sha256": "afe71d467e7cd2c0820fad84335170fa2b20b4ada67f6ed63041fe430758fb64"
+    },
+    "legacy-forest/cards/swords-09.webp": {
+      "bytes": 380122,
+      "sha256": "603a385718136661e4ee8345d4e6b0a90cf07550e01727862de869c7d068315c"
+    },
+    "legacy-forest/cards/swords-10.webp": {
+      "bytes": 443290,
+      "sha256": "c988aceec98ddf7e6ad2df7f5d416eb2e499ebcdb0ddc42838d595418f3e9fcc"
+    },
+    "legacy-forest/cards/swords-11.webp": {
+      "bytes": 422058,
+      "sha256": "277b2e01d60e1288c8619066f85e3160d111843c5573dc89accb7aa293175fd2"
+    },
+    "legacy-forest/cards/swords-12.webp": {
+      "bytes": 428686,
+      "sha256": "8741ada785854e184525c5f5c6ee82225467c429edc7db973781aeef86705695"
+    },
+    "legacy-forest/cards/swords-13.webp": {
+      "bytes": 457038,
+      "sha256": "6c7ca0b778d8d3ac71ae8bf523f13777afc42ed3fca076fa2eeecfe7112fcbdc"
+    },
+    "legacy-forest/cards/swords-14.webp": {
+      "bytes": 456638,
+      "sha256": "ebeb32822ecb5f40947ad6f902986a672ff9e5c993d4b46547f16441b8ee7c74"
+    },
+    "legacy-forest/cards/wands-01.webp": {
+      "bytes": 396426,
+      "sha256": "6a6d2421e9f3faec5a58f69a21bb3e18d9f8dc645353200b8c9501447b66fbca"
+    },
+    "legacy-forest/cards/wands-02.webp": {
+      "bytes": 428668,
+      "sha256": "77c5af3edc3983e2e0c6353e643ed802f27d5737073c9869f3559c5e934e550d"
+    },
+    "legacy-forest/cards/wands-03.webp": {
+      "bytes": 404420,
+      "sha256": "322ea4d9eff53c324ea28022f9457ec6abe324650a0d12ebc62be56bfe4399ac"
+    },
+    "legacy-forest/cards/wands-04.webp": {
+      "bytes": 506656,
+      "sha256": "3cde876c4e158be7c1794823899fec83067bced044c081f0ae219cd76c5e712c"
+    },
+    "legacy-forest/cards/wands-05.webp": {
+      "bytes": 503516,
+      "sha256": "9ad3393b52eae9fe23d8b0645ee15d87056cc3e39c6c9cbf8776e928aaac4774"
+    },
+    "legacy-forest/cards/wands-06.webp": {
+      "bytes": 466738,
+      "sha256": "5b0a4b3a93420758844e3da06278d3bcf971525641da2e3409409c7080ce25bd"
+    },
+    "legacy-forest/cards/wands-07.webp": {
+      "bytes": 460214,
+      "sha256": "69a2a897733c93ec7540085f84128b1d73403a8b3c79fd9841797e4bd71509b8"
+    },
+    "legacy-forest/cards/wands-08.webp": {
+      "bytes": 350492,
+      "sha256": "d74102b5c47c60d999bb308f12d268a346d3fccf8f6f64195bb83e2c683b9458"
+    },
+    "legacy-forest/cards/wands-09.webp": {
+      "bytes": 444612,
+      "sha256": "1cd025db88ca32820f34e8489ad7f502a8b9fceb67cd8a8bef5db040730e4b8f"
+    },
+    "legacy-forest/cards/wands-10.webp": {
+      "bytes": 463822,
+      "sha256": "1244162396c1f50d98544a70c670f0da7a8d9aba44713dc5adcde146c9f7919f"
+    },
+    "legacy-forest/cards/wands-11.webp": {
+      "bytes": 398910,
+      "sha256": "015e9552b34f07a39e66036e0dbee0b671ddf946d22894a39c9015910f1af202"
+    },
+    "legacy-forest/cards/wands-12.webp": {
+      "bytes": 438678,
+      "sha256": "95f1aef5ed60081998911b3e77e09985ebbef7efaa6c9c099e8ada2475f63128"
+    },
+    "legacy-forest/cards/wands-13.webp": {
+      "bytes": 434550,
+      "sha256": "85f6f52d1a6111c5840f6bb6ea248b9213f682f3e8f9b4ed5af2450657090c57"
+    },
+    "legacy-forest/cards/wands-14.webp": {
+      "bytes": 441274,
+      "sha256": "52803b739c71643e088605a662e23848593b106b8d74170438f0f534de16227f"
+    },
+    "legacy-forest/thumbs/cups-01.webp": {
+      "bytes": 27522,
+      "sha256": "e2c20fdc902125c8c97313f1a1690953005cae173120908afac633c441610e20"
+    },
+    "legacy-forest/thumbs/cups-02.webp": {
+      "bytes": 29326,
+      "sha256": "b2a6742232c19bd47cdf45966ee1e34e5d863cbd11601c652c7b98299855ab43"
+    },
+    "legacy-forest/thumbs/cups-03.webp": {
+      "bytes": 29468,
+      "sha256": "0c483506095e25dec07726b65a5e774b15d8272735bd7a98c9d243dd63bcf718"
+    },
+    "legacy-forest/thumbs/cups-04.webp": {
+      "bytes": 29060,
+      "sha256": "cd38efdde3499f23330253cf28b3075a95daca1c2c486a4524083300b7f5f964"
+    },
+    "legacy-forest/thumbs/cups-05.webp": {
+      "bytes": 30536,
+      "sha256": "9dda4dadef020350242180f2b0c876aca63a6bff30be398f40b69c6244473ce7"
+    },
+    "legacy-forest/thumbs/cups-06.webp": {
+      "bytes": 30566,
+      "sha256": "8a19e09b37eef9b4cd6666d5f993d6c88b9a55de7a3d2a2800b51583da580a1a"
+    },
+    "legacy-forest/thumbs/cups-07.webp": {
+      "bytes": 29206,
+      "sha256": "e6b38a431bbb7b940a468d4d45a12eeff0f17821e384ad25a5d0bb748491c531"
+    },
+    "legacy-forest/thumbs/cups-08.webp": {
+      "bytes": 27050,
+      "sha256": "f120e036d1c3cf38ca27019e42bdab30a58a541bd2eb2000172477ee974ecbab"
+    },
+    "legacy-forest/thumbs/cups-09.webp": {
+      "bytes": 28130,
+      "sha256": "7ae7125e4505ec6184b81a8229a735c2dbcdabf4f6c940a23e9d5576d5c96a3e"
+    },
+    "legacy-forest/thumbs/cups-10.webp": {
+      "bytes": 30124,
+      "sha256": "570bce72a3528de4e45f00ee58d64a0342c70b703d927dfed58ffbbcb9187bf6"
+    },
+    "legacy-forest/thumbs/cups-11.webp": {
+      "bytes": 25412,
+      "sha256": "876a3128d1f6a3f4ed0b4edd3747d3dd0f909e89beaad7baa332ee1464692a74"
+    },
+    "legacy-forest/thumbs/cups-12.webp": {
+      "bytes": 27904,
+      "sha256": "2d9a34800dd22192b72d5677c5e74f412dea830027ed3ed17ac85562b31cc3d8"
+    },
+    "legacy-forest/thumbs/cups-13.webp": {
+      "bytes": 27098,
+      "sha256": "6d7ae0eec60163d4acb970a7432ea16d16664e4c698e68661569b49a96e5aa7f"
+    },
+    "legacy-forest/thumbs/cups-14.webp": {
+      "bytes": 28840,
+      "sha256": "c66771aaca656da8ba6d3e9f845617ad5982a0e07fc0f870ec4d1141afd1e51b"
+    },
+    "legacy-forest/thumbs/major-00.webp": {
+      "bytes": 29394,
+      "sha256": "b3e11c74adca237e27a3b5e73be54945cb804a42f78582cbe9e3c223e837c815"
+    },
+    "legacy-forest/thumbs/major-01.webp": {
+      "bytes": 29608,
+      "sha256": "bc81375ed91d61b758f44eec2b0cae8ed1faeec9e49eefd2abf7c54a0ba9eae3"
+    },
+    "legacy-forest/thumbs/major-02.webp": {
+      "bytes": 25914,
+      "sha256": "febed88e7893934662e4623ff7ee06e1d70ddd5fd93058a922d20c9f2ab5856f"
+    },
+    "legacy-forest/thumbs/major-03.webp": {
+      "bytes": 31270,
+      "sha256": "c8a79d0b333c07b18a69891b7be5e881e283826d7c2aeb4e429f33451a2b5d67"
+    },
+    "legacy-forest/thumbs/major-04.webp": {
+      "bytes": 27732,
+      "sha256": "bb797489025dede79d470f6a6672914b6a7d740f1ef3ad82eae2d65c56b42a7c"
+    },
+    "legacy-forest/thumbs/major-05.webp": {
+      "bytes": 28604,
+      "sha256": "6daa9cf429021e48fb9b66da6ac8c259351eb2dfb1184f5939bd060fab59bd15"
+    },
+    "legacy-forest/thumbs/major-06.webp": {
+      "bytes": 30238,
+      "sha256": "2b3fa14d92103e661adf2d6a9e50bd159fc3c7af0e79fc96dc6f4534d5e92656"
+    },
+    "legacy-forest/thumbs/major-07.webp": {
+      "bytes": 30610,
+      "sha256": "2d125ddf6e9fe0beb5805e8a055084c0c23a773e71a153eb3f2bb8423704757f"
+    },
+    "legacy-forest/thumbs/major-08.webp": {
+      "bytes": 28002,
+      "sha256": "c9484e89c7eb81b8558d6356c2f197feff2881c98f6e608460b3422a9020c353"
+    },
+    "legacy-forest/thumbs/major-09.webp": {
+      "bytes": 27564,
+      "sha256": "a9fc7403e06b0562ce92e3f3530314028adc99ea53b8a44e8118899a65c9b52f"
+    },
+    "legacy-forest/thumbs/major-10.webp": {
+      "bytes": 30276,
+      "sha256": "53ac42a2a86e6eb12d583f299cc6c14609d524ccc3cdfd31b07ffd678f081c07"
+    },
+    "legacy-forest/thumbs/major-11.webp": {
+      "bytes": 28248,
+      "sha256": "c24c2c8e20bf237833a7de1c20537ba10e031a1af15436a475bbc983032df230"
+    },
+    "legacy-forest/thumbs/major-12.webp": {
+      "bytes": 30886,
+      "sha256": "b0c38a6c629af3583e4ab64f5aa876d6b625adbc7e548318d84f592d17ffca32"
+    },
+    "legacy-forest/thumbs/major-13.webp": {
+      "bytes": 29026,
+      "sha256": "d73643e7b435440002834efaba1265e41f3cef7d3c23770b7aeade43d1f62dc5"
+    },
+    "legacy-forest/thumbs/major-14.webp": {
+      "bytes": 28456,
+      "sha256": "7b42f9daaea75d120fc85d86f816a616cef333dfc1dfdaeb390c9794fde3bc75"
+    },
+    "legacy-forest/thumbs/major-15.webp": {
+      "bytes": 29744,
+      "sha256": "eca78409bf0465701f096694a3b67e1cf16daca084f1564ab9f5333589345615"
+    },
+    "legacy-forest/thumbs/major-16.webp": {
+      "bytes": 27562,
+      "sha256": "4d6229d27b4ea4f05f99913308c56daa00a5624bf01a3a4231d6626b1ebf722f"
+    },
+    "legacy-forest/thumbs/major-17.webp": {
+      "bytes": 25406,
+      "sha256": "eadd3979f78095423b3dcab0f2030b9e73459546141002a2c922fef6e403bd00"
+    },
+    "legacy-forest/thumbs/major-18.webp": {
+      "bytes": 27034,
+      "sha256": "eb00fed04b8415323cdf08e51f68a24c947c7099961c0eecc68800467914ba1d"
+    },
+    "legacy-forest/thumbs/major-19.webp": {
+      "bytes": 29966,
+      "sha256": "0ae21b5e7b6899299d9120a078c757ce919791ef6e091812ab789a85fca82ab1"
+    },
+    "legacy-forest/thumbs/major-20.webp": {
+      "bytes": 29066,
+      "sha256": "465d56afde54a9d9768ab34b3ac267c3daeb104025e45b32e7a8be0990a7c358"
+    },
+    "legacy-forest/thumbs/major-21.webp": {
+      "bytes": 31238,
+      "sha256": "8bf987e236634a2d6fb92fae8a4e2e7c47d269254928b8d6ac24784af9ddcc36"
+    },
+    "legacy-forest/thumbs/pentacles-01.webp": {
+      "bytes": 30304,
+      "sha256": "64b2a4cc6e430892105c47b2bb1a916707d528b45baa86cc4be56c507358527e"
+    },
+    "legacy-forest/thumbs/pentacles-02.webp": {
+      "bytes": 30960,
+      "sha256": "ea441e152d9ed3c09ca2fd21dc183dca951e299097081c3f8fc94103c0692137"
+    },
+    "legacy-forest/thumbs/pentacles-03.webp": {
+      "bytes": 30378,
+      "sha256": "a5f47954d02058be0c8422004c2e35b9c974766f4bef714bc786a0200e73f644"
+    },
+    "legacy-forest/thumbs/pentacles-04.webp": {
+      "bytes": 28610,
+      "sha256": "3477c94667583e3bad1be216ae1c6a517988e9eb8ddb2f2de56c39a98e6e3cb0"
+    },
+    "legacy-forest/thumbs/pentacles-05.webp": {
+      "bytes": 30444,
+      "sha256": "0edefdfddbea96fc29b8de66ba5d9e331c6dd0c67c2bc5c07ec6902b1a6c2f7e"
+    },
+    "legacy-forest/thumbs/pentacles-06.webp": {
+      "bytes": 30120,
+      "sha256": "5bd216bb21e14b7191d98b8c45b10e551c34ce4f41cdb10090bcad6135a6725e"
+    },
+    "legacy-forest/thumbs/pentacles-07.webp": {
+      "bytes": 31998,
+      "sha256": "86c9941b7d253e9edeca357964e44434b58c7f4f9fecef28ae3e9b6316ed6465"
+    },
+    "legacy-forest/thumbs/pentacles-08.webp": {
+      "bytes": 27788,
+      "sha256": "d54386ee45eee591e52908709423f6f3e399875db2a2a2eef0b67186e2015c17"
+    },
+    "legacy-forest/thumbs/pentacles-09.webp": {
+      "bytes": 31096,
+      "sha256": "e2f41fcb1b615cc901287390a054994fd027bcda0b2ce4ed638efa75a3e267f3"
+    },
+    "legacy-forest/thumbs/pentacles-10.webp": {
+      "bytes": 30886,
+      "sha256": "bc59acd02bfbabf62210859544e110b7b8488057328482ea1cc96c7ee89b0afd"
+    },
+    "legacy-forest/thumbs/pentacles-11.webp": {
+      "bytes": 30162,
+      "sha256": "e21a5c4a5a59927f7f859c9ad2922b672dbbfd6494d086fadaa5bf22b956894e"
+    },
+    "legacy-forest/thumbs/pentacles-12.webp": {
+      "bytes": 30904,
+      "sha256": "2bde1ab49c213043cab708c442752491f9157d5f895616b3048dad8919f407c3"
+    },
+    "legacy-forest/thumbs/pentacles-13.webp": {
+      "bytes": 31528,
+      "sha256": "961eefce97a2ec3ff0728188758840fc404ac9ff4a623a934442762371f73166"
+    },
+    "legacy-forest/thumbs/pentacles-14.webp": {
+      "bytes": 30956,
+      "sha256": "8d24ec0f9c0655ac4f88daf273abda8fc63fccaaa6e8ec5c3a3ee67766ae6ea9"
+    },
+    "legacy-forest/thumbs/swords-01.webp": {
+      "bytes": 29020,
+      "sha256": "4d96d58ea5248c85593a699a89b3f75eede02650580a72accae7e4f0425f210d"
+    },
+    "legacy-forest/thumbs/swords-02.webp": {
+      "bytes": 25780,
+      "sha256": "ffc635999ad267795af3c995eb792e97b5148446592de85ce7acf3db659f1570"
+    },
+    "legacy-forest/thumbs/swords-03.webp": {
+      "bytes": 25422,
+      "sha256": "942bc9c1ac185fbab0214ed639092917aabf4da761bc9d7e86e8118c7de91983"
+    },
+    "legacy-forest/thumbs/swords-04.webp": {
+      "bytes": 28084,
+      "sha256": "1a4412521b894ce036979bb07f90ed4db06497eba2e41efa35e02b6e92d006f4"
+    },
+    "legacy-forest/thumbs/swords-05.webp": {
+      "bytes": 27486,
+      "sha256": "1e9c832d36496526549dd37f6c04104c1fca96f2c3f0c94f91d8b3f75c11d3ae"
+    },
+    "legacy-forest/thumbs/swords-06.webp": {
+      "bytes": 26914,
+      "sha256": "f59d9605a1a4314ba15324a0accc40d1dd2679c065a898417dd03353cb1e26d6"
+    },
+    "legacy-forest/thumbs/swords-07.webp": {
+      "bytes": 29060,
+      "sha256": "866be845a5299cbc7b50ae7e7290de73207bb052879d86c68eecaf7a9006186e"
+    },
+    "legacy-forest/thumbs/swords-08.webp": {
+      "bytes": 28566,
+      "sha256": "bd3bcee29ba3077854fd3fed9f15a9a57f5730b1c335f8d06c5a934f4378e7b2"
+    },
+    "legacy-forest/thumbs/swords-09.webp": {
+      "bytes": 24256,
+      "sha256": "ab173fc8669185fefefdf864308042643210d2dae1ece00ea8d1b1072bc83590"
+    },
+    "legacy-forest/thumbs/swords-10.webp": {
+      "bytes": 28580,
+      "sha256": "cb484a4f6e99ab45be1a4a1cf3278bf373920326a4ff76c077ff52c3a7457ee0"
+    },
+    "legacy-forest/thumbs/swords-11.webp": {
+      "bytes": 25002,
+      "sha256": "679c5d9abbfbcf0fbeffb86519ebed2cfd6b9178bdb4fe2a54c7de31e264a473"
+    },
+    "legacy-forest/thumbs/swords-12.webp": {
+      "bytes": 27488,
+      "sha256": "5f6e8652bf859750aaf42dfe54dedb1a1c46974b565a3411ae744d0dba92ab0e"
+    },
+    "legacy-forest/thumbs/swords-13.webp": {
+      "bytes": 29100,
+      "sha256": "df01979097ca781dd4ecd43c079b0038cff43eabd70eae923956d32770cc035d"
+    },
+    "legacy-forest/thumbs/swords-14.webp": {
+      "bytes": 28500,
+      "sha256": "07acb4a9b9e8a36a56a509def38406480e260cf8d3ee3446a708b687ef8bbcb4"
+    },
+    "legacy-forest/thumbs/wands-01.webp": {
+      "bytes": 27726,
+      "sha256": "6c3bd0d8ccb43b80668670a8d74bdd7fdcd437f1c57ffb40bc6a8e17479d4b16"
+    },
+    "legacy-forest/thumbs/wands-02.webp": {
+      "bytes": 26480,
+      "sha256": "c03147a989d6c78fab219d46ea0c2a5472720f3c03c7df7600b0eae5c3903341"
+    },
+    "legacy-forest/thumbs/wands-03.webp": {
+      "bytes": 24632,
+      "sha256": "24813cf4f20dbed5f983401529713f947631bed323c8a6188cc324dde57b77af"
+    },
+    "legacy-forest/thumbs/wands-04.webp": {
+      "bytes": 30234,
+      "sha256": "797a11e9f37e72ce4ffdcad77203ad82005d2d65c9a4d9467719c826b9f17c57"
+    },
+    "legacy-forest/thumbs/wands-05.webp": {
+      "bytes": 30708,
+      "sha256": "a40dd4e6b9c71700de8cbc677da1935014f517a5f31999c1e528e452329573fe"
+    },
+    "legacy-forest/thumbs/wands-06.webp": {
+      "bytes": 28838,
+      "sha256": "7fae55f22e818f4343119946db92e8ea814720590df33bcf9430caddeeb0c288"
+    },
+    "legacy-forest/thumbs/wands-07.webp": {
+      "bytes": 30082,
+      "sha256": "ce3d5a6dc345c003994efd8955a45afad84488eb5e13925db39d2213bf86c8ea"
+    },
+    "legacy-forest/thumbs/wands-08.webp": {
+      "bytes": 23370,
+      "sha256": "c7cb7c4bcd4394ecb4e95f8b3cbdc1268cfb34fe057f76cb87c912f24ae88531"
+    },
+    "legacy-forest/thumbs/wands-09.webp": {
+      "bytes": 28752,
+      "sha256": "395110473a80b827d0a55292262eefe511a36d584f3dffb3c79f07472864f82a"
+    },
+    "legacy-forest/thumbs/wands-10.webp": {
+      "bytes": 29382,
+      "sha256": "4ef0d4ccfbf256f4cb1f7e2636538a0e1f813c0fab80ee9312c2653be0117ea5"
+    },
+    "legacy-forest/thumbs/wands-11.webp": {
+      "bytes": 28858,
+      "sha256": "2422a5acae1c3547e9648f3b2e7fbd8e168a7cca5fb6d0647b0ddaecb05e476b"
+    },
+    "legacy-forest/thumbs/wands-12.webp": {
+      "bytes": 26858,
+      "sha256": "d5ebf420729d21aa43cd406342c28111b7ea2ef061d187966726575ac8017bf8"
+    },
+    "legacy-forest/thumbs/wands-13.webp": {
+      "bytes": 28574,
+      "sha256": "1756a7c41caf648157f2c8428d63d1fe7941a321eb7a6ab09b5b639f7c3ca5d7"
+    },
+    "legacy-forest/thumbs/wands-14.webp": {
+      "bytes": 28852,
+      "sha256": "48e9d89fc7413b482954a8c3dc775b0a9ca4884b245be2bbe668403b774d467a"
+    },
+    "legacy-moonlight/cards/cups-01.webp": {
+      "bytes": 238402,
+      "sha256": "575d6b5867de31969515c573b5f4ef58d835c7de49e6511e0d83a4ccefd03d68"
+    },
+    "legacy-moonlight/cards/cups-02.webp": {
+      "bytes": 248706,
+      "sha256": "aaf206dc4258ec31e948cc846fb01ae5e24ce32837edb77127f7ce54573ac0a2"
+    },
+    "legacy-moonlight/cards/cups-03.webp": {
+      "bytes": 246448,
+      "sha256": "33838d7c59da8330d19d7bb0a4b86910162a277837549c6b821865de9ca777dc"
+    },
+    "legacy-moonlight/cards/cups-04.webp": {
+      "bytes": 244964,
+      "sha256": "d43b1f0ba24d644fa0d961ad408ecb7eddae7c017b17069a0ca7ac351803c4b9"
+    },
+    "legacy-moonlight/cards/cups-05.webp": {
+      "bytes": 282188,
+      "sha256": "13d85a2256c75ba58f27635506f02f38a84bfa89bf90839b231fbe2a46f19c86"
+    },
+    "legacy-moonlight/cards/cups-06.webp": {
+      "bytes": 282694,
+      "sha256": "98396e205556f79340910ab8ef81076e6177fb3f1e4ba2e5432d2efab5a1aed0"
+    },
+    "legacy-moonlight/cards/cups-07.webp": {
+      "bytes": 215048,
+      "sha256": "099d596ec9c9b1acc7928823c72199b5acc98bb73df771d77b3c58e777ce1b70"
+    },
+    "legacy-moonlight/cards/cups-08.webp": {
+      "bytes": 258870,
+      "sha256": "1329d37841583f04048ceca3cdaa72d4978d6632b86d488145114701fd498ea8"
+    },
+    "legacy-moonlight/cards/cups-09.webp": {
+      "bytes": 244164,
+      "sha256": "3e5e495810049c4a1d3c87d4aa04452a3c7c60a68eed3ff799d01630037cf7a9"
+    },
+    "legacy-moonlight/cards/cups-10.webp": {
+      "bytes": 251446,
+      "sha256": "553766812201460f7ff41785874b4a1d4bafe8548c029988b1410c4f19eeabd6"
+    },
+    "legacy-moonlight/cards/cups-11.webp": {
+      "bytes": 229214,
+      "sha256": "7d272edbc131debcf5d9ed4071c1dc03b73be5f0f61e4207a3d170277f342757"
+    },
+    "legacy-moonlight/cards/cups-12.webp": {
+      "bytes": 234518,
+      "sha256": "e3ef8d8958d8a1d736fc2d05308d49ebda25d467dfb82cd553175d2d43e28ac9"
+    },
+    "legacy-moonlight/cards/cups-13.webp": {
+      "bytes": 232634,
+      "sha256": "65dc6571a467b9784d05a9b009d871dd52d47d139980726891753bcc5f94b532"
+    },
+    "legacy-moonlight/cards/cups-14.webp": {
+      "bytes": 245948,
+      "sha256": "f1559815cc3eba7a5e942e1cb940922481595c1f9daab003a864df90469dfe9d"
+    },
+    "legacy-moonlight/cards/major-00.webp": {
+      "bytes": 205124,
+      "sha256": "87307f6030fb990e09c199b352f36b6dbe6a5bfa615307380d6f9009d9f5adc6"
+    },
+    "legacy-moonlight/cards/major-01.webp": {
+      "bytes": 252974,
+      "sha256": "62e3d15c4f51f3ebca0d03787a3c6b76ab4a35c8f8ccb748e386a1ceae530d69"
+    },
+    "legacy-moonlight/cards/major-02.webp": {
+      "bytes": 204024,
+      "sha256": "74a8f087524de29458472e0dc74fc872202873a71f46d5cd678782aa8d170c53"
+    },
+    "legacy-moonlight/cards/major-03.webp": {
+      "bytes": 270984,
+      "sha256": "444a0c39ba92c2da2a73a7df0c43e970278f302033ebe76de55f7c0e82bb00ae"
+    },
+    "legacy-moonlight/cards/major-04.webp": {
+      "bytes": 252126,
+      "sha256": "c5af9b0613fb1d67a1c0e405667b8a0c1d826af1938a3f666722eeab2440248c"
+    },
+    "legacy-moonlight/cards/major-05.webp": {
+      "bytes": 255994,
+      "sha256": "0fa018aabc20a998ce23e9b5c25e9ed61da997cefa8e2bcf3f365e4daeff94a7"
+    },
+    "legacy-moonlight/cards/major-06.webp": {
+      "bytes": 263748,
+      "sha256": "95bfc63665e74d303ff590435664033a977409cfa3b163a4737df97975ddbb3b"
+    },
+    "legacy-moonlight/cards/major-07.webp": {
+      "bytes": 258906,
+      "sha256": "aa9ae9a05a72741b1ea64e7a2e2bcf60ccb0c0c81e59f4bc86c2081776eea1d6"
+    },
+    "legacy-moonlight/cards/major-08.webp": {
+      "bytes": 255402,
+      "sha256": "b37748b7b2c2aa263cd97a30be44327a4d70049360f88f7a8d3dc5e75cb1cc56"
+    },
+    "legacy-moonlight/cards/major-09.webp": {
+      "bytes": 208122,
+      "sha256": "1c617c5dee3ec85f2621137423a033664a88390a6d03389a1e4b95e8f650f527"
+    },
+    "legacy-moonlight/cards/major-10.webp": {
+      "bytes": 245192,
+      "sha256": "234b1310843dd9d4aeb0312632603e47e3c165029bd7dad39326bf398930d413"
+    },
+    "legacy-moonlight/cards/major-11.webp": {
+      "bytes": 205640,
+      "sha256": "cd7ee3375b0fd3e9cbb541b590b0853f53be67a9181eaeec4321fbf710275436"
+    },
+    "legacy-moonlight/cards/major-12.webp": {
+      "bytes": 243626,
+      "sha256": "6b251a8fba520d7eff4ee8272acf6963f30471063af701fced60cbbfcdaf4786"
+    },
+    "legacy-moonlight/cards/major-13.webp": {
+      "bytes": 227668,
+      "sha256": "2b4be74eff19b200edce9a76c1960fdabfd23c84522f90347bd47527732f4ff2"
+    },
+    "legacy-moonlight/cards/major-14.webp": {
+      "bytes": 201800,
+      "sha256": "ab4b21ac2c1e4888bf6073665dbc55d17301769d6a122942ec9c463826a89d9b"
+    },
+    "legacy-moonlight/cards/major-15.webp": {
+      "bytes": 288942,
+      "sha256": "395ee1c770ca0739e7c5542a412c98e134b2dcb64135c2152b006b6496ef4aff"
+    },
+    "legacy-moonlight/cards/major-16.webp": {
+      "bytes": 323866,
+      "sha256": "3ffd467884df07aa3ffdd6a0aa5d645dce41a65dd9494f3a2cca2612e5816ad0"
+    },
+    "legacy-moonlight/cards/major-17.webp": {
+      "bytes": 186560,
+      "sha256": "3baa88d6ae87f6b85d64b3b3ec408c26ab33845754f9ce4aacb3473b91f1e2e8"
+    },
+    "legacy-moonlight/cards/major-18.webp": {
+      "bytes": 279474,
+      "sha256": "85115f4cb152d366ad554f9ca683e2e11022cb6c507cd6e44fa793fb624cc459"
+    },
+    "legacy-moonlight/cards/major-19.webp": {
+      "bytes": 229226,
+      "sha256": "0e35ee9caa8c197b885d91a3484cf7bbee551242b3fda5b6282e9080a2ef9afc"
+    },
+    "legacy-moonlight/cards/major-20.webp": {
+      "bytes": 258824,
+      "sha256": "b12d489ad4471bf4dcc9c838acbe61142596b81ba476858d190f60cb5f357adc"
+    },
+    "legacy-moonlight/cards/major-21.webp": {
+      "bytes": 268832,
+      "sha256": "e5127ff18f477330df759d3032db8019d85a958765cfe203e1567f24c782532f"
+    },
+    "legacy-moonlight/cards/pentacles-01.webp": {
+      "bytes": 296374,
+      "sha256": "5577ea602014794507f23834b6f87e6c1895aee91cdd9b99abd5e91961804953"
+    },
+    "legacy-moonlight/cards/pentacles-02.webp": {
+      "bytes": 241456,
+      "sha256": "3020c276bc89ee18fd831e9c3c0a577904db57249121533e495bb94ef26fb526"
+    },
+    "legacy-moonlight/cards/pentacles-03.webp": {
+      "bytes": 290548,
+      "sha256": "a32b3a4a9a10d403d73b9d7ea18392320d518e70230a0be27a958df3001e7219"
+    },
+    "legacy-moonlight/cards/pentacles-04.webp": {
+      "bytes": 234920,
+      "sha256": "8f1382ccdaa23784285f454e11b0978909dce721cee220b08faa70ccdb05c888"
+    },
+    "legacy-moonlight/cards/pentacles-05.webp": {
+      "bytes": 270228,
+      "sha256": "b736c492807c6cc26cf496b6b679ddd03dc30cec1ef9fc85ed5e2efb1baab76f"
+    },
+    "legacy-moonlight/cards/pentacles-06.webp": {
+      "bytes": 280522,
+      "sha256": "aad8708c5bc134924ed67e80edbd40e5e31db4b773b2cee61ea1608ea8517a0b"
+    },
+    "legacy-moonlight/cards/pentacles-07.webp": {
+      "bytes": 281564,
+      "sha256": "b80b0d57b83ffbc62e5c11e7290c0642478a8711692e8779f9e8333be82512af"
+    },
+    "legacy-moonlight/cards/pentacles-08.webp": {
+      "bytes": 292680,
+      "sha256": "87ac0150e0fa108e6e70d9c3959f572ee9c8e4ad3e102dde94f5f631d8150130"
+    },
+    "legacy-moonlight/cards/pentacles-09.webp": {
+      "bytes": 286684,
+      "sha256": "3287ba13ca9ab41d0cd4329c092595ea23ae9bdd2f7050bb5bde1af971166417"
+    },
+    "legacy-moonlight/cards/pentacles-10.webp": {
+      "bytes": 285150,
+      "sha256": "02493a060bbc8dae14b6c7b197697dbaaee5d26cac180a5c36df593d5cae70a8"
+    },
+    "legacy-moonlight/cards/pentacles-11.webp": {
+      "bytes": 201116,
+      "sha256": "83b048ba536cdd408b76177267ee9915c9fa8e157816978d7b1e1c1a2833a6fd"
+    },
+    "legacy-moonlight/cards/pentacles-12.webp": {
+      "bytes": 243330,
+      "sha256": "153588a2f6dbb846f659cdd05b71e48d7c9758e3d5a2216e0b71a65caa08e28d"
+    },
+    "legacy-moonlight/cards/pentacles-13.webp": {
+      "bytes": 307442,
+      "sha256": "2dc17bb4cf833001df2f388304aa9f6cd5f59a369c46ff65d165f870195dc21a"
+    },
+    "legacy-moonlight/cards/pentacles-14.webp": {
+      "bytes": 278958,
+      "sha256": "17944ebe573ba813c3f93b7d9d2ae3c04d788ae7e5316fd5966884b06b6c87e5"
+    },
+    "legacy-moonlight/cards/swords-01.webp": {
+      "bytes": 283604,
+      "sha256": "b1ae2d8060f26ab6d872c7acf707d9733b9d2ee2fef05776b3cb5217d755ba08"
+    },
+    "legacy-moonlight/cards/swords-02.webp": {
+      "bytes": 207792,
+      "sha256": "a6263e707848cb749bc97871cc8ee52e7f4c9962c64f63d4f3b77420256bec4e"
+    },
+    "legacy-moonlight/cards/swords-03.webp": {
+      "bytes": 199874,
+      "sha256": "91562ac3cb469301bfa3063a8921d1635bbef849602105608743d6dc340bbf83"
+    },
+    "legacy-moonlight/cards/swords-04.webp": {
+      "bytes": 216474,
+      "sha256": "48be3afae53fd654e624019f9ecf680eb307c3faee005d41ab9727efeb7d26fe"
+    },
+    "legacy-moonlight/cards/swords-05.webp": {
+      "bytes": 267082,
+      "sha256": "acb9d08d45b87284501306042ab7101f3e05951212fe4f1426527f8f36e25112"
+    },
+    "legacy-moonlight/cards/swords-06.webp": {
+      "bytes": 234240,
+      "sha256": "b16e2d13a65b4c7baf9534ac020ede87f6e9f7933816f1b5db28f0779b428995"
+    },
+    "legacy-moonlight/cards/swords-07.webp": {
+      "bytes": 218976,
+      "sha256": "7c2bec165628d4e8109c888acc9902fbe24831c3f01ba9f5987c7792dee7ce29"
+    },
+    "legacy-moonlight/cards/swords-08.webp": {
+      "bytes": 265328,
+      "sha256": "c7daa33e454d79bd5be29be4ea09f057d155f5f62969d09fde4695c72348192a"
+    },
+    "legacy-moonlight/cards/swords-09.webp": {
+      "bytes": 243328,
+      "sha256": "621fa19eb4d8c15b080abd4732c1827f487c2e3ff4c7458cff565f6c1cf0ef7a"
+    },
+    "legacy-moonlight/cards/swords-10.webp": {
+      "bytes": 223890,
+      "sha256": "75703b3589850e5ae8a6dd6fbea817de922149e2d6bfe000cd8547cda272f9ad"
+    },
+    "legacy-moonlight/cards/swords-11.webp": {
+      "bytes": 197802,
+      "sha256": "0025c61a3cbf77f22db5a8f1e1d09a4bd26298cc3b9fd4fbd1b16baf0fb399b1"
+    },
+    "legacy-moonlight/cards/swords-12.webp": {
+      "bytes": 245844,
+      "sha256": "d55d7aa77fe078eb696d0439f30547265a1d77daf85828bb4bd63e21cbe500a4"
+    },
+    "legacy-moonlight/cards/swords-13.webp": {
+      "bytes": 246978,
+      "sha256": "b70e4f7f8f59f20a0fe2183264d58bc753e78a18e5ec4fd8c2e985ddbc2ee198"
+    },
+    "legacy-moonlight/cards/swords-14.webp": {
+      "bytes": 240482,
+      "sha256": "7982e55653a6db59e079ceff5cb05f764caeeaeefac325b7e45430ad3f0b716b"
+    },
+    "legacy-moonlight/cards/wands-01.webp": {
+      "bytes": 180760,
+      "sha256": "8bd44c1e880b3255440e2d0bbb34112298fad06cf475d5492e0b23d4812c981c"
+    },
+    "legacy-moonlight/cards/wands-02.webp": {
+      "bytes": 266822,
+      "sha256": "9bffb886b33e6ef95b54b94d59c944098609658f09be8469cc34ed13e52f780e"
+    },
+    "legacy-moonlight/cards/wands-03.webp": {
+      "bytes": 254468,
+      "sha256": "f61f97addfbe98463aaaf54d80869f63ad29335eaaa68a97371c6ba85ad8b6a0"
+    },
+    "legacy-moonlight/cards/wands-04.webp": {
+      "bytes": 245628,
+      "sha256": "53b7bbbacd129173508081b1203c39e483cd7f402cf6e1c17744764a841553b6"
+    },
+    "legacy-moonlight/cards/wands-05.webp": {
+      "bytes": 288138,
+      "sha256": "70bc5856722d44b7976821d086e1a0bdd67bad358ea4625780fa4982bade49c9"
+    },
+    "legacy-moonlight/cards/wands-06.webp": {
+      "bytes": 233294,
+      "sha256": "35ee278152cfda305932eea4e239630e03407225fb89d38f968e7e9a97e36f87"
+    },
+    "legacy-moonlight/cards/wands-07.webp": {
+      "bytes": 220886,
+      "sha256": "c5838d28bdbb57b69c94c8976d9d6bdb7024222ad16b67bc87bd84acfd4e2fdf"
+    },
+    "legacy-moonlight/cards/wands-08.webp": {
+      "bytes": 246570,
+      "sha256": "e4a293adb0d5b1f8503db7dfa988e2f18f0a4dcab22d41ad6a03343b167f3277"
+    },
+    "legacy-moonlight/cards/wands-09.webp": {
+      "bytes": 242698,
+      "sha256": "6002695f93c58327ce4277eedc90ab9def4fb880ba16795dc3288a38d412d1ac"
+    },
+    "legacy-moonlight/cards/wands-10.webp": {
+      "bytes": 274014,
+      "sha256": "6d74c300ccb33b593fd8013b9af86835d12354d9726e9186cb05cd971dede112"
+    },
+    "legacy-moonlight/cards/wands-11.webp": {
+      "bytes": 223220,
+      "sha256": "5ddc0fca0329ae23eee3606b84f46cac3aac3e904533082951a59fc6a96fca8e"
+    },
+    "legacy-moonlight/cards/wands-12.webp": {
+      "bytes": 245696,
+      "sha256": "9db7cf7c4452f4cad4ed74f041846126758f07d23319999be1f4a58eb54fecfe"
+    },
+    "legacy-moonlight/cards/wands-13.webp": {
+      "bytes": 279670,
+      "sha256": "0d41d053bd140c376613484d6b0bff7995fc873d17699d498a5c0851037fe6bf"
+    },
+    "legacy-moonlight/cards/wands-14.webp": {
+      "bytes": 216300,
+      "sha256": "89b808a82c4d2943a5e6fdc0d7923100a5eec8b3de1bfef11e1596e1e0628058"
+    },
+    "legacy-moonlight/thumbs/cups-01.webp": {
+      "bytes": 11060,
+      "sha256": "9ca80706b1f7c969cc9c7033dc6683695e20a09b95ae25d5fcd822fc771e3638"
+    },
+    "legacy-moonlight/thumbs/cups-02.webp": {
+      "bytes": 10332,
+      "sha256": "8b6ab775a33c29898ddec819d152ad32a336201442b7834b85016aa988e5f742"
+    },
+    "legacy-moonlight/thumbs/cups-03.webp": {
+      "bytes": 11662,
+      "sha256": "de03e0529e232616f58deae62d5e534a98a69a7550035d55a728241b93490119"
+    },
+    "legacy-moonlight/thumbs/cups-04.webp": {
+      "bytes": 10864,
+      "sha256": "94c1e26671fd56c51f1b8fe2a586f3ed6ab1070269d25d29e971a1131d6e8855"
+    },
+    "legacy-moonlight/thumbs/cups-05.webp": {
+      "bytes": 11860,
+      "sha256": "30d3ead0e5ad538efc95ea0bb1f8e100304331fe80d8802212709f27081775e1"
+    },
+    "legacy-moonlight/thumbs/cups-06.webp": {
+      "bytes": 13704,
+      "sha256": "7cd310d1a434083dc6b18eeefd71e029740ac983173ffe95a89c7ba131d46fe1"
+    },
+    "legacy-moonlight/thumbs/cups-07.webp": {
+      "bytes": 9940,
+      "sha256": "e908b3501ba9ef1c1f546808bcb8f8b0f20407adf19a31814adc3b86452a25ad"
+    },
+    "legacy-moonlight/thumbs/cups-08.webp": {
+      "bytes": 11640,
+      "sha256": "ff33fb838e3474faf5fd3dd290413ee430715d862de7cc1679068d48a69af6f8"
+    },
+    "legacy-moonlight/thumbs/cups-09.webp": {
+      "bytes": 11636,
+      "sha256": "0a300210c134dc11315d41872439d6646d1c45787310e45c1c4be855f75fba83"
+    },
+    "legacy-moonlight/thumbs/cups-10.webp": {
+      "bytes": 10002,
+      "sha256": "87eb595adddb2a24794a5ea01f8ee294a07aba387d822f5daeabcb6af092ef0a"
+    },
+    "legacy-moonlight/thumbs/cups-11.webp": {
+      "bytes": 10290,
+      "sha256": "d82da0d1197b562dc8b57ca8f8c28d4d95874c49414858a5f27db1b25601a820"
+    },
+    "legacy-moonlight/thumbs/cups-12.webp": {
+      "bytes": 10342,
+      "sha256": "75e118623801fa789d40f20225a16db46016a3adee18ab3f5721127805c53420"
+    },
+    "legacy-moonlight/thumbs/cups-13.webp": {
+      "bytes": 11178,
+      "sha256": "313c3c39795278b02dc8b038c12a92be9b9834a46f11e664518032c5fba3cd72"
+    },
+    "legacy-moonlight/thumbs/cups-14.webp": {
+      "bytes": 11002,
+      "sha256": "ed4173a6ab673c5bdb52ad39d121b316ce73a696087cb7674450d78d6f63a67f"
+    },
+    "legacy-moonlight/thumbs/major-00.webp": {
+      "bytes": 10018,
+      "sha256": "797f73424b566088de39a1f3ee1443e1cdb0f5d18f021747e07eaa879280a4de"
+    },
+    "legacy-moonlight/thumbs/major-01.webp": {
+      "bytes": 11826,
+      "sha256": "b6069da700f01752d257d7d7013b0bdcb2860a0500ecd8303dca73d4ea6e1d16"
+    },
+    "legacy-moonlight/thumbs/major-02.webp": {
+      "bytes": 8402,
+      "sha256": "b0c3bd43206751553139746b9ebdc32bd239ad7d02e0b67e3b98ffe56b96d080"
+    },
+    "legacy-moonlight/thumbs/major-03.webp": {
+      "bytes": 13202,
+      "sha256": "b5fc472474d6a7040e1e627544c2170b717ee33ac4a02fff8d467faa4df724a6"
+    },
+    "legacy-moonlight/thumbs/major-04.webp": {
+      "bytes": 11764,
+      "sha256": "035788ae15476f66c35a608431934a386d67b27635675ef82f119a406439637f"
+    },
+    "legacy-moonlight/thumbs/major-05.webp": {
+      "bytes": 11146,
+      "sha256": "a4a84b1bdf402c7cfbadf76c2b9a2725780d2a16181645ce325eef655f0e37d4"
+    },
+    "legacy-moonlight/thumbs/major-06.webp": {
+      "bytes": 12456,
+      "sha256": "7481584b25aab1be5a698fae55989f52dee35a10f362a5c92258304ad0fe27f7"
+    },
+    "legacy-moonlight/thumbs/major-07.webp": {
+      "bytes": 11220,
+      "sha256": "cab0ab03a488e0d7644dad3caa4592f7f16f55a21b6365ac5be250f5245f1323"
+    },
+    "legacy-moonlight/thumbs/major-08.webp": {
+      "bytes": 11364,
+      "sha256": "b56af3e5e5be5023e38d74329299ae48b0397924adcb6ded75564f2b060d85f3"
+    },
+    "legacy-moonlight/thumbs/major-09.webp": {
+      "bytes": 10210,
+      "sha256": "1236c0595c063fb3bb9736e9e863e57c3803926e8a9524426912b6a50f6de757"
+    },
+    "legacy-moonlight/thumbs/major-10.webp": {
+      "bytes": 10882,
+      "sha256": "78f78a9af097408bfff179524d503df7e0e1cb47dcaf8157b014bdc56fdf76b8"
+    },
+    "legacy-moonlight/thumbs/major-11.webp": {
+      "bytes": 10124,
+      "sha256": "27f84b4b0f94eb7152aa7d8b8119280e9cd1a181aa12e3828a3a89aae1186d78"
+    },
+    "legacy-moonlight/thumbs/major-12.webp": {
+      "bytes": 12044,
+      "sha256": "de79f422b3bc228555312bc74c684aea09b0b270f87f77676a581ce57bab6049"
+    },
+    "legacy-moonlight/thumbs/major-13.webp": {
+      "bytes": 11616,
+      "sha256": "31c61496c70bdb6e696dfec87e3878affd33198986fb3dd6553c4c4934295802"
+    },
+    "legacy-moonlight/thumbs/major-14.webp": {
+      "bytes": 9084,
+      "sha256": "2b4ef1ab2487d4ff1d0a929a9eb95b0b5f7aeb0dc49c3d84e882a8b90d6500db"
+    },
+    "legacy-moonlight/thumbs/major-15.webp": {
+      "bytes": 12774,
+      "sha256": "1848bc1dd201c63e750e558363bd82630abb5cd1a4fe121c2091003810a7f2b8"
+    },
+    "legacy-moonlight/thumbs/major-16.webp": {
+      "bytes": 14594,
+      "sha256": "61c42281bc6ffc111f764158a9da42c6a2bac36e226d854fa05fb779bb7b6843"
+    },
+    "legacy-moonlight/thumbs/major-17.webp": {
+      "bytes": 10180,
+      "sha256": "ee0bb938ad6e2bdb8db25aecac88ddeb317020a3945aa6b046534a17d0b71125"
+    },
+    "legacy-moonlight/thumbs/major-18.webp": {
+      "bytes": 11748,
+      "sha256": "99a1d8e6abc9e24b7b540892b16b108d84bcafc7f1c236e7c6c4c7a4aaacfa79"
+    },
+    "legacy-moonlight/thumbs/major-19.webp": {
+      "bytes": 10208,
+      "sha256": "8a0149dcea79e69057ec37118faa2d138f25a831197625a9cabde1a28c2d904a"
+    },
+    "legacy-moonlight/thumbs/major-20.webp": {
+      "bytes": 11434,
+      "sha256": "9744db2ae2adb958f65d83e83c177cd3ad03848cec742e744858abc7aba1799b"
+    },
+    "legacy-moonlight/thumbs/major-21.webp": {
+      "bytes": 11852,
+      "sha256": "38d3a8b0b49f43ff6b41e6943b805c3d7e8bd2ad5e3aeba22455f7d471119238"
+    },
+    "legacy-moonlight/thumbs/pentacles-01.webp": {
+      "bytes": 14340,
+      "sha256": "6f3835a08bb3f2107e56fdefc13b37de0a26379fbec207b8bece55fd7d49af34"
+    },
+    "legacy-moonlight/thumbs/pentacles-02.webp": {
+      "bytes": 10862,
+      "sha256": "0fdf98180f05f6e6fba08d0f7dcbdffa2457cd6a8e08751d5ac4535ee5691b3a"
+    },
+    "legacy-moonlight/thumbs/pentacles-03.webp": {
+      "bytes": 11906,
+      "sha256": "e6e92933dff48e821e4c90ab5476abe66716874cd4e3fd7a578bd6584bbf9b3c"
+    },
+    "legacy-moonlight/thumbs/pentacles-04.webp": {
+      "bytes": 10088,
+      "sha256": "c65c0d774c64b75ecd03c9a0c9be81b57b79888a5775545379bcad4ac8c6df80"
+    },
+    "legacy-moonlight/thumbs/pentacles-05.webp": {
+      "bytes": 13520,
+      "sha256": "0aaf5d0d1d2e5aee54ab97660204800dbf6ed2190df18df809cbb2f61c7e3fd6"
+    },
+    "legacy-moonlight/thumbs/pentacles-06.webp": {
+      "bytes": 12630,
+      "sha256": "16157c6ade216b8e0fa3787bdb44bd954eb09b44c8fe9db3959ead149ad65965"
+    },
+    "legacy-moonlight/thumbs/pentacles-07.webp": {
+      "bytes": 13718,
+      "sha256": "fdcd86547d240a48ed11c184965af12a0f167224db975b7aec64503685647797"
+    },
+    "legacy-moonlight/thumbs/pentacles-08.webp": {
+      "bytes": 12264,
+      "sha256": "2285079f1129dc74590b34881d86f2e7655da0b65aa6a80997fc08733e5706d5"
+    },
+    "legacy-moonlight/thumbs/pentacles-09.webp": {
+      "bytes": 13044,
+      "sha256": "ac2a7513e53f4b9709a9c915aabb07b7b46cb2b9cc50a7ac3dae357ad5659905"
+    },
+    "legacy-moonlight/thumbs/pentacles-10.webp": {
+      "bytes": 12930,
+      "sha256": "cf08a70b0a644bff7760a089b13a20eaf4492c4c60313249d30a9e399f190cb3"
+    },
+    "legacy-moonlight/thumbs/pentacles-11.webp": {
+      "bytes": 10064,
+      "sha256": "74c634e763833fd814b3296b6ac3a1aedc7ee88b8d6b2b99df2181b645c640d1"
+    },
+    "legacy-moonlight/thumbs/pentacles-12.webp": {
+      "bytes": 11768,
+      "sha256": "2c042223315dac9c941507439f9cbbe3f7acfcb2a85af9bdd84b6e914ddb0747"
+    },
+    "legacy-moonlight/thumbs/pentacles-13.webp": {
+      "bytes": 13796,
+      "sha256": "c7072b5c046a1d2de853602285276510e119549f7eae76214fb401ef170a3a9c"
+    },
+    "legacy-moonlight/thumbs/pentacles-14.webp": {
+      "bytes": 12062,
+      "sha256": "3e045b633563b2a6e023882ac8e2826b249134eb57ad847ea5c5e1c5d35b2655"
+    },
+    "legacy-moonlight/thumbs/swords-01.webp": {
+      "bytes": 12430,
+      "sha256": "13566bbc696f5c4108dc6f9900bf9d4506fc99412e5909a6a544abdc5ad6d85c"
+    },
+    "legacy-moonlight/thumbs/swords-02.webp": {
+      "bytes": 10102,
+      "sha256": "dd22e6966eb222d96fe471ab9ed99d391abb0ec6256256edb25694c886e46f41"
+    },
+    "legacy-moonlight/thumbs/swords-03.webp": {
+      "bytes": 9840,
+      "sha256": "a047a00fcf274101e2099778b9370b0ebce791f28f01dd52cb121ffb656f386e"
+    },
+    "legacy-moonlight/thumbs/swords-04.webp": {
+      "bytes": 9960,
+      "sha256": "f8e07b1c1386b58e17fb6c48b2c8f4c0ea3097df72fd016ba980b63f0a14b13c"
+    },
+    "legacy-moonlight/thumbs/swords-05.webp": {
+      "bytes": 11288,
+      "sha256": "83545e98f9b7f56b00ad94d5f76db7bba1ee573994033a3776a4c89c89ffc2aa"
+    },
+    "legacy-moonlight/thumbs/swords-06.webp": {
+      "bytes": 10618,
+      "sha256": "51db019fdb39ee3ad1767c17597725bb769d7453ec41d3013247e38f7cb9a2a7"
+    },
+    "legacy-moonlight/thumbs/swords-07.webp": {
+      "bytes": 10006,
+      "sha256": "f090ace06363631ef93652a4935e621e899db985eb05b61079048cef171f9314"
+    },
+    "legacy-moonlight/thumbs/swords-08.webp": {
+      "bytes": 11494,
+      "sha256": "9a2861568cc49aadd01296e6a50bf1782cf223dc784e3ab91b36c43b1c354f91"
+    },
+    "legacy-moonlight/thumbs/swords-09.webp": {
+      "bytes": 10468,
+      "sha256": "1f839df79ffe28915f5ae046f4ea3909803fc2ed210ba42b3d25d63a25c198fd"
+    },
+    "legacy-moonlight/thumbs/swords-10.webp": {
+      "bytes": 10290,
+      "sha256": "f65b59a9ee954013fdb418360f04fcd5e5970a7893c67dbcb2281ac202ec6414"
+    },
+    "legacy-moonlight/thumbs/swords-11.webp": {
+      "bytes": 9518,
+      "sha256": "fb38bd6fd6da8e592a64edd34195d19d2dbaa8fc9c303b2bda6a6d782b29ca28"
+    },
+    "legacy-moonlight/thumbs/swords-12.webp": {
+      "bytes": 11412,
+      "sha256": "2616c07370e5856c171e5d0821c556c9327a96ac18b0439ab1ce14da1a6a4034"
+    },
+    "legacy-moonlight/thumbs/swords-13.webp": {
+      "bytes": 10122,
+      "sha256": "eb69539f88fc13c8221b3e43f38f7d5034e33e0335a0349b47a2c0278f61651f"
+    },
+    "legacy-moonlight/thumbs/swords-14.webp": {
+      "bytes": 10936,
+      "sha256": "c084717573c69886620778d560e7148471432237bdc5b6b6f7e3000b54b1d4cc"
+    },
+    "legacy-moonlight/thumbs/wands-01.webp": {
+      "bytes": 9670,
+      "sha256": "99a2840e3fe99f62d237493845acea7ffd1e6df8d46a4f96aec851bee16f1732"
+    },
+    "legacy-moonlight/thumbs/wands-02.webp": {
+      "bytes": 10676,
+      "sha256": "3d44c5908d4e1d86f09cd86079f66e0d16f239f89453e41820885029fe133789"
+    },
+    "legacy-moonlight/thumbs/wands-03.webp": {
+      "bytes": 10828,
+      "sha256": "bae605aa4dde53009af8efa448b995370ed480dd61b3dbefb7d0d10965cb7c87"
+    },
+    "legacy-moonlight/thumbs/wands-04.webp": {
+      "bytes": 11868,
+      "sha256": "f1223ab440d2a76cc66d973c2f6de9247d2dafd530809314ef6ce9a89bbf256d"
+    },
+    "legacy-moonlight/thumbs/wands-05.webp": {
+      "bytes": 12044,
+      "sha256": "eba460a9fe6eefd224a5aae5450c926d638f9c6f9baf332d75f83c34d326b0af"
+    },
+    "legacy-moonlight/thumbs/wands-06.webp": {
+      "bytes": 11186,
+      "sha256": "d8faa52d4d4d14bb498d0c6621949568bbb7e66f7a45506b42c8766f510e657a"
+    },
+    "legacy-moonlight/thumbs/wands-07.webp": {
+      "bytes": 10744,
+      "sha256": "452fb71bd05baffb1b86d138ef8854bbfd1ed335b77d2a949a9096a4f520657a"
+    },
+    "legacy-moonlight/thumbs/wands-08.webp": {
+      "bytes": 11556,
+      "sha256": "1ed88522666c4eb6530edf1c260c559d67bc2cc1251f211e730e2f50490c98f7"
+    },
+    "legacy-moonlight/thumbs/wands-09.webp": {
+      "bytes": 12460,
+      "sha256": "907e0ec9a2b6670c2d18c754377bb5b67a138af5666aea15b1beaf35dcaed3d0"
+    },
+    "legacy-moonlight/thumbs/wands-10.webp": {
+      "bytes": 12052,
+      "sha256": "1c443c4bf477cca671ec8b1bac53e64aa907c802354dfa2bd03f3160da007233"
+    },
+    "legacy-moonlight/thumbs/wands-11.webp": {
+      "bytes": 10112,
+      "sha256": "d75de5a64f738fd517cfce65d8d9bafe6d31042fd2ad8dd583563dc5ff1f32f1"
+    },
+    "legacy-moonlight/thumbs/wands-12.webp": {
+      "bytes": 11052,
+      "sha256": "deeccb8cbcd9307934d201065f597f346bf7660b8c03c3d1b8605330bfa9cb01"
+    },
+    "legacy-moonlight/thumbs/wands-13.webp": {
+      "bytes": 12504,
+      "sha256": "a46e958690f56b97fb522db6cc6dec6eb5b000aa94e3463e6681771512314f01"
+    },
+    "legacy-moonlight/thumbs/wands-14.webp": {
+      "bytes": 10538,
+      "sha256": "548feb31aa966ee72fc86f9e93746f2f877290a71f73bcdd35ad3f8ebaf8cdc7"
+    },
+    "legacy-shadow/cards/cups-01.webp": {
+      "bytes": 144532,
+      "sha256": "dcbfd1108cff416f3f1a3912b8698d62dfa196b69109beccd50c50ff7b77a92f"
+    },
+    "legacy-shadow/cards/cups-02.webp": {
+      "bytes": 176702,
+      "sha256": "76222f44c136ef5a03b30aef3274c1e37713f2d280c76b9f53bd9786defc4530"
+    },
+    "legacy-shadow/cards/cups-03.webp": {
+      "bytes": 128564,
+      "sha256": "88a67f6d896df25df005906c2b131cfe714994219d1dfa5f0e6edb85139c4135"
+    },
+    "legacy-shadow/cards/cups-04.webp": {
+      "bytes": 138676,
+      "sha256": "8e7222ce85e3935b130b9334ea851370d3fa42baa22b1859706aa47727af12ee"
+    },
+    "legacy-shadow/cards/cups-05.webp": {
+      "bytes": 151390,
+      "sha256": "4a3e821eba50fb6d2a1593dad0c2077dc8521e2e526f921e08a6ee5a1736c2e8"
+    },
+    "legacy-shadow/cards/cups-06.webp": {
+      "bytes": 174654,
+      "sha256": "65f640c8173a6bb001f539dca3a72329834823f9f34b7b7b48bc2cfae401152d"
+    },
+    "legacy-shadow/cards/cups-07.webp": {
+      "bytes": 180668,
+      "sha256": "4ca8cc961278c60c85aaf12c60efce6d47e2a88525a60029c2c15202e6d20cca"
+    },
+    "legacy-shadow/cards/cups-08.webp": {
+      "bytes": 187910,
+      "sha256": "5c84f73d5e7d15aef89a189a92837622dc03c84e249b44449dca4511b0305109"
+    },
+    "legacy-shadow/cards/cups-09.webp": {
+      "bytes": 179118,
+      "sha256": "19133fc65191b312b0666021fe076b43a2b258d87fbd82ac160a28cc83a136ee"
+    },
+    "legacy-shadow/cards/cups-10.webp": {
+      "bytes": 214742,
+      "sha256": "9a1560deb0ac6f97282e5099fae24cbb92cfc6a49a646a8b10d6529fd101c692"
+    },
+    "legacy-shadow/cards/cups-11.webp": {
+      "bytes": 186154,
+      "sha256": "1196afb4280282b998bc51bf670985e020f922cd5546b25dde5171941fb8246d"
+    },
+    "legacy-shadow/cards/cups-12.webp": {
+      "bytes": 155742,
+      "sha256": "041f0037b97589f2d9e2eb6c3f92183ba938362c279211e3be46bb5a4499b64f"
+    },
+    "legacy-shadow/cards/cups-13.webp": {
+      "bytes": 191562,
+      "sha256": "1fede6a20494d69250c0b14613f978708f80d143314b104a68c02d2ea9926409"
+    },
+    "legacy-shadow/cards/cups-14.webp": {
+      "bytes": 192958,
+      "sha256": "b801b0076f58aa5478af4823ac03e84e8d17646681e8da92f5d10fc525008b41"
+    },
+    "legacy-shadow/cards/major-00.webp": {
+      "bytes": 193976,
+      "sha256": "88de235822906e99d948d8c4934f14f929ef2789816e2990cc1c8b50a7b0c5fe"
+    },
+    "legacy-shadow/cards/major-01.webp": {
+      "bytes": 171974,
+      "sha256": "41575962e3c881fd7ae2acb9ecbba5c15c55aafdfe418afe6917367bbd982d61"
+    },
+    "legacy-shadow/cards/major-02.webp": {
+      "bytes": 158786,
+      "sha256": "0cf2ae7793152244cbdcabc1006ac6b149c6bedbc3e7eeb7c7589f74d9c1c937"
+    },
+    "legacy-shadow/cards/major-03.webp": {
+      "bytes": 229444,
+      "sha256": "f25a630c3fb285221149491adc031151058e93e8415f886c526a64f319076cb1"
+    },
+    "legacy-shadow/cards/major-04.webp": {
+      "bytes": 200962,
+      "sha256": "4f54f8f92eadd331f994920329468281389eee61ccf6baab36abba5a016f8bfc"
+    },
+    "legacy-shadow/cards/major-05.webp": {
+      "bytes": 196512,
+      "sha256": "79c6aae9d9d63dddb17400308211af088d9d968fee5d0de419f2dab281f07994"
+    },
+    "legacy-shadow/cards/major-06.webp": {
+      "bytes": 234334,
+      "sha256": "1d74dd9edefb0784c89c92b8ba6aedc6377b1902bbd1c0951f2a6d45921ba71e"
+    },
+    "legacy-shadow/cards/major-07.webp": {
+      "bytes": 171938,
+      "sha256": "abb9b209466b85b78a8b54f1bbc64b09428a149056420f3ce3338d3b234af8ce"
+    },
+    "legacy-shadow/cards/major-08.webp": {
+      "bytes": 193416,
+      "sha256": "73f2aea2793c1d6759f1381f0d4fe1ed9ddf918d6775580efebc273951240fc1"
+    },
+    "legacy-shadow/cards/major-09.webp": {
+      "bytes": 182206,
+      "sha256": "15b0cccab3aaba0735b0e1076a5b5ca1cd14df1a4396baf9611cf9e20340bd02"
+    },
+    "legacy-shadow/cards/major-10.webp": {
+      "bytes": 198550,
+      "sha256": "0848f710fbb03dcd016f83f0ccc8fae216efed9e3ae73dfd8af89e3f87b1d6c0"
+    },
+    "legacy-shadow/cards/major-11.webp": {
+      "bytes": 176734,
+      "sha256": "81345fb205ab60fee711317104d0e84ea62228647378c9ee48c4bc31dc46642c"
+    },
+    "legacy-shadow/cards/major-12.webp": {
+      "bytes": 176220,
+      "sha256": "71f1ba8a79d9c97810c9e3c7394bdd1540e13783f260a6df25a51e607bb41343"
+    },
+    "legacy-shadow/cards/major-13.webp": {
+      "bytes": 193496,
+      "sha256": "ca16e2d99c7327db0fe629f88d539731ce7f797bc4a4a800c23093149d92f085"
+    },
+    "legacy-shadow/cards/major-14.webp": {
+      "bytes": 157450,
+      "sha256": "f631392bdc1d5b5fafd10592f70326847cbb32c0fe87d30c64f5530dde8f6dd0"
+    },
+    "legacy-shadow/cards/major-15.webp": {
+      "bytes": 181182,
+      "sha256": "33ce591d39ea97edecfcbfd8cd2b06f3dd65b69c226dae91d21fc7ab05b626ee"
+    },
+    "legacy-shadow/cards/major-16.webp": {
+      "bytes": 166590,
+      "sha256": "c6e233f3b1edcca527f2f957d82f43528eea65486f8013c0a1bea409ce7747c1"
+    },
+    "legacy-shadow/cards/major-17.webp": {
+      "bytes": 217440,
+      "sha256": "0d44b86ff0828919dd65f8637481c10bfd38c201665e09487fb4568efc7fecb4"
+    },
+    "legacy-shadow/cards/major-18.webp": {
+      "bytes": 173068,
+      "sha256": "e21016881a498357e8017bd595e1cb2efe3fbe88c405ab2e3b8f14cad3fad486"
+    },
+    "legacy-shadow/cards/major-19.webp": {
+      "bytes": 223926,
+      "sha256": "a1df8513a8ee35e702a4ca58ea06f945b08237c1b843b0576199efb2a72b4a54"
+    },
+    "legacy-shadow/cards/major-20.webp": {
+      "bytes": 233452,
+      "sha256": "27321e8b6d4fcf4174d1fecdb7c81d91e1ae3ed62ae3487711469c27965144ba"
+    },
+    "legacy-shadow/cards/major-21.webp": {
+      "bytes": 280526,
+      "sha256": "4d617d1926da2f9276120f77e9dc5fdfa253663f45b9cb74c4171353bd868fd3"
+    },
+    "legacy-shadow/cards/pentacles-01.webp": {
+      "bytes": 239646,
+      "sha256": "b32adc7cdfe0ab0bcad81e1e9022713e1dc7cf2c6b2e249e029a506b9a5c6bfa"
+    },
+    "legacy-shadow/cards/pentacles-02.webp": {
+      "bytes": 177182,
+      "sha256": "15f1772259bc500ad3589885f361992b89bb1231c53453de75c7ef85bdf84a2f"
+    },
+    "legacy-shadow/cards/pentacles-03.webp": {
+      "bytes": 203404,
+      "sha256": "d3dd8db3a102ef3e2f772ffb88b7e6b811edf9ccdd1a38344cdc02e69d94322f"
+    },
+    "legacy-shadow/cards/pentacles-04.webp": {
+      "bytes": 229338,
+      "sha256": "10d2f5e11fffe5cb246f17128c9b03a8a7cffe359c9c65ca6e736b5c1a6908d1"
+    },
+    "legacy-shadow/cards/pentacles-05.webp": {
+      "bytes": 214852,
+      "sha256": "fded93757305132fab1fe6472dd69eb286de68e7a785644bb231239365889cc3"
+    },
+    "legacy-shadow/cards/pentacles-06.webp": {
+      "bytes": 168790,
+      "sha256": "341eb579c733f76f5d0eb3ffc421d101594fa08d8fcda365523c5229fcba095a"
+    },
+    "legacy-shadow/cards/pentacles-07.webp": {
+      "bytes": 232590,
+      "sha256": "964e36d562bbb5bfacf7ceba45d465fbc5ea547475a2408f7eb0266851e0cabe"
+    },
+    "legacy-shadow/cards/pentacles-08.webp": {
+      "bytes": 206562,
+      "sha256": "22941183b105d6f8b90d82de8f19115dbea80baa0d940aa399b38386c2aeb9c6"
+    },
+    "legacy-shadow/cards/pentacles-09.webp": {
+      "bytes": 227308,
+      "sha256": "388360feabc4fbf1aba6f75aef94a6ec974ec095afcbf3c48bde30a4db1123a4"
+    },
+    "legacy-shadow/cards/pentacles-10.webp": {
+      "bytes": 221888,
+      "sha256": "24b533e6a04e663ed0178ebf3cd04a8a5f83085e32a4ede4bde0a3465c689d0b"
+    },
+    "legacy-shadow/cards/pentacles-11.webp": {
+      "bytes": 189116,
+      "sha256": "b7d6e5be160ab64ec732d3a3b9de3f6b2ee5a9d9f383b2311b3f1c39855d1b18"
+    },
+    "legacy-shadow/cards/pentacles-12.webp": {
+      "bytes": 185238,
+      "sha256": "5a92d50e2c079d66a6b9df864b657435cbbc9ed4420f03befd6c60acb278eb56"
+    },
+    "legacy-shadow/cards/pentacles-13.webp": {
+      "bytes": 212066,
+      "sha256": "8ac8a7bc1c9ec7d1f72c3fc6434ce8c40f8cf017ec222fecc9044046d8855017"
+    },
+    "legacy-shadow/cards/pentacles-14.webp": {
+      "bytes": 209398,
+      "sha256": "05218b8215ab971b9a964062192bafd82aa7c84df91d2372ca10dd3343bae12b"
+    },
+    "legacy-shadow/cards/swords-01.webp": {
+      "bytes": 178944,
+      "sha256": "da0464256ecae88972faa19f4964cc788594e40429b370688e19191f6c498cec"
+    },
+    "legacy-shadow/cards/swords-02.webp": {
+      "bytes": 201982,
+      "sha256": "fc5c49af80a68e1ca97219899fc2de541d023768be3af3c173897da2af0a3b10"
+    },
+    "legacy-shadow/cards/swords-03.webp": {
+      "bytes": 154940,
+      "sha256": "dbd07b37763785411e469fadd6609477f86b860a18ba57d383ef17539e49cbb3"
+    },
+    "legacy-shadow/cards/swords-04.webp": {
+      "bytes": 174850,
+      "sha256": "ee346f4bd850f5943c8c5de5e51527610eea2cc7e0dc3103daefdb131a6ccdb9"
+    },
+    "legacy-shadow/cards/swords-05.webp": {
+      "bytes": 176606,
+      "sha256": "044b5a26724f3b799debfc9fe2a478807396b63c77fd956ebea40e594e0b5f82"
+    },
+    "legacy-shadow/cards/swords-06.webp": {
+      "bytes": 168034,
+      "sha256": "dabce4daca29b575cfe3f7ab74d4d871c4414ea3eaf9bf4961385f9149984034"
+    },
+    "legacy-shadow/cards/swords-07.webp": {
+      "bytes": 162604,
+      "sha256": "ba738740b0c5f68e7f136d57e128622ea837f3adfcb7de739b887e0fcbb386c1"
+    },
+    "legacy-shadow/cards/swords-08.webp": {
+      "bytes": 145694,
+      "sha256": "6bca117cd8d2a91be821bce2492b43e9a4619528cc41385d82dcd4b587e8d1be"
+    },
+    "legacy-shadow/cards/swords-09.webp": {
+      "bytes": 179010,
+      "sha256": "f49477611b953748268536f85fb9f6e57b77a8124b63b4d8d3c031034fae630f"
+    },
+    "legacy-shadow/cards/swords-10.webp": {
+      "bytes": 229828,
+      "sha256": "1eb850a12be111b542d4797537f7946890174a886351f2f0538409d791fc8b24"
+    },
+    "legacy-shadow/cards/swords-11.webp": {
+      "bytes": 184958,
+      "sha256": "53ac109184b97e90e64f0d20acc58719b1d25098427ddaf5c50643a802b5a2e2"
+    },
+    "legacy-shadow/cards/swords-12.webp": {
+      "bytes": 189060,
+      "sha256": "e09d0da4c45e994317b8c630266a1489871d148a8dad6d89f6b1364980d6ae9b"
+    },
+    "legacy-shadow/cards/swords-13.webp": {
+      "bytes": 202056,
+      "sha256": "8dc252bf8cb5f533cb60b425397180e1ec21554c8f357f32a9d7b88a5717e6db"
+    },
+    "legacy-shadow/cards/swords-14.webp": {
+      "bytes": 175578,
+      "sha256": "dd45736083b2969f95d2d49a69069c38f855d4b045b550c331876eaa350f1b15"
+    },
+    "legacy-shadow/cards/wands-01.webp": {
+      "bytes": 115786,
+      "sha256": "dd8af85f3854156723de4aa4be763bf2d10a2cff0b600befaa15a85350820b32"
+    },
+    "legacy-shadow/cards/wands-02.webp": {
+      "bytes": 163402,
+      "sha256": "cbca91d73178573a069789dc5c1830de2561fc06d33c04bf08a30b5971c45733"
+    },
+    "legacy-shadow/cards/wands-03.webp": {
+      "bytes": 132096,
+      "sha256": "03cbe35f12e63dbf974bca1f95c5ed1f4e351d6f7a5726763d2fd58007d4c86b"
+    },
+    "legacy-shadow/cards/wands-04.webp": {
+      "bytes": 203310,
+      "sha256": "0814c50e763adb81385f6706b48c70d600ada8a4958d95a8521f0d0898ad17a5"
+    },
+    "legacy-shadow/cards/wands-05.webp": {
+      "bytes": 160326,
+      "sha256": "9bf0a6a881cf238402039b7f443ef0f0c803d3091dea71f8d388cf976e4719b6"
+    },
+    "legacy-shadow/cards/wands-06.webp": {
+      "bytes": 195348,
+      "sha256": "d175c67b460e90eab906764779a4ad6d22d3caad9c85a13bf99d6aac53be0824"
+    },
+    "legacy-shadow/cards/wands-07.webp": {
+      "bytes": 139600,
+      "sha256": "24ea564484ceafcc6b7d000b035d50e4e098b201238d619d9bfcecf9deb19834"
+    },
+    "legacy-shadow/cards/wands-08.webp": {
+      "bytes": 140834,
+      "sha256": "cfd050db3083638047547ec3519cb17cec49cd1507c3d8c2440de891ac205ddc"
+    },
+    "legacy-shadow/cards/wands-09.webp": {
+      "bytes": 163454,
+      "sha256": "5d34395eb56b36f3a733852f56539b12b03f72e6c3ded0b3e0ad5c55b247df12"
+    },
+    "legacy-shadow/cards/wands-10.webp": {
+      "bytes": 150900,
+      "sha256": "55d3d5686eb373ee91196bb367c4c8e9da1a297cbc95337f5f71c56bf2831a92"
+    },
+    "legacy-shadow/cards/wands-11.webp": {
+      "bytes": 165290,
+      "sha256": "426860db7870f0b3408ed07a06f3c14a46d58936acbb5d3282cbfbcd078e3d85"
+    },
+    "legacy-shadow/cards/wands-12.webp": {
+      "bytes": 139894,
+      "sha256": "ed0dac732a32f07810c0c26a3d9f981e82bc4834d482266eb00649b680c8024d"
+    },
+    "legacy-shadow/cards/wands-13.webp": {
+      "bytes": 188810,
+      "sha256": "b187232eac6d8cb9caa37a36ff6899d4c02c8cb9cbab0a7644b984e401ee68ad"
+    },
+    "legacy-shadow/cards/wands-14.webp": {
+      "bytes": 182018,
+      "sha256": "4176d897e4266f5e4c9801b516d62438570b5e9e7c7d9625a878a2a204ad91a8"
+    },
+    "legacy-shadow/thumbs/cups-01.webp": {
+      "bytes": 7504,
+      "sha256": "8e612272cce06728ae02780fc9dec6f7bfe503e7da1f05a22f6706317a0aba8d"
+    },
+    "legacy-shadow/thumbs/cups-02.webp": {
+      "bytes": 7884,
+      "sha256": "92b47236f3cf5a743f043d24019b3ad6bc2ead588eb28d89d965064b803cc640"
+    },
+    "legacy-shadow/thumbs/cups-03.webp": {
+      "bytes": 6756,
+      "sha256": "95a6b76d89743a78246e05eec16898d07103cb7698136967d89a02773d2845fd"
+    },
+    "legacy-shadow/thumbs/cups-04.webp": {
+      "bytes": 6494,
+      "sha256": "d68fc0d063eaef460fc94b30942cf7e2727d178cff43f635419f1b9df2f8737c"
+    },
+    "legacy-shadow/thumbs/cups-05.webp": {
+      "bytes": 7018,
+      "sha256": "930cfdbfe7e0da5046bfd301815a8b58e94d02250fcf10cecaa7c64ab0b4c06e"
+    },
+    "legacy-shadow/thumbs/cups-06.webp": {
+      "bytes": 7490,
+      "sha256": "4553adbbebe87eb43d379c7f0634cbd19259c237c4726ac53d8bf75919bdca3d"
+    },
+    "legacy-shadow/thumbs/cups-07.webp": {
+      "bytes": 7256,
+      "sha256": "372ba5bc6f80e10b2220d902a65bf5fa55a16baba73040d05ae38a4c918a9fe0"
+    },
+    "legacy-shadow/thumbs/cups-08.webp": {
+      "bytes": 8304,
+      "sha256": "c8a7e6441363ec2a85f8d67cc3e5d2a2bafc371ea5b2fa819645aec0830c0045"
+    },
+    "legacy-shadow/thumbs/cups-09.webp": {
+      "bytes": 8178,
+      "sha256": "a68c14e2efed0d1134847ae2fce5970a37bef20a3affb30cb90bd2b59394f762"
+    },
+    "legacy-shadow/thumbs/cups-10.webp": {
+      "bytes": 10630,
+      "sha256": "5d1399cc82b87947382e7b267eadebbc46f0b0893000024317e15ed926337d25"
+    },
+    "legacy-shadow/thumbs/cups-11.webp": {
+      "bytes": 8504,
+      "sha256": "113ad28abbd25ca3449ac867d13a041c9073ebb01f99d8814b8370d699be32b3"
+    },
+    "legacy-shadow/thumbs/cups-12.webp": {
+      "bytes": 7780,
+      "sha256": "ef27ed2fd6a340220b37c9233ea5958895ec5ebb7c9dd8e9662863e08bc87c14"
+    },
+    "legacy-shadow/thumbs/cups-13.webp": {
+      "bytes": 9006,
+      "sha256": "57b59a175f95ebc5dc2d4ee8f6128adc86168d9b32cb68d4e098c9c050f96c5a"
+    },
+    "legacy-shadow/thumbs/cups-14.webp": {
+      "bytes": 8538,
+      "sha256": "246782e460e74f91d83ee3b3830c77bab3be6894624eeff7f1eba832799414a7"
+    },
+    "legacy-shadow/thumbs/major-00.webp": {
+      "bytes": 8648,
+      "sha256": "ddca16184a3b204ca480dbab0a7f3cf3bede8c13021da090ffefe95662510ffd"
+    },
+    "legacy-shadow/thumbs/major-01.webp": {
+      "bytes": 7732,
+      "sha256": "8b608213f5449cebcefb6055dd2187456a7942310f83a44b182601e136c4eaad"
+    },
+    "legacy-shadow/thumbs/major-02.webp": {
+      "bytes": 5852,
+      "sha256": "584b4a61cbbcb76f93d8e3f93985b04a054ee580cf6719af66ec16625adedd12"
+    },
+    "legacy-shadow/thumbs/major-03.webp": {
+      "bytes": 11004,
+      "sha256": "0b4c70368e677e6fff41d3c3b7cdf1abae9f27d357862ac59237c825ef40af48"
+    },
+    "legacy-shadow/thumbs/major-04.webp": {
+      "bytes": 8862,
+      "sha256": "0d846204cb50f4f355d16c76734fc9df48e9cb6415341190509b79db1de49abb"
+    },
+    "legacy-shadow/thumbs/major-05.webp": {
+      "bytes": 8950,
+      "sha256": "d560e8646b4782bcfd81d97209eca637a2d91bad7bb376b2a13bcf26d0217e86"
+    },
+    "legacy-shadow/thumbs/major-06.webp": {
+      "bytes": 10888,
+      "sha256": "fbcee8810a6250a96b5c56443fa459043c58e877c3cfe71d5023cd478a7e9d44"
+    },
+    "legacy-shadow/thumbs/major-07.webp": {
+      "bytes": 8652,
+      "sha256": "a3ec8cf5af963c70dc8697e4f844db76cff7e192cb8c46162035cfe00c595764"
+    },
+    "legacy-shadow/thumbs/major-08.webp": {
+      "bytes": 10274,
+      "sha256": "dc92faf0468a86c7cdfeb570b114d5a9b83ceb3a176715c797025df1898876e4"
+    },
+    "legacy-shadow/thumbs/major-09.webp": {
+      "bytes": 7818,
+      "sha256": "792ce9b231897d701482f1bf03cd2fe9a30944b81d96582620344d1db43a0f7d"
+    },
+    "legacy-shadow/thumbs/major-10.webp": {
+      "bytes": 9314,
+      "sha256": "6ba1370a662138307d255a99d1b823b70714ecf3fd3fb8665a7731e8e7354c0a"
+    },
+    "legacy-shadow/thumbs/major-11.webp": {
+      "bytes": 8174,
+      "sha256": "da1e66542e179b77d3ac9ddb60db6f1471927b0f2e6638b8f3927733673cf2d9"
+    },
+    "legacy-shadow/thumbs/major-12.webp": {
+      "bytes": 9486,
+      "sha256": "5402b0e7586131d5a320eff7db0753296b8142522662c4ab7c37fac94904dfc5"
+    },
+    "legacy-shadow/thumbs/major-13.webp": {
+      "bytes": 7296,
+      "sha256": "e7a366c966c4eeec120f7f9bde015b6f1b97d821973fc703c27e6e6b64cc3f9c"
+    },
+    "legacy-shadow/thumbs/major-14.webp": {
+      "bytes": 6824,
+      "sha256": "931f08b56c8fa230ebe545526b212933051e77ef95c2cdb5b494114d01e21bec"
+    },
+    "legacy-shadow/thumbs/major-15.webp": {
+      "bytes": 7996,
+      "sha256": "dce92c74492c65ebdc738ecd8b3943013bd819adab1e103f33a4777af118acf9"
+    },
+    "legacy-shadow/thumbs/major-16.webp": {
+      "bytes": 8904,
+      "sha256": "299f4fa04ec78a2d117b9d24e4c4e7aba006c1bae7eda253f9466493540c1c63"
+    },
+    "legacy-shadow/thumbs/major-17.webp": {
+      "bytes": 8588,
+      "sha256": "0d47c2c93410850458f89bdfe59e9ac1e1c2bf0572637df651a4ba274ed99962"
+    },
+    "legacy-shadow/thumbs/major-18.webp": {
+      "bytes": 7778,
+      "sha256": "6aa1a3a8ea7107c5455d25ba01c8ed21b0cc8304f9358618872b0053fd21d05d"
+    },
+    "legacy-shadow/thumbs/major-19.webp": {
+      "bytes": 9948,
+      "sha256": "ed535057e8d764f12af5692f02fdf716e8c1f75f8f4fae14a91ee77aa6a4e2fc"
+    },
+    "legacy-shadow/thumbs/major-20.webp": {
+      "bytes": 10402,
+      "sha256": "46ab962c72f91c954844ab24a928adc32a4c85afbeff13c5f7e57c7c03a64428"
+    },
+    "legacy-shadow/thumbs/major-21.webp": {
+      "bytes": 12900,
+      "sha256": "e07efe964ef51ad18925ff8dd8b27dfdcd37a208d5dba2b11f16a63d850c2252"
+    },
+    "legacy-shadow/thumbs/pentacles-01.webp": {
+      "bytes": 11200,
+      "sha256": "6e852786e6963a74b63599619df3f2061a92b2fd15f7f4988fe816f1b71b8b16"
+    },
+    "legacy-shadow/thumbs/pentacles-02.webp": {
+      "bytes": 7706,
+      "sha256": "32f1bfdd28d690097423d6f8da9b6b344b004684d3b549b9bba6f2c45a0f6fba"
+    },
+    "legacy-shadow/thumbs/pentacles-03.webp": {
+      "bytes": 10260,
+      "sha256": "0958243ef3e1bfec566b38e56fe15a8ad1f19e3e039f631043ac9b3a3f4d3b55"
+    },
+    "legacy-shadow/thumbs/pentacles-04.webp": {
+      "bytes": 10480,
+      "sha256": "ed3e73301dd7e4dd350a5c0dc15b6dd4efa2253b9748e15d72fedb2f5edf78ef"
+    },
+    "legacy-shadow/thumbs/pentacles-05.webp": {
+      "bytes": 10518,
+      "sha256": "d888e89f016ce9d1846f34709ceb438830d29a6e6c804296efc7f0cd7435a7bc"
+    },
+    "legacy-shadow/thumbs/pentacles-06.webp": {
+      "bytes": 7296,
+      "sha256": "827f1771a8b0a9200ca46c8ddc06ae5076a28436e609367d3bda5cc7712da436"
+    },
+    "legacy-shadow/thumbs/pentacles-07.webp": {
+      "bytes": 11326,
+      "sha256": "000f2163d0d378571aaff8d6afb6fae53efc885e94d10d02900047f5513273a2"
+    },
+    "legacy-shadow/thumbs/pentacles-08.webp": {
+      "bytes": 10680,
+      "sha256": "3b3fcc1cb5555e2be1ede48922b58566135957b16b34b403d8e457f2569ff6f7"
+    },
+    "legacy-shadow/thumbs/pentacles-09.webp": {
+      "bytes": 11982,
+      "sha256": "e78454755988e65177d0a62487ba5751e922de57b5e8198d61aa04975e9d0e32"
+    },
+    "legacy-shadow/thumbs/pentacles-10.webp": {
+      "bytes": 10162,
+      "sha256": "a16d7208143c46bd13c8ef578a1ef16bea0c39b6d633accdf31cf7dfb9724817"
+    },
+    "legacy-shadow/thumbs/pentacles-11.webp": {
+      "bytes": 8720,
+      "sha256": "d95aeecc1b0eb111b89aaf90d038d384c9994841ae7c79d153280f02222973da"
+    },
+    "legacy-shadow/thumbs/pentacles-12.webp": {
+      "bytes": 8520,
+      "sha256": "29b35a5537d6ea01e83f433f973a6ad9a83a573cb5eab370a45eaef0a90d7daa"
+    },
+    "legacy-shadow/thumbs/pentacles-13.webp": {
+      "bytes": 10604,
+      "sha256": "ecc51d0b9d6dd58f207538e0e5386613474ca63fb1f76e3ab5b4e6424284fb0c"
+    },
+    "legacy-shadow/thumbs/pentacles-14.webp": {
+      "bytes": 9736,
+      "sha256": "9b8f549a88be38e3ee7629651cb0a5125554487e96a1c1e7bb5b2801719047c5"
+    },
+    "legacy-shadow/thumbs/swords-01.webp": {
+      "bytes": 8790,
+      "sha256": "13306a71bd30e5ec986cefd1fad8a7a94a542eac4c991809f8b9e564823cbc23"
+    },
+    "legacy-shadow/thumbs/swords-02.webp": {
+      "bytes": 8986,
+      "sha256": "c04740c83f8fb7152446b8df6c2d22d1e4474c37af84d4d24488f8e5f53d0aa1"
+    },
+    "legacy-shadow/thumbs/swords-03.webp": {
+      "bytes": 8682,
+      "sha256": "ea822786bd4bf2fd48498ef4e93ff30eff99e8f8467abb5dc963ed3445304cc3"
+    },
+    "legacy-shadow/thumbs/swords-04.webp": {
+      "bytes": 7504,
+      "sha256": "85dd6c7ef9070d1f8ebab1ef312d48456cc8453983425ea2a935eb6077b4b210"
+    },
+    "legacy-shadow/thumbs/swords-05.webp": {
+      "bytes": 9358,
+      "sha256": "a4e2b0f2ff92c30a9c31015dedb85e9712ba684b1654c77e3ba97d24a0d8d745"
+    },
+    "legacy-shadow/thumbs/swords-06.webp": {
+      "bytes": 7168,
+      "sha256": "1564c702b5daf1fea641d99367fe7075c3a0930a2806170260b4688d2a360585"
+    },
+    "legacy-shadow/thumbs/swords-07.webp": {
+      "bytes": 8190,
+      "sha256": "0680a786999b08c0ab5c5e95770917025157106757c048d85e5bfc4323d7dc9b"
+    },
+    "legacy-shadow/thumbs/swords-08.webp": {
+      "bytes": 7974,
+      "sha256": "bcd053c0593dfde491bf3df882870bbb776fa57a344d855a32f40c8f7fd237f7"
+    },
+    "legacy-shadow/thumbs/swords-09.webp": {
+      "bytes": 8016,
+      "sha256": "e21fe9a5c950bd26a0fdb30a4978af24e4b9192026c75f366cbfa316f8ef103e"
+    },
+    "legacy-shadow/thumbs/swords-10.webp": {
+      "bytes": 10452,
+      "sha256": "2e5c7d2ee8e61862c1108580bb5c9b60c81243e3ce562a957103bb9b21337799"
+    },
+    "legacy-shadow/thumbs/swords-11.webp": {
+      "bytes": 8864,
+      "sha256": "e5e9afa62981a3e8d1636dba4f4c387ba44daa4604ddfaa3563d77559c25e22f"
+    },
+    "legacy-shadow/thumbs/swords-12.webp": {
+      "bytes": 9050,
+      "sha256": "9f24e29fd128282ce23d37a9f5ceb25af3147e9e1e508a3352c2b116c490451c"
+    },
+    "legacy-shadow/thumbs/swords-13.webp": {
+      "bytes": 10158,
+      "sha256": "8c6f922775199feaf7697aaf7c082ba115d9d5e0fe1e5efd7c1c876e84ad178b"
+    },
+    "legacy-shadow/thumbs/swords-14.webp": {
+      "bytes": 8656,
+      "sha256": "792b943f98dd28fbe96ebcf1ddac2791d99b8e0d01d51a9b7c4dc475b5ea0f56"
+    },
+    "legacy-shadow/thumbs/wands-01.webp": {
+      "bytes": 5016,
+      "sha256": "5f37ee9ad3af24e82f1919651492ad2f384fd81b6e6f151ad526e94bd74029c0"
+    },
+    "legacy-shadow/thumbs/wands-02.webp": {
+      "bytes": 8412,
+      "sha256": "96c3e6553cd2fba14acbd9a844e96a5436a38cd12c16f2807eab57f6afaa8382"
+    },
+    "legacy-shadow/thumbs/wands-03.webp": {
+      "bytes": 6612,
+      "sha256": "447e1cf9a8ec3e5a4b9a4faa1ae110c6c2a50243a4a25a0fae88138b9df2fac7"
+    },
+    "legacy-shadow/thumbs/wands-04.webp": {
+      "bytes": 10184,
+      "sha256": "3dd6b33a3a89f9b9998f0008d1a2f9a378d4ac928fb7d1696a357e0a959e1c4c"
+    },
+    "legacy-shadow/thumbs/wands-05.webp": {
+      "bytes": 7818,
+      "sha256": "e89b1da2f48920aa1f853090dfaa6a956d573d52a3a1cfe822842b3af854ba3e"
+    },
+    "legacy-shadow/thumbs/wands-06.webp": {
+      "bytes": 8562,
+      "sha256": "c1fed8b447c041df6f1b2070f8b7c2b5a10f78e6a3cb06b2d465eb3673135f8b"
+    },
+    "legacy-shadow/thumbs/wands-07.webp": {
+      "bytes": 7100,
+      "sha256": "6e43419055f3b4b4e0d68a6b511b4c1283249f0f77223d4f0dc4093c06a0b771"
+    },
+    "legacy-shadow/thumbs/wands-08.webp": {
+      "bytes": 7538,
+      "sha256": "ffbee5f781cfcdf3bdc55aa03724e30dfb1ccc007a8e64addfbd09437fda709f"
+    },
+    "legacy-shadow/thumbs/wands-09.webp": {
+      "bytes": 6992,
+      "sha256": "add351a48ac6a5bb0726d02fa1ce2621377545041a8b4654aa9406ed1b58cb58"
+    },
+    "legacy-shadow/thumbs/wands-10.webp": {
+      "bytes": 6268,
+      "sha256": "41330867b49bb964ae5515bb5eccb7fc9e8fa5ab1db432a2d4f5605cc26004df"
+    },
+    "legacy-shadow/thumbs/wands-11.webp": {
+      "bytes": 7228,
+      "sha256": "25c8158439cc4ff027bc15221b11a3b84e09d56aea97ef56ddff167d2f196ab9"
+    },
+    "legacy-shadow/thumbs/wands-12.webp": {
+      "bytes": 7568,
+      "sha256": "d667274ee95520767e6bb05995ce5982a62e2fa078ca5d50ea83aae3a42cd725"
+    },
+    "legacy-shadow/thumbs/wands-13.webp": {
+      "bytes": 8444,
+      "sha256": "c82eaf77516c342e5762d896a99b76fe3ebcb498e93991b5cc1b8445c33456d9"
+    },
+    "legacy-shadow/thumbs/wands-14.webp": {
+      "bytes": 8382,
+      "sha256": "1f2fdad5db2d4646226c1bc5accecde31bb000ea923b3bb53f57d334b1cf026a"
+    }
+  }
+}

@@ -327,8 +327,8 @@ curl -s localhost:8787/health
 ## Smoke Test
 
 ```bash
-npm run release:check       # 45 项：密钥边界、资产路径、加载时机、打包产物
-npm run deployment:check    # 51 项：包内容、资产根契约、服务器契约、环境变量
+npm run release:check       # 60 项：密钥边界、资产路径、加载时机、打包产物
+npm run deployment:check    # 56 项：包内容、资产根契约、服务器契约、环境变量
 npm run build               # 内含 deck/layout/artwork check
 ```
 

@@ -26,6 +26,7 @@
     "deployment:check": "tsx scripts/deployment-check.ts",
     "assets:check": "tsx scripts/assets-check.ts",
     "assets:sync": "tsx scripts/assets-check.ts --sync",
+    "assets:lock": "tsx scripts/assets-check.ts --lock",
     "assets:origin": "tsx scripts/asset-origin-check.ts",
     "performance:check": "tsx scripts/performance-check.ts"
   },

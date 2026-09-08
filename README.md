@@ -80,9 +80,10 @@ npm run deck:check        # 牌组契约：338 项
 npm run layout:check      # 牌阵布局：119 项
 npm run artwork:check     # 美术管线：89 项
 npm run reading:check     # 解读评测：118 项（语气红线 / 10 组用例）
-npm run release:check     # 发布边界：45 项（密钥 / 资产路径 / 加载时机 / 打包）
-npm run deployment:check  # 部署包：53 项（包内容 / 资产根契约 / 服务器契约）
-npm run assets:check      # 本地 390 张牌面是否齐备
+npm run release:check     # 发布边界：60 项（密钥 / 资产路径 / 加载时机 / 打包）
+npm run deployment:check  # 部署包：56 项（包内容 / 资产根契约 / 服务器契约）
+npm run assets:check      # 本地 780 个牌面文件齐备吗、与 artwork.lock.json 一致吗
+npm run assets:check -- --verify        # 再加逐文件 sha256（慢，但确定）
 
 npm run assets:origin -- <资产根 URL>   # 对真实 CDN／对象存储做核验：
                                         # 200 / WebP 魔数 / sha256 / 缓存头
@@ -90,6 +91,32 @@ npm run assets:origin -- <资产根 URL>   # 对真实 CDN／对象存储做核�
 npm run reading:check -- --live   # 用真实 DeepSeek 跑同一批用例（需 Key）
 npm run lint
 ```
+
+## 牌面（780 个文件 · 137MB）
+
+牌面默认随仓库进 git，clone 下来直接能跑。`artwork.lock.json` 记录这 780 个对象
+各自的字节数与 sha256 —— 它和 `package-lock.json` 同一个性质：**期望值，不是现状**，
+所以在一个牌面还没下载的空目录上依然成立。
+
+```bash
+npm run assets:check                  # 齐备吗、与锁一致吗（秒级）
+npm run assets:check -- --verify      # 再加逐文件 sha256
+
+npm run assets:sync -- <资产根 URL>    # 缺的/坏的，真的从对象存储取回来
+npm run assets:sync -- --dry-run      # 只打印计划
+npm run assets:sync -- --force        # 不管本地有没有，780 个全部重下
+
+npm run assets:lock                   # 换了牌面之后，重新生成锁
+```
+
+`assets:sync` 的资产根按 **命令行参数 → `ARCANA_ASSET_SOURCE` → `dist/arcana-build.json`
+（产物自述的资产根）** 依次解析。
+
+每个对象取回后先验 **WebP 魔数 → 字节数 → sha256**，全过才写盘，
+且是「写 `.part` → rename」而不是直接写目标路径。所以目标路径只有两种状态：
+不存在，或者是一份已经逐字节验过的完整文件。**宁可缺，不要一个坏的** ——
+一个 200 + 错误文档落成 `major-00.webp` 之后，它就有了「存在且非空」这个身份，
+之后每一次不带 `--verify` 的检查都会放它过，而产品显示裂图。
 
 ## 部署
 
@@ -119,6 +146,7 @@ npm run deployment:check  # 验证包
 | `docs/v2/12-qa-report.md` | V2 QA 报告 |
 | `docs/v2/32-e2-real-deployment.md` | 真实部署报告（R2 + Render） |
 | `docs/v2/33-e21-asset-domain-and-csp.md` | 资产域名切换 Runbook · CSP · 产物自述资产根 |
+| `docs/v2/34-e22-artwork-lock-and-sync.md` | 牌面完整性锁 · 真实恢复链路 · 仓库瘦身前置条件 |
 | `docs/agent-development-log.md` | Multi-Agent 开发记录（V1 + V2） |
 
 ## 安全

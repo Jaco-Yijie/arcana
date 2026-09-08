@@ -8,8 +8,9 @@
 
 - [ ] `git status` 干净，或明确知道未提交的是什么
 - [ ] `npm ci`（不是 `npm install`，避免锁文件漂移）
-- [ ] `npm run release:check` → 45/45
-- [ ] `npm run deployment:check` → 51/51
+- [ ] `npm run release:check` → 60/60
+- [ ] `npm run deployment:check` → 56/56
+- [ ] `npm run assets:check` → 780 个牌面齐备且与 `artwork.lock.json` 一致
 - [ ] `npm run build` 通过（内含 deck / layout / artwork check）
 - [ ] `npm run deployment:build` 通过
 - [ ] 确认 `deployment/secret-audit.json` 的 `findings` 为空数组

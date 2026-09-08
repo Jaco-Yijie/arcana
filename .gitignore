@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# assets:sync 的下载中间态。它先写 .part、校验通过后才 rename 到目标路径 ——
+# 正常结束不会留下任何一个；这一条只为进程被强杀的那次。
+*.webp.part
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
