@@ -1,36 +1,19 @@
-# 自托管字体
+# 自托管字体 · Visual Identity V3
 
-两个文件，合计约 **93 KB**。全部自托管 —— 服务端 CSP 是 `font-src 'self'`，
-Google Fonts 之类的外链会被直接拦掉（这是有意的，见 `server/security.ts`）。
+三份 WOFF2，总计约 113.5 KiB，保留现有 OFL 授权；`font-display: swap`，无外部字体请求。
 
-| 文件 | 用途 | 体积 | 授权 |
-|---|---|---:|---|
-| `cormorant-garamond-latin.woff2` | 拉丁展示字（品牌名、Cover 标题） | 36.9 KB | OFL-1.1 |
-| `lxgw-wenkai-light-subset.woff2` | 中文展示字（Cover 文案、牌组名） | 56.6 KB | OFL-1.1 |
+| 字体 | 用途 | 大小 |
+|---|---|---:|
+| Cinzel | 品牌、英文辅助铭文 | 13.9 KiB |
+| Cormorant Garamond | 拉丁动态标题、仪式按钮回退 | 36.9 KiB |
+| LXGW WenKai Light 子集 | 中文固定标题、章节、引导语、主要按钮 | 62.8 KiB |
 
-## 为什么是这两个
+`--font-display` 为固定中文展示字体，`--font-inscription` 协调 Cinzel 与文楷。`--font-ritual` 使用 Cormorant + 完整系统楷体回退链，不包含中文子集，以安全呈现 AI 主题与摘录。系统未提供楷体时退回宋体/serif。长正文用 `--font-editorial`，输入与小标签保留 sans。
 
-**Cormorant Garamond** 是可变字体，一个文件覆盖 300–700 全部字重 ——
-不需要为每个字重各下一个文件。只取 latin 子集。
+子集共 248 字。扩充静态文案时更新 `scripts/subset-display-font.py` 并运行：
 
-**霞鹜文楷 LXGW WenKai Light** 是楷体系，笔画轻、带书写感，
-是 OFL 授权里最接近「翩翩体」那种气质的一款。原文件 **26.9 MB**，
-子集化到 **223 个字符**后只剩 56.6 KB（0.2%）。
-
-## 子集化的边界 —— 这条很重要
-
-中文展示字**只用在文案由我们自己写死的地方**：Cover、首页品牌区、牌组名。
-AI 解读正文、用户输入的问题、日记内容一律**不使用**它。
-
-原因很直接：子集里只有那 223 个字。如果拿它渲染动态文本，
-缺字会逐字回退到系统字体，一句话里出现两种字形 —— 那比不用艺术字更糟。
-
-要改动展示位文案，必须同步重新生成子集：
-
-```bash
-# 需要 fontTools + brotli
-python scripts/subset-display-font.py
+```sh
+LXGW_TTF=/path/to/LXGWWenKai-Light.ttf python scripts/subset-display-font.py
 ```
 
-新增的字如果不在子集里，浏览器会静默回退，**不会报错**。
-`deck:check` 的 L 组会拦住这种情况。
+需要 fontTools 与 brotli。源字体不入库，产品运行不依赖 Python。不要把子集字体用于 AI 正文、用户问题或动态牌名。`deck:check` 保留 120 KiB 总预算与动态字体边界检查。

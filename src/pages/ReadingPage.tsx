@@ -1,3 +1,5 @@
+import { Bilingual } from '@/components/identity/Bilingual'
+import { positionEnglish } from '@/components/identity/copy'
 import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/atoms/Button'
@@ -206,14 +208,14 @@ export default function ReadingPage() {
       <section className="px-5 pb-1 pt-1">
         {session.question ? (
           <>
-            <p className="text-caption tracking-wide-caps text-text-faint">你的问题</p>
+            <Bilingual name="question" className="ritual-heading reading-eyebrow" />
             <h1
               className="mt-2.5 text-text-hi"
               /* 用户自己写下的那句话是这一页的锚点，用 Ritual 档并给足行高。
                  它不能用 Oracle（碑刻体）—— 那是给品牌名的，一段完整的句子
                  用全大写字形会读不下去。 */
               style={{
-                fontFamily: 'var(--font-ritual)',
+                fontFamily: 'var(--font-editorial)',
                 fontSize: 'clamp(1.375rem, 1.2vw + 1.1rem, 1.875rem)',
                 lineHeight: 1.45,
                 letterSpacing: 'var(--tracking-ritual)',
@@ -226,7 +228,7 @@ export default function ReadingPage() {
           <h1
             className="text-text-hi"
             style={{
-              fontFamily: 'var(--font-ritual)',
+              fontFamily: 'var(--font-editorial)',
               fontSize: 'clamp(1.375rem, 1.2vw + 1.1rem, 1.875rem)',
               letterSpacing: 'var(--tracking-ritual)',
             }}
@@ -234,7 +236,7 @@ export default function ReadingPage() {
             随缘抽一张
           </h1>
         )}
-        <p className="mt-3 text-caption tracking-wide-caps text-text-low">{spread.name}</p>
+        <p className="mt-3 text-caption tracking-wide-caps text-text-low"><Bilingual zh={spread.name} en={spread.nameEn} /></p>
       </section>
 
       <div
@@ -258,7 +260,7 @@ export default function ReadingPage() {
                 showName={false}
               />
             </CardFrame>
-            <span className="text-caption tracking-wide-caps text-text-faint">{pos.label}</span>
+            <Bilingual zh={pos.label} en={positionEnglish(pos.label)} className="text-center text-caption" />
           </div>
         ))}
       </div>
@@ -428,7 +430,7 @@ export default function ReadingPage() {
             />
 
             <div className="mt-8">
-              <Button size="lg" variant="ghost" block onClick={finish}>
+              <Button subtitle="Keep This Reading" size="lg" variant="ghost" block onClick={finish}>
                 完成并存入日记
               </Button>
             </div>

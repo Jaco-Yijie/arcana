@@ -1,3 +1,5 @@
+import { Bilingual } from '@/components/identity/Bilingual'
+import { deckEnglish, positionEnglish } from '@/components/identity/copy'
 /**
  * 分享卡（Share Card）—— 固定 4:5 的独立 DOM。
  *
@@ -52,7 +54,7 @@ export function ShareCard({ entry }: { entry: ShareCardEntry }) {
   return (
     <div
       /* @container 让内部的 cqw 生效。固定 4:5 = 1080×1350 */
-      className="@container relative isolate w-full overflow-hidden rounded-lg border border-line-hairline bg-bg-deep"
+      className="share-identity @container relative isolate w-full overflow-hidden rounded-lg border border-line-hairline bg-bg-deep"
       style={{ aspectRatio: '1080 / 1350' }}
       data-share-card
     >
@@ -65,12 +67,12 @@ export function ShareCard({ entry }: { entry: ShareCardEntry }) {
         <header>
           <p
             className="font-serif text-text-hi"
-            style={{ fontSize: '5.2cqw', letterSpacing: '0.02em' }}
+            style={{ fontFamily: 'var(--font-oracle)', fontSize: '5.2cqw', letterSpacing: '0.02em' }}
           >
             Arcana
           </p>
           <p className="mt-[1cqw] text-text-faint" style={{ fontSize: '2.6cqw' }}>
-            {deck.name}
+            <Bilingual zh={deck.name} en={deckEnglish[deck.deckId]} className="share-position" />
             {entry.spreadName ? ` · ${entry.spreadName}` : ''}
           </p>
         </header>
@@ -93,7 +95,7 @@ export function ShareCard({ entry }: { entry: ShareCardEntry }) {
                 className="tracking-wide-caps text-text-faint"
                 style={{ fontSize: '2.2cqw' }}
               >
-                {c.label}
+                <Bilingual zh={c.label} en={positionEnglish(c.label)} className="share-position" />
               </span>
               <span className="text-text-low" style={{ fontSize: '2.2cqw' }}>
                 {c.card.nameZh}
@@ -113,7 +115,7 @@ export function ShareCard({ entry }: { entry: ShareCardEntry }) {
           {entry.insight && (
             <p
               className="font-serif leading-snug text-text-hi"
-              style={{ fontSize: '4.2cqw' }}
+              style={{ fontFamily: 'var(--font-ritual)', fontSize: '4.2cqw', lineHeight: 1.65 }}
             >
               {entry.insight}
             </p>
@@ -123,7 +125,7 @@ export function ShareCard({ entry }: { entry: ShareCardEntry }) {
               {entry.date}
             </span>
             <span className="tracking-wide-caps text-text-faint" style={{ fontSize: '2.2cqw' }}>
-              亲手抽出的牌
+              亲手抽出的牌 · ARCANA
             </span>
           </div>
         </div>

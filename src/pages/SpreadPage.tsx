@@ -1,3 +1,4 @@
+import { Bilingual } from '@/components/identity/Bilingual'
 import { useMemo, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
@@ -66,7 +67,7 @@ export default function SpreadPage() {
       <SpreadThumb spread={spread} />
       <span className="flex min-w-0 flex-col gap-1">
         <span className="flex items-baseline gap-2">
-          <span className="font-serif text-title text-text-hi">{spread.name}</span>
+          <span className="font-serif text-title text-text-hi"><Bilingual zh={spread.name} en={spread.nameEn} /></span>
           <span className="text-caption text-text-faint">{spread.cardCount} 张</span>
         </span>
         <span className="text-caption text-text-low">{spread.description}</span>

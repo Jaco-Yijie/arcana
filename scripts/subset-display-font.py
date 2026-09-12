@@ -36,7 +36,9 @@ LATIN = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ"
          "0123456789"
          " ·—–…、。，！？：；「」『』（）《》’‘“”.,!?:;()-/&")
 
-text = DECKS + COVER + MISC + LATIN
+RITUAL = "在偶然之间，照见自己 这组牌在说 每张牌的分析 牌与牌之间的关系 整体走向 回到你的问题 可以再想想的问题 核心提示 这张牌的启示 接下来要注意的是"
+
+text = DECKS + COVER + MISC + RITUAL + LATIN
 chars = sorted(set(text) - {'\n'})
 print(f"  唯一字符数: {len(chars)}")
 

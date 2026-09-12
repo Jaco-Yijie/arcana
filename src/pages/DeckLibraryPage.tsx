@@ -1,3 +1,5 @@
+import { Bilingual } from '@/components/identity/Bilingual'
+import { deckEnglish } from '@/components/identity/copy'
 /**
  * Deck Library —— 数字牌柜（Digital Tarot Cabinet）。
  *
@@ -213,7 +215,7 @@ function DeckHeading({ deck, active }: { deck: DeckDefinition; active: boolean }
              它是这一页的主角文字，值得用艺术字档。 */
           style={{ fontFamily: 'var(--font-display)', fontWeight: 300, letterSpacing: '0.06em' }}
         >
-          {deck.name}
+          <Bilingual zh={deck.name} en={deckEnglish[deck.deckId]} />
         </span>
         {active && (
           <span className="shrink-0 text-[11px] tracking-wide-caps text-silver-dim">使用中</span>

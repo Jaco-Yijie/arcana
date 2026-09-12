@@ -1,3 +1,6 @@
+import { ArtBackdrop } from '@/components/identity/ArtBackdrop'
+import { Bilingual } from '@/components/identity/Bilingual'
+import { Button } from '@/components/atoms/Button'
 /**
  * Intro Cover —— 进入项目之前的那一层。
  *
@@ -84,7 +87,7 @@ export default function IntroCover({ onEnter }: Props) {
   return (
     <div
       className={[
-        'fixed inset-0 z-50 flex flex-col items-center justify-center px-6',
+        'identity-cover isolate fixed inset-0 z-50 overflow-y-auto flex flex-col items-center justify-center px-6',
         /* 入场走 CSS 动画（后台标签页里 rAF 会被挂起，JS 触发的过渡可能永远不跑）；
            离场是用户点出来的，那一刻标签页一定在前台，用 state 切没问题。 */
         'cover-in motion-reduce:animate-none',
@@ -96,6 +99,7 @@ export default function IntroCover({ onEnter }: Props) {
         if (leaving && e.propertyName === 'opacity') onEnter()
       }}
     >
+      <ArtBackdrop cover />
       {/* 视觉中心：牌组徽记。不另造一个纹章 —— 这个记号在氛围层与首页
           已经出现过，用同一个才成得了「这个项目的标记」。 */}
       <DeckSigil deckId={deckId} size="clamp(5.5rem, 22vw, 9rem)" opacity={0.55} />
@@ -123,25 +127,12 @@ export default function IntroCover({ onEnter }: Props) {
           letterSpacing: '0.05em',
         }}
       >
-        每一次翻牌，都是一次自我照见。
+        <Bilingual name="cover" />
       </p>
 
-      <button
-        type="button"
-        onClick={enter}
-        autoFocus
-        className={[
-          'mt-12 min-h-[var(--space-tap)] rounded-full px-10 py-3',
-          'border border-line-soft bg-bg-void/40 text-text-hi',
-          'transition-[background-color,border-color,transform] duration-[var(--duration-base)]',
-          'hover:border-silver/55 motion-safe:hover:-translate-y-0.5',
-          'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-silver',
-          'motion-reduce:transition-none motion-reduce:hover:translate-y-0',
-        ].join(' ')}
-        style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', letterSpacing: '0.2em', paddingInlineStart: '2.6rem', paddingInlineEnd: '2.4rem' }}
-      >
+      <Button onClick={enter} autoFocus size="lg" variant="primary" subtitle="Enter the Reading" className="mt-10">
         开始占卜
-      </button>
+      </Button>
 
       {/* 用 text-low 而不是 text-faint：实测 faint 在这个底色上只有 3.11:1，
           13px 的小字达不到 WCAG AA 的 4.5:1。low 是 5.55:1。

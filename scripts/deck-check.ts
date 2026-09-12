@@ -1580,7 +1580,7 @@ function checkDisplayFontSubset(): void {
   )
   check(
     'L-08 Ritual 档不含子集字体（它要渲染模型生成的主题句）',
-    !/--font-ritual:[\s\S]{0,200}?LXGW/.test(theme),
+    !/--font-ritual:[^;]*LXGW/.test(theme),
   )
   /* Oracle 只允许出现在这几处静态文案里。ReadingBody 与正文组件不许碰它 */
   for (const f of ['src/features/reading/ReadingBody.tsx', 'src/components/atoms/Button.tsx']) {

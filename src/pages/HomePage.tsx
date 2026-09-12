@@ -1,3 +1,5 @@
+import { ArtBackdrop } from '@/components/identity/ArtBackdrop'
+import { Bilingual } from '@/components/identity/Bilingual'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Panel } from '@/components/atoms/Panel'
@@ -92,12 +94,13 @@ export default function HomePage() {
   const progress = session && spread ? `${session.placements.length}/${spread.cardCount}` : null
 
   return (
-    <div className="relative mx-auto flex min-h-[100dvh] w-full flex-col px-5"
+    <div className="identity-home relative isolate mx-auto flex min-h-[100dvh] w-full flex-col px-5"
       /* 与 AppShell 的 column 用同一个连续宽度令牌 —— 这两页有自己的根容器，
          不经过 AppShell，但内容列宽度必须和全站一致 */
       /* Hero 是左右分栏，需要比正文列宽。窄屏时 gallery 仍然是 94vw，
          所以手机端不会因此变宽 —— 它只是解开了桌面端 40rem 的上限。 */
       style={{ maxWidth: WIDTH_STYLE.gallery }}>
+      <ArtBackdrop />
       {/* 未完成 Session：写清楚问题 + 牌阵 + 进度，用户才敢点「继续」 */}
       {hasUnfinished && session && (
         <Panel tone="veil" pad="sm" className="mt-4 flex flex-col gap-2">
@@ -132,7 +135,8 @@ export default function HomePage() {
         <HeroCards deckId={deckId} />
 
         {/* ── 右栏：徽记 + 品牌 + CTA ── */}
-        <header className="flex flex-col items-start">
+        <header className="hero-copy flex flex-col items-start">
+          <span className="bilingual-en" lang="en">A RITUAL / A REFLECTION</span>
           <DeckSigil deckId={deckId} size="clamp(3.5rem, 9vw, 6rem)" opacity={0.45} />
           <h1
             className="mt-6 text-text-hi"
@@ -149,6 +153,7 @@ export default function HomePage() {
           >
             Arcana
           </h1>
+          <Bilingual name="home" className="hero-tagline" />
           <p
             className="mt-4 text-note text-text-low"
             /* 牌组 tagline 是写死的文案，在子集字体的 223 字之内 */
@@ -156,15 +161,15 @@ export default function HomePage() {
           >
             {deck.tagline}
           </p>
-          <p className="mt-2 text-caption text-text-faint">
+          <p className="mt-2 text-caption text-text-low">
             亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。
           </p>
 
           <div className="mt-10 flex w-full flex-col gap-3">
-            <Button size="lg" variant="primary" block onClick={() => navigate('/decks')}>
+            <Button subtitle="Begin Reading" size="lg" variant="primary" block onClick={() => navigate('/decks')}>
               开始一次解读
             </Button>
-            <Button size="md" variant="quiet" block onClick={() => navigate('/question?mode=random')}>
+            <Button subtitle="A Card for This Moment" size="md" variant="quiet" block onClick={() => navigate('/question?mode=random')}>
               随缘抽一张
             </Button>
           </div>
@@ -172,7 +177,7 @@ export default function HomePage() {
       </div>
 
       <footer
-        className="flex items-center justify-center gap-6 pb-6 text-caption text-text-faint"
+        className="flex items-center justify-center gap-6 pb-6 text-caption text-text-low"
         style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
       >
         <Link to="/journal" className="flex items-center">塔罗日记</Link>

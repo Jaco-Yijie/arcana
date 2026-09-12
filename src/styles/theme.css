@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
- * 自托管字体（合计约 93 KB）
+ * 自托管字体（合计约 113.5 KiB）
  *
  * 必须自托管：服务端 CSP 是 `font-src 'self'`，外链字体会被直接拦掉。
  * 那条 CSP 是有意的（见 server/security.ts），不为了字体放宽。
@@ -112,65 +112,12 @@
   --color-line-soft: color-mix(in oklab, var(--color-silver) 18%, transparent);
   --color-line-strong: color-mix(in oklab, var(--color-silver) 32%, transparent);
 
-  /* ---------------------------------------------------------------------
-   * 2. Typography 排版
-   * 全部使用系统字体栈（零网络请求、零 FOUT）。
-   * Sans 用于 UI，Serif 仅用于牌名与大标题（提供「典籍感」而非玄学感）。
-   * ------------------------------------------------------------------- */
-  /* ═══════════════════════════════════════════════════════════
-   * 字体角色 —— 五档，各自有明确边界
-   *
-   * 【为什么要分成五档而不是继续用 sans/serif 两档】
-   * 两档的后果是「标题=serif」这一条规则要同时服务品牌大标题、
-   * section 标题和 AI 解读的主题句。它们对字体的要求根本不同：
-   * 品牌标题要有辨识度，解读主题句要的是读得顺。
-   * 挤在同一个 token 里，任何一边的调整都会伤到另一边。
-   *
-   * 【艺术字的使用边界 —— 这条是硬的】
-   * `--font-display` 挂的中文字是**子集字体**，只有 223 个字
-   * （见 public/fonts/README.md）。它只允许用在文案由我们自己写死的地方：
-   * Cover、首页品牌区、牌组名。
-   * 一旦拿它渲染 AI 解读或用户输入，缺字会逐字回退到系统字体，
-   * 一句话里出现两种字形 —— 那比不用艺术字更糟。
-   * ═══════════════════════════════════════════════════════════ */
-
-  /* ── A · Oracle Display —— 品牌名、Cover 标题、牌组名。仅静态文案 ──
-   *
-   * 【为什么是 Cinzel，而不是又一款"高级 serif"】
-   * 上一版用的是 Cormorant Garamond。它优雅，但它是一款**通用**的高对比衬线体 ——
-   * 放在任何一个讲究点的网站上都成立，因此它不构成任何品牌识别。
-   *
-   * Cinzel 是罗马碑刻体（Trajan 一系）。选它的理由不是"更好看"，
-   * 而是**牌面原画上烘焙的英文标题本来就是这一类字形**
-   * （The Fool / The Lovers / Death，见 legacy-* 五套的画面底部）。
-   * 品牌名与牌面标题同源，两者才属于同一个世界；
-   * 换成任何一款不相干的漂亮衬线体，品牌和牌就是两张皮。
-   *
-   * 它的小写字母是大写字形（小型大写效果），所以 "Arcana" 天然读作
-   * 一个字符标（wordmark）而不是一个单词 —— 这正是品牌名要的。 */
+  /* Typography V3: fixed inscriptions never render arbitrary AI/user text. */
   --font-oracle:
-    'Cinzel', 'LXGW WenKai Light', ui-serif, 'Iowan Old Style', Palatino, 'Songti SC',
-    'Source Han Serif SC', Georgia, serif;
-
-  /* ── B · Ritual Heading —— 解读主题句、section 标题、用户问题 ──
-   *
-   * 比正文明显有风格，但要能连续阅读，所以不能用碑刻体
-   * （Cinzel 的全大写字形读一段话会非常累）。
-   * 拉丁用 Cormorant Garamond —— 它在 A 档"不够有识别度"，
-   * 在这一档恰恰合适：有仪式感、不抢戏、可读。
-   *
-   * 【中文侧刻意用系统衬线，不用子集字体】
-   * 这一档会渲染**模型生成**的解读主题句，字符集不可枚举。
-   * 用只有 223 个字的子集字体，缺字会逐字回退，一句话里两种字形。
-   * 中文的"仪式感"在这里靠字号、字距、行高和留白做，不靠换字。 */
+    'Cinzel', 'LXGW WenKai Light', 'Kaiti SC', 'Songti SC', Georgia, serif;
   --font-ritual:
-    'Cormorant Garamond', ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino,
-    'Songti SC', 'Source Han Serif SC', Georgia, serif;
-
-  /* 兼容别名：既有代码里的 font-serif 指向 Ritual 档 */
+    'Cormorant Garamond', 'Kaiti SC', STKaiti, KaiTi, 'Songti SC', Georgia, serif;
   --font-serif: var(--font-ritual);
-
-  /* C · Body / D · UI —— 正文、按钮、标签。可读性第一，不动 */
   --font-sans:
     ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
     'Microsoft YaHei', Roboto, sans-serif;
@@ -561,3 +508,67 @@ html.in-streamlit #root {
 html.in-streamlit #root:has(> div > div[style*="100dvh"]) {
   overflow-y: hidden;
 }
+
+/* Visual Identity V3 — fixed copy / dynamic headings / editorial prose / controls. */
+:root {
+  --font-editorial: 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', 'Noto Serif CJK SC', Georgia, serif;
+  --font-display: 'LXGW WenKai Light', 'Kaiti SC', KaiTi, serif;
+  --font-inscription: 'Cinzel', 'LXGW WenKai Light', 'Kaiti SC', KaiTi, serif;
+  --identity-gold: #cbb58b;
+}
+.bilingual { display: inline-flex; flex-direction: column; gap: .3rem; min-width: 0; }
+.bilingual-en { display: block; font-family: 'Cinzel', Georgia, serif; font-size: .6875rem; font-weight: 400; line-height: 1.65; letter-spacing: .12em; color: var(--color-text-low); text-transform: uppercase; }
+.ritual-heading { font-family: var(--font-inscription); font-weight: 300; font-size: clamp(1.25rem, 1vw + 1rem, 1.65rem); letter-spacing: .08em; color: var(--color-text-hi); }
+.ritual-button { font-family: 'Cormorant Garamond', 'Kaiti SC', STKaiti, KaiTi, serif; letter-spacing: .12em; white-space: normal; padding-block: .8rem; line-height: 1.5; }
+.ritual-button-primary { border-color: color-mix(in srgb, var(--identity-gold) 65%, transparent); background: linear-gradient(115deg, #cbb58b20, #13202ac9 55%, #cbb58b10); box-shadow: inset 0 0 0 3px #0a111b, inset 0 0 0 4px #cbb58b20, 0 8px 28px #0003; }
+.ritual-button-primary:hover { border-color: var(--identity-gold); }
+.ritual-button .bilingual-en { font-size: .625rem; letter-spacing: .16em; }
+.identity-home { overflow-wrap: anywhere; }
+.art-backdrop { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; background: radial-gradient(ellipse at 24% 36%, #41525455, transparent 48%), linear-gradient(120deg, #101b25, #0c111b 65%, #1a2029); }
+.art-ink { position: absolute; inset: 0; background: url('/assets/identity/ink-landscape.svg') center bottom / cover no-repeat; opacity: .85; }
+.art-paper { position: absolute; inset: 0; opacity: .13; background-image: repeating-linear-gradient(17deg, #cbb58b25 0 .6px, transparent .6px 4px), repeating-linear-gradient(103deg, #dce2db18 0 .5px, transparent .5px 6px); }
+.art-moon { position: absolute; width: min(47vw, 620px); aspect-ratio: 1; top: 10%; left: 3%; border-radius: 50%; border: 1px solid #cbb58b60; box-shadow: 0 0 0 12px #cbb58b05, 0 0 0 13px #cbb58b18; background: radial-gradient(circle at 35% 30%, #cbb58b14, #cbb58b03 65%, transparent); }
+.art-axis { position: absolute; left: 26.5%; top: 0; bottom: 0; width: 1px; background: linear-gradient(transparent, #cbb58b35, transparent); }
+.art-seal { position: absolute; bottom: 7%; right: 7%; border: 1px solid #cbb58b50; padding: .4rem .8rem; color: #cbb58b90; font-size: 1.5rem; }
+.art-backdrop-cover .art-moon { width: min(72vw, 650px); left: 50%; top: 47%; transform: translate(-50%, -50%); }
+.art-backdrop-cover .art-axis { left: 50%; }
+.art-backdrop-cover .art-ink { opacity: 1; }
+.identity-cover { background: #0c111b; padding-block: 3rem; }
+.identity-cover .art-backdrop { position: absolute; }
+.hero-copy { padding-block: 2rem; }
+.hero-tagline { margin-top: 1.5rem; font-family: var(--font-inscription); font-size: clamp(1.4rem, 2vw, 1.9rem); font-weight: 300; letter-spacing: .06em; color: var(--color-text-hi); }
+.hero-tagline .bilingual-en { margin-top: .4rem; }
+.reading-editorial { font-family: var(--font-editorial); overflow-wrap: anywhere; }
+.reading-editorial p { line-height: 1.95; letter-spacing: .025em; }
+.reading-theme { position: relative; border-top: 1px solid var(--color-line-strong); padding: 2rem 0 1.5rem; }
+.reading-theme::before { content: '✦'; position: absolute; top: -.9rem; left: 50%; color: var(--identity-gold); background: var(--color-bg-deep); padding: 0 .8rem; }
+.reading-eyebrow { font-size: 1.0625rem; }
+.reading-section { border-bottom: 1px solid var(--color-line-soft); padding-block: .8rem; }
+.reading-section-content:not([hidden]) { display: flex; flex-direction: column; gap: 1.5rem; padding: .8rem 0 1.8rem; }
+.reading-card-analysis + .reading-card-analysis { border-top: 1px solid var(--color-line-hairline); padding-top: 1.7rem; }
+.reading-card-heading { display: flex; gap: 1rem; align-items: center; }
+.reading-number { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--identity-gold); line-height: 1; }
+.reading-card-heading h3 { font-family: var(--font-ritual); font-size: 1.5rem; margin-top: .35rem; }
+.reading-card-heading .bilingual { font-family: var(--font-sans); font-size: .8125rem; }
+.reading-card-heading .bilingual-en { display: inline; font-size: .625rem; }
+.reading-lead { font-family: var(--font-inscription); font-weight: 300; color: var(--identity-gold); font-size: 1rem; }
+.reading-lead span { font-family: 'Cormorant Garamond', serif; font-size: .9375rem; margin-left: .75rem; }
+.reading-pullquote { position: relative; margin: 2.7rem 0; padding: 2rem clamp(1rem, 4vw, 2.5rem); border-block: 1px solid var(--color-line-strong); background: linear-gradient(110deg, #cbb58b0d, transparent); }
+.reading-pullquote blockquote { margin: 1.3rem 0; font-family: var(--font-ritual); font-size: clamp(1.4rem, 1.4vw + 1rem, 1.9rem); line-height: 1.85; color: var(--color-text-hi); text-wrap: pretty; }
+.reading-ornament { display: block; text-align: center; color: var(--identity-gold); }
+.share-identity { background-image: linear-gradient(150deg, #cbb58b0c, transparent 55%); }
+.share-position .bilingual-en { font-size: 2.2cqw; letter-spacing: .07em; }
+@media (max-width: 767px) {
+  .identity-home .art-moon { width: 78vw; left: 11%; top: 4%; }
+  .identity-home .art-axis { left: 50%; }
+  .identity-home .art-ink { background-position: 32% bottom; opacity: .65; }
+  .hero-copy { padding-top: 0; }
+  .hero-copy > .bilingual-en { font-size: .625rem; }
+  .reading-editorial p { font-size: 1rem; }
+  .identity-cover { justify-content: safe center; }
+}
+
+.ritual-button-fixed { font-family: var(--font-inscription); font-weight: 300; }
+
+.identity-home, .identity-cover { --color-text-low: #b9c0ca; }
+.identity-cover .art-ink { opacity: .62; }
