@@ -2,9 +2,7 @@ import { useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
 import { Button } from '@/components/atoms/Button'
-import { Panel } from '@/components/atoms/Panel'
-import { CardFrame } from '@/components/card/CardFrame'
-import { TarotCardFace } from '@/components/card/TarotCardFace'
+import { ShareCard, type ShareCardEntry } from '@/features/reading/ShareCard'
 import { getEntry } from '@/store/journalStore'
 import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
@@ -40,6 +38,21 @@ export default function SharePage() {
     })
     .filter((x): x is NonNullable<typeof x> => x !== null)
 
+  const shareEntry: ShareCardEntry = {
+    deckId: resolveDeckId(entry.deckId, entry.deckSchema),
+    spreadName: spread?.name ?? null,
+    cards: cards.map(({ pos, card, orientation }) => ({
+      label: pos.label,
+      card,
+      orientation,
+    })),
+    /* 核心结论优先取 V2 结构化解读的主题句；老记录回落到 V1 headline */
+    insight: entry.structuredReading?.readingTheme ?? entry.reading?.headline[0] ?? null,
+    /* 隐私：只有用户主动勾选才带上原问题 */
+    question: showQuestion ? entry.question : null,
+    date: new Date(entry.createdAt).toLocaleDateString('zh-CN'),
+  }
+
   const text = [
     spread ? `牌阵：${spread.name}` : '',
     ...cards.map(
@@ -72,36 +85,15 @@ export default function SharePage() {
       }
     >
       <div className="flex flex-col gap-5 pt-2">
-        <Panel tone="veil" pad="md" className="flex flex-col gap-4">
-          {spread && <p className="text-caption text-text-faint">{spread.name}</p>}
-          <div className="flex flex-wrap gap-3">
-            {cards.map(({ pos, card, orientation }) => (
-              <div key={pos.id} className="flex flex-col items-center gap-1">
-                <CardFrame size="sm" state="locked" deckId={resolveDeckId(entry.deckId, entry.deckSchema)}>
-                  <TarotCardFace
-                    card={card}
-                    orientation={orientation}
-                    /* 历史保真：用当时那副牌 */
-                    deckId={resolveDeckId(entry.deckId, entry.deckSchema)}
-                    size="sm"
-                    showName={false}
-                  />
-                </CardFrame>
-                <span className="text-[10px] text-text-faint">{pos.label}</span>
-                <span className="text-[10px] text-text-low">
-                  {card.nameZh}
-                  {orientation === 'reversed' ? '·逆' : ''}
-                </span>
-              </div>
-            ))}
-          </div>
-          {showQuestion && entry.question && (
-            <p className="text-note text-text-mid">{entry.question}</p>
-          )}
-          {entry.reading?.headline[0] && (
-            <p className="text-read text-text-hi">{entry.reading.headline[0]}</p>
-          )}
-        </Panel>
+        {/* 固定 4:5 的独立分享版面。不是截整页 —— 截图会把导航、折叠区、
+            滚动位置一起带走，而且每个人的比例都不一样。 */}
+        <ShareCard entry={shareEntry} />
+
+        <p className="px-1 text-caption text-text-faint">
+          {/* 如实说明为什么没有「保存图片」按钮，而不是给一个上线就坏的按钮。 */}
+          长按或截图保存这张卡片。导出 PNG 需要牌面来源允许跨源读取
+          （当前对象存储未开放 CORS），暂未提供。
+        </p>
 
         <label className="flex items-center justify-between gap-4 px-1">
           <span className="flex flex-col gap-0.5">

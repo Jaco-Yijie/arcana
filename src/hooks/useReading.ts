@@ -21,6 +21,8 @@ import {
   StreamReadingError,
   extractPartial,
   extractPartialCards,
+  extractPartialRelationships,
+  extractPartialStringList,
   streamReading,
 } from '@/features/reading/streamClient'
 import type { PartialCard, StreamPhase } from '@/features/reading/streamClient'
@@ -75,10 +77,41 @@ export interface UseReadingResult {
   /** 本地兜底产出的解读（未连接解读服务），UI 必须如实标注 */
   localFallback: boolean
   /** 流式：已经写好且可以提前上屏的片段。校验失败时会被清空。 */
-  partial: { theme: string | null; energy: string | null; cards: PartialCard[] }
+  partial: PartialReading
   /** 流式阶段。deep 模式在推理期间为 thinking。 */
   streamPhase: StreamPhase | null
   retry: () => void
+}
+
+/**
+ * 流式解读的「已经写完、可以放出来」的部分。
+ *
+ * 【为什么覆盖到 answer / narrative / reflections —— E3 实测】
+ * 只放出 theme / energy / cards 时，实测最后一张牌 10.4 秒上屏，
+ * 而解读 19.3 秒才完成：中间 9.6 秒（总时长的 48%）屏幕上没有任何新内容。
+ * 那段时间模型正在写 relationships / narrative / answerToQuestion /
+ * reflectionQuestions —— 它们本来就在流里，只是前端扣着不显示。
+ *
+ * 把它们一并放出来之后，内容在整个 19 秒里持续出现，不再有死窗口。
+ */
+export interface PartialReading {
+  theme: string | null
+  energy: string | null
+  cards: PartialCard[]
+  relationships: string[]
+  narrative: string | null
+  answer: string | null
+  reflections: string[]
+}
+
+const EMPTY_PARTIAL: PartialReading = {
+  theme: null,
+  energy: null,
+  cards: [],
+  relationships: [],
+  narrative: null,
+  answer: null,
+  reflections: [],
 }
 
 export function useReading(
@@ -93,11 +126,7 @@ export function useReading(
   const [localFallback, setLocalFallback] = useState(false)
   const [attempt, setAttempt] = useState(0)
   const [elapsedSec, setElapsedSec] = useState(0)
-  const [partial, setPartial] = useState<{
-    theme: string | null
-    energy: string | null
-    cards: PartialCard[]
-  }>({ theme: null, energy: null, cards: [] })
+  const [partial, setPartial] = useState<PartialReading>(EMPTY_PARTIAL)
   const [streamPhase, setStreamPhase] = useState<StreamPhase | null>(null)
 
   // 已有解读就不再请求（AC-V2-11：刷新 / 返回都不重新生成）
@@ -146,12 +175,12 @@ export function useReading(
         let outcome: { reading: StructuredReading; localFallback: boolean }
 
         if (useStream) {
-          setPartial({ theme: null, energy: null, cards: [] })
+          setPartial(EMPTY_PARTIAL)
           const streamed = await streamReading(
             request,
             {
               onPhase: setStreamPhase,
-              onRestart: () => setPartial({ theme: null, energy: null, cards: [] }),
+              onRestart: () => setPartial(EMPTY_PARTIAL),
               onDelta: (acc) => {
                 // 只把**已经闭合**的字段上屏，不显示写到一半的句子
                 setPartial({
@@ -159,6 +188,12 @@ export function useReading(
                   energy: extractPartial(acc, 'overallEnergy'),
                   /* 每张牌写完就上屏 —— 否则等待期会有二十多秒屏上一个字都不变 */
                   cards: extractPartialCards(acc),
+                  /* 牌之后的四段同样边写边放。它们原本要等 done 才一次性出现，
+                     那 9.6 秒（占总时长 48%）屏上没有任何新内容。 */
+                  relationships: extractPartialRelationships(acc),
+                  narrative: extractPartial(acc, 'narrative'),
+                  answer: extractPartial(acc, 'answerToQuestion'),
+                  reflections: extractPartialStringList(acc, 'reflectionQuestions'),
                 })
               },
             },
@@ -177,7 +212,7 @@ export function useReading(
       } catch (err) {
         if (controller.signal.aborted) return
         // 校验失败时必须撤回已展示的片段 —— 不能留半截让用户以为那是解读
-        setPartial({ theme: null, energy: null, cards: [] })
+        setPartial(EMPTY_PARTIAL)
         const known = err instanceof ReadingRequestError || err instanceof StreamReadingError
         const message = known
           ? (err as Error).message

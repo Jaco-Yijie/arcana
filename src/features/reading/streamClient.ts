@@ -184,10 +184,75 @@ export function extractPartialCards(raw: string): PartialCard[] {
   for (;;) {
     const m = re.exec(tail)
     if (!m) break
-    const unesc = (x: string) => x.replace(/\\n/g, '\n').replace(/\\(.)/g, '$1').trim()
-    const interpretation = unesc(m[3] ?? '')
+    const interpretation = unescapeJson(m[3] ?? '')
     if (!interpretation) continue
-    out.push({ cardName: unesc(m[1] ?? ''), position: unesc(m[2] ?? ''), interpretation })
+    out.push({ cardName: unescapeJson(m[1] ?? ''), position: unescapeJson(m[2] ?? ''), interpretation })
   }
   return out
+}
+
+/**
+ * 从流里抽出**已经写完**的牌间关系。
+ *
+ * 【为什么它必须也能提前上屏 —— 这是 E3 实测出来的】
+ * D5 修好了「牌之前」那一段，但「牌之后」那一段仍然是空白：
+ * 实测最后一张牌解释 10.4 秒就上屏了，而解读要到 19.3 秒才被标记完成 ——
+ * 中间 9.6 秒（占总时长 48%）屏幕上一个新字都没有，用户只能看着转圈。
+ *
+ * 那 9.6 秒里模型并没有闲着，它在写 relationships / narrative /
+ * answerToQuestion / reflectionQuestions。这些字段全都躺在折叠区里，
+ * 直到 `done` 才一次性出现 —— 传输是流式的，体验却退回成「等完整结果」。
+ *
+ * 【为什么不改成让模型先写结论】
+ * 更直接的办法是把 answerToQuestion 在输出契约里提到最前面。不这么做：
+ * standard 模式 `thinking: disabled`，JSON 正文本身就是模型的推理过程，
+ * 让它在逐张分析之前先写结论，等于要求它凭尚未展开的牌面下判断。
+ * 那是拿解读质量换首屏速度。字段顺序不动，改的是前端什么时候把它们放出来。
+ */
+export function extractPartialRelationships(raw: string): string[] {
+  const at = raw.indexOf('"relationships"')
+  if (at === -1) return []
+  const out: string[] = []
+  /* 与 extractPartialCards 同一条原则：只取**已闭合**的 interpretation。
+     结尾必须是 `"` 后面跟 `}`（可能有空白）—— 说明这一条已经写完整了 */
+  const re = /"interpretation"\s*:\s*"((?:[^"\\]|\\.)*)"\s*}/g
+  const tail = raw.slice(at)
+  for (;;) {
+    const m = re.exec(tail)
+    if (!m) break
+    const text = unescapeJson(m[1] ?? '')
+    if (text) out.push(text)
+  }
+  return out
+}
+
+/**
+ * 从流里抽出**已经写完**的字符串数组元素（reflectionQuestions）。
+ *
+ * 数组元素之间以 `",` 分隔，最后一个以 `"]` 结束。只取已闭合的那些，
+ * 正在写的最后一句不显示 —— 与 extractPartial 同一条原则。
+ */
+export function extractPartialStringList(raw: string, field: string): string[] {
+  const key = `"${field}"`
+  const at = raw.indexOf(key)
+  if (at === -1) return []
+  const open = raw.indexOf('[', at + key.length)
+  if (open === -1) return []
+  const out: string[] = []
+  const re = /"((?:[^"\\]|\\.)*)"\s*(?=[,\]])/g
+  /* 只扫到数组闭合为止；没闭合就扫到目前为止收到的部分 */
+  const close = raw.indexOf(']', open)
+  const body = raw.slice(open + 1, close === -1 ? undefined : close)
+  for (;;) {
+    const m = re.exec(body)
+    if (!m) break
+    const text = unescapeJson(m[1] ?? '')
+    if (text) out.push(text)
+  }
+  return out
+}
+
+/** JSON 字符串转义还原。三个提取器共用一份，避免各写各的迟早不一致 */
+function unescapeJson(x: string): string {
+  return x.replace(/\\n/g, '\n').replace(/\\(.)/g, '$1').trim()
 }

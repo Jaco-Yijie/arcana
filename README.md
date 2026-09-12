@@ -146,6 +146,7 @@ npm run deployment:check  # 验证包
 | `docs/v2/12-qa-report.md` | V2 QA 报告 |
 | `docs/v2/32-e2-real-deployment.md` | 真实部署报告（R2 + Render） |
 | `docs/v2/33-e21-asset-domain-and-csp.md` | 资产域名切换 Runbook · CSP · 产物自述资产根 |
+| `docs/v2/35-e3-reading-experience-v2.md` | Reading Experience V2：Card First · 渐进解读 · Deck Signature |
 | `docs/v2/34-e22-artwork-lock-and-sync.md` | 牌面完整性锁 · 真实恢复链路 · 仓库瘦身前置条件 |
 | `docs/agent-development-log.md` | Multi-Agent 开发记录（V1 + V2） |
 

@@ -537,10 +537,81 @@ checkSpreadDefinitions()
 checkGeometry()
 checkCtaClearance()
 checkMinViewport()
+
+/* ══════════════════════════════════════════════════════════════
+ * Reading 页牌阵行的横向预算（E3）
+ *
+ * 【为什么要算，而不是在浏览器里试】
+ * Reading 页顶部那一行牌的宽度与间距是 CSS 表达式
+ * （`min(24vw, var(--card-w-md))` 之类），最终值取决于视口。
+ * 第一版用的是 26vw / 5vw，在桌面上看起来很好，
+ * 而 375px 上五张牌算出来 380px —— 比容器还宽 35px，横向溢出。
+ * 那种 bug 在 1440 的屏幕上永远不会被看到。
+ *
+ * 这一组把那套算术固定下来：任意目标视口，
+ * 「n 张牌 + (n−1) 个间距」必须装进可用内容宽度里。
+ * ════════════════════════════════════════════════════════════ */
+function checkReadingCardRow(): void {
+  section('Reading 牌阵行 · 横向预算')
+
+  const REM = 16
+  const vw = (pct: number, w: number) => (pct / 100) * w
+  const clamp = (lo: number, mid: number, hi: number) => Math.min(Math.max(mid, lo), hi)
+
+  /* 与 theme.css 的 token 逐字对应。改了那边这里必须跟着改 —— 
+     不同步时下面的断言会先红，而不是等用户在 375 屏上看到溢出。 */
+  const cardWSm = (w: number) => clamp(4 * REM, vw(3.14, w) + 3.24 * REM, 7 * REM)
+  const cardWMd = (w: number) => clamp(7 * REM, vw(3.14, w) + 6.24 * REM, 10 * REM)
+  const cardWLg = (w: number) => clamp(11 * REM, vw(4.18, w) + 9.98 * REM, 15 * REM)
+
+  /* ReadingPage 里那两个表达式 */
+  const widthFor = (n: number, w: number) =>
+    n <= 1 ? Math.min(vw(44, w), cardWLg(w))
+    : n <= 3 ? Math.min(vw(24, w), cardWMd(w))
+    : Math.min(vw(14, w), cardWSm(w))
+  const gapFor = (n: number, w: number) =>
+    n <= 3 ? Math.min(vw(4, w), 4 * REM) : Math.min(vw(2, w), 1.75 * REM)
+
+  /* 容器：AppShell 的 column 宽度减去 px-4 的左右内边距 */
+  const availFor = (w: number) => Math.min(vw(92, w), 40 * REM) - 32
+
+  /* 375 / 390 / 430 是本轮要求覆盖的三档；1440 代表桌面 */
+  for (const w of [375, 390, 430, 1440]) {
+    const avail = availFor(w)
+    for (const n of [1, 3, 5]) {
+      const total = n * widthFor(n, w) + (n - 1) * gapFor(n, w)
+      check(
+        `${w}px · ${n} 张牌不横向溢出`,
+        total <= avail,
+        `${total.toFixed(0)} / ${avail.toFixed(0)}px`,
+      )
+    }
+  }
+
+  /* 桌面上 3 张牌的间距要落在「留白是设计元素」的那一档。
+     太挤读起来是列表，太散读起来是三件不相干的东西。 */
+  const deskGap = gapFor(3, 1440)
+  check(
+    '桌面 3 张牌间距落在 48–72px',
+    deskGap >= 48 && deskGap <= 72,
+    `${deskGap.toFixed(0)}px`,
+  )
+
+  /* 375 上牌不能小到看不清画面。53px 宽的牌在 dpr3 上是 159 设备像素，
+     thumb 是 240px —— 仍然不糊，但再小就该换成横向 swipe 而不是继续压缩。 */
+  const minCard = widthFor(5, 375)
+  check(
+    '375px 上五张牌阵的单张宽度不低于 48px',
+    minCard >= 48,
+    `${minCard.toFixed(0)}px`,
+  )
+}
+
 checkNoRevealShift()
 checkDeterminism()
 checkNoHorizontalOverflow()
 checkContinuousSweep()
+checkReadingCardRow()
 
 console.log(`\n${'─'.repeat(64)}`)
 if (fail === 0) {

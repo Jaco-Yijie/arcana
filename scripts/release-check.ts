@@ -293,14 +293,63 @@ function checkLoadingPolicy(): void {
     return existsSync(p) ? readFileSync(p, 'utf8') : ''
   }
 
-  /* REL-07：首页不得引用任何会发起牌面请求的组件。
-     判据是「HomePage 里有没有 TarotCardFace / CardArtwork / DeckCardBack」。 */
+  /* ── REL-07 首页牌面预算 ──
+
+     【这条规则被改过，原文与改的理由都留在这里】
+     原文是「首页不得引用任何会发起牌面请求的组件」，判据是 HomePage 里
+     不出现 TarotCardFace / CardArtwork / DeckCardBack。它守的是首屏时间：
+     那时首页是纯文字的，一张图都不该请求。
+
+     E3 的 Card First 改造让首页必须展示当前牌组的真实牌面 ——
+     用户第一眼要看到他将要抽的那副牌，而不是两个文字按钮。
+     原规则与这个产品决定直接冲突。
+
+     但**它守的东西没有过时**：首屏仍然不能被牌面拖慢。
+     所以这条不是被删掉，而是换成更具体、也更严的三条判据：
+
+       (a) 张数有明确上限常量，且 ≤ 3
+       (b) 每一处牌面都显式 `variant="thumb"` —— thumb 中位 12.9KB，
+           full 是 294.9KB，23 倍差距。首屏三张牌面差的是 39KB 还是 885KB。
+       (c) 不做任何预热（prewarm）—— 首页不替后面的页面提前拉图
+
+     换句话说：原规则禁止「首页有牌」，新规则允许「首页有牌」但禁止
+     「首页有重牌」。守的仍是同一个东西，而且现在能被量化。 */
   const home = read('src/pages/HomePage.tsx')
-  const homeLoadsArt = /TarotCardFace|CardArtwork|DeckCardBack|prewarm/.test(home)
+  const heroIds = /const HERO_CARD_IDS = \[([^\]]*)\]/.exec(home)
+  const heroCount = heroIds ? (heroIds[1]!.match(/'/g) ?? []).length / 2 : Infinity
+  const homeUsesFace = /TarotCardFace|CardArtwork|DeckCardBack/.test(home)
+  const homeThumbOnly = !homeUsesFace || /variant="thumb"/.test(home)
+  const homePrewarms = /prewarm/.test(home)
   check(
-    'REL-07 首页不挂载任何会请求牌面资产的组件',
-    home.length > 0 && !homeLoadsArt,
-    'HomePage.tsx',
+    'REL-07 首页牌面 ≤ 3 张、只走 thumb 档、不预热',
+    home.length > 0 && heroCount <= 3 && homeThumbOnly && !homePrewarms,
+    `${heroCount === Infinity ? '未声明上限常量' : `${heroCount} 张`} · thumb=${homeThumbOnly} · prewarm=${homePrewarms}`,
+  )
+
+  /* ── REL-07b 分享卡的隐私边界（E3）──
+     用户写下的问题往往是这次占卜里最私人的一句。分享图默认只带牌、牌阵、
+     牌组、一句核心结论与日期；要不要带原问题由用户自己勾（AC-14）。
+     这条一旦破了不会有任何报错 —— 只会有人把自己的问题发到了社交平台上。 */
+  const sharePage = read('src/pages/SharePage.tsx')
+  const shareCard = read('src/features/reading/ShareCard.tsx')
+  check(
+    'REL-07b 分享页原问题默认关闭',
+    /useState\(false\)/.test(sharePage) && /showQuestion \? entry\.question : null/.test(sharePage),
+    'SharePage.tsx',
+  )
+  check(
+    'REL-07c 分享卡只在拿到 question 时才渲染它（组件自身不去读 session）',
+    shareCard.length > 0
+    && /entry\.question &&/.test(shareCard)
+    && !/useSession|useParams|getEntry/.test(shareCard),
+    'ShareCard.tsx',
+  )
+  /* 分享卡也必须走 thumb —— 它是一张要被截图的静态版面，
+     没有任何理由为 5 张牌拉 5×295KB 的原图。 */
+  check(
+    'REL-07d 分享卡牌面走 thumb 档',
+    /variant="thumb"/.test(shareCard),
+    'ShareCard.tsx',
   )
 
   /* REL-08：FanSpread（摊开的 78 张）必须只渲染卡背，绝不渲染正面。

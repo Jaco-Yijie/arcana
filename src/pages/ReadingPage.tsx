@@ -12,7 +12,7 @@ import { resolveDeckId } from '@/decks/ids'
 import { buildFollowUpContext } from '@/features/reading/buildReadingInput'
 import { requestFollowUp } from '@/features/reading/followUpClient'
 import { FollowUpSection } from '@/features/reading/FollowUpSection'
-import { StructuredReadingView } from '@/features/reading/ReadingSections'
+import { ReadingBody, fallbackNotice, type ReadingBodyData } from '@/features/reading/ReadingBody'
 import { DEEP_THINKING_HINT, READING_PHASES, useReading } from '@/hooks/useReading'
 import { ReadingModePicker } from '@/features/reading/ReadingModePicker'
 import type { ReadingMode } from '@/types/reading'
@@ -91,6 +91,58 @@ export default function ReadingPage() {
     })
     .filter((x): x is NonNullable<typeof x> => x !== null)
 
+  /* ── 牌的尺寸与间距按牌数决定 ──
+     留白本身是设计元素，但它不能挤掉牌：3 张时给足横向间距，
+     5 张以上必须收紧，否则 375px 上每张牌会小到看不清画面。
+     两者都用 min()/clamp() 收在视口比例里，不写死像素。 */
+  const n = cards.length
+  /* 【数值是算出来的，不是试出来的】
+     可用内容宽 = min(92vw, 40rem) − 32px 的左右内边距。
+     375px 时只有 313px，所有组合必须在这个数以内：
+       3 张：3 × min(24vw,160) + 2 × min(4vw,64) = 270 + 30 = 300 ≤ 313 ✓
+       5 张：5 × min(14vw,112) + 4 × min(2vw,28) = 262 + 30 = 292 ≤ 313 ✓
+     桌面 1440px 可用 608px：3 张 = 480 + 115 = 595 ≤ 608 ✓，
+     此时牌间距 57.6px，正好落在「3 张牌 48–72px」这一档里。
+     第一版用的是 26vw / 5vw，5 张时算出来 380px —— 375 屏上会横向溢出。 */
+  const cardWidth =
+    n <= 1 ? 'min(44vw, var(--card-w-lg))'
+    : n <= 3 ? 'min(24vw, var(--card-w-md))'
+    : 'min(14vw, var(--card-w-sm))'
+  const cardGap = n <= 3 ? 'min(4vw, 4rem)' : 'min(2vw, 1.75rem)'
+
+  /* ── 正文数据源：完成态优先，否则用流式片段 ──
+     两者映射到**同一个形状**，所以下面只有一套渲染。
+     这正是「done 时整块替换」这个问题的根因所在：形状不同就必然要两套分支。 */
+  const bodyData: ReadingBodyData = structured
+    ? {
+        theme: structured.readingTheme,
+        energy: structured.overallEnergy,
+        cards: structured.cards.map((c) => ({
+          position: c.position,
+          cardName: `${c.cardName}${c.orientation === 'reversed' ? '（逆位）' : ''}`,
+          interpretation: c.interpretation,
+          connection: c.connectionToQuestion,
+        })),
+        relationships: structured.relationships.map((r) => r.interpretation),
+        narrative: structured.narrative,
+        answer: structured.answerToQuestion,
+        reflections: structured.reflectionQuestions,
+      }
+    : {
+        theme: partial.theme,
+        energy: partial.energy,
+        cards: partial.cards.map((c) => ({
+          position: c.position,
+          cardName: c.cardName,
+          interpretation: c.interpretation,
+        })),
+        relationships: partial.relationships,
+        narrative: partial.narrative,
+        answer: partial.answer,
+        reflections: partial.reflections,
+      }
+  const structuredNotice = structured ? fallbackNotice(structured, localFallback) : null
+
   /* 追问：单轮，不累积。每次都用**同一份**上下文重新发送 ——
      界面上的历史只是阅读顺序，不进 Prompt（G-13 在类型与载荷两层都不给它机会）。 */
   const send = async (text: string) => {
@@ -142,11 +194,41 @@ export default function ReadingPage() {
         </button>
       </header>
 
-      {/* 牌阵缩略条 */}
-      <div className="flex gap-2 overflow-x-auto px-4 pb-3 scrollbar-none">
+      {/* ── 问题 → 牌阵 → 牌。这三者是这一页的主体，永远在解读正文之上 ──
+
+          改造前这里只有一条卡牌缩略条，**用户自己写的问题一个字都没有出现**。
+          解读是对那句话的回应，标题却不是那句话，页面因此缺一个锚点。
+
+          另外那条缩略条写的是 `<CardFrame size="sm" className="w-10">` ——
+          className 上的宽度会被 CardFrame 的 inline style 静默覆盖
+          （它自己的文档里专门警告过这个陷阱），所以牌从来没有 40px，
+          一直是 sm 档。现在改走 `width` 这个唯一出口。 */}
+      <section className="px-5 pb-1 pt-1">
+        {session.question ? (
+          <>
+            <p className="text-caption tracking-wide-caps text-text-faint">你的问题</p>
+            <h1 className="mt-1.5 font-serif text-heading leading-snug text-text-hi">
+              {session.question}
+            </h1>
+          </>
+        ) : (
+          <h1 className="font-serif text-heading text-text-hi">随缘抽一张</h1>
+        )}
+        <p className="mt-2 text-caption text-text-low">{spread.name}</p>
+      </section>
+
+      <div
+        className="flex items-start justify-center px-4 pb-5 pt-4"
+        style={{ gap: cardGap }}
+      >
         {cards.map(({ pos, card, orientation }) => (
-          <div key={pos.id} className="flex shrink-0 flex-col items-center gap-1">
-            <CardFrame size="sm" state="locked" className="w-10" deckId={resolveDeckId(session.deckId, session.deckSchema)}>
+          <div key={pos.id} className="flex min-w-0 flex-col items-center gap-2">
+            <CardFrame
+              size="md"
+              state="locked"
+              width={cardWidth}
+              deckId={resolveDeckId(session.deckId, session.deckSchema)}
+            >
               <TarotCardFace
                 card={card}
                 orientation={orientation}
@@ -156,7 +238,7 @@ export default function ReadingPage() {
                 showName={false}
               />
             </CardFrame>
-            <span className="text-[10px] text-text-faint">{pos.label}</span>
+            <span className="text-caption tracking-wide-caps text-text-faint">{pos.label}</span>
           </div>
         ))}
       </div>
@@ -171,53 +253,46 @@ export default function ReadingPage() {
               setStarted(true)
             }}
           />
-        ) : status === 'loading' ? (
-          /* 分阶段加载文案。注意：这是我们这一侧的等待状态，
-             不是模型的思维链 —— 我们没有也不会去伪造模型的内部过程。 */
-          <div className="flex flex-col gap-4 pt-10">
-            <p className="text-read text-text-mid">正在解读牌面……</p>
-            <p className="text-note text-text-low">
-              {streamPhase === 'thinking' ? DEEP_THINKING_HINT : READING_PHASES[phase]}
-            </p>
+        ) : status === 'loading' || structured ? (
+          /* ── 流式与完成态共用同一套渲染 ──
+             改造前这里是两个互斥分支，done 的瞬间整块替换，用户正在读的段落会位移；
+             更要紧的是 relationships / narrative / answerToQuestion /
+             reflectionQuestions 全被扣到 done 才出现 —— 实测最后一张牌 10.4 秒
+             上屏，解读 19.3 秒完成，中间 9.6 秒（48%）屏上没有任何新内容。
+             现在写完一段放一段，没有替换，也没有死窗口。 */
+          <>
+            <ReadingBody
+              data={bodyData}
+              streaming={status === 'loading'}
+              notice={structuredNotice}
+              safetyNotice={structured?.safetyNotice ?? null}
+            />
 
-            {/* ── 流式：写完一段就上屏一段。校验失败时这些会被清掉 ──
-                【为什么连每张牌也要上屏】
-                只上屏主题与基调时实测：4.6 秒后屏上文本停在 211 字符，
-                然后一直冻结到 27.3 秒 —— 模型明明一直在吐字，用户却什么都看不到。
-                现在每张牌写完就出现一张，等待期从「两段话 + 22 秒空白」
-                变成逐张浮现。没有加任何人为延迟：写完即显示。 */}
-            {(partial.theme || partial.energy || partial.cards.length > 0) && (
-              <div className="mt-2 flex flex-col gap-3 border-l border-line-hairline pl-4">
-                {partial.theme && (
-                  <p className="font-serif text-title text-text-hi">{partial.theme}</p>
-                )}
-                {partial.energy && <p className="text-read text-text-mid">{partial.energy}</p>}
-                {partial.cards.map((c, i) => (
-                  <div key={`${c.cardName}-${i}`} className="flex flex-col gap-1">
-                    <p className="text-caption tracking-wide-caps text-text-faint">
-                      {c.position} · {c.cardName}
-                    </p>
-                    <p className="text-read text-text-mid">{c.interpretation}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-            {/* 实测真实解读要 60–130s。与其让用户怀疑页面挂了，不如如实告诉他要等多久。 */}
-            {slow && (
-              <p className="text-caption text-text-faint">
-                {/* 文案按模式分开：标准模式实测约 19 秒，再说「1–2 分钟」
-                    会在它快写完的时候告诉用户「还早着呢」。 */}
-                {mode === 'deep'
-                  ? `深度解读比较完整，通常需要 1–2 分钟 · 已等待 ${elapsedSec} 秒`
-                  : `这次比平时久一些 · 已等待 ${elapsedSec} 秒`}
+            {/* 状态行放在正文**下方**，不遮挡任何已经出现的内容。
+                写的是「我们这一侧在等什么」，不是假装直播模型的思维链。 */}
+            {status === 'loading' && (
+              <p className="mt-6 flex items-center gap-2 text-caption text-text-faint" role="status">
+                <span
+                  aria-hidden="true"
+                  className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-silver-dim motion-reduce:animate-none"
+                />
+                {streamPhase === 'thinking' ? DEEP_THINKING_HINT : READING_PHASES[phase]}
+                {slow &&
+                  (mode === 'deep'
+                    ? ` · 深度解读通常需要 1–2 分钟 · 已等待 ${elapsedSec} 秒`
+                    : ` · 这次比平时久一些 · 已等待 ${elapsedSec} 秒`)}
               </p>
             )}
-            <div className="mt-2 flex flex-col gap-3">
-              {[0, 1, 2].map((i) => (
-                <span key={i} className="h-4 w-full animate-pulse rounded-hair bg-surface-1" />
-              ))}
-            </div>
-          </div>
+
+            {structured && (
+              <FollowUpSection
+                messages={session.followUps}
+                busy={followUpBusy}
+                error={followUpError}
+                onSend={send}
+              />
+            )}
+          </>
         ) : status === 'error' ? (
           /* 失败：牌一定还在，页面绝不白屏。
              后端已经自动重试过一次了，走到这里说明两次都没成 ——
@@ -262,16 +337,6 @@ export default function ReadingPage() {
               先回去看牌阵
             </button>
           </div>
-        ) : structured ? (
-          <>
-            <StructuredReadingView reading={structured} localFallback={localFallback} />
-            <FollowUpSection
-              messages={session.followUps}
-              busy={followUpBusy}
-              error={followUpError}
-              onSend={send}
-            />
-          </>
         ) : !reading ? (
           <div className="flex flex-col gap-3 pt-6">
             {[0, 1, 2].map((i) => (

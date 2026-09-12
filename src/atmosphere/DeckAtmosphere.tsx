@@ -22,6 +22,7 @@ import type { AtmosphereLighting, AtmosphereStructure } from './types'
 import { getAtmosphere } from './registry'
 import { getDeck } from '@/decks/registry'
 import { useEffectiveDeckId } from '@/hooks/useEffectiveDeck'
+import { DeckSigil } from '@/components/deck/DeckSigil'
 
 export interface DeckAtmosphereProps {
   /** 专注 / 阅读时进一步压暗（不卸载，避免重排闪烁） */
@@ -484,7 +485,8 @@ const LIGHTING: Record<AtmosphereLighting, LightingSpec> = {
 
 export function DeckAtmosphere({ dimmed = false, className = '' }: DeckAtmosphereProps) {
   /* 会话冻结后跟着 session 走，否则背景会和牌桌上的卡背打架 */
-  const spec = getAtmosphere(getDeck(useEffectiveDeckId()).atmosphereId)
+  const deckId = useEffectiveDeckId()
+  const spec = getAtmosphere(getDeck(deckId).atmosphereId)
   const { layers } = spec
   /* ★ structure / lighting 在这里进入渲染链 —— deck:check 的 H 组断言这两行存在 */
   const Detail = DETAIL[spec.structure]
@@ -536,6 +538,27 @@ export function DeckAtmosphere({ dimmed = false, className = '' }: DeckAtmospher
       >
         <Detail />
       </svg>
+
+      {/* ── 第三层·补：牌组徽记（Deck Signature） ──
+
+          【为什么补这一层 —— E3 审计的结论】
+          上面那层 `<Detail />` 十套各有一套完全不同的空间结构（光柱、退潮线、
+          拱门藤蔓、月晕、帷幕），但它们的 fillOpacity 只有 0.028–0.07 ——
+          实测下来人眼基本看不见。结果是：代码里写了十种房间，
+          用户那边只感觉换了个背景色。
+
+          差异不能靠色相补（chroma ≤ 0.05 时两个色相几乎不可分），
+          也不该靠加粒子和 blur 补（项目已有性能预算，STEP 2 明确禁止）。
+          一个**形状明确、位置固定、完全静止**的徽记是最便宜的可分辨手段。
+
+          【为什么放右上、为什么只有 0.11】
+          它必须能被看见，但绝不能和牌抢视觉主角。右上角是全站布局里
+          唯一稳定的空白象限（左上是返回、中间是牌、底部是操作区）。
+          0.11 是「扫一眼能注意到，盯着看才看清」的量 ——
+          再高就会在深色底上形成一块抢眼的亮斑。 */}
+      <div className="absolute right-[-6%] top-[4%] md:right-[2%] md:top-[6%]">
+        <DeckSigil deckId={deckId} size="min(42vw, 22rem)" opacity={0.11} />
+      </div>
 
       {/* 第三层半：本套光源配套的暗角。与主光成对，缺了它光就飘着收不住 */}
       {light.vignette && (

@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath, URL } from 'node:url'
 import { rmSync, existsSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { LOCAL_ASSET_BASE, normalizeAssetBase } from './src/decks/artwork/paths'
+import { LOCAL_ASSET_BASE, normalizeAssetBase } from './src/decks/artwork/paths.ts'
 
 /**
  * 【产物自述资产根】—— 构建期把这次构建真正用的资产根写进 `dist/arcana-build.json`。

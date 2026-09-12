@@ -35,6 +35,17 @@ export interface CardFrameProps extends Omit<HTMLAttributes<HTMLDivElement>, 'ch
   state?: CardState
   /** 空牌位占位：虚线发丝边 + 透明底 */
   placeholder?: boolean
+  /**
+   * 悬停时极小幅抬起（桌面端）。
+   *
+   * **默认关闭**，只在卡牌本身可交互的地方显式打开。
+   * 全局开启会让 Reading 页那种「已经落定、不可再动」的牌
+   * 在鼠标扫过时抖一下 —— 那与 `state='locked'` 想传达的物理状态相反。
+   *
+   * 幅度刻意只有 2px、无阴影变化、无缩放：目的是「这张牌是可以拿起来的实体」，
+   * 不是「这里有个按钮」。
+   */
+  hoverLift?: boolean
   /** 让宽度跟随父容器（扇形布局用），此时 size 只决定圆角档位 */
   fluid?: boolean
   /**
@@ -110,6 +121,7 @@ export function CardFrame({
   selected = false,
   state = 'resting',
   placeholder = false,
+  hoverLift = false,
   fluid = false,
   width,
   deckId,
@@ -141,6 +153,10 @@ export function CardFrame({
       : `border ${themed ? '' : 'border-line-soft'} bg-card-sky-a ${SHADOW_CLASS[state]}`,
     // 选中：加强描边 + 极轻微抬起。刻意不加 glow —— 发光是游戏抽卡 UI 的语言。
     selected && !placeholder ? 'border-silver/55 -translate-y-1' : '',
+    // 悬停抬起只在指针设备上生效，触屏没有 hover，留着只会造成点击后卡住在抬起态
+    hoverLift && !placeholder && !selected
+      ? 'motion-safe:hover:-translate-y-0.5 motion-reduce:hover:translate-y-0'
+      : '',
     'transition-[transform,border-color,box-shadow] duration-[var(--duration-base)] ease-[var(--ease-drift)]',
     className,
   ]

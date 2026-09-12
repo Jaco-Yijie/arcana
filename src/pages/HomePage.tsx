@@ -1,11 +1,20 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { Panel } from '@/components/atoms/Panel'
 import { Button } from '@/components/atoms/Button'
+import { CardFrame } from '@/components/card/CardFrame'
+import { TarotCardFace } from '@/components/card/TarotCardFace'
+import { DeckSigil } from '@/components/deck/DeckSigil'
+import { getCard } from '@/data/deck'
+import { getDeck } from '@/decks/registry'
+import { useDeck } from '@/hooks/useDeck'
 import { useSession } from '@/hooks/useSession'
 import { getSpread } from '@/data/spreads'
 import { truncate } from '@/utils/format'
 import type { SessionStage } from '@/types/session'
 import { WIDTH_STYLE } from '@/components/layout/AppShell'
+
+/** Hero 里展示哪三张。构图差异最大的三张：人物 / 对称 / 关系 */
+const HERO_CARD_IDS = ['major-00', 'major-02', 'major-06'] as const
 
 /** Session 中断时停在哪一步 → 回到哪个路由 */
 const STAGE_ROUTE: Record<SessionStage, string> = {
@@ -32,9 +41,45 @@ const STAGE_LABEL: Record<SessionStage, string> = {
   done: '已完成',
 }
 
+
+/** Hero 里的三张牌。用 thumb 档 —— 首屏不该为了三张展示牌去拉 3×295KB 的原图 */
+function HeroCards({ deckId }: { deckId: ReturnType<typeof useDeck>['deckId'] }) {
+  return (
+    <div className="flex items-center justify-center md:justify-start" aria-hidden="true">
+      {HERO_CARD_IDS.map((id, i) => (
+        <div
+          key={id}
+          className="shrink-0"
+          style={{
+            marginLeft: i === 0 ? 0 : 'calc(var(--hero-card-w) * -0.28)',
+            zIndex: i,
+            /* 极轻微错落与倾斜：像随手放在桌面上，而不是对齐的素材列表。
+               角度刻意都很小 —— 大角度会立刻变成「游戏抽卡界面」。 */
+            transform: `translateY(${[10, 0, 6][i]}px) rotate(${[-4, 0, 3.5][i]}deg)`,
+          }}
+        >
+          <CardFrame width="var(--hero-card-w)" size="md" state="resting" hoverLift deckId={deckId}>
+            <TarotCardFace
+              card={getCard(id)}
+              orientation="upright"
+              deckId={deckId}
+              size="sm"
+              /* 显式 thumb：13KB/张，不是 295KB/张 */
+              variant="thumb"
+              showName={false}
+            />
+          </CardFrame>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export default function HomePage() {
   const navigate = useNavigate()
   const { session, hasUnfinished, discardSession } = useSession()
+  const { deckId } = useDeck()
+  const deck = getDeck(deckId)
 
   const spread = session?.spreadId ? getSpread(session.spreadId) : null
   const progress = session && spread ? `${session.placements.length}/${spread.cardCount}` : null
@@ -43,7 +88,9 @@ export default function HomePage() {
     <div className="relative mx-auto flex min-h-[100dvh] w-full flex-col px-5"
       /* 与 AppShell 的 column 用同一个连续宽度令牌 —— 这两页有自己的根容器，
          不经过 AppShell，但内容列宽度必须和全站一致 */
-      style={{ maxWidth: WIDTH_STYLE.column }}>
+      /* Hero 是左右分栏，需要比正文列宽。窄屏时 gallery 仍然是 94vw，
+         所以手机端不会因此变宽 —— 它只是解开了桌面端 40rem 的上限。 */
+      style={{ maxWidth: WIDTH_STYLE.gallery }}>
       {/* 未完成 Session：写清楚问题 + 牌阵 + 进度，用户才敢点「继续」 */}
       {hasUnfinished && session && (
         <Panel tone="veil" pad="sm" className="mt-4 flex flex-col gap-2">
@@ -68,33 +115,33 @@ export default function HomePage() {
         </Panel>
       )}
 
-      <div className="flex flex-1 flex-col justify-center py-10">
-        <header className="mb-10">
-          <h1 className="text-glow-soft font-serif text-hero text-text-hi">Arcana</h1>
-          <p className="mt-2 text-note text-text-low">
+      <div className="grid flex-1 items-center gap-8 py-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-14 md:py-12">
+        {/* ── 左栏：真牌 ──
+            首页原本一张牌都没有，只有两个文字按钮。这里放的是**当前牌组的真实牌面**，
+            换牌组时它跟着换 —— 用户第一眼看到的就是他将要抽的那副牌。
+
+            三张而不是五张：错落叠压才读作「一副牌」，而三张是能同时看清
+            每张主体的上限。第四张开始，露出的竖带就只剩边框了。 */}
+        <HeroCards deckId={deckId} />
+
+        {/* ── 右栏：徽记 + 品牌 + CTA ── */}
+        <header className="flex flex-col items-start">
+          <DeckSigil deckId={deckId} size="clamp(3.5rem, 9vw, 6rem)" opacity={0.45} />
+          <h1 className="mt-5 font-serif text-hero text-text-hi">Arcana</h1>
+          <p className="mt-2 text-note text-text-low">{deck.tagline}</p>
+          <p className="mt-1 text-caption text-text-faint">
             亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。
           </p>
+
+          <div className="mt-8 flex w-full flex-col gap-3">
+            <Button size="lg" variant="primary" block onClick={() => navigate('/decks')}>
+              开始一次解读
+            </Button>
+            <Button size="md" variant="quiet" block onClick={() => navigate('/question?mode=random')}>
+              随缘抽一张
+            </Button>
+          </div>
         </header>
-
-        <nav className="flex flex-col gap-3">
-          <button
-            type="button"
-            onClick={() => navigate('/decks')}
-            className="surface-veil flex h-24 flex-col justify-center gap-1 rounded-lg px-5 text-left transition-transform duration-[var(--duration-quick)] active:scale-[0.985]"
-          >
-            <span className="font-serif text-title text-text-hi">带着问题来</span>
-            <span className="text-caption text-text-low">有想问的事，让牌帮你把它摊开</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => navigate('/question?mode=random')}
-            className="flex h-24 flex-col justify-center gap-1 rounded-lg border border-line-hairline bg-bg-void/40 px-5 text-left transition-transform duration-[var(--duration-quick)] active:scale-[0.985]"
-          >
-            <span className="font-serif text-title text-text-hi">随缘抽一张</span>
-            <span className="text-caption text-text-low">没有具体问题，看看今天会遇到什么</span>
-          </button>
-        </nav>
       </div>
 
       <footer

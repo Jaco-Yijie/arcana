@@ -19,7 +19,11 @@ import { existsSync, readFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { buildSystemPrompt } from '../server/prompts/tarotReadingPromptV2.ts'
 import { thinkingParamFor } from '../server/providers/stream.ts'
-import { extractPartialCards } from '../src/features/reading/streamClient.ts'
+import {
+  extractPartialCards,
+  extractPartialRelationships,
+  extractPartialStringList,
+} from '../src/features/reading/streamClient.ts'
 
 const G = '\x1b[32m'; const R = '\x1b[31m'; const D = '\x1b[2m'; const B = '\x1b[1m'; const X = '\x1b[0m'
 let pass = 0; let fail = 0
@@ -181,10 +185,89 @@ check(
   /PHASE_INTERVAL_MS: Record<ReadingMode, number>/.test(hookReading)
   && /SLOW_HINT_AFTER_MS: Record<ReadingMode, number>/.test(hookReading),
 )
+/* 【判据被改过，理由留在这里】
+   原判据是一条匹配旧源码字面量的正则：
+     /mode === 'deep'\s*\n?\s*\? `深度解读比较完整，通常需要 1–2 分钟/
+   它锁的是**那一行长什么样**，不是**产品行为对不对**。
+   E3 把等待提示从独立段落挪进状态行（不再遮挡已上屏的内容），
+   文案与换行都变了，行为一个字没变，这条却红了 —— 那是断言在守格式。
+
+   现在改成守不变量本身：「1–2 分钟」这个说法只允许出现在 deep 分支里。
+   判据是每一处出现，往前 120 字符内必须能找到 `mode === 'deep'` 与紧随的 `?`。
+   这样文案怎么改都不影响，而一旦有人把它放进 standard 分支就会立刻红。 */
+const minuteHints = [...page.matchAll(/1–2 分钟/g)]
+const allInDeepBranch =
+  minuteHints.length > 0
+  && minuteHints.every((m) => /mode === 'deep'[\s\S]{0,40}\?[\s\S]{0,80}$/.test(page.slice(Math.max(0, m.index - 120), m.index)))
 check(
-  'PERF-08f 标准模式不再显示「1–2 分钟」',
-  /mode === 'deep'\s*\n?\s*\? `深度解读比较完整，通常需要 1–2 分钟/.test(page),
+  'PERF-08f 「1–2 分钟」只出现在 deep 分支，标准模式看不到',
+  allInDeepBranch,
+  `${minuteHints.length} 处出现，全部在 deep 分支=${allInDeepBranch}`,
 )
+/* ══════════════════════════════════════════════════════════════
+ * PERF-08h … PERF-08m —— 「牌之后」的死窗口（E3）
+ *
+ * D5 修好了牌**之前**那一段（extractPartialCards）。E3 实测发现牌**之后**
+ * 还有一段更长的空白：最后一张牌解释 10.4 秒就上屏了，而解读要到 19.3 秒
+ * 才被标记完成 —— 中间 9.6 秒（占总时长 48%）屏幕上一个新字都没有。
+ *
+ * 那 9.6 秒模型在写 relationships / narrative / answerToQuestion /
+ * reflectionQuestions，它们本来就在流里，只是前端扣着等 done 才一次性放出。
+ * 下面这几条锁住「它们必须边写边放」。
+ * ════════════════════════════════════════════════════════════ */
+
+/* relationships：只取已闭合的那条。半截不能上屏 —— 与 cards 同一条原则 */
+const relHalf = '{"relationships":[{"cards":["a","b"],"kind":"arc","interpretation":"这句还没写完'
+check(
+  'PERF-08h relationships 半截不上屏',
+  extractPartialRelationships(relHalf).length === 0,
+  `解析出 ${extractPartialRelationships(relHalf).length} 条`,
+)
+const relClosed =
+  '{"relationships":[{"cards":["a","b"],"kind":"arc","interpretation":"完整的一条关系。"},'
+check(
+  'PERF-08i relationships 闭合后立即可上屏',
+  extractPartialRelationships(relClosed).length === 1,
+)
+/* 必须只认 relationships 段 —— cards[].interpretation 后面跟的是逗号不是 }，
+   如果判据写松了，三张牌的解释会被当成三条「牌间关系」重复显示一遍 */
+const cardsThenRel =
+  '{"cards":[{"cardName":"隐士","position":"过去","interpretation":"牌的解释。","connectionToQuestion":"x"}],'
+  + '"relationships":[{"cards":["a"],"kind":"arc","interpretation":"关系的解释。"},'
+check(
+  'PERF-08j 不把 cards[].interpretation 误当成牌间关系',
+  extractPartialRelationships(cardsThenRel).length === 1
+  && extractPartialRelationships(cardsThenRel)[0] === '关系的解释。',
+  extractPartialRelationships(cardsThenRel).join(' / '),
+)
+
+/* reflectionQuestions：字符串数组，同样只取已闭合的元素 */
+const refl = '"reflectionQuestions":["第一问？","第二问？","第三问还没写完'
+check(
+  'PERF-08k reflectionQuestions 只放出已闭合的元素',
+  extractPartialStringList(refl, 'reflectionQuestions').length === 2,
+  `解析出 ${extractPartialStringList(refl, 'reflectionQuestions').length} 条`,
+)
+
+/* 前端必须真的消费这四个字段，否则上面的提取器写了也白写 */
+check(
+  'PERF-08l useReading 把牌之后的四段一并放出',
+  /extractPartialRelationships\(acc\)/.test(hookReading)
+  && /extractPartial\(acc, 'narrative'\)/.test(hookReading)
+  && /extractPartial\(acc, 'answerToQuestion'\)/.test(hookReading)
+  && /extractPartialStringList\(acc, 'reflectionQuestions'\)/.test(hookReading),
+)
+
+/* 流式与完成态必须共用一套渲染。两个互斥分支 = done 时整块替换 =
+   用户正在读的段落位移，而且后半程内容全被扣住。 */
+const body = read('src/features/reading/ReadingBody.tsx')
+check(
+  'PERF-08m 流式与完成态共用同一个渲染组件（不再有两个互斥分支）',
+  body.length > 0
+  && /streaming: boolean/.test(body)
+  && /status === 'loading' \|\| structured/.test(page),
+)
+
 /* 不许为了仪式感加人为等待 */
 check(
   'PERF-08g 没有为「仪式感」加入最低等待时间',

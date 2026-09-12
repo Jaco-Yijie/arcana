@@ -1427,6 +1427,67 @@ function checkAtmosphereDifference(): void {
 
 console.log(`${B}Deck 系统自检${X}`)
 checkData()
+
+/* ══════════════════════════════════════════════════════════════
+ * K. 牌组徽记（Deck Sigil · E3）
+ *
+ * 【为什么需要这一组】
+ * 氛围层本来就为十套各写了一套空间结构（光柱 / 退潮线 / 拱门藤蔓 / 月晕 / 帷幕），
+ * 但它们的 fillOpacity 只有 0.028–0.07 —— 实测人眼基本看不见。
+ * 于是「五套牌组」在用户那里只剩下换了个背景色，
+ * 而 G 组、H 组那些「五套必须两两不同」的断言全都在守空气：
+ * 它们守的是**数据不同**，没有任何一条守「看得出来不同」。
+ *
+ * DeckSigil 是补上的那个可见锚点。这一组守它真的可分辨。
+ * ════════════════════════════════════════════════════════════ */
+function checkDeckSigil(): void {
+  section('K. 牌组徽记（可见的牌组签名）')
+
+  const src = readFileSync(resolve(REPO_ROOT, 'src/components/deck/DeckSigil.tsx'), 'utf8')
+
+  /* 五种构图必须都有对应图形。少一个，那套牌就会静默退回 lunar，
+     表现是「两副牌的徽记一模一样」，而没有任何东西会报错。 */
+  /* 从 `const GLYPH` 开始扫到该对象的收尾大括号。不去正则匹配类型注解 ——
+     `() => React.JSX.Element` 里的 `>` 会把任何 `[^>]*` 写法截断，
+     而那种失败是静默的：五条断言一起红，但原因看起来像「图形没写」。 */
+  const glyphAt = src.indexOf('const GLYPH')
+  const glyphBody = glyphAt === -1 ? '' : src.slice(glyphAt, src.indexOf('\n}', glyphAt))
+  const declared = (glyphBody.match(/^\s{2}(\w+):/gm) ?? []).map((x) => x.trim().replace(':', ''))
+  const COMPOSITIONS = ['lunar', 'orbit', 'botanic', 'constellation', 'veil']
+  for (const c of COMPOSITIONS) {
+    check(`K-01 徽记覆盖构图 ${c}`, declared.includes(c))
+  }
+
+  /* 可抽牌的五套必须两两不同 —— 这是这一层存在的全部意义。
+     如果两套牌落到同一个徽记上，换牌组在视觉上就又变回「只换了背景色」。 */
+  const sigils = legacyDecks.map((d) => d.visual.cardBack.composition ?? 'lunar')
+  check(
+    'K-02 可抽牌的牌组徽记两两不同',
+    new Set(sigils).size === legacyDecks.length,
+    legacyDecks.map((d, i) => `${d.deckId}=${sigils[i]}`).join(' · '),
+  )
+
+  /* 克制的边界照 STEP 2 的约束办。这三条一旦破了，
+     「视觉质量靠构图与留白，不靠堆效果」这句话就只是注释。
+
+     【必须先剥注释再判】第一版直接对源文件做正则，结果 K-03 与 K-05 立刻红了 ——
+     匹配到的是本组件文档里「无动画、无 canvas、无 WebGL」那句**说明文字**。
+     断言扫源码时如果不排除注释，守的就是「有没有提到这个词」，
+     而不是「有没有用这个东西」。 */
+  const code = src
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/^\s*\/\/.*$/gm, '')
+  check('K-03 徽记不含 blur / backdrop-filter', !/blur\(|backdrop/.test(code))
+  check('K-04 徽记不含动画', !/animate|@keyframes|transition/.test(code))
+  check('K-05 徽记是静态 SVG，不用 canvas / WebGL', !/canvas|WebGL|requestAnimationFrame/i.test(code))
+
+  /* 它必须真的被氛围层与首页消费，否则等于没做 */
+  const atmo = readFileSync(resolve(REPO_ROOT, 'src/atmosphere/DeckAtmosphere.tsx'), 'utf8')
+  const home = readFileSync(resolve(REPO_ROOT, 'src/pages/HomePage.tsx'), 'utf8')
+  check('K-06 氛围层渲染徽记', /<DeckSigil/.test(atmo))
+  check('K-07 首页渲染徽记', /<DeckSigil/.test(home))
+}
+
 checkAtmosphere()
 checkDrawIndependence()
 checkMeaningLayer()
@@ -1438,6 +1499,7 @@ checkSemanticInvariance()
 checkDomainMeaning()
 checkDeckVisualDifference()
 checkAtmosphereDifference()
+checkDeckSigil()
 reportMissingAssets()
 
 console.log(`\n${'─'.repeat(64)}`)
