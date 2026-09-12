@@ -326,6 +326,58 @@ function checkLoadingPolicy(): void {
     `${heroCount === Infinity ? '未声明上限常量' : `${heroCount} 张`} · thumb=${homeThumbOnly} · prewarm=${homePrewarms}`,
   )
 
+  /* ══ REL-06e … REL-06j 入口封面（E4）══
+     封面是「打开网站」这一下的门。它可以慢一点、可以有仪式感，
+     但它绝不能变成一道会卡住人的墙。下面几条锁的都是「卡住」的几种形态。 */
+  const cover = read('src/pages/IntroCover.tsx')
+  const homeSrc = read('src/pages/HomePage.tsx')
+  const html = read('index.html')
+
+  /* 深链必须直达。做成 /cover 路由的话，别人发来的 /journal/xxx
+     会被强行拐去封面，刷新也会丢掉当前位置。 */
+  check(
+    'REL-06e 封面是首页内部状态，不是路由（深链不被拦截）',
+    cover.length > 0
+    && !/path="\/cover"/.test(read('src/App.tsx'))
+    && /shouldShowCover/.test(homeSrc),
+    'IntroCover 由 HomePage 挂载',
+  )
+  /* 显示策略必须集中在一个常量上，不能散在组件里 */
+  check(
+    'REL-06f 封面显示策略由单个常量控制',
+    /export const COVER_MODE: CoverMode = '(session|always|once|off)'/.test(cover),
+    /export const COVER_MODE: CoverMode = '(\w+)'/.exec(cover)?.[1] ?? '未找到',
+  )
+  /* 存储不可用（无痕 / 禁用 Cookie）时必须放行，不能白屏 */
+  check(
+    'REL-06g 存储读写失败时放行，不把人挡在门外',
+    /catch\s*{[\s\S]{0,120}return false/.test(cover),
+  )
+  /* 离场必须同时有 transitionend + 定时器兜底 + pointer-events-none。
+     只靠定时器时：用户点完立刻切标签页，浏览器会把定时器节流到 1 秒以上，
+     回来时这一层还在 —— 它 opacity 已是 0 看不见，但 z-50 全屏容器
+     仍然吃掉所有点击，首页整个点不动。这个故障没有任何报错。 */
+  check(
+    'REL-06h 封面离场有三重保障（transitionend + 兜底定时器 + pointer-events-none）',
+    /onTransitionEnd/.test(cover)
+    && /setTimeout\(onEnter/.test(cover)
+    && /pointer-events-none/.test(cover),
+  )
+  /* 封面上不该有任何牌面请求 —— 它是首屏，且徽记是内联 SVG 就够了 */
+  check(
+    'REL-06i 封面不请求任何牌面资产',
+    !/TarotCardFace|CardArtwork|DeckCardBack/.test(cover),
+    'IntroCover.tsx',
+  )
+  /* 字体必须预载且自托管。CSP 是 font-src 'self'，外链会被直接拦掉 */
+  check(
+    'REL-06j 两个自托管字体都被预载，且无外链字体',
+    /rel="preload"[^>]*cormorant-garamond-latin\.woff2/.test(html)
+    && /rel="preload"[^>]*lxgw-wenkai-light-subset\.woff2/.test(html)
+    && !/fonts\.googleapis|fonts\.gstatic/.test(html + read('src/styles/theme.css')),
+    'index.html',
+  )
+
   /* ── REL-07b 分享卡的隐私边界（E3）──
      用户写下的问题往往是这次占卜里最私人的一句。分享图默认只带牌、牌阵、
      牌组、一句核心结论与日期；要不要带原问题由用户自己勾（AC-14）。

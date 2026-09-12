@@ -14,7 +14,7 @@
  */
 
 import { createHash } from 'node:crypto'
-import { existsSync, readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
 import type { DeckDefinition } from '../src/decks/types.ts'
 import { ALL_DECK_IDS, DEFAULT_DECK_ID, LEGACY_DECK_ALIASES, resolveDeckId } from '../src/decks/ids.ts'
@@ -1488,6 +1488,85 @@ function checkDeckSigil(): void {
   check('K-07 首页渲染徽记', /<DeckSigil/.test(home))
 }
 
+
+/* ══════════════════════════════════════════════════════════════
+ * L. 展示字体子集覆盖（E4）
+ *
+ * 【这一组守的是一个不会报错的故障】
+ * 中文展示字是**子集字体**，只含 223 个字（见 public/fonts/README.md）。
+ * 牌组名与 tagline 用它渲染。
+ *
+ * 如果有人改了牌组名、加了一副新牌，而没有重新跑子集脚本，
+ * 缺的那个字会**静默回退**到系统字体 —— 不报错、不警告，
+ * 只是「森语」两个字里有一个是楷体、一个是黑体。
+ * 那种缺陷在 code review 里看不出来，在截图里也容易被忽略。
+ *
+ * 所以这里拿 registry 的真实文案，去比对子集脚本声明的字符集。
+ * ════════════════════════════════════════════════════════════ */
+function checkDisplayFontSubset(): void {
+  section('L. 展示字体子集覆盖')
+
+  const script = readFileSync(resolve(REPO_ROOT, 'scripts/subset-display-font.py'), 'utf8')
+
+  /* 从子集脚本里取出它声明的全部字符。脚本是这套字体的唯一生成入口，
+     它声明了什么，woff2 里就有什么。 */
+  const declared = new Set<string>()
+  for (const m of script.matchAll(/"([^"\n]*)"/g)) for (const ch of m[1]!) declared.add(ch)
+
+  check(
+    'L-01 子集脚本存在且声明了字符',
+    declared.size > 100,
+    `声明 ${declared.size} 个字符`,
+  )
+
+  /* 牌组名与 tagline —— 它们确实用 --font-display 渲染 */
+  const missing: string[] = []
+  for (const d of decks) {
+    for (const ch of d.name + d.tagline) {
+      if (ch === ' ') continue
+      if (!declared.has(ch)) missing.push(`${d.deckId}:${ch}`)
+    }
+  }
+  check(
+    'L-02 所有牌组名与 tagline 的字都在子集里',
+    missing.length === 0,
+    missing.length ? `缺 ${missing.length} 个：${missing.slice(0, 8).join(' ')}` : `${decks.length} 副牌全覆盖`,
+  )
+
+  /* 字体文件必须真的存在且自托管 —— CSP 是 font-src 'self'，外链会被拦 */
+  const fonts = [
+    'public/fonts/lxgw-wenkai-light-subset.woff2',
+    'public/fonts/cormorant-garamond-latin.woff2',
+  ]
+  for (const f of fonts) {
+    check(`L-03 ${f.split('/').pop()} 已自托管`, existsSync(resolve(REPO_ROOT, f)))
+  }
+
+  /* OFL 要求授权全文随字体一起分发。少了它就是许可违规，
+     而这件事没有任何构建步骤会提醒。 */
+  for (const l of ['LICENSE-LXGWWenKai.txt', 'LICENSE-CormorantGaramond.txt']) {
+    check(`L-04 ${l} 随字体分发（OFL 要求）`, existsSync(resolve(REPO_ROOT, 'public/fonts', l)))
+  }
+
+  /* 首屏字体预算。两个文件合计 93KB —— 再大就该重新审视，
+     而不是让它悄悄长成 300KB。 */
+  const total = fonts.reduce((n, f) => n + statSync(resolve(REPO_ROOT, f)).size, 0)
+  check(
+    'L-05 字体总体积在 120KB 预算内',
+    total <= 120 * 1024,
+    `${(total / 1024).toFixed(1)} KB`,
+  )
+
+  /* 动态文本绝不能用展示字体 —— 子集里没有那些字。
+     ReadingBody 渲染 AI 解读，它不该出现 --font-display。 */
+  const body = readFileSync(resolve(REPO_ROOT, 'src/features/reading/ReadingBody.tsx'), 'utf8')
+  check(
+    'L-06 解读正文不使用展示字体（动态文本，子集覆盖不到）',
+    !/font-display/.test(body),
+    'ReadingBody.tsx',
+  )
+}
+
 checkAtmosphere()
 checkDrawIndependence()
 checkMeaningLayer()
@@ -1500,6 +1579,7 @@ checkDomainMeaning()
 checkDeckVisualDifference()
 checkAtmosphereDifference()
 checkDeckSigil()
+checkDisplayFontSubset()
 reportMissingAssets()
 
 console.log(`\n${'─'.repeat(64)}`)

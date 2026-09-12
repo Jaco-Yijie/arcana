@@ -1,3 +1,34 @@
+/* ═══════════════════════════════════════════════════════════════
+ * 自托管字体（合计约 93 KB）
+ *
+ * 必须自托管：服务端 CSP 是 `font-src 'self'`，外链字体会被直接拦掉。
+ * 那条 CSP 是有意的（见 server/security.ts），不为了字体放宽。
+ *
+ * `font-display: swap` —— 字体没到时先用系统字回退把字显示出来，
+ * 而不是留一片空白。品牌标题晚 100ms 换字，好过首屏空着。
+ * ═══════════════════════════════════════════════════════════════ */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  /* 可变字体：一个文件覆盖 300–700，不必为每个字重各下一个 */
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-latin.woff2') format('woff2');
+  /* 只声明拉丁范围。中文交给下面那个子集字体，两者互不覆盖 */
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'LXGW WenKai Light';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/lxgw-wenkai-light-subset.woff2') format('woff2');
+}
+
 /* =============================================================================
  * Arcana — Design Tokens & Base Layer
  * 视觉方向：Dreamlike / Surreal / Celestial / Quiet / Premium
@@ -74,12 +105,38 @@
    * 全部使用系统字体栈（零网络请求、零 FOUT）。
    * Sans 用于 UI，Serif 仅用于牌名与大标题（提供「典籍感」而非玄学感）。
    * ------------------------------------------------------------------- */
-  --font-sans:
-    ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
-    'Microsoft YaHei', Roboto, sans-serif;
+  /* ═══════════════════════════════════════════════════════════
+   * 字体角色 —— 五档，各自有明确边界
+   *
+   * 【为什么要分成五档而不是继续用 sans/serif 两档】
+   * 两档的后果是「标题=serif」这一条规则要同时服务品牌大标题、
+   * section 标题和 AI 解读的主题句。它们对字体的要求根本不同：
+   * 品牌标题要有辨识度，解读主题句要的是读得顺。
+   * 挤在同一个 token 里，任何一边的调整都会伤到另一边。
+   *
+   * 【艺术字的使用边界 —— 这条是硬的】
+   * `--font-display` 挂的中文字是**子集字体**，只有 223 个字
+   * （见 public/fonts/README.md）。它只允许用在文案由我们自己写死的地方：
+   * Cover、首页品牌区、牌组名。
+   * 一旦拿它渲染 AI 解读或用户输入，缺字会逐字回退到系统字体，
+   * 一句话里出现两种字形 —— 那比不用艺术字更糟。
+   * ═══════════════════════════════════════════════════════════ */
+
+  /* A · Display —— Cover 主标题、品牌名、牌组名。仅静态文案 */
+  --font-display:
+    'Cormorant Garamond', 'LXGW WenKai Light', ui-serif, 'Iowan Old Style', Palatino,
+    'Songti SC', 'Source Han Serif SC', Georgia, serif;
+
+  /* B · Heading —— section 标题、解读主题句。比正文有风格，但比 Display 稳
+     刻意**不含**子集字体：这里会渲染 AI 生成的主题句，字符集不可枚举 */
   --font-serif:
     ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Songti SC', 'Source Han Serif SC',
     Georgia, serif;
+
+  /* C · Body / D · UI —— 正文、按钮、标签。可读性第一，不动 */
+  --font-sans:
+    ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', Roboto, sans-serif;
   --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
   /* 字号阶梯（Mobile First，基准 375×667；最小 13px） */
@@ -365,6 +422,25 @@
 }
 
 /* 7. 背景环境层的缓慢漂移（只允许背景使用） */
+@keyframes cover-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 封面入场。
+   【为什么是 CSS 动画而不是 JS 切 state】
+   第一版用 requestAnimationFrame 在挂载后翻一个 shown 状态来触发过渡。
+   后台标签页里 rAF 会被浏览器挂起 —— 回调可能一直不执行，
+   于是封面永远停在 opacity:0，用户切回来看到的是一片空白。
+   CSS 动画不依赖 JS 调度，标签页在不在前台都会走完。 */
+@utility cover-in {
+  animation: cover-in var(--duration-page) var(--ease-veil) both;
+}
+
 @utility drift-slow {
   animation: var(--animate-drift-slow);
   will-change: transform;

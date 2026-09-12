@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Panel } from '@/components/atoms/Panel'
 import { Button } from '@/components/atoms/Button'
@@ -8,6 +9,7 @@ import { getCard } from '@/data/deck'
 import { getDeck } from '@/decks/registry'
 import { useDeck } from '@/hooks/useDeck'
 import { useSession } from '@/hooks/useSession'
+import IntroCover, { shouldShowCover } from './IntroCover'
 import { getSpread } from '@/data/spreads'
 import { truncate } from '@/utils/format'
 import type { SessionStage } from '@/types/session'
@@ -80,6 +82,11 @@ export default function HomePage() {
   const { session, hasUnfinished, discardSession } = useSession()
   const { deckId } = useDeck()
   const deck = getDeck(deckId)
+  /* 封面只挡「打开这个网站」这一下。深链（/reading、/journal/xxx）不经过本页，
+     所以不会被挡住 —— 那正是不把它做成独立路由的原因。
+     初值用惰性求值：读一次存储就够，不必每次渲染都读。 */
+  const [covered, setCovered] = useState(shouldShowCover)
+  if (covered) return <IntroCover onEnter={() => setCovered(false)} />
 
   const spread = session?.spreadId ? getSpread(session.spreadId) : null
   const progress = session && spread ? `${session.placements.length}/${spread.cardCount}` : null
@@ -127,8 +134,20 @@ export default function HomePage() {
         {/* ── 右栏：徽记 + 品牌 + CTA ── */}
         <header className="flex flex-col items-start">
           <DeckSigil deckId={deckId} size="clamp(3.5rem, 9vw, 6rem)" opacity={0.45} />
-          <h1 className="mt-5 font-serif text-hero text-text-hi">Arcana</h1>
-          <p className="mt-2 text-note text-text-low">{deck.tagline}</p>
+          <h1
+            className="mt-5 text-hero text-text-hi"
+            /* 品牌名是全站唯一必须一眼认出的字 —— 用 Display 档 */
+            style={{ fontFamily: 'var(--font-display)', fontWeight: 300, letterSpacing: '0.045em' }}
+          >
+            Arcana
+          </h1>
+          <p
+            className="mt-2 text-note text-text-low"
+            /* 牌组 tagline 是写死的文案，在子集字体的 223 字之内 */
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            {deck.tagline}
+          </p>
           <p className="mt-1 text-caption text-text-faint">
             亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。
           </p>

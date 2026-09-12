@@ -207,7 +207,12 @@ function DeckHeading({ deck, active }: { deck: DeckDefinition; active: boolean }
   return (
     <>
       <span className="flex items-baseline gap-2.5">
-        <span className="font-serif text-[22px] leading-tight text-text-hi sm:text-[26px]">
+        <span
+          className="text-[22px] leading-tight text-text-hi sm:text-[26px]"
+          /* 牌组名是写死的十个词，在 Display 子集字体的 223 字之内。
+             它是这一页的主角文字，值得用艺术字档。 */
+          style={{ fontFamily: 'var(--font-display)', fontWeight: 300 }}
+        >
           {deck.name}
         </span>
         {active && (
