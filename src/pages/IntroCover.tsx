@@ -101,23 +101,27 @@ export default function IntroCover({ onEnter }: Props) {
       <DeckSigil deckId={deckId} size="clamp(5.5rem, 22vw, 9rem)" opacity={0.55} />
 
       <h1
-        className="mt-8 text-center text-text-hi"
+        className="mt-10 text-center text-text-hi"
         style={{
-          fontFamily: 'var(--font-display)',
-          /* 封面是全站唯一比 --text-hero 更大的字。用 clamp 而不是断点，
-             375 屏上 44px、桌面 88px，中间连续无跳变。 */
-          fontSize: 'clamp(2.75rem, 11vw, 5.5rem)',
-          fontWeight: 300,
-          letterSpacing: '0.06em',
-          lineHeight: 1.05,
+          fontFamily: 'var(--font-oracle)',
+          fontSize: 'var(--text-brand-cover)',
+          /* Cinzel 的 400 已经很有分量，再加重会变成"厚"而不是"刻" */
+          fontWeight: 400,
+          letterSpacing: 'var(--tracking-oracle)',
+          lineHeight: 1.04,
         }}
       >
         Arcana
       </h1>
 
       <p
-        className="mt-5 max-w-[22rem] text-center text-text-low"
-        style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(0.95rem, 3.6vw, 1.125rem)', lineHeight: 1.9 }}
+        className="mt-6 max-w-[24rem] text-center text-text-low"
+        style={{
+          fontFamily: 'var(--font-display)',
+          fontSize: 'clamp(0.95rem, 3.6vw, 1.125rem)',
+          lineHeight: 2,
+          letterSpacing: '0.05em',
+        }}
       >
         每一次翻牌，都是一次自我照见。
       </p>
@@ -134,7 +138,7 @@ export default function IntroCover({ onEnter }: Props) {
           'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-silver',
           'motion-reduce:transition-none motion-reduce:hover:translate-y-0',
         ].join(' ')}
-        style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', letterSpacing: '0.14em' }}
+        style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', letterSpacing: '0.2em', paddingInlineStart: '2.6rem', paddingInlineEnd: '2.4rem' }}
       >
         开始占卜
       </button>

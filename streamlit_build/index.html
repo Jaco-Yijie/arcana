@@ -9,15 +9,21 @@
     />
     <meta name="theme-color" content="#070a18" />
     <meta name="description" content="Arcana — 亲手完成一次塔罗抽牌" />
-    <!-- 字体预加载：封面上没有任何牌面图，这两个请求不和图片抢带宽。
-         合计约 93KB，且 font-display:swap 保证它们没到时字先用系统字显示出来。
+    <!-- 字体预加载 —— **只预载首屏真正会用到的两个**。
+         封面上出现的是：Cinzel（品牌名 ARCANA）与文楷（引导语、CTA）。
+         Cormorant 属于 Ritual 档，只在 Reading 页与 section 标题上出现，
+         首屏一个字都不用它 —— 预载它等于占着带宽不干活。
+         （上一版正好预载反了：Cormorant 载了，Cinzel 没载。）
+
+         封面上没有任何牌面图，这两个请求不和图片抢带宽。合计约 70KB，
+         font-display:swap 保证它们没到时字先用系统字显示出来。
          crossorigin 是 woff2 预载的硬性要求 —— 少了它浏览器会重新下一遍。 -->
-    <link rel="preload" href="./fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="./fonts/lxgw-wenkai-light-subset.woff2" as="font" type="font/woff2" crossorigin />
     <title>Arcana</title>
-    <script type="module" crossorigin src="./assets/index-BV9OxeV2.js"></script>
+    <script type="module" crossorigin src="./assets/index-BuRozoH4.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/AppShell-Djqdx807.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-CH4LozId.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-0Vp0DlSR.css">
   </head>
   <body>
     <div id="root"></div>

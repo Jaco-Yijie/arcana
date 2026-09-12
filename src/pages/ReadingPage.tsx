@@ -207,14 +207,34 @@ export default function ReadingPage() {
         {session.question ? (
           <>
             <p className="text-caption tracking-wide-caps text-text-faint">你的问题</p>
-            <h1 className="mt-1.5 font-serif text-heading leading-snug text-text-hi">
+            <h1
+              className="mt-2.5 text-text-hi"
+              /* 用户自己写下的那句话是这一页的锚点，用 Ritual 档并给足行高。
+                 它不能用 Oracle（碑刻体）—— 那是给品牌名的，一段完整的句子
+                 用全大写字形会读不下去。 */
+              style={{
+                fontFamily: 'var(--font-ritual)',
+                fontSize: 'clamp(1.375rem, 1.2vw + 1.1rem, 1.875rem)',
+                lineHeight: 1.45,
+                letterSpacing: 'var(--tracking-ritual)',
+              }}
+            >
               {session.question}
             </h1>
           </>
         ) : (
-          <h1 className="font-serif text-heading text-text-hi">随缘抽一张</h1>
+          <h1
+            className="text-text-hi"
+            style={{
+              fontFamily: 'var(--font-ritual)',
+              fontSize: 'clamp(1.375rem, 1.2vw + 1.1rem, 1.875rem)',
+              letterSpacing: 'var(--tracking-ritual)',
+            }}
+          >
+            随缘抽一张
+          </h1>
         )}
-        <p className="mt-2 text-caption text-text-low">{spread.name}</p>
+        <p className="mt-3 text-caption tracking-wide-caps text-text-low">{spread.name}</p>
       </section>
 
       <div

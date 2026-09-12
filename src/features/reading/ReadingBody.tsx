@@ -60,10 +60,21 @@ function Section({
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex min-h-11 w-full items-center justify-between py-3.5 text-left"
+        className="flex min-h-11 w-full items-center justify-between py-4 text-left"
         aria-expanded={open}
       >
-        <span className="text-title text-text-hi">{title}</span>
+        <span
+          className="text-text-hi"
+          /* Ritual 档：比正文明显高级，但仍然是能连读的字形。
+             不用 Oracle（碑刻体全大写），那种字读一段话会非常累。 */
+          style={{
+            fontFamily: 'var(--font-ritual)',
+            fontSize: '1.1875rem',
+            letterSpacing: 'var(--tracking-ritual)',
+          }}
+        >
+          {title}
+        </span>
         <span className="text-caption text-text-faint">{open ? '收起' : '展开'}</span>
       </button>
       {open && <div className="flex flex-col gap-4 pb-5">{children}</div>}
@@ -137,15 +148,44 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
       )}
       {notice && <p className="mb-4 text-caption text-text-faint">{notice}</p>}
 
-      {/* ── 核心主题：最先到，也最先上屏（实测 P50 1.9 秒） ── */}
+      {/* ── 核心主题：最先到，也最先上屏（实测 P50 1.9 秒） ──
+
+          【为什么要做成"章节标题"而不是加大字号】
+          改造前它就是一个 `font-serif text-heading` 的 h2 ——
+          在页面上读起来和一篇博客的小标题没有区别。
+          问题不在字号，在**它没有被当成一个章节的开头来排**。
+
+          现在给它三样东西，都不依赖字体：
+            · 一行全大写的眉标（THE READING）+ 一条发丝线，先声明"这里开始了"
+            · 更大的字号、更松的行高、Ritual 档字体
+            · 下方一条与眉标呼应的短分隔线，把它和后面的正文断开
+          去掉任何一样，它就会退回成"一个用了衬线字体的标题"。 */}
       {theme ? (
-        <h2 className="font-serif text-heading text-text-hi">{theme}</h2>
+        <header className="flex flex-col gap-3">
+          <span className="flex items-center gap-3">
+            <span className="text-caption tracking-wide-caps text-text-faint">这组牌在说</span>
+            <span aria-hidden="true" className="h-px flex-1 bg-line-hairline" />
+          </span>
+          <h2
+            className="text-text-hi"
+            style={{
+              fontFamily: 'var(--font-ritual)',
+              /* 比 --text-heading（原来的档）大约一档半。中文标题在
+                 26–34px 之间才读得出"这是一章的开头"而不是"一个小标题" */
+              fontSize: 'clamp(1.5rem, 1.4vw + 1.15rem, 2.125rem)',
+              lineHeight: 1.42,
+              letterSpacing: 'var(--tracking-ritual)',
+            }}
+          >
+            {theme}
+          </h2>
+        </header>
       ) : (
         <Pending />
       )}
 
       {energy && (
-        <div className="mt-3 flex flex-col gap-3">
+        <div className="mt-5 flex flex-col gap-3">
           <Paragraphs text={energy} className="text-read text-text-hi" />
         </div>
       )}
@@ -153,7 +193,7 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
 
       {/* ── 每张牌 ── */}
       {cards.length > 0 && (
-        <div className="mt-7">
+        <div className="mt-10">
           <Section title="每张牌的分析" defaultOpen={open}>
             {cards.map((c, i) => (
               <div key={`${c.cardName}-${i}`} className="flex flex-col gap-1.5">
@@ -185,14 +225,14 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
 
       {/* ── 回到你的问题：全篇最重要的一段，给它自己的容器 ── */}
       {answer && (
-        <Panel tone="inset" pad="md" className="mt-6 flex flex-col gap-2">
+        <Panel tone="inset" pad="md" className="mt-9 flex flex-col gap-2">
           <span className="text-caption tracking-wide-caps text-text-faint">回到你的问题</span>
           <Paragraphs text={answer} className="text-read text-text-hi" />
         </Panel>
       )}
 
       {reflections.length > 0 && (
-        <div className="mt-6">
+        <div className="mt-9">
           <Section title="可以再想想的问题" defaultOpen={open}>
             {reflections.map((q, i) => (
               <p key={i} className="text-read text-text-mid">

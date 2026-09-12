@@ -34,10 +34,17 @@ const BASE = [
   'disabled:pointer-events-none disabled:opacity-40',
 ].join(' ')
 
+/* 【为什么按钮要单独给字距和横向内边距】
+   按钮文字原本就是正文的系统字，靠 text-note / text-body 两个字号区分大小 ——
+   于是它读起来和页面里任何一段小字没有区别，"可以按"这件事全靠边框在说。
+
+   不换字体（按钮必须最大限度可读，UI 档就该是系统字）。
+   改的是**排布**：拉开字距、放宽横向内边距、把 lg 的字号往上提半档。
+   字距一开，短词就从"一段文字"变成"一个标签"，这是最便宜的品牌化手段。 */
 const SIZE: Record<ButtonSize, string> = {
   // 44px / 52px —— 均满足 ≥44×44 触控目标
-  md: 'min-h-11 px-5 text-note rounded-sm',
-  lg: 'min-h-13 px-7 text-body rounded-md',
+  md: 'min-h-11 px-6 text-note tracking-[0.08em] rounded-sm',
+  lg: 'min-h-13 px-9 text-[1.0625rem] tracking-[0.1em] rounded-md',
 }
 
 const VARIANT: Record<ButtonVariant, string> = {

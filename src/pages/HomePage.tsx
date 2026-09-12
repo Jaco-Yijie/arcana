@@ -135,24 +135,32 @@ export default function HomePage() {
         <header className="flex flex-col items-start">
           <DeckSigil deckId={deckId} size="clamp(3.5rem, 9vw, 6rem)" opacity={0.45} />
           <h1
-            className="mt-5 text-hero text-text-hi"
-            /* 品牌名是全站唯一必须一眼认出的字 —— 用 Display 档 */
-            style={{ fontFamily: 'var(--font-display)', fontWeight: 300, letterSpacing: '0.045em' }}
+            className="mt-6 text-text-hi"
+            /* 品牌名走 Oracle 档。原来挂在 --text-hero（34px）上 ——
+               那是"首页唯一大字"的尺度，但对一个品牌标来说太小，
+               和旁边的 tagline 几乎同级，读不出主次。 */
+            style={{
+              fontFamily: 'var(--font-oracle)',
+              fontSize: 'var(--text-brand)',
+              fontWeight: 400,
+              letterSpacing: 'var(--tracking-oracle)',
+              lineHeight: 1.04,
+            }}
           >
             Arcana
           </h1>
           <p
-            className="mt-2 text-note text-text-low"
+            className="mt-4 text-note text-text-low"
             /* 牌组 tagline 是写死的文案，在子集字体的 223 字之内 */
-            style={{ fontFamily: 'var(--font-display)' }}
+            style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em' }}
           >
             {deck.tagline}
           </p>
-          <p className="mt-1 text-caption text-text-faint">
+          <p className="mt-2 text-caption text-text-faint">
             亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。
           </p>
 
-          <div className="mt-8 flex w-full flex-col gap-3">
+          <div className="mt-10 flex w-full flex-col gap-3">
             <Button size="lg" variant="primary" block onClick={() => navigate('/decks')}>
               开始一次解读
             </Button>

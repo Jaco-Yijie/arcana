@@ -370,12 +370,23 @@ function checkLoadingPolicy(): void {
     'IntroCover.tsx',
   )
   /* 字体必须预载且自托管。CSP 是 font-src 'self'，外链会被直接拦掉 */
+  /* 【判据换过，理由留下】
+     原判据是「两个字体都被预载」。E5 加入 Cinzel 后，这条会在
+     「预载了 Cormorant 但没预载 Cinzel」时依然通过 —— 而那恰恰是错的：
+     封面上出现的是 Cinzel 与文楷，Cormorant 属于 Ritual 档，首屏一个字不用。
+     预载一个首屏用不到的字体，等于占着带宽不干活。
+     现在守的是「首屏用到的必须预载，首屏用不到的必须不预载」。 */
+  const preloaded = [...html.matchAll(/rel="preload"[^>]*\/fonts\/([\w-]+)\.woff2/g)].map((m) => m[1]!)
   check(
-    'REL-06j 两个自托管字体都被预载，且无外链字体',
-    /rel="preload"[^>]*cormorant-garamond-latin\.woff2/.test(html)
-    && /rel="preload"[^>]*lxgw-wenkai-light-subset\.woff2/.test(html)
-    && !/fonts\.googleapis|fonts\.gstatic/.test(html + read('src/styles/theme.css')),
-    'index.html',
+    'REL-06j 只预载首屏字体（Cinzel + 文楷），不预载 Ritual 档',
+    preloaded.includes('cinzel-latin')
+    && preloaded.includes('lxgw-wenkai-light-subset')
+    && !preloaded.includes('cormorant-garamond-latin'),
+    preloaded.join(' + ') || '无',
+  )
+  check(
+    'REL-06k 无外链字体（CSP font-src self 会拦掉）',
+    !/fonts\.googleapis|fonts\.gstatic/.test(html + read('src/styles/theme.css')),
   )
 
   /* ── REL-07b 分享卡的隐私边界（E3）──

@@ -9,6 +9,18 @@
  * ═══════════════════════════════════════════════════════════════ */
 
 @font-face {
+  font-family: 'Cinzel';
+  /* 可变字体，400–900 一个文件 */
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/cinzel-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
   font-family: 'Cormorant Garamond';
   /* 可变字体：一个文件覆盖 300–700，不必为每个字重各下一个 */
   font-weight: 300 700;
@@ -122,16 +134,41 @@
    * 一句话里出现两种字形 —— 那比不用艺术字更糟。
    * ═══════════════════════════════════════════════════════════ */
 
-  /* A · Display —— Cover 主标题、品牌名、牌组名。仅静态文案 */
-  --font-display:
-    'Cormorant Garamond', 'LXGW WenKai Light', ui-serif, 'Iowan Old Style', Palatino,
+  /* ── A · Oracle Display —— 品牌名、Cover 标题、牌组名。仅静态文案 ──
+   *
+   * 【为什么是 Cinzel，而不是又一款"高级 serif"】
+   * 上一版用的是 Cormorant Garamond。它优雅，但它是一款**通用**的高对比衬线体 ——
+   * 放在任何一个讲究点的网站上都成立，因此它不构成任何品牌识别。
+   *
+   * Cinzel 是罗马碑刻体（Trajan 一系）。选它的理由不是"更好看"，
+   * 而是**牌面原画上烘焙的英文标题本来就是这一类字形**
+   * （The Fool / The Lovers / Death，见 legacy-* 五套的画面底部）。
+   * 品牌名与牌面标题同源，两者才属于同一个世界；
+   * 换成任何一款不相干的漂亮衬线体，品牌和牌就是两张皮。
+   *
+   * 它的小写字母是大写字形（小型大写效果），所以 "Arcana" 天然读作
+   * 一个字符标（wordmark）而不是一个单词 —— 这正是品牌名要的。 */
+  --font-oracle:
+    'Cinzel', 'LXGW WenKai Light', ui-serif, 'Iowan Old Style', Palatino, 'Songti SC',
+    'Source Han Serif SC', Georgia, serif;
+
+  /* ── B · Ritual Heading —— 解读主题句、section 标题、用户问题 ──
+   *
+   * 比正文明显有风格，但要能连续阅读，所以不能用碑刻体
+   * （Cinzel 的全大写字形读一段话会非常累）。
+   * 拉丁用 Cormorant Garamond —— 它在 A 档"不够有识别度"，
+   * 在这一档恰恰合适：有仪式感、不抢戏、可读。
+   *
+   * 【中文侧刻意用系统衬线，不用子集字体】
+   * 这一档会渲染**模型生成**的解读主题句，字符集不可枚举。
+   * 用只有 223 个字的子集字体，缺字会逐字回退，一句话里两种字形。
+   * 中文的"仪式感"在这里靠字号、字距、行高和留白做，不靠换字。 */
+  --font-ritual:
+    'Cormorant Garamond', ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino,
     'Songti SC', 'Source Han Serif SC', Georgia, serif;
 
-  /* B · Heading —— section 标题、解读主题句。比正文有风格，但比 Display 稳
-     刻意**不含**子集字体：这里会渲染 AI 生成的主题句，字符集不可枚举 */
-  --font-serif:
-    ui-serif, 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Songti SC', 'Source Han Serif SC',
-    Georgia, serif;
+  /* 兼容别名：既有代码里的 font-serif 指向 Ritual 档 */
+  --font-serif: var(--font-ritual);
 
   /* C · Body / D · UI —— 正文、按钮、标签。可读性第一，不动 */
   --font-sans:
@@ -167,6 +204,25 @@
   --text-hero: 2.125rem; /* 34px 首页唯一大字 */
   --text-hero--line-height: 1.18;
   --text-hero--letter-spacing: -0.018em;
+
+  /* ── 品牌字号 ──
+     按要求：桌面 70–96px，手机 44–60px。用 `vw + rem` 的混合式而不是纯 vw ——
+     纯 vw 在 1024 这类中等宽度上会掉到 65px（低于下限），
+     加一个 rem 常量项能把中段抬起来，同时两端仍然被 clamp 夹住。
+
+       Cover  375 → 48px   1024 → 80px   1440 → 96px（封顶）
+       Home   375 → 44px   1024 → 72px   1440 → 76px（封顶）
+
+     Home 比 Cover 小一档：它在左右分栏的右栏里，96px 的 ARCANA 加字距
+     约 405px，虽然放得下，但会把同栏的 tagline 和 CTA 压成配角。 */
+  --text-brand-cover: clamp(3rem, 5.5vw + 1.5rem, 6rem);
+  --text-brand: clamp(2.75rem, 4.6vw + 1.55rem, 4.75rem);
+
+  /* 碑刻体必须给字距，否则大写字母会挤成一块。
+     0.1em 是"读得出是个词"和"散成一排字母"之间的位置。 */
+  --tracking-oracle: 0.1em;
+  /* 仪式标题：比正文略开，但不到标签那种全大写的程度 */
+  --tracking-ritual: 0.01em;
 
   --tracking-wide-caps: 0.16em; /* 小字全大写标签（牌位名） */
 

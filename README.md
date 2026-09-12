@@ -148,6 +148,7 @@ npm run deployment:check  # 验证包
 | `docs/v2/33-e21-asset-domain-and-csp.md` | 资产域名切换 Runbook · CSP · 产物自述资产根 |
 | `docs/v2/35-e3-reading-experience-v2.md` | Reading Experience V2：Card First · 渐进解读 · Deck Signature |
 | `docs/v2/36-e4-intro-cover-and-typography.md` | Intro Cover · 五档字体系统 · 自托管子集字体 |
+| `docs/v2/37-e5-oracle-typography.md` | Oracle Typography：Cinzel 与牌面标题同源 · 品牌字号区间 |
 | `docs/v2/34-e22-artwork-lock-and-sync.md` | 牌面完整性锁 · 真实恢复链路 · 仓库瘦身前置条件 |
 | `docs/agent-development-log.md` | Multi-Agent 开发记录（V1 + V2） |
 

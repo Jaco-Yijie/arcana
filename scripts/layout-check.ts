@@ -551,6 +551,54 @@ checkMinViewport()
  * 这一组把那套算术固定下来：任意目标视口，
  * 「n 张牌 + (n−1) 个间距」必须装进可用内容宽度里。
  * ════════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════════════
+ * 品牌字号区间（E5）
+ *
+ * 要求是「桌面 70–96px，手机 44–60px」。这类要求最容易失效的方式不是
+ * 有人故意改小，而是有人把 clamp 的中间项从 `vw + rem` 换成纯 `vw` ——
+ * 两端 clamp 仍然对，中段却会掉下去（1024 宽时纯 6.4vw 只有 65px）。
+ * 所以这里不看两端，**按真实视口逐档算**。
+ * ════════════════════════════════════════════════════════════ */
+function checkBrandScale(): void {
+  section('品牌字号区间')
+
+  const REM = 16
+  const css = readFileSync(resolve(REPO_ROOT, 'src/styles/theme.css'), 'utf8')
+
+  /** 解析 `clamp(<a>rem, <b>vw + <c>rem, <d>rem)` */
+  function parseClamp(name: string) {
+    const m = new RegExp(`--${name}:\\s*clamp\\(([\\d.]+)rem,\\s*([\\d.]+)vw \\+ ([\\d.]+)rem,\\s*([\\d.]+)rem\\)`).exec(css)
+    if (!m) return null
+    const [lo, vw, add, hi] = m.slice(1).map(Number) as [number, number, number, number]
+    return (w: number) => Math.min(Math.max((vw / 100) * w + add * REM, lo * REM), hi * REM)
+  }
+
+  for (const [name, mobile, desktop] of [
+    ['text-brand-cover', [44, 60], [70, 96]],
+    ['text-brand', [44, 60], [70, 96]],
+  ] as [string, [number, number], [number, number]][]) {
+    const f = parseClamp(name)
+    check(`${name} 是 vw+rem 混合式 clamp（纯 vw 会在中段掉出区间）`, f !== null)
+    if (!f) continue
+    for (const w of [375, 390, 430]) {
+      const px = f(w)
+      check(
+        `${name} @ ${w}px 落在手机区间 ${mobile[0]}–${mobile[1]}px`,
+        px >= mobile[0] && px <= mobile[1],
+        `${px.toFixed(1)}px`,
+      )
+    }
+    for (const w of [1024, 1280, 1440]) {
+      const px = f(w)
+      check(
+        `${name} @ ${w}px 落在桌面区间 ${desktop[0]}–${desktop[1]}px`,
+        px >= desktop[0] && px <= desktop[1],
+        `${px.toFixed(1)}px`,
+      )
+    }
+  }
+}
+
 function checkReadingCardRow(): void {
   section('Reading 牌阵行 · 横向预算')
 
@@ -612,6 +660,7 @@ checkDeterminism()
 checkNoHorizontalOverflow()
 checkContinuousSweep()
 checkReadingCardRow()
+checkBrandScale()
 
 console.log(`\n${'─'.repeat(64)}`)
 if (fail === 0) {

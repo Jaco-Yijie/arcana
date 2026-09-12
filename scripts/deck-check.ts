@@ -1537,6 +1537,7 @@ function checkDisplayFontSubset(): void {
   const fonts = [
     'public/fonts/lxgw-wenkai-light-subset.woff2',
     'public/fonts/cormorant-garamond-latin.woff2',
+    'public/fonts/cinzel-latin.woff2',
   ]
   for (const f of fonts) {
     check(`L-03 ${f.split('/').pop()} 已自托管`, existsSync(resolve(REPO_ROOT, f)))
@@ -1544,11 +1545,11 @@ function checkDisplayFontSubset(): void {
 
   /* OFL 要求授权全文随字体一起分发。少了它就是许可违规，
      而这件事没有任何构建步骤会提醒。 */
-  for (const l of ['LICENSE-LXGWWenKai.txt', 'LICENSE-CormorantGaramond.txt']) {
+  for (const l of ['LICENSE-LXGWWenKai.txt', 'LICENSE-CormorantGaramond.txt', 'LICENSE-Cinzel.txt']) {
     check(`L-04 ${l} 随字体分发（OFL 要求）`, existsSync(resolve(REPO_ROOT, 'public/fonts', l)))
   }
 
-  /* 首屏字体预算。两个文件合计 93KB —— 再大就该重新审视，
+  /* 首屏字体预算。三个文件合计约 107KB —— 再大就该重新审视，
      而不是让它悄悄长成 300KB。 */
   const total = fonts.reduce((n, f) => n + statSync(resolve(REPO_ROOT, f)).size, 0)
   check(
@@ -1565,6 +1566,29 @@ function checkDisplayFontSubset(): void {
     !/font-display/.test(body),
     'ReadingBody.tsx',
   )
+
+  /* ── L-07 … L-09 三档分工（E5）──
+     Oracle 是碑刻体（Cinzel），小写字母就是大写字形。
+     它做品牌标很好，但**绝不能用来排句子** —— 一段全大写字形的中文/英文
+     读起来极累。这条边界不写下来，下一个人很容易觉得「这个字好看，
+     标题都用它吧」，然后解读页就毁了。 */
+  const theme = readFileSync(resolve(REPO_ROOT, 'src/styles/theme.css'), 'utf8')
+  check(
+    'L-07 Oracle 与 Ritual 是两个不同的档（不是同一个字体换名字）',
+    /--font-oracle:\s*\n?\s*'Cinzel'/.test(theme)
+    && /--font-ritual:\s*\n?\s*'Cormorant Garamond'/.test(theme),
+  )
+  check(
+    'L-08 Ritual 档不含子集字体（它要渲染模型生成的主题句）',
+    !/--font-ritual:[\s\S]{0,200}?LXGW/.test(theme),
+  )
+  /* Oracle 只允许出现在这几处静态文案里。ReadingBody 与正文组件不许碰它 */
+  for (const f of ['src/features/reading/ReadingBody.tsx', 'src/components/atoms/Button.tsx']) {
+    check(
+      `L-09 ${f.split('/').pop()} 不使用 Oracle 档（碑刻体不适合成句阅读）`,
+      !/font-oracle/.test(readFileSync(resolve(REPO_ROOT, f), 'utf8')),
+    )
+  }
 }
 
 checkAtmosphere()
