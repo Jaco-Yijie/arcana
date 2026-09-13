@@ -13,7 +13,7 @@
 
 import type { ReadingRequest, StructuredReading } from '@/types/reading'
 import { rebuildContext } from '../../../server/context/rebuild'
-import { buildMessages } from '../../../server/prompts/tarotReadingPrompt'
+import { buildMessages } from '../../../server/prompts/tarotReadingPromptV2'
 import {
   assembleReading,
   extractJsonObject,
@@ -31,7 +31,7 @@ export class StreamlitReadingError extends Error {
   }
 }
 
-const FAIL_NOTICE = '这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。'
+import { translate } from '@/i18n/store'
 
 export async function generateViaStreamlit(request: ReadingRequest): Promise<StructuredReading> {
   const startedAt = Date.now()
@@ -42,7 +42,7 @@ export async function generateViaStreamlit(request: ReadingRequest): Promise<Str
   try {
     response = await requestViaStreamlit(messages, request)
   } catch {
-    throw new StreamlitReadingError(`这次解读花的时间太长了。${FAIL_NOTICE}`)
+    throw new StreamlitReadingError(translate('reading.error.generic'))
   }
 
   if (!response.ok || !response.content) {
@@ -50,7 +50,7 @@ export async function generateViaStreamlit(request: ReadingRequest): Promise<Str
     // Key 没配 / 无效，重试没有意义
     const fatal = code === 'missing-api-key' || code === 'unauthorized' || code === 'forbidden'
     throw new StreamlitReadingError(
-      `${response.error?.message ?? ''}${response.error?.message ? '' : FAIL_NOTICE}`,
+      translate('reading.error.generic'),
       !fatal,
     )
   }

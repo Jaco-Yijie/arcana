@@ -99,7 +99,7 @@ export const IS_STREAMLIT = import.meta.env.VITE_DEPLOY_TARGET === 'streamlit'
  */
 export function requestViaStreamlit(
   messages: { role: string; content: string }[],
-  request: ReadingRequest,
+  request: Pick<ReadingRequest, 'sessionId'>,
   timeoutMs = 240_000,
 ): Promise<StreamlitReadingResponse> {
   ensureListener()

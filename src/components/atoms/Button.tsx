@@ -1,4 +1,3 @@
-import { identityCopy } from '@/components/identity/copy'
 import type { ButtonHTMLAttributes, ReactNode, Ref } from 'react'
 
 /**
@@ -22,7 +21,17 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize
   /** 占满容器宽度（移动端底部主动作常用） */
   block?: boolean
-  subtitle?: string
+  /**
+   * 走「铭刻档」字体（--font-inscription）。
+   *
+   * 【为什么必须显式声明，而不是自动判断】
+   * 上一版是拿 children 去和一张固定文案表做字符串比对，命中就换字体。
+   * 那个做法有两个问题：i18n 之后文案不再是字面量（比对必然落空），
+   * 以及铭刻档的中文来自**子集字体**，只覆盖 display-keys.json 里那几条 ——
+   * 自动判断没有办法知道某句话在不在子集里，猜错就是静默的字体回退。
+   * 显式 opt-in 之后，责任落在调用点，而调用点知道自己写的是哪条 key。
+   */
+  display?: boolean
   children?: ReactNode
   ref?: Ref<HTMLButtonElement>
 }
@@ -36,10 +45,12 @@ const BASE = [
   'disabled:pointer-events-none disabled:opacity-40',
 ].join(' ')
 
+/* V3：内边距整体放大一档。按钮之所以「像网页按钮」，
+   一半原因是它紧贴着文字 —— 仪式入口需要自己的呼吸空间。 */
 const SIZE: Record<ButtonSize, string> = {
-  // 44px / 52px —— 均满足 ≥44×44 触控目标
-  md: 'min-h-11 px-6 text-note tracking-[0.08em] rounded-sm',
-  lg: 'min-h-13 px-9 text-[1.0625rem] tracking-[0.1em] rounded-md',
+  // 44px / 56px —— 均满足 ≥44×44 触控目标
+  md: 'min-h-11 px-7 py-2.5 text-note rounded-sm',
+  lg: 'min-h-14 px-10 py-3.5 text-[1.0625rem] rounded-md',
 }
 
 const VARIANT: Record<ButtonVariant, string> = {
@@ -65,15 +76,25 @@ export function Button({
   variant = 'ghost',
   size = 'md',
   block = false,
+  display = false,
   className = '',
   type = 'button',
   children,
-  subtitle,
   ref,
   ...rest
 }: ButtonProps) {
-  const fixedCopy = typeof children === 'string' && Object.values(identityCopy).some(([zh]) => zh === children.trim())
-  const classes = [fixedCopy ? 'ritual-button-fixed' : '', BASE, SIZE[size], VARIANT[variant], block ? 'w-full' : '', `ritual-button-${variant}`, className]
+  const classes = [
+    BASE,
+    SIZE[size],
+    VARIANT[variant],
+    `ritual-button-${variant}`,
+    display ? 'ritual-button-fixed' : '',
+    /* 四角刻记只给 lg —— 它是「一屏一个决定」的那个按钮。
+       md 上加同样的刻记会让整页看起来像挂满了徽章。 */
+    variant === 'primary' && size === 'lg' ? 'ritual-corner' : '',
+    block ? 'w-full' : '',
+    className,
+  ]
     .filter(Boolean)
     .join(' ')
 
@@ -89,7 +110,7 @@ export function Button({
           }}
         />
       )}
-      <span className="relative bilingual"><span>{children}</span>{subtitle && <span lang="en" className="bilingual-en">{subtitle}</span>}</span>
+      <span className="relative">{children}</span>
     </button>
   )
 }

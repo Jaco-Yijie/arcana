@@ -94,6 +94,15 @@ export interface ToneViolation {
  * 「无需 / 无须 / 无关」这类真否定仍然由 Tier A 覆盖。
  * ═══════════════════════════════════════════════════════════════ */
 
+/* 英文的否定与让步靠独立单词而不是单字，窗口要放宽一点才罩得住
+   （"is not"、"is by no means"、"does not seem"）。 */
+const EN_ANCHOR_WINDOW = 24
+const EN_CONCESSIVE_BEFORE = 60
+const EN_CONCESSIVE_AFTER = 80
+const EN_NEGATION = /\b(?:not|never|no|nothing|hardly|rarely|seldom|unlikely|isn't|isnt|aren't|arent|won't|wont|doesn't|doesnt|don't|dont|cannot|can't|cant|nor|by no means|far from|need not|neither)\b[\s\w,'-]{0,12}$/i
+const EN_CONCESSION = /\b(?:although|though|even if|even though|while|whereas|granted that)\b/i
+const EN_PIVOT = /\b(?:but|however|yet|still|nevertheless|depends on|up to you|you can|you could|in practice)\b/i
+
 const ANCHOR_WINDOW = 4
 const CONTAINS_WINDOW = 6
 
@@ -128,6 +137,8 @@ const CONTAINS_NEGATION = /不|没|未必|并非|别|毋|莫|难以|绝非|从�
 type NegationMode = 'strict' | 'lexical'
 
 function isNegated(text: string, matchStart: number, mode: NegationMode): boolean {
+  const enWindow = text.slice(Math.max(0, matchStart - EN_ANCHOR_WINDOW), matchStart)
+  if (EN_NEGATION.test(enWindow)) return true
   const anchorWindow = text.slice(Math.max(0, matchStart - ANCHOR_WINDOW), matchStart)
   if (ANCHORED_NEGATION.test(anchorWindow)) return true
 
@@ -173,6 +184,11 @@ function isConcessive(
   kind: ToneRuleKind,
 ): boolean {
   if (kind !== 'determinism') return false
+  const enBefore = text.slice(Math.max(0, matchStart - EN_CONCESSIVE_BEFORE), matchStart)
+  if (EN_CONCESSION.test(enBefore)) {
+    const enAfter = text.slice(matchEnd, matchEnd + EN_CONCESSIVE_AFTER)
+    if (EN_PIVOT.test(enAfter)) return true
+  }
   const before = text.slice(Math.max(0, matchStart - CONCESSIVE_BEFORE), matchStart)
   if (!CONCESSION_MARK.test(before)) return false
   const after = text.slice(matchEnd, matchEnd + CONCESSIVE_AFTER)
@@ -343,6 +359,89 @@ export const TONE_RULES: ToneRule[] = [
     // 刻意不含「一定」「必然」：它们由 ① 组的 certainty-* 规则以 determinism 类别报出，
     // 放在这里会因为跨度更长而在去重时吃掉那条，导致「这张牌一定会…」被误归为空洞玄学。
     pattern: /(?:牌面?|塔罗|这张牌|这组牌|这几张牌)(?:绝对|无疑|确凿|明确无误)/g,
+    negation: 'strict',
+  },
+
+  /* ---------------- ③ 英文输出的同一批红线 ----------------
+     【为什么必须补这一组】
+     上面所有规则都是中文正则。英文解读跑过它们时**一条都不会命中** ——
+     那不是"英文更干净"，是这道闸门对英文根本没有关上。
+     一份写着 "the cards guarantee this outcome is inevitable" 的解读
+     会原样通过校验发给用户，而它违反的正是同一条产品红线。
+
+     否定/让步的上下文判定沿用同一套窗口逻辑：ANCHORED_NEGATION 与
+     CONCESSION_MARK 里补了英文词，所以 "this is not inevitable"
+     与 "although it seems destined, it still depends on you" 都会被放过。 */
+  {
+    id: 'en-certainty-will-definitely',
+    kind: 'determinism',
+    severity: 'warn',
+    label: 'will definitely / will certainly / is guaranteed to',
+    pattern: /\b(?:will (?:definitely|certainly|surely|undoubtedly)|is guaranteed to|are guaranteed to)\b/gi,
+    negation: 'strict',
+  },
+  {
+    id: 'en-certainty-inevitable',
+    kind: 'determinism',
+    severity: 'block',
+    label: 'inevitable / unavoidable / cannot be changed / already decided',
+    pattern: /\b(?:inevitable|unavoidable|irreversible|cannot be changed|can't be changed|already decided|a foregone conclusion|set in stone)\b/gi,
+    negation: 'strict',
+  },
+  {
+    id: 'en-certainty-no-doubt',
+    kind: 'determinism',
+    severity: 'block',
+    label: 'without a doubt / one hundred percent / beyond question',
+    pattern: /\b(?:without (?:a )?doubt|no doubt about it|one hundred percent|100% certain|beyond question|beyond any doubt)\b/gi,
+    negation: 'strict',
+  },
+  {
+    id: 'en-certainty-must',
+    kind: 'determinism',
+    severity: 'warn',
+    label: 'you must / you have no choice',
+    pattern: /\b(?:you must\b(?! (?:have|be) (?:feeling|wondering))|you have no choice|your only option is)\b/gi,
+    negation: 'strict',
+  },
+  {
+    id: 'en-certainty-sooner-or-later',
+    kind: 'determinism',
+    severity: 'warn',
+    label: 'sooner or later / it is only a matter of time',
+    pattern: /\b(?:sooner or later|only a matter of time|bound to happen)\b/gi,
+    negation: 'strict',
+  },
+  {
+    id: 'en-mystic-universe',
+    kind: 'mysticism',
+    severity: 'block',
+    label: 'the universe is telling / guiding / has planned',
+    pattern: /\bthe universe (?:is )?(?:telling|guiding|showing|wants|has planned|has decided|conspir\w*)\b/gi,
+    negation: 'strict',
+  },
+  {
+    id: 'en-mystic-fate',
+    kind: 'mysticism',
+    severity: 'block',
+    label: 'fate / destiny / it is written',
+    pattern: /\b(?:fate has|destiny has|destined to|preordained|it is written|karmic debt|your karma)\b/gi,
+    negation: 'strict',
+  },
+  {
+    id: 'en-mystic-field',
+    kind: 'mysticism',
+    severity: 'block',
+    label: 'energy field / vibration / law of attraction / higher realm',
+    pattern: /\b(?:energy field|vibrational frequency|raise your vibration|law of attraction|higher realm|divine plan|spirit guides tell)\b/gi,
+    negation: 'strict',
+  },
+  {
+    id: 'en-mystic-card-authority',
+    kind: 'mysticism',
+    severity: 'block',
+    label: 'the cards say absolutely / the tarot never lies',
+    pattern: /\b(?:the (?:cards?|tarot) (?:absolutely|unquestionably|never lie|never lies|cannot be wrong))\b/gi,
     negation: 'strict',
   },
 ]

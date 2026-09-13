@@ -17,6 +17,7 @@ import type {
 } from '../../src/types/reading.ts'
 import type { ProviderResult, ReadingProvider } from './types.ts'
 import { generateReading } from '../../src/features/reading/mockReading.ts'
+import { buildEnglishMockReading } from '../../src/features/reading/mockReadingEn.ts'
 import type { ReadingPlacement } from '../../src/features/reading/mockReading.ts'
 import type { SpreadId } from '../../src/types/spread.ts'
 
@@ -85,6 +86,37 @@ export class MockReadingProvider implements ReadingProvider {
   async generate(context: ReadingContext): Promise<ProviderResult> {
     const startedAt = Date.now()
 
+    /* 英文走独立的组装器。中文那台短语拼装机是靠中文连接词缝出来的，
+       直译成英文会得到机翻腔 —— 而这份文本是要当作正式解读的替身
+       展示给用户的（见 src/features/reading/mockReadingEn.ts）。 */
+    if (context.language === 'en') {
+      const reading: StructuredReading = {
+        ...buildEnglishMockReading({
+          question: context.question,
+          spreadName: context.spread.spreadName,
+          cards: context.cards.map((c) => ({
+            cardId: c.cardId,
+            orientation: c.orientation,
+            positionName: c.position.name,
+            positionMeaning: c.position.meaning,
+          })),
+        }),
+        /* 安全提示以服务端判定为准，不用兜底自己再算一遍 */
+        safetyNotice: context.safetyNotice,
+        meta: {
+          language: context.language,
+          provider: 'mock',
+          model: null,
+          generatedAt: Date.now(),
+          latencyMs: Date.now() - startedAt,
+          repaired: false,
+          toneAdjusted: false,
+          fallbackReason: 'no-api-key',
+        },
+      }
+      return { ok: true, reading }
+    }
+
     const placements: ReadingPlacement[] = context.cards.map((c) => ({
       positionId: c.position.id,
       cardId: c.cardId,
@@ -125,7 +157,7 @@ export class MockReadingProvider implements ReadingProvider {
 
       return {
         cardId: c.cardId,
-        cardName: c.cardNameZh,
+        cardName: c.displayName,
         position: c.position.name,
         orientation: c.orientation,
         interpretation: analysis?.text ?? (up ? c.baseMeaning.upright : c.baseMeaning.reversed),
@@ -145,6 +177,7 @@ export class MockReadingProvider implements ReadingProvider {
       reflectionQuestions: v1.actions.slice(0, 4),
       safetyNotice: context.safetyNotice,
       meta: {
+          language: context.language,
         provider: 'mock',
         model: null,
         generatedAt: Date.now(),

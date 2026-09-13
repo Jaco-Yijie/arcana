@@ -32,8 +32,8 @@ import type {
   ReadingContext,
   ReadingContextCard,
   ReadingMode,
-  ReadingStats,
 } from '../../src/types/reading.ts'
+import type { LanguageCode } from '../../src/i18n/types.ts'
 
 /* ═══════════════════════════════════════════════════════════════════
  * 一、展示用标签表
@@ -42,24 +42,50 @@ import type {
  * 多一个 id 顶多退化成 fallback，不值得为它把 tarot.ts / session.ts 拖进服务端。
  * ═══════════════════════════════════════════════════════════════ */
 
-const ORIENTATION_LABEL: Record<string, string> = {
+const ORIENTATION_LABEL_ZH: Record<string, string> = {
   upright: '正位',
   reversed: '逆位',
 }
 
-const ARCANA_LABEL: Record<string, string> = {
+/* ── 英文输出时的同一批标签 ──
+   【为什么只翻标签，不翻整份指令】
+   指令部分（8 条硬约束、解释空间、输出契约）是被反复调过的文本，
+   模型读中文指令写英文输出没有困难 —— 真正会出问题的是**数据标签**：
+   如果 Prompt 里写着「正位」，模型很可能就把 "正位" 原样写进英文解读里。
+   所以这里只把「递给模型的事实」全部换成英文，指令保持原样。
+   输出语言由 LANGUAGE_DIRECTIVE 在 system 与 user 两侧各声明一次。 */
+const ORIENTATION_LABEL_EN: Record<string, string> = {
+  upright: 'upright',
+  reversed: 'reversed',
+}
+
+const LABELS = (language: LanguageCode) => (language === 'en' ? EN_LABELS : ZH_LABELS)
+
+const ARCANA_LABEL_ZH: Record<string, string> = {
   major: '大阿卡纳',
   minor: '小阿卡纳',
 }
 
-const SUIT_LABEL: Record<string, string> = {
+const ARCANA_LABEL_EN: Record<string, string> = {
+  major: 'Major Arcana',
+  minor: 'Minor Arcana',
+}
+
+const SUIT_LABEL_ZH: Record<string, string> = {
   wands: '权杖（火 · 行动与动力）',
   cups: '圣杯（水 · 情感与关系）',
   swords: '宝剑（风 · 思考与沟通）',
   pentacles: '星币（土 · 现实与资源）',
 }
 
-const ELEMENT_LABEL: Record<string, string> = {
+const SUIT_LABEL_EN: Record<string, string> = {
+  wands: 'Wands (Fire · action and drive)',
+  cups: 'Cups (Water · feeling and relationship)',
+  swords: 'Swords (Air · thought and speech)',
+  pentacles: 'Pentacles (Earth · the concrete and the material)',
+}
+
+const ELEMENT_LABEL_ZH: Record<string, string> = {
   fire: '火',
   water: '水',
   air: '风',
@@ -67,7 +93,15 @@ const ELEMENT_LABEL: Record<string, string> = {
   spirit: '大阿卡纳（不参与四元素统计）',
 }
 
-const QUESTION_CATEGORY_LABEL: Record<QuestionCategory, string> = {
+const ELEMENT_LABEL_EN: Record<string, string> = {
+  fire: 'Fire',
+  water: 'Water',
+  air: 'Air',
+  earth: 'Earth',
+  spirit: 'Major Arcana (not counted in the four elements)',
+}
+
+const QUESTION_CATEGORY_LABEL_ZH: Record<QuestionCategory, string> = {
   relationship: '感情与人际关系',
   career: '工作与事业',
   study: '学习与考试',
@@ -77,7 +111,17 @@ const QUESTION_CATEGORY_LABEL: Record<QuestionCategory, string> = {
   general: '综合 / 没有明确归类',
 }
 
-const RANDOM_THEME_LABEL: Record<string, string> = {
+const QUESTION_CATEGORY_LABEL_EN: Record<QuestionCategory, string> = {
+  relationship: 'love and relationships',
+  career: 'work and career',
+  study: 'study and exams',
+  finance: 'money and finances',
+  decision: 'one specific decision',
+  self: 'inner state and self-understanding',
+  general: 'general / no clear category',
+}
+
+const RANDOM_THEME_LABEL_ZH: Record<string, string> = {
   free: '直接随缘（没有指定问题，只想要一个观察此刻的角度）',
   today: '今日提醒（今天有什么值得提前留意）',
   'recent-state': '最近状态（最近整体的状态，以及自己没注意到的部分）',
@@ -85,9 +129,74 @@ const RANDOM_THEME_LABEL: Record<string, string> = {
   advice: '给我一个建议（一个可以马上试试看的方向）',
 }
 
-const READING_MODE_LABEL: Record<ReadingMode, string> = {
+const RANDOM_THEME_LABEL_EN: Record<string, string> = {
+  free: 'Just draw one (no question given — only an angle on this moment)',
+  today: 'A note for today (what is worth keeping in mind through the day)',
+  'recent-state': 'Lately (how things have been overall, including what they have not noticed)',
+  'watch-out': 'What should I watch (easy to overlook at this stage, worth a second look)',
+  advice: 'Give me one suggestion (one direction they could try straight away)',
+}
+
+const READING_MODE_LABEL_ZH: Record<ReadingMode, string> = {
   standard: '标准解读',
   deep: '深度解读',
+}
+
+const READING_MODE_LABEL_EN: Record<ReadingMode, string> = {
+  standard: 'standard reading',
+  deep: 'deep reading',
+}
+
+/** 一次取齐一门语言的全部标签，避免每个 render 函数各自做一次三元 */
+const ZH_LABELS = {
+  orientation: ORIENTATION_LABEL_ZH,
+  arcana: ARCANA_LABEL_ZH,
+  suit: SUIT_LABEL_ZH,
+  element: ELEMENT_LABEL_ZH,
+  category: QUESTION_CATEGORY_LABEL_ZH,
+  theme: RANDOM_THEME_LABEL_ZH,
+  mode: READING_MODE_LABEL_ZH,
+  noSuit: '无（大阿卡纳没有花色）',
+  noMinor: '本次没有小阿卡纳',
+  none: '无',
+  unspecified: '未指定',
+  noQuestion: '（用户最终没有填写问题）',
+  noRepeat: '无重复数字',
+  join: '、',
+}
+
+const EN_LABELS: typeof ZH_LABELS = {
+  orientation: ORIENTATION_LABEL_EN,
+  arcana: ARCANA_LABEL_EN,
+  suit: SUIT_LABEL_EN,
+  element: ELEMENT_LABEL_EN,
+  category: QUESTION_CATEGORY_LABEL_EN,
+  theme: RANDOM_THEME_LABEL_EN,
+  mode: READING_MODE_LABEL_EN,
+  noSuit: 'none (Major Arcana have no suit)',
+  noMinor: 'no Minor Arcana in this spread',
+  none: 'none',
+  unspecified: 'unspecified',
+  noQuestion: '(the querent left the question blank)',
+  noRepeat: 'no repeated numbers',
+  join: ', ',
+}
+
+/* ── 输出语言指令 ──
+   【为什么要声明两遍】
+   实测里，system 里一句「用英文输出」不足以压住整份中文指令的语言惯性 ——
+   模型偶尔会把 readingTheme 写成中文。把同一条指令在 system 顶部与
+   user 顶部各放一次，位置上一前一后夹住整份上下文，才稳。 */
+const LANGUAGE_DIRECTIVE: Record<LanguageCode, string> = {
+  zh: '你必须使用**简体中文**输出。',
+  en:
+    '**OUTPUT LANGUAGE: ENGLISH.** The instructions below are written in Chinese for internal ' +
+    'reasons; that does not change the output language. Every string in your JSON output — ' +
+    'readingTheme, overallEnergy, every interpretation, connectionToQuestion, narrative, ' +
+    'answerToQuestion, reflectionQuestions, relationships, alternativeInterpretations — must be ' +
+    'written in natural, idiomatic English. Do not output a single Chinese character. ' +
+    'Card names, position names and orientations are supplied in English below: use those exact ' +
+    'spellings, and do not translate or invent alternatives.',
 }
 
 /**
@@ -260,8 +369,11 @@ export const OUTPUT_EXAMPLE_STANDARD = `{
  * 只依赖 `ReadingMode`，与具体牌面无关 —— 因此对同一模式永远是同一段文本，
  * 可以被上游做提示词缓存（实测命中率 99.2%），也便于 QA 对着它逐条核对。
  */
-export function buildSystemPrompt(mode: ReadingMode): string {
+export function buildSystemPrompt(mode: ReadingMode, language: LanguageCode = 'zh'): string {
   return [
+    /* 语言指令放在最前 —— 它是唯一一条会改变整份输出形态的指令，
+       埋在角色描述末尾时被忽略的概率明显更高。 */
+    LANGUAGE_DIRECTIVE[language],
     ROLE_SECTION,
     HARD_RULES_SECTION,
     INTERPRETIVE_FREEDOM_SECTION,
@@ -286,7 +398,7 @@ const ROLE_SECTION = `# 你是谁
 好的读牌者是**有立场**的：他会指着牌面上的具体东西说话，会说清这副牌整体偏向哪一侧，
 也会承认牌面说不清楚的地方在哪里。他不神化塔罗，也不敷衍它。
 
-你必须使用**简体中文**输出。`
+输出语言以本条消息开头的那条指令为准。`
 
 const HARD_RULES_SECTION = `# 硬约束（只有这 8 条）
 
@@ -543,13 +655,15 @@ ${OUTPUT_EXAMPLE}`
  * 而且人类（QA / Lead）能直接读懂发出去的是什么，排查时不必先格式化 JSON。
  */
 export function buildUserPrompt(context: ReadingContext): string {
+  const language = context.language ?? 'zh'
   return [
+    LANGUAGE_DIRECTIVE[language],
     '以下是本次解读的**既成事实**。牌已经抽完、翻开、固定，你只能解释它们。',
     renderModeSection(context),
     renderQuestionSection(context),
     renderSpreadSection(context),
     renderCardsSection(context),
-    renderStatsSection(context.stats),
+    renderStatsSection(context),
     renderEchoSection(context),
   ].join('\n\n')
 }
@@ -557,7 +671,7 @@ export function buildUserPrompt(context: ReadingContext): string {
 /* --------------------------- 〇、解读模式 --------------------------- */
 
 function renderModeSection(context: ReadingContext): string {
-  const label = READING_MODE_LABEL[context.readingMode]
+  const label = LABELS(context.language ?? 'zh').mode[context.readingMode]
   const note =
     context.readingMode === 'deep'
       ? '用户主动选择了深度模式：他接受更长的等待，期待更多层次的分析。篇幅可以明显长于标准模式。'
@@ -572,7 +686,8 @@ function renderQuestionSection(context: ReadingContext): string {
   const lines: string[] = ['## 一、用户与问题']
 
   if (context.mode === 'random') {
-    const themeLabel = context.theme ? (RANDOM_THEME_LABEL[context.theme] ?? context.theme) : '未指定'
+    const L = LABELS(context.language ?? 'zh')
+    const themeLabel = context.theme ? (L.theme[context.theme] ?? context.theme) : L.unspecified
     lines.push('- 模式：随缘抽牌（用户没有带来具体问题，只选了一个轻主题）')
     lines.push(`- 轻主题：${themeLabel}`)
     lines.push(
@@ -582,8 +697,9 @@ function renderQuestionSection(context: ReadingContext): string {
   } else {
     const question = context.question.trim()
     lines.push('- 模式：用户带着一个具体问题来')
-    lines.push(`- 用户写下的问题原文：「${question || '（用户最终没有填写问题）'}」`)
-    lines.push(`- 问题类别：${QUESTION_CATEGORY_LABEL[context.questionCategory]}`)
+    const L = LABELS(context.language ?? 'zh')
+    lines.push(`- 用户写下的问题原文：「${question || L.noQuestion}」`)
+    lines.push(`- 问题类别：${L.category[context.questionCategory]}`)
     if (question) {
       lines.push('- answerToQuestion 要让用户一眼看出你在回答的正是他写下的这件事。')
     }
@@ -628,14 +744,18 @@ function renderCardsSection(context: ReadingContext): string {
       ? '## 三、抽到的牌（共 1 张）'
       : `## 三、抽到的牌（共 ${total} 张，下面的顺序就是牌位顺序）`
 
-  return [header, ...context.cards.map((card) => renderCard(card, total))].join('\n\n')
+  return [
+    header,
+    ...context.cards.map((card) => renderCard(card, total, context.language ?? 'zh')),
+  ].join('\n\n')
 }
 
-function renderCard(card: ReadingContextCard, total: number): string {
-  const orientation = ORIENTATION_LABEL[card.orientation] ?? card.orientation
-  const arcana = ARCANA_LABEL[card.arcana] ?? card.arcana
-  const suit = card.suit ? (SUIT_LABEL[card.suit] ?? card.suit) : '无（大阿卡纳没有花色）'
-  const element = ELEMENT_LABEL[card.element] ?? card.element
+function renderCard(card: ReadingContextCard, total: number, language: LanguageCode): string {
+  const L = LABELS(language)
+  const orientation = L.orientation[card.orientation] ?? card.orientation
+  const arcana = L.arcana[card.arcana] ?? card.arcana
+  const suit = card.suit ? (L.suit[card.suit] ?? card.suit) : L.noSuit
+  const element = L.element[card.element] ?? card.element
   const meaning = card.orientation === 'upright' ? card.baseMeaning.upright : card.baseMeaning.reversed
   const keywords = card.orientation === 'upright' ? card.keywords.upright : card.keywords.reversed
 
@@ -659,14 +779,21 @@ function renderCard(card: ReadingContextCard, total: number): string {
     `- 牌位 id（原样回填用）：${card.position.id}`,
     `- 牌位名（叙述时用这个）：${card.position.name}`,
     `- 这一格关心的是：${card.position.meaning}`,
-    `- 落在这一格的牌：${card.cardNameZh}（${card.cardName}）`,
+    /* 【中文输出仍然带英文名，英文输出只给一个】
+       中文侧「愚者（The Fool）」是原有行为：英文名是塔罗牌的通用识别码，
+       给模型多一个抓手没有坏处。
+       英文侧如果也给两个，模型会把中文牌名夹进英文解读里 —— 那正是
+       本轮要消灭的中英混排，所以那边只给 displayName。 */
+    language === 'en'
+      ? `- 落在这一格的牌：${card.displayName}`
+      : `- 落在这一格的牌：${card.displayName}（${card.cardName}）`,
     `- **cardId：${card.cardId}**（输出时原样回填，不得改动）`,
     `- **朝向：${orientation}（orientation: ${card.orientation}）**（输出时原样回填，不得改动）`,
     `- 阿卡纳：${arcana}｜花色：${suit}｜元素：${element}｜数字：${card.number}`,
     `- 这个朝向下的牌义：${meaning}`,
     domainLine,
-    `- 这个朝向下的关键词（供你理解，不要原样列进输出）：${keywords.join('、')}`,
-    `- 象征意象（可抓一两个用来说话）：${card.symbols.join('、')}`,
+    `- 这个朝向下的关键词（供你理解，不要原样列进输出）：${keywords.join(L.join)}`,
+    `- 象征意象（可抓一两个用来说话）：${card.symbols.join(L.join)}`,
   ]
     .filter((line): line is string => line !== null)
     .join('\n')
@@ -674,16 +801,18 @@ function renderCard(card: ReadingContextCard, total: number): string {
 
 /* ------------------------- 四、牌面统计 -------------------------- */
 
-function renderStatsSection(stats: ReadingStats): string {
+function renderStatsSection(context: ReadingContext): string {
+  const stats = context.stats
+  const L = LABELS(context.language ?? 'zh')
   return [
     '## 四、牌面统计（服务端已精确计算，直接引用，不要自己重新数）',
     `- 总张数：${stats.total}`,
     `- 大阿卡纳：${stats.majorCount} 张｜小阿卡纳：${stats.minorCount} 张`,
     `- 正位：${stats.uprightCount} 张｜逆位：${stats.reversedCount} 张`,
-    `- 花色分布（只统计小阿卡纳）：${formatCounts(stats.suitCounts, SUIT_LABEL, '本次没有小阿卡纳')}`,
-    `- 元素分布：${formatCounts(stats.elementCounts, ELEMENT_LABEL, '无')}`,
+    `- 花色分布（只统计小阿卡纳）：${formatCounts(stats.suitCounts, L.suit, L.noMinor)}`,
+    `- 元素分布：${formatCounts(stats.elementCounts, L.element, L.none)}`,
     `- 出现两次及以上的数字：${
-      stats.repeatedNumbers.length > 0 ? stats.repeatedNumbers.join('、') : '无重复数字'
+      stats.repeatedNumbers.length > 0 ? stats.repeatedNumbers.join(L.join) : L.noRepeat
     }`,
     '',
     '以上每一项都是**可用可不用**的素材：只在它对这副牌真的构成信号时才拿来说话，' +
@@ -725,7 +854,7 @@ function renderEchoSection(context: ReadingContext): string {
     lines.push(
       `  ${card.position.index + 1}. cardId=\`${card.cardId}\`，` +
         `orientation=\`${card.orientation}\`，` +
-        `cardName=\`${card.cardNameZh}\`，` +
+        `cardName=\`${card.displayName}\`，` +
         `position=\`${card.position.positionName}\``,
     )
   }
@@ -765,7 +894,7 @@ export function buildMessages(context: ReadingContext, extraInstruction?: string
     : buildUserPrompt(context)
 
   return [
-    { role: 'system', content: buildSystemPrompt(context.readingMode) },
+    { role: 'system', content: buildSystemPrompt(context.readingMode, context.language ?? 'zh') },
     { role: 'user', content: user },
   ]
 }

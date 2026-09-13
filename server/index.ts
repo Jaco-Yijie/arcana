@@ -1,3 +1,4 @@
+import { handleTranslation } from './api/translationRoute.ts'
 /**
  * Arcana 后端。
  *
@@ -18,6 +19,14 @@ import { handleConfig, handleReading, handleReadingStream } from './api/readingR
 import { handleFollowUp } from './api/followUpRoute.ts'
 import { sendJson } from './http.ts'
 import { applySecurityHeaders, assetOrigin, cspMode, handleCspReport } from './security.ts'
+import { registerCardText } from '../src/data/deck/localized.ts'
+import { cardTextEn } from '../src/data/deck/i18n/en-US.ts'
+
+/* 英文牌义覆盖层：服务端一次性注册。
+   放在入口而不是 server/i18n.ts —— 那个模块会被 rebuild.ts 拖进
+   Streamlit 的浏览器包，静态 import 90 KB 英文牌义会让中文用户白下载一遍。
+   服务端没有体积预算，直接同步注册最简单。 */
+registerCardText('en-US', cardTextEn)
 
 const DIST = resolve(process.cwd(), 'dist')
 
@@ -96,6 +105,7 @@ const server = createServer((req, res) => {
 
   void (async () => {
     try {
+      if (url.pathname === '/api/tarot/translate' && req.method === 'POST') { await handleTranslation(req, res); return }
       if (url.pathname === '/api/tarot/reading' && req.method === 'POST') {
         await handleReading(req, res)
         return

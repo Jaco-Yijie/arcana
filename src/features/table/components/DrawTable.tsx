@@ -1,4 +1,6 @@
 import { useCallback, useMemo, useRef, useState } from 'react'
+import { useI18n } from '@/i18n'
+import { positionLabel } from '@/i18n/domain'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CardFrame } from '@/components/card/CardFrame'
 import { ThemedCardBack as CardBack } from '@/components/card/ThemedCardBack'
@@ -74,6 +76,7 @@ export function DrawTable({
   onInteractingChange,
   handHint,
 }: DrawTableProps) {
+  const { t } = useI18n()
   const reduceMotion = useReducedMotion()
   const rootRef = useRef<HTMLDivElement>(null)
   /* 牌桌尺寸是布局的输入，必须实测。fallback 只在 SSR / 首帧无 DOM 时短暂生效 */
@@ -290,7 +293,9 @@ export function DrawTable({
                   <button
                     type="button"
                     onClick={() => onPlace(handIndex, pos.id)}
-                    aria-label={`把这张牌放到「${pos.label}」`}
+                    aria-label={t('a11y.placeTo', {
+                      label: positionLabel(t, spread.id, pos.id),
+                    })}
                     className={[
                       'h-full w-full rounded-sm outline-none',
                       'focus-visible:ring-2 focus-visible:ring-silver/70',
@@ -328,7 +333,7 @@ export function DrawTable({
                   marginLeft: slot.label.x - slot.card.x,
                 }}
               >
-                {pos.label}
+                {positionLabel(t, spread.id, pos.id)}
               </span>
             </div>
           )

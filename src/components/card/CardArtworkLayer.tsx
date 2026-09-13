@@ -14,6 +14,7 @@
  */
 
 import type { AssetVariant, CardArtworkPlan, RasterArtworkPlan } from '@/decks/types'
+import { useI18n } from '@/i18n'
 import { useCardArtwork } from '@/decks/artwork/useCardArtwork'
 import { ProceduralCardArt } from '@/decks/legacy/ProceduralCardArt'
 import type { ArtMotif } from '@/decks/legacy/proceduralArt'
@@ -89,7 +90,7 @@ function RasterArtwork({
       )
     }
     return (
-      <MissingArtwork cardId={plan.cardId} path={plan.path} showPath={showPath} reason="加载失败" />
+      <MissingArtwork cardId={plan.cardId} path={plan.path} showPath={showPath} reasonKey="loadFailed" />
     )
   }
 
@@ -103,13 +104,16 @@ function MissingArtwork({
   cardId,
   path,
   showPath,
-  reason = '素材未提供',
+  reasonKey = 'missing',
 }: {
   cardId: string
   path: string
   showPath: boolean
-  reason?: string
+  /** i18n key 的最后一段：asset.missing / asset.loadFailed */
+  reasonKey?: 'missing' | 'loadFailed'
 }) {
+  const { t } = useI18n()
+  const reason = t(`asset.${reasonKey}`)
   /* 底板用近乎不透明的 bg-void：空灵/经典/蛋白潮汐的 card-sky 是**浅色**的，
      半透明底板压在象牙纸上会得到一片浑浊的中间调，文字直接糊掉。
      缺失态在任何牌组下都必须一眼可读 —— 它是给人看的待办事项，不是装饰。 */

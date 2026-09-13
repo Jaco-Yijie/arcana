@@ -1,36 +1,71 @@
-/** 展示层格式化工具 */
+/**
+ * 日期与文本格式化。
+ *
+ * 【为什么要接受 locale 而不是读全局】
+ * 这几个函数被 journalStore 的纯数据路径也调用过，那里没有 React 上下文。
+ * 传参让它们保持纯函数，同时默认值仍然是当前语言 —— 调用点忘了传也不会出错。
+ */
 
-const DATE_FMT = new Intl.DateTimeFormat('zh-CN', {
-  year: 'numeric',
-  month: '2-digit',
-  day: '2-digit',
-})
+import { DEFAULT_LOCALE } from '@/i18n/types'
+import type { Locale } from '@/i18n/types'
+import { getLocale, translate } from '@/i18n/store'
 
-const TIME_FMT = new Intl.DateTimeFormat('zh-CN', {
-  hour: '2-digit',
-  minute: '2-digit',
-})
+/* Intl.DateTimeFormat 实例化不便宜（每次约 0.1ms），日记列表一次要格式化
+   几十条。按 locale 缓存，两门语言各建一次。 */
+const DATE_FMT = new Map<Locale, Intl.DateTimeFormat>()
+const TIME_FMT = new Map<Locale, Intl.DateTimeFormat>()
 
-export function formatDate(ts: number): string {
-  return DATE_FMT.format(new Date(ts))
+function dateFmt(locale: Locale): Intl.DateTimeFormat {
+  let f = DATE_FMT.get(locale)
+  if (!f) {
+    f = new Intl.DateTimeFormat(locale, { year: 'numeric', month: '2-digit', day: '2-digit' })
+    DATE_FMT.set(locale, f)
+  }
+  return f
 }
 
-export function formatDateTime(ts: number): string {
+function timeFmt(locale: Locale): Intl.DateTimeFormat {
+  let f = TIME_FMT.get(locale)
+  if (!f) {
+    f = new Intl.DateTimeFormat(locale, { hour: '2-digit', minute: '2-digit' })
+    TIME_FMT.set(locale, f)
+  }
+  return f
+}
+
+/** 2025/03/14（zh-CN）/ 03/14/2025（en-US） */
+export function formatDate(ts: number, locale: Locale = getLocale() ?? DEFAULT_LOCALE): string {
+  return dateFmt(locale).format(new Date(ts))
+}
+
+/** 日期 + 时分 */
+export function formatDateTime(ts: number, locale: Locale = getLocale() ?? DEFAULT_LOCALE): string {
   const d = new Date(ts)
-  return `${DATE_FMT.format(d)} ${TIME_FMT.format(d)}`
+  return `${dateFmt(locale).format(d)} ${timeFmt(locale).format(d)}`
 }
 
-/** 「3 天前」这类相对时间，日记列表用 */
-export function formatRelative(ts: number, now = Date.now()): string {
+/**
+ * 「刚刚 / 12 分钟前 / 3 天前」。超过 7 天退回绝对日期。
+ *
+ * 刻意不用 `Intl.RelativeTimeFormat`：它在中文下给出的是「3天前」（无空格）
+ * 与「1周前」，与本站其他数值排版的空格规则不一致，而这几条文案本来就
+ * 在 i18n 资源里，直接取词更可控。
+ */
+export function formatRelative(
+  ts: number,
+  locale: Locale = getLocale() ?? DEFAULT_LOCALE,
+  now = Date.now(),
+): string {
   const diff = now - ts
   const min = 60_000
   const hour = 60 * min
   const day = 24 * hour
-  if (diff < min) return '刚刚'
-  if (diff < hour) return `${Math.floor(diff / min)} 分钟前`
-  if (diff < day) return `${Math.floor(diff / hour)} 小时前`
-  if (diff < 7 * day) return `${Math.floor(diff / day)} 天前`
-  return formatDate(ts)
+
+  if (diff < min) return translate('time.justNow')
+  if (diff < hour) return translate('time.minutesAgo', { n: Math.floor(diff / min) })
+  if (diff < day) return translate('time.hoursAgo', { n: Math.floor(diff / hour) })
+  if (diff < 7 * day) return translate('time.daysAgo', { n: Math.floor(diff / day) })
+  return formatDate(ts, locale)
 }
 
 export function truncate(text: string, max: number): string {

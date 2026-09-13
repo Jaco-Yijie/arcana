@@ -11,6 +11,7 @@
  */
 
 import { useEffect } from 'react'
+import { useI18n } from '@/i18n'
 import { motion } from 'framer-motion'
 import { useReducedMotion } from 'framer-motion'
 
@@ -22,6 +23,7 @@ interface Props {
 }
 
 export function QuestionFocusMoment({ question, onDone }: Props) {
+  const { t } = useI18n()
   const reduceMotion = useReducedMotion()
 
   useEffect(() => {
@@ -39,7 +41,7 @@ export function QuestionFocusMoment({ question, onDone }: Props) {
       style={{ background: 'var(--color-bg-void)' }}
     >
       <motion.p
-        className="max-w-[320px] text-center font-serif text-display leading-relaxed text-text-hi"
+        className="reading-question max-w-[22rem] text-center"
         initial={reduceMotion ? false : { opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 0.61, 0.36, 1] }}
@@ -53,7 +55,7 @@ export function QuestionFocusMoment({ question, onDone }: Props) {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: reduceMotion ? 0 : 0.5 }}
       >
-        先把这个问题放在心里。
+        {t('question.focusMoment')}
       </motion.p>
     </motion.div>
   )

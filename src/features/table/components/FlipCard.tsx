@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { useI18n } from '@/i18n'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CardFrame } from '@/components/card/CardFrame'
 import type { CardSize } from '@/components/card/CardFrame'
@@ -60,6 +61,7 @@ export function FlipCard({
   onReveal,
   idleDelay = 0,
 }: FlipCardProps) {
+  const { t } = useI18n()
   const size: CardSize = sizeProp ?? (width ? sizeForWidth(width) : 'md')
   const reduceMotion = useReducedMotion()
   const [showFace, setShowFace] = useState(revealed)
@@ -130,7 +132,7 @@ export function FlipCard({
       className="table-surface relative rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70"
       style={{ perspective: 900 }}
       role={canReveal ? 'button' : undefined}
-      aria-label={canReveal ? '翻开这张牌' : undefined}
+      aria-label={canReveal ? t('a11y.flip') : undefined}
       /* 已翻开的牌退出 Tab 序列 —— 它不再是一个可操作的控件，
          留在序列里只会让键盘用户多按几次 Tab 才走完牌阵 */
       tabIndex={canReveal ? 0 : undefined}

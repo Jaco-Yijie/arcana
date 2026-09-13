@@ -1,6 +1,8 @@
 import { AppShell } from '@/components/layout/AppShell'
 import { Panel } from '@/components/atoms/Panel'
+import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
 import { useSettings } from '@/hooks/useSettings'
+import { useI18n } from '@/i18n'
 
 function Toggle({
   label,
@@ -45,14 +47,30 @@ function Toggle({
 
 export default function SettingsPage() {
   const { settings, updateSettings, resetGuidance } = useSettings()
+  const { t } = useI18n()
 
   return (
-    <AppShell back="/" title="设置">
+    <AppShell back="/" title={t('settings.title')}>
       <div className="flex flex-col gap-6 pt-2">
+        {/* ── 语言 ──
+            放在设置页第一项，而且在**手机上这是唯一的入口**
+            （桌面右上角那枚铭牌在 ≤767px 下被 .language-corner 隐藏 ——
+            那个位置在小屏上会压住返回按钮与页面标题）。
+            排在第一是因为：找不到语言开关的人，找不到的通常就是这一屏。 */}
+        <Panel tone="veil" pad="md" className="flex flex-col gap-3">
+          <span className="eyebrow">{t('settings.language')}</span>
+          <div className="flex items-center justify-between gap-4">
+            <span className="text-caption leading-relaxed text-text-faint">
+              {t('settings.languageHint')}
+            </span>
+            <LanguageSwitcher size="md" className="shrink-0" />
+          </div>
+        </Panel>
+
         <Panel tone="veil" pad="md" className="flex flex-col divide-y divide-line-hairline">
           <Toggle
-            label="新手引导"
-            hint="第一次会给出明显提示，之后自动弱化"
+            label={t('settings.guidance')}
+            hint={t('settings.guidanceHint')}
             checked={settings.guidanceEnabled}
             onChange={(v) => {
               updateSettings({ guidanceEnabled: v })
@@ -60,21 +78,21 @@ export default function SettingsPage() {
             }}
           />
           <Toggle
-            label="轻微音效"
-            hint="纸牌摩擦、放牌、翻牌"
+            label={t('settings.sound')}
+            hint={t('settings.soundHint')}
             checked={settings.soundEnabled}
             onChange={(v) => updateSettings({ soundEnabled: v })}
           />
           <Toggle
-            label="轻微震动"
-            hint="浏览器支持时生效"
+            label={t('settings.haptics')}
+            hint={t('settings.hapticsHint')}
             checked={settings.hapticsEnabled}
             onChange={(v) => updateSettings({ hapticsEnabled: v })}
           />
         </Panel>
 
         <Panel tone="veil" pad="md" className="flex flex-col gap-3">
-          <span className="text-caption tracking-wide-caps text-text-faint">摊牌模式</span>
+          <span className="eyebrow">{t('settings.spreadMode')}</span>
           <div className="flex gap-3">
             <button
               type="button"
@@ -86,21 +104,19 @@ export default function SettingsPage() {
                   : 'border-line-hairline text-text-low',
               ].join(' ')}
             >
-              扇形
+              {t('settings.fan')}
             </button>
             <button
               type="button"
               disabled
               className="flex-1 rounded-sm border border-line-hairline px-4 py-3 text-note text-text-faint opacity-40"
             >
-              自由桌面（即将推出）
+              {t('settings.free')}
             </button>
           </div>
         </Panel>
 
-        <p className="px-1 text-caption text-text-faint">
-          所有记录只保存在这台设备的浏览器里，不会上传。
-        </p>
+        <p className="px-1 text-caption text-text-faint">{t('settings.privacy')}</p>
       </div>
     </AppShell>
   )

@@ -1,4 +1,3 @@
-import { Bilingual } from '@/components/identity/Bilingual'
 import { useMemo, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
@@ -6,6 +5,8 @@ import { useSession } from '@/hooks/useSession'
 import { recommendSpreads, spreadById, spreads } from '@/data/spreads'
 import { truncate } from '@/utils/format'
 import type { Spread, SpreadId } from '@/types/spread'
+import { useI18n } from '@/i18n'
+import { spreadDescription, spreadName } from '@/i18n/domain'
 
 /**
  * 牌位缩略示意图：用点阵表示牌阵形状，让用户在选之前就看懂结构。
@@ -41,6 +42,7 @@ function SpreadThumb({ spread }: { spread: Spread }) {
 export default function SpreadPage() {
   const navigate = useNavigate()
   const { session, patchSession } = useSession()
+  const { t } = useI18n()
   const [showAll, setShowAll] = useState(false)
 
   const recommended = useMemo(
@@ -67,16 +69,20 @@ export default function SpreadPage() {
       <SpreadThumb spread={spread} />
       <span className="flex min-w-0 flex-col gap-1">
         <span className="flex items-baseline gap-2">
-          <span className="font-serif text-title text-text-hi"><Bilingual zh={spread.name} en={spread.nameEn} /></span>
-          <span className="text-caption text-text-faint">{spread.cardCount} 张</span>
+          <span className="ritual-heading" style={{ fontSize: '1.15rem' }}>
+            {spreadName(t, spread.id)}
+          </span>
+          <span className="text-caption text-text-faint">
+            {t('common.cardsUnit', { n: spread.cardCount })}
+          </span>
         </span>
-        <span className="text-caption text-text-low">{spread.description}</span>
+        <span className="text-caption text-text-low">{spreadDescription(t, spread.id)}</span>
       </span>
     </button>
   )
 
   return (
-    <AppShell back="/question?mode=question" title="选择牌阵" centered>
+    <AppShell back="/question?mode=question" title={t('spread.title')} centered>
       <div className="flex flex-col gap-4 pt-2">
         {session.question && (
           <p className="truncate text-caption text-text-faint">
@@ -84,7 +90,7 @@ export default function SpreadPage() {
           </p>
         )}
 
-        <h2 className="font-serif text-heading text-text-hi">这几个可能适合</h2>
+        <h2 className="ritual-heading ritual-heading-marked">{t('spread.recommended')}</h2>
         <div className="flex flex-col gap-3">{recommended.map((id) => renderCard(spreadById[id]))}</div>
 
         {!showAll ? (
@@ -93,17 +99,17 @@ export default function SpreadPage() {
             onClick={() => setShowAll(true)}
             className="mt-2 text-caption text-text-low underline underline-offset-4"
           >
-            查看全部牌阵
+            {t('spread.showAll')}
           </button>
         ) : (
           <div className="mt-2 flex flex-col gap-3">
-            <p className="text-caption text-text-faint">其他牌阵</p>
+            <p className="eyebrow">{t('spread.others')}</p>
             {rest.map(renderCard)}
           </div>
         )}
 
         <p className="mt-2 text-caption text-text-faint">
-          推荐只是建议，选哪个由你决定。
+          {t('spread.note')}
         </p>
       </div>
     </AppShell>

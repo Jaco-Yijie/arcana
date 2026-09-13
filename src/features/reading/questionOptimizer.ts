@@ -11,6 +11,8 @@
  * - 若原问题已经足够开放，返回 `null`，表示不需要打扰用户。
  */
 
+import type { LanguageCode } from '@/i18n/types'
+
 export interface OptimizedQuestion {
   /** 建议的问法 */
   optimized: string
@@ -156,6 +158,100 @@ const RULES: Rule[] = [
   },
 ]
 
+/* ══════════════════════════════════════════════════════════════
+ * 英文规则集
+ *
+ * 【为什么不是把中文规则翻译过去】
+ * 上面那七条规则识别的是**中文的闭合问句形态**（「吗」「会不会」「该不该」）。
+ * 英文的闭合问句靠助动词前置（Will he… / Should I… / Am I…），
+ * 是完全不同的形态特征 —— 直译规则会一条都不命中。
+ *
+ * 改写方向与中文一致：把「会不会 / 什么时候 / 是不是」这类只有两个答案的问法，
+ * 换成「哪些在起作用 / 还缺什么 / 我能改变什么」这类塔罗真正能回应的问法。
+ * ══════════════════════════════════════════════════════════ */
+const RULES_EN: Rule[] = [
+  {
+    id: 'relationship-yes-no',
+    test: (raw) =>
+      /\b(he|she|they|him|her|my ex|his|hers)\b/iu.test(raw) &&
+      /\b(still love|love me|like me|come back|get back|text me|miss me|care about me|want me)\b/iu.test(
+        raw,
+      ),
+    build: () => ({
+      optimized: 'In this relationship, what do I most need to see clearly right now?',
+      rationale:
+        "Tarot cannot read another person's decision, but it can show you where you stand in this and what you actually care about.",
+    }),
+  },
+  {
+    id: 'when',
+    test: (raw) => /\b(when will|how long until|how soon|what date|by when)\b/iu.test(raw),
+    build: (raw) => ({
+      optimized: `On "${clipPhrase(raw, 60)}" — how far has this actually got, and what condition is still missing?`,
+      rationale:
+        'Swapping "when" for "what is still missing" gives you an answer you can act on.',
+    }),
+  },
+  {
+    id: 'will-succeed',
+    test: (raw) =>
+      /\b(will (it|i|this|we) (work|succeed|happen|go well)|am i going to get|will i pass|any hope)\b/iu.test(
+        raw,
+      ),
+    build: (raw) => ({
+      optimized: `To move "${clipPhrase(raw, 55)}" in a good direction, which of my current habits are helping and which are holding it back?`,
+      rationale:
+        'Whether it works depends on what comes next, so the useful question is what is already working.',
+    }),
+  },
+  {
+    id: 'binary-choice',
+    test: (raw) => /\b(should i|or should|which one|A or B|do i stay or)\b/iu.test(raw),
+    build: (raw) => ({
+      optimized: `On the choice in "${clipPhrase(raw, 55)}" — where does each of the two directions actually lead me?`,
+      rationale:
+        'Rather than asking for the answer, lay out what each path costs and compare them.',
+    }),
+  },
+  {
+    id: 'self-judgement',
+    test: (raw) => /\b(am i (the problem|wrong|bad|too much)|did i (do something )?wrong|is it me)\b/iu.test(raw),
+    build: (raw) => ({
+      optimized: `In "${clipPhrase(raw, 55)}" — which of my feelings here are the situation, and which did I add?`,
+      rationale:
+        'Turning "am I" into "which part is real" keeps the reading from starting with a verdict on you.',
+    }),
+  },
+  {
+    id: 'why-blame',
+    test: (raw) => /\b(why (does|do) (he|she|they|it) always|why (is it )?always me|why (can't|cant) i ever)\b/iu.test(raw),
+    build: (raw) => ({
+      optimized: `In this pattern that keeps repeating (${clipPhrase(raw, 45)}), which parts are within my reach to change?`,
+      rationale:
+        'Looking for the controllable part breaks the loop more often than finding who is at fault.',
+    }),
+  },
+  {
+    id: 'generic-yes-no',
+    test: (raw) =>
+      /^(will|is|are|am|do|does|did|can|could|should|would|shall|has|have)\b/iu.test(raw.trim()),
+    build: (raw) => ({
+      optimized: `About "${clipPhrase(raw, 60)}" — what do I most need to understand right now?`,
+      rationale:
+        'A yes/no question has only two answers; an open one lets the cards give you something usable.',
+    }),
+  },
+]
+
+const OPEN_PATTERNS_EN = [
+  /\bwhat (do|should|can) i\b/iu,
+  /\bwhich part\b/iu,
+  /\bhow (do|can|should) i\b/iu,
+  /\bwhat is (actually|really)\b/iu,
+  /\bmost need\b/iu,
+  /\bwhat am i\b/iu,
+]
+
 /** 已经足够开放的问法特征 */
 const OPEN_PATTERNS = [
   /最需要/u,
@@ -168,7 +264,13 @@ const OPEN_PATTERNS = [
   /我可以/u,
 ]
 
-function isAlreadyOpen(raw: string): boolean {
+function isAlreadyOpen(raw: string, language: LanguageCode): boolean {
+  if (language === 'en') {
+    if (/^(will|is|are|am|do|does|did|can|could|should|would|shall)\b/iu.test(raw.trim())) {
+      return false
+    }
+    return OPEN_PATTERNS_EN.some((p) => p.test(raw))
+  }
   // 含疑问语气助词的多半仍是闭合问句。
   if (/(吗|嘛|会不会|是不是|能不能|该不该)/u.test(raw)) return false
   return OPEN_PATTERNS.some((p) => p.test(raw))
@@ -178,14 +280,18 @@ function isAlreadyOpen(raw: string): boolean {
  * 给出一个更适合塔罗的问法建议。
  * @returns 需要建议时返回 `OptimizedQuestion`；原问题已足够开放或过短时返回 `null`
  */
-export function optimizeQuestion(raw: string): OptimizedQuestion | null {
+export function optimizeQuestion(
+  raw: string,
+  language: LanguageCode = 'zh',
+): OptimizedQuestion | null {
   const text = raw.trim()
 
-  // 太短的输入没有可改写的信息量，交给用户自己补充。
-  if (text.length < 4) return null
-  if (isAlreadyOpen(text)) return null
+  /* 太短的输入没有可改写的信息量，交给用户自己补充。
+     英文的阈值高一些 —— 4 个字母还构不成一个问题，而 4 个汉字可以。 */
+  if (text.length < (language === 'en' ? 12 : 4)) return null
+  if (isAlreadyOpen(text, language)) return null
 
-  for (const rule of RULES) {
+  for (const rule of language === 'en' ? RULES_EN : RULES) {
     if (rule.test(text)) {
       const result = rule.build(text)
       // 改写后如果和原问题几乎一样，就不打扰用户。
@@ -195,6 +301,14 @@ export function optimizeQuestion(raw: string): OptimizedQuestion | null {
   }
 
   // 兜底：陈述式的诉说也可以被整理成一个可被塔罗回应的问题。
+  if (language === 'en') {
+    if (text.length < 24) return null
+    return {
+      optimized: `About "${clipPhrase(text, 60)}" — what am I not seeing clearly at the moment?`,
+      rationale:
+        'Turning it into a question the cards can answer usually surfaces more than describing the situation does.',
+    }
+  }
   if (text.length >= 10) {
     return {
       optimized: `关于「${clipPhrase(text, 20)}」，此刻有什么是我还没看清的？`,

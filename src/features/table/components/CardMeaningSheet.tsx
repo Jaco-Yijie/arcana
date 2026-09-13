@@ -1,13 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useIsDesktop } from '@/hooks/useMediaQuery'
+import { useI18n } from '@/i18n'
+import { positionLabel, positionMeaning } from '@/i18n/domain'
+import { useCardText } from '@/hooks/useCardText'
 import type { Orientation, TarotCard } from '@/types/tarot'
-import type { SpreadPosition } from '@/types/spread'
+import type { SpreadId, SpreadPosition } from '@/types/spread'
 
 interface CardMeaningSheetProps {
   card: TarotCard
   orientation: Orientation
   position: SpreadPosition | null
+  /** 牌位名要按牌阵取 —— 同一个 positionId（obstacle）在两个牌阵里含义不同 */
+  spreadId: SpreadId
   onClose: () => void
   /**
    * 抽屉实测高度回调（仅移动端）。
@@ -33,26 +38,35 @@ function Body({
   card,
   orientation,
   position,
+  spreadId,
   expanded,
   setExpanded,
 }: {
   card: TarotCard
   orientation: Orientation
   position: SpreadPosition | null
+  spreadId: SpreadId
   expanded: boolean
   setExpanded: (v: boolean) => void
 }) {
+  const { t } = useI18n()
+  const cardText = useCardText()
+  const text = cardText(card)
   const reversed = orientation === 'reversed'
-  const keywords = reversed ? card.keywordsReversed : card.keywordsUpright
-  const pick = (t: { upright: string; reversed: string }) => (reversed ? t.reversed : t.upright)
+  const keywords = reversed ? text.keywordsReversed : text.keywordsUpright
+  const pick = (v: { upright: string; reversed: string }) => (reversed ? v.reversed : v.upright)
 
   return (
     <>
       <div className="flex items-baseline gap-2">
-        <h3 className="font-serif text-display text-text-hi">{card.nameZh}</h3>
-        <span className="text-caption text-text-faint">{card.name}</span>
+        <h3 className="ritual-heading" style={{ fontSize: 'var(--text-display)' }}>
+          {text.name}
+        </h3>
+
       </div>
-      <p className="mt-1 text-note text-gold-dim">{reversed ? '逆位' : '正位'}</p>
+      <p className="mt-1 text-note text-gold-dim">
+        {reversed ? t('card.reversed') : t('card.upright')}
+      </p>
       <p className="mt-2 text-body text-text-low">{keywords.slice(0, 5).join(' · ')}</p>
 
       {!expanded ? (
@@ -61,18 +75,28 @@ function Body({
           onClick={() => setExpanded(true)}
           className="mt-4 rounded-sm text-caption text-silver-dim underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-silver"
         >
-          查看详细牌义
+          {t('card.viewDetail')}
         </button>
       ) : (
         <div className="mt-5 flex flex-col gap-4">
-          <Section label="基础牌义" text={reversed ? card.meaningReversed : card.meaningUpright} />
-          {position && <Section label={`牌位 · ${position.label}`} text={position.meaning} />}
-          <Section label="感情" text={pick(card.love)} />
-          <Section label="事业" text={pick(card.career)} />
-          <Section label="学业" text={pick(card.study)} />
-          <Section label="财务" text={pick(card.finance)} />
-          <Section label="建议" text={pick(card.advice)} />
-          <Section label="象征元素" text={card.symbols.join(' · ')} />
+          <Section
+            label={t('card.section.base')}
+            text={reversed ? text.meaningReversed : text.meaningUpright}
+          />
+          {position && (
+            <Section
+              label={t('card.section.position', {
+                label: positionLabel(t, spreadId, position.id),
+              })}
+              text={positionMeaning(t, spreadId, position.id)}
+            />
+          )}
+          <Section label={t('card.section.love')} text={pick(text.love)} />
+          <Section label={t('card.section.career')} text={pick(text.career)} />
+          <Section label={t('card.section.study')} text={pick(text.study)} />
+          <Section label={t('card.section.finance')} text={pick(text.finance)} />
+          <Section label={t('card.section.advice')} text={pick(text.advice)} />
+          <Section label={t('card.section.symbols')} text={text.symbols.join(' · ')} />
         </div>
       )}
     </>
@@ -104,9 +128,13 @@ export function CardMeaningSheet({
   card,
   orientation,
   position,
+  spreadId,
   onClose,
   onHeightChange,
 }: CardMeaningSheetProps) {
+  const { t } = useI18n()
+  const cardText = useCardText()
+  const displayName = cardText(card).name
   const [expanded, setExpanded] = useState(false)
   const isDesktop = useIsDesktop()
   const panelRef = useRef<HTMLDivElement>(null)
@@ -159,7 +187,7 @@ export function CardMeaningSheet({
         tabIndex={-1}
         role="dialog"
         aria-modal="false"
-        aria-label={`${card.nameZh} 牌义`}
+        aria-label={t('card.meaningAria', { name: displayName })}
         className="surface-veil pointer-events-auto absolute top-4 right-4 bottom-4 z-40 flex flex-col rounded-lg outline-none"
         /* 右栏宽度随视口连续变化，不写死 300px */
         style={{ width: 'clamp(15rem, 24vw, 22rem)' }}
@@ -171,7 +199,7 @@ export function CardMeaningSheet({
           <button
             type="button"
             onClick={onClose}
-            aria-label="关闭牌义"
+            aria-label={t('card.closeMeaning')}
             className="flex h-9 w-9 items-center justify-center rounded-sm text-text-faint transition-colors duration-[var(--duration-quick)] hover:text-text-hi focus-visible:outline focus-visible:outline-2 focus-visible:outline-silver"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -184,6 +212,7 @@ export function CardMeaningSheet({
             card={card}
             orientation={orientation}
             position={position}
+            spreadId={spreadId}
             expanded={expanded}
             setExpanded={setExpanded}
           />
@@ -211,7 +240,7 @@ export function CardMeaningSheet({
           tabIndex={-1}
           role="dialog"
           aria-modal="false"
-          aria-label={`${card.nameZh} 牌义`}
+          aria-label={t('card.meaningAria', { name: displayName })}
           className="surface-veil pointer-events-auto flex w-full flex-col rounded-t-xl outline-none"
           initial={{ y: 220 }}
           animate={{ y: 0 }}
@@ -226,7 +255,7 @@ export function CardMeaningSheet({
               type="button"
               onClick={onClose}
               className="flex items-center justify-center rounded-sm px-6 py-1.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-silver"
-              aria-label="收起牌义"
+              aria-label={t('card.collapseMeaning')}
             >
               <span className="h-1 w-9 rounded-pill bg-line-strong" />
             </button>
@@ -236,7 +265,7 @@ export function CardMeaningSheet({
               onClick={onClose}
               className="absolute right-2 flex h-9 min-w-9 items-center justify-center rounded-sm px-3 text-caption text-text-faint transition-colors duration-[var(--duration-quick)] active:text-text-mid focus-visible:outline focus-visible:outline-2 focus-visible:outline-silver"
             >
-              收起
+              {t('common.collapse')}
             </button>
           </div>
 
@@ -248,6 +277,7 @@ export function CardMeaningSheet({
               card={card}
               orientation={orientation}
               position={position}
+              spreadId={spreadId}
               expanded={expanded}
               setExpanded={setExpanded}
             />

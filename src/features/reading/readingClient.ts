@@ -23,12 +23,30 @@ import type {
 } from '@/types/reading'
 import { localMockReading } from './mockProvider'
 import { IS_STREAMLIT } from './streamlitTransport'
-import { StreamlitReadingError, generateViaStreamlit } from './streamlitReading'
+import { translate } from '@/i18n/store'
 
 export interface ReadingOutcome {
   reading: StructuredReading
   /** 本地兜底产出的解读，UI 需要如实标注 */
   localFallback: boolean
+}
+
+/**
+ * 错误码 → 给用户看的话。
+ *
+ * 【为什么由前端翻，而不是用服务端返回的 message】
+ * 服务端那份 message 是**中文写死**的（server/errors.ts），而且它在
+ * 请求解析出 language 之前就可能被构造出来（限流、请求体坏掉）——
+ * 服务端根本还不知道该用哪门语言。
+ *
+ * 错误码才是两侧真正的契约：`code` 稳定、可枚举、与语言无关。
+ * 所以文本一律由前端按当前界面语言渲染，服务端的 message 只作为
+ * 兜底（新增了码但还没配文案时）与日志线索。
+ */
+function localizeError(error: ReadingError): string {
+  const key = `reading.errorCode.${error.code}`
+  const text = translate(key)
+  return text === key ? error.message : text
 }
 
 export class ReadingRequestError extends Error {
@@ -37,7 +55,7 @@ export class ReadingRequestError extends Error {
   canFallbackToMock: boolean
 
   constructor(error: ReadingError) {
-    super(error.message)
+    super(localizeError(error))
     this.code = error.code
     this.retryable = error.retryable
     this.canFallbackToMock = error.canFallbackToMock
@@ -100,7 +118,7 @@ export async function requestReading(
 class BackendUnreachableWithFallback extends BackendUnreachable {
   request: ReadingRequest
   constructor(request: ReadingRequest) {
-    super('未连接解读服务')
+    super(translate('reading.notice.unreachable'))
     this.request = request
   }
 }
@@ -112,6 +130,13 @@ export async function requestReadingWithFallback(
 ): Promise<ReadingOutcome> {
   // Streamlit 形态下没有 /api 路由，走组件通信协议由 Python 代发
   if (IS_STREAMLIT) {
+    /* ── 为什么是动态 import ──
+       `streamlitReading` 把整条服务端流水线（rebuildContext + Prompt 组装 +
+       schema 校验 + 语气红线）拉进浏览器包 —— 那是 Streamlit 形态**独有**的需要，
+       独立部署形态下这些逻辑跑在服务端。静态 import 会让所有用户
+       为一个他们永远走不到的分支付流量（i18n 之后还多带一份 en-US.json）。
+       IS_STREAMLIT 是编译期常量之外的运行期判断，所以只能靠动态 import 切开。 */
+    const { StreamlitReadingError, generateViaStreamlit } = await import('./streamlitReading')
     try {
       return { reading: await generateViaStreamlit(request), localFallback: false }
     } catch (err) {
@@ -125,7 +150,7 @@ export async function requestReadingWithFallback(
       }
       throw new ReadingRequestError({
         code: 'schema-invalid',
-        message: '这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。',
+        message: translate('reading.error.generic'),
         retryable: true,
         canFallbackToMock: true,
       })
@@ -141,7 +166,7 @@ export async function requestReadingWithFallback(
     if (err instanceof BackendUnreachable) {
       throw new ReadingRequestError({
         code: 'network-error',
-        message: '没有连上解读服务。这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。',
+        message: translate('reading.error.network'),
         retryable: true,
         canFallbackToMock: false,
       })

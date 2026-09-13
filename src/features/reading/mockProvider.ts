@@ -1,3 +1,4 @@
+import { localeFromLanguageCode } from '@/i18n/types'
 /**
  * 客户端本地 Mock —— 只在「完全连不上后端」且处于开发模式时使用。
  *
@@ -9,12 +10,52 @@
 import type { ReadingRequest, StructuredReading, StructuredReadingCard } from '@/types/reading'
 import type { SpreadId } from '@/types/spread'
 import { generateReading } from './mockReading'
+import { buildEnglishMockReading } from './mockReadingEn'
 import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
+import { getMessagesForLocale, translate } from '@/i18n/store'
+import { localizeCardName } from '@/data/deck/localized'
 
 export function localMockReading(request: ReadingRequest): StructuredReading {
   const startedAt = Date.now()
   const spread = getSpread(request.spreadId as SpreadId)
+  const locale = localeFromLanguageCode(request.language)
+  const messages = getMessagesForLocale(locale)
+  const positionName = (positionId: string) =>
+    translate(`spread.position.${spread.id}.${positionId}.label`, undefined, messages)
+  const positionMeaning = (positionId: string) =>
+    translate(`spread.position.${spread.id}.${positionId}.meaning`, undefined, messages)
+
+  const meta = {
+    provider: 'mock' as const,
+    language: request.language ?? 'zh',
+    model: null,
+    generatedAt: Date.now(),
+    latencyMs: Date.now() - startedAt,
+    repaired: false,
+    toneAdjusted: false,
+    fallbackReason: 'unreachable' as const,
+  }
+
+  /* 英文界面下的兜底走独立的英文组装器。
+     中文那台短语拼装机翻译过来是机翻腔，而这份文本是要当作
+     正式解读的替身展示的 —— 见 mockReadingEn.ts 顶部的说明。 */
+  if (locale === 'en-US') {
+    return {
+      ...buildEnglishMockReading({
+        question: request.question,
+        spreadName: translate(`spread.name.${spread.id}`, undefined, messages),
+        cards: request.cards.map((c) => ({
+          cardId: c.cardId,
+          orientation: c.orientation,
+          positionName: positionName(c.positionId),
+          positionMeaning: positionMeaning(c.positionId),
+        })),
+      }),
+      meta: { ...meta, latencyMs: Date.now() - startedAt },
+    }
+  }
+
 
   const v1 = generateReading({
     question: request.question,
@@ -34,14 +75,14 @@ export function localMockReading(request: ReadingRequest): StructuredReading {
     const analysis = v1.cardAnalyses.find((a) => a.cardId === c.cardId)
     return {
       cardId: c.cardId,
-      cardName: card.nameZh,
-      position: pos?.label ?? c.positionId,
+      cardName: localizeCardName(card, locale),
+      position: pos ? positionName(pos.id) : c.positionId,
       orientation: c.orientation,
       interpretation:
         analysis?.text ??
         (c.orientation === 'upright' ? card.meaningUpright : card.meaningReversed),
       connectionToQuestion: pos
-        ? `这张牌落在「${pos.label}」上，指向的是${pos.meaning}`
+        ? `这张牌落在「${positionName(pos.id)}」上，指向的是${positionMeaning(pos.id)}`
         : '',
     }
   })
@@ -49,7 +90,7 @@ export function localMockReading(request: ReadingRequest): StructuredReading {
   return {
     version: 2,
     // 短标题：headline[0] 是整段话，当标题渲染会很难看
-    readingTheme: `${spread.name} · 本地示例解读`,
+    readingTheme: `${translate(`spread.name.${spread.id}`, undefined, messages)} · 本地示例解读`,
     overallEnergy: [v1.headline[0], v1.headline[1]].filter(Boolean).join('\n\n') || v1.trend,
     cards,
     relationships: v1.relations.map((text, i) => ({
@@ -61,14 +102,6 @@ export function localMockReading(request: ReadingRequest): StructuredReading {
     answerToQuestion: v1.watchOut[0] ?? v1.trend,
     reflectionQuestions: v1.actions.slice(0, 4),
     safetyNotice: v1.safetyNotice,
-    meta: {
-      provider: 'mock',
-      model: null,
-      generatedAt: Date.now(),
-      latencyMs: Date.now() - startedAt,
-      repaired: false,
-      toneAdjusted: false,
-      fallbackReason: 'unreachable',
-    },
+    meta: { ...meta, latencyMs: Date.now() - startedAt },
   }
 }

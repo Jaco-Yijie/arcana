@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useI18n } from '@/i18n'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CardFrame } from '@/components/card/CardFrame'
 import { ThemedCardBack as CardBack } from '@/components/card/ThemedCardBack'
@@ -99,6 +100,7 @@ export function FanSpread({
   locked,
   onInteractingChange,
 }: FanSpreadProps) {
+  const { t } = useI18n()
   const reduceMotion = useReducedMotion()
   const containerRef = useRef<HTMLDivElement>(null)
   const [size, setSize] = useState({ w: 375, h: 214 })
@@ -342,8 +344,8 @@ export function FanSpread({
       tabIndex={0}
       aria-label={
         locked
-          ? '摊开的牌。手上已经有一张牌了，先把它放到牌位上'
-          : `摊开的牌，共 ${available.length} 张可选。左右方向键移动，Enter 或空格拿起`
+          ? t('a11y.fanBusy')
+          : t('a11y.fanIdle', { n: available.length })
       }
       aria-activedescendant={cursorIndex === null ? undefined : `fan-card-${cursorIndex}`}
       className="table-surface relative h-full w-full overflow-hidden rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70"
@@ -360,7 +362,7 @@ export function FanSpread({
             role="option"
             aria-selected={l.index === cursorIndex}
             /* 只播报位置，不播报牌面 —— 牌还没翻开（G-05） */
-            aria-label={`扇形里的第 ${available.indexOf(l.index) + 1} 张`}
+            aria-label={t('a11y.fanCard', { n: available.indexOf(l.index) + 1 })}
             className="absolute top-0 left-0"
             style={{
               width: l.width,

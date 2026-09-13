@@ -1,5 +1,3 @@
-import { Bilingual } from '@/components/identity/Bilingual'
-import { deckEnglish } from '@/components/identity/copy'
 /**
  * Deck Library —— 数字牌柜（Digital Tarot Cabinet）。
  *
@@ -35,13 +33,16 @@ import { CardFrame } from '@/components/card/CardFrame'
 import { DeckCardBack } from '@/components/card/DeckCardBack'
 import { DeckCover } from '@/components/deck/DeckCover'
 import { TarotCardFace } from '@/components/card/TarotCardFace'
-import { decks, getDeck } from '@/decks/registry'
+import { decks } from '@/decks/registry'
 import type { DeckDefinition } from '@/decks/types'
 import { getAtmosphere } from '@/atmosphere/registry'
 import { PREVIEW_CARD_IDS } from '@/decks/artwork/manifests'
 import { deckProgress, isDeckPlayable } from '@/decks/artwork/resolver'
 import { getCard } from '@/data/deck'
 import { useDeck } from '@/hooks/useDeck'
+import { useI18n } from '@/i18n'
+import { deckDescription, deckName, deckTagline } from '@/i18n/domain'
+import type { I18nContextValue } from '@/i18n'
 
 /**
  * 画风示例的扇形。
@@ -101,6 +102,7 @@ function DeckRow({
   onSelect: () => void
   onToggleExpand: () => void
 }) {
+  const { t } = useI18n()
   const progress = deckProgress(deck.deckId)
   const playable = isDeckPlayable(deck.deckId)
   /* 把这一套的氛围变量作用在它自己的子树上。
@@ -139,13 +141,13 @@ function DeckRow({
 
           {/* 手机端把名称贴在封面右侧，避免竖向堆太高 */}
           <span className="flex min-w-0 flex-col gap-1.5 sm:hidden">
-            <DeckHeading deck={deck} active={active} />
+            <DeckHeading deck={deck} active={active} t={t} />
           </span>
         </span>
 
         <span className="flex min-w-0 flex-1 flex-col gap-4">
           <span className="hidden min-w-0 flex-col gap-1.5 sm:flex">
-            <DeckHeading deck={deck} active={active} />
+            <DeckHeading deck={deck} active={active} t={t} />
           </span>
 
           {/* 画风示例：8 套用**完全相同**的 5 张牌。
@@ -172,7 +174,7 @@ function DeckRow({
               {progress.done} / {progress.total}
             </span>
             <span aria-hidden="true">·</span>
-            <span>{playable ? '可用' : '素材备齐后开放'}</span>
+            <span>{playable ? t('decks.available') : t('decks.pending')}</span>
           </span>
         ) : (
           <span aria-hidden="true" />
@@ -184,7 +186,7 @@ function DeckRow({
           aria-expanded={expanded}
           className="-mr-2 flex h-11 items-center px-2 text-caption text-text-faint transition-colors duration-[var(--duration-quick)] hover:text-text-low"
         >
-          {expanded ? '收起' : '看看这套'}
+          {expanded ? t('common.collapse') : t('decks.peek')}
         </button>
       </div>
 
@@ -197,7 +199,7 @@ function DeckRow({
             <DeckCardBack deckId={deck.deckId} />
           </CardFrame>
           <p className="max-w-[46ch] text-caption leading-relaxed text-text-low">
-            {deck.description}
+            {deckDescription(t, deck.deckId)}
           </p>
         </div>
       )}
@@ -205,23 +207,35 @@ function DeckRow({
   )
 }
 
-function DeckHeading({ deck, active }: { deck: DeckDefinition; active: boolean }) {
+function DeckHeading({
+  deck,
+  active,
+  t,
+}: {
+  deck: DeckDefinition
+  active: boolean
+  t: I18nContextValue['t']
+}) {
   return (
     <>
       <span className="flex items-baseline gap-2.5">
+        {/* 牌组名是这一页的主角文字，走展示字档 ——
+            它是固定文案，字符集在子集覆盖范围内（display-keys.json） */}
         <span
           className="text-[22px] leading-tight text-text-hi sm:text-[26px]"
-          /* 牌组名是写死的十个词，在 Display 子集字体的 223 字之内。
-             它是这一页的主角文字，值得用艺术字档。 */
-          style={{ fontFamily: 'var(--font-display)', fontWeight: 300, letterSpacing: '0.06em' }}
+          style={{ fontFamily: 'var(--font-display)', fontWeight: 300, letterSpacing: '0.08em' }}
         >
-          <Bilingual zh={deck.name} en={deckEnglish[deck.deckId]} />
+          {deckName(t, deck.deckId)}
         </span>
         {active && (
-          <span className="shrink-0 text-[11px] tracking-wide-caps text-silver-dim">使用中</span>
+          <span className="shrink-0 text-[11px] tracking-wide-caps text-silver-dim">
+            {t('decks.inUse')}
+          </span>
         )}
       </span>
-      <span className="text-caption leading-relaxed text-text-low">{deck.tagline}</span>
+      <span className="text-caption leading-relaxed text-text-low">
+        {deckTagline(t, deck.deckId)}
+      </span>
     </>
   )
 }
@@ -229,7 +243,7 @@ function DeckHeading({ deck, active }: { deck: DeckDefinition; active: boolean }
 export default function DeckLibraryPage({ showAll = false }: { showAll?: boolean } = {}) {
   const navigate = useNavigate()
   const { deckId, setDeckId } = useDeck()
-  const current = getDeck(deckId)
+  const { t } = useI18n()
   const playable = isDeckPlayable(deckId)
   /* 同时只展开一套 —— 多套同时展开会让页面变成一堵字墙，
      而这一页的主体本来就是封面和牌，不是文案。 */
@@ -263,22 +277,23 @@ export default function DeckLibraryPage({ showAll = false }: { showAll?: boolean
   return (
     <AppShell
       back="/"
-      title="选择牌组"
+      title={t('decks.title')}
       width="gallery"
       footer={
         <div className="flex flex-col gap-2">
           <Button
             size="lg"
             variant="primary"
+            display
             block
             disabled={!playable}
             onClick={() => navigate('/question?mode=question')}
           >
-            就用这副
+            {t('decks.useThis')}
           </Button>
           {!playable && (
             <p className="text-center text-caption text-text-faint">
-              「{current.name}」的 78 张牌面还没画完，暂时不能用来抽牌。
+              {t('decks.notPlayable', { name: deckName(t, deckId) })}
             </p>
           )}
         </div>
@@ -294,9 +309,13 @@ export default function DeckLibraryPage({ showAll = false }: { showAll?: boolean
            lg: 封面 164→273 高，扇形 108→180 高，右栏合计约 248，差 25px，可接受。 */
         className="flex flex-col gap-[var(--deck-gap)] pt-2 [--cover-w:112px] [--deck-gap:16px] [--deck-pad:20px] [--deck-radius:16px] [--fan-card-w:62px] sm:[--cover-w:140px] sm:[--deck-gap:20px] sm:[--deck-pad:24px] sm:[--fan-card-w:88px] lg:[--cover-w:164px] lg:[--deck-gap:24px] lg:[--deck-pad:28px] lg:[--fan-card-w:108px]"
       >
-        <p className="text-note text-text-mid">选一个你想待着的氛围。</p>
+        <p className="text-note text-text-mid">{t('decks.intro')}</p>
 
-        <div role="radiogroup" aria-label="牌组" className="flex flex-col gap-[var(--deck-gap)]">
+        <div
+          role="radiogroup"
+          aria-label={t('decks.groupLabel')}
+          className="flex flex-col gap-[var(--deck-gap)]"
+        >
           {shelf.map((deck) => (
             <DeckRow key={deck.deckId} {...rowProps(deck)} />
           ))}
@@ -306,7 +325,7 @@ export default function DeckLibraryPage({ showAll = false }: { showAll?: boolean
             正向陈述（「完全一样」）而不是否定式（「不会改变」）——
             连续否认三件事，等于主动提示用户这里可能有猫腻。 */}
         <p className="pt-2 text-caption leading-relaxed text-text-faint">
-          所有牌组的牌义、牌序、正逆位完全一样 —— 变的只有画和光。
+          {t('decks.footnote')}
         </p>
       </div>
     </AppShell>

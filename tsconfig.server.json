@@ -13,6 +13,8 @@
     "moduleDetection": "force",
     "noEmit": true,
     "skipLibCheck": true,
+    /* i18n 资源是 JSON，且 zh-CN.json 的结构就是 Messages 的类型来源 */
+    "resolveJsonModule": true,
 
     "paths": {
       "@/*": ["./src/*"]

@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
+import { useI18n } from '@/i18n'
 
 interface AppShellProps {
   /** 顶部返回按钮的去向。不传则不渲染返回 */
@@ -57,6 +59,7 @@ export function AppShell({
   centered = false,
 }: AppShellProps) {
   const navigate = useNavigate()
+  const { t } = useI18n()
   const goBack = () => {
     if (typeof back === 'function') back()
     else if (typeof back === 'string') navigate(back)
@@ -67,6 +70,11 @@ export function AppShell({
       className="relative mx-auto flex min-h-[100dvh] w-full flex-col"
       style={{ maxWidth: WIDTH_STYLE[width] }}
     >
+      {/* 桌面右上角的语言铭牌。手机上 .language-corner 隐藏 ——
+          那个位置会压住 header 的标题，入口改由设置页承载。
+          它是 fixed 定位，不参与本页布局，所以放在哪个层级都不影响排版。 */}
+      <LanguageSwitcher className="language-corner" />
+
       {(back || title || action) && (
         <header
           className="flex items-center gap-2 px-2"
@@ -76,7 +84,7 @@ export function AppShell({
             <button
               type="button"
               onClick={goBack}
-              aria-label="返回"
+              aria-label={t('common.back')}
               className="flex h-11 w-11 items-center justify-center rounded-sm text-text-low transition-colors duration-[var(--duration-quick)] active:text-text-hi"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">

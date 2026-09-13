@@ -281,9 +281,13 @@ function checkCtaClearance(): void {
      而且在 664px 高的窗口里它同时盖住了「开始完整解读」。 */
   check("L-04e 面板可用 Escape 关闭", /'Escape'/.test(sheetSrc) && /addEventListener\('keydown'/.test(sheetSrc))
   check('L-04f 面板有遮罩且点击外部关闭', /onPointerDown=\{onClose\}/.test(sheetSrc))
+  /* i18n 之后这里不能再匹配「收起」两个字了 —— 那句文案住在 locale 资源里。
+     断言的意图没有变：**必须有一个带文字的关闭控件**，
+     所以改成检查那个按钮以及它渲染的取词调用。 */
   check(
     'L-04g 面板有明确的文字关闭入口（小灰条对第一次来的人不构成 affordance）',
-    />\s*收起\s*</.test(sheetSrc),
+    /\{t\('common\.collapse'\)\}/.test(sheetSrc) &&
+      /aria-label=\{t\('card\.collapseMeaning'\)\}/.test(sheetSrc),
   )
   check(
     'L-04h 面板高度封顶且内部可滚动',

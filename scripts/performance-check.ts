@@ -195,14 +195,11 @@ check(
    现在改成守不变量本身：「1–2 分钟」这个说法只允许出现在 deep 分支里。
    判据是每一处出现，往前 120 字符内必须能找到 `mode === 'deep'` 与紧随的 `?`。
    这样文案怎么改都不影响，而一旦有人把它放进 standard 分支就会立刻红。 */
-const minuteHints = [...page.matchAll(/1–2 分钟/g)]
-const allInDeepBranch =
-  minuteHints.length > 0
-  && minuteHints.every((m) => /mode === 'deep'[\s\S]{0,40}\?[\s\S]{0,80}$/.test(page.slice(Math.max(0, m.index - 120), m.index)))
+const allInDeepBranch = /mode === 'deep'\s*\? t\('reading.slowDeep'/.test(page)
+  && /: t\('reading.slowStandard'/.test(page)
 check(
-  'PERF-08f 「1–2 分钟」只出现在 deep 分支，标准模式看不到',
+  'PERF-08f 深度等待说明与标准模式使用独立的语言资源',
   allInDeepBranch,
-  `${minuteHints.length} 处出现，全部在 deep 分支=${allInDeepBranch}`,
 )
 /* ══════════════════════════════════════════════════════════════
  * PERF-08h … PERF-08m —— 「牌之后」的死窗口（E3）

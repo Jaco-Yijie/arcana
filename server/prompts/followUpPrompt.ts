@@ -30,19 +30,33 @@ export interface ChatMessage {
 }
 
 const ORIENTATION = { upright: '正位', reversed: '逆位' } as const
+const ORIENTATION_EN = { upright: 'upright', reversed: 'reversed' } as const
+
+/* 语言指令。与解读那边同一套做法：system 与 user 各声明一次，
+   一前一后夹住整份中文指令，压住语言惯性。见 tarotReadingPromptV2.ts */
+const LANGUAGE_DIRECTIVE = {
+  zh: '用简体中文回答。',
+  en:
+    '**ANSWER IN ENGLISH.** The instructions below are in Chinese for internal reasons; ' +
+    'that does not change the output language. The "answer" string must be natural, ' +
+    'idiomatic English, with no Chinese characters. Card names and position names are ' +
+    'given in English below — use those exact spellings.',
+} as const
 
 /** 牌面清单。与解读 Prompt 用同一份服务端重建结果，客户端传的牌义一个字都不采信 */
 function renderCards(context: ReadingContext): string {
+  const en = context.language === 'en'
   return context.cards
     .map((c, i) => {
-      const o = ORIENTATION[c.orientation]
+      const o = en ? ORIENTATION_EN[c.orientation] : ORIENTATION[c.orientation]
       const meaning = c.orientation === 'upright' ? c.baseMeaning.upright : c.baseMeaning.reversed
       const domain =
         c.domainMeaning &&
         `\n   ${c.domainMeaning.label}向：${
           c.orientation === 'upright' ? c.domainMeaning.upright : c.domainMeaning.reversed
         }`
-      return `${i + 1}. 【${c.position.name}】${c.cardNameZh}（${c.cardName}）· ${o}
+      /* 牌名只给输出语言那一个 —— 两个都给，回答里就会夹一个中文牌名 */
+      return `${i + 1}. 【${c.position.name}】${c.displayName} · ${o}
    牌义：${meaning}${domain ?? ''}`
     })
     .join('\n')
@@ -81,7 +95,9 @@ export function buildFollowUpMessages(context: ReadingContext, ask: string, dige
   const spread = context.spread
   const q = context.question.trim()
 
-  const user = `【这次抽牌】
+  const user = `${LANGUAGE_DIRECTIVE[context.language ?? 'zh']}
+
+【这次抽牌】
 ${q ? `用户的问题：${q}` : '用户没有具体问题，是随缘抽的一张。'}
 牌阵：${spread.spreadName}（${context.cards.length} 张）
 
@@ -99,7 +115,7 @@ ${ask}
 就这个追问回答，接着上面的解读往下讲，不要从头再读一遍牌。`
 
   return [
-    { role: 'system', content: SYSTEM },
+    { role: 'system', content: `${LANGUAGE_DIRECTIVE[context.language ?? 'zh']}\n\n${SYSTEM}` },
     { role: 'user', content: user },
   ]
 }

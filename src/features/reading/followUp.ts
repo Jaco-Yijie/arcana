@@ -17,6 +17,9 @@ import type { Reading } from '@/types/session'
 import { getCard } from '@/data/deck'
 import { getSpread } from '@/data/spreads'
 import { detectRisk } from './safety'
+import { localizeCard, orient } from '@/data/deck/localized'
+import { translate } from '@/i18n/store'
+import type { LanguageCode } from '@/i18n/types'
 
 /** 追问时可用的全部上下文——**不得再扩展任何字段** */
 export interface FollowUpContext {
@@ -69,8 +72,17 @@ const OFF_TOPIC_PATTERNS = [
  * @param question 用户的追问
  * @param context 严格受限的本次抽牌上下文
  */
-export function answerFollowUp(question: string, context: FollowUpContext): string {
+export function answerFollowUp(
+  question: string,
+  context: FollowUpContext,
+  language: LanguageCode = 'zh',
+): string {
   const raw = question.trim()
+  /* 英文走独立的一条短路径。
+     下面那套中文规则识别的是中文表达（「关系」「为什么」「第二张」），
+     直译规则一条都不会命中，只会一路掉到兜底 —— 那还不如直接给
+     一段基于英文牌义的、成立的回答。 */
+  if (language === 'en') return answerFollowUpEn(raw, context)
   if (raw.length === 0) {
     return '你可以问得更具体一点，比如某张牌为什么会落在那个位置、两张牌之间是什么关系，或者你更想聚焦在哪个方面。'
   }
@@ -92,7 +104,7 @@ export function answerFollowUp(question: string, context: FollowUpContext): stri
   })
 
   // 0. 高风险话题优先处理
-  const risk = detectRisk(raw)
+  const risk = detectRisk(raw, 'zh')
   if (risk.notice) {
     return `${risk.notice}\n\n回到这次的牌：${entries[0]!.position.label}位上的${entries[0]!.title}提示的是${entries[0]!.keywords.slice(0, 3).join('、')}。如果你愿意，我们可以从这一格开始，把你的想法一点点排开。`
   }
@@ -191,4 +203,68 @@ function detectDomain(text: string): DomainKey | null {
     }
   }
   return null
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+ * 英文本地兜底回答
+ *
+ * 与中文版同一条纪律：只谈这次摊在桌上的牌，不做通用助手，
+ * 不预告结果，不重抽。区别只在它更短 —— 兜底文本的价值在于
+ * 「屏幕上不空、而且每句都成立」，不在于篇幅。
+ * ══════════════════════════════════════════════════════════ */
+function answerFollowUpEn(raw: string, context: FollowUpContext): string {
+  const spread = getSpread(context.spreadId)
+  const entries = context.cards.map((c) => {
+    const card = getCard(c.cardId)
+    const text = localizeCard(card, 'en-US')
+    const position = spread.positions.find((p) => p.id === c.positionId) ?? spread.positions[0]!
+    const label = translate(`spread.position.${spread.id}.${position.id}.label`)
+    return {
+      name: text.name,
+      label,
+      meaning: c.orientation === 'upright' ? text.meaningUpright : text.meaningReversed,
+      advice: orient(text.advice, c.orientation),
+      keywords: (c.orientation === 'upright'
+        ? text.keywordsUpright
+        : text.keywordsReversed
+      ).slice(0, 3),
+    }
+  })
+
+  if (raw.length === 0) {
+    return 'Ask something more specific — why a particular card landed where it did, how two of them relate, or which side of this you would like to focus on.'
+  }
+
+  const risk = detectRisk(raw, 'en')
+  if (risk.notice) {
+    const first = entries[0]!
+    return `${risk.notice}\n\nBack to the cards: ${first.name} in "${first.label}" points at ${first.keywords.join(', ')}. If you want, we can start there and lay your thinking out one piece at a time.`
+  }
+
+  if (isOffTopic(raw)) {
+    return `That is outside what this draw can speak to — all I can see is your question, the spread, and the ${entries.length} cards you turned over.\n\nIf you would like to keep going, we could look at ${entries
+      .map((e) => `${e.name} in "${e.label}"`)
+      .join(', ')}, or you can tell me which part you want the focus on.`
+  }
+
+  /* 用户点名了某张牌或某个牌位 */
+  const lowered = raw.toLowerCase()
+  const named = entries.filter(
+    (e) => lowered.includes(e.name.toLowerCase()) || lowered.includes(e.label.toLowerCase()),
+  )
+
+  if (named.length >= 2) {
+    const [a, b] = [named[0]!, named[1]!]
+    return `Putting ${a.name} in "${a.label}" next to ${b.name} in "${b.label}":\n\n${a.name} is about ${a.keywords.join(', ')}; ${b.name} is about ${b.keywords.join(', ')}. Read together, the first describes the conditions and the second describes what those conditions are producing.\n\nIf things continue as they are: ${b.advice}`
+  }
+
+  if (named.length === 1) {
+    const e = named[0]!
+    return `Looking again at ${e.name} in "${e.label}".\n\n${e.meaning}\n\nPut another way, take it as a prompt: ${e.advice} It describes a current state, not a finished outcome.\n\nKeywords: ${e.keywords.join(' · ')}.`
+  }
+
+  const first = entries[0]!
+  const last = entries[entries.length - 1]!
+  return `Reading your question against this spread: the clearest thread runs from ${first.name} in "${first.label}" to ${last.name} in "${last.label}".\n\n${first.meaning} ${last.meaning}\n\nThe part within your reach right now: ${last.advice}`
 }

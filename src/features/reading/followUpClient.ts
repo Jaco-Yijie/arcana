@@ -21,6 +21,8 @@
 import type { FollowUpRequest, FollowUpResponse, ReadingProviderId } from '@/types/reading'
 import type { FollowUpContext } from './followUp'
 import { answerFollowUp } from './followUp'
+import { getLocale } from '@/i18n/store'
+import { languageCode } from '@/i18n/types'
 
 export interface FollowUpResult {
   answer: string
@@ -46,6 +48,7 @@ export function buildFollowUpRequest(
       orientation: c.orientation,
     })),
     ask,
+    language: languageCode(getLocale()),
     readingDigest: {
       headline: r.headline?.join(' ') ?? '',
       summary: r.trend ?? '',
@@ -63,7 +66,7 @@ export async function requestFollowUp(
   const payload = buildFollowUpRequest(sessionId, context, ask)
   if (digest) payload.readingDigest = digest
 
-  const local = (): string => answerFollowUp(ask, context)
+  const local = (): string => answerFollowUp(ask, context, languageCode(getLocale()))
 
   let res: Response
   try {

@@ -18,6 +18,7 @@
  */
 
 import { useId, useState } from 'react'
+import { useI18n } from '@/i18n'
 import type { CardBackComposition } from '@/decks/types'
 import type { DeckId } from '@/decks/ids'
 import { getDeck } from '@/decks/registry'
@@ -274,12 +275,15 @@ const COMPOSITIONS: Record<
 function MissingBack({
   deckId,
   showPath,
-  reason = '卡背未提供',
+  reasonKey = 'backMissing',
 }: {
   deckId: DeckId
   showPath: boolean
-  reason?: string
+  /** i18n key 的最后一段：asset.backMissing / asset.backFailed */
+  reasonKey?: 'backMissing' | 'backFailed'
 }) {
+  const { t } = useI18n()
+  const reason = t(`asset.${reasonKey}`)
   return (
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 bg-bg-void/92 p-1.5 text-center">
       <span
@@ -315,7 +319,7 @@ export function DeckCardBack({ deckId, simplified = false, className = '' }: Pro
         <MissingBack
           deckId={deckId}
           showPath={!simplified}
-          reason={failed ? '卡背加载失败' : '卡背未提供'}
+          reasonKey={failed ? 'backFailed' : 'backMissing'}
         />
       )
     }

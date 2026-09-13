@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react'
 import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { I18nProvider } from '@/i18n'
 import { SettingsProvider } from '@/store/SettingsContext'
 import { SessionProvider } from '@/store/SessionContext'
 import { DeckProvider } from '@/store/DeckContext'
@@ -74,49 +75,51 @@ const Router = import.meta.env.VITE_DEPLOY_TARGET === 'streamlit' ? HashRouter :
 
 export default function App() {
   return (
-    <SettingsProvider>
-      <DeckProvider>
-        <SessionProvider>
-          {/* 会话冻结后，把牌组主题锁在那一副上（见组件注释） */}
-          <DeckThemeSync />
-          <Router>
-            <DeckAtmosphere />
-            <Suspense fallback={<RouteFallback />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              {/* 牌组选择是正式流程的一步（首页「带着问题来」→ 这里 → 问题页）。
-                  V2.4 曾经有两个互相矛盾的牌组页：/deck 写着「当前唯一牌组」，
-                  /decks 写着五套。现在收敛成一个，旧路径重定向保住书签。 */}
-              <Route path="/decks" element={<DeckLibraryPage />} />
-              <Route path="/deck" element={<Navigate to="/decks" replace />} />
-              <Route path="/question" element={<QuestionPage />} />
-              <Route path="/spread" element={<SpreadPage />} />
-              <Route path="/focus" element={<FocusPage />} />
-              <Route path="/table/shuffle" element={<ShufflePage />} />
-              <Route path="/table/cut" element={<CutPage />} />
-              <Route path="/table/draw" element={<DrawPage />} />
-              <Route path="/table/reveal" element={<RevealPage />} />
-              <Route path="/reading" element={<ReadingPage />} />
-              <Route path="/journal" element={<JournalPage />} />
-              <Route path="/journal/:id" element={<JournalDetailPage />} />
-              <Route path="/share/:id" element={<SharePage />} />
-              <Route path="/settings" element={<SettingsPage />} />
-              {/* DEV 专用，不进任何导航。生产构建里 BenchmarkReviewPage 为 null，
-                  这一行整体不渲染 —— 路由表里没有它，"*" 会把 /dev/benchmark 送回首页 */}
-              {BenchmarkReviewPage && (
-                <Route path="/dev/benchmark" element={<BenchmarkReviewPage />} />
-              )}
-              {/* 未开工的牌组仍然要能看 —— 但只在 dev，不污染用户正式页面。
-                  生产构建里 import.meta.env.DEV 为 false，这一行整体不渲染。 */}
-              {import.meta.env.DEV && (
-                <Route path="/dev/decks" element={<DeckLibraryPage showAll />} />
-              )}
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-            </Suspense>
-          </Router>
-        </SessionProvider>
-      </DeckProvider>
-    </SettingsProvider>
+    <I18nProvider>
+      <SettingsProvider>
+        <DeckProvider>
+          <SessionProvider>
+            {/* 会话冻结后，把牌组主题锁在那一副上（见组件注释） */}
+            <DeckThemeSync />
+            <Router>
+              <DeckAtmosphere />
+              <Suspense fallback={<RouteFallback />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                {/* 牌组选择是正式流程的一步（首页「带着问题来」→ 这里 → 问题页）。
+                    V2.4 曾经有两个互相矛盾的牌组页：/deck 写着「当前唯一牌组」，
+                    /decks 写着五套。现在收敛成一个，旧路径重定向保住书签。 */}
+                <Route path="/decks" element={<DeckLibraryPage />} />
+                <Route path="/deck" element={<Navigate to="/decks" replace />} />
+                <Route path="/question" element={<QuestionPage />} />
+                <Route path="/spread" element={<SpreadPage />} />
+                <Route path="/focus" element={<FocusPage />} />
+                <Route path="/table/shuffle" element={<ShufflePage />} />
+                <Route path="/table/cut" element={<CutPage />} />
+                <Route path="/table/draw" element={<DrawPage />} />
+                <Route path="/table/reveal" element={<RevealPage />} />
+                <Route path="/reading" element={<ReadingPage />} />
+                <Route path="/journal" element={<JournalPage />} />
+                <Route path="/journal/:id" element={<JournalDetailPage />} />
+                <Route path="/share/:id" element={<SharePage />} />
+                <Route path="/settings" element={<SettingsPage />} />
+                {/* DEV 专用，不进任何导航。生产构建里 BenchmarkReviewPage 为 null，
+                    这一行整体不渲染 —— 路由表里没有它，"*" 会把 /dev/benchmark 送回首页 */}
+                {BenchmarkReviewPage && (
+                  <Route path="/dev/benchmark" element={<BenchmarkReviewPage />} />
+                )}
+                {/* 未开工的牌组仍然要能看 —— 但只在 dev，不污染用户正式页面。
+                    生产构建里 import.meta.env.DEV 为 false，这一行整体不渲染。 */}
+                {import.meta.env.DEV && (
+                  <Route path="/dev/decks" element={<DeckLibraryPage showAll />} />
+                )}
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+              </Suspense>
+            </Router>
+          </SessionProvider>
+        </DeckProvider>
+      </SettingsProvider>
+    </I18nProvider>
   )
 }

@@ -1,3 +1,4 @@
+import { useLocalizedContent, TranslationStatus } from '@/i18n/useLocalizedContent'
 import { useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
@@ -9,18 +10,25 @@ import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
 import { resolveDeckId } from '@/decks/ids'
 import { formatRelative, truncate } from '@/utils/format'
+import { useI18n } from '@/i18n'
+import { spreadName } from '@/i18n/domain'
 
 export default function JournalPage() {
   const navigate = useNavigate()
-  const summaries = useMemo(() => listEntries().map(toSummary), [])
+  const { t, locale } = useI18n()
+  const sourceSummaries = useMemo(() => listEntries().map(toSummary), [])
+
+  const localized = useLocalizedContent(sourceSummaries)
+  const summaries = localized.value
+  if (localized.pending) return <AppShell back="/" title={t('journal.title')}><TranslationStatus error={localized.error} retry={localized.retry} /></AppShell>
 
   if (summaries.length === 0) {
     return (
-      <AppShell back="/" title="塔罗日记">
+      <AppShell back="/" title={t('journal.title')}>
         <div className="flex flex-col items-center gap-5 pt-24 text-center">
-          <p className="text-note text-text-low">还没有记录。</p>
+          <p className="text-note text-text-low">{t('journal.empty')}</p>
           <Button size="lg" variant="primary" onClick={() => navigate('/')}>
-            去抽一张
+            {t('journal.goDraw')}
           </Button>
         </div>
       </AppShell>
@@ -28,7 +36,7 @@ export default function JournalPage() {
   }
 
   return (
-    <AppShell back="/" title="塔罗日记">
+    <AppShell back="/" title={t('journal.title')}>
       <div className="flex flex-col gap-3 pt-2">
         {summaries.map((s) => (
           <Link
@@ -38,10 +46,10 @@ export default function JournalPage() {
           >
             <div className="flex items-baseline justify-between gap-3">
               <span className="truncate text-note text-text-hi">
-                {s.question ? truncate(s.question, 20) : '随缘抽一张'}
+                {s.question ? truncate(s.question, 20) : t('journal.randomDraw')}
               </span>
               <span className="shrink-0 text-caption text-text-faint">
-                {formatRelative(s.createdAt)}
+                {formatRelative(s.createdAt, locale)}
               </span>
             </div>
 
@@ -64,7 +72,7 @@ export default function JournalPage() {
               ))}
               </div>
               <span className="shrink-0 whitespace-nowrap text-caption text-text-faint">
-                {s.spreadId ? getSpread(s.spreadId).name : ''}
+                {s.spreadId ? spreadName(t, getSpread(s.spreadId).id) : ''}
               </span>
             </div>
 

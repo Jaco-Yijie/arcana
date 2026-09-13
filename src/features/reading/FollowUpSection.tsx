@@ -25,6 +25,7 @@
 
 import { useRef, useState } from 'react'
 import { Button } from '@/components/atoms/Button'
+import { useI18n } from '@/i18n'
 import type { FollowUpMessage } from '@/types/session'
 
 interface Props {
@@ -35,6 +36,7 @@ interface Props {
 }
 
 export function FollowUpSection({ messages, busy, error, onSend }: Props) {
+  const { t } = useI18n()
   const [pending, setPending] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -47,9 +49,9 @@ export function FollowUpSection({ messages, busy, error, onSend }: Props) {
 
   return (
     <section className="mt-10 border-t border-line-hairline pt-6">
-      <h3 className="font-serif text-[19px] leading-tight text-text-hi">继续问这次牌阵</h3>
-      <p className="mt-1.5 text-caption leading-relaxed text-text-faint">
-        如果还有没想明白的地方，可以沿着这组牌继续问。牌不会变，也不会重抽。
+      <h3 className="ritual-heading ritual-heading-marked">{t('reading.followUp.title')}</h3>
+      <p className="mt-2 text-caption leading-relaxed text-text-faint">
+        {t('reading.followUp.hint')}
       </p>
 
       {messages.length > 0 && (
@@ -57,12 +59,12 @@ export function FollowUpSection({ messages, busy, error, onSend }: Props) {
           {messages.map((m) =>
             m.role === 'user' ? (
               <div key={m.id} className="flex flex-col gap-1">
-                <span className="text-caption tracking-wide-caps text-text-faint">你问</span>
+                <span className="eyebrow">{t('reading.followUp.you')}</span>
                 <p className="text-read text-text-hi">{m.content}</p>
               </div>
             ) : (
               <div key={m.id} className="flex flex-col gap-1.5">
-                <span className="text-caption tracking-wide-caps text-silver-dim">牌阵延伸</span>
+                <span className="eyebrow">{t('reading.followUp.answer')}</span>
                 {m.content.split(/\n{2,}/).map((p, i) => (
                   <p key={i} className="text-read text-text-mid">
                     {p}
@@ -77,7 +79,7 @@ export function FollowUpSection({ messages, busy, error, onSend }: Props) {
       {/* 加载态：不伪造进度百分比，也不假装是模型思维链（GV2-11） */}
       {busy && (
         <p className="mt-5 text-note text-text-faint" aria-live="polite">
-          正在顺着这组牌想一想……
+          {t('reading.followUp.busy')}
         </p>
       )}
 
@@ -100,14 +102,16 @@ export function FollowUpSection({ messages, busy, error, onSend }: Props) {
             }
           }}
           disabled={busy}
-          aria-label="继续问这次牌阵"
+          aria-label={t('reading.followUp.title')}
           placeholder={
-            messages.length === 0 ? '例如：那我最需要注意的是什么？' : '再问一个问题…'
+            messages.length === 0
+              ? t('reading.followUp.placeholderFirst')
+              : t('reading.followUp.placeholderMore')
           }
           className="h-12 min-w-0 flex-1 rounded-sm border border-line-hairline bg-bg-void/50 px-3.5 text-read text-text-hi outline-none transition-colors duration-[var(--duration-quick)] placeholder:text-text-faint focus:border-silver/40 disabled:opacity-50"
         />
         <Button size="md" variant="quiet" onClick={submit} disabled={!pending.trim() || busy}>
-          发送
+          {t('common.send')}
         </Button>
       </div>
     </section>

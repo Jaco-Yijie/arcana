@@ -1,6 +1,7 @@
+import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
 import { ArtBackdrop } from '@/components/identity/ArtBackdrop'
-import { Bilingual } from '@/components/identity/Bilingual'
 import { Button } from '@/components/atoms/Button'
+import { useI18n } from '@/i18n'
 /**
  * Intro Cover —— 进入项目之前的那一层。
  *
@@ -68,6 +69,7 @@ interface Props {
 
 export default function IntroCover({ onEnter }: Props) {
   const { deckId } = useDeck()
+  const { t } = useI18n()
   const [leaving, setLeaving] = useState(false)
 
   const enter = () => {
@@ -99,39 +101,39 @@ export default function IntroCover({ onEnter }: Props) {
         if (leaving && e.propertyName === 'opacity') onEnter()
       }}
     >
-      <ArtBackdrop cover />
+      <LanguageSwitcher className="language-corner" />
+      <ArtBackdrop variant="cover" />
       {/* 视觉中心：牌组徽记。不另造一个纹章 —— 这个记号在氛围层与首页
           已经出现过，用同一个才成得了「这个项目的标记」。 */}
       <DeckSigil deckId={deckId} size="clamp(5.5rem, 22vw, 9rem)" opacity={0.55} />
 
+      {/* 品牌名两侧的刻线由 .oracle-brand 画 —— 它让 ARCANA 读作
+          一本书的扉页题名，而不是页眉里的站点标识 */}
       <h1
-        className="mt-10 text-center text-text-hi"
-        style={{
-          fontFamily: 'var(--font-oracle)',
-          fontSize: 'var(--text-brand-cover)',
-          /* Cinzel 的 400 已经很有分量，再加重会变成"厚"而不是"刻" */
-          fontWeight: 400,
-          letterSpacing: 'var(--tracking-oracle)',
-          lineHeight: 1.04,
-        }}
+        className="oracle oracle-brand mt-9 text-center"
+        style={{ fontSize: 'var(--text-brand-cover)' }}
       >
-        Arcana
+        {t('app.brand')}
       </h1>
 
-      <p
-        className="mt-6 max-w-[24rem] text-center text-text-low"
-        style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(0.95rem, 3.6vw, 1.125rem)',
-          lineHeight: 2,
-          letterSpacing: '0.05em',
-        }}
-      >
-        <Bilingual name="cover" />
+      <p className="rule-gold mt-6 w-[min(20rem,72vw)]" aria-hidden="true">
+        <span className="rule-node" />
       </p>
 
-      <Button onClick={enter} autoFocus size="lg" variant="primary" subtitle="Enter the Reading" className="mt-10">
-        开始占卜
+      <p
+        className="mt-6 max-w-[26rem] text-center text-text-low"
+        style={{
+          fontFamily: 'var(--font-display)',
+          fontSize: 'clamp(0.95rem, 3.4vw, 1.125rem)',
+          lineHeight: 2,
+          letterSpacing: '0.08em',
+        }}
+      >
+        {t('cover.tagline')}
+      </p>
+
+      <Button onClick={enter} autoFocus size="lg" variant="primary" display className="mt-10">
+        {t('cover.enter')}
       </Button>
 
       {/* 用 text-low 而不是 text-faint：实测 faint 在这个底色上只有 3.11:1，
@@ -139,9 +141,9 @@ export default function IntroCover({ onEnter }: Props) {
           封面上一共就四行字，没有一行可以是「看不清也无所谓」的。 */}
       <p
         className="mt-7 text-center text-caption text-text-low"
-        style={{ letterSpacing: '0.04em' }}
+        style={{ letterSpacing: '0.08em' }}
       >
-        亲手洗牌、切牌、摊牌、翻牌
+        {t('cover.hint')}
       </p>
     </div>
   )

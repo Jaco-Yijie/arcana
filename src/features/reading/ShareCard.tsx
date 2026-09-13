@@ -1,5 +1,3 @@
-import { Bilingual } from '@/components/identity/Bilingual'
-import { deckEnglish, positionEnglish } from '@/components/identity/copy'
 /**
  * 分享卡（Share Card）—— 固定 4:5 的独立 DOM。
  *
@@ -31,21 +29,38 @@ import type { DeckId } from '@/decks/ids'
 import { CardFrame } from '@/components/card/CardFrame'
 import { TarotCardFace } from '@/components/card/TarotCardFace'
 import { DeckSigil } from '@/components/deck/DeckSigil'
-import { getDeck } from '@/decks/registry'
+import { useI18n } from '@/i18n'
+import { deckName } from '@/i18n/domain'
 
+/**
+ * 【所有文本都由调用方本地化后传进来】
+ * 这个组件不自己取词（牌位名、牌名除外的一切）—— 分享卡是**一整张图**，
+ * 它必须整份是同一种语言。让它自己零散取词，很容易出现
+ * 「英文版式里夹一个中文牌位名」那种半截状态。
+ */
 export interface ShareCardEntry {
   deckId: DeckId
+  /** 已本地化的牌阵名 */
   spreadName: string | null
-  cards: { label: string; card: TarotCard; orientation: 'upright' | 'reversed' }[]
+  cards: {
+    /** 已本地化的牌位名 */
+    label: string
+    /** 已本地化的牌名 */
+    cardName: string
+    card: TarotCard
+    orientation: 'upright' | 'reversed'
+  }[]
   /** 一句核心结论。取 readingTheme / headline[0] */
   insight: string | null
   /** 用户主动勾选后才传 */
   question?: string | null
   date: string
+  /** 右下角那行小字（已本地化） */
+  footer: string
 }
 
 export function ShareCard({ entry }: { entry: ShareCardEntry }) {
-  const deck = getDeck(entry.deckId)
+  const { t } = useI18n()
   const n = entry.cards.length
   /* 牌宽按张数收缩，保证 1–5 张都能在同一版式里排下且不溢出。
      单位是 cqw（容器宽度百分比）—— 预览与导出尺寸不同，版式必须一致。 */
@@ -72,7 +87,7 @@ export function ShareCard({ entry }: { entry: ShareCardEntry }) {
             Arcana
           </p>
           <p className="mt-[1cqw] text-text-faint" style={{ fontSize: '2.6cqw' }}>
-            <Bilingual zh={deck.name} en={deckEnglish[deck.deckId]} className="share-position" />
+            {deckName(t, entry.deckId)}
             {entry.spreadName ? ` · ${entry.spreadName}` : ''}
           </p>
         </header>
@@ -95,11 +110,11 @@ export function ShareCard({ entry }: { entry: ShareCardEntry }) {
                 className="tracking-wide-caps text-text-faint"
                 style={{ fontSize: '2.2cqw' }}
               >
-                <Bilingual zh={c.label} en={positionEnglish(c.label)} className="share-position" />
+                {c.label}
               </span>
               <span className="text-text-low" style={{ fontSize: '2.2cqw' }}>
-                {c.card.nameZh}
-                {c.orientation === 'reversed' ? '·逆' : ''}
+                {c.cardName}
+                {c.orientation === 'reversed' ? ` · ${t('card.reversedShort')}` : ''}
               </span>
             </div>
           ))}
@@ -125,7 +140,7 @@ export function ShareCard({ entry }: { entry: ShareCardEntry }) {
               {entry.date}
             </span>
             <span className="tracking-wide-caps text-text-faint" style={{ fontSize: '2.2cqw' }}>
-              亲手抽出的牌 · ARCANA
+              {entry.footer}
             </span>
           </div>
         </div>

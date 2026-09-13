@@ -1,3 +1,4 @@
+import { useLocalizedContent, TranslationStatus } from '@/i18n/useLocalizedContent'
 import { useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
@@ -7,6 +8,9 @@ import { getEntry } from '@/store/journalStore'
 import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
 import { resolveDeckId } from '@/decks/ids'
+import { useI18n } from '@/i18n'
+import { positionLabel, spreadName } from '@/i18n/domain'
+import { useCardName } from '@/hooks/useCardText'
 
 /**
  * 分享预览。不接任何真实社交网络 SDK。
@@ -16,14 +20,19 @@ import { resolveDeckId } from '@/decks/ids'
 export default function SharePage() {
   const { id } = useParams()
   const navigate = useNavigate()
+  const { t, locale } = useI18n()
+  const cardName = useCardName()
   const entry = useMemo(() => (id ? getEntry(id) : null), [id])
   const [showQuestion, setShowQuestion] = useState(false)
   const [copied, setCopied] = useState(false)
 
+  const localized = useLocalizedContent(useMemo(() => ({ insight: entry?.structuredReading?.readingTheme ?? entry?.reading?.headline[0] ?? '', question: showQuestion ? entry?.question ?? '' : '' }), [entry, showQuestion]))
+
+  if (localized.pending) return <AppShell back={`/journal/${id}`}><TranslationStatus error={localized.error} retry={localized.retry} /></AppShell>
   if (!entry) {
     return (
-      <AppShell back="/journal" title="分享">
-        <p className="pt-24 text-center text-note text-text-low">找不到这条记录。</p>
+      <AppShell back="/journal" title={t('share.titleShort')}>
+        <p className="pt-24 text-center text-note text-text-low">{t('share.notFound')}</p>
       </AppShell>
     )
   }
@@ -40,26 +49,34 @@ export default function SharePage() {
 
   const shareEntry: ShareCardEntry = {
     deckId: resolveDeckId(entry.deckId, entry.deckSchema),
-    spreadName: spread?.name ?? null,
+    spreadName: spread ? spreadName(t, spread.id) : null,
     cards: cards.map(({ pos, card, orientation }) => ({
-      label: pos.label,
+      label: spread ? positionLabel(t, spread.id, pos.id) : pos.id,
+      cardName: cardName(card),
       card,
       orientation,
     })),
     /* 核心结论优先取 V2 结构化解读的主题句；老记录回落到 V1 headline */
-    insight: entry.structuredReading?.readingTheme ?? entry.reading?.headline[0] ?? null,
+    insight: localized.value.insight,
     /* 隐私：只有用户主动勾选才带上原问题 */
-    question: showQuestion ? entry.question : null,
-    date: new Date(entry.createdAt).toLocaleDateString('zh-CN'),
+    question: showQuestion ? localized.value.question : null,
+    date: new Date(entry.createdAt).toLocaleDateString(locale),
+    footer: t('share.footer'),
   }
 
+  /* 复制出去的纯文本也必须整份是同一种语言 —— 它会被贴到别处，
+     而那里没有我们的界面来解释一个中英混排的片段是什么。 */
   const text = [
-    spread ? `牌阵：${spread.name}` : '',
-    ...cards.map(
-      (c) => `${c.pos.label}：${c.card.nameZh}（${c.orientation === 'reversed' ? '逆位' : '正位'}）`,
+    spread ? t('share.text.spread', { name: spreadName(t, spread.id) }) : '',
+    ...cards.map((c) =>
+      t('share.text.card', {
+        position: spread ? positionLabel(t, spread.id, c.pos.id) : c.pos.id,
+        card: cardName(c.card),
+        orientation: c.orientation === 'reversed' ? t('card.reversed') : t('card.upright'),
+      }),
     ),
-    showQuestion && entry.question ? `问题：${entry.question}` : '',
-    entry.reading?.headline[0] ?? '',
+    showQuestion && entry.question ? t('share.text.question', { text: localized.value.question }) : '',
+    localized.value.insight,
   ]
     .filter(Boolean)
     .join('\n')
@@ -77,10 +94,10 @@ export default function SharePage() {
   return (
     <AppShell
       back={`/journal/${entry.id}`}
-      title="分享预览"
+      title={t('share.title')}
       footer={
         <Button size="lg" variant="primary" block onClick={copy}>
-          {copied ? '已复制' : '复制文案'}
+          {copied ? t('share.copied') : t('share.copy')}
         </Button>
       }
     >
@@ -91,14 +108,13 @@ export default function SharePage() {
 
         <p className="px-1 text-caption text-text-faint">
           {/* 如实说明为什么没有「保存图片」按钮，而不是给一个上线就坏的按钮。 */}
-          长按或截图保存这张卡片。导出 PNG 需要牌面来源允许跨源读取
-          （当前对象存储未开放 CORS），暂未提供。
+          {t('share.exportNote')}
         </p>
 
         <label className="flex items-center justify-between gap-4 px-1">
           <span className="flex flex-col gap-0.5">
-            <span className="text-body text-text-hi">显示我的原问题</span>
-            <span className="text-caption text-text-faint">默认关闭</span>
+            <span className="text-body text-text-hi">{t('share.showQuestion')}</span>
+            <span className="text-caption text-text-faint">{t('share.showQuestionHint')}</span>
           </span>
           <input
             type="checkbox"
@@ -109,7 +125,7 @@ export default function SharePage() {
         </label>
 
         <p className="px-1 text-caption text-text-faint">
-          笔记、心情、后来发生了什么不会出现在分享内容里。
+          {t('share.privacyNote')}
         </p>
 
         <button
@@ -117,7 +133,7 @@ export default function SharePage() {
           onClick={() => navigate(`/journal/${entry.id}`)}
           className="text-caption text-text-faint"
         >
-          返回记录
+          {t('share.backToRecord')}
         </button>
       </div>
     </AppShell>

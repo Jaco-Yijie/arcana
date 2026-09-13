@@ -11,6 +11,8 @@
  */
 
 /** 高风险类别 */
+import type { LanguageCode } from '@/i18n/types'
+
 export type RiskCategory = 'medical' | 'financial' | 'legal' | 'harm'
 
 export type RiskLevel = 'none' | 'caution'
@@ -19,6 +21,7 @@ export interface RiskResult {
   level: RiskLevel
   categories: RiskCategory[]
   /** 命中时给用户看的提示文案，未命中为 null */
+  /** 已本地化的提示文本。语言由 `detectRisk` 的第二个参数决定，默认中文。 */
   notice: string | null
 }
 
@@ -54,20 +57,49 @@ const RISK_KEYWORDS: Record<RiskCategory, string[]> = {
   ],
 }
 
-/** 简报 §22 的通用提示文案 */
-export const GENERAL_SAFETY_NOTICE =
-  '塔罗更适合用于整理思路和提供不同观察角度，不应该替代专业意见或现实判断。这次的解读会围绕你的想法本身展开，不做确定性的预测。'
+/* ── 安全提示文案（简报 §22）──
+   【为什么不搬进 i18n 的 locale JSON】
+   这几条**服务端也要用** —— rebuildContext 会把 notice 透传给模型与前端，
+   而服务端跑在 Node 里，不经过 React 与 i18n Provider。
+   留在这个共享模块里，客户端与服务端读到的是逐字相同的一份；
+   安全提示两侧不一致，比多一处文案表糟糕得多。 */
+const NOTICES: Record<
+  LanguageCode,
+  { general: string; harm: string; withCategories: (labels: string) => string }
+> = {
+  zh: {
+    general:
+      '塔罗更适合用于整理思路和提供不同观察角度，不应该替代专业意见或现实判断。这次的解读会围绕你的想法本身展开，不做确定性的预测。',
+    harm: '这个话题超出了一次抽牌能承担的范围。如果你现在很难受，请优先联系你信任的人，或者当地的心理援助与紧急服务；塔罗可以陪你整理想法，但它帮不上这一部分的忙。',
+    withCategories: (labels) => `这个问题涉及${labels}方面的判断。`,
+  },
+  en: {
+    general:
+      'Tarot suits organising your thinking and offering a different angle; it does not replace professional advice or a real-world judgement. This reading stays with your own thinking and makes no definite predictions.',
+    harm: 'This topic is beyond what a single reading can carry. If things are hard right now, please reach out first to someone you trust, or to your local mental-health or emergency services. Tarot can help you sort through your thoughts; it cannot help with this part.',
+    withCategories: (labels) => `This question touches on ${labels}. `,
+  },
+}
 
-/** 危险行为类的额外文案：给方向，不说教 */
-export const HARM_SAFETY_NOTICE =
-  '这个话题超出了一次抽牌能承担的范围。如果你现在很难受，请优先联系你信任的人，或者当地的心理援助与紧急服务；塔罗可以陪你整理想法，但它帮不上这一部分的忙。'
+/** @deprecated 用 `detectRisk(text, language).notice`。保留导出面以免破坏既有引用。 */
+export const GENERAL_SAFETY_NOTICE = NOTICES.zh.general
+/** @deprecated 同上 */
+export const HARM_SAFETY_NOTICE = NOTICES.zh.harm
 
-/** 各类别在提示里的中文说法 */
-const CATEGORY_LABEL: Record<RiskCategory, string> = {
-  medical: '身体或医疗',
-  financial: '高风险财务',
-  legal: '法律决定',
-  harm: '安全',
+/** 各类别在提示里的说法 */
+const CATEGORY_LABEL: Record<LanguageCode, Record<RiskCategory, string>> = {
+  zh: {
+    medical: '身体或医疗',
+    financial: '高风险财务',
+    legal: '法律决定',
+    harm: '安全',
+  },
+  en: {
+    medical: 'physical health or medical decisions',
+    financial: 'high-risk financial decisions',
+    legal: 'legal decisions',
+    harm: 'personal safety',
+  },
 }
 
 const ALL_CATEGORIES: RiskCategory[] = ['medical', 'financial', 'legal', 'harm']
@@ -76,7 +108,8 @@ const ALL_CATEGORIES: RiskCategory[] = ['medical', 'financial', 'legal', 'harm']
  * 检测一段文本是否触及高风险话题。
  * @param text 用户输入的问题、追问，或任何将进入 Reading 的原始文本
  */
-export function detectRisk(text: string): RiskResult {
+export function detectRisk(text: string, language: LanguageCode = 'zh'): RiskResult {
+  const copy = NOTICES[language] ?? NOTICES.zh
   const normalized = text.toLowerCase()
   const categories: RiskCategory[] = []
 
@@ -95,14 +128,16 @@ export function detectRisk(text: string): RiskResult {
 
   // 危险行为优先，其提示更明确，也不与其他类别叠加成长篇。
   if (categories.includes('harm')) {
-    return { level: 'caution', categories, notice: HARM_SAFETY_NOTICE }
+    return { level: 'caution', categories, notice: copy.harm }
   }
 
-  const labels = categories.map((c) => CATEGORY_LABEL[c]).join('、')
+  const labels = categories
+    .map((c) => CATEGORY_LABEL[language][c])
+    .join(language === 'zh' ? '、' : ', ')
   return {
     level: 'caution',
     categories,
-    notice: `这个问题涉及${labels}方面的判断。${GENERAL_SAFETY_NOTICE}`,
+    notice: `${copy.withCategories(labels)}${copy.general}`,
   }
 }
 

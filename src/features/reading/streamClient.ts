@@ -11,6 +11,7 @@
  */
 
 import type { ReadingError, ReadingRequest, StructuredReading } from '@/types/reading'
+import { translate } from '@/i18n/store'
 
 export type StreamPhase = 'thinking' | 'writing'
 
@@ -26,11 +27,18 @@ export interface StreamOutcome {
   reading: StructuredReading
 }
 
+/** 与 readingClient 同一条理由：错误码是契约，文本由前端按语言渲染 */
+function localizeError(error: ReadingError): string {
+  const key = `reading.errorCode.${error.code}`
+  const text = translate(key)
+  return text === key ? error.message : text
+}
+
 export class StreamReadingError extends Error {
   code: ReadingError['code']
   retryable: boolean
   constructor(error: ReadingError) {
-    super(error.message)
+    super(localizeError(error))
     this.code = error.code
     this.retryable = error.retryable
   }
@@ -51,7 +59,7 @@ export async function streamReading(
   if (!res.ok || !res.body) {
     throw new StreamReadingError({
       code: 'network-error',
-      message: '没有连上解读服务。这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。',
+      message: translate('reading.error.network'),
       retryable: true,
       canFallbackToMock: false,
     })
@@ -109,7 +117,7 @@ export async function streamReading(
   if (!result) {
     throw new StreamReadingError({
       code: 'empty-response',
-      message: '这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。',
+      message: translate('reading.error.generic'),
       retryable: true,
       canFallbackToMock: false,
     })

@@ -1,5 +1,5 @@
 import { ArtBackdrop } from '@/components/identity/ArtBackdrop'
-import { Bilingual } from '@/components/identity/Bilingual'
+import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Panel } from '@/components/atoms/Panel'
@@ -8,9 +8,10 @@ import { CardFrame } from '@/components/card/CardFrame'
 import { TarotCardFace } from '@/components/card/TarotCardFace'
 import { DeckSigil } from '@/components/deck/DeckSigil'
 import { getCard } from '@/data/deck'
-import { getDeck } from '@/decks/registry'
 import { useDeck } from '@/hooks/useDeck'
 import { useSession } from '@/hooks/useSession'
+import { useI18n } from '@/i18n'
+import { deckName, deckTagline, spreadName } from '@/i18n/domain'
 import IntroCover, { shouldShowCover } from './IntroCover'
 import { getSpread } from '@/data/spreads'
 import { truncate } from '@/utils/format'
@@ -32,19 +33,6 @@ const STAGE_ROUTE: Record<SessionStage, string> = {
   reading: '/reading',
   done: '/journal',
 }
-
-const STAGE_LABEL: Record<SessionStage, string> = {
-  question: '输入问题',
-  spread: '选牌阵',
-  prepare: '准备',
-  shuffle: '洗牌',
-  cut: '切牌',
-  draw: '摆牌',
-  reveal: '翻牌',
-  reading: '解读',
-  done: '已完成',
-}
-
 
 /** Hero 里的三张牌。用 thumb 档 —— 首屏不该为了三张展示牌去拉 3×295KB 的原图 */
 function HeroCards({ deckId }: { deckId: ReturnType<typeof useDeck>['deckId'] }) {
@@ -83,7 +71,7 @@ export default function HomePage() {
   const navigate = useNavigate()
   const { session, hasUnfinished, discardSession } = useSession()
   const { deckId } = useDeck()
-  const deck = getDeck(deckId)
+  const { t } = useI18n()
   /* 封面只挡「打开这个网站」这一下。深链（/reading、/journal/xxx）不经过本页，
      所以不会被挡住 —— 那正是不把它做成独立路由的原因。
      初值用惰性求值：读一次存储就够，不必每次渲染都读。 */
@@ -91,7 +79,13 @@ export default function HomePage() {
   if (covered) return <IntroCover onEnter={() => setCovered(false)} />
 
   const spread = session?.spreadId ? getSpread(session.spreadId) : null
-  const progress = session && spread ? `${session.placements.length}/${spread.cardCount}` : null
+  const progress =
+    session && spread
+      ? t('home.unfinished.progress', {
+          done: session.placements.length,
+          total: spread.cardCount,
+        })
+      : null
 
   return (
     <div className="identity-home relative isolate mx-auto flex min-h-[100dvh] w-full flex-col px-5"
@@ -100,15 +94,20 @@ export default function HomePage() {
       /* Hero 是左右分栏，需要比正文列宽。窄屏时 gallery 仍然是 94vw，
          所以手机端不会因此变宽 —— 它只是解开了桌面端 40rem 的上限。 */
       style={{ maxWidth: WIDTH_STYLE.gallery }}>
-      <ArtBackdrop />
+      <ArtBackdrop variant="home" />
+
+      {/* 桌面右上角的语言铭牌。手机上 .language-corner 被隐藏 ——
+          那个位置在小屏上会压住页面标题，入口改由设置页承载。 */}
+      <LanguageSwitcher className="language-corner" />
+
       {/* 未完成 Session：写清楚问题 + 牌阵 + 进度，用户才敢点「继续」 */}
       {hasUnfinished && session && (
         <Panel tone="veil" pad="sm" className="mt-4 flex flex-col gap-2">
-          <p className="text-caption text-text-low">你有一次未完成的抽牌</p>
+          <p className="text-caption text-text-low">{t('home.unfinished.title')}</p>
           <p className="text-note text-text-mid">
-            {session.question ? truncate(session.question, 24) : '随缘抽一张'}
-            {spread ? ` · ${spread.name}` : ''}
-            {progress ? ` · 已摆 ${progress}` : ''}
+            {session.question ? truncate(session.question, 24) : t('home.unfinished.randomDraw')}
+            {spread ? ` · ${spreadName(t, spread.id)}` : ''}
+            {progress ? ` · ${progress}` : ''}
           </p>
           <div className="mt-1 flex items-center gap-3">
             <Button
@@ -116,10 +115,10 @@ export default function HomePage() {
               variant="primary"
               onClick={() => navigate(STAGE_ROUTE[session.stage])}
             >
-              继续（{STAGE_LABEL[session.stage]}）
+              {t('home.unfinished.resume', { stage: t(`home.stage.${session.stage}`) })}
             </Button>
             <Button size="md" variant="quiet" onClick={discardSession}>
-              重新开始
+              {t('home.unfinished.restart')}
             </Button>
           </div>
         </Panel>
@@ -136,41 +135,38 @@ export default function HomePage() {
 
         {/* ── 右栏：徽记 + 品牌 + CTA ── */}
         <header className="hero-copy flex flex-col items-start">
-          <span className="bilingual-en" lang="en">A RITUAL / A REFLECTION</span>
+          <span className="eyebrow" lang="en">
+            {t('app.brandEyebrow')}
+          </span>
           <DeckSigil deckId={deckId} size="clamp(3.5rem, 9vw, 6rem)" opacity={0.45} />
-          <h1
-            className="mt-6 text-text-hi"
-            /* 品牌名走 Oracle 档。原来挂在 --text-hero（34px）上 ——
-               那是"首页唯一大字"的尺度，但对一个品牌标来说太小，
-               和旁边的 tagline 几乎同级，读不出主次。 */
-            style={{
-              fontFamily: 'var(--font-oracle)',
-              fontSize: 'var(--text-brand)',
-              fontWeight: 400,
-              letterSpacing: 'var(--tracking-oracle)',
-              lineHeight: 1.04,
-            }}
-          >
-            Arcana
+          <h1 className="oracle oracle-brand mt-5" style={{ fontSize: 'var(--text-brand)' }}>
+            {t('app.brand')}
           </h1>
-          <Bilingual name="home" className="hero-tagline" />
+          <p className="hero-tagline">{t('home.tagline')}</p>
+          <p className="rule-gold hero-rule" aria-hidden="true">
+            <span className="rule-node" />
+          </p>
           <p
             className="mt-4 text-note text-text-low"
-            /* 牌组 tagline 是写死的文案，在子集字体的 223 字之内 */
-            style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em' }}
+            /* 牌组 tagline 是写死的文案，在展示字体子集覆盖范围之内 */
+            style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.08em' }}
           >
-            {deck.tagline}
+            {deckTagline(t, deckId)}
+            <span className="sr-only"> — {deckName(t, deckId)}</span>
           </p>
-          <p className="mt-2 text-caption text-text-low">
-            亲手洗牌、切牌、摊牌、翻牌 —— 牌由你自己抽出。
-          </p>
+          <p className="mt-2 text-caption text-text-low">{t('home.handHint')}</p>
 
-          <div className="mt-10 flex w-full flex-col gap-3">
-            <Button subtitle="Begin Reading" size="lg" variant="primary" block onClick={() => navigate('/decks')}>
-              开始一次解读
+          <div className="mt-9 flex w-full flex-col gap-3">
+            <Button size="lg" variant="primary" display block onClick={() => navigate('/decks')}>
+              {t('home.begin')}
             </Button>
-            <Button subtitle="A Card for This Moment" size="md" variant="quiet" block onClick={() => navigate('/question?mode=random')}>
-              随缘抽一张
+            <Button
+              size="md"
+              variant="quiet"
+              block
+              onClick={() => navigate('/question?mode=random')}
+            >
+              {t('home.random')}
             </Button>
           </div>
         </header>
@@ -180,9 +176,15 @@ export default function HomePage() {
         className="flex items-center justify-center gap-6 pb-6 text-caption text-text-low"
         style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
       >
-        <Link to="/journal" className="flex items-center">塔罗日记</Link>
-        <Link to="/decks" className="flex items-center">牌组</Link>
-        <Link to="/settings" className="flex items-center">设置</Link>
+        <Link to="/journal" className="flex items-center">
+          {t('home.nav.journal')}
+        </Link>
+        <Link to="/decks" className="flex items-center">
+          {t('home.nav.decks')}
+        </Link>
+        <Link to="/settings" className="flex items-center">
+          {t('home.nav.settings')}
+        </Link>
       </footer>
     </div>
   )

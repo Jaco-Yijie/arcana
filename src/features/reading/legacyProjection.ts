@@ -31,7 +31,7 @@ export function toLegacyReading(
     const positionId = positionIdOf.get(c.cardId) ?? c.position
     return {
       positionId,
-      positionLabel: labelOf.get(positionId) ?? c.position,
+      positionLabel: request.language === 'en' ? c.position : labelOf.get(positionId) ?? c.position,
       cardId: c.cardId,
       orientation: c.orientation,
       // V1 每张牌只有一段文字，这里把「这张牌的解释」与「它与问题的关联」合并

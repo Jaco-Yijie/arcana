@@ -59,6 +59,16 @@ export const DOMAIN_LABEL: Record<MeaningDomain, string> = {
   advice: '行动建议',
 }
 
+/** 英文输出时的领域名。缺了它，Prompt 里会出现「Career: 工作事业」这种混排。 */
+export const DOMAIN_LABEL_EN: Record<string, string> = {
+  love: 'Love and relationships',
+  career: 'Work and career',
+  study: 'Study',
+  finance: 'Money',
+  personalGrowth: 'Personal growth',
+  advice: 'What to do',
+}
+
 export interface DomainMeaning {
   domain: MeaningDomain
   label: string
@@ -75,7 +85,9 @@ export interface DomainMeaning {
  * 找替代会让「这段话是专门为这个领域写的」这个前提失效。
  */
 export function selectDomainMeaning(
-  card: TarotCard,
+  /* 只要有这五个定向字段就够 —— 传进来的可能是语义层的 TarotCard，
+     也可能是它与英文覆盖层合并后的对象（见 server/context/rebuild.ts）。 */
+  card: Pick<TarotCard, MeaningDomain>,
   category: QuestionCategory,
 ): DomainMeaning | null {
   const domain = CATEGORY_TO_DOMAIN[category]

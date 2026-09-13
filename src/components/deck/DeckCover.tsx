@@ -19,6 +19,7 @@
  */
 
 import { useState } from 'react'
+import { useI18n } from '@/i18n'
 import type { AssetVariant } from '@/decks/types'
 import type { DeckId } from '@/decks/ids'
 import { getManifest } from '@/decks/artwork/manifests'
@@ -39,6 +40,7 @@ interface Props {
 }
 
 export function DeckCover({ deckId, showPath = true, variant = 'thumb', className = '' }: Props) {
+  const { t } = useI18n()
   const [failed, setFailed] = useState(false)
   const manifest = getManifest(deckId)
   const asset = manifest?.deck.cover ?? null
@@ -94,7 +96,7 @@ export function DeckCover({ deckId, showPath = true, variant = 'thumb', classNam
         className="pointer-events-none absolute inset-1.5 rounded-[3px] border border-dashed border-line-soft"
       />
       <span className="text-[10px] leading-none tracking-wide-caps text-text-faint">
-        {failed ? '封面加载失败' : '封面未提供'}
+        {t(failed ? 'asset.coverFailed' : 'asset.coverMissing')}
       </span>
       <span className="font-mono text-[8px] leading-tight break-all text-text-faint">
         {deckCoverRepoPath(deckId)}

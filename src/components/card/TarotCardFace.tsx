@@ -1,3 +1,4 @@
+import { useCardName } from '@/hooks/useCardText'
 /**
  * 牌面内容层（放进 CardFrame 里）—— Layer 1 与 Layer 2 的装配点。
  *
@@ -35,6 +36,7 @@ import type { Orientation, TarotCard } from '@/types/tarot'
 import type { AssetVariant } from '@/decks/types'
 import type { DeckId } from '@/decks/ids'
 import { getDeck } from '@/decks/registry'
+import { useI18n } from '@/i18n'
 import { artworkHasBakedText } from '@/decks/artwork/manifests'
 import { THUMB_SPEC } from '@/decks/artwork/paths'
 import { CardArtwork } from './CardArtwork'
@@ -162,6 +164,8 @@ export function TarotCardFace({
   displayWidth,
   previewBenchmark = false,
 }: TarotCardFaceProps) {
+  const { t } = useI18n()
+  const cardName = useCardName()
   const reversed = orientation === 'reversed'
   const deck = getDeck(deckId)
   const { typography, numbering } = deck.visual
@@ -256,10 +260,10 @@ export function TarotCardFace({
               textTransform: typography.nameCase === 'upper' ? 'uppercase' : undefined,
             }}
           >
-            {card.nameZh}
+            {cardName(card)}
           </span>
           {reversed && (
-            <span className="text-[9px] tracking-wide-caps text-gold-dim">逆位</span>
+            <span className="text-[9px] tracking-wide-caps text-gold-dim">{t('card.reversed')}</span>
           )}
         </div>
       )}

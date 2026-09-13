@@ -10,6 +10,7 @@ import { useFeedback } from '@/hooks/useFeedback'
 import { getSpread } from '@/data/spreads'
 import { resolveDeckId } from '@/decks/ids'
 import { useSelectedArtworkPrefetch } from '@/features/table/useSelectedArtworkPrefetch'
+import { useI18n } from '@/i18n'
 
 /**
  * 摊牌 · 选牌 · 摆牌。
@@ -22,6 +23,7 @@ export default function DrawPage() {
   const { session, pickCard, placeCard, liftCard, goToStage } = useSession()
   const { shouldGuide, markGuidanceSeen } = useSettings()
   const feedback = useFeedback()
+  const { t } = useI18n()
   const [interacting, setInteracting] = useState(false)
 
   /* ── 摆满就开始准备这几张牌的原画（Phase D5）──
@@ -62,14 +64,14 @@ export default function DrawPage() {
   const guideDraw = shouldGuide('draw')
   const guidePlace = shouldGuide('place')
   const handHint = boardFull
-    ? '牌都摆好了。'
+    ? t('table.draw.hintFull')
     : handIndex !== null
       ? guidePlace
-        ? '把它放到对应牌位。'
-        : '拖到牌位上'
+        ? t('table.draw.hintPlace')
+        : t('table.draw.hintDrag')
       : guideDraw
-        ? '慢慢浏览，选择你想拿起的牌。'
-        : '从牌堆里选一张'
+        ? t('table.draw.hintBrowse')
+        : t('table.draw.hintPick')
 
   return (
     <ImmersiveShell
@@ -116,13 +118,14 @@ export default function DrawPage() {
               <Button
                 size="lg"
                 variant="primary"
+                display
                 block
                 onClick={() => {
                   goToStage('reveal')
                   navigate('/table/reveal')
                 }}
               >
-                去翻牌
+                {t('table.draw.goReveal')}
               </Button>
             </motion.div>
           ) : (
@@ -133,7 +136,7 @@ export default function DrawPage() {
                 onClick={() => navigate('/table/cut')}
                 className="w-full text-center text-caption text-text-faint"
               >
-                重新切牌
+                {t('table.draw.recut')}
               </button>
             )
           )}

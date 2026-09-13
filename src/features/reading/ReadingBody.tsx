@@ -22,41 +22,47 @@
  * 把已经读过的内容整体推下去。
  */
 
-import { Bilingual } from '@/components/identity/Bilingual'
-import { positionEnglish, type IdentityKey } from '@/components/identity/copy'
 import { extractKeyQuote } from './extractKeyQuote'
 import { useId, useState } from 'react'
 import type { ReactNode } from 'react'
 import { Panel } from '@/components/atoms/Panel'
+import { useI18n } from '@/i18n'
+import type { I18nContextValue } from '@/i18n'
 import type { StructuredReading } from '@/types/reading'
 
 /**
  * 本地兜底必须如实标注，绝不能让 Mock 文案被当成真解读。
  * 原因也必须准确 —— 说错原因会把人引到错误的排查方向。
  */
-export function fallbackNotice(reading: StructuredReading, localFallback: boolean): string | null {
+export function fallbackNotice(
+  reading: StructuredReading,
+  localFallback: boolean,
+  t: I18nContextValue['t'],
+): string | null {
   if (!localFallback && reading.meta.provider !== 'mock') return null
   const reason = reading.meta.fallbackReason ?? (localFallback ? 'unreachable' : 'no-api-key')
   switch (reason) {
     case 'unreachable':
-      return '当前使用本地示例解读（未连接解读服务）'
+      return t('reading.notice.unreachable')
     case 'tone-guard':
-      return '这次模型的措辞没有通过语气检查，已改用本地示例解读。你可以重新生成一次。'
+      return t('reading.notice.toneGuard')
     default:
-      return '当前使用本地示例解读（解读服务未配置 API Key）'
+      return t('reading.notice.noApiKey')
   }
 }
 
 /** 一段解读内容。`streaming` 时段落边写边出现，因此默认展开。 */
 function Section({
-  title,
+  titleKey,
   children,
   defaultOpen,
 }: {
-  title: IdentityKey
+  /** i18n key 的最后一段，例如 'cards' → reading.section.cards */
+  titleKey: string
   children: ReactNode
   defaultOpen: boolean
 }) {
+  const { t } = useI18n()
   const [open, setOpen] = useState(defaultOpen)
   const id = useId()
   return (
@@ -64,14 +70,20 @@ function Section({
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex min-h-11 w-full items-center justify-between py-4 text-left"
+        className="flex min-h-11 w-full items-center justify-between gap-4 py-4 text-left"
         aria-expanded={open}
         aria-controls={id}
       >
-        <Bilingual name={title} className="ritual-heading" />
-        <span className="text-caption text-text-faint">{open ? '收起' : '展开'}</span>
+        <span className="ritual-heading ritual-heading-marked">
+          {t(`reading.section.${titleKey}`)}
+        </span>
+        <span className="reading-toggle shrink-0">
+          {open ? t('common.collapse') : t('common.expand')}
+        </span>
       </button>
-      <div id={id} hidden={!open} className="reading-section-content">{children}</div>
+      <div id={id} hidden={!open} className="reading-section-content">
+        {children}
+      </div>
     </div>
   )
 }
@@ -128,6 +140,7 @@ interface Props {
 }
 
 export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
+  const { t } = useI18n()
   const { theme, energy, cards, relationships, narrative, answer, reflections } = data
   // 完成态与流式态均默认展开，用户仍可主动收起。
   const open = true
@@ -155,24 +168,16 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
             · 下方一条与眉标呼应的短分隔线，把它和后面的正文断开
           去掉任何一样，它就会退回成"一个用了衬线字体的标题"。 */}
       {theme ? (
-        <header className="reading-theme flex flex-col gap-3">
+        <header className="reading-theme">
+          <p className="rule-gold" aria-hidden="true">
+            <span className="rule-node" />
+          </p>
           <span className="flex items-center gap-3">
-            <Bilingual name="theme" className="ritual-heading reading-eyebrow" />
+            <span className="eyebrow">{t('reading.section.theme')}</span>
             <span aria-hidden="true" className="h-px flex-1 bg-line-hairline" />
           </span>
-          <h2
-            className="text-text-hi"
-            style={{
-              fontFamily: 'var(--font-ritual)',
-              /* 比 --text-heading（原来的档）大约一档半。中文标题在
-                 26–34px 之间才读得出"这是一章的开头"而不是"一个小标题" */
-              fontSize: 'clamp(1.8rem, 2vw + 1.2rem, 2.65rem)',
-              lineHeight: 1.6,
-              letterSpacing: 'var(--tracking-ritual)',
-            }}
-          >
-            {theme}
-          </h2>
+          {/* 动态主题的 Oracle 字体链不含中文子集，避免缺字混排。 */}
+          <h2 className="reading-chapter">{theme}</h2>
         </header>
       ) : (
         <Pending />
@@ -188,11 +193,20 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
       {/* ── 每张牌 ── */}
       {cards.length > 0 && (
         <div className="mt-10">
-          <Section title="cards" defaultOpen={open}>
+          <Section titleKey="cards" defaultOpen={open}>
             {cards.map((c, i) => (
               <div key={`${c.cardName}-${i}`} className="reading-card-analysis flex flex-col gap-3">
-                <div className="reading-card-heading"><span className="reading-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><div><Bilingual zh={c.position} en={positionEnglish(c.position)} /><h3>{c.cardName}</h3></div></div>
-                <p className="reading-lead">这张牌的启示 <span lang="en">The invitation</span></p>
+                <div className="reading-card-heading">
+                  <span className="reading-number" aria-hidden="true">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div className="min-w-0">
+                    {/* 牌位名与牌名都来自服务端，已经是输出语言的那一份 */}
+                    <span className="eyebrow">{c.position}</span>
+                    <h3>{c.cardName}</h3>
+                  </div>
+                </div>
+                <p className="reading-lead">{t('reading.cardLead')}</p>
                 <Paragraphs text={c.interpretation} />
                 {c.connection && <p className="text-read text-text-low">{c.connection}</p>}
               </div>
@@ -203,7 +217,7 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
       )}
 
       {relationships.length > 0 && (
-        <Section title="relationships" defaultOpen={open}>
+        <Section titleKey="relationships" defaultOpen={open}>
           {relationships.map((r, i) => (
             <Paragraphs key={i} text={r} />
           ))}
@@ -211,22 +225,22 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
       )}
 
       {narrative && (
-        <Section title="pattern" defaultOpen={open}>
+        <Section titleKey="pattern" defaultOpen={open}>
           <Paragraphs text={narrative} />
         </Section>
       )}
 
       {/* ── 回到你的问题：全篇最重要的一段，给它自己的容器 ── */}
       {answer && (
-        <Panel tone="inset" pad="md" className="mt-9 flex flex-col gap-2">
-          <Bilingual name="answer" className="ritual-heading" />
+        <Panel tone="inset" pad="md" className="mt-9 flex flex-col gap-3">
+          <span className="ritual-heading ritual-heading-marked">{t('reading.section.answer')}</span>
           <Paragraphs text={answer} className="text-read text-text-hi" />
         </Panel>
       )}
 
       {quote && (
         <aside className="reading-pullquote">
-          <Bilingual name="insight" className="ritual-heading reading-eyebrow" />
+          <span className="eyebrow">{t('reading.section.insight')}</span>
           <blockquote>{quote}</blockquote>
           <span aria-hidden="true" className="reading-ornament">✦</span>
         </aside>
@@ -234,7 +248,7 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
 
       {reflections.length > 0 && (
         <div className="mt-9">
-          <Section title="reflection" defaultOpen={open}>
+          <Section titleKey="reflection" defaultOpen={open}>
             {reflections.map((q, i) => (
               <p key={i} className="text-read text-text-mid">
                 · {q}

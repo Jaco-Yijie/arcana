@@ -1,12 +1,16 @@
+import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
 import type { ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useI18n } from '@/i18n'
 
 /** 四点式进度：空间定位，而不是任务清单（UX Spec §7 第 6 条） */
+/* 四步进度条。label 在 i18n 资源里（table.step.*）——
+   中文是一个字（洗/切/抽/翻），英文是一个词，排版靠 CSS 收，不靠文案迁就。 */
 export const IMMERSIVE_STEPS = [
-  { key: 'shuffle', label: '洗' },
-  { key: 'cut', label: '切' },
-  { key: 'draw', label: '抽' },
-  { key: 'reveal', label: '翻' },
+  { key: 'shuffle' },
+  { key: 'cut' },
+  { key: 'draw' },
+  { key: 'reveal' },
 ] as const
 
 export type ImmersiveStep = (typeof IMMERSIVE_STEPS)[number]['key']
@@ -59,13 +63,14 @@ export function ImmersiveShell({
   step,
   children,
   onExit,
-  exitLabel = '退出',
+  exitLabel,
   counter,
   interacting = false,
   bottomInset = 0,
   variant = 'column',
 }: ImmersiveShellProps) {
   const navigate = useNavigate()
+  const { t } = useI18n()
   const handleExit = () => {
     if (onExit) onExit()
     else navigate('/')
@@ -76,6 +81,7 @@ export function ImmersiveShell({
       className="fixed inset-0 flex flex-col overflow-hidden bg-bg-deep"
       style={{ height: '100dvh', overscrollBehavior: 'none' }}
     >
+      <LanguageSwitcher className="language-corner immersive-language" />
       {/* 【连续响应式，不用断点做宽度】
           旧版是 `max-w-[420px] md:max-w-[720px] lg:max-w-[1120px]` ——
           767→768 内容列瞬间从 420 跳到 720（+71%），1023→1024 再跳到 1120（+56%）。
@@ -101,7 +107,7 @@ export function ImmersiveShell({
             // min-w 而不是固定 w：「退出专注」比「退出」长，固定 44px 会把它折成两行
             className="flex h-11 min-w-11 items-center justify-center whitespace-nowrap px-2 text-caption text-text-faint transition-colors duration-[var(--duration-quick)] active:text-text-mid"
           >
-            {exitLabel}
+            {exitLabel ?? t('table.exit')}
           </button>
 
           <div className="flex flex-1 items-center justify-center gap-3">
@@ -115,7 +121,7 @@ export function ImmersiveShell({
                     active ? 'text-silver' : 'text-text-faint/45',
                   ].join(' ')}
                 >
-                  {s.label}
+                  {t(`table.step.${s.key}`)}
                 </span>
               )
             })}

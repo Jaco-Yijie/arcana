@@ -7,23 +7,26 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no"
     />
-    <meta name="theme-color" content="#070a18" />
-    <meta name="description" content="Arcana — 亲手完成一次塔罗抽牌" />
-    <!-- 字体预加载 —— **只预载首屏真正会用到的两个**。
-         封面上出现的是：Cinzel（品牌名 ARCANA）与文楷（引导语、CTA）。
-         Cormorant 属于 Ritual 档，只在 Reading 页与 section 标题上出现，
-         首屏一个字都不用它 —— 预载它等于占着带宽不干活。
-         （上一版正好预载反了：Cormorant 载了，Cinzel 没载。）
+    <meta name="theme-color" content="#0a0f18" />
+    <meta name="description" content="Arcana — 亲手完成一次塔罗抽牌 / shuffle, cut and turn the cards yourself" />
+    <!-- 字体预加载 —— **只预载与语言无关的那一个**。
+         Cinzel 是品牌名 ARCANA 的字，中英两种界面下都在首屏出现，所以静态预载。
 
-         封面上没有任何牌面图，这两个请求不和图片抢带宽。合计约 70KB，
-         font-display:swap 保证它们没到时字先用系统字显示出来。
-         crossorigin 是 woff2 预载的硬性要求 —— 少了它浏览器会重新下一遍。 -->
+         中文展示字体（LXGW 文楷子集，68.4 KB）**刻意不在这里预载**：
+         英文界面下屏幕上没有一个汉字，预载它等于让英文用户白下 68 KB。
+         它的 @font-face 与 preload 都由 src/i18n/boot.ts 在语言确定之后注入
+         （见那里的 ensureFonts），所以中文用户拿到它的时间只比这里晚一个微任务。
+
+         Cormorant 属于 Ritual 档，只在 Reading 页与章节标题上出现，首屏用不到。
+
+         `lang` 属性同样由 boot.ts 按语言改写 —— HTML 里这个初始值是给
+         首字节到 JS 执行之间那一小段时间用的，以及给不跑 JS 的抓取器。 -->
     <link rel="preload" href="./fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="./fonts/lxgw-wenkai-light-subset.woff2" as="font" type="font/woff2" crossorigin />
     <title>Arcana</title>
-    <script type="module" crossorigin src="./assets/index-nvmjd2q1.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/AppShell-Djqdx807.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-BBiL8SsX.css">
+    <script type="module" crossorigin src="./assets/index-BLcVx-iR.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/localized-DSCZb9sp.js">
+    <link rel="modulepreload" crossorigin href="./assets/AppShell-D6y-i21E.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-CL7EZMfQ.css">
   </head>
   <body>
     <div id="root"></div>

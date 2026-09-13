@@ -13,6 +13,7 @@
  */
 
 import type { Arcana, Orientation, Suit } from './tarot'
+import type { LanguageCode } from '@/i18n/types'
 import type { RandomThemeId, SessionMode } from './session'
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -93,6 +94,16 @@ export interface ReadingContextCard {
   cardId: string
   cardName: string
   cardNameZh: string
+  /**
+   * 输出语言下的牌名。中文时 = cardNameZh，英文时 = cardName。
+   *
+   * 【为什么要第三个名字字段，而不是在读取处三元一下】
+   * 这个值有两个下游：Prompt（告诉模型这张牌叫什么）与 readingSchema
+   * （把 cardName 回填进最终结构，模型说什么都不算数）。
+   * 两处必须逐字一致，否则模型写的牌名和界面显示的牌名会对不上。
+   * 让 rebuildContext 定一次，比让每个消费方各自判断安全。
+   */
+  displayName: string
   arcana: Arcana
   /** 大阿卡纳为 null */
   suit: Suit | null
@@ -122,7 +133,7 @@ export interface ReadingContextCard {
   domainMeaning: {
     /** 'love' | 'career' | 'study' | 'finance' | 'personalGrowth' | 'advice' */
     domain: string
-    /** 中文领域名，给模型看的 */
+    /** 输出语言下的领域名，给模型看的 */
     label: string
     upright: string
     reversed: string
@@ -166,6 +177,16 @@ export interface ReadingStats {
 
 export interface ReadingContext {
   sessionId: string
+  /**
+   * 解读输出语言。
+   *
+   * 它决定三件事，缺一不可：
+   *   1. Prompt 里那句「你必须使用 X 输出」
+   *   2. 递给模型的牌名、牌位名、牌义用哪一份（中文母版 / 英文覆盖层）
+   *   3. 安全提示与本地兜底解读的语言
+   * 只做 1 而不做 2，会得到一份「英文行文里夹着中文牌名」的解读。
+   */
+  language: LanguageCode
   /** 用户最终采用的问题（原问题或其接受的优化版）。随缘模式可为空串。 */
   question: string
   questionCategory: QuestionCategory
@@ -243,6 +264,7 @@ export interface StructuredReadingCard {
 export type ReadingProviderId = 'mock' | 'deepseek'
 
 export interface ReadingMeta {
+  language?: LanguageCode
   provider: ReadingProviderId
   /** 这次用的是哪种解读模式 */
   readingMode?: ReadingMode
@@ -355,6 +377,11 @@ export interface ReadingRequest {
   /** 用户选择的解读模式。重试时保持不变，除非用户主动改。 */
   readingMode: ReadingMode
   /**
+   * 解读输出语言。缺省视为 'zh' —— 老客户端不带这个字段，
+   * 不带就按中文处理，与改造前的行为逐字一致。
+   */
+  language?: LanguageCode
+  /**
    * 抽牌时用的是哪副牌。**纯呈现信息**。
    * 服务端只把它记进 ReadingContext 供日志与日记回看，
    * 绝不写进 Prompt —— 换牌组不能改变解读的含义，也不能改变抽到的牌。
@@ -396,6 +423,8 @@ export interface FollowUpRequest {
   cards: ReadingRequestCard[]
   /** 用户这一次问的话 */
   ask: string
+  /** 回答语言。缺省 'zh' —— 与 ReadingRequest 同一套约定 */
+  language?: LanguageCode
   /** 本次解读的摘要与结论，让追问能接着已经说过的话讲，而不是从零重读 */
   readingDigest: {
     headline: string

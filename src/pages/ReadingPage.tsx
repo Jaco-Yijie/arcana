@@ -1,5 +1,6 @@
-import { Bilingual } from '@/components/identity/Bilingual'
-import { positionEnglish } from '@/components/identity/copy'
+import { useLocalizedContent, TranslationStatus } from '@/i18n/useLocalizedContent'
+import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
+import { AppShell } from '@/components/layout/AppShell'
 import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/atoms/Button'
@@ -15,22 +16,28 @@ import { buildFollowUpContext } from '@/features/reading/buildReadingInput'
 import { requestFollowUp } from '@/features/reading/followUpClient'
 import { FollowUpSection } from '@/features/reading/FollowUpSection'
 import { ReadingBody, fallbackNotice, type ReadingBodyData } from '@/features/reading/ReadingBody'
-import { DEEP_THINKING_HINT, READING_PHASES, useReading } from '@/hooks/useReading'
+import { useReading } from '@/hooks/useReading'
 import { ReadingModePicker } from '@/features/reading/ReadingModePicker'
 import type { ReadingMode } from '@/types/reading'
 import { WIDTH_STYLE } from '@/components/layout/AppShell'
+import { useI18n } from '@/i18n'
+import { positionLabel, spreadName } from '@/i18n/domain'
+import { useCardName } from '@/hooks/useCardText'
 
 function Accordion({ title, children }: { title: string; children: React.ReactNode }) {
+  const { t } = useI18n()
   const [open, setOpen] = useState(false)
   return (
-    <div className="border-b border-line-hairline">
+    <div className="reading-section">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between py-3.5 text-left"
+        className="flex min-h-11 w-full items-center justify-between gap-4 py-3.5 text-left"
       >
-        <span className="text-title text-text-hi">{title}</span>
-        <span className="text-caption text-text-faint">{open ? '收起' : '展开'}</span>
+        <span className="ritual-heading ritual-heading-marked">{title}</span>
+        <span className="reading-toggle shrink-0">
+          {open ? t('common.collapse') : t('common.expand')}
+        </span>
       </button>
       {open && <div className="flex flex-col gap-3 pb-4">{children}</div>}
     </div>
@@ -46,8 +53,12 @@ function Accordion({ title, children }: { title: string; children: React.ReactNo
  */
 export default function ReadingPage() {
   const navigate = useNavigate()
-  const { session, patchSession, addFollowUp, completeSession } = useSession()
+  const { session: originalSession, patchSession, addFollowUp, completeSession } = useSession()
+  const localized = useLocalizedContent(originalSession)
+  const session = localized.value
   const { markCompletedOnce } = useSettings()
+  const { t, tList } = useI18n()
+  const cardName = useCardName()
   const [followUpBusy, setFollowUpBusy] = useState(false)
   const [followUpError, setFollowUpError] = useState<string | null>(null)
   const [finishedId, setFinishedId] = useState<string | null>(null)
@@ -64,8 +75,10 @@ export default function ReadingPage() {
   const shouldAsk = !hasReading && !started
 
   // 解读由 hook 负责发起 / 重试 / 降级；它只读已冻结的牌，不写任何牌相关状态
-  const { status, phase, structured, error, localFallback, slow, elapsedSec, partial, streamPhase, retry } =
-    useReading(shouldAsk ? null : session, shouldAsk ? null : spread, mode)
+  const { status, phase, structured: sourceStructured, error, localFallback, slow, elapsedSec, partial, streamPhase, retry } =
+    useReading(shouldAsk ? null : originalSession, shouldAsk ? null : spread, mode)
+
+  const structured = localized.value?.structuredReading ?? sourceStructured
 
   useEffect(() => {
     if (status === 'success') markCompletedOnce()
@@ -78,6 +91,7 @@ export default function ReadingPage() {
 
   // completeSession() 会把 active session 清空，随后本页的守卫会把用户弹回首页。
   // 所以「已完成」要有自己的出口，且优先级高于守卫。
+  if (localized.pending) return <AppShell back="/"><TranslationStatus error={localized.error} retry={localized.retry} /></AppShell>
   if (finishedId !== null) {
     return <Navigate to={finishedId ? `/journal/${finishedId}` : '/journal'} replace />
   }
@@ -121,7 +135,9 @@ export default function ReadingPage() {
         energy: structured.overallEnergy,
         cards: structured.cards.map((c) => ({
           position: c.position,
-          cardName: `${c.cardName}${c.orientation === 'reversed' ? '（逆位）' : ''}`,
+          /* cardName 由服务端按输出语言填好，这里只补一个正逆位后缀 */
+          cardName:
+            c.orientation === 'reversed' ? t('card.nameReversed', { name: c.cardName }) : c.cardName,
           interpretation: c.interpretation,
           connection: c.connectionToQuestion,
         })),
@@ -143,7 +159,7 @@ export default function ReadingPage() {
         answer: partial.answer,
         reflections: partial.reflections,
       }
-  const structuredNotice = structured ? fallbackNotice(structured, localFallback) : null
+  const structuredNotice = structured ? fallbackNotice(structured, localFallback, t) : null
 
   /* 追问：单轮，不累积。每次都用**同一份**上下文重新发送 ——
      界面上的历史只是阅读顺序，不进 Prompt（G-13 在类型与载荷两层都不给它机会）。 */
@@ -166,7 +182,9 @@ export default function ReadingPage() {
     try {
       const result = await requestFollowUp(session.id, followUpContext, text, digest)
       addFollowUp({ role: 'assistant', content: result.answer })
-      if (result.degradedReason) setFollowUpError(`${result.degradedReason}（下面是本地回答）`)
+      if (result.degradedReason) {
+        setFollowUpError(t('reading.followUp.localSuffix', { reason: result.degradedReason }))
+      }
     } finally {
       setFollowUpBusy(false)
     }
@@ -180,6 +198,7 @@ export default function ReadingPage() {
   return (
     <div className="relative mx-auto flex min-h-[100dvh] w-full flex-col"
       style={{ maxWidth: WIDTH_STYLE.column }}>
+      <LanguageSwitcher className="language-corner" />
       <header
         className="flex items-center justify-between px-4 py-2"
         style={{ paddingTop: 'max(0.5rem, env(safe-area-inset-top))' }}
@@ -189,10 +208,14 @@ export default function ReadingPage() {
           onClick={() => navigate('/table/reveal')}
           className="flex h-11 items-center text-caption text-text-faint"
         >
-          看牌阵
+          {t('reading.viewSpread')}
         </button>
-        <button type="button" onClick={finish} className="flex h-11 items-center text-caption text-text-faint">
-          存入日记
+        <button
+          type="button"
+          onClick={finish}
+          className="flex h-11 items-center text-caption text-text-faint"
+        >
+          {t('reading.saveToJournal')}
         </button>
       </header>
 
@@ -208,35 +231,17 @@ export default function ReadingPage() {
       <section className="px-5 pb-1 pt-1">
         {session.question ? (
           <>
-            <Bilingual name="question" className="ritual-heading reading-eyebrow" />
-            <h1
-              className="mt-2.5 text-text-hi"
-              /* 用户自己写下的那句话是这一页的锚点，用 Ritual 档并给足行高。
-                 它不能用 Oracle（碑刻体）—— 那是给品牌名的，一段完整的句子
-                 用全大写字形会读不下去。 */
-              style={{
-                fontFamily: 'var(--font-editorial)',
-                fontSize: 'clamp(1.375rem, 1.2vw + 1.1rem, 1.875rem)',
-                lineHeight: 1.45,
-                letterSpacing: 'var(--tracking-ritual)',
-              }}
-            >
-              {session.question}
-            </h1>
+            <span className="eyebrow">{t('reading.question')}</span>
+            {/* 用户自己写下的那句话是这一页的锚点。它是**动态文本**，
+                只能走 editorial 档 —— 展示字体的子集覆盖不到任意输入。 */}
+            <h1 className="reading-question">{session.question}</h1>
           </>
         ) : (
-          <h1
-            className="text-text-hi"
-            style={{
-              fontFamily: 'var(--font-editorial)',
-              fontSize: 'clamp(1.375rem, 1.2vw + 1.1rem, 1.875rem)',
-              letterSpacing: 'var(--tracking-ritual)',
-            }}
-          >
-            随缘抽一张
-          </h1>
+          <h1 className="reading-question">{t('reading.randomDraw')}</h1>
         )}
-        <p className="mt-3 text-caption tracking-wide-caps text-text-low"><Bilingual zh={spread.name} en={spread.nameEn} /></p>
+        <p className="mt-3 text-caption tracking-wide-caps text-text-low">
+          {spreadName(t, spread.id)}
+        </p>
       </section>
 
       <div
@@ -260,7 +265,9 @@ export default function ReadingPage() {
                 showName={false}
               />
             </CardFrame>
-            <Bilingual zh={pos.label} en={positionEnglish(pos.label)} className="text-center text-caption" />
+            <span className="text-center text-caption text-text-low">
+              {positionLabel(t, spread.id, pos.id)}
+            </span>
           </div>
         ))}
       </div>
@@ -298,11 +305,13 @@ export default function ReadingPage() {
                   aria-hidden="true"
                   className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-silver-dim motion-reduce:animate-none"
                 />
-                {streamPhase === 'thinking' ? DEEP_THINKING_HINT : READING_PHASES[phase]}
+                {streamPhase === 'thinking'
+                  ? t('reading.deepThinking')
+                  : (tList('reading.phase')[phase] ?? '')}
                 {slow &&
                   (mode === 'deep'
-                    ? ` · 深度解读通常需要 1–2 分钟 · 已等待 ${elapsedSec} 秒`
-                    : ` · 这次比平时久一些 · 已等待 ${elapsedSec} 秒`)}
+                    ? t('reading.slowDeep', { sec: elapsedSec })
+                    : t('reading.slowStandard', { sec: elapsedSec }))}
               </p>
             )}
 
@@ -322,9 +331,7 @@ export default function ReadingPage() {
           <div className="flex flex-col gap-4 pt-10">
             <Panel tone="caution" pad="md">
               <p className="text-read text-text-mid">
-                {mode === 'deep'
-                  ? '这次深度解读没有完整生成，你抽出的牌已经保留。'
-                  : error?.message}
+                {mode === 'deep' ? t('reading.error.deep') : error?.message}
               </p>
               {mode === 'deep' && error?.message && (
                 <p className="mt-2 text-caption text-text-faint">{error.message}</p>
@@ -332,7 +339,7 @@ export default function ReadingPage() {
             </Panel>
 
             <Button size="lg" variant="primary" block onClick={retry}>
-              {mode === 'deep' ? '再次尝试深度解读' : '重新尝试解读'}
+              {mode === 'deep' ? t('reading.error.retryDeep') : t('reading.error.retry')}
             </Button>
 
             {/* 换成标准解读是**用户主动**做的选择，不是我们背着他偷偷降级。
@@ -347,7 +354,7 @@ export default function ReadingPage() {
                   patchSession({ readingMode: 'standard' })
                 }}
               >
-                改用标准解读
+                {t('reading.error.switchStandard')}
               </Button>
             )}
 
@@ -356,7 +363,7 @@ export default function ReadingPage() {
               onClick={() => navigate('/table/reveal')}
               className="text-caption text-text-faint"
             >
-              先回去看牌阵
+              {t('reading.error.backToSpread')}
             </button>
           </div>
         ) : !reading ? (
@@ -382,19 +389,18 @@ export default function ReadingPage() {
               ))}
             </div>
 
-            <Accordion title="每张牌的分析">
+            <Accordion title={t('reading.legacy.cards')}>
               {reading.cardAnalyses.map((a) => (
                 <div key={a.positionId} className="flex flex-col gap-1">
                   <span className="text-caption tracking-wide-caps text-text-faint">
-                    {a.positionLabel} · {getCard(a.cardId).nameZh}
-                    {a.orientation === 'reversed' ? '（逆位）' : ''}
+                    {a.positionLabel} · {cardName(getCard(a.cardId), a.orientation)}
                   </span>
                   <p className="text-read text-text-mid">{a.text}</p>
                 </div>
               ))}
             </Accordion>
 
-            <Accordion title="卡牌之间的关系">
+            <Accordion title={t('reading.legacy.relations')}>
               {reading.relations.map((r, i) => (
                 <p key={i} className="text-read text-text-mid">
                   {r}
@@ -402,11 +408,11 @@ export default function ReadingPage() {
               ))}
             </Accordion>
 
-            <Accordion title="综合趋势">
+            <Accordion title={t('reading.legacy.trend')}>
               <p className="text-read text-text-mid">{reading.trend}</p>
             </Accordion>
 
-            <Accordion title="值得注意的问题">
+            <Accordion title={t('reading.legacy.watchOut')}>
               {reading.watchOut.map((r, i) => (
                 <p key={i} className="text-read text-text-mid">
                   {r}
@@ -414,7 +420,7 @@ export default function ReadingPage() {
               ))}
             </Accordion>
 
-            <Accordion title="可以考虑的行动方向">
+            <Accordion title={t('reading.legacy.actions')}>
               {reading.actions.map((r, i) => (
                 <p key={i} className="text-read text-text-mid">
                   {r}
@@ -430,8 +436,8 @@ export default function ReadingPage() {
             />
 
             <div className="mt-8">
-              <Button subtitle="Keep This Reading" size="lg" variant="ghost" block onClick={finish}>
-                完成并存入日记
+              <Button size="lg" variant="ghost" block onClick={finish}>
+                {t('reading.legacy.finish')}
               </Button>
             </div>
           </>

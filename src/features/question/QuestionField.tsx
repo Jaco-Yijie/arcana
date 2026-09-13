@@ -11,7 +11,8 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { INSPIRATIONS } from './questionInspiration'
+import { INSPIRATION_IDS } from './questionInspiration'
+import { useI18n } from '@/i18n'
 
 const MIN_ROWS_PX = 30
 const MAX_ROWS_PX = 132
@@ -24,6 +25,7 @@ interface Props {
 }
 
 export function QuestionField({ value, onChange, onSubmit, maxLength }: Props) {
+  const { t } = useI18n()
   const ref = useRef<HTMLTextAreaElement>(null)
   const [focused, setFocused] = useState(false)
   const [showInspiration, setShowInspiration] = useState(false)
@@ -46,13 +48,14 @@ export function QuestionField({ value, onChange, onSubmit, maxLength }: Props) {
     <div className="flex flex-col gap-6">
       {/* 引导句。输入时降低存在感，把注意力让给问题本身 */}
       <motion.p
-        className="font-serif text-heading leading-relaxed text-text-hi"
+        className="ritual-heading"
+        style={{ fontSize: 'clamp(1.25rem, 1.1vw + 1rem, 1.6rem)', lineHeight: 1.7 }}
         animate={{ opacity: focused && value.length > 0 ? 0.45 : 1 }}
         transition={{ duration: 0.4, ease: [0.22, 0.61, 0.36, 1] }}
       >
-        现在，
+        {t('question.lead1')}
         <br />
-        把你最想弄清楚的一件事放在这里。
+        {t('question.lead2')}
       </motion.p>
 
       {/* 细长输入区：一条线，不是一个方框 */}
@@ -70,7 +73,7 @@ export function QuestionField({ value, onChange, onSubmit, maxLength }: Props) {
             }
           }}
           rows={1}
-          placeholder="我想知道……"
+          placeholder={t('question.placeholder')}
           className="w-full resize-none bg-transparent pb-3 text-read leading-relaxed text-text-hi outline-none placeholder:text-text-faint"
           style={{ height: MIN_ROWS_PX }}
         />
@@ -95,7 +98,7 @@ export function QuestionField({ value, onChange, onSubmit, maxLength }: Props) {
             onClick={() => setShowInspiration(true)}
             className="self-start text-caption text-text-low underline underline-offset-4"
           >
-            没有想好怎么问？
+            {t('question.inspirationToggle')}
           </button>
         ) : (
           <motion.div
@@ -104,23 +107,26 @@ export function QuestionField({ value, onChange, onSubmit, maxLength }: Props) {
             transition={{ duration: 0.28 }}
             className="flex flex-col gap-2.5"
           >
-            <span className="text-caption text-text-faint">点一个填进去，然后随意改写</span>
+            <span className="text-caption text-text-faint">{t('question.inspirationHint')}</span>
             <div className="flex flex-wrap gap-2">
-              {INSPIRATIONS.map((chip) => (
-                <button
-                  key={chip.id}
-                  type="button"
-                  onClick={() => {
-                    onChange(chip.question)
-                    ref.current?.focus()
-                  }}
-                  className="rounded-pill border border-line-hairline px-3.5 py-2 text-left text-caption text-text-mid transition-colors duration-[var(--duration-quick)] active:border-line-strong"
-                >
-                  <span className="text-text-faint">{chip.label}</span>
-                  <span className="mx-1.5 text-text-faint">·</span>
-                  {chip.question}
-                </button>
-              ))}
+              {INSPIRATION_IDS.map((id) => {
+                const question = t(`question.inspiration.${id}.question`)
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    onClick={() => {
+                      onChange(question)
+                      ref.current?.focus()
+                    }}
+                    className="rounded-pill border border-line-hairline px-3.5 py-2 text-left text-caption text-text-mid transition-colors duration-[var(--duration-quick)] active:border-line-strong"
+                  >
+                    <span className="text-text-faint">{t(`question.inspiration.${id}.label`)}</span>
+                    <span className="mx-1.5 text-text-faint">·</span>
+                    {question}
+                  </button>
+                )
+              })}
             </div>
           </motion.div>
         )}

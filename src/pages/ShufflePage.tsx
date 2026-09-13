@@ -8,6 +8,7 @@ import { ShuffleStack } from '@/features/table/components/ShuffleStack'
 import { useSession } from '@/hooks/useSession'
 import { useFeedback } from '@/hooks/useFeedback'
 import type { ShuffleGesture } from '@/features/table/engine'
+import { useI18n } from '@/i18n'
 
 /**
  * 洗牌页。
@@ -19,6 +20,7 @@ export default function ShufflePage() {
   const navigate = useNavigate()
   const { session, shuffle, shuffleCount, markShuffled, lockDeck } = useSession()
   const feedback = useFeedback()
+  const { t } = useI18n()
   const [interacting, setInteracting] = useState(false)
   const [cooldown, setCooldown] = useState(false)
 
@@ -43,7 +45,7 @@ export default function ShufflePage() {
 
   return (
     <ImmersiveShell step="shuffle" interacting={interacting}>
-      <StepHint step="shuffle" text="滑动牌堆进行洗牌。" done={shuffleCount > 0} />
+      <StepHint step="shuffle" text={t('table.shuffle.hint')} done={shuffleCount > 0} />
 
       <div className="min-h-0 flex-1">
         <ShuffleStack
@@ -55,7 +57,9 @@ export default function ShufflePage() {
 
       <div className="flex h-8 items-center justify-center">
         {shuffleCount > 0 && (
-          <p className="text-caption text-text-faint tabular-nums">已洗 {shuffleCount} 次</p>
+          <p className="text-caption text-text-faint tabular-nums">
+            {t('table.shuffle.count', { n: shuffleCount })}
+          </p>
         )}
       </div>
 
@@ -73,6 +77,7 @@ export default function ShufflePage() {
               <Button
                 size="lg"
                 variant="primary"
+                display
                 block
                 disabled={cooldown}
                 onClick={() => {
@@ -80,7 +85,7 @@ export default function ShufflePage() {
                   navigate('/table/cut')
                 }}
               >
-                洗好了
+                {t('table.shuffle.done')}
               </Button>
             </motion.div>
           )}

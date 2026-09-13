@@ -1,3 +1,4 @@
+import { languageCode } from '@/i18n/types'
 /**
  * 解读状态机。
  *
@@ -28,21 +29,18 @@ import {
 import type { PartialCard, StreamPhase } from '@/features/reading/streamClient'
 import { toLegacyReading } from '@/features/reading/legacyProjection'
 import { useSession } from './useSession'
+import { useI18n } from '@/i18n'
 
 /**
- * 加载阶段文案。
- * **这只是加载态 UI，不是模型真实的思维链** —— 我们无法也没有去窥探模型内部过程，
- * 所以文案写的是「我们这一侧在等什么」，而不是假装在直播模型思考。
+ * 加载阶段有几段。
+ *
+ * **这只是加载态 UI，不是模型真实的思维链** —— 我们无法也没有去窥探
+ * 模型内部过程，文案写的是「我们这一侧在等什么」。
+ *
+ * 文案本身住在 i18n 资源里（`reading.phase` 是一个四元字符串数组），
+ * 这里只留段数：给 phase 计数封顶是逻辑，不是文案。
  */
-export const READING_PHASES = [
-  '正在观察整体牌面',
-  '正在分析牌与牌之间的关系',
-  '正在结合你的问题',
-  '正在整理解读',
-] as const
-
-/** deep 模式的等待文案 —— 如实说明为什么更久，不假装在直播模型思考 */
-export const DEEP_THINKING_HINT = '正在进行更深入的牌面分析，这可能需要一些时间。'
+export const READING_PHASE_COUNT = 4
 
 /**
  * 阶段推进间隔与「这次会久一点」的提示时机。
@@ -120,12 +118,14 @@ export function useReading(
   readingMode: ReadingMode = 'standard',
 ): UseReadingResult {
   const { setReading } = useSession()
+  const { t, locale } = useI18n()
   const [status, setStatus] = useState<ReadingStatus>('idle')
   const [phase, setPhase] = useState(0)
   const [error, setError] = useState<UseReadingResult['error']>(null)
   const [localFallback, setLocalFallback] = useState(false)
   const [attempt, setAttempt] = useState(0)
   const [elapsedSec, setElapsedSec] = useState(0)
+  const [partialLocale, setPartialLocale] = useState(locale)
   const [partial, setPartial] = useState<PartialReading>(EMPTY_PARTIAL)
   const [streamPhase, setStreamPhase] = useState<StreamPhase | null>(null)
 
@@ -138,7 +138,7 @@ export function useReading(
 
   /** 请求体只依赖已冻结的 session，且是纯函数产物 —— 重试时逐字节相同 */
   const requestRef = useRef<ReadingRequest | null>(null)
-  if (session && spread && !requestRef.current) {
+  if (session && spread && (!requestRef.current || requestRef.current.language !== languageCode(locale) || requestRef.current.sessionId !== session.id || requestRef.current.readingMode !== readingMode)) {
     requestRef.current = buildReadingRequest(session, spread, readingMode)
   }
 
@@ -162,7 +162,7 @@ export function useReading(
     setElapsedSec(0)
     const startedAt = Date.now()
     const timer = window.setInterval(() => {
-      setPhase((p) => Math.min(p + 1, READING_PHASES.length - 1))
+      setPhase((p) => Math.min(p + 1, READING_PHASE_COUNT - 1))
     }, PHASE_INTERVAL_MS[readingMode])
     const ticker = window.setInterval(() => {
       setElapsedSec(Math.floor((Date.now() - startedAt) / 1000))
@@ -182,6 +182,7 @@ export function useReading(
               onPhase: setStreamPhase,
               onRestart: () => setPartial(EMPTY_PARTIAL),
               onDelta: (acc) => {
+                setPartialLocale(locale)
                 // 只把**已经闭合**的字段上屏，不显示写到一半的句子
                 setPartial({
                   theme: extractPartial(acc, 'readingTheme'),
@@ -214,9 +215,7 @@ export function useReading(
         // 校验失败时必须撤回已展示的片段 —— 不能留半截让用户以为那是解读
         setPartial(EMPTY_PARTIAL)
         const known = err instanceof ReadingRequestError || err instanceof StreamReadingError
-        const message = known
-          ? (err as Error).message
-          : '这次解读没有成功完成，你抽出的牌仍然保留，可以重新尝试解读。'
+        const message = known ? (err as Error).message : t('reading.error.generic')
         const retryable = known ? (err as { retryable: boolean }).retryable : true
         setError({ message, retryable })
         setStatus('error')
@@ -232,7 +231,7 @@ export function useReading(
       controller.abort()
     }
     // attempt 变化即触发重试
-  }, [canRequest, attempt, session, spread, setReading, readingMode])
+  }, [canRequest, attempt, session, spread, setReading, readingMode, locale, t])
 
   const retry = useCallback(() => {
     abortRef.current?.abort()
@@ -247,7 +246,7 @@ export function useReading(
     structured: existing,
     error,
     localFallback,
-    partial,
+    partial: partialLocale === locale ? partial : EMPTY_PARTIAL,
     streamPhase,
     retry,
   }

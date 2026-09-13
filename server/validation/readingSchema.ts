@@ -201,7 +201,7 @@ export function validateReading(payload: unknown, context: ReadingContext): Vali
     return {
       cardId: want.cardId,
       // 牌名与牌位一律以我们的数据为准，不用模型回填的
-      cardName: want.cardNameZh,
+      cardName: context.language === 'en' ? want.cardName : want.cardNameZh,
       position: want.position.name,
       orientation: want.orientation,
       interpretation: asString(got.interpretation, `cards[${want.cardId}].interpretation`),
@@ -317,6 +317,6 @@ export function assembleReading(
       : {}),
     // 安全提示由服务端透传，模型无权改写
     safetyNotice: context.safetyNotice,
-    meta: { ...meta, repaired: meta.repaired || outcome.repaired },
+    meta: { ...meta, language: context.language, repaired: meta.repaired || outcome.repaired },
   }
 }

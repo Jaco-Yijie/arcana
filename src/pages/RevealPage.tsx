@@ -15,6 +15,8 @@ import { computeSpreadLayout } from '@/features/table/layout/spreadLayout'
 import { useSelectedArtworkPrefetch } from '@/features/table/useSelectedArtworkPrefetch'
 import { useElementSize } from '@/hooks/useElementSize'
 import { useIsDesktop } from '@/hooks/useMediaQuery'
+import { useI18n } from '@/i18n'
+import { positionLabel } from '@/i18n/domain'
 
 /**
  * 翻牌页。
@@ -25,6 +27,7 @@ export default function RevealPage() {
   const navigate = useNavigate()
   const { session, revealCard, goToStage } = useSession()
   const feedback = useFeedback()
+  const { t } = useI18n()
   const [openSheetFor, setOpenSheetFor] = useState<string | null>(null)
   const [flipLock, setFlipLock] = useState(false)
   const [ctaReady, setCtaReady] = useState(false)
@@ -120,7 +123,7 @@ export default function RevealPage() {
       {/* 提示语必须在牌层**之上**：牌是绝对定位的，
           放在同一层时会盖住它，实测「准备好后，翻开它。」只露出半句 */}
       <div className="relative z-20">
-        <StepHint step="reveal" text="准备好后，翻开它。" done={anyRevealed} />
+        <StepHint step="reveal" text={t('table.reveal.hint')} done={anyRevealed} />
       </div>
 
       {/* 【UX 铁律】面板打开时牌桌与 CTA 一起让出底部空间（见 ImmersiveShell.bottomInset），
@@ -185,11 +188,13 @@ export default function RevealPage() {
                     牌面上的中文名遮罩已经撤掉（原画自己印着标题，见 TarotCardFace），
                     所以正逆位必须在这里补上 —— 它是牌的状态，原画里没有也不可能有，
                     而正逆位是解读结论的一半。
-                    中文牌名不放这里：翻开即弹出的牌义面板已经给了中文名 + 英文名，
+                    中文牌名不放这里：翻开即弹出的牌义面板已经给了当前语言的牌名，
                     三处都写一遍就回到了 D1 判为问题的那种重复。 */}
                 {placed.revealed && entry.orientation === 'reversed'
-                  ? `${pos.label} · 逆位`
-                  : pos.label}
+                  ? t('table.reveal.reversedSuffix', {
+                      label: positionLabel(t, spread.id, pos.id),
+                    })
+                  : positionLabel(t, spread.id, pos.id)}
               </span>
             </div>
           )
@@ -225,13 +230,14 @@ export default function RevealPage() {
               <Button
                 size="lg"
                 variant="primary"
+                display
                 block
                 onClick={() => {
                   goToStage('reading')
                   navigate('/reading')
                 }}
               >
-                开始完整解读
+                {t('table.reveal.startReading')}
               </Button>
             </motion.div>
           ) : (
@@ -242,8 +248,11 @@ export default function RevealPage() {
               animate={{ opacity: 1 }}
             >
               {allRevealed
-                ? `${spread.cardCount} 张都翻开了`
-                : `已翻开 ${revealedCount}/${spread.cardCount}`}
+                ? t('table.reveal.allRevealed', { n: spread.cardCount })
+                : t('table.reveal.progress', {
+                    done: revealedCount,
+                    total: spread.cardCount,
+                  })}
             </motion.p>
           )}
       </div>
@@ -253,6 +262,7 @@ export default function RevealPage() {
           card={getCard(session.deck[sheetPlacement.deckIndex].cardId)}
           orientation={session.deck[sheetPlacement.deckIndex].orientation}
           position={spread.positions.find((p) => p.id === sheetPlacement.positionId) ?? null}
+          spreadId={spread.id}
           onClose={() => setOpenSheetFor(null)}
           onHeightChange={handleSheetHeight}
         />

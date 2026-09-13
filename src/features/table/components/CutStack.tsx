@@ -1,4 +1,5 @@
 import { useCallback, useRef, useState } from 'react'
+import { useI18n } from '@/i18n'
 import { motion } from 'framer-motion'
 import { MAX_CUT_RATIO, MIN_CUT_RATIO } from '@/features/table/engine'
 import { capturePointer } from './pointer'
@@ -24,6 +25,7 @@ interface CutStackProps {
  * 且在用户拖动/点击之前，页面不渲染「从这里切开」按钮。系统永远不会替用户切。
  */
 export function CutStack({ phase, ratio, onRatioChange, onInteractingChange }: CutStackProps) {
+  const { t } = useI18n()
   const stackRef = useRef<HTMLDivElement>(null)
   const [dragging, setDragging] = useState(false)
 
@@ -113,11 +115,15 @@ export function CutStack({ phase, ratio, onRatioChange, onInteractingChange }: C
       onKeyDown={handleKeyDown}
       role={locked ? undefined : 'slider'}
       tabIndex={locked ? undefined : 0}
-      aria-label="切牌位置。上下方向键调整，Enter 或空格在这里切开"
+      aria-label={t('a11y.cutSlider')}
       aria-valuemin={MIN_CUT_RATIO}
       aria-valuemax={MAX_CUT_RATIO}
       aria-valuenow={ratio ?? undefined}
-      aria-valuetext={ratio === null ? '还没有选择切点' : `大约第 ${Math.max(1, Math.round(ratio * 78))} 张`}
+      aria-valuetext={
+        ratio === null
+          ? t('table.cut.none')
+          : t('table.cut.approx', { n: Math.max(1, Math.round(ratio * 78)) })
+      }
       className="table-surface relative flex h-full w-full items-center justify-center rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70"
     >
       <div

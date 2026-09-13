@@ -1,4 +1,5 @@
 import { useCallback, useRef, useState } from 'react'
+import { useI18n } from '@/i18n'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CardFrame } from '@/components/card/CardFrame'
 import { ThemedCardBack as CardBack } from '@/components/card/ThemedCardBack'
@@ -33,6 +34,7 @@ interface Point {
  * 顶部牌背换成另一个实例 —— 用户能看出「不是原来那堆」。
  */
 export function ShuffleStack({ onGesture, onInteractingChange, shuffleCount }: ShuffleStackProps) {
+  const { t } = useI18n()
   const reduceMotion = useReducedMotion()
   const startRef = useRef<Point | null>(null)
   const stageRef = useRef<HTMLDivElement>(null)
@@ -141,8 +143,8 @@ export function ShuffleStack({ onGesture, onInteractingChange, shuffleCount }: S
       tabIndex={0}
       aria-label={
         shuffleCount === 0
-          ? '牌堆。滑动可以洗牌；用键盘时按 Enter 或空格洗一次'
-          : `牌堆，已洗 ${shuffleCount} 次。继续滑动，或按 Enter 或空格再洗一次`
+          ? t('a11y.shuffleIdle')
+          : t('a11y.shuffleDone', { n: shuffleCount })
       }
       className="table-surface relative flex h-full w-full cursor-grab items-center justify-center rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70 active:cursor-grabbing"
     >

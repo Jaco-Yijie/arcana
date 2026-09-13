@@ -2,15 +2,23 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/theme.css'
 import App from './App'
+import { bootI18n } from './i18n'
 
 const container = document.getElementById('root')
 if (!container) throw new Error('#root 未找到')
 
-createRoot(container).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+/* ── 语言必须在**首帧之前**定下来 ──
+   上次选了英文的用户，如果先渲染中文再异步切过去，每次打开都会看到
+   一帧中文然后跳变。这条 await 在中文（默认语言，静态导入）下立即 resolve，
+   一次网络请求都不发；只有英文用户会多等一个 chunk。
+   中文展示字体的 @font-face 也在这一步按语言注入 —— 英文界面不下载它。 */
+void bootI18n().then(() => {
+  createRoot(container).render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  )
+})
 
 // Streamlit 自定义组件跑在 iframe 里，必须主动握手，
 // 否则 Streamlit 永远不会给我们发 render 事件（应答就回不来）。

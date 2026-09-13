@@ -722,8 +722,12 @@ function checkStructuralBans(): void {
      description 每套写了三四行，Gallery 只渲染 tagline，长描述从不显示。
      声明而不消费，等于给后人留一个「看起来有、实际没有」的功能。
      所以这里扫源码，确认每个声明出来的字段真的有人用。 */
+  /* 【i18n 之后这条断言换了检查对象，但守的还是同一件事】
+     description 现在由 locale 资源提供（deckDescription(t, deckId)），
+     registry 里那一份是中文母版 —— i18n:check 有一条断言保证两者不漂移。
+     这里继续确认「展开态真的把它渲染出来了」，因为死数据的风险没有变。 */
   const librarySrc = readFileSync(resolve(REPO_ROOT, 'src/pages/DeckLibraryPage.tsx'), 'utf8')
-  check('description 有 UI 消费方', librarySrc.includes('deck.description'))
+  check('description 有 UI 消费方', librarySrc.includes('deckDescription('))
   check('DeckCover 有 UI 消费方', librarySrc.includes('DeckCover'))
   const coverSrc = readFileSync(resolve(REPO_ROOT, 'src/components/deck/DeckCover.tsx'), 'utf8')
   check('DeckCover 真的读 manifest.cover', coverSrc.includes('getManifest') && coverSrc.includes('cover'))
@@ -1506,18 +1510,16 @@ function checkDeckSigil(): void {
 function checkDisplayFontSubset(): void {
   section('L. 展示字体子集覆盖')
 
-  const script = readFileSync(resolve(REPO_ROOT, 'scripts/subset-display-font.py'), 'utf8')
+  /* 【V3 起读产物清单，不再猜脚本里的字面量】
+     旧版把字符集写死在子集脚本的字符串里，这里用正则把那些字面量抠出来
+     当作"字体里有什么" —— 那是一个近似，它假设脚本里每个引号字符串都进了字体。
+     现在脚本从 i18n 资源推导字符集，并把**实际收录的字符**写进
+     public/fonts/subset-charset.txt。这里直接读那份清单，
+     断言的对象从"生成过程"变成了"产物本身"。 */
+  const charsetPath = resolve(REPO_ROOT, 'public/fonts/subset-charset.txt')
+  const declared = new Set(existsSync(charsetPath) ? readFileSync(charsetPath, 'utf8') : '')
 
-  /* 从子集脚本里取出它声明的全部字符。脚本是这套字体的唯一生成入口，
-     它声明了什么，woff2 里就有什么。 */
-  const declared = new Set<string>()
-  for (const m of script.matchAll(/"([^"\n]*)"/g)) for (const ch of m[1]!) declared.add(ch)
-
-  check(
-    'L-01 子集脚本存在且声明了字符',
-    declared.size > 100,
-    `声明 ${declared.size} 个字符`,
-  )
+  check('L-01 子集字符清单存在且非空', declared.size > 100, `声明 ${declared.size} 个字符`)
 
   /* 牌组名与 tagline —— 它们确实用 --font-display 渲染 */
   const missing: string[] = []
@@ -1553,9 +1555,36 @@ function checkDisplayFontSubset(): void {
      而不是让它悄悄长成 300KB。 */
   const total = fonts.reduce((n, f) => n + statSync(resolve(REPO_ROOT, f)).size, 0)
   check(
-    'L-05 字体总体积在 120KB 预算内',
+    'L-05 中文形态字体总体积在 120KB 预算内',
     total <= 120 * 1024,
     `${(total / 1024).toFixed(1)} KB`,
+  )
+
+  /* 【V3 新增：英文形态单独一档预算】
+     中文子集的 @font-face 由 src/i18n/boot.ts 按语言注入 ——
+     英文界面下它既不被声明也不被预载，那 68 KB 一个字节都不下载。
+     所以英文形态有自己的、更紧的预算：没有任何理由超过 64 KB。 */
+  const latinOnly = fonts
+    .filter((f) => !f.includes('lxgw'))
+    .reduce((n, f) => n + statSync(resolve(REPO_ROOT, f)).size, 0)
+  check(
+    'L-05b 英文形态字体总体积在 64KB 预算内',
+    latinOnly <= 64 * 1024,
+    `${(latinOnly / 1024).toFixed(1)} KB`,
+  )
+
+  /* 中文子集字体的 @font-face 不许写死在 theme.css 里 ——
+     写在那里，英文用户也会声明它；只要有任何一处误用就会把 68 KB 拉下来。
+     它必须由 boot.ts 按语言注入，并且带 unicode-range 作为第二道保险。 */
+  const themeCss = readFileSync(resolve(REPO_ROOT, 'src/styles/theme.css'), 'utf8')
+  check(
+    'L-05c theme.css 里没有中文子集字体的 @font-face（改为按语言注入）',
+    !/@font-face[\s\S]{0,400}lxgw-wenkai/i.test(themeCss),
+  )
+  const bootSrc = readFileSync(resolve(REPO_ROOT, 'src/i18n/boot.ts'), 'utf8')
+  check(
+    'L-05d boot.ts 注入它、且带 unicode-range',
+    /lxgw-wenkai-light-subset\.woff2/.test(bootSrc) && /unicode-range/.test(bootSrc),
   )
 
   /* 动态文本绝不能用展示字体 —— 子集里没有那些字。
@@ -1589,6 +1618,13 @@ function checkDisplayFontSubset(): void {
       !/font-oracle/.test(readFileSync(resolve(REPO_ROOT, f), 'utf8')),
     )
   }
+
+  /* Editorial 档排的是 AI 解读与用户自己写下的问题 —— 任意汉字都可能出现。
+     一旦有人把子集字体加进这条链，生僻字就会静默换字体。 */
+  check(
+    'L-10 Editorial 档不含子集字体（它要渲染用户输入与 AI 正文）',
+    !/--font-editorial:[^;]*LXGW/.test(theme),
+  )
 }
 
 checkAtmosphere()

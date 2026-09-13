@@ -90,6 +90,8 @@ export async function handleFollowUp(
       spreadId: body.spreadId,
       cards: body.cards,
       readingMode: 'standard',
+      /* 追问的语言跟着这次解读走。缺省中文，与 ReadingRequest 同一套约定 */
+      language: body.language,
     } as ReadingRequest)
   } catch (err) {
     bad(res, err instanceof ContextError ? err.message : '请求内容非法')

@@ -8,6 +8,7 @@ import { CutStack } from '@/features/table/components/CutStack'
 import type { CutPhase } from '@/features/table/components/CutStack'
 import { useSession } from '@/hooks/useSession'
 import { useFeedback } from '@/hooks/useFeedback'
+import { useI18n } from '@/i18n'
 
 const DECK_SIZE = 78
 
@@ -20,6 +21,7 @@ export default function CutPage() {
   const navigate = useNavigate()
   const { session, cut, goToStage } = useSession()
   const feedback = useFeedback()
+  const { t } = useI18n()
   const [ratio, setRatio] = useState<number | null>(null)
   const [phase, setPhase] = useState<CutPhase>('unset')
   const [interacting, setInteracting] = useState(false)
@@ -47,30 +49,31 @@ export default function CutPage() {
 
   const cta =
     phase === 'picked' ? (
-      <Button size="lg" variant="primary" block onClick={doSplit}>
-        从这里切开
+      <Button size="lg" variant="primary" display block onClick={doSplit}>
+        {t('table.cut.cutHere')}
       </Button>
     ) : phase === 'split' ? (
-      <Button size="lg" variant="primary" block onClick={doMerge}>
-        合起来
+      <Button size="lg" variant="primary" display block onClick={doMerge}>
+        {t('table.cut.merge')}
       </Button>
     ) : phase === 'done' ? (
       <Button
         size="lg"
         variant="primary"
+        display
         block
         onClick={() => {
           goToStage('draw')
           navigate('/table/draw')
         }}
       >
-        摊开牌
+        {t('table.cut.spreadOut')}
       </Button>
     ) : null
 
   return (
     <ImmersiveShell step="cut" interacting={interacting}>
-      <StepHint step="cut" text="选择一个你想切开的位置。" done={ratio !== null} />
+      <StepHint step="cut" text={t('table.cut.hint')} done={ratio !== null} />
 
       <div className="min-h-0 flex-1">
         <CutStack
@@ -83,7 +86,7 @@ export default function CutPage() {
 
       <div className="flex h-8 items-center justify-center">
         <p className="text-caption text-text-faint tabular-nums">
-          {cardNumber === null ? '还没有选择切点' : `大约第 ${cardNumber} 张`}
+          {cardNumber === null ? t('table.cut.none') : t('table.cut.approx', { n: cardNumber })}
         </p>
       </div>
 
@@ -111,7 +114,7 @@ export default function CutPage() {
             onClick={() => navigate('/table/shuffle')}
             className="text-caption text-text-faint"
           >
-            重新洗牌
+            {t('table.cut.reshuffle')}
           </button>
         )}
       </div>

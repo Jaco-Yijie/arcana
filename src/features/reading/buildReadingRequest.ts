@@ -15,6 +15,8 @@
 import type { TarotSession } from '@/types/session'
 import type { Spread } from '@/types/spread'
 import type { ReadingMode, ReadingRequest, ReadingRequestCard } from '@/types/reading'
+import { getLocale } from '@/i18n/store'
+import { languageCode } from '@/i18n/types'
 import { effectiveQuestion } from './buildReadingInput'
 
 /**
@@ -48,6 +50,10 @@ export function buildReadingRequest(
     spreadId: spread.id,
     cards,
     readingMode,
+    /* 解读语言 = 当前界面语言。刻意不给它单独的开关：
+       界面中文而解读英文（或反过来）不是任何人想要的组合，
+       多一个开关只会多一种可以配错的状态。 */
+    language: languageCode(getLocale()),
     // 纯呈现信息：服务端只记录，不写进 Prompt。
     // 它是 session 的固定字段，所以重试时 payload 依然逐字节相同（AC-V2-06）。
     deckId: session.deckId,

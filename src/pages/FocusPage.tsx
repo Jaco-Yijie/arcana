@@ -5,7 +5,8 @@ import { ImmersiveShell } from '@/components/layout/ImmersiveShell'
 import { Button } from '@/components/atoms/Button'
 import { useSession } from '@/hooks/useSession'
 import { getSpread } from '@/data/spreads'
-import { getRandomTheme } from '@/data/randomThemes'
+import { useI18n } from '@/i18n'
+import { spreadName, themeLabel } from '@/i18n/domain'
 
 /**
  * 抽牌前准备。
@@ -15,6 +16,7 @@ import { getRandomTheme } from '@/data/randomThemes'
 export default function FocusPage() {
   const navigate = useNavigate()
   const { session, goToStage } = useSession()
+  const { t } = useI18n()
   const [focused, setFocused] = useState(false)
 
   if (!session || !session.spreadId) return <Navigate to="/" replace />
@@ -23,8 +25,8 @@ export default function FocusPage() {
   const displayQuestion =
     session.mode === 'random'
       ? session.theme && session.theme !== 'free'
-        ? getRandomTheme(session.theme).label
-        : '随缘抽一张'
+        ? themeLabel(t, session.theme)
+        : t('focus.randomDraw')
       : session.usedOptimized && session.optimizedQuestion
         ? session.optimizedQuestion
         : session.question
@@ -37,7 +39,7 @@ export default function FocusPage() {
   return (
     <ImmersiveShell
       step={null}
-      exitLabel={focused ? '退出专注' : '返回'}
+      exitLabel={focused ? t('focus.exitFocus') : t('focus.back')}
       onExit={() => (focused ? setFocused(false) : navigate(session.mode === 'random' ? '/question?mode=random' : '/spread'))}
     >
       <motion.div
@@ -51,14 +53,15 @@ export default function FocusPage() {
         />
 
         <div className="relative z-10 flex flex-col items-center gap-6">
-          <p className="font-serif text-display text-text-hi text-glow-soft">{displayQuestion}</p>
+          {/* 用户的问题是动态文本 —— 只能走 editorial 档 */}
+          <p className="reading-question text-glow-soft">{displayQuestion}</p>
 
           {!focused ? (
             <p className="text-caption text-text-faint">
-              {spread.name} · {spread.cardCount} 张
+              {spreadName(t, spread.id)} · {t('common.cardsUnit', { n: spread.cardCount })}
             </p>
           ) : (
-            <p className="text-note text-text-low">在心里再想一次你的问题。</p>
+            <p className="text-note text-text-low">{t('focus.hint')}</p>
           )}
         </div>
       </motion.div>
@@ -67,8 +70,8 @@ export default function FocusPage() {
         className="relative z-10 flex flex-col items-center gap-3 px-5"
         style={{ paddingBottom: 'max(1.5rem, calc(env(safe-area-inset-bottom) + 0.5rem))' }}
       >
-        <Button size="lg" variant="primary" block onClick={begin}>
-          {focused ? '我准备好了' : '直接开始'}
+        <Button size="lg" variant="primary" display block onClick={begin}>
+          {focused ? t('focus.ready') : t('focus.startNow')}
         </Button>
         {!focused && (
           <button
@@ -76,7 +79,7 @@ export default function FocusPage() {
             onClick={() => setFocused(true)}
             className="text-caption text-text-faint"
           >
-            专注一下
+            {t('focus.focusFirst')}
           </button>
         )}
       </div>
