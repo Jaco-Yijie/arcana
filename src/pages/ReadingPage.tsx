@@ -7,6 +7,8 @@ import { Button } from '@/components/atoms/Button'
 import { Panel } from '@/components/atoms/Panel'
 import { CardFrame } from '@/components/card/CardFrame'
 import { TarotCardFace } from '@/components/card/TarotCardFace'
+import { ReadingCompletionActions } from '@/features/reading/ReadingCompletionActions'
+import { useDeck } from '@/hooks/useDeck'
 import { useSession } from '@/hooks/useSession'
 import { useSettings } from '@/hooks/useSettings'
 import { getSpread } from '@/data/spreads'
@@ -56,12 +58,13 @@ export default function ReadingPage() {
   const { session: originalSession, patchSession, addFollowUp, completeSession } = useSession()
   const localized = useLocalizedContent(originalSession)
   const session = localized.value
+  const { setDeckId } = useDeck()
   const { markCompletedOnce } = useSettings()
   const { t, tList } = useI18n()
   const cardName = useCardName()
   const [followUpBusy, setFollowUpBusy] = useState(false)
   const [followUpError, setFollowUpError] = useState<string | null>(null)
-  const [finishedId, setFinishedId] = useState<string | null>(null)
+  const [finishedTo, setFinishedTo] = useState<string | null>(null)
 
   // 用户先选模式再开始 —— 不替他决定要不要多等一分钟。
   // 老记录已有解读时直接跳过选择。
@@ -91,10 +94,8 @@ export default function ReadingPage() {
 
   // completeSession() 会把 active session 清空，随后本页的守卫会把用户弹回首页。
   // 所以「已完成」要有自己的出口，且优先级高于守卫。
+  if (finishedTo !== null) return <Navigate to={finishedTo} replace />
   if (localized.pending) return <AppShell back="/"><TranslationStatus error={localized.error} retry={localized.retry} /></AppShell>
-  if (finishedId !== null) {
-    return <Navigate to={finishedId ? `/journal/${finishedId}` : '/journal'} replace />
-  }
   if (!session || !spread) return <Navigate to="/" replace />
 
   const reading = session.reading
@@ -190,9 +191,16 @@ export default function ReadingPage() {
     }
   }
 
-  const finish = () => {
+  const complete = status !== 'loading' && status !== 'error' && !!(structured || reading)
+
+  const finish = (destination: 'journal' | 'share' | 'new' = 'journal') => {
+    if (!complete || followUpBusy) return
+    // 保留这次阅读实际使用的牌组，即使全局选择在阅读期间发生过变化。
+    if (destination === 'new') setDeckId(resolveDeckId(session.deckId, session.deckSchema))
     const id = completeSession()
-    setFinishedId(id ?? '')
+    setFinishedTo(destination === 'new'
+      ? '/question?mode=question'
+      : id ? `/${destination}/${id}` : '/journal')
   }
 
   return (
@@ -212,7 +220,8 @@ export default function ReadingPage() {
         </button>
         <button
           type="button"
-          onClick={finish}
+          onClick={() => finish()}
+          disabled={!complete || followUpBusy}
           className="flex h-11 items-center text-caption text-text-faint"
         >
           {t('reading.saveToJournal')}
@@ -434,13 +443,15 @@ export default function ReadingPage() {
               error={followUpError}
               onSend={send}
             />
-
-            <div className="mt-8">
-              <Button size="lg" variant="ghost" block onClick={finish}>
-                {t('reading.legacy.finish')}
-              </Button>
-            </div>
           </>
+        )}
+        {complete && (
+          <ReadingCompletionActions
+            busy={followUpBusy}
+            onNew={() => finish('new')}
+            onSave={() => finish('journal')}
+            onShare={() => finish('share')}
+          />
         )}
       </main>
 

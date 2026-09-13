@@ -1219,3 +1219,30 @@ html.in-streamlit #root:has(> div > div[style*="100dvh"]) {
   .immersive-language { display: none; }
 }
 .reading-card-heading .eyebrow { white-space: normal; overflow-wrap: anywhere; }
+
+/* A closing page in the reading: stays in document flow as chapters expand. */
+.reading-completion {
+  margin-top: clamp(3rem, 8vw, 5rem);
+  padding: 2rem 0 max(2rem, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--color-line-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+.reading-completion .ritual-heading { font-family: var(--font-ritual); }
+.reading-completion-note {
+  max-width: 36ch;
+  margin-inline: auto;
+  color: var(--color-text-low);
+  font-family: var(--font-editorial);
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+.reading-completion .ritual-button {
+  font-family: var(--font-ritual);
+  min-width: 0;
+  padding-inline: 1rem;
+  overflow-wrap: anywhere;
+}
+.reading-completion-secondary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }

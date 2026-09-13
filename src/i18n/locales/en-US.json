@@ -441,6 +441,14 @@
       "schema-invalid": "This reading didn't complete. The cards you drew are still here, and you can try again.",
       "bad-request": "This reading request was incomplete. This reading didn't complete. The cards you drew are still here, and you can try again.",
       "unknown": "This reading didn't complete. The cards you drew are still here, and you can try again."
+    },
+    "completion": {
+      "title": "This reading is complete",
+      "description": "Begin another journey when you have a new question.",
+      "new": "Begin a New Reading",
+      "save": "Save Reading",
+      "share": "Share Reading",
+      "busy": "Your follow-up is finishing. You can begin again shortly."
     }
   },
   "journal": {
