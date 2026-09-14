@@ -35,6 +35,7 @@ const ReadingPage = lazy(() => import('@/pages/ReadingPage'))
 const JournalPage = lazy(() => import('@/pages/JournalPage'))
 const JournalDetailPage = lazy(() => import('@/pages/JournalDetailPage'))
 const SharePage = lazy(() => import('@/pages/SharePage'))
+const TarotIntroductionPage = lazy(() => import('@/pages/TarotIntroductionPage'))
 const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'))
 const SettingsPage = lazy(() => import('@/pages/SettingsPage'))
 
@@ -103,6 +104,7 @@ export default function App() {
                 <Route path="/journal" element={<JournalPage />} />
                 <Route path="/journal/:id" element={<JournalDetailPage />} />
                 <Route path="/share/:id" element={<SharePage />} />
+                <Route path="/what-is-tarot" element={<TarotIntroductionPage />} />
                 <Route path="/guide" element={<OnboardingPage />} />
                 <Route path="/settings" element={<SettingsPage />} />
                 {/* DEV 专用，不进任何导航。生产构建里 BenchmarkReviewPage 为 null，

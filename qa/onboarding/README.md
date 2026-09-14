@@ -19,7 +19,7 @@ The browser test follows the existing QA convention: `PW_CORE` can point to a lo
 Coverage:
 - Fresh storage: Cover → Home → guide → question input; random entry preserves its mode.
 - Three steps, previous/next and keyboard CTA; focus follows chapter changes.
-- Both languages at 375, 390, 430px; introduction sections and guide have no horizontal overflow.
+- Both languages at 375, 390, 430px; Home no longer embeds the introduction; the guide has no horizontal overflow.
 - Completion survives a new tab; returning users skip the cover and guide.
 - Language switching preserves the current guide step.
 - Settings replay preserves existing session data and returns to Settings.

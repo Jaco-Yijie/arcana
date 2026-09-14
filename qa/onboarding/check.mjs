@@ -11,7 +11,7 @@ try {
 for(const locale of ['zh-CN','en-US'])for(const width of [375,390,430]){
  const ctx=await browser.newContext({viewport:{width,height:800},locale,reducedMotion:'reduce'});const p=await ctx.newPage();const t=strings[locale];const errors=[];p.on('pageerror',e=>errors.push(e.message))
  await p.goto(base);await p.locator('.identity-cover').waitFor();await p.getByRole('button',{name:t.cover.enter,exact:true}).click();await p.locator('.home-hero').waitFor()
- for(const name of [t.introduction.whatTitle,t.introduction.howTitle,t.introduction.askTitle])assert.equal(await p.getByRole('heading',{name,exact:true}).count(),1)
+ for(const name of [t.introduction.whatTitle,t.introduction.howTitle,t.introduction.askTitle])assert.equal(await p.getByRole('heading',{name,exact:true}).count(),0)
  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false)
  await p.screenshot({path:`output/playwright/onboarding/home-${locale}-${width}.png`,fullPage:true})
  await p.getByRole('button',{name:t.home.begin,exact:true}).click();await p.waitForURL('**/guide')

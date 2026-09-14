@@ -1,7 +1,6 @@
-import { TarotIntroduction } from '@/features/onboarding/TarotIntroduction'
 import { needsOnboarding } from '@/features/onboarding/state'
 import { ArtBackdrop } from '@/components/identity/ArtBackdrop'
-import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
+import { SiteNavigation } from '@/components/layout/SiteNavigation'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Panel } from '@/components/atoms/Panel'
@@ -98,9 +97,8 @@ export default function HomePage() {
       style={{ maxWidth: WIDTH_STYLE.gallery }}>
       <ArtBackdrop variant="home" />
 
-      {/* 桌面右上角的语言铭牌。手机上 .language-corner 被隐藏 ——
-          那个位置在小屏上会压住页面标题，入口改由设置页承载。 */}
-      <LanguageSwitcher className="language-corner" />
+      {/* 介绍页入口与语言切换共用主导航，移动端收进 Menu。 */}
+      <SiteNavigation />
 
       {/* 未完成 Session：写清楚问题 + 牌阵 + 进度，用户才敢点「继续」 */}
       {hasUnfinished && session && (
@@ -173,8 +171,6 @@ export default function HomePage() {
           </div>
         </header>
       </div>
-
-      <TarotIntroduction />
 
       <footer
         className="flex items-center justify-center gap-6 pb-6 text-caption text-text-low"

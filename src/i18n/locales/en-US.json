@@ -588,5 +588,40 @@
     "moreHelpful": "More useful to explore",
     "before": "When will I become rich?",
     "after": "What factors should I consider to improve my career?"
+  },
+  "navigation": {
+    "tarot": "What is Tarot",
+    "begin": "Begin Reading",
+    "menu": "Menu",
+    "label": "Main navigation"
+  },
+  "tarotPage": {
+    "eyebrow": "THE TAROT COMPANION",
+    "subtitle": "Tarot is a symbolic system for reflection and self-discovery.",
+    "reflectionTitle": "Tarot is not fortune telling",
+    "reflection": "Tarot does not determine your fate. Images and symbols offer perspectives: a pause to recognise your feelings, circumstances, and choices. The cards do not make decisions for you, and the future is not written on them.",
+    "perspectives": [
+      "Your current situation",
+      "Your inner thoughts",
+      "The choices before you"
+    ],
+    "flow": [
+      "Ask a question",
+      "Choose a spread",
+      "Draw the cards",
+      "Explore the symbols",
+      "Find a new perspective"
+    ],
+    "cardsTitle": "The 78 Cards",
+    "major": {
+      "title": "22 Major Arcana",
+      "body": "The larger themes and transitions of life, inviting you to consider the meaning within your experiences."
+    },
+    "minor": {
+      "title": "56 Minor Arcana",
+      "body": "Everyday experiences, emotions, and actions, bringing reflection back to the particular moments of your life."
+    },
+    "betterQuestion": "What factors should I consider to improve my career direction?",
+    "ready": "Ready to Explore?"
   }
 }
