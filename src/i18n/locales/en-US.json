@@ -534,5 +534,59 @@
     "fanCard": "Card {n} in the spread",
     "placeTo": "Place this card in “{label}”",
     "flip": "Turn this card over"
+  },
+  "onboarding": {
+    "eyebrow": "A FIRST ENCOUNTER",
+    "progress": "Guide steps",
+    "next": "Continue Exploring",
+    "previous": "Previous Chapter",
+    "begin": "Begin Reading",
+    "review": "Revisit the First Reading Guide",
+    "returnSettings": "Return to Settings",
+    "storageWarning": "Your browser could not save completion. The guide may appear next visit. Select the button again to continue.",
+    "question": {
+      "title": "Choose Your Question",
+      "body": "Tarot is a symbolic language, not a prediction of the future. Its images can help you organise thoughts and emotions, notice your present situation, and explore your choices. Ask about something you can reflect on or act upon.",
+      "topics": [
+        "Your present situation",
+        "Choices",
+        "Growth",
+        "Direction"
+      ]
+    },
+    "spread": {
+      "title": "Choose Your Spread",
+      "body": "A spread gives each card a perspective. More cards do not mean more accuracy. Choose the pace that suits your question.",
+      "single": {
+        "title": "Single Card",
+        "body": "One focus, one pause. A quick way to find a direction worth considering."
+      },
+      "three": {
+        "title": "Three Cards",
+        "body": "Past · Present · Future. Explore what brought you here, where you are, and possible paths ahead. The future is an invitation, not a fixed outcome."
+      }
+    },
+    "reading": {
+      "title": "Begin Your Reading",
+      "body": "Ask a question, choose a spread, draw the cards yourself, and explore their symbols. AI helps connect the threads; the meaning you find and the choices you make remain yours."
+    }
+  },
+  "introduction": {
+    "whatTitle": "What is Tarot?",
+    "what": "Tarot is a symbolic system of figures, scenes, and images. As a tool for self-exploration, it can help you organise questions and emotions and consider your situation from another angle. It does not predict your future or make decisions for you.",
+    "howTitle": "How Does a Reading Work?",
+    "flow": [
+      "Ask a question",
+      "Choose a spread",
+      "Draw the cards",
+      "Explore the AI reading",
+      "Find a new perspective"
+    ],
+    "askTitle": "Ask Better Questions",
+    "ask": "Move from asking for a fixed outcome to exploring your situation, choices, and actions. Open questions tend to offer more useful room for reflection.",
+    "lessHelpful": "Less helpful",
+    "moreHelpful": "More useful to explore",
+    "before": "When will I become rich?",
+    "after": "What factors should I consider to improve my career?"
   }
 }

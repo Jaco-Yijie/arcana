@@ -30,7 +30,8 @@
     "assets:lock": "tsx scripts/assets-check.ts --lock",
     "assets:origin": "tsx scripts/asset-origin-check.ts",
     "performance:check": "tsx scripts/performance-check.ts",
-    "i18n:runtime": "tsx scripts/i18n-runtime-check.ts"
+    "i18n:runtime": "tsx scripts/i18n-runtime-check.ts",
+    "onboarding:check": "tsx qa/onboarding/state-check.ts"
   },
   "dependencies": {
     "framer-motion": "^12.43.0",

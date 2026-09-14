@@ -35,6 +35,7 @@ const ReadingPage = lazy(() => import('@/pages/ReadingPage'))
 const JournalPage = lazy(() => import('@/pages/JournalPage'))
 const JournalDetailPage = lazy(() => import('@/pages/JournalDetailPage'))
 const SharePage = lazy(() => import('@/pages/SharePage'))
+const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'))
 const SettingsPage = lazy(() => import('@/pages/SettingsPage'))
 
 /**
@@ -102,6 +103,7 @@ export default function App() {
                 <Route path="/journal" element={<JournalPage />} />
                 <Route path="/journal/:id" element={<JournalDetailPage />} />
                 <Route path="/share/:id" element={<SharePage />} />
+                <Route path="/guide" element={<OnboardingPage />} />
                 <Route path="/settings" element={<SettingsPage />} />
                 {/* DEV 专用，不进任何导航。生产构建里 BenchmarkReviewPage 为 null，
                     这一行整体不渲染 —— 路由表里没有它，"*" 会把 /dev/benchmark 送回首页 */}

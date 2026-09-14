@@ -1,3 +1,5 @@
+import { TarotIntroduction } from '@/features/onboarding/TarotIntroduction'
+import { needsOnboarding } from '@/features/onboarding/state'
 import { ArtBackdrop } from '@/components/identity/ArtBackdrop'
 import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
 import { useState } from 'react'
@@ -75,7 +77,7 @@ export default function HomePage() {
   /* 封面只挡「打开这个网站」这一下。深链（/reading、/journal/xxx）不经过本页，
      所以不会被挡住 —— 那正是不把它做成独立路由的原因。
      初值用惰性求值：读一次存储就够，不必每次渲染都读。 */
-  const [covered, setCovered] = useState(shouldShowCover)
+  const [covered, setCovered] = useState(() => needsOnboarding() && shouldShowCover())
   if (covered) return <IntroCover onEnter={() => setCovered(false)} />
 
   const spread = session?.spreadId ? getSpread(session.spreadId) : null
@@ -124,7 +126,7 @@ export default function HomePage() {
         </Panel>
       )}
 
-      <div className="grid flex-1 items-center gap-8 py-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-14 md:py-12">
+      <div className="home-hero grid flex-1 items-center gap-8 py-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-14 md:py-12">
         {/* ── 左栏：真牌 ──
             首页原本一张牌都没有，只有两个文字按钮。这里放的是**当前牌组的真实牌面**，
             换牌组时它跟着换 —— 用户第一眼看到的就是他将要抽的那副牌。
@@ -135,7 +137,7 @@ export default function HomePage() {
 
         {/* ── 右栏：徽记 + 品牌 + CTA ── */}
         <header className="hero-copy flex flex-col items-start">
-          <span className="eyebrow" lang="en">
+          <span className="eyebrow">
             {t('app.brandEyebrow')}
           </span>
           <DeckSigil deckId={deckId} size="clamp(3.5rem, 9vw, 6rem)" opacity={0.45} />
@@ -157,20 +159,22 @@ export default function HomePage() {
           <p className="mt-2 text-caption text-text-low">{t('home.handHint')}</p>
 
           <div className="mt-9 flex w-full flex-col gap-3">
-            <Button size="lg" variant="primary" display block onClick={() => navigate('/decks')}>
+            <Button size="lg" variant="primary" display block onClick={() => navigate(needsOnboarding() ? '/guide' : '/decks')}>
               {t('home.begin')}
             </Button>
             <Button
               size="md"
               variant="quiet"
               block
-              onClick={() => navigate('/question?mode=random')}
+              onClick={() => navigate(needsOnboarding() ? '/guide?mode=random' : '/question?mode=random')}
             >
               {t('home.random')}
             </Button>
           </div>
         </header>
       </div>
+
+      <TarotIntroduction />
 
       <footer
         className="flex items-center justify-center gap-6 pb-6 text-caption text-text-low"

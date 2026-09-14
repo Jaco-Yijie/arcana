@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
 import { Panel } from '@/components/atoms/Panel'
 import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
@@ -115,6 +116,10 @@ export default function SettingsPage() {
             </button>
           </div>
         </Panel>
+
+        <Link to="/guide?from=settings" className="ritual-heading flex min-h-14 items-center justify-between gap-4 border-y border-line-hairline py-5">
+          {t('onboarding.review')}<span aria-hidden="true">↗</span>
+        </Link>
 
         <p className="px-1 text-caption text-text-faint">{t('settings.privacy')}</p>
       </div>
