@@ -1,7 +1,7 @@
 import { needsOnboarding } from '@/features/onboarding/state'
 import { ArtBackdrop } from '@/components/identity/ArtBackdrop'
 import { SiteNavigation } from '@/components/layout/SiteNavigation'
-import { useState } from 'react'
+import { useState, type CSSProperties } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Panel } from '@/components/atoms/Panel'
 import { Button } from '@/components/atoms/Button'
@@ -51,6 +51,8 @@ function HeroCards({ deckId }: { deckId: ReturnType<typeof useDeck>['deckId'] })
             transform: `translateY(${[26, -12, 26][i]}px) rotate(${[-7, 0, 7][i]}deg)`,
           }}
         >
+          <div className="hero-card-entry" style={{ '--card-index': i } as CSSProperties}>
+          <div className="hero-card-float">
           <CardFrame width="var(--hero-card-w)" size="md" state="resting" hoverLift deckId={deckId}>
             <TarotCardFace
               card={getCard(id)}
@@ -62,6 +64,8 @@ function HeroCards({ deckId }: { deckId: ReturnType<typeof useDeck>['deckId'] })
               showName={false}
             />
           </CardFrame>
+          </div>
+          </div>
         </div>
       ))}
     </div>
@@ -136,8 +140,10 @@ export default function HomePage() {
             {t('app.brandEyebrow')}
           </span>
           <span className="hero-sigil"><DeckSigil deckId={deckId} size="2.5rem" opacity={0.7} /></span>
-          <h1 className="oracle oracle-brand mt-5" style={{ fontSize: 'var(--text-brand)' }}>
-            {t('app.brand')}
+          <h1 className="oracle oracle-brand hero-brand mt-5" aria-label={t('app.brand')} style={{ fontSize: 'var(--text-brand)' }}>
+            <span aria-hidden="true">{Array.from(t('app.brand')).map((letter, index) => (
+              <span key={index} className="hero-brand-letter" style={{ '--letter-index': index } as CSSProperties}>{letter}</span>
+            ))}</span>
           </h1>
           <p className="hero-tagline">{t('home.tagline')}</p>
           <p className="rule-gold hero-rule" aria-hidden="true">
@@ -153,7 +159,7 @@ export default function HomePage() {
           </p>
           <p className="mt-2 text-caption text-text-low">{t('home.handHint')}</p>
 
-          <div className="mt-9 flex w-full flex-col gap-3">
+          <div className="hero-actions mt-9 flex w-full flex-col gap-3">
             <Button size="lg" variant="primary" display block onClick={() => navigate(needsOnboarding() ? '/guide' : '/decks')}>
               {t('home.begin')}
             </Button>

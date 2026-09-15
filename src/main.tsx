@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/theme.css'
 import './styles/design-system.css'
+import './styles/home-motion.css'
 import App from './App'
 import { bootI18n } from './i18n'
 
