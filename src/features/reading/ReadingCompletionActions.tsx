@@ -19,7 +19,7 @@ export function ReadingCompletionActions({ busy, onNew, onSave, onShare }: Readi
         {t('reading.completion.new')}
       </Button>
       <div className="reading-completion-secondary">
-        <Button variant="ghost" disabled={busy} onClick={onSave}>{t('reading.completion.save')}</Button>
+        <Button variant="secondary" disabled={busy} onClick={onSave}>{t('reading.completion.save')}</Button>
         <Button variant="quiet" disabled={busy} onClick={onShare}>{t('reading.completion.share')}</Button>
       </div>
       {busy && <p role="status" className="reading-completion-note">{t('reading.completion.busy')}</p>}

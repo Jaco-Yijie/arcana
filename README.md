@@ -137,7 +137,8 @@ npm run deployment:check  # 验证包
 | `docs/00-brief.md` | V1 需求简报（唯一事实来源） |
 | `docs/01-product-spec.md` | Scope / 验收标准 AC-01~15 / 产品红线 G-01~24 |
 | `docs/02-ux-spec.md` | Sitemap / User Flow / 交互规范 / 移动端手势 |
-| `docs/03-design-system.md` | 设计系统 |
+| `docs/arcana-design-system-v1.md` | 当前设计系统与验证记录 |
+| `docs/03-design-system.md` | 历史设计系统 |
 | `docs/04-interaction-spec.md` | 洗牌·切牌·摊牌·选牌·摆牌·翻牌 方案 |
 | `docs/05-content-spec.md` | 牌义结构 / 语气规范 / Mock 解读 |
 | `docs/06-qa-report.md` | V1 QA 报告 |

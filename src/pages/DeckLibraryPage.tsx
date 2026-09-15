@@ -27,6 +27,7 @@ import { useState } from 'react'
 import type { CSSProperties } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { designTransition } from '@/design/motion'
 import { AppShell } from '@/components/layout/AppShell'
 import { Button } from '@/components/atoms/Button'
 import { CardFrame } from '@/components/card/CardFrame'
@@ -114,7 +115,7 @@ function DeckRow({
     <div
       style={scope}
       className={[
-        'overflow-hidden rounded-[var(--deck-radius)] border transition-colors duration-[var(--duration-base)]',
+        'deck-gallery-item overflow-hidden rounded-[var(--deck-radius)] border transition-colors duration-[var(--duration-base)]',
         active ? 'border-silver/45 bg-surface-1/40' : 'border-line-hairline bg-bg-void/30',
       ].join(' ')}
     >
@@ -127,7 +128,7 @@ function DeckRow({
         aria-checked={active}
         onClick={onSelect}
         animate={{ scale: active ? 1 : 0.995 }}
-        transition={{ duration: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
+        transition={designTransition('quick')}
         className="flex w-full flex-col gap-5 p-[var(--deck-pad)] text-left sm:flex-row sm:items-start sm:gap-7"
       >
         {/* 封面 —— 第一视觉入口。它不是任何一张牌，可以画得比单张牌更放得开 */}
@@ -223,7 +224,7 @@ function DeckHeading({
             它是固定文案，字符集在子集覆盖范围内（display-keys.json） */}
         <span
           className="text-[22px] leading-tight text-text-hi sm:text-[26px]"
-          style={{ fontFamily: 'var(--font-display)', fontWeight: 300, letterSpacing: '0.08em' }}
+          style={{ fontFamily: 'var(--font-oracle)', fontWeight: 400, letterSpacing: 'var(--tracking-oracle)' }}
         >
           {deckName(t, deck.deckId)}
         </span>

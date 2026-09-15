@@ -1,3 +1,5 @@
+> 历史设计记录。当前视觉规范以 [Arcana Design System V1](arcana-design-system-v1.md) 为准，以下固定冷蓝与系统字体约束已被新版取代。
+
 # Arcana — Design System 设计系统（Agent 3 Visual 产出，Lead 补全文档）
 
 > 唯一 token 来源：`src/styles/theme.css`（Tailwind v4 `@theme static`）。

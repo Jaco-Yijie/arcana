@@ -21,7 +21,6 @@ import { ReadingBody, fallbackNotice, type ReadingBodyData } from '@/features/re
 import { useReading } from '@/hooks/useReading'
 import { ReadingModePicker } from '@/features/reading/ReadingModePicker'
 import type { ReadingMode } from '@/types/reading'
-import { WIDTH_STYLE } from '@/components/layout/AppShell'
 import { useI18n } from '@/i18n'
 import { positionLabel, spreadName } from '@/i18n/domain'
 import { useCardName } from '@/hooks/useCardText'
@@ -204,8 +203,8 @@ export default function ReadingPage() {
   }
 
   return (
-    <div className="relative mx-auto flex min-h-[100dvh] w-full flex-col"
-      style={{ maxWidth: WIDTH_STYLE.column }}>
+    <div className="reading-experience relative mx-auto flex min-h-[100dvh] w-full flex-col"
+      style={{ maxWidth: 'var(--measure-reading)' }}>
       <LanguageSwitcher className="language-corner" />
       <header
         className="flex items-center justify-between px-4 py-2"
@@ -237,7 +236,7 @@ export default function ReadingPage() {
           className 上的宽度会被 CardFrame 的 inline style 静默覆盖
           （它自己的文档里专门警告过这个陷阱），所以牌从来没有 40px，
           一直是 sm 档。现在改走 `width` 这个唯一出口。 */}
-      <section className="px-5 pb-1 pt-1">
+      <section className="reading-frontispiece px-5 pb-1 pt-1">
         {session.question ? (
           <>
             <span className="eyebrow">{t('reading.question')}</span>
@@ -281,7 +280,7 @@ export default function ReadingPage() {
         ))}
       </div>
 
-      <main className="flex-1 px-5 pb-4">
+      <main className="reading-book flex-1">
         {shouldAsk ? (
           <ReadingModePicker
             value={mode}

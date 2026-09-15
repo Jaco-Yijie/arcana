@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { I18nProvider } from '@/i18n'
 import { SettingsProvider } from '@/store/SettingsContext'
 import { SessionProvider } from '@/store/SessionContext'
@@ -75,6 +75,11 @@ function RouteFallback() {
  */
 const Router = import.meta.env.VITE_DEPLOY_TARGET === 'streamlit' ? HashRouter : BrowserRouter
 
+function RouteAtmosphere() {
+  const { pathname } = useLocation()
+  return pathname === '/' ? null : <DeckAtmosphere dimmed={pathname === '/reading'} />
+}
+
 export default function App() {
   return (
     <I18nProvider>
@@ -84,7 +89,7 @@ export default function App() {
             {/* 会话冻结后，把牌组主题锁在那一副上（见组件注释） */}
             <DeckThemeSync />
             <Router>
-              <DeckAtmosphere />
+              <RouteAtmosphere />
               <Suspense fallback={<RouteFallback />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />

@@ -578,8 +578,8 @@ function checkBrandScale(): void {
   }
 
   for (const [name, mobile, desktop] of [
-    ['text-brand-cover', [44, 60], [70, 96]],
-    ['text-brand', [44, 60], [70, 96]],
+    ['text-brand-cover', [48, 64], [80, 120]],
+    ['text-brand', [48, 64], [80, 120]],
   ] as [string, [number, number], [number, number]][]) {
     const f = parseClamp(name)
     check(`${name} 是 vw+rem 混合式 clamp（纯 vw 会在中段掉出区间）`, f !== null)

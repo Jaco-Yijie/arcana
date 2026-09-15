@@ -17,7 +17,6 @@ import IntroCover, { shouldShowCover } from './IntroCover'
 import { getSpread } from '@/data/spreads'
 import { truncate } from '@/utils/format'
 import type { SessionStage } from '@/types/session'
-import { WIDTH_STYLE } from '@/components/layout/AppShell'
 
 /** Hero 里展示哪三张。构图差异最大的三张：人物 / 对称 / 关系 */
 const HERO_CARD_IDS = ['major-00', 'major-02', 'major-06'] as const
@@ -38,17 +37,18 @@ const STAGE_ROUTE: Record<SessionStage, string> = {
 /** Hero 里的三张牌。用 thumb 档 —— 首屏不该为了三张展示牌去拉 3×295KB 的原图 */
 function HeroCards({ deckId }: { deckId: ReturnType<typeof useDeck>['deckId'] }) {
   return (
-    <div className="flex items-center justify-center md:justify-start" aria-hidden="true">
+    <div className="hero-card-stage" aria-hidden="true">
+      <span className="hero-orbit" />
       {HERO_CARD_IDS.map((id, i) => (
         <div
           key={id}
           className="shrink-0"
           style={{
-            marginLeft: i === 0 ? 0 : 'calc(var(--hero-card-w) * -0.28)',
-            zIndex: i,
+            marginLeft: i === 0 ? 0 : 'calc(var(--hero-card-w) * -0.38)',
+            zIndex: i === 1 ? 3 : 2,
             /* 极轻微错落与倾斜：像随手放在桌面上，而不是对齐的素材列表。
                角度刻意都很小 —— 大角度会立刻变成「游戏抽卡界面」。 */
-            transform: `translateY(${[10, 0, 6][i]}px) rotate(${[-4, 0, 3.5][i]}deg)`,
+            transform: `translateY(${[26, -12, 26][i]}px) rotate(${[-7, 0, 7][i]}deg)`,
           }}
         >
           <CardFrame width="var(--hero-card-w)" size="md" state="resting" hoverLift deckId={deckId}>
@@ -90,11 +90,8 @@ export default function HomePage() {
 
   return (
     <div className="identity-home relative isolate mx-auto flex min-h-[100dvh] w-full flex-col px-5"
-      /* 与 AppShell 的 column 用同一个连续宽度令牌 —— 这两页有自己的根容器，
-         不经过 AppShell，但内容列宽度必须和全站一致 */
-      /* Hero 是左右分栏，需要比正文列宽。窄屏时 gallery 仍然是 94vw，
-         所以手机端不会因此变宽 —— 它只是解开了桌面端 40rem 的上限。 */
-      style={{ maxWidth: WIDTH_STYLE.gallery }}>
+      /* 双栏 Hero 使用独立的展示宽度，正文仍使用阅读宽度令牌。 */
+      style={{ maxWidth: 'var(--measure-home)' }}>
       <ArtBackdrop variant="home" />
 
       {/* 介绍页入口与语言切换共用主导航，移动端收进 Menu。 */}
@@ -138,7 +135,7 @@ export default function HomePage() {
           <span className="eyebrow">
             {t('app.brandEyebrow')}
           </span>
-          <DeckSigil deckId={deckId} size="clamp(3.5rem, 9vw, 6rem)" opacity={0.45} />
+          <span className="hero-sigil"><DeckSigil deckId={deckId} size="2.5rem" opacity={0.7} /></span>
           <h1 className="oracle oracle-brand mt-5" style={{ fontSize: 'var(--text-brand)' }}>
             {t('app.brand')}
           </h1>

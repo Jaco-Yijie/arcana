@@ -7,7 +7,7 @@
     "dev": "node scripts/dev.mjs",
     "dev:web": "vite",
     "dev:reading": "tsx watch server/index.ts",
-    "build": "tsc -b && tsc -p tsconfig.server.json --noEmit && npm run i18n:check && npm run deck:check && npm run layout:check && npm run artwork:check && vite build",
+    "build": "tsc -b && tsc -p tsconfig.server.json --noEmit && npm run i18n:check && npm run deck:check && npm run layout:check && npm run artwork:check && npm run design:check && vite build",
     "lint": "oxlint",
     "engine:check": "tsx scripts/engine-selfcheck.ts",
     "preview": "vite preview",
@@ -19,7 +19,7 @@
     "artwork:check": "tsx scripts/artwork-check.ts",
     "deep:stability": "tsx scripts/deep-stability.ts",
     "deploy:build": "npm ci && npm run build",
-    "build:streamlit": "tsc -b && npm run i18n:check && npm run deck:check && vite build --config vite.streamlit.config.ts",
+    "build:streamlit": "tsc -b && npm run i18n:check && npm run deck:check && npm run design:check && vite build --config vite.streamlit.config.ts",
     "thumbs": "tsx scripts/generate-thumbnails.ts",
     "spec:fool": "tsx scripts/fool-spec.ts",
     "release:check": "tsx scripts/release-check.ts",
@@ -31,7 +31,8 @@
     "assets:origin": "tsx scripts/asset-origin-check.ts",
     "performance:check": "tsx scripts/performance-check.ts",
     "i18n:runtime": "tsx scripts/i18n-runtime-check.ts",
-    "onboarding:check": "tsx qa/onboarding/state-check.ts"
+    "onboarding:check": "tsx qa/onboarding/state-check.ts",
+    "design:check": "node --import tsx --test tests/design-system.test.ts"
   },
   "dependencies": {
     "framer-motion": "^12.43.0",

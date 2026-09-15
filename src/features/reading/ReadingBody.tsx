@@ -184,7 +184,7 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
       )}
 
       {energy && (
-        <div className="mt-5 flex flex-col gap-3">
+        <div className="reading-opening mt-5 flex flex-col gap-3">
           <Paragraphs text={energy} className="text-read text-text-hi" />
         </div>
       )}
@@ -232,10 +232,10 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
 
       {/* ── 回到你的问题：全篇最重要的一段，给它自己的容器 ── */}
       {answer && (
-        <Panel tone="inset" pad="md" className="mt-9 flex flex-col gap-3">
+        <section className="reading-answer mt-9 flex flex-col gap-3">
           <span className="ritual-heading ritual-heading-marked">{t('reading.section.answer')}</span>
           <Paragraphs text={answer} className="text-read text-text-hi" />
-        </Panel>
+        </section>
       )}
 
       {quote && (
