@@ -1,3 +1,4 @@
+import { RitualScene } from '@/components/immersive/RitualScene'
 import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
 import type { ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -78,9 +79,11 @@ export function ImmersiveShell({
 
   return (
     <div
-      className="fixed inset-0 flex flex-col overflow-hidden bg-bg-deep"
+      className="immersive-space fixed inset-0 flex flex-col overflow-hidden bg-bg-deep"
+      data-interacting={interacting}
       style={{ height: '100dvh', overscrollBehavior: 'none' }}
     >
+      {(step === 'shuffle' || step === 'draw' || step === 'cut') && <RitualScene variant="table" />}
       <LanguageSwitcher className="language-corner immersive-language" />
       {/* 【连续响应式，不用断点做宽度】
           旧版是 `max-w-[420px] md:max-w-[720px] lg:max-w-[1120px]` ——
@@ -91,7 +94,7 @@ export function ImmersiveShell({
           中间每一个像素都是连续的，且 1920 屏能真正用满。
           断点从此只做**结构性**切换（底部抽屉 ↔ 右侧栏）。 */}
       <div
-        className="mx-auto flex h-full w-full flex-col"
+        className="immersive-content mx-auto flex h-full w-full flex-col"
         style={{ maxWidth: VARIANT_WIDTH[variant] }}
       >
         <header

@@ -146,11 +146,11 @@ export function ShuffleStack({ onGesture, onInteractingChange, shuffleCount }: S
           ? t('a11y.shuffleIdle')
           : t('a11y.shuffleDone', { n: shuffleCount })
       }
-      className="table-surface relative flex h-full w-full cursor-grab items-center justify-center rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70 active:cursor-grabbing"
+      className="shuffle-depth table-surface relative flex h-full w-full cursor-grab items-center justify-center rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-silver/70 active:cursor-grabbing"
     >
       {/* 待机轻推（Idle Nudge）：整堆轻微摆动，告诉用户「这个东西可以动」。洗过一次后停止。 */}
       <motion.div
-        className="relative"
+        className="shuffle-depth-stack relative"
         // 子元素全为绝对定位，必须显式给容器高度，否则 flex 居中会算成 0 高
         style={{
           width: 'var(--card-w-lg)',
@@ -182,6 +182,9 @@ export function ShuffleStack({ onGesture, onInteractingChange, shuffleCount }: S
                 x: offsetX + restJitter * 0.6,
                 y: offsetY - i * 0.6,
                 rotate: rotate + restJitter * 0.25,
+                z: reduceMotion ? 0 : i * 1.2 + Math.min(36, distance * factor * .18),
+                rotateX: reduceMotion ? 0 : 10 + Math.max(-8, Math.min(8, dy * factor * .12)),
+                rotateY: reduceMotion ? 0 : Math.max(-15, Math.min(15, dx * factor * .2)),
               }}
               transition={
                 settling && !reduceMotion

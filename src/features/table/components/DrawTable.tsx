@@ -270,7 +270,7 @@ export function DrawTable({
                     className="h-full w-full"
                     style={{ opacity: draggingThis ? 0 : 1 }}
                   >
-                    <CardFrame size="sm" fluid state="resting" className="h-full w-full">
+                    <CardFrame size="sm" fluid state="resting" className="draw-placed-art h-full w-full">
                       <CardBack simplified />
                     </CardFrame>
                   </div>
@@ -344,7 +344,7 @@ export function DrawTable({
       {/* 手牌区高度 96 → 64：空手时这里只放一行提示，
           而 800px 的手机上每 32px 都要从牌桌那边抢。
           手上有牌时卡片会溢出这条带子，属于预期 —— 它本来就是「拿在手上」。 */}
-      <div className="relative flex h-16 shrink-0 items-center justify-center gap-3 px-5">
+      <div className="draw-hand-depth relative flex h-16 shrink-0 items-center justify-center gap-3 px-5">
         {handIndex !== null && (
           // 同上：拖拽中只隐藏、不卸载，否则 pointer capture 随元素一起消失
           <div
@@ -355,7 +355,7 @@ export function DrawTable({
             className="touch-none"
             style={{ opacity: drag?.started && drag.source.kind === 'hand' ? 0 : 1 }}
           >
-            <CardFrame size="sm" state="lifted" selected>
+            <CardFrame key={handIndex} size="sm" state="lifted" selected className="draw-picked-art">
               <CardBack simplified />
             </CardFrame>
           </div>

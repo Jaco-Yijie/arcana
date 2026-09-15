@@ -1,0 +1,82 @@
+:root {
+  --ritual-perspective: 1000px;
+  --ritual-orbit-time: 42s;
+  --ritual-mist-time: 26s;
+  --ritual-line: color-mix(in srgb, var(--color-gold) 45%, transparent);
+  --ritual-light: color-mix(in srgb, var(--color-silver) 24%, transparent);
+  --ritual-shade: color-mix(in srgb, var(--color-bg-void) 88%, transparent);
+}
+.ritual-scene { position: absolute; inset: 0; overflow: hidden; pointer-events: none; perspective: var(--ritual-perspective); z-index: -1; }
+.ritual-horizon { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, var(--ritual-light), transparent 60%); }
+.ritual-armillary { position: absolute; width: min(65vw, 38rem); aspect-ratio: 1; left: 50%; top: 45%; transform-style: preserve-3d; transform: translate(-50%, -50%) rotateX(18deg) rotateY(-24deg); }
+.ritual-ring { position: absolute; inset: 0; border: 1px solid var(--ritual-line); border-radius: 50%; transform-style: preserve-3d; box-shadow: inset 0 0 0 5px var(--identity-gold-faint), 0 0 0 8px var(--identity-gold-faint); }
+.ritual-ring::before, .ritual-ring::after { content: '✦'; position: absolute; left: 50%; top: -10px; color: var(--color-gold); font-size: 18px; }
+.ritual-ring::after { top: auto; bottom: -10px; }
+.ritual-ring-a { animation: ritual-orbit-a var(--ritual-orbit-time) linear infinite; }
+.ritual-ring-b { animation: ritual-orbit-b var(--ritual-orbit-time) linear infinite reverse; }
+.ritual-ring-c { transform: rotateX(72deg) rotateY(24deg); border-style: dashed; }
+.ritual-pole { position: absolute; height: 120%; width: 1px; top: -10%; left: 50%; background: var(--ritual-line); transform: rotateZ(32deg); }
+.ritual-orb { position: absolute; width: min(24vw, 11rem); aspect-ratio: 1; border-radius: 50%; left: 50%; top: 35%; transform: translate(-50%, -50%); background: radial-gradient(circle at 30% 25%, var(--color-silver), var(--color-silver-dim) 16%, var(--color-bg-raised) 45%, var(--color-bg-void) 72%); box-shadow: inset -12px -8px 25px var(--ritual-shade), 0 0 60px var(--ritual-light); }
+.ritual-orb span { position: absolute; inset: 0; border-radius: inherit; background: url('/assets/identity/paper-grain.svg'); opacity: .18; }
+.ritual-floor { position: absolute; width: min(105vw, 65rem); aspect-ratio: 1; left: 50%; top: 52%; transform: translate(-50%, -25%) rotateX(68deg); border: 1px solid var(--ritual-line); border-radius: 50%; background: repeating-radial-gradient(circle, transparent 0 15%, var(--identity-gold-faint) 15.1% 15.3%, transparent 15.4% 20%); }
+.ritual-floor i { position: absolute; inset: 12%; border: 1px dashed var(--ritual-line); border-radius: inherit; }
+.ritual-floor span { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ritual-line); font-size: 5rem; }
+.ritual-mist { position: absolute; inset: 20% -10% -15%; background: url('/assets/identity/ink-landscape.svg') center bottom / cover no-repeat; opacity: .12; animation: ritual-mist var(--ritual-mist-time) ease-in-out infinite alternate; }
+.ritual-scene-hero { inset: -25% -15%; }
+.ritual-scene-hero .ritual-orb { top: 32%; }
+.ritual-scene-hero .ritual-floor { top: 65%; }
+.ritual-scene-cover { position: fixed; z-index: -1; opacity: .65; }
+.ritual-scene-cover .ritual-armillary { width: min(78vw, 42rem); top: 48%; }
+.ritual-scene-cover .ritual-orb { top: 25%; }
+.identity-home .hero-card-stage { perspective: var(--ritual-perspective); overflow: visible; }
+.hero-depth-plane { display: flex; align-items: center; justify-content: center; transform-style: preserve-3d; transform: rotateX(var(--depth-x, 0deg)) rotateY(var(--depth-y, 0deg)); transition: transform 180ms ease-out; }
+.identity-home .hero-card-float { transform-style: preserve-3d; animation: ritual-card 9s ease-in-out var(--home-action-delay) infinite alternate; }
+.identity-home .hero-card-entry { animation-name: ritual-card-enter; }
+.identity-home { --home-card-delay: 2s; --home-brand-delay: 3s; }
+.identity-home .hero-card-stage > .ritual-scene { transform: rotateY(calc(var(--depth-y, 0deg) * -.35)); transition: transform 240ms ease-out; }
+.immersive-space { isolation: isolate; }
+.immersive-space > .ritual-scene { z-index: 0; }
+.immersive-content { position: relative; z-index: 1; }
+.ritual-scene-table .ritual-armillary { top: 39%; width: min(72vw, 35rem); opacity: .48; }
+.ritual-scene-table .ritual-orb { top: 22%; opacity: .48; }
+.immersive-space[data-interacting='true'] .ritual-ring { animation-play-state: paused; }
+.immersive-space[data-interacting='true'] .ritual-horizon { opacity: .65; }
+.shuffle-depth { perspective: var(--ritual-perspective); }
+.shuffle-depth-stack { transform-style: preserve-3d; }
+.draw-hand-depth { perspective: var(--ritual-perspective); }
+.draw-picked-art { animation: ritual-pick 620ms var(--ease-settle) both; }
+.draw-placed-art { animation: ritual-place 520ms var(--ease-settle) both; }
+.immersive-space:has(.draw-picked-art) .ritual-orb { box-shadow: inset -12px -8px 25px var(--ritual-shade), 0 0 95px var(--ritual-light); }
+@keyframes ritual-orbit-a { from { transform: rotateX(58deg) rotateY(0deg); } to { transform: rotateX(58deg) rotateY(360deg); } }
+@keyframes ritual-orbit-b { from { transform: rotateY(65deg) rotateX(0deg); } to { transform: rotateY(65deg) rotateX(360deg); } }
+@keyframes ritual-card { from { transform: translate3d(0, 0, 18px) rotateY(-7deg) rotateX(3deg); } to { transform: translate3d(0, -10px, 48px) rotateY(7deg) rotateX(-4deg); } }
+@keyframes ritual-card-enter { from { opacity: 0; transform: translate3d(0, 35px, -160px) rotateY(-28deg); } to { opacity: 1; transform: none; } }
+@keyframes ritual-mist { from { transform: translate3d(-2%, 0, 0); } to { transform: translate3d(2%, -2%, 0); } }
+@keyframes ritual-pick { from { transform: perspective(800px) translateZ(-90px) translateY(24px) rotateY(-24deg); } to { transform: perspective(800px) translateZ(0) translateY(0) rotateY(0); } }
+@keyframes ritual-place { from { transform: perspective(800px) translateZ(55px) rotateX(12deg); } to { transform: perspective(800px) translateZ(0) rotateX(0); } }
+@media (max-width: 767px), (pointer: coarse) {
+  .ritual-ring-b, .ritual-ring-c, .ritual-pole, .ritual-mist { display: none; }
+  .ritual-ring-a { animation: none; transform: rotateX(55deg) rotateY(-20deg); }
+  .ritual-armillary { width: 85vw; }
+  .identity-home .hero-card-float { animation: none; transform: perspective(900px) rotateY(-5deg); }
+  .hero-depth-plane { transform: none; }
+  .identity-home .hero-card-entry { animation-name: home-card-mobile; }
+  .draw-picked-art { animation-duration: 300ms; }
+  .ritual-scene-table .ritual-orb { width: 5rem; opacity: .3; }
+}
+@media (prefers-reduced-motion: reduce), (update: slow) {
+  .ritual-scene *, .identity-home .hero-card-float, .draw-picked-art, .draw-placed-art { animation: none !important; }
+  .hero-depth-plane { transform: none; transition: none; }
+  .ritual-ring-a { transform: rotateX(58deg); }
+  .ritual-ring-b { transform: rotateY(65deg); }
+}
+.hero-depth-plane > div, .hero-card-entry { transform-style: preserve-3d; }
+@media (max-width: 767px), (pointer: coarse) {
+  .shuffle-depth-stack { transform-style: flat; }
+}
+/* Decorative depth may extend beyond the hero, never beyond the page. */
+.identity-home { overflow-x: clip; }
+@media (max-width: 767px), (pointer: coarse) {
+  .hero-depth-plane { transition: none; }
+  .ritual-scene-hero { inset: -10% 0; }
+}

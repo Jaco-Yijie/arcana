@@ -1,3 +1,5 @@
+import { RitualScene } from '@/components/immersive/RitualScene'
+import { useHeroDepth } from '@/components/immersive/useHeroDepth'
 import { needsOnboarding } from '@/features/onboarding/state'
 import { ArtBackdrop } from '@/components/identity/ArtBackdrop'
 import { SiteNavigation } from '@/components/layout/SiteNavigation'
@@ -38,7 +40,8 @@ const STAGE_ROUTE: Record<SessionStage, string> = {
 function HeroCards({ deckId }: { deckId: ReturnType<typeof useDeck>['deckId'] }) {
   return (
     <div className="hero-card-stage" aria-hidden="true">
-      <span className="hero-orbit" />
+      <RitualScene />
+      <div className="hero-depth-plane">
       {HERO_CARD_IDS.map((id, i) => (
         <div
           key={id}
@@ -68,6 +71,7 @@ function HeroCards({ deckId }: { deckId: ReturnType<typeof useDeck>['deckId'] })
           </div>
         </div>
       ))}
+      </div>
     </div>
   )
 }
@@ -81,6 +85,7 @@ export default function HomePage() {
      所以不会被挡住 —— 那正是不把它做成独立路由的原因。
      初值用惰性求值：读一次存储就够，不必每次渲染都读。 */
   const [covered, setCovered] = useState(() => needsOnboarding() && shouldShowCover())
+  const depthRef = useHeroDepth(!covered)
   if (covered) return <IntroCover onEnter={() => setCovered(false)} />
 
   const spread = session?.spreadId ? getSpread(session.spreadId) : null
@@ -93,7 +98,7 @@ export default function HomePage() {
       : null
 
   return (
-    <div className="identity-home relative isolate mx-auto flex min-h-[100dvh] w-full flex-col px-5"
+    <div ref={depthRef} className="identity-home relative isolate mx-auto flex min-h-[100dvh] w-full flex-col px-5"
       /* 双栏 Hero 使用独立的展示宽度，正文仍使用阅读宽度令牌。 */
       style={{ maxWidth: 'var(--measure-home)' }}>
       <ArtBackdrop variant="home" />

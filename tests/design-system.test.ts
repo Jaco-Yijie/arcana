@@ -74,3 +74,17 @@ test('Home entrance keeps controls independent and offers a static mobile/reduce
   assert.match(home, /variant="thumb"/)
   assert.match(home, /aria-label=\{t\('app.brand'\)\}/)
 })
+
+test('immersive depth stays decorative and does not introduce a render loop or remote assets', () => {
+  const scene = readFileSync(new URL('../src/components/immersive/RitualScene.tsx', import.meta.url), 'utf8')
+  const depth = readFileSync(new URL('../src/components/immersive/useHeroDepth.ts', import.meta.url), 'utf8')
+  const css = readFileSync(new URL('../src/styles/immersive-3d.css', import.meta.url), 'utf8')
+  assert.match(scene, /aria-hidden="true"/)
+  assert.match(css, /pointer-events: none/)
+  assert.doesNotMatch(scene + css, /https?:\/\//)
+  assert.match(depth, /\(pointer: fine\)/)
+  assert.match(depth, /cancelAnimationFrame\(frame\)/)
+  assert.match(depth, /removeEventListener\('pointermove'/)
+  assert.match(css, /prefers-reduced-motion: reduce/)
+  assert.match(css, /\.identity-home \{ overflow-x: clip; \}/)
+})

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './styles/theme.css'
 import './styles/design-system.css'
 import './styles/home-motion.css'
+import './styles/immersive-3d.css'
 import App from './App'
 import { bootI18n } from './i18n'
 
