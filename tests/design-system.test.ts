@@ -88,3 +88,22 @@ test('immersive depth stays decorative and does not introduce a render loop or r
   assert.match(css, /prefers-reduced-motion: reduce/)
   assert.match(css, /\.identity-home \{ overflow-x: clip; \}/)
 })
+
+test('every deck has a distinct silhouette and readable dark reading palette', async () => {
+  const { DECK_SIGNATURES } = await import('../src/atmosphere/signatures.ts')
+  const { ALL_DECK_IDS } = await import('../src/decks/ids.ts')
+  assert.deepEqual(Object.keys(DECK_SIGNATURES).sort(), [...ALL_DECK_IDS].sort())
+  assert.equal(new Set(Object.values(DECK_SIGNATURES).map(s => s.motif)).size, ALL_DECK_IDS.length)
+  const luminance = (hex: string) => [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255)
+    .map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4)
+    .reduce((sum, v, i) => sum + v * [.2126, .7152, .0722][i]!, 0)
+  for (const [id, palette] of Object.entries(DECK_SIGNATURES)) {
+    for (const bg of [palette.paper, palette.raised]) {
+      assert.ok(luminance(bg) < .09, `${id}: reading surface should remain dark`)
+      for (const fg of [palette.text, palette.secondary, palette.accent]) {
+        const ratio = (luminance(fg) + .05) / (luminance(bg) + .05)
+        assert.ok(ratio >= 4.5, `${id}: contrast ${ratio}`)
+      }
+    }
+  }
+})

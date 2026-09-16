@@ -1,3 +1,4 @@
+import { SignatureArt } from '@/atmosphere/SignatureArt'
 /**
  * Deck Library —— 数字牌柜（Digital Tarot Cabinet）。
  *
@@ -115,10 +116,11 @@ function DeckRow({
     <div
       style={scope}
       className={[
-        'deck-gallery-item overflow-hidden rounded-[var(--deck-radius)] border transition-colors duration-[var(--duration-base)]',
+        'deck-gallery-item relative isolate overflow-hidden rounded-[var(--deck-radius)] border transition-colors duration-[var(--duration-base)]',
         active ? 'border-silver/45 bg-surface-1/40' : 'border-line-hairline bg-bg-void/30',
       ].join(' ')}
     >
+      <SignatureArt deckId={deck.deckId} />
       {/* 选中区与展开区是**分离**的两个可点区域。
           如果「展开才能选」，展开就成了必要步骤，用户会觉得必须读完才敢选，
           这一页就变重了 —— 而它本该是一次轻的偏好选择。 */}

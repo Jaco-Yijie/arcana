@@ -1,3 +1,4 @@
+import { deckVisualScope } from '@/atmosphere/visualScope'
 import { RitualScene } from '@/components/immersive/RitualScene'
 import { useHeroDepth } from '@/components/immersive/useHeroDepth'
 import { needsOnboarding } from '@/features/onboarding/state'
@@ -40,7 +41,7 @@ const STAGE_ROUTE: Record<SessionStage, string> = {
 function HeroCards({ deckId }: { deckId: ReturnType<typeof useDeck>['deckId'] }) {
   return (
     <div className="hero-card-stage" aria-hidden="true">
-      <RitualScene />
+      <RitualScene deckId={deckId} />
       <div className="hero-depth-plane">
       {HERO_CARD_IDS.map((id, i) => (
         <div
@@ -100,7 +101,7 @@ export default function HomePage() {
   return (
     <div ref={depthRef} className="identity-home relative isolate mx-auto flex min-h-[100dvh] w-full flex-col px-5"
       /* 双栏 Hero 使用独立的展示宽度，正文仍使用阅读宽度令牌。 */
-      style={{ maxWidth: 'var(--measure-home)' }}>
+      style={{ ...deckVisualScope(deckId), maxWidth: 'var(--measure-home)' }}>
       <ArtBackdrop variant="home" />
 
       {/* 介绍页入口与语言切换共用主导航，移动端收进 Menu。 */}

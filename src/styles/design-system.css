@@ -683,39 +683,39 @@
 .reading-frontispiece { text-align: center; max-width: 38rem; margin: 1rem auto; }
 .reading-frontispiece .reading-question { font-size: clamp(1.15rem, 1vw + .9rem, 1.5rem); }
 .reading-book {
-  --color-text-hi: var(--color-ink-primary);
-  --color-text-mid: var(--color-ink-secondary);
-  --color-text-low: var(--color-ink-muted);
-  --color-text-faint: var(--color-ink-muted);
-  --color-bg-void: var(--color-paper-inset);
-  --color-bg-deep: var(--color-paper);
-  --color-bg-raised: var(--color-paper-raised);
-  --color-surface-1: var(--color-paper-inset);
-  --color-surface-2: var(--color-paper-raised);
-  --color-surface-3: var(--color-paper-inset);
-  --color-silver: var(--color-ink-accent);
-  --color-silver-dim: var(--color-ink-muted);
-  --color-gold: var(--color-ink-accent);
-  --color-affirm: var(--color-paper-affirm);
-  --color-caution: var(--color-paper-caution);
-  --color-line-hairline: var(--color-ink-line);
-  --color-line-soft: var(--color-ink-line);
-  --color-line-strong: var(--color-ink-accent);
-  --identity-gold: var(--color-ink-accent);
-  --identity-gold-soft: color-mix(in srgb, var(--color-ink-accent) 42%, transparent);
-  --identity-gold-faint: color-mix(in srgb, var(--color-ink-accent) 10%, transparent);
-  --button-fill: var(--color-paper-inset);
-  --button-hover: var(--color-paper-raised);
+  --color-text-hi: var(--reading-text);
+  --color-text-mid: var(--reading-secondary);
+  --color-text-low: var(--reading-secondary);
+  --color-text-faint: var(--reading-secondary);
+  --color-bg-void: var(--reading-paper);
+  --color-bg-deep: var(--reading-paper);
+  --color-bg-raised: var(--reading-raised);
+  --color-surface-1: var(--reading-paper);
+  --color-surface-2: var(--reading-raised);
+  --color-surface-3: var(--reading-raised);
+  --color-silver: var(--reading-accent);
+  --color-silver-dim: var(--reading-secondary);
+  --color-gold: var(--reading-accent);
+  --color-ink-accent: var(--reading-accent);
+  --color-line-hairline: color-mix(in srgb, var(--reading-accent) 12%, transparent);
+  --color-line-soft: color-mix(in srgb, var(--reading-accent) 22%, transparent);
+  --color-line-strong: color-mix(in srgb, var(--reading-accent) 40%, transparent);
+  --identity-gold: var(--reading-accent);
+  --identity-gold-soft: var(--color-line-soft);
+  --identity-gold-faint: var(--color-line-hairline);
+  --button-fill: var(--reading-raised);
+  --button-hover: var(--reading-paper);
   position: relative;
   margin-top: 1.5rem;
   padding: clamp(1.5rem, 6vw, 5rem) clamp(1.25rem, 7vw, 6.5rem);
-  background: var(--color-paper);
+  background: var(--reading-paper);
   color: var(--color-text-mid);
-  border: 1px solid var(--color-ink-line);
-  box-shadow: var(--shadow-book);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 1rem 1rem .4rem .4rem;
+  box-shadow: 0 16px 55px -36px var(--color-shadow), inset 0 1px 0 var(--color-line-soft);
   isolation: isolate;
 }
-.reading-book::before { content: ''; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: url('/assets/identity/paper-grain.svg') repeat; opacity: var(--art-grain-opacity); mix-blend-mode: multiply; }
+.reading-book::before { content: ''; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: url('/assets/identity/paper-grain.svg') repeat; opacity: .035; mix-blend-mode: soft-light; }
 .reading-book .reading-editorial { margin-inline: auto; }
 .reading-book .reading-theme > .rule-gold { width: 7rem; margin-inline: auto; }
 .reading-book .reading-theme > span { justify-content: center; }

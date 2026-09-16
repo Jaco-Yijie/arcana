@@ -1,3 +1,6 @@
+import { deckVisualScope } from '@/atmosphere/visualScope'
+import { DECK_SIGNATURES } from '@/atmosphere/signatures'
+import { SignatureArt } from '@/atmosphere/SignatureArt'
 import { useLocalizedContent, TranslationStatus } from '@/i18n/useLocalizedContent'
 import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
 import { AppShell } from '@/components/layout/AppShell'
@@ -204,7 +207,9 @@ export default function ReadingPage() {
 
   return (
     <div className="reading-experience relative mx-auto flex min-h-[100dvh] w-full flex-col"
-      style={{ maxWidth: 'var(--measure-reading)' }}>
+      data-texture={DECK_SIGNATURES[resolveDeckId(session.deckId, session.deckSchema)].texture}
+      style={{ ...deckVisualScope(resolveDeckId(session.deckId, session.deckSchema)), maxWidth: 'var(--measure-reading)' }}>
+      <SignatureArt deckId={resolveDeckId(session.deckId, session.deckSchema)} />
       <LanguageSwitcher className="language-corner" />
       <header
         className="flex items-center justify-between px-4 py-2"

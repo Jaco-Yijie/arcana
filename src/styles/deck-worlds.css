@@ -1,0 +1,59 @@
+/* World silhouettes sit behind content and share the deck's existing palette. */
+.signature-art { position: absolute; inset: 0; pointer-events: none; color: var(--color-silver); opacity: .4; overflow: hidden; }
+.signature-art svg { position: absolute; width: min(100%, 52rem); height: 100%; left: 50%; top: 0; transform: translateX(-50%); }
+.signature-art::before { content: ''; position: absolute; inset: 0; opacity: .1; background: url('/assets/identity/paper-grain.svg') repeat; }
+.signature-art[data-texture='damask']::before { background-image: url('/assets/identity/damask.svg'); }
+.signature-art[data-texture='botanical']::before { background: url('/assets/identity/botanical.svg') left bottom / 55% auto no-repeat; }
+.signature-art[data-texture='water']::before { background: repeating-radial-gradient(ellipse at 50% 90%, transparent 0 8%, var(--color-silver) 8.1% 8.3%, transparent 8.5% 13%); }
+.signature-art[data-texture='ruled']::before { background: repeating-linear-gradient(90deg, transparent 0 12%, var(--color-gold) 12.1% 12.2%, transparent 12.3% 25%); }
+.ritual-scene .signature-art { opacity: .6; }
+.ritual-scene .signature-art svg { transform-origin: center; }
+.signature-art[data-motif='heraldry'], .signature-art[data-motif='engraving'], .signature-art[data-motif='archive'] { color: var(--color-gold); }
+.signature-art[data-motif='veil'] svg { width: 110%; stroke-width: 2; }
+.signature-art[data-motif='tide'] svg { width: 110%; transform: translateX(-50%) perspective(950px) rotateX(20deg); }
+.signature-art[data-motif='thicket'] svg { width: 120%; transform: translateX(-50%) rotate(-6deg); }
+.signature-art[data-motif='canopy'] svg { width: 125%; stroke-width: 2; }
+.signature-art[data-motif='eclipse'] svg { stroke-width: 2; }
+.signature-art[data-motif='archive'] svg { width: 85%; }
+.ritual-scene [data-motion='drift'] svg { animation: world-drift 22s ease-in-out infinite alternate; }
+.ritual-scene [data-motion='turn'] svg { animation: world-turn 45s ease-in-out infinite alternate; }
+.ritual-scene [data-motif='tide'] svg { animation-name: world-tide; }
+.ritual-scene [data-motif='thicket'] svg { animation-name: world-thicket; }
+.deck-world[data-motif='eclipse'] .ritual-orb { top: 38%; background: var(--color-bg-void); box-shadow: 0 0 0 1px var(--color-silver), 8px 0 28px var(--ritual-light); }
+.deck-world[data-motif='tide'] .ritual-orb { top: 42%; width: 18%; background: radial-gradient(circle at 30% 25%, var(--color-text-hi), var(--color-silver) 25%, var(--color-bg-raised) 70%); }
+.deck-world[data-motif='veil'] .ritual-orb { opacity: .3; box-shadow: 0 0 80px var(--ritual-light); }
+/* Replace the shared landscape artwork; the signature now owns this layer. */
+.identity-home .art-ink, .identity-home .art-cloud, .identity-home .art-moon,
+.identity-home .art-damask, .identity-home .art-botanical, .identity-home .art-axis,
+.identity-cover .art-ink, .identity-cover .art-cloud, .identity-cover .art-moon,
+.identity-cover .art-damask, .identity-cover .art-botanical, .identity-cover .art-axis { display: none; }
+.ritual-scene-table .signature-art { opacity: .28; }
+.ritual-scene-table .signature-art svg { width: min(90vw, 45rem); }
+[data-atmosphere] > .signature-art { opacity: .18; }
+.deck-gallery-item > .signature-art { opacity: .22; z-index: -1; }
+.deck-gallery-item > .signature-art svg { left: 78%; width: 55%; }
+.reading-experience { position: relative; isolation: isolate; }
+.reading-experience > .signature-art { position: absolute; height: 36rem; opacity: .15; z-index: -1; }
+.reading-experience[data-texture='damask'] .reading-book::before { background-image: url('/assets/identity/damask.svg'); }
+.reading-experience[data-texture='botanical'] .reading-book::before { background: url('/assets/identity/botanical.svg') right top / 40% auto no-repeat; }
+.reading-experience[data-texture='water'] .reading-book::before { background: repeating-radial-gradient(ellipse at 50% 0, transparent 0 8%, var(--reading-accent) 8.1% 8.3%, transparent 8.5% 13%); }
+.reading-experience[data-texture='ruled'] .reading-book::before { background: repeating-linear-gradient(90deg, transparent 0 96%, var(--reading-accent) 96.1% 96.3%, transparent 96.4%); }
+.reading-book::before { border-radius: inherit; }
+@keyframes world-drift { from { transform: translateX(-50%) translateY(0) rotateY(-8deg); } to { transform: translateX(-50%) translateY(-10px) rotateY(8deg); } }
+@keyframes world-turn { from { transform: translateX(-50%) perspective(1000px) rotateY(-20deg) rotateZ(-4deg); } to { transform: translateX(-50%) perspective(1000px) rotateY(20deg) rotateZ(4deg); } }
+@keyframes world-tide { from { transform: translateX(-50%) perspective(950px) rotateX(25deg) translateY(0); } to { transform: translateX(-50%) perspective(950px) rotateX(15deg) translateY(-12px); } }
+@keyframes world-thicket { from { transform: translateX(-50%) rotate(-6deg); } to { transform: translateX(-50%) rotate(-2deg); } }
+@media (max-width: 767px), (pointer: coarse) {
+  .ritual-scene .signature-art svg { animation: none; }
+  .signature-art::before { opacity: .06; }
+  .ritual-scene-table .signature-art { opacity: .2; }
+}
+@media (prefers-reduced-motion: reduce), (update: slow) {
+  .ritual-scene .signature-art svg { animation: none !important; }
+}
+.identity-home, .reading-experience {
+  --art-light: color-mix(in srgb, var(--color-silver) 19%, transparent);
+  --art-warmth: color-mix(in srgb, var(--color-gold) 12%, transparent);
+  --ritual-light: color-mix(in srgb, var(--color-silver) 24%, transparent);
+}
+.ritual-scene-hero { mask-image: radial-gradient(ellipse at center, black 45%, transparent 76%); }

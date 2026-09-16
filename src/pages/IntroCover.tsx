@@ -104,7 +104,7 @@ export default function IntroCover({ onEnter }: Props) {
     >
       <LanguageSwitcher className="language-corner" />
       <ArtBackdrop variant="cover" />
-      <RitualScene variant="cover" />
+      <RitualScene variant="cover" deckId={deckId} />
       {/* 视觉中心：牌组徽记。不另造一个纹章 —— 这个记号在氛围层与首页
           已经出现过，用同一个才成得了「这个项目的标记」。 */}
       <DeckSigil deckId={deckId} size="clamp(5.5rem, 22vw, 9rem)" opacity={0.55} />

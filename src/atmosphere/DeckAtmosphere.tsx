@@ -1,3 +1,6 @@
+import type { DeckId } from '@/decks/ids'
+import { deckVisualScope } from './visualScope'
+import { SignatureArt } from './SignatureArt'
 /**
  * Layer 3 · 氛围渲染层
  *
@@ -25,6 +28,7 @@ import { useEffectiveDeckId } from '@/hooks/useEffectiveDeck'
 import { DeckSigil } from '@/components/deck/DeckSigil'
 
 export interface DeckAtmosphereProps {
+  deckId?: DeckId
   /** 专注 / 阅读时进一步压暗（不卸载，避免重排闪烁） */
   dimmed?: boolean
   className?: string
@@ -483,9 +487,10 @@ const LIGHTING: Record<AtmosphereLighting, LightingSpec> = {
   },
 }
 
-export function DeckAtmosphere({ dimmed = false, className = '' }: DeckAtmosphereProps) {
+export function DeckAtmosphere({ dimmed = false, className = '', deckId: overrideDeckId }: DeckAtmosphereProps) {
   /* 会话冻结后跟着 session 走，否则背景会和牌桌上的卡背打架 */
-  const deckId = useEffectiveDeckId()
+  const effectiveDeckId = useEffectiveDeckId()
+  const deckId = overrideDeckId ?? effectiveDeckId
   const spec = getAtmosphere(getDeck(deckId).atmosphereId)
   const { layers } = spec
   /* ★ structure / lighting 在这里进入渲染链 —— deck:check 的 H 组断言这两行存在 */
@@ -496,6 +501,7 @@ export function DeckAtmosphere({ dimmed = false, className = '' }: DeckAtmospher
     <div
       aria-hidden="true"
       data-atmosphere={spec.atmosphereId}
+      style={deckVisualScope(deckId)}
       className={[
         'pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-bg-deep',
         'transition-opacity duration-[var(--duration-page)] ease-[var(--ease-veil)]',
@@ -564,6 +570,8 @@ export function DeckAtmosphere({ dimmed = false, className = '' }: DeckAtmospher
       {light.vignette && (
         <div className="absolute inset-0" style={{ backgroundImage: light.vignette }} />
       )}
+
+      <SignatureArt deckId={deckId} />
 
       {/* 第四层：底部压暗，保证底部操作区文字对比度始终达标 */}
       <div

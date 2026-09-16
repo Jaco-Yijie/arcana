@@ -1,3 +1,5 @@
+import { useSession } from '@/hooks/useSession'
+import { resolveDeckId } from '@/decks/ids'
 import { Suspense, lazy } from 'react'
 import { BrowserRouter, HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { I18nProvider } from '@/i18n'
@@ -77,7 +79,9 @@ const Router = import.meta.env.VITE_DEPLOY_TARGET === 'streamlit' ? HashRouter :
 
 function RouteAtmosphere() {
   const { pathname } = useLocation()
-  return pathname === '/' ? null : <DeckAtmosphere dimmed={pathname === '/reading'} />
+  const { session } = useSession()
+  const readingDeck = pathname === '/reading' && session ? resolveDeckId(session.deckId, session.deckSchema) : undefined
+  return pathname === '/' ? null : <DeckAtmosphere deckId={readingDeck} dimmed={pathname === '/reading'} />
 }
 
 export default function App() {
