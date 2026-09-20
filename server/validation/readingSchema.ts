@@ -7,7 +7,7 @@
  * 所以结构约束只能由我们自己在这里兜住。
  *
  * 【两类问题，两种处理】
- * - **可修复**（模型多写了一条引用不存在卡牌的关系、reflectionQuestions 少一条、字段有多余空白）
+ * - **可修复**（模型多写了一条引用不存在卡牌的关系、actionPlan / watchFor 缺失或超量、字段有多余空白）
  *   → 就地修掉，标 `repaired = true`，让 QA 看得见，但不打断用户。
  * - **不可修复 —— 牌面对不上**（数量不符 / cardId 不在请求里 / 正逆位被改 / 牌位被改）
  *   → 直接判失败。这是 AC-V2-10：模型一旦动了牌，这次解读就整份作废，
@@ -16,7 +16,11 @@
 
 import type {
   AlternativeInterpretation,
+  DecisionDriver,
+  ReadingActionEvidence,
+  ReadingActionItem,
   ReadingContext,
+  ReadingMode,
   ReadingRelationship,
   RelationshipKind,
   StructuredReading,
@@ -51,9 +55,28 @@ export interface ValidationOutcome {
   overallEnergy: string
   narrative: string
   answerToQuestion: string
+  decisionDriver: DecisionDriver | null
+  actionPlan: ReadingActionItem[]
+  watchFor: string[]
   reflectionQuestions: string[]
   alternativeInterpretations: AlternativeInterpretation[]
   repaired: boolean
+}
+
+/**
+ * V2.4 各列表字段的数量上限（按模式）。
+ *
+ * 只设上限、不设下限：模型少写一条行动建议是「不够好」，不是「牌面被篡改」，
+ * 为此整份作废重试要让用户多等几十秒，不值得。超出上限就截断并标 repaired。
+ * 下限由 Prompt 与示例引导，由 reading-eval 的 live 用例抽查。
+ */
+const LIST_LIMITS: Record<
+  ReadingMode,
+  { actionPlan: number; watchFor: number; reflections: number; evidencePerAction: number; driverEvidence: number }
+> = {
+  // V2.5：标准模式「少，但具体」—— 反思问题收到 0–1 条
+  standard: { actionPlan: 3, watchFor: 3, reflections: 1, evidencePerAction: 3, driverEvidence: 3 },
+  deep: { actionPlan: 5, watchFor: 5, reflections: 3, evidencePerAction: 3, driverEvidence: 5 },
 }
 
 function asString(value: unknown, field: string, { min = 1 }: { min?: number } = {}): string {
@@ -162,6 +185,8 @@ export function validateReading(payload: unknown, context: ReadingContext): Vali
   const overallEnergy = asString(raw.overallEnergy, 'overallEnergy')
   const narrative = asString(raw.narrative, 'narrative')
   const answerToQuestion = asString(raw.answerToQuestion, 'answerToQuestion')
+
+  const limits = LIST_LIMITS[context.readingMode === 'deep' ? 'deep' : 'standard']
 
   /* ── 牌面一致性：不可修复 ─────────────────────────────── */
   if (!Array.isArray(raw.cards)) throw new SchemaError('cards 不是数组')
@@ -274,13 +299,83 @@ export function validateReading(payload: unknown, context: ReadingContext): Vali
     }
   }
 
-  /* ── 反思问题：可修复 ─────────────────────────────────── */
-  let reflectionQuestions = asStringArray(raw.reflectionQuestions)
-  if (reflectionQuestions.length === 0) {
-    throw new SchemaError('reflectionQuestions 为空')
+
+  /* ── 核心变量（V2.5）：可修复 ─────────────────────────────
+   * 缺失不作废（随缘模式本来就可能没有一个「决定」），但标 repaired 让 QA 看得见。 */
+  let decisionDriver: DecisionDriver | null = null
+  if (typeof raw.decisionDriver === 'object' && raw.decisionDriver !== null && !Array.isArray(raw.decisionDriver)) {
+    const d = raw.decisionDriver as Record<string, unknown>
+    const coreIssue = typeof d.coreIssue === 'string' ? d.coreIssue.trim() : ''
+    const whyItMatters = typeof d.whyItMatters === 'string' ? d.whyItMatters.trim() : ''
+    let evidence = asStringArray(d.evidence)
+    if (evidence.length > limits.driverEvidence) {
+      evidence = evidence.slice(0, limits.driverEvidence)
+      repaired = true
+    }
+    if (coreIssue.length > 0) {
+      decisionDriver = { coreIssue, whyItMatters, evidence }
+      if (whyItMatters.length === 0 || evidence.length === 0) repaired = true
+    } else {
+      repaired = true
+    }
+  } else {
+    repaired = true
   }
-  if (reflectionQuestions.length > 5) {
-    reflectionQuestions = reflectionQuestions.slice(0, 5)
+
+  /* ── 行动建议（V2.4）：可修复 ─────────────────────────────
+   * 缺失或为空不作废：解读主体仍然完整，标 repaired 让 QA 看得见。
+   * 模型偶尔把它写成字符串数组 —— 动作本身是对的，只是少了 reason，保留动作。 */
+  const actionPlan: ReadingActionItem[] = []
+  if (Array.isArray(raw.actionPlan)) {
+    for (const item of raw.actionPlan) {
+      if (typeof item === 'string') {
+        if (item.trim().length > 0) actionPlan.push({ action: item.trim(), reason: '' })
+        repaired = true
+        continue
+      }
+      if (typeof item !== 'object' || item === null) {
+        repaired = true
+        continue
+      }
+      const entry = item as Record<string, unknown>
+      const action = typeof entry.action === 'string' ? entry.action.trim() : ''
+      if (action.length === 0) {
+        repaired = true
+        continue
+      }
+      const reason = typeof entry.reason === 'string' ? entry.reason.trim() : ''
+      if (reason.length === 0) repaired = true
+      const timeframe = typeof entry.timeframe === 'string' ? entry.timeframe.trim() : ''
+      const evidence = validateActionEvidence(entry.evidence, context, limits.evidencePerAction)
+      if (evidence.repaired) repaired = true
+      actionPlan.push({
+        action,
+        reason,
+        evidence: evidence.items,
+        ...(timeframe ? { timeframe } : {}),
+      })
+    }
+  }
+  if (actionPlan.length === 0) repaired = true
+  if (actionPlan.length > limits.actionPlan) {
+    actionPlan.length = limits.actionPlan
+    repaired = true
+  }
+
+  /* ── 现实观察信号（V2.4）：可修复，规则同上 ─────────────── */
+  let watchFor = asStringArray(raw.watchFor)
+  if (watchFor.length === 0) repaired = true
+  if (watchFor.length > limits.watchFor) {
+    watchFor = watchFor.slice(0, limits.watchFor)
+    repaired = true
+  }
+
+  /* ── 反思问题：V2.4 起可选 ──────────────────────────────
+   * V2.3 要求至少一条、Prompt 要求 3 条，结果是用户问「我该怎么办」，
+   * 结尾却被反问三个问题。现在 0 条完全合法；只在超出上限时截断。 */
+  let reflectionQuestions = asStringArray(raw.reflectionQuestions)
+  if (reflectionQuestions.length > limits.reflections) {
+    reflectionQuestions = reflectionQuestions.slice(0, limits.reflections)
     repaired = true
   }
 
@@ -291,10 +386,58 @@ export function validateReading(payload: unknown, context: ReadingContext): Vali
     overallEnergy,
     narrative,
     answerToQuestion,
+    decisionDriver,
+    actionPlan,
+    watchFor,
     reflectionQuestions,
     alternativeInterpretations: alternatives,
     repaired,
   }
+}
+
+/**
+ * 校验一条行动建议的牌面证据（V2.5）。
+ *
+ * - 引用了没抽到的牌：剔掉这一条，标 repaired（与 relationships 的处理一致）
+ * - **明确写成相反朝向：整份作废。** 证据里把逆位写成正位，意味着这条建议是按
+ *   一张用户没抽到的牌推出来的 —— 与 cards[] 里改正逆位是同一条红线（AC-V2-10）。
+ * - position / orientation 一律以服务端数据为准，模型回填的只用来检测跑偏
+ * - 缺 signal 的条目没有信息量，剔掉并标 repaired
+ */
+function validateActionEvidence(
+  value: unknown,
+  context: ReadingContext,
+  limit: number,
+): { items: ReadingActionEvidence[]; repaired: boolean } {
+  if (!Array.isArray(value)) return { items: [], repaired: true }
+  const byId = new Map(context.cards.map((c) => [c.cardId, c]))
+  const items: ReadingActionEvidence[] = []
+  let repaired = false
+  for (const item of value) {
+    if (typeof item !== 'object' || item === null) {
+      repaired = true
+      continue
+    }
+    const e = item as Record<string, unknown>
+    const card = typeof e.cardId === 'string' ? byId.get(e.cardId) : undefined
+    const signal = typeof e.signal === 'string' ? e.signal.trim() : ''
+    if (!card || signal.length === 0) {
+      repaired = true
+      continue
+    }
+    if (normalizeOrientation(e.orientation) === opposite(card.orientation)) {
+      throw new SchemaError(
+        `actionPlan 的证据改变了 ${card.cardId} 的正逆位（应为 ${card.orientation}，返回 ${String(e.orientation)}）`,
+      )
+    }
+    items.push({ cardId: card.cardId, position: card.position.name, orientation: card.orientation, signal })
+  }
+  if (items.length === 0) repaired = true
+  if (items.length > limit) {
+    items.length = limit
+    repaired = true
+  }
+  return { items, repaired }
 }
 
 /** 把校验结果组装成最终的 StructuredReading */
@@ -311,6 +454,9 @@ export function assembleReading(
     relationships: outcome.relationships,
     narrative: outcome.narrative,
     answerToQuestion: outcome.answerToQuestion,
+    ...(outcome.decisionDriver ? { decisionDriver: outcome.decisionDriver } : {}),
+    actionPlan: outcome.actionPlan,
+    watchFor: outcome.watchFor,
     reflectionQuestions: outcome.reflectionQuestions,
     ...(outcome.alternativeInterpretations.length > 0
       ? { alternativeInterpretations: outcome.alternativeInterpretations }

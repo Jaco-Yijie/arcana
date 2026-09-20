@@ -13,6 +13,10 @@
     "preview": "vite preview",
     "start": "tsx server/index.ts",
     "reading:check": "tsx scripts/reading-eval.ts",
+    "reading:prompt": "node --import tsx --test tests/reading-prompt.test.ts",
+    "reading:specificity": "tsx scripts/reading-specificity-eval.ts",
+    "intake:check": "node --import tsx --test tests/context-intake.test.ts",
+    "intake:eval": "tsx scripts/context-intake-eval.ts",
     "deck:check": "tsx scripts/deck-check.ts",
     "i18n:check": "tsx scripts/i18n-check.ts && npm run i18n:runtime",
     "layout:check": "tsx scripts/layout-check.ts",
@@ -32,6 +36,7 @@
     "performance:check": "tsx scripts/performance-check.ts",
     "i18n:runtime": "tsx scripts/i18n-runtime-check.ts",
     "onboarding:check": "tsx qa/onboarding/state-check.ts",
+    "typecheck": "tsc -b && tsc -p tsconfig.server.json --noEmit",
     "design:check": "node --import tsx --test tests/design-system.test.ts"
   },
   "dependencies": {

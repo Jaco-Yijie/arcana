@@ -125,8 +125,14 @@ export interface ReadingBodyData {
   energy: string | null
   cards: { position: string; cardName: string; interpretation: string; connection?: string }[]
   relationships: string[]
+  /** V2.5：本次真正影响决定的核心变量 */
+  driver: { coreIssue: string; whyItMatters: string | null; evidence?: string[] } | null
   narrative: string | null
   answer: string | null
+  /** V2.4：下一步具体可以做什么 */
+  actions: { action: string; reason: string; timeframe?: string }[]
+  /** V2.4：接下来观察的现实信号 */
+  watchFor: string[]
   reflections: string[]
 }
 
@@ -141,7 +147,7 @@ interface Props {
 
 export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
   const { t } = useI18n()
-  const { theme, energy, cards, relationships, narrative, answer, reflections } = data
+  const { theme, energy, cards, relationships, driver, narrative, answer, actions, watchFor, reflections } = data
   // 完成态与流式态均默认展开，用户仍可主动收起。
   const open = true
   const quote = extractKeyQuote(answer ?? '')
@@ -224,6 +230,19 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
         </Section>
       )}
 
+      {/* ── V2.5：核心变量。输出顺序在 relationships 与 narrative 之间，流式时照样只追加在底部 ── */}
+      {driver && (
+        <Section titleKey="driver" defaultOpen={open}>
+          <p className="text-read text-text-hi">{driver.coreIssue}</p>
+          {driver.whyItMatters && <p className="text-read text-text-mid">{driver.whyItMatters}</p>}
+          {(driver.evidence ?? []).map((line, i) => (
+            <p key={i} className="text-read text-text-low">
+              · {line}
+            </p>
+          ))}
+        </Section>
+      )}
+
       {narrative && (
         <Section titleKey="pattern" defaultOpen={open}>
           <Paragraphs text={narrative} />
@@ -244,6 +263,36 @@ export function ReadingBody({ data, streaming, notice, safetyNotice }: Props) {
           <blockquote>{quote}</blockquote>
           <span aria-hidden="true" className="reading-ornament">✦</span>
         </aside>
+      )}
+
+      {/* ── V2.4：判断之后的下一步与观察信号 ──
+          放在核心提示之后、反思问题之前：与模型输出顺序一致，流式时只会追加在底部。 */}
+      {actions.length > 0 && (
+        <div className="mt-9">
+          <Section titleKey="actions" defaultOpen={open}>
+            {actions.map((item, i) => (
+              <div key={i} className="flex flex-col gap-1">
+                <p className="text-read text-text-hi">
+                  {String(i + 1).padStart(2, '0')} · {item.action}
+                </p>
+                {item.timeframe && (
+                  <span className="text-caption tracking-wide-caps text-text-faint">{item.timeframe}</span>
+                )}
+                {item.reason && <p className="text-read text-text-low">{item.reason}</p>}
+              </div>
+            ))}
+          </Section>
+        </div>
+      )}
+
+      {watchFor.length > 0 && (
+        <Section titleKey="watchFor" defaultOpen={open}>
+          {watchFor.map((signal, i) => (
+            <p key={i} className="text-read text-text-mid">
+              · {signal}
+            </p>
+          ))}
+        </Section>
       )}
 
       {reflections.length > 0 && (

@@ -1,0 +1,1215 @@
+[
+  {
+    "key": "REL-R1",
+    "question": "我应该继续主动联系他吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "圣杯八",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "圣杯二",
+        "orientation": "reversed"
+      },
+      {
+        "position": "建议",
+        "card": "隐士",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 27200,
+    "error": null,
+    "readingTheme": "不是继续主动还是停止，而是这段关系里你真正想要的东西，已经不在眼前这八只杯子里了。",
+    "decisionDriver": {
+      "coreIssue": "真正决定答案的不是他会不会回应，而是你愿不愿意承认这段关系已经无法满足你。",
+      "whyItMatters": "如果你继续用主动联系来回避这个事实，每一次回复都只是让你更累，而不是更接近你想要的连接。只有先承认「这不够」，你才能做出不后悔的选择。",
+      "evidence": [
+        "现状位圣杯八正位：你已经意识到这段关系无法满足更深的需要",
+        "阻碍位圣杯二逆位：投入程度存在明显差距，主动变成单方面补给",
+        "建议位隐士正位：支持暂时退出互动，把注意力收回来"
+      ]
+    },
+    "answerToQuestion": "我不建议你继续主动联系他，至少不是以现在这种方式。现状位的圣杯八正位说明你已经意识到这段关系无法满足你更深的需要，而阻碍位的圣杯二逆位正是那个原因：你一直在单方面投入，对方只是接，没有对等地给回来。继续主动不会改变这个结构，只会让你更累。建议位的隐士正位支持你先停下来，把注意力从「他怎么回应」收回到「我到底还要不要这样下去」。等你看清之后，如果还想联系，那也应该是带着新的边界去联系，而不是重复现在的模式。",
+    "actionPlan": [
+      {
+        "action": "先暂停主动联系，至少到你能清楚回答「我继续投入是为了什么」为止。",
+        "reason": "你已经持续主动，但圣杯二逆位显示投入不对等，继续主动只会重复单方面补给，不会带来新的信息。",
+        "evidence": [
+          {
+            "cardId": "cups-02",
+            "position": "阻碍",
+            "orientation": "reversed",
+            "signal": "投入程度存在明显差距，主动变成单方面补给"
+          },
+          {
+            "cardId": "major-09",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "支持暂时退出互动，把注意力收回来"
+          }
+        ],
+        "timeframe": "直到你不再因为害怕失去而想联系他"
+      },
+      {
+        "action": "把你想从他那里得到的东西写下来，逐条问自己：这段关系现在真的给得了吗？",
+        "reason": "圣杯八正位说明你缺的不是联系，而是某种更深的需要没被满足。写下来能帮你区分「想要他」和「想要一段对等的关系」。",
+        "evidence": [
+          {
+            "cardId": "cups-08",
+            "position": "现状",
+            "orientation": "upright",
+            "signal": "已经意识到这段关系无法满足更深的需要"
+          }
+        ]
+      },
+      {
+        "action": "如果之后决定再联系，先想清楚一个具体的边界，比如「我只在对方也主动时再继续投入」。",
+        "reason": "隐士正位不是永远不联系，而是带着清醒回来。没有边界的主动只会回到圣杯二逆位的不对等里。",
+        "evidence": [
+          {
+            "cardId": "major-09",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "需要一点距离来看清自己在这段关系里的位置"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "你暂停主动后，他是否主动发起联系，还是完全无动静",
+      "你是否在暂停期间反复想找借口重新联系他，这能帮你确认自己是需要他，还是只是不习惯安静"
+    ],
+    "reflectionQuestions": [
+      "如果对方在你暂停后依然不主动，你是否能接受这段关系就这样淡下去？"
+    ]
+  },
+  {
+    "key": "REL-R2",
+    "question": "我应该继续主动联系他吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "圣杯首牌",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "恶魔",
+        "orientation": "upright"
+      },
+      {
+        "position": "建议",
+        "card": "权杖首牌",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 23345,
+    "error": null,
+    "readingTheme": "不是继续不继续的问题，而是你正在被什么样的惯性推着走",
+    "decisionDriver": {
+      "coreIssue": "你的主动，是出于真实的心动，还是出于停不下来的惯性？",
+      "whyItMatters": "如果是心动，继续主动没问题；如果是惯性，再主动只会加深消耗。这个问题不解决，联系多少次都只是重复。",
+      "evidence": [
+        "现状位圣杯首牌正位：真实的新感受仍在涌动",
+        "阻碍位恶魔正位：松开的锁链，指出惯性比关系本身更让你停不下来",
+        "建议位权杖首牌正位：支持一次有方向的主动，而不是重复旧模式"
+      ]
+    },
+    "answerToQuestion": "可以继续主动，但不要再用之前那种「随便找个话题」的方式。你现在的问题不是该不该联系，而是联系的时候有没有带着真实意图。现状位的圣杯首牌说明你的心动是真的，但阻碍位的恶魔正位显示，如果继续用旧方式主动，你会越来越分不清是喜欢还是习惯。建议位的权杖首牌支持你行动，但要求你让这次主动有方向：直接表达你的心意，或者提出一个明确的邀约，而不是又发一句不痛不痒的话。如果这次主动之后，他还是没有对等回应，那就可以停下来了。",
+    "actionPlan": [
+      {
+        "action": "下一次联系他时，不再用日常话题开头，直接说出你对他有好感，并问他是否愿意进一步了解彼此。",
+        "reason": "你之前的主动方式没有带来明确结果，继续重复只会加深恶魔的惯性。权杖首牌建议你点燃一次有方向的火花，让这次主动和之前不一样。",
+        "evidence": [
+          {
+            "cardId": "wands-01",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "刚点燃的火，支持一次有明确意图的行动"
+          },
+          {
+            "cardId": "major-15",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "松开的锁链，提醒你重复旧动作只会困在惯性里"
+          }
+        ],
+        "timeframe": "下一次你准备联系他时"
+      },
+      {
+        "action": "发出这次明确邀约或表白后，不要追加解释或找补，安静等他的回应。",
+        "reason": "如果你说完立刻自己圆场，就等于又退回了恶魔的循环。给这次主动一个完整的空间，你才能看到真实的结果。",
+        "evidence": [
+          {
+            "cardId": "major-15",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "恶魔的锁链是松的，你越不急着挣脱，越能看清它是否真的存在"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "他是否正面回应你的心意，而不是用「最近忙」之类的话绕开",
+      "他是否在之后主动发起一次联系，而不只是回复你"
+    ],
+    "reflectionQuestions": [
+      "如果这次明确的主动之后，他仍然只是礼貌回复、不主动推进，你愿意接受这个结果并停下来吗？"
+    ]
+  },
+  {
+    "key": "REL-R3",
+    "question": "我应该继续主动联系他吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "恋人",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "权杖二",
+        "orientation": "upright"
+      },
+      {
+        "position": "建议",
+        "card": "圣杯骑士",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 25391,
+    "error": null,
+    "readingTheme": "真正要选的不是要不要主动，而是主动的方式是否还在表达你自己",
+    "decisionDriver": {
+      "coreIssue": "不是要不要继续主动，而是你愿不愿意把已经看到的可能性，变成一种稳定而真诚的靠近。",
+      "whyItMatters": "你已经在心里权衡了很久，但权杖二说明你停在「看」的阶段。恋人和圣杯骑士都指向行动，继续犹豫只会让关系停留在原处。",
+      "evidence": [
+        "现状位恋人正位：关系有真实吸引与价值契合，不是没有基础",
+        "阻碍位权杖二正位：你站在眺望的位置，迟迟没有迈出下一步",
+        "建议位圣杯骑士正位：带着诚意缓慢靠近，方向明确"
+      ]
+    },
+    "answerToQuestion": "应该继续主动，但方式要调整。现状位的恋人正位说明你们之间有真实的吸引和价值契合，不是单方面的幻想；阻碍位的权杖二正位显示你一直在心里权衡，却没有把看到的可能性变成行动。继续用之前那种试探、等待或反复权衡的方式，只会让你停在原地。建议位的圣杯骑士支持你带着诚意缓慢靠近，不必急于求成，但要持续表达。如果你的主动是真诚的、不卑不亢的，就值得继续；如果已经变成讨好或焦虑的追问，才需要停一停。",
+    "actionPlan": [
+      {
+        "action": "下一次联系时，不再用试探性的话题开场，而是直接表达你最近对他的在意，并邀请他做一件具体的小事（比如一起喝杯咖啡或散步）。",
+        "reason": "恋人正位说明关系有真实基础，权杖二正位显示你缺的不是判断而是行动。圣杯骑士支持你带着诚意缓慢靠近，具体的邀约比模糊的聊天更能推进关系。",
+        "evidence": [
+          {
+            "cardId": "major-06",
+            "position": "现状",
+            "orientation": "upright",
+            "signal": "关系有真实吸引与价值契合，值得继续"
+          },
+          {
+            "cardId": "cups-12",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "带着诚意缓慢靠近，方向明确"
+          }
+        ],
+        "timeframe": "下一次你们自然联系时"
+      },
+      {
+        "action": "暂时不要反复分析他每条回复的语气、速度或表情包，也不要因为一次没及时回复就追加消息。",
+        "reason": "权杖二正位说明你已经在心里权衡太多，继续分析只会增加内耗。圣杯骑士的从容姿态提醒你，真诚的主动不需要过度解读。",
+        "evidence": [
+          {
+            "cardId": "wands-02",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "你停在眺望与权衡的位置，迟迟没有行动"
+          },
+          {
+            "cardId": "cups-12",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "缓行、从容，不急于求成"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "他是否接受了你的具体邀约，或主动提出另一个时间",
+      "你发出邀约后，他是否也开始主动发起联系，而不只是被动回应"
+    ],
+    "reflectionQuestions": [
+      "如果你继续主动，但方式变成真诚而从容的邀请，而不是焦虑的追问，你还会害怕被拒绝吗？"
+    ]
+  },
+  {
+    "key": "REL-R1#2",
+    "question": "我应该继续主动联系他吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "圣杯八",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "圣杯二",
+        "orientation": "reversed"
+      },
+      {
+        "position": "建议",
+        "card": "隐士",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 28954,
+    "error": null,
+    "readingTheme": "继续主动只是在给一段已经不对等的关系续命，真正该做的是把注意力收回来",
+    "decisionDriver": {
+      "coreIssue": "不是「他为什么不够主动」，而是「你还要不要继续用单方面的主动去维持一段已经不对等的关系」。",
+      "whyItMatters": "只要你还把问题定义成「怎么让他更主动」，你就会继续找话题、继续等回复、继续内耗。但牌面显示，问题不在他，而在你已经意识到这段关系不够了，却还在用主动去填那个缺口。",
+      "evidence": [
+        "现状位圣杯八正位：你已经意识到关系无法满足更深的需要，准备离开",
+        "阻碍位圣杯二逆位：投入明显不对等，一方给得多、一方接得少",
+        "建议位隐士正位：把注意力从对方身上收回来，先看清自己的位置"
+      ]
+    },
+    "answerToQuestion": "我不建议你继续主动联系他。你已经从现状位的圣杯八正位里看到了自己的转身，而阻碍位的圣杯二逆位说明你们之间的投入从来就不对等——你一直在倒水，他只是偶尔伸手。继续主动不会让他多接一点，只会让你更累。建议位的隐士正位给你的方向是：先停下来，把主动的位置空出来。如果他不来找你，这段关系就只剩下你一个人的努力；如果他来找你，你也能更清楚地看到他的投入到底有多少。下一步不是逼自己忘记，而是先不再发起下一次联系。",
+    "actionPlan": [
+      {
+        "action": "暂时不再主动发起联系，包括不发消息、不找话题、不点赞评论。",
+        "reason": "你已经持续主动，但阻碍位的圣杯二逆位显示投入不对等，继续主动只会让这个差距更明显。把主动的位置空出来，才能看到对方会不会自己走过来。",
+        "evidence": [
+          {
+            "cardId": "cups-02",
+            "position": "阻碍",
+            "orientation": "reversed",
+            "signal": "投入不对等，一方给得多、一方接得少"
+          },
+          {
+            "cardId": "major-09",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "暂时退出互动节奏，把注意力收回来"
+          }
+        ],
+        "timeframe": "从现在开始，直到他主动联系你"
+      },
+      {
+        "action": "把原本用来想「要不要联系他」的时间，拿去做一件只属于你自己的事，比如读完一本一直没翻的书，或者整理一个搁置已久的项目。",
+        "reason": "隐士正位建议的不是干等，而是把注意力从对方身上移开。当你不再用主动去填那个缺口，你才能重新感觉到自己生活的重量。",
+        "evidence": [
+          {
+            "cardId": "major-09",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "提灯照向自己，而不是继续照向对方"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "他是否在你停止主动后，自己发来一次联系",
+      "他发来的内容是不是只有「在吗」「最近怎么样」这类不需要成本的问候，还是真的在推进对话",
+      "你停止主动后，是不是很快又忍不住找理由联系他"
+    ],
+    "reflectionQuestions": [
+      "如果接下来他完全没有主动联系你，你还会愿意回到现在这种单方面维持的模式吗？"
+    ]
+  },
+  {
+    "key": "REL-R1#3",
+    "question": "我应该继续主动联系他吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "圣杯八",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "圣杯二",
+        "orientation": "reversed"
+      },
+      {
+        "position": "建议",
+        "card": "隐士",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 27366,
+    "error": null,
+    "readingTheme": "问题不是要不要第三次主动，而是你在这段关系里的需求已经变了，却还在用旧的方式确认",
+    "decisionDriver": {
+      "coreIssue": "不是「他还值不值得你继续主动」，而是「你心里已经知道这段关系不够了，却还在用主动去验证这个事实」。",
+      "whyItMatters": "如果你继续主动，只会重复得到不对等的回应，而你真正需要的是确认自己是否愿意接受这种不对等。只有先停下来，你才能听见自己心里的答案。",
+      "evidence": [
+        "现状位圣杯八正位：你已经从情感上开始离开，觉得现有的关系不再满足",
+        "阻碍位圣杯二逆位：投入不对等是这段关系里长期存在的模式",
+        "建议位隐士正位：需要独处和内省，而不是继续向外寻求确认"
+      ]
+    },
+    "answerToQuestion": "我不建议你现在继续主动联系他。现状位的圣杯八正位已经说明你内心开始觉得这段关系不够了，而阻碍位的圣杯二逆位指出真正的原因是投入不对等——你一直给得多，他接得少。继续主动只会让你再次面对同样的失衡，却不会让你更清楚自己到底想要什么。建议位的隐士正位支持你暂时停下来，给自己一点独处的时间，去确认：如果对方一直不主动，你还愿意继续这样下去吗？等你心里有了答案，再决定是继续联系，还是彻底离开。",
+    "actionPlan": [
+      {
+        "action": "暂停主动联系，至少等到你不再因为对方没有回应而焦虑的时候再决定下一步。",
+        "reason": "你已经感到这段关系不够了，继续主动只会重复不对等的模式，而停下来能让你从「等他回复」的循环里抽身，看清自己真正的需求。",
+        "evidence": [
+          {
+            "cardId": "cups-08",
+            "position": "现状",
+            "orientation": "upright",
+            "signal": "你已经在情感上准备离开，主动联系只是在对抗这个方向"
+          },
+          {
+            "cardId": "major-09",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "隐士支持暂时退出、独处内省，而不是继续向外寻求确认"
+          }
+        ],
+        "timeframe": "直到你不再因为对方没有回应而焦虑"
+      },
+      {
+        "action": "在暂停期间，写下来：这段关系里你给出去的是什么，你真正想得到的是什么，对方实际给到的是什么。",
+        "reason": "圣杯二逆位说明你们对「付出」的理解可能不一致，写下来能帮你把模糊的不满变成具体的清单，看清自己到底在为什么难过。",
+        "evidence": [
+          {
+            "cardId": "cups-02",
+            "position": "阻碍",
+            "orientation": "reversed",
+            "signal": "投入不对等是核心阻碍，需要具体化你给的和得到的"
+          },
+          {
+            "cardId": "major-09",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "隐士的灯照亮的是自己的内在，写下来是内省的具体动作"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "暂停联系后，对方是否主动发起任何联系",
+      "你是否在暂停期间仍然反复查看手机、想找理由联系他",
+      "当你不再主动后，这段关系是否直接冷却到没有互动"
+    ],
+    "reflectionQuestions": [
+      "如果接下来他仍然不主动联系你，你愿意接受这段关系就这样淡下去吗？"
+    ]
+  },
+  {
+    "key": "CAREER-C1",
+    "question": "我应该离开这份工作吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "星币八",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "权杖十",
+        "orientation": "upright"
+      },
+      {
+        "position": "建议",
+        "card": "皇帝",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 25193,
+    "error": null,
+    "readingTheme": "问题不在该不该走，而在负荷已经重到看不清自己真正在打磨什么",
+    "decisionDriver": {
+      "coreIssue": "不是「这份工作值不值得留」，而是「你从来没有把超载的部分说出来、分出去」。",
+      "whyItMatters": "如果超载没有被处理，离开只是换一个地方继续背；如果边界能立起来，这份工作里你投入的技艺和积累才可能真正兑现。",
+      "evidence": [
+        "现状位星币八正位：你仍在认真投入，说明问题不在工作本身的价值",
+        "阻碍位权杖十正位：负荷已经超出合理范围，且没有放下或分出的迹象",
+        "建议位皇帝正位：支持建立结构和边界，而不是直接放弃"
+      ]
+    },
+    "answerToQuestion": "我不建议你现在直接离开。现状位的星币八正位说明你仍在投入、也在积累，问题不在工作本身；真正压垮你的是阻碍位的权杖十正位——负荷已经超出合理范围，而你还没有试着把它分出去。直接离职，你带走的不是解脱，而是同一个超载模式。建议位的皇帝正位支持你先做一件事：把目前的工作范围、责任和优先级理清楚，和上级谈一次边界。谈完之后，如果负荷没有实质变化，再考虑离开也不迟。",
+    "actionPlan": [
+      {
+        "action": "把目前手上所有任务列成清单，标出每项的截止时间和实际耗时，找出最重的那两三件事。",
+        "reason": "权杖十正位显示负荷已经超载，但超载往往是一堆小任务累积成的，列出来你才能看清哪些是真正该放下的，哪些是可以谈判的。",
+        "evidence": [
+          {
+            "cardId": "wands-10",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "成捆的杖代表责任堆积，需要先看清每一根"
+          },
+          {
+            "cardId": "major-04",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "皇帝支持先建立秩序，清单就是秩序的第一步"
+          }
+        ],
+        "timeframe": "下一次和上级沟通之前"
+      },
+      {
+        "action": "带着这份清单，和上级谈一次：哪些可以延后、哪些可以分出去、哪些根本不该你来做。",
+        "reason": "皇帝正位落在建议位，明确指向建立边界和重新分配责任，而不是继续一个人扛。你已经在星币八的位置上认真做了很久，现在需要的是把超载的部分说出口。",
+        "evidence": [
+          {
+            "cardId": "major-04",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "皇帝支持立规则、分责任，而不是默默承受"
+          },
+          {
+            "cardId": "wands-10",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "阻碍正是没有说出口的超载"
+          }
+        ],
+        "timeframe": "清单整理完成后"
+      }
+    ],
+    "watchFor": [
+      "谈完边界后，上级是否实际调整了你的任务范围，而不只是口头安慰",
+      "你手上最重的那几件事是否被分走、延后或明确取消"
+    ],
+    "reflectionQuestions": [
+      "如果边界谈完后，负荷仍然没有变化，你愿意给这份工作多久的观察期？"
+    ]
+  },
+  {
+    "key": "CAREER-C2",
+    "question": "我应该离开这份工作吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "圣杯四",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "倒吊人",
+        "orientation": "upright"
+      },
+      {
+        "position": "建议",
+        "card": "权杖八",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 34328,
+    "error": null,
+    "readingTheme": "不是急着走，而是先承认自己已经倦了，再决定要不要动",
+    "decisionDriver": {
+      "coreIssue": "不是「该不该走」，而是「你还没用另一种角度看过这份工作，就急着用离开解决倦怠」。",
+      "whyItMatters": "如果倦怠来自工作本身，离开能解决；如果倦怠来自你一直用同一种方式消耗自己，换工作只是换个地方重复。倒吊人正位说明你现在缺的是视角，不是行动力。",
+      "evidence": [
+        "现状位圣杯四正位：你对工作的感觉是没胃口，不是明确的恨或怕，说明问题可能不在工作内容本身",
+        "阻碍位倒吊人正位：真正卡住的是「必须二选一」的框架，而不是外部阻力",
+        "建议位权杖八正位：牌面支持快速推进具体的事，而不是快速做辞职决定"
+      ]
+    },
+    "answerToQuestion": "我不建议你现在直接辞职，但也不建议你继续用现在的方式熬下去。现状位的圣杯四正位说明你已经对这份工作提不起劲，连递到眼前的机会都不想接；阻碍位的倒吊人正位却指出，真正卡住你的不是工作本身，而是你还没换过角度，就急着在「忍」和「走」之间二选一。建议位的权杖八正位支持你先做一两个能快速看到结果的动作，比如去谈一次内部转岗、更新简历投几个岗位看看反馈，或者直接和上级确认有没有新的职责可以接。等这些动作带来了真实的外部信息，你再判断离开还是留下，会比现在凭倦怠做决定可靠得多。",
+    "actionPlan": [
+      {
+        "action": "先别递辞职信。挑一件你在这份工作里还能快速推进、且能看到结果的事，在接下来的一到两周内把它做完。",
+        "reason": "你现在的问题不是没有行动力，而是行动被「要不要走」卡住了。先让一件具体的事动起来，能打破圣杯四的停滞感，也能让你重新感受这份工作是否还有能点燃你的部分。",
+        "evidence": [
+          {
+            "cardId": "cups-04",
+            "position": "现状",
+            "orientation": "upright",
+            "signal": "倦怠让你对所有机会都提不起劲，需要一个小胜利重新激活"
+          },
+          {
+            "cardId": "wands-08",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "支持快速推进具体的事，而不是做辞职这种不可逆的大决定"
+          }
+        ],
+        "timeframe": "下一次你感到「今天什么都不想干」的时候，先做这件小事"
+      },
+      {
+        "action": "同时，去做一次低成本的职业信息探测：更新简历、投两三个你真正感兴趣的岗位，或者约一个同行聊聊外面的情况。",
+        "reason": "倒吊人提示你需要新信息来翻转视角。你现在对工作的判断建立在内部感受上，外部反馈能帮你分清：是这份工作不行，还是你只是需要换一种消耗方式。",
+        "evidence": [
+          {
+            "cardId": "major-12",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "需要换角度，而新信息是换角度最直接的方式"
+          },
+          {
+            "cardId": "wands-08",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "支持多线同时推进，投简历和内部推进可以并行"
+          }
+        ],
+        "timeframe": "完成第一件小事之后，或者下一次对工作产生强烈抵触时"
+      },
+      {
+        "action": "在拿到外部反馈之前，不要和任何人做「我决定离开」或「我决定留下」的承诺。",
+        "reason": "权杖八虽然快，但它是多线推进，不是孤注一掷。你现在缺的是信息，不是决心。过早表态会让自己被迫站队，反而失去倒吊人给的悬停空间。",
+        "evidence": [
+          {
+            "cardId": "major-12",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "悬停是有价值的，不要急着从树上下来做决定"
+          },
+          {
+            "cardId": "wands-08",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "快速推进的是具体行动，不是快速下结论"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "你做完那件具体小事后，是否对工作产生了一点新的兴趣或掌控感，哪怕很微弱",
+      "投出的岗位是否收到面试或进一步沟通的邀请，这能帮你判断外部市场的真实反馈",
+      "和同行或朋友聊完后，你是否对「问题出在工作还是出在自己」有了更具体的判断"
+    ],
+    "reflectionQuestions": [
+      "如果离开这份工作，你最想摆脱的是工作内容本身，还是那种每天提不起劲的感觉？"
+    ]
+  },
+  {
+    "key": "CAREER-C3",
+    "question": "我应该离开这份工作吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "星币三",
+        "orientation": "reversed"
+      },
+      {
+        "position": "阻碍",
+        "card": "宝剑五",
+        "orientation": "upright"
+      },
+      {
+        "position": "建议",
+        "card": "节制",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 27440,
+    "error": null,
+    "readingTheme": "问题不在要不要走，而在「赢了却没人配合」的消耗正在被误判成能力问题",
+    "decisionDriver": {
+      "coreIssue": "让你想离开的，不是工作本身，而是「赢了但没人配合」的消耗模式。",
+      "whyItMatters": "如果直接辞职，你带着这个模式走，下一份工作很可能重复同样的循环。先在这里调整配比，才能知道是环境真的不行，还是应对方式放大了问题。",
+      "evidence": [
+        "现状位星币三逆位：协作结构失效，有人独自硬撑",
+        "阻碍位宝剑五正位：用争赢应对协作问题，关系损耗",
+        "建议位节制正位：重新配比，而不是选边或全盘退出"
+      ]
+    },
+    "answerToQuestion": "我不建议你现在直接辞职，至少先不带着这个模式走。现状的逆位星币三说明让你累的主要是协作失灵，而不是这份工作本身；阻碍的正位宝剑五说明你正在用「争赢」来应对，结果越争越孤立。如果你现在辞职，下一份工作很可能重复同样的循环。建议的正位节制支持你先做一次内部调整：把那些必须坚持的事、可以放的事、需要摊开说的事分开，用更平衡的方式处理一次。调整之后，如果协作仍然无法恢复，再考虑离开也不迟。",
+    "actionPlan": [
+      {
+        "action": "列出你最近三次「争赢但事后更累」的具体事件，写下当时你坚持的是什么、对方在意的是什么。",
+        "reason": "你已经陷入「协作差→争赢→更孤立」的循环，先看清楚自己每次争的到底是什么，才能开始重新配比。",
+        "evidence": [
+          {
+            "cardId": "pentacles-03",
+            "position": "现状",
+            "orientation": "reversed",
+            "signal": "协作失灵，你很可能在独自硬撑"
+          },
+          {
+            "cardId": "swords-05",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "用争赢应对，赢了但关系受损"
+          }
+        ],
+        "timeframe": "下一次再遇到类似分歧之前"
+      },
+      {
+        "action": "下一次出现分歧时，先问对方「你希望这件事最后达成什么」，再决定要不要坚持自己的方案。",
+        "reason": "节制正位要求重新配比：先了解对方的目标，才能判断哪些可以放、哪些必须争，而不是一上来就进入胜负模式。",
+        "evidence": [
+          {
+            "cardId": "major-14",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "调和比例，先理解再决定坚持什么"
+          },
+          {
+            "cardId": "swords-05",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "避免再次进入「赢」的模式"
+          }
+        ],
+        "timeframe": "下一次工作分歧发生时"
+      }
+    ],
+    "watchFor": [
+      "调整表达方式后，同事是否开始主动找你协作，而不只是被动回应",
+      "你不再每次争赢后，工作返工次数是否下降",
+      "你列出的三次「争赢」事件里，是否有共同的核心诉求（比如标准、尊重、资源）"
+    ],
+    "reflectionQuestions": [
+      "如果调整配比后协作仍无改善，你判断是环境容不下你，还是你的核心诉求在这份工作里根本无解？"
+    ]
+  },
+  {
+    "key": "STUDY-S1",
+    "question": "我最近学习状态很差怎么办？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "月亮",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "宝剑九",
+        "orientation": "upright"
+      },
+      {
+        "position": "建议",
+        "card": "星币八",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 25920,
+    "error": null,
+    "readingTheme": "状态差的根源不是学不会，而是焦虑把模糊的正常阶段放大成了危机",
+    "decisionDriver": {
+      "coreIssue": "真正拖住你的不是知识没掌握，而是焦虑让你把「暂时模糊」当成了「学不会」。",
+      "whyItMatters": "如果不把这两件事分开，你会一直试图先解决焦虑再学习，但焦虑恰恰是因为没有行动才持续存在。",
+      "evidence": [
+        "现状位月亮正位：模糊是当前学习阶段的正常状态，不是退步",
+        "阻碍位宝剑九正位：焦虑在夜间和独处时放大这种模糊",
+        "建议位星币八正位：用具体练习替代对整体状态的反复评估"
+      ]
+    },
+    "answerToQuestion": "你现在的状态差，主要不是能力问题，而是焦虑把学习中的正常模糊放大成了危机。月亮正位说明你正处在需要反复摸索才能掌握的阶段，宝剑九正位说明你夜里或独处时会把这种模糊加工成对自己的否定。真正能打断这个循环的是星币八正位的方向：先做一小块具体的练习，哪怕只是把一道题重新做一遍，或者把一页笔记整理清楚。做完之后你会发现，焦虑会随着行动自然下降，而不是反过来。",
+    "actionPlan": [
+      {
+        "action": "今天只做一件很小的具体练习：把最近学过的内容里最模糊的那一小节，挑出来重新读一遍，并用自己的话写三行总结。",
+        "reason": "月亮正位说明模糊是真实存在的，但宝剑九正位说明反复想只会放大它。用星币八正位的重复练习把注意力从「我懂没懂」转移到「我做了没有」，焦虑会随着行动下降。",
+        "evidence": [
+          {
+            "cardId": "pentacles-08",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "工作台上反复打磨一件东西，用具体练习替代对状态的评估"
+          },
+          {
+            "cardId": "swords-09",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "反刍只会让模糊感变得更可怕，行动才能打断它"
+          }
+        ],
+        "timeframe": "今天"
+      },
+      {
+        "action": "给自己定一个「只做 20 分钟」的短时段，闹钟一响就停下，不要因为做不完而继续硬撑或自责。",
+        "reason": "宝剑九正位的焦虑来自对「没完成」的灾难化想象，星币八正位支持用可完成的小单元建立节奏。20 分钟足够启动，又不会触发「必须全部做完」的压力。",
+        "evidence": [
+          {
+            "cardId": "swords-09",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "焦虑来自对未完成的放大，短时段能降低启动门槛"
+          },
+          {
+            "cardId": "pentacles-08",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "重复练习需要节奏，而不是一次性硬撑"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "你是否真的打开了书或笔记，而不是又刷了半小时手机",
+      "做完那一小块练习后，你是否还觉得「完全学不会」，还是只是觉得「这块有点难但能继续」",
+      "下一次坐下来学习时，你是一开始就很抗拒，还是比上一次更容易开始"
+    ],
+    "reflectionQuestions": [],
+    "note": "最终整轮运行中该份超时（180s），此为单独重跑的结果"
+  },
+  {
+    "key": "STUDY-S2",
+    "question": "我最近学习状态很差怎么办？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "圣杯七",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "权杖七",
+        "orientation": "reversed"
+      },
+      {
+        "position": "建议",
+        "card": "魔术师",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 25895,
+    "error": null,
+    "readingTheme": "真正卡住你的不是状态差，而是你正在用防守的方式面对学习",
+    "decisionDriver": {
+      "coreIssue": "你的学习状态差，是因为你一直在用应付和防守的方式面对学习，而不是主动选择该学什么、怎么学。",
+      "whyItMatters": "只要这个模式不变，你换再多方法、收藏再多资料，都只是在圣杯七的云上打转；只有重新拿回学习的主动权，你才能真正开始。",
+      "evidence": [
+        "现状位圣杯七正位：选择很多但没有落地，对应你收藏资料多、实际学得少",
+        "阻碍位权杖七逆位：疲于应付、让步过多，对应你被别人的进度打乱了自己的节奏",
+        "建议位魔术师正位：桌上工具齐全，缺的是整合与开始的意图，指向你已经拥有开始的条件"
+      ]
+    },
+    "answerToQuestion": "你的学习状态差，不是因为能力不够，而是因为你一直在用防守的方式面对学习：收藏了很多资料却很少真正开始，被别人的进度拖着走，把自己的节奏丢了。现状位的圣杯七正位说明你手里并不缺选择，阻碍位的权杖七逆位说明你正在疲于应付、让步过多。建议位的魔术师正位告诉你：你已经拥有开始的条件，缺的只是把它们整合成一个具体的动作。下一步不是再找新方法，而是选一个你真正需要学的东西，定一个最小的开始动作，然后立刻去做。",
+    "actionPlan": [
+      {
+        "action": "从你已经收藏的资料里，只选一个你真正需要学的内容，删掉或暂时收起其他所有资料，然后立刻开始学这个内容。",
+        "reason": "圣杯七正位说明你的问题不是没有资料，而是选择太多导致无法开始；先砍掉其他选项，你才能从想象落到行动。",
+        "evidence": [
+          {
+            "cardId": "cups-07",
+            "position": "现状",
+            "orientation": "upright",
+            "signal": "选择过多、尚未落地，需要砍掉多余选项"
+          },
+          {
+            "cardId": "major-01",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "魔术师指向整合资源、开始执行，而不是继续收集"
+          }
+        ],
+        "timeframe": "下一次你坐下来准备学习时"
+      },
+      {
+        "action": "重新制定一个只属于你自己的学习计划，把别人的进度和期待从计划里拿掉，只保留你真正需要完成的内容。",
+        "reason": "权杖七逆位说明你一直在防守、让步过多，被别人的进度打乱了自己的节奏；只有重新拿回计划的主动权，你才能停止疲于应付。",
+        "evidence": [
+          {
+            "cardId": "wands-07",
+            "position": "阻碍",
+            "orientation": "reversed",
+            "signal": "让步过多、疲于应付，需要重新拿回主动权"
+          },
+          {
+            "cardId": "major-01",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "魔术师正位支持主动整合与开始执行"
+          }
+        ],
+        "timeframe": "下一次你准备制定学习计划时"
+      }
+    ],
+    "watchFor": [
+      "你是否真的删掉或收起了多余的学习资料，只留下一个正在学的内容",
+      "你能否在没有任何外部催促的情况下，主动开始学习你计划里的内容",
+      "你是否又因为别人的进度或期待，改变了自己原本的计划"
+    ],
+    "reflectionQuestions": [
+      "如果你不再需要应付任何人的期待，你最想先学会哪一个内容？"
+    ],
+    "note": "最终整轮运行中该份超时（180s），此为单独重跑的结果"
+  },
+  {
+    "key": "STUDY-S3",
+    "question": "我最近学习状态很差怎么办？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "权杖十",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "星币五",
+        "orientation": "upright"
+      },
+      {
+        "position": "建议",
+        "card": "圣杯三",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 25599,
+    "error": null,
+    "readingTheme": "学习状态差不是能力问题，而是你一个人扛了太多，又没向任何人求助",
+    "decisionDriver": {
+      "coreIssue": "你的学习状态差，主要不是能力或意志问题，而是“独自硬撑”这个模式本身。",
+      "whyItMatters": "只要这个模式不变，再好的学习计划都会变成新的权杖十，再强的动力也会被星币五的孤立感消耗掉。",
+      "evidence": [
+        "现状位权杖十正位：任务超载，完成率下降",
+        "阻碍位星币五正位：感到被落下，不愿求助",
+        "建议位圣杯三正位：小组学习、分享困难是直接出路"
+      ]
+    },
+    "answerToQuestion": "你最近学习状态差，先别急着怪自己不够自律或不够聪明，牌面显示你正处在一个“任务超载＋孤立无援”的循环里。现状位的权杖十正位说明你给自己排了太多任务，完成率反而下降；阻碍位的星币五正位说明你已经感到跟不上、被落下，于是更不愿意开口求助。这种状态继续下去，只会越来越累。建议位的圣杯三正位直接指向一个具体动作：找一个学习伙伴或小组，把一部分学习任务变成共同完成的事。哪怕只是每天和同学对一下进度、互相问一个问题，都会打破星币五的孤立感。",
+    "actionPlan": [
+      {
+        "action": "从你现有的学习任务里，挑出一件最重的，找一个同学或朋友，明确问他能不能和你一起做或定期对进度。",
+        "reason": "权杖十已经说明你一个人扛不动了，星币五又让你不敢开口，但圣杯三的建议位直接支持你去找人分担。",
+        "evidence": [
+          {
+            "cardId": "wands-10",
+            "position": "现状",
+            "orientation": "upright",
+            "signal": "任务超载是状态差的直接原因"
+          },
+          {
+            "cardId": "cups-03",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "小组学习、同伴支持是牌面给出的调整方向"
+          }
+        ],
+        "timeframe": "今天或下一次你见到同学时"
+      },
+      {
+        "action": "把你觉得“跟不上”的那门课或那个部分，具体列出来，拿去问老师或学得好的同学，哪怕只问一个问题。",
+        "reason": "星币五的“被排除在外”感，往往是因为没有具体行动去敲门；一旦你问出一个具体问题，那种孤立感就会松动。",
+        "evidence": [
+          {
+            "cardId": "pentacles-05",
+            "position": "阻碍",
+            "orientation": "upright",
+            "signal": "感到跟不上、被落下，但资源其实就在旁边"
+          },
+          {
+            "cardId": "cups-03",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "分享困难、接受支持是打破循环的关键"
+          }
+        ],
+        "timeframe": "下一次上课或自习时"
+      }
+    ],
+    "watchFor": [
+      "你是否真的向至少一个人提出了具体的求助或组队请求，而不是继续自己硬扛",
+      "在有人一起学习或对进度之后，你的任务完成率是否开始回升",
+      "你列出的“跟不上”的部分，是否在问过之后变得清晰或减少了"
+    ],
+    "reflectionQuestions": [
+      "如果下周你还是一个人扛着所有任务，你觉得状态会变好还是更差？"
+    ],
+    "note": "最终整轮运行中该份超时（180s），此为单独重跑的结果"
+  },
+  {
+    "key": "REALITY-twice",
+    "question": "我已经主动找过他两次，这周他都只是简单回复，我还应该继续主动吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "圣杯八",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "圣杯二",
+        "orientation": "reversed"
+      },
+      {
+        "position": "建议",
+        "card": "隐士",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 22179,
+    "error": null,
+    "readingTheme": "继续主动不会带来新答案，问题在于先承认这段关系目前不对等",
+    "decisionDriver": {
+      "coreIssue": "不是要不要继续主动，而是你愿不愿意承认这段关系目前只有你在投入。",
+      "whyItMatters": "只要你不承认不对等，就会忍不住再主动第三次、第四次，而结果只会重复前两次。承认了，你才能做出真正不同的选择。",
+      "evidence": [
+        "现状位圣杯八正位：你已经感到不满足，但还没放下",
+        "阻碍位圣杯二逆位：投入明显不对等，一方给得多一方接得少",
+        "建议位隐士正位：支持先收回注意力，而不是继续向外追"
+      ]
+    },
+    "answerToQuestion": "我不建议你继续主动。你已经主动过两次，这周他都只是简单回复，这正好对应现状位圣杯八正位——你已经感到不满足，却还没放下；而阻碍位逆位圣杯二更直接点明：这段关系目前只有你在投入，他接得很少。继续主动只会让你第三次得到同样的简单回复，不会带来新的信息。建议位的隐士正位支持你先停下来，把注意力收回到自己身上，看清自己真正想要的是什么。什么时候该改变判断？等他主动发起联系，或者你发现自己不再需要通过他的回复来确认自己的价值时。",
+    "actionPlan": [
+      {
+        "action": "停止发起第三次主动，除非他先主动联系你。",
+        "reason": "你已经主动两次，结果都是简单回复，说明继续主动只会重复不对等的模式，不会带来新信息。",
+        "evidence": [
+          {
+            "cardId": "cups-02",
+            "position": "阻碍",
+            "orientation": "reversed",
+            "signal": "投入不对等，一方给得多一方接得少"
+          },
+          {
+            "cardId": "major-09",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "支持先收回注意力，停止向外追"
+          }
+        ],
+        "timeframe": "直到他主动联系你之前"
+      },
+      {
+        "action": "把原本用来等回复、想话题的时间，拿去做一件能让你自己感到充实的事，比如运动、学习或见朋友。",
+        "reason": "隐士正位建议你把注意力收回来，而不是继续盯着手机等回复。当你不再把快乐寄托在他的回复上，你才能更清醒地判断这段关系值不值得继续。",
+        "evidence": [
+          {
+            "cardId": "major-09",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "隐士的提灯只照亮脚下，建议你先照顾好自己的生活"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "他是否主动发起下一次联系，而不只是回复你",
+      "当你不再主动后，他是否表现出任何想了解你近况的举动"
+    ],
+    "reflectionQuestions": [
+      "如果接下来一周他都不主动联系你，你是会觉得轻松，还是会忍不住再去找他？"
+    ]
+  },
+  {
+    "key": "REALITY-declined",
+    "question": "上周是他主动约我吃饭，我因为加班拒绝了，之后我们就没再联系。我现在应该主动联系他吗？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "圣杯八",
+        "orientation": "upright"
+      },
+      {
+        "position": "阻碍",
+        "card": "圣杯二",
+        "orientation": "reversed"
+      },
+      {
+        "position": "建议",
+        "card": "隐士",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 27060,
+    "error": null,
+    "readingTheme": "问题不在谁先联系，而在联系之后你愿不愿意看见真实的落差",
+    "decisionDriver": {
+      "coreIssue": "不是要不要主动联系，而是你主动联系之前，有没有先确认自己在这段关系里真正想要什么。",
+      "whyItMatters": "如果你带着「不甘心」或「怕错过」去联系，逆位的圣杯二不会因此变成正位，反而可能让你更累。隐士正位建议你先内省，再行动，这样无论最后联不联系，你都不会后悔。",
+      "evidence": [
+        "现状位圣杯八正位：你已经感到这段关系无法满足更深的需要，离开的念头已经出现",
+        "阻碍位圣杯二逆位：投入不对等，而且双方都没有把问题说破，继续联系未必能解决这个失衡",
+        "建议位隐士正位：支持先退一步，在独处中看清自己，而不是急着用联系去填补不安"
+      ]
+    },
+    "answerToQuestion": "我不建议你现在马上主动联系他。你上次拒绝邀约，不只是因为加班，更可能是因为你已经感觉到这段关系无法满足你更深的需要——这正是现状位圣杯八正位在说的。阻碍位的圣杯二逆位提醒你：如果现在去联系，很可能还是回到那个投入不对等、谁也不说破的模式里。建议位的隐士正位支持你先退一步，在安静里确认自己主动联系是出于喜欢，还是出于不甘心或怕错过。等你分清这两者，再决定要不要联系，以及联系时说什么。",
+    "actionPlan": [
+      {
+        "action": "先别急着联系他，用一两天时间，把「我想联系他」背后的真实原因写下来：是喜欢他，还是怕错过，还是不甘心。",
+        "reason": "你犹豫要不要主动，说明心里有拉扯。隐士正位建议先内省，把动机看清，这样后续行动才不会重复旧模式。",
+        "evidence": [
+          {
+            "cardId": "major-09",
+            "position": "建议",
+            "orientation": "upright",
+            "signal": "支持先退一步，在独处中看清自己，而不是急着用联系去填补不安"
+          }
+        ],
+        "timeframe": "在你决定联系他之前"
+      },
+      {
+        "action": "如果决定联系，不要只问「在干嘛」，直接说出你上次拒绝邀约的真实原因，并告诉他你愿意重新安排。",
+        "reason": "阻碍位的圣杯二逆位显示，你们之间最大的问题是投入不对等且没说破。如果你只是随便找个话题，那个失衡不会改变。说清楚，才能拿到他是否愿意对等投入的真实信号。",
+        "evidence": [
+          {
+            "cardId": "cups-02",
+            "position": "阻碍",
+            "orientation": "reversed",
+            "signal": "投入程度存在明显差距，且双方都没有把真实期待说出口"
+          },
+          {
+            "cardId": "cups-08",
+            "position": "现状",
+            "orientation": "upright",
+            "signal": "你已经意识到现有互动方式不够，需要更真实的沟通"
+          }
+        ],
+        "timeframe": "下一次你决定联系他时"
+      }
+    ],
+    "watchFor": [
+      "你联系他之后，他是否愿意重新约时间见面，而不只是线上聊几句",
+      "他是否也主动说出自己上次被拒绝后的感受，还是继续用「最近忙」之类的话带过"
+    ],
+    "reflectionQuestions": [
+      "如果这次联系后，他仍然只是被动回应、不主动推进，你还愿意继续这样投入吗？"
+    ]
+  },
+  {
+    "key": "AB",
+    "question": "我该选 A：接受外地那份薪水更高的 offer，还是 B：留在本地现在的公司？",
+    "cards": [
+      {
+        "position": "现状",
+        "card": "宝剑二",
+        "orientation": "upright"
+      },
+      {
+        "position": "A 方向发展",
+        "card": "权杖八",
+        "orientation": "upright"
+      },
+      {
+        "position": "A 结果",
+        "card": "星币十",
+        "orientation": "upright"
+      },
+      {
+        "position": "B 方向发展",
+        "card": "圣杯五",
+        "orientation": "upright"
+      },
+      {
+        "position": "B 结果",
+        "card": "星币四",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 32318,
+    "error": null,
+    "readingTheme": "不是选哪条路，而是你迟迟没敢承认自己更想要哪一种安全感",
+    "decisionDriver": {
+      "coreIssue": "你真正要选的不是「高薪」和「稳定」，而是你更愿意承受哪一种代价：A 的动荡和快节奏，还是 B 的遗憾和停滞感。",
+      "whyItMatters": "因为两条路都有明确的代价，而且代价的类型完全不同。如果你不先承认自己更愿意承受哪一种，就会一直卡在宝剑二的蒙眼状态里。",
+      "evidence": [
+        "现状位宝剑二正位：你迟迟不选，不是因为不知道两边代价，而是因为不想面对取舍",
+        "A 结果位星币十正位：A 的代价是过程快、需要适应，但落点是长期稳定",
+        "B 结果位星币四正位：B 的代价是情绪上的遗憾和越来越强的惯性"
+      ]
+    },
+    "answerToQuestion": "我更倾向 A：接受外地那份薪水更高的 offer。从牌面看，A 路径是权杖八正位接星币十正位，过程虽然快、需要适应，但最终会沉淀成长期稳定的职业结构；而 B 路径是圣杯五正位接星币四正位，你会为没拿到的薪水失落一阵，然后越来越不敢动。如果你更看重短期的熟悉和安稳，B 更合适；如果你更看重长期的成长和职业根基，A 更值得承担它现在的不确定性。结合你问题里「薪水更高」这个事实和整副牌的倾向，我认为你现在更需要的是星币十那种长期结构，而不是星币四那种守成。",
+    "actionPlan": [
+      {
+        "action": "在最终决定前，向 A 公司确认几个关键问题：试用期考核标准、团队当前的项目节奏、以及入职后最急迫需要你接手的三件事是什么。",
+        "reason": "A 路径的权杖八正位说明入职后会立刻进入多线并行的快节奏。你需要在签约前就知道「快」具体快在哪里，而不是只看到薪水更高。",
+        "evidence": [
+          {
+            "cardId": "wands-08",
+            "position": "A 方向发展",
+            "orientation": "upright",
+            "signal": "事情会突然一起动起来，适合顺势推进，但需要提前了解节奏"
+          }
+        ],
+        "timeframe": "签约之前"
+      },
+      {
+        "action": "把 B 选项的「稳定」具体化：列出留在现在公司未来两年内可见的晋升或加薪路径，如果没有，就承认这个稳定其实是星币四式的原地不动。",
+        "reason": "圣杯五正位说明你选 B 后会为没拿到的薪水失落，而星币四正位说明你最终会抱紧现有位置。你需要验证这个「稳定」是真的有发展，还是只是惯性。",
+        "evidence": [
+          {
+            "cardId": "cups-05",
+            "position": "B 方向发展",
+            "orientation": "upright",
+            "signal": "会为没拿到的更高薪水而情绪失落"
+          },
+          {
+            "cardId": "pentacles-04",
+            "position": "B 结果",
+            "orientation": "upright",
+            "signal": "守住现有位置，但腾不出手拿新的"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "A 公司是否在你提问后给出清晰、具体的入职安排，而不是模糊地让你「来了再说」",
+      "现在公司是否在你提出离职意向时，给出明确的挽留条件（加薪、晋升、职责调整），还是只说「再考虑考虑」"
+    ],
+    "reflectionQuestions": [
+      "如果 A 公司给你的节奏比预想中更快更乱，你会因为适应不了而后悔没选 B 吗？"
+    ]
+  },
+  {
+    "key": "EN",
+    "question": "I have messaged him first twice this week and he only replies briefly. Should I keep reaching out?",
+    "cards": [
+      {
+        "position": "Situation",
+        "card": "圣杯首牌",
+        "orientation": "upright"
+      },
+      {
+        "position": "Obstacle",
+        "card": "恶魔",
+        "orientation": "upright"
+      },
+      {
+        "position": "Advice",
+        "card": "权杖首牌",
+        "orientation": "upright"
+      }
+    ],
+    "ms": 29323,
+    "error": null,
+    "readingTheme": "The problem isn't whether to message a third time; it's that you're already treating a brief reply as a reason to keep trying.",
+    "decisionDriver": {
+      "coreIssue": "Whether you keep reaching out depends on whether you're willing to treat his brief replies as a full answer, or keep hoping they'll turn into more.",
+      "whyItMatters": "If you keep reading 'he replies' as a green light, you'll send a third message and get the same result. The real question is whether you can accept that the current level of response is the information you already have.",
+      "evidence": [
+        "Situation position Ace of Cups upright: real emotional capacity exists, but it's not being matched by the interaction",
+        "Obstacle position The Devil upright: the loop of reaching out and receiving brief replies is a pattern you keep choosing because it's easier than facing the imbalance",
+        "Advice position Ace of Wands upright: the energy you're spending on him could be used to start something that actually moves forward"
+      ]
+    },
+    "answerToQuestion": "No, I don't recommend messaging him a third time this week. The Situation card, the Ace of Cups, shows you have real feeling to give, but the Obstacle card, the Devil, shows exactly what's happening: you've already reached out twice and gotten brief replies, and you're treating those replies as a reason to keep going. That's the bind — the replies aren't an invitation, they're the evidence that the interaction isn't deepening. The Advice card, the Ace of Wands, says your next move should be to redirect that energy into something that actually moves you forward, not to pour more into a loop that isn't giving back. If he initiates after you stop reaching out, that's new information; if he doesn't, you already have your answer.",
+    "actionPlan": [
+      {
+        "action": "Stop initiating contact for now. Do not send a third message this week.",
+        "reason": "You've already reached out twice and received only brief replies. A third message would repeat the same pattern, and the Devil in the Obstacle position shows that continuing this loop is the main thing holding you back.",
+        "evidence": [
+          {
+            "cardId": "major-15",
+            "position": "Obstacle",
+            "orientation": "upright",
+            "signal": "The Devil shows the loop of reaching out and getting brief replies is a pattern you keep choosing, not a requirement"
+          },
+          {
+            "cardId": "cups-01",
+            "position": "Situation",
+            "orientation": "upright",
+            "signal": "Your emotional capacity is real, but it's not being matched by the interaction, so pouring more in won't balance it"
+          }
+        ],
+        "timeframe": "Until he initiates contact with you first"
+      },
+      {
+        "action": "Redirect the impulse you've been using to message him into something that builds your own life forward — a project, a plan, or an activity you've been putting off.",
+        "reason": "The Ace of Wands in the Advice position shows you have a fresh spark of energy available, but it's currently being spent on a closed loop. Using it on something constructive will both break the Devil's hold and give you a clearer sense of what you actually want from a connection.",
+        "evidence": [
+          {
+            "cardId": "wands-01",
+            "position": "Advice",
+            "orientation": "upright",
+            "signal": "The Ace of Wands is a new impulse to act, but it needs to be aimed at something that can grow, not at a pattern that's already shown its limits"
+          }
+        ]
+      }
+    ],
+    "watchFor": [
+      "Whether he initiates any contact with you after you stop reaching out",
+      "Whether his replies, if any, become more than brief — does he ask you a question or try to extend the conversation?",
+      "Whether you find yourself checking your phone repeatedly or drafting another message to him — that's the Devil's loop pulling you back in"
+    ],
+    "reflectionQuestions": [
+      "If he never initiates contact again after you stop, what does that tell you about the connection you thought was there?"
+    ]
+  }
+]

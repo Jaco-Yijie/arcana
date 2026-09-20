@@ -206,6 +206,68 @@ export interface ReadingContext {
   deckId: string | null
   /** 命中安全边界时的提示，由服务端原样透传到输出，不交给模型改写 */
   safetyNotice: string | null
+  /**
+   * V2.4：命中了哪几类高风险话题（服务端关键词判定）。
+   * Prompt 据此区分「医疗 / 法律 / 人身安全保持严格」与「其他话题正常给方向」——
+   * 只有一句 safetyNotice 时模型分不清是哪一类，只能对所有命中一律保守。
+   * 可选：旧的调用方不传时，Prompt 退回按 safetyNotice 的通用处理。
+   */
+  riskCategories?: ('medical' | 'financial' | 'legal' | 'harm')[]
+  /**
+   * 用户在解读前主动选择提供的现实背景（已由服务端清洗）。
+   * 只包含实际回答的题；没有回答或整页跳过时为空数组 / 不存在 ——
+   * Prompt 在这种情况下整段不出现，模型不会知道用户跳过了。
+   */
+  userContext?: ContextIntakeAnswer[]
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+ * 解读前动态背景提问（Context Intake）
+ *
+ * 用户写下问题之后、抽牌之前，按**原问题本身**生成 0–4 道可选的选择题。
+ * 完全自愿：可以全答、答一部分、或整页跳过。只有实际回答的内容会进入解读。
+ * ═══════════════════════════════════════════════════════════════ */
+
+export interface ContextIntakeOption {
+  id: string
+  label: string
+}
+
+export interface ContextIntakeQuestion {
+  id: string
+  question: string
+  options: ContextIntakeOption[]
+}
+
+/** POST /api/tarot/context-questions 的请求体 */
+export interface ContextIntakeRequest {
+  question: string
+  language?: LanguageCode
+}
+
+/**
+ * 应答。**失败也是 200 + questions: []** 之外的另一种形态：ok=false 只用于排查，
+ * 客户端对两者的处理完全一样 —— 直接进入原本的流程，不提示、不阻断。
+ */
+export type ContextIntakeResponse =
+  | { ok: true; questions: ContextIntakeQuestion[]; latencyMs: number }
+  | { ok: false; reason: string; latencyMs: number }
+
+/** 用户对一道题的回答。题干与选项文字一并保存：解读时要原样呈现给模型 */
+export interface ContextIntakeAnswer {
+  questionId: string
+  question: string
+  selectedOptionId: string
+  selectedOptionLabel: string
+}
+
+/**
+ * 本次解读的用户补充背景。只属于这一次会话 —— 不合并、不跨会话复用、不建画像。
+ * skipped=true 表示用户点了「跳过，直接开始」；这一点**不会**告诉解读模型。
+ */
+export interface ReadingUserContext {
+  skipped: boolean
+  answers: ContextIntakeAnswer[]
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -248,6 +310,60 @@ export interface AlternativeInterpretation {
   interpretation: string
   /** 这个读法的依据是牌面上的什么 */
   reason: string
+}
+
+/**
+ * V2.4：一条可以真正去做的下一步。
+ *
+ * 解读只描述状态、最后把问题反问给用户 —— 这是 V2.3 真实反馈里最集中的问题。
+ * 所以把「判断之后做什么」单独做成结构化字段，而不是指望它混在 answerToQuestion 里。
+ */
+/**
+ * V2.5：一条行动建议背后的牌面证据。
+ *
+ * 只写 reason 时，模型可以写出「宝剑八说明你被限制了」这种一句话理由 ——
+ * 换成任何一张「困难牌」都成立。把证据拆成结构化条目，每条都钉在一张真实抽到的牌、
+ * 它的牌位与朝向上，并写出这张牌在这里具体提供了什么信号。
+ * cardId 由服务端校验必须是本次抽到的牌；position / orientation 以服务端数据为准。
+ */
+export interface ReadingActionEvidence {
+  cardId: string
+  position: string
+  orientation: Orientation
+  /** 这张牌在这个位置上，为这个动作提供了什么具体信号 */
+  signal: string
+}
+
+/**
+ * V2.5：这次真正影响决定的核心变量。
+ *
+ * 一副牌平均解释每一张时，解读会退化成「每张牌讲一点」。
+ * 先点名一个核心问题，其余内容围绕它组织。
+ */
+export interface DecisionDriver {
+  /** 真正影响决定的那个核心问题（常常不是用户字面上问的那个） */
+  coreIssue: string
+  /** 为什么它决定了答案 */
+  whyItMatters: string
+  /** 支撑它的牌面证据，每条指名牌 + 牌位 */
+  evidence: string[]
+}
+
+export interface ReadingActionItem {
+  /** 实际动作，不是「多沟通 / 听从内心」这类空泛建议 */
+  action: string
+  /** 为什么这个动作适合本次问题（本次的现实情况 + 牌面推导） */
+  reason: string
+  /**
+   * V2.5：支撑这个动作的牌面证据，通常 1–3 条。
+   * 可选 —— V2.5 之前存下的解读没有它。
+   */
+  evidence?: ReadingActionEvidence[]
+  /**
+   * 可选。只表示行动窗口 / 观察周期 / 验证周期（「接下来两周」），
+   * **不是**塔罗对某件事何时发生的预测。
+   */
+  timeframe?: string
 }
 
 export interface StructuredReadingCard {
@@ -298,6 +414,19 @@ export interface StructuredReading {
   relationships: ReadingRelationship[]
   narrative: string
   answerToQuestion: string
+  /**
+   * V2.5：这次真正影响决定的核心变量。
+   * 可选 —— V2.5 之前的解读、随缘模式或模型漏写时不存在。
+   */
+  decisionDriver?: DecisionDriver
+  /**
+   * V2.4：下一步具体可以做什么。Standard 2–3 条，Deep 3–5 条。
+   * 可选 —— V2.4 之前存进日记的解读没有这个字段，读取方按空数组处理。
+   */
+  actionPlan?: ReadingActionItem[]
+  /** V2.4：接下来值得观察的现实信号。同样可选，理由同上。 */
+  watchFor?: string[]
+  /** V2.4 起不再强制数量：Standard 0–1 条（V2.5），Deep 0–3 条，可以为空数组。 */
   reflectionQuestions: string[]
   /** 可选。牌面存在多种合理读法时才出现，不强制。 */
   alternativeInterpretations?: AlternativeInterpretation[]
@@ -387,6 +516,12 @@ export interface ReadingRequest {
    * 绝不写进 Prompt —— 换牌组不能改变解读的含义，也不能改变抽到的牌。
    */
   deckId?: string
+  /**
+   * 用户在解读前主动回答的背景选择题（只含实际回答的题）。
+   * 可选：跳过、没有生成题目、老客户端都不带这个字段。
+   * 它是 session 的固定字段，重试时 payload 依然逐字节相同（AC-V2-06）。
+   */
+  userContext?: { answers: ContextIntakeAnswer[] }
 }
 
 /** `GET /api/tarot/config` —— 让前端知道服务端当前用哪个 Provider，避免前端持有任何密钥相关配置 */

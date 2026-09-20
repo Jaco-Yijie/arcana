@@ -145,8 +145,13 @@ export default function ReadingPage() {
           connection: c.connectionToQuestion,
         })),
         relationships: structured.relationships.map((r) => r.interpretation),
+        // V2.5 之前存下的解读没有 decisionDriver
+        driver: structured.decisionDriver ?? null,
         narrative: structured.narrative,
         answer: structured.answerToQuestion,
+        // V2.4 之前存下的解读没有这两个字段
+        actions: structured.actionPlan ?? [],
+        watchFor: structured.watchFor ?? [],
         reflections: structured.reflectionQuestions,
       }
     : {
@@ -158,8 +163,11 @@ export default function ReadingPage() {
           interpretation: c.interpretation,
         })),
         relationships: partial.relationships,
+        driver: partial.driver,
         narrative: partial.narrative,
         answer: partial.answer,
+        actions: partial.actions,
+        watchFor: partial.watchFor,
         reflections: partial.reflections,
       }
   const structuredNotice = structured ? fallbackNotice(structured, localFallback, t) : null

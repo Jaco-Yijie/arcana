@@ -24,6 +24,7 @@ import { DeckAtmosphere } from '@/atmosphere/DeckAtmosphere'
 /* ── 主流程：eager ── */
 import HomePage from '@/pages/HomePage'
 import QuestionPage from '@/pages/QuestionPage'
+import ContextIntakePage from '@/pages/ContextIntakePage'
 import SpreadPage from '@/pages/SpreadPage'
 import FocusPage from '@/pages/FocusPage'
 import ShufflePage from '@/pages/ShufflePage'
@@ -103,6 +104,7 @@ export default function App() {
                 <Route path="/decks" element={<DeckLibraryPage />} />
                 <Route path="/deck" element={<Navigate to="/decks" replace />} />
                 <Route path="/question" element={<QuestionPage />} />
+                <Route path="/context" element={<ContextIntakePage />} />
                 <Route path="/spread" element={<SpreadPage />} />
                 <Route path="/focus" element={<FocusPage />} />
                 <Route path="/table/shuffle" element={<ShufflePage />} />

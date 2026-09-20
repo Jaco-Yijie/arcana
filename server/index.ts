@@ -17,6 +17,7 @@ import { extname, join, normalize, resolve } from 'node:path'
 import { config, describeConfig } from './env.ts'
 import { handleConfig, handleReading, handleReadingStream } from './api/readingRoute.ts'
 import { handleFollowUp } from './api/followUpRoute.ts'
+import { handleContextQuestions } from './api/contextIntakeRoute.ts'
 import { sendJson } from './http.ts'
 import { applySecurityHeaders, assetOrigin, cspMode, handleCspReport } from './security.ts'
 import { registerCardText } from '../src/data/deck/localized.ts'
@@ -112,6 +113,10 @@ const server = createServer((req, res) => {
       }
       if (url.pathname === '/api/tarot/reading/stream' && req.method === 'POST') {
         await handleReadingStream(req, res)
+        return
+      }
+      if (url.pathname === '/api/tarot/context-questions' && req.method === 'POST') {
+        await handleContextQuestions(req, res)
         return
       }
       if (url.pathname === '/api/tarot/followup' && req.method === 'POST') {

@@ -8,6 +8,8 @@ import { QuestionField } from '@/features/question/QuestionField'
 import { QuestionFocusMoment } from '@/features/question/QuestionFocusMoment'
 import { useSession } from '@/hooks/useSession'
 import { optimizeQuestion, detectRisk } from '@/features/reading'
+import { prepareContextQuestions } from '@/features/reading/contextIntakeClient'
+import { languageCode } from '@/i18n/types'
 import { lightThemes } from '@/data/randomThemes'
 import { useI18n } from '@/i18n'
 import { themeDescription, themeLabel } from '@/i18n/domain'
@@ -24,13 +26,15 @@ export default function QuestionPage() {
   const mode = params.get('mode') === 'random' ? 'random' : 'question'
   const navigate = useNavigate()
   const { startSession } = useSession()
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
 
   const [text, setText] = useState('')
   const [sheetOpen, setSheetOpen] = useState(false)
   const [riskAcknowledged, setRiskAcknowledged] = useState(false)
   /** 提交后的轻仪式：问题移到中央停 1.6 秒，然后才进下一步 */
   const [focusQuestion, setFocusQuestion] = useState<string | null>(null)
+  /** 落定之后去哪：用户自己写了问题 → 先经过可选的背景提问；「暂时没有具体问题」→ 直接选牌阵 */
+  const [nextRoute, setNextRoute] = useState<'/context' | '/spread'>('/spread')
 
   const optimized = useMemo(() => (text.trim() ? optimizeQuestion(text) : null), [text])
   const risk = useMemo(() => detectRisk(text), [text])
@@ -39,7 +43,8 @@ export default function QuestionPage() {
   /** 原问题始终保留在 session.question；usedOptimized 只记录用户选了哪个版本 */
   const startWithQuestion = (usedOptimized: boolean, override?: string) => {
     const finalQuestion = override ?? text.trim()
-    startSession({
+    const shownQuestion = usedOptimized && optimized ? optimized.optimized : finalQuestion
+    const next = startSession({
       mode: 'question',
       question: finalQuestion,
       optimizedQuestion: override ? null : (optimized?.optimized ?? null),
@@ -49,10 +54,16 @@ export default function QuestionPage() {
       stage: 'spread',
     })
     setSheetOpen(false)
+    /* 背景提问与「问题落定」的 1.6 秒并行准备：多数时候动画结束时题目已经到了。
+       通用问题（「暂时没有具体问题」）没有可补充的现实背景，不出题。 */
+    if (override) {
+      setNextRoute('/spread')
+    } else {
+      void prepareContextQuestions(next.id, shownQuestion, languageCode(locale))
+      setNextRoute('/context')
+    }
     // 先停一下再走，让问题落地
-    setFocusQuestion(
-      usedOptimized && optimized ? optimized.optimized : finalQuestion,
-    )
+    setFocusQuestion(shownQuestion)
   }
 
   const startRandom = (theme: RandomThemeId) => {
@@ -162,7 +173,7 @@ export default function QuestionPage() {
         {focusQuestion && (
           <QuestionFocusMoment
             question={focusQuestion}
-            onDone={() => navigate('/spread')}
+            onDone={() => navigate(nextRoute)}
           />
         )}
       </AnimatePresence>

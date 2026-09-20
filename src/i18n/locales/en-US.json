@@ -113,6 +113,14 @@
       "legacy-shadow": "Black, grey silver and a trace of dark purple. Almost no colour at all — only light and dark. This one faces inward."
     }
   },
+  "contextIntake": {
+    "title": "Before the Cards Are Revealed",
+    "lead1": "If you'd like, share a little context about what's happening.",
+    "lead2": "It can help make the reading more relevant to your question.",
+    "continue": "Continue",
+    "skip": "Skip and Start Reading",
+    "preparing": "Preparing your reading…"
+  },
   "question": {
     "title": "Bring a Question",
     "randomTitle": "A Card for This Moment",
@@ -362,9 +370,12 @@
       "theme": "The Heart of This Reading",
       "cards": "Card by Card",
       "relationships": "Between the Cards",
+      "driver": "What Actually Decides This",
       "pattern": "Overall Pattern",
       "answer": "Back to Your Question",
       "insight": "A Thought to Carry",
+      "actions": "Your Next Steps",
+      "watchFor": "What to Watch For",
       "reflection": "Worth Sitting With"
     },
     "cardLead": "What this card invites",

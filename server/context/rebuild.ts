@@ -13,6 +13,7 @@
  */
 
 import type {
+  ContextIntakeAnswer,
   QuestionCategory,
   ReadingContext,
   ReadingContextCard,
@@ -201,5 +202,34 @@ export function rebuildContext(request: ReadingRequest): ReadingContext {
     // 只记录，不参与任何判断。写进 Prompt 是明确禁止的（见 ReadingContext.deckId）
     deckId: typeof request.deckId === 'string' ? request.deckId.slice(0, 32) : null,
     safetyNotice: risk.notice,
+    riskCategories: risk.categories,
+    ...(mode === 'question' ? sanitizeUserContext(request.userContext) : {}),
   }
+}
+
+/* ── 解读前背景提问的回答 ─────────────────────────────────────────
+ * 这些文字来自浏览器，和用户问题一样是**用户提供的数据**：
+ * 限条数、限长度、去掉不完整的条目，但不改写内容。
+ * 只保留实际回答的题；一题都没有时整个字段不出现，Prompt 里那一节也就不存在。 */
+const USER_CONTEXT_LIMITS = { maxAnswers: 4, maxQuestionChars: 80, maxLabelChars: 40, maxIdChars: 40 }
+
+function sanitizeUserContext(raw: unknown): { userContext?: ContextIntakeAnswer[] } {
+  const answers = (raw as { answers?: unknown } | undefined)?.answers
+  if (!Array.isArray(answers)) return {}
+  const out: ContextIntakeAnswer[] = []
+  const seen = new Set<string>()
+  for (const item of answers) {
+    if (out.length >= USER_CONTEXT_LIMITS.maxAnswers) break
+    if (typeof item !== 'object' || item === null) continue
+    const a = item as Record<string, unknown>
+    const text = (v: unknown, max: number) => (typeof v === 'string' ? v.trim().replace(/\s+/g, ' ').slice(0, max) : '')
+    const questionId = text(a.questionId, USER_CONTEXT_LIMITS.maxIdChars)
+    const question = text(a.question, USER_CONTEXT_LIMITS.maxQuestionChars)
+    const selectedOptionId = text(a.selectedOptionId, USER_CONTEXT_LIMITS.maxIdChars)
+    const selectedOptionLabel = text(a.selectedOptionLabel, USER_CONTEXT_LIMITS.maxLabelChars)
+    if (!questionId || !question || !selectedOptionLabel || seen.has(questionId)) continue
+    seen.add(questionId)
+    out.push({ questionId, question, selectedOptionId, selectedOptionLabel })
+  }
+  return out.length > 0 ? { userContext: out } : {}
 }

@@ -9,7 +9,7 @@
 
 import type { Orientation } from './tarot'
 import type { SpreadId } from './spread'
-import type { ReadingMode, StructuredReading } from './reading'
+import type { ReadingMode, ReadingUserContext, StructuredReading } from './reading'
 
 /** 入口模式：带着问题来 / 随缘抽一张 */
 export type SessionMode = 'question' | 'random'
@@ -135,6 +135,12 @@ export interface TarotSession {
   usedOptimized: boolean
   /** 随缘模式的轻主题 */
   theme: RandomThemeId | null
+  /**
+   * 解读前用户自愿补充的背景（Context Intake）。
+   * 不存在 = 这次没有出现背景提问（随缘模式、题目为空、生成失败或老记录）。
+   * 只跟着这次会话走：随会话进入本地日记，但不上传同步、不跨会话合并。
+   */
+  userContext?: ReadingUserContext
 
   /**
    * 抽牌当时用的是哪副牌。**只影响呈现，不参与任何决策。**

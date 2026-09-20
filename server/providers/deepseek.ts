@@ -75,14 +75,20 @@ interface ChatCompletion {
 export async function callDeepSeek(
   messages: ChatMessage[],
   thinking: Record<string, unknown>,
+  /**
+   * 单次调用的覆盖项。解读前背景提问要的是「几秒内出几道选择题」：
+   * 更小的 max_tokens、更短的超时，必要时换更快的模型 —— 但不能影响主解读的配置。
+   */
+  overrides: { model?: string; maxTokens?: number; timeoutMs?: number } = {},
 ): Promise<string> {
   if (!config.apiKey) throw new UpstreamFailure('missing-api-key')
+  const maxTokens = overrides.maxTokens ?? config.maxTokens
 
   // 自己持有 controller，才能在 catch 里分辨「超时中断」与「响应本身有问题」。
   // 用 AbortSignal.timeout 的话，中断发生在读 body 阶段时，
   // response.json() 会抛一个普通错误，被误判成 invalid-json —— 真正的超时就被掩盖了。
   const controller = new AbortController()
-  const timer = setTimeout(() => controller.abort(), config.requestTimeoutMs)
+  const timer = setTimeout(() => controller.abort(), overrides.timeoutMs ?? config.requestTimeoutMs)
 
   try {
     let response: Response
@@ -94,7 +100,7 @@ export async function callDeepSeek(
           Authorization: `Bearer ${config.apiKey}`,
         },
         body: JSON.stringify({
-          model: config.model,
+          model: overrides.model ?? config.model,
           messages,
           // DeepSeek 只有这一种结构化模式，没有 schema 可用
           response_format: { type: 'json_object' },
@@ -102,7 +108,7 @@ export async function callDeepSeek(
           // 【关键】v4-pro 是推理模型，max_tokens 把 reasoning_tokens 也算进去。
           // 实测一次三张牌的解读：推理 ~2100 + 正文 ~1700 = 3800+，
           // 给 4000 会正好在 JSON 写到一半时截断，表现为「上游响应不是合法 JSON」。
-          max_tokens: config.maxTokens,
+          max_tokens: maxTokens,
           // standard → 关闭推理（首个正文 1.1s）；deep → 开启（更充分但更慢）
           ...thinking,
           stream: false,
@@ -138,7 +144,7 @@ export async function callDeepSeek(
       const reasoning = payload.usage?.completion_tokens_details?.reasoning_tokens ?? 0
       throw new UpstreamFailure(
         'invalid-json',
-        `输出被 max_tokens=${config.maxTokens} 截断（其中推理占用 ${reasoning}）`,
+        `输出被 max_tokens=${maxTokens} 截断（其中推理占用 ${reasoning}）`,
       )
     }
 
@@ -195,7 +201,7 @@ export class DeepSeekReadingProvider implements ReadingProvider {
           toneAdjusted = true
           messages = buildMessages(
             context,
-            { extraInstruction: `注意：上一次输出里出现了不该用的确定性或空洞表达：${summarizeViolations(violations)}\n请保持牌面判断与结构不变，只把这些措辞改写成更克制、可保留余地的说法，重新输出完整的 json。` },
+            { extraInstruction: `注意：上一次输出里出现了不该用的确定性或空洞表达：${summarizeViolations(violations)}\n请保持牌面判断、倾向、decisionDriver、actionPlan（含 evidence）与 watchFor 不变，只替换这几处措辞（例如把「你必须」改成「我更建议」），不要因此把判断改得模糊，重新输出完整的 json。` },
           )
           continue
         }

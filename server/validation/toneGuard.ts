@@ -479,6 +479,27 @@ export function collectTextFields(reading: StructuredReading): ToneTextField[] {
   fields.push({ field: 'narrative', text: reading.narrative })
   fields.push({ field: 'answerToQuestion', text: reading.answerToQuestion })
 
+  /* V2.4 新增的两段同样是模型产出，同样要过红线 ——
+     行动建议恰恰最容易写出「你必须马上…」这类硬话。 */
+  if (reading.decisionDriver) {
+    fields.push({ field: 'decisionDriver.coreIssue', text: reading.decisionDriver.coreIssue })
+    fields.push({ field: 'decisionDriver.whyItMatters', text: reading.decisionDriver.whyItMatters })
+    reading.decisionDriver.evidence.forEach((line, i) => {
+      fields.push({ field: `decisionDriver.evidence[${i}]`, text: line })
+    })
+  }
+  ;(reading.actionPlan ?? []).forEach((item, i) => {
+    fields.push({ field: `actionPlan[${i}].action`, text: item.action })
+    fields.push({ field: `actionPlan[${i}].reason`, text: item.reason })
+    ;(item.evidence ?? []).forEach((e, j) => {
+      fields.push({ field: `actionPlan[${i}].evidence[${j}].signal`, text: e.signal })
+    })
+    if (item.timeframe) fields.push({ field: `actionPlan[${i}].timeframe`, text: item.timeframe })
+  })
+  ;(reading.watchFor ?? []).forEach((signal, i) => {
+    fields.push({ field: `watchFor[${i}]`, text: signal })
+  })
+
   reading.reflectionQuestions.forEach((question, i) => {
     fields.push({ field: `reflectionQuestions[${i}]`, text: question })
   })

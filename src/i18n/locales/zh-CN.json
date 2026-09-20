@@ -113,6 +113,14 @@
       "legacy-shadow": "黑、灰银与一点暗紫，几乎没有颜色，只有明暗。这一套是向内的。"
     }
   },
+  "contextIntake": {
+    "title": "在翻开牌之前",
+    "lead1": "如果你愿意，可以告诉我一点正在发生的事。",
+    "lead2": "这些信息会帮助解读更贴近你的问题。",
+    "continue": "继续",
+    "skip": "跳过，直接开始",
+    "preparing": "正在准备这次解读…"
+  },
   "question": {
     "title": "带着问题来",
     "randomTitle": "随缘抽一张",
@@ -362,9 +370,12 @@
       "theme": "这组牌在说",
       "cards": "每张牌的分析",
       "relationships": "牌与牌之间的关系",
+      "driver": "最核心的一点",
       "pattern": "整体走向",
       "answer": "回到你的问题",
       "insight": "核心提示",
+      "actions": "现在可以开始的",
+      "watchFor": "之后留心看的",
       "reflection": "可以再想想的问题"
     },
     "cardLead": "这张牌的启示",
