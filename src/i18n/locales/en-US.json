@@ -634,5 +634,12 @@
     },
     "betterQuestion": "What factors should I consider to improve my career direction?",
     "ready": "Ready to Explore?"
+  },
+  "cinematic": {
+    "choose": "Choose your world",
+    "hint": "A different deck. A different atmosphere.",
+    "entering": "Entering another world…",
+    "failed": "The scene could not load. Please try again.",
+    "unavailable": "In preparation"
   }
 }

@@ -15,12 +15,16 @@ export function useHeroDepth(enabled: boolean) {
       frame = 0
       node.style.setProperty('--depth-x', '0deg')
       node.style.setProperty('--depth-y', '0deg')
+      node.style.setProperty('--cinema-pointer-x', '0')
+      node.style.setProperty('--cinema-pointer-y', '0')
     }
     const move = (event: PointerEvent) => {
       if (!media.matches || event.pointerType === 'touch') return
       x = Math.max(-1, Math.min(1, event.clientX / innerWidth * 2 - 1))
       y = Math.max(-1, Math.min(1, event.clientY / innerHeight * 2 - 1))
       if (!frame) frame = requestAnimationFrame(() => {
+        node.style.setProperty('--cinema-pointer-x', String(x))
+        node.style.setProperty('--cinema-pointer-y', String(y))
         node.style.setProperty('--depth-x', `${-y * 5}deg`)
         node.style.setProperty('--depth-y', `${x * 8}deg`)
         frame = 0

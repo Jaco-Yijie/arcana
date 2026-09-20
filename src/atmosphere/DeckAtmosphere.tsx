@@ -1,3 +1,6 @@
+import { useLocation } from 'react-router-dom'
+import { CinematicWorld } from './cinematic/CinematicWorld'
+import { cinematicMode } from './cinematic/profiles'
 import type { DeckId } from '@/decks/ids'
 import { deckVisualScope } from './visualScope'
 import { SignatureArt } from './SignatureArt'
@@ -489,6 +492,7 @@ const LIGHTING: Record<AtmosphereLighting, LightingSpec> = {
 
 export function DeckAtmosphere({ dimmed = false, className = '', deckId: overrideDeckId }: DeckAtmosphereProps) {
   /* 会话冻结后跟着 session 走，否则背景会和牌桌上的卡背打架 */
+  const { pathname } = useLocation()
   const effectiveDeckId = useEffectiveDeckId()
   const deckId = overrideDeckId ?? effectiveDeckId
   const spec = getAtmosphere(getDeck(deckId).atmosphereId)
@@ -503,14 +507,15 @@ export function DeckAtmosphere({ dimmed = false, className = '', deckId: overrid
       data-atmosphere={spec.atmosphereId}
       style={deckVisualScope(deckId)}
       className={[
-        'pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-bg-deep',
+        'cinematic-atmosphere pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-bg-deep',
         'transition-opacity duration-[var(--duration-page)] ease-[var(--ease-veil)]',
-        dimmed ? 'opacity-45' : 'opacity-100',
+        'opacity-100',
         className,
       ]
         .filter(Boolean)
         .join(' ')}
     >
+      <CinematicWorld deckId={deckId} mode={dimmed ? 'reading' : cinematicMode(pathname)} />
       {/* 第一层：整体明暗塑形 */}
       <div className="absolute inset-0" style={{ backgroundImage: layers.shape }} />
 

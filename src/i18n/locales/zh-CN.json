@@ -634,5 +634,12 @@
     },
     "betterQuestion": "我应该关注哪些因素改善事业方向？",
     "ready": "准备好开始探索了吗？"
+  },
+  "cinematic": {
+    "choose": "选择你的世界",
+    "hint": "让牌组引领此刻的氛围",
+    "entering": "正在进入另一片天地…",
+    "failed": "场景加载未完成，请重试。",
+    "unavailable": "筹备中"
   }
 }

@@ -7,7 +7,7 @@
     "dev": "node scripts/dev.mjs",
     "dev:web": "vite",
     "dev:reading": "tsx watch server/index.ts",
-    "build": "tsc -b && tsc -p tsconfig.server.json --noEmit && npm run i18n:check && npm run deck:check && npm run layout:check && npm run artwork:check && npm run design:check && vite build",
+    "build": "tsc -b && tsc -p tsconfig.server.json --noEmit && npm run i18n:check && npm run deck:check && npm run layout:check && npm run artwork:check && npm run design:check && npm run cinematic:check && vite build",
     "lint": "oxlint",
     "engine:check": "tsx scripts/engine-selfcheck.ts",
     "preview": "vite preview",
@@ -37,7 +37,8 @@
     "i18n:runtime": "tsx scripts/i18n-runtime-check.ts",
     "onboarding:check": "tsx qa/onboarding/state-check.ts",
     "typecheck": "tsc -b && tsc -p tsconfig.server.json --noEmit",
-    "design:check": "node --import tsx --test tests/design-system.test.ts"
+    "design:check": "node --import tsx --test tests/design-system.test.ts",
+    "cinematic:check": "node --import tsx --test tests/cinematic.test.ts"
   },
   "dependencies": {
     "framer-motion": "^12.43.0",
