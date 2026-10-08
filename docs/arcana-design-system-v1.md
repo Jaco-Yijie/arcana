@@ -120,3 +120,11 @@ npm run build
 ```
 
 本轮没有新增环境变量或迁移。未配置 AI 服务时只能验证已有本地示例路径；真实解读与翻译需要项目原有服务配置。
+
+## 发布范围
+
+本次 GitHub / Streamlit 发布从原 main 隔离合入视觉系统，不包含本地尚未发布的 User System 与 Admin Dashboard。标准及 Streamlit 专用构建均通过；Streamlit 仍使用原有 Python 转发与浏览器本地记录。上述截图和日志保留在开发工作区，没有上传测试记录。
+
+## 2026-10-08 完整项目提交
+
+本次在保留此前发布历史的基础上提交全部当前项目：包含 User System、Admin Dashboard、Streamlit Context Bridge、Visual Semantic V1 与已关闭的 multi-agent / human-final QA。上文的隔离发布范围描述属于此前发布记录。

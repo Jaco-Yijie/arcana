@@ -35,7 +35,7 @@
 
 ## 数据
 
-- `TarotSession.userContext?: { skipped, answers[] }`：随会话存在浏览器本地（与问题、解读同一处），**不进入** ReadingSync 上传的载荷，不跨会话合并。
+- `TarotSession.userContext?: { skipped, answers[] }`：随会话存在浏览器本地（与问题、解读同一处），**不进入**账号同步上传的载荷，不跨会话合并。
 - `ReadingRequest.userContext?: { answers[] }`：只在有实际回答时出现；skipped 不发给服务端，模型不知道用户跳过。
 - knownFacts 只在服务端用于收口与评测，不返回前端，不保存；服务端日志不记录问题原文。
 
@@ -77,3 +77,7 @@
 （「最近主要是我主动」「回复比较慢」「我主动得有点累」），每个变体检查
 ① 有没有放大背景 ② 三张牌是否仍然被指名解释。
 放大检查区分两种写法：归因到牌的「一种……的模式」放行，直接对用户下的确定判断（「你停不下来」）拦截。
+
+## 2026-10-08 完整项目提交
+
+本次在保留此前发布历史的基础上提交全部当前项目：包含 User System、Admin Dashboard、Streamlit Context Bridge、Visual Semantic V1 与已关闭的 multi-agent / human-final QA。上文的隔离发布范围描述属于此前发布记录。

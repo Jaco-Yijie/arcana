@@ -1,4 +1,4 @@
-import{c as e}from"./index-BXgS5tCk.js";import{a as t,i as n,n as r,t as i}from"./toneGuard-CCGDXVC7.js";import{t as a}from"./streamlitTransport-BEWnD7Iq.js";var o={relationship:`感情 / 人际`,career:`工作 / 事业`,study:`学习 / 考试`,finance:`金钱 / 财务`,decision:`一个具体的抉择`,self:`自我状态`,general:`未归类`},s={zh:`所有 question 与 label 使用自然的简体中文。`,en:`**OUTPUT LANGUAGE: ENGLISH.** The instructions are in Chinese for internal reasons. Every knownFacts item, question and option label must be natural English with no Chinese characters. ids stay lowercase snake_case English.`};function c(e){return`${s[e]}
+import{c as e}from"./index-D9tr65Aw.js";import{a as t,i as n,n as r,t as i}from"./toneGuard-CCGDXVC7.js";import{t as a}from"./streamlitTransport-fd5TK_Ei.js";var o={relationship:`感情 / 人际`,career:`工作 / 事业`,study:`学习 / 考试`,finance:`金钱 / 财务`,decision:`一个具体的抉择`,self:`自我状态`,general:`未归类`},s={zh:`所有 question 与 label 使用自然的简体中文。`,en:`**OUTPUT LANGUAGE: ENGLISH.** The instructions are in Chinese for internal reasons. Every knownFacts item, question and option label must be natural English with no Chinese characters. ids stay lowercase snake_case English.`};function c(e){return`${s[e]}
 
 # 你的任务
 

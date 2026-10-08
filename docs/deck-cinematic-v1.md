@@ -91,3 +91,11 @@ Release check is NOT fully green: 69/70 pass. The unchanged 760 KiB total-JS bud
 An extra `reading:specificity` script was mistakenly included with offline checks; it actually issued 15 real model requests and finished before the stop attempt. It passed 131/134 checks; failures concern invented numeric detail and a templated relationship recommendation. This task does not alter AI content logic, so those failures were recorded rather than changing the prompt. No further remote model evaluation was run.
 
 The five incomplete artwork decks remain unavailable for real readings. Their new backgrounds are ready, but complete approved card assets are still required. No deployment or Git push was performed for this task.
+
+## Publication scope
+
+The publication branch is based on GitHub `0a50bde` and applies only the cinematic changes above. Unpublished local account/admin work remains in the original workspace. Both normal and Streamlit builds pass on this publication branch, and `streamlit_build/` is regenerated for Community Cloud. The earlier measurements describe the original local workspace, not the smaller publication branch. The existing Streamlit single-chunk size warning remains visible.
+
+## 2026-10-08 完整项目提交
+
+本次在保留此前发布历史的基础上提交全部当前项目：包含 User System、Admin Dashboard、Streamlit Context Bridge、Visual Semantic V1 与已关闭的 multi-agent / human-final QA。上文的隔离发布范围描述属于此前发布记录。

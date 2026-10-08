@@ -736,6 +736,7 @@
     "choose": "Choose your world",
     "hint": "A different deck. A different atmosphere.",
     "entering": "Entering another world…",
-    "failed": "The scene could not load. Please try again."
+    "failed": "The scene could not load. Please try again.",
+    "unavailable": "In preparation"
   }
 }

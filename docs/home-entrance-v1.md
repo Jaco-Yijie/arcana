@@ -39,4 +39,8 @@
 
 首屏 HTML 关联 JS/CSS 原始体积 808,056 → 812,068 bytes，增加 4,012 bytes（约 0.50%）。没有新字体、图片、外部请求，卡牌仍立即挂载原缩略图，视觉出现延迟不延迟图片请求。AI/Reading 管道未修改。
 
-截图：`output/playwright/home-motion/`。本轮尚未推送 GitHub 或更新 Streamlit。
+截图：`output/playwright/home-motion/`。发布通过独立工作树合入 GitHub main，同时提交 Streamlit 专用构建；不包含本地用户系统与后台改动。
+
+## 2026-10-08 完整项目提交
+
+本次在保留此前发布历史的基础上提交全部当前项目：包含 User System、Admin Dashboard、Streamlit Context Bridge、Visual Semantic V1 与已关闭的 multi-agent / human-final QA。上文的隔离发布范围描述属于此前发布记录。

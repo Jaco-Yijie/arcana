@@ -59,7 +59,7 @@ prefers-reduced-motion 与慢刷新设备下，场景动画停止，静态圆环
 
 ## 限制与下一步
 
-尚未进行低端 Android、iOS Safari、触屏真机拖动和持续 GPU/功耗测试，也没有调用真实 AI 做延迟对比。本轮没有推送或部署。建议先用真实手机检查长时间洗牌与多牌阵，再决定是否需要网格模型或更重的 3D 运行时。
+尚未进行低端 Android、iOS Safari、触屏真机拖动和持续 GPU/功耗测试，也没有调用真实 AI 做延迟对比。本次通过独立发布工作树合入 GitHub main，并提交 Streamlit 专用构建；不包含本地用户系统与后台改动。建议先用真实手机检查长时间洗牌与多牌阵，再决定是否需要网格模型或更重的 3D 运行时。
 
 | Before | After |
 | --- | --- |
@@ -69,3 +69,7 @@ prefers-reduced-motion 与慢刷新设备下，场景动画停止，静态圆环
 | 氛围主要来自背景图 | 前景、中景、远景共同构成空间 |
 | Motion 主要是浮动淡入 | CSS 3D + 手势派生空间运动 |
 | 原资源加载策略 | 复用资源，初始 JS/CSS 增加约 1.06% |
+
+## 2026-10-08 完整项目提交
+
+本次在保留此前发布历史的基础上提交全部当前项目：包含 User System、Admin Dashboard、Streamlit Context Bridge、Visual Semantic V1 与已关闭的 multi-agent / human-final QA。上文的隔离发布范围描述属于此前发布记录。

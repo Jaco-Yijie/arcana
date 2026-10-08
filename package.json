@@ -23,7 +23,7 @@
     "artwork:check": "tsx scripts/artwork-check.ts",
     "deep:stability": "tsx scripts/deep-stability.ts",
     "deploy:build": "npm ci && npm run build",
-    "build:streamlit": "tsc -b && npm run i18n:check && npm run deck:check && vite build --config vite.streamlit.config.ts",
+    "build:streamlit": "tsc -b && npm run i18n:check && npm run deck:check && npm run design:check && vite build --config vite.streamlit.config.ts",
     "thumbs": "tsx scripts/generate-thumbnails.ts",
     "spec:fool": "tsx scripts/fool-spec.ts",
     "release:check": "tsx scripts/release-check.ts",
