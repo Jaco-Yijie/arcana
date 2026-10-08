@@ -57,6 +57,11 @@ export function buildReadingRequest(
     // 纯呈现信息：服务端只记录，不写进 Prompt。
     // 它是 session 的固定字段，所以重试时 payload 依然逐字节相同（AC-V2-06）。
     deckId: session.deckId,
+    /* 只传实际回答的题。跳过、没出题、全都没选时整个字段不出现 ——
+       服务端也就不会在 Prompt 里写任何与「背景提问」有关的字。 */
+    ...(session.mode === 'question' && (session.userContext?.answers.length ?? 0) > 0
+      ? { userContext: { answers: session.userContext!.answers } }
+      : {}),
   }
 }
 

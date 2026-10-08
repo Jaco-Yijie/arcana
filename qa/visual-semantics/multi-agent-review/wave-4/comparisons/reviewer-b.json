@@ -1,0 +1,125 @@
+[
+ {
+  "reviewId": "review-407",
+  "verdict": "pass",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-409",
+  "verdict": "pass",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-411",
+  "verdict": "pass",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-410",
+  "verdict": "pass",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-417",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects / scene",
+    "existing": "upright swords with round pommels and crossguards",
+    "observed": "swords standing vertical but HILT-UP / POINT-DOWN: a round ball pommel sits at the very top of each, then grip, then crossguard, then the blade running downward into the stone plinth",
+    "evidence": "On every sword in both flanking groups the topmost element is a round orb, and the tapering end disappears into the plinth below. 'Upright swords' reads as point-up and inverts the actual orientation.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the domed building sits behind her, centred on the path's vanishing point",
+    "observed": "the domed building sits behind her and noticeably to the RIGHT of the walkway's centre line, raised on a bank above the water",
+    "evidence": "The dome and its lit doorway are well right of centre in the frame; the gold reflection of the doorway falls on water to the right of the figure, not down the path's centre.",
+    "confidence": "medium"
+   },
+   {
+    "field": "visualTensions",
+    "existing": "the cloth is being lifted rather than tied in place",
+    "observed": "both her raised hands hold the pale band flat across her eyes; a still frame does not show whether it is going on or coming off",
+    "evidence": "The cloth is fully across both eyes and gripped at both ends; direction of motion is not recoverable from the pixels.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "upright swords with round pommels and crossguards",
+     "with": "swords planted point-down into the plinths, round pommels uppermost above grip and crossguard"
+    },
+    {
+     "find": "walks forward along a wet stone path between two rows of upright swords",
+     "with": "walks forward along a wet stone path between two flanking groups of swords planted point-down on plinths"
+    },
+    {
+     "find": "the domed building sits behind her, centred on the path's vanishing point",
+     "with": "the domed building sits behind her and to the right, raised above the water, off the walkway's centre line"
+    },
+    {
+     "find": "the cloth is being lifted rather than tied in place",
+     "with": "the cloth is held flat across both eyes by her own raised hands; whether it is being lifted or put in place is not readable"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-412",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "crescent moon",
+    "observed": "a small grey disc, mostly lit with shading on one limb - reads gibbous, not a crescent",
+    "evidence": "The body at the upper left is a near-complete round disc with surface mottling; no thin crescent sliver. It is small and dim, so I recorded the phase as uncertain rather than certain.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "crescent moon",
+     "with": "small moon or planetary disc, mostly lit with shading on one limb"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-406",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene / keyObjects",
+    "existing": "crescent moon",
+    "observed": "a large pale round moon, gibbous to near-full, at the upper centre-right",
+    "evidence": "The disc is a complete circle with only a soft shading on its lower-left limb; there is no crescent sliver. Exact phase between gibbous and full is uncertain, but 'crescent' is wrong.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "stand on a balustraded terrace at night",
+    "observed": "the whole frame is bright, pale and high-key - white clouds, luminous sky, pale sunlit-looking drapery; it does not read as a night scene",
+    "evidence": "Background sky, clouds and gowns are near-white with soft shadows, and the only small flame (the table candle) is not what is lighting the figures. Whether this is meant as daylight, twilight or a very luminous night cannot be settled from the pixels, but flat 'at night' contradicts the light level.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "stand on a balustraded terrace at night, raising three stemmed goblets together beneath a crescent moon",
+     "with": "stand on a balustraded terrace under a bright, pale, high-key sky, raising three stemmed goblets together beneath a large near-full moon"
+    },
+    {
+     "find": "crescent moon",
+     "with": "large pale gibbous-to-full moon"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ }
+]

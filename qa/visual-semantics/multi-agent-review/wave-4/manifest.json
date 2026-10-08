@@ -1,0 +1,525 @@
+{
+  "version": 1,
+  "run": "wave-4",
+  "wave": 4,
+  "mode": "rest",
+  "generatedAt": "2026-09-30T06:04:13.551Z",
+  "note": "Coordinator-only。绝不提供给第一阶段 Reviewer —— 它把 reviewId 直接映回 cardId。",
+  "mask": {
+    "top": [
+      0,
+      75
+    ],
+    "bottom": [
+      848,
+      933
+    ],
+    "rgb": {
+      "r": 118,
+      "g": 118,
+      "b": 118
+    },
+    "cropped": false,
+    "resized": false,
+    "recolored": false
+  },
+  "counts": {
+    "total": 17,
+    "highRisk": 17,
+    "byDeck": {
+      "legacy-moonlight": 6,
+      "legacy-shadow": 7,
+      "legacy-celestial": 3,
+      "legacy-forest": 1
+    },
+    "byConfidence": {
+      "high": 6,
+      "medium": 11
+    }
+  },
+  "assignments": {
+    "reviewer-a": [
+      "review-403",
+      "review-415",
+      "review-414",
+      "review-402",
+      "review-401",
+      "review-413",
+      "review-405"
+    ],
+    "reviewer-b": [
+      "review-407",
+      "review-409",
+      "review-411",
+      "review-417",
+      "review-412",
+      "review-410",
+      "review-406"
+    ],
+    "reviewer-c": [
+      "review-416",
+      "review-404",
+      "review-408",
+      "review-403",
+      "review-415",
+      "review-414",
+      "review-402"
+    ],
+    "reviewer-d": [
+      "review-401",
+      "review-413",
+      "review-405",
+      "review-407",
+      "review-409",
+      "review-411",
+      "review-417"
+    ],
+    "reviewer-e": [
+      "review-412",
+      "review-410",
+      "review-406",
+      "review-416",
+      "review-404",
+      "review-408"
+    ]
+  },
+  "rows": [
+    {
+      "reviewId": "review-401",
+      "deckId": "legacy-moonlight",
+      "cardId": "swords-02",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-401.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__swords-02.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/swords-02.webp",
+      "assetHash": "a6263e707848cb749bc97871cc8ee52e7f4c9962c64f63d4f3b77420256bec4e",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the pale band is a separate cloth or a veil woven into the hair",
+        "the exact number of small blossoms on the upper-left branch"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-02)",
+        "risk-objects(moon,sword,sea)",
+        "uncertain-details(2)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 48
+    },
+    {
+      "reviewId": "review-402",
+      "deckId": "legacy-shadow",
+      "cardId": "swords-10",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-402.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__swords-10.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/swords-10.webp",
+      "assetHash": "1eb850a12be111b542d4797537f7946890174a886351f2f0538409d791fc8b24",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the cloth beneath the swords is a garment or a hide",
+        "the exact number of swords resolvable in the lower row"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-10)",
+        "risk-objects(sword,cup)",
+        "uncertain-details(2)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 88
+    },
+    {
+      "reviewId": "review-403",
+      "deckId": "legacy-shadow",
+      "cardId": "cups-14",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-403.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__cups-14.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/cups-14.webp",
+      "assetHash": "b801b0076f58aa5478af4823ac03e84e8d17646681e8da92f5d10fc525008b41",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "whether the object in the left hand is a sword or a staff",
+        "the exact number of points on the crown",
+        "whether the pendant is a fish or another shape",
+        "the extent of the water channel behind the throne base"
+      ],
+      "figureCount": 2,
+      "highRisk": true,
+      "riskReasons": [
+        "multi-figure(2)",
+        "risk-objects(crown,sword,chalice,throne,water)",
+        "confidence(medium)",
+        "uncertain-details(4)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 66
+    },
+    {
+      "reviewId": "review-404",
+      "deckId": "legacy-moonlight",
+      "cardId": "pentacles-10",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-404.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__pentacles-10.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/pentacles-10.webp",
+      "assetHash": "02493a060bbc8dae14b6c7b197697dbaaee5d26cac180a5c36df593d5cae70a8",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of pentacle discs visible, as some overlap and fade at the edges",
+        "whether the small figure held by the standing figure is an infant or a young child",
+        "whether the pale shapes at the far left are figures or foliage"
+      ],
+      "figureCount": 4,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(pentacles-10)",
+        "multi-figure(4)",
+        "risk-objects(moon,wing,pentacle,water,lake,sea)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 46
+    },
+    {
+      "reviewId": "review-405",
+      "deckId": "legacy-shadow",
+      "cardId": "pentacles-14",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-405.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__pentacles-14.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/pentacles-14.webp",
+      "assetHash": "05218b8215ab971b9a964062192bafd82aa7c84df91d2372ca10dd3343bae12b",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "the exact number of barrels",
+        "whether the disc is a pentacle or a coin",
+        "the material of the sacks"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "risk-objects(pentacle)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 78
+    },
+    {
+      "reviewId": "review-406",
+      "deckId": "legacy-moonlight",
+      "cardId": "cups-03",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-406.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__cups-03.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/cups-03.webp",
+      "assetHash": "33838d7c59da8330d19d7bb0a4b86910162a277837549c6b821865de9ca777dc",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "exact number of grapes and round fruits on the platter",
+        "whether the small glass object beside the decanter is a candle or a lamp",
+        "fine detail of the jewellery and chains on the figures' backs"
+      ],
+      "figureCount": 3,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(cups-03)",
+        "multi-figure(3)",
+        "risk-objects(moon,wing,water)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 39
+    },
+    {
+      "reviewId": "review-407",
+      "deckId": "legacy-shadow",
+      "cardId": "cups-07",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-407.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__cups-07.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/cups-07.webp",
+      "assetHash": "4ca8cc961278c60c85aaf12c60efce6d47e2a88525a60029c2c15202e6d20cca",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "the exact object above the lower-right chalice reads as a dark oval disc",
+        "whether the upper-left niche's serpent is a snake or a curved ornament",
+        "the precise number of niches fully visible at the left edge"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(cups-07)",
+        "risk-objects(crown,chalice,tower)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 63
+    },
+    {
+      "reviewId": "review-408",
+      "deckId": "legacy-moonlight",
+      "cardId": "swords-05",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-408.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__swords-05.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/swords-05.webp",
+      "assetHash": "acb9d08d45b87284501306042ab7101f3e05951212fe4f1426527f8f36e25112",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "exact number of blossoms in the lower left",
+        "whether the small pale shapes near the moon are birds or petals"
+      ],
+      "figureCount": 2,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-05)",
+        "multi-figure(2)",
+        "risk-objects(moon,sword,water)",
+        "uncertain-details(2)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 51
+    },
+    {
+      "reviewId": "review-409",
+      "deckId": "legacy-shadow",
+      "cardId": "wands-07",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-409.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__wands-07.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/wands-07.webp",
+      "assetHash": "24ea564484ceafcc6b7d000b035d50e4e098b201238d619d9bfcecf9deb19834",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of stakes visible, as several are cropped or lost in shadow",
+        "whether the dark shape on the platform's front face is an opening or a shadow",
+        "whether the faint ground patterning is stonework or texture"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(wands-07)",
+        "risk-objects(cup,wand,staff)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 93
+    },
+    {
+      "reviewId": "review-410",
+      "deckId": "legacy-celestial",
+      "cardId": "major-10",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-410.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-celestial__major-10.png",
+      "sourceAsset": "public/assets/decks/legacy-celestial/cards/major-10.webp",
+      "assetHash": "2b6e967fe90cff177a97b250326cb9e4b6625095c12078fc9b1acf3e6a7c11fc",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of small spheres embedded in the ring",
+        "whether the two instruments on the platform are both armillary spheres",
+        "whether the winged upper-left figure holds a book or a tablet",
+        "exact count of constellation figures in the sky"
+      ],
+      "figureCount": 4,
+      "highRisk": true,
+      "riskReasons": [
+        "multi-figure(4)",
+        "risk-objects(wing,cup,water,lake)",
+        "confidence(medium)",
+        "uncertain-details(4)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 3
+    },
+    {
+      "reviewId": "review-411",
+      "deckId": "legacy-shadow",
+      "cardId": "wands-05",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-411.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__wands-05.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/wands-05.webp",
+      "assetHash": "9bf0a6a881cf238402039b7f443ef0f0c803d3091dea71f8d388cf976e4719b6",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of figures is hard to resolve in the shadow; four are clearly readable, a fifth may be merged with the upper figure",
+        "whether the central object is a well, pit or sunken basin",
+        "whether the sticks number five or more where they overlap at the centre"
+      ],
+      "figureCount": 4,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(wands-05)",
+        "multi-figure(4)",
+        "risk-objects(wand)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 91
+    },
+    {
+      "reviewId": "review-412",
+      "deckId": "legacy-celestial",
+      "cardId": "wands-10",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-412.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-celestial__wands-10.png",
+      "sourceAsset": "public/assets/decks/legacy-celestial/cards/wands-10.webp",
+      "assetHash": "b9f255487fe6a5cec6d6c86a67f87faeec918c957285600811bc364787b9d921",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of staffs in the bundle",
+        "whether the moon is waxing or waning",
+        "whether the figure's face is turned at all",
+        "whether the water before the city is a river or a lake"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(wands-10)",
+        "risk-objects(moon,wing,staff,path,tower,water)",
+        "confidence(medium)",
+        "uncertain-details(4)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 18
+    },
+    {
+      "reviewId": "review-413",
+      "deckId": "legacy-shadow",
+      "cardId": "cups-11",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-413.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__cups-11.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/cups-11.webp",
+      "assetHash": "1196afb4280282b998bc51bf670985e020f922cd5546b25dde5171941fb8246d",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "whether the shape rising from the cup is a fish or a flame-like form",
+        "whether the droplets are water or sparks",
+        "whether the faint points in the sky are stars or image grain",
+        "the exact number of stones on the sand"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "risk-objects(cup,door,water,sea)",
+        "confidence(medium)",
+        "uncertain-details(4)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 64
+    },
+    {
+      "reviewId": "review-414",
+      "deckId": "legacy-moonlight",
+      "cardId": "swords-08",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-414.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__swords-08.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/swords-08.webp",
+      "assetHash": "c7daa33e454d79bd5be29be4ea09f057d155f5f62969d09fde4695c72348192a",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "exact number of swords standing in the water",
+        "whether the pale band across the eyes is cloth or a wreath of blossoms",
+        "whether the trailing shapes at the left are ribbons or branches"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-08)",
+        "risk-objects(moon,sword,water)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 54
+    },
+    {
+      "reviewId": "review-415",
+      "deckId": "legacy-forest",
+      "cardId": "swords-08",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-415.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-forest__swords-08.png",
+      "sourceAsset": "public/assets/decks/legacy-forest/cards/swords-08.webp",
+      "assetHash": "afe71d467e7cd2c0820fad84335170fa2b20b4ada67f6ed63041fe430758fb64",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "exact number of posts on each side, as some are cropped or merge with foliage"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-08)",
+        "risk-objects(blindfold,sword,path,water)",
+        "uncertain-details(1)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 36
+    },
+    {
+      "reviewId": "review-416",
+      "deckId": "legacy-moonlight",
+      "cardId": "wands-08",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-416.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__wands-08.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/wands-08.webp",
+      "assetHash": "e4a293adb0d5b1f8503db7dfa988e2f18f0a4dcab22d41ad6a03343b167f3277",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of streaking wands (several overlap and fade at the edges)",
+        "whether the small pale dots in the sky are stars or paint texture",
+        "whether the figure's staff is one of the flying wands or a separate object"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(wands-08)",
+        "risk-objects(moon,wing,wand,staff,water,river)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 59
+    },
+    {
+      "reviewId": "review-417",
+      "deckId": "legacy-celestial",
+      "cardId": "swords-08",
+      "blindImage": "qa/visual-semantics/blind-review/wave-4/review-417.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-celestial__swords-08.png",
+      "sourceAsset": "public/assets/decks/legacy-celestial/cards/swords-08.webp",
+      "assetHash": "b5fee14ab02d8eb581ab0eb6e92a078ab0587f1cc044d2aeb43300710a27fd25",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of swords visible, as several are cropped or overlap the frame edge",
+        "whether the small discs in the sky are moons or distant planets",
+        "whether the pale band across the eyes is a cloth or a veil"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-08)",
+        "risk-objects(moon,sword,door,path,water)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 13
+    }
+  ]
+}

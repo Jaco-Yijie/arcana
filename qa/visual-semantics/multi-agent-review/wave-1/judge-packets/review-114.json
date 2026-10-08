@@ -1,0 +1,222 @@
+{
+  "reviewId": "review-114",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-114.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: corrected vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-114.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "four upright swords on the right",
+          "observed": "three upright swords on the right",
+          "evidence": "On the right side only three hilts/pommels are individually resolvable, at roughly x=418, x=455 and x=492, each with its own blade running down to the paving; the space between the outermost of these and the frame border holds no further hilt. The left row does hold four, so the total visible is seven, not eight.",
+          "confidence": "medium"
+        },
+        {
+          "field": "scene",
+          "existing": "one hand raised to a band of cloth across the eyes",
+          "observed": "both hands raised to the band of cloth across the eyes",
+          "evidence": "Two separate raised limbs are silhouetted against the background glow, converging on the head from either side and forming a triangle around it; both hands are at the level of the pale band.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "four upright swords on the right",
+            "with": "three upright swords on the right"
+          },
+          {
+            "find": "one hand raised to a band of cloth across the eyes",
+            "with": "both hands raised to a band of cloth across the eyes"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-114",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, slightly left of the vertical midline, standing at the near end of a paved path",
+              "posture": "standing / mid-stride, barefoot, body turned mostly away from the viewer with the head in near profile to the right; both arms raised to head height",
+              "gaze": "cannot be determined — a light-colored band or cloth is wrapped across the eyes, and the hands are at that band",
+              "heldObjects": [
+                "a pale cloth band at the eyes, held by both raised hands — either being tied on or pulled off"
+              ],
+              "appearance": "long dark hair; a long dark ragged layered robe or shawl with a frayed, shredded hem reaching mid-calf; bare feet and ankles visible below"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade (sword) planted point-down in the ground, left group",
+              "count": 4,
+              "countConfidence": "medium",
+              "where": "left third of the frame, standing upright in a receding row; hilts at roughly even spacing, the leftmost near the frame edge"
+            },
+            {
+              "type": "blade (sword) planted point-down in the ground, right group",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "right third of the frame, standing upright in a receding row"
+            },
+            {
+              "type": "blade (sword), total visible",
+              "count": 7,
+              "countConfidence": "medium",
+              "where": "flanking the central path, four on the left and three on the right"
+            },
+            {
+              "type": "cast shadow from the blades",
+              "count": null,
+              "countConfidence": "low",
+              "where": "long shadows stretching from each blade toward the bottom of the frame; they overlap and cannot be individually matched to blades"
+            }
+          ],
+          "environment": [
+            "a narrow corridor formed by tall dark rough walls or rock faces on both sides",
+            "a wet cobbled/flagstone path running from the bottom of the frame into the distance, reflecting light",
+            "dark overcast sky visible in a narrow slot between the walls at the top",
+            "heavy overall darkness — most of the frame is near-black",
+            "a thin painted rule border at the left and right edges"
+          ],
+          "lightSources": [
+            "a single pale glow low in the center background, at the far end of the corridor, silhouetting the figure and casting the blade shadows forward toward the viewer"
+          ],
+          "moonPhase": "uncertain — the background glow may be a moon behind cloud, but no disc edge is resolvable",
+          "spatialRelations": [
+            "the figure stands on the path between the two rows of blades, closer to the viewer than the light source",
+            "the blades are planted in the ground on both sides of the path, not held by anyone and not touching the figure",
+            "all blade shadows point toward the bottom of the frame, away from the background glow",
+            "the figure's raised hands are at the blindfold band, not at any blade"
+          ],
+          "foreground": [
+            "wet reflective paving",
+            "long converging shadows",
+            "the nearest blades on each side"
+          ],
+          "background": [
+            "pale glow at the corridor's end",
+            "dark walls",
+            "narrow strip of sky"
+          ]
+        },
+        "uncertainObservations": [
+          "blade counts are medium confidence — the scene is very dark, blades recede into shadow, and a further blade hidden beyond the last visible one on either side cannot be ruled out; the leftmost blade sits near the frame edge",
+          "whether the figure is tying the blindfold on or removing it cannot be determined",
+          "the light source at the corridor's end cannot be identified as a moon, an opening, or a distant fire",
+          "the side walls could be masonry, cliff, or dense hedge — the texture is not resolvable in the dark"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "four upright swords on the right",
+          "observed": "three upright blades are individually resolvable on the right side of the path; the left side does have four",
+          "evidence": "Re-opened and re-counted. On the right I can point at exactly three pommel-and-cross-guard units (nearest at the right frame edge, then two receding). The faint vertical darks between them resolve as cast shadows on the wall, not blades. The left row's four are clear, so this is a right-side-only discrepancy. I cannot rule out a fourth blade swallowed by the shadow, so I am not asserting a different total — only that four on the right is not supportable from the pixels.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "four upright swords on the right",
+            "with": "three upright swords resolvable on the right, with possibly more lost in shadow"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-114",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, walking away from the viewer along a path",
+              "posture": "standing/mid-stride, seen from behind, barefoot (one bare foot and ankle clearly visible), body slightly turned to its right; the right arm is raised with the hand at the side of the head, touching the band across the eyes",
+              "gaze": "not determinable — the head is turned away and the eyes are covered by a pale blindfold band",
+              "clothing": "long ragged, layered dark cloak or feathered/tattered garment reaching mid-calf; long dark hair",
+              "distinguishingFeatures": [
+                "a light-coloured blindfold band wrapped around the head at eye level, with a loose end hanging down"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword planted point-down in the ground, left side of the path",
+              "count": 4,
+              "countConfidence": "medium",
+              "where": "four upright blades in a receding row along the left of the path; nearest at the far left edge, then three progressively farther and smaller"
+            },
+            {
+              "type": "sword planted point-down in the ground, right side of the path",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "three upright blades in a receding row along the right of the path"
+            },
+            {
+              "type": "sword (total upright blades resolvable)",
+              "count": 7,
+              "countConfidence": "medium",
+              "where": "flanking the path on both sides, forming an avenue; counted individually, 4 left + 3 right"
+            },
+            {
+              "type": "long cast shadow",
+              "count": null,
+              "countConfidence": "low",
+              "where": "the swords throw long dark shadows across the paving toward the bottom of the frame; they merge and cannot be matched one-to-one to the blades"
+            }
+          ],
+          "environment": [
+            "a dark rocky gorge or corridor of stone walls closing in on both sides",
+            "a wet flagstone/cobbled path running from the foreground to a lit opening in the distance",
+            "near-monochrome dark brown-black palette with a single pale light at the end of the path",
+            "a thin ragged lighter border strip at the left and right edges of the artwork"
+          ],
+          "lightSources": [
+            "a pale glow at the far end of the path, center of the frame, silhouetting the figure and reflecting in wet patches on the path"
+          ],
+          "moonPhase": "not determinable — the distant light is a diffuse glow, not a resolvable disc",
+          "spatialRelations": [
+            "the figure walks between the two rows of planted swords, toward the light",
+            "the swords stand outside the figure's path, none blocking it",
+            "the swords' shadows point back toward the viewer, away from the light source",
+            "the rock walls converge toward the lit gap, framing the figure"
+          ],
+          "foreground": [
+            "wet dark paving and the long sword shadows",
+            "the two nearest planted swords at far left and far right"
+          ],
+          "background": [
+            "converging rock walls",
+            "the pale lit gap at the end of the path"
+          ]
+        },
+        "uncertainObservations": [
+          "additional swords may stand farther back and be lost in the darkness; 7 is what can be individually resolved, not necessarily the total painted",
+          "the ragged silhouette of the garment may be fabric strips or feathers — not determinable",
+          "whether the raised hand is lifting, adjusting or holding the blindfold cannot be told",
+          "the surfaces on both sides could be natural rock or ruined masonry"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

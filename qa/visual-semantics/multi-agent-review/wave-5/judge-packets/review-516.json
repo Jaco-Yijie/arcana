@@ -1,0 +1,205 @@
+{
+  "reviewId": "review-516",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-516.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-516.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "thin chains draped between the sword hilts",
+          "observed": "I recorded ornate decorated hilts and pommels on the fanned swords, but no chain spanning between them. I could not resolve whether the fine pale linework around the hilt cluster is chain, ornament, or mist.",
+          "evidence": "The hilt cluster in the upper-left/centre of the frame, where the blades overlap; at this resolution the fine silver strands there read ambiguously against the misted background.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-516",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, slightly viewer-left of center, lying in the lower-middle of the frame",
+              "posture": "lying face-down / prone, body horizontal across the frame, head toward viewer-right, back arched upward, partly submerged in shallow water",
+              "gaze": "head turned downward and slightly toward viewer, face mostly hidden behind long pale hair; eyes not visible",
+              "heldObjects": [],
+              "clothing": "pale white/silver translucent gauzy robe or veil draped over the back and trailing into the water; long silver-white hair; a small wreath or cluster of tiny pale flowers in the hair near the crown"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 10,
+              "countConfidence": "medium",
+              "where": "driven into the figure's back and the ground/water immediately around it, upper-left to center of frame",
+              "orientation": "blades angled upward and outward, hilts and pommels up, points down into the body and ground; fan spread roughly 60 degrees",
+              "arrangement": "fan / clustered row, blades crossing and overlapping"
+            },
+            {
+              "type": "flowering shrub",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower-left corner and scattered along the right bank",
+              "orientation": "upright growth",
+              "arrangement": "scattered clumps"
+            },
+            {
+              "type": "bare arm",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center-lower, extended from the figure toward viewer-right, hand resting in the water",
+              "orientation": "roughly horizontal, palm down",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "shallow pale water / flooded shoreline occupying the lower half of the frame",
+            "open sea or wide lake receding to a horizon at mid-right",
+            "low hills or headlands on the left edge and a small island or wooded spit at right",
+            "banked clouds filling the upper half of the sky",
+            "small pale blossoms and leafy sprigs in the foreground water"
+          ],
+          "lightSources": [
+            "low sun on the horizon at right, casting a bright vertical glitter path across the water",
+            "crescent moon in the upper-left sky",
+            "diffuse glow through the cloud bank"
+          ],
+          "moonPhase": "crescent",
+          "spatialRelations": [
+            "the swords rise above and behind the prone figure",
+            "the sun's reflection path lies to the viewer-right of the figure's head",
+            "the crescent moon is diagonally opposite the sun, upper-left vs mid-right",
+            "the figure's outstretched arm points toward the lower-right water",
+            "flowering plants in the lower-left corner are nearer the viewer than the figure"
+          ],
+          "foreground": [
+            "rippled shallow water with reflections",
+            "pale rose-like blossoms and foliage at lower left",
+            "a trailing ribbon of translucent fabric at bottom-left",
+            "small flower sprigs at bottom-right"
+          ],
+          "background": [
+            "cloud bank and pale sky",
+            "sea horizon with sun glow",
+            "distant low land masses on both sides"
+          ]
+        },
+        "uncertainObservations": [
+          "Exact sword count is uncertain; blades overlap heavily near the hilts. My count landed on 10 but 9 is possible.",
+          "Cannot tell whether the swords pass through the figure's body or are planted in the ground behind it.",
+          "Cannot determine whether the figure is clothed in a robe or wrapped in a veil/net — the fabric is translucent and merges with the water.",
+          "The pale shapes at the right edge may be a wooded island or low cloud; I cannot resolve them."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "thin chains draped between the sword hilts",
+          "observed": "盲观察时在剑柄之间没有记录到任何链条；当时逐一记下的物件只有插在背上的 10 把剑、水边的花丛和水面上的半透明飘带。剑柄之间是否真有细链，从我记下的内容无法佐证",
+          "evidence": "盲观察记录的 objects 列表只含 sword / flower / ribbon 三类；对剑群的描述是「呈扇形／栅栏状散开，高低参差，中央一把最高」，未提及任何连接剑柄的链状物，uncertainObservations 里也没有相关条目",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-516",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "画面中下部，横跨 center 到 viewer-right，身体轴线大致水平",
+              "posture": "俯卧（趴伏）在浅水／滩地上，背部朝上拱起，头在 viewer-right、下身在 viewer-left",
+              "gaze": "脸朝下埋在地面／水里，完全看不见面部，无法判断视线",
+              "heldObjects": [
+                "手里没有任何东西；一条裸露的手臂从身体下方向 viewer-right 前方伸出，手掌张开、手指平摊贴在水面上"
+              ],
+              "clothing": "极长的浅金／银白色长发铺散开，发间别着一串白色小花；身穿白色半透明薄纱长裙／长袍，背部被剑贯穿处的布料堆叠起伏"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 10,
+              "countConfidence": "high",
+              "where": "全部插在俯卧人物的背部，从画面左中部一直排到中右部",
+              "orientation": "剑尖向下刺入背部，剑柄朝上；各剑向左右不同角度倾斜",
+              "arrangement": "呈扇形／栅栏状散开，高低参差，中央一把最高"
+            },
+            {
+              "type": "flower",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面 viewer-left 下角与 viewer-right 中部的水边",
+              "orientation": "花头朝上",
+              "arrangement": "成丛散布的白色与淡粉色花"
+            },
+            {
+              "type": "ribbon",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面 viewer-left 下部，从人物身下延伸到画面下缘",
+              "orientation": "柔软地蜿蜒铺展",
+              "arrangement": "若干条半透明飘带散落在水面上"
+            }
+          ],
+          "environment": [
+            "大片平静的浅水／滩涂，水面有细碎的横向波纹",
+            "画面 viewer-right 远处是水天相接的地平线，水面上有一条明亮的光柱倒影",
+            "画面 viewer-left 远处是雾中的低矮山影／岸线",
+            "水边有低矮的草叶与小灌木",
+            "天空占画面上三分之一强，布满柔和的层云"
+          ],
+          "lightSources": [
+            "画面 viewer-right 水天线附近的一团低位暖白色光（贴近地平线，在水上拉出长长的光带）",
+            "画面上方 viewer-left 的新月（冷白色）"
+          ],
+          "moonPhase": "crescent",
+          "spatialRelations": [
+            "新月在画面 viewer-left 上角，位于剑群的左上方",
+            "地平线上的光源在画面 viewer-right，与新月分处画面两侧",
+            "10 把剑全部位于人物背部的正上方",
+            "人物的头在 viewer-right、脚／下身在 viewer-left，伸出的手臂指向 viewer-right 下方",
+            "花丛在人物的 viewer-left 下方与 viewer-right 侧方，都比人物更靠近画面边缘",
+            "人物整体躺在水面高度，所有剑柄都高于人物身体"
+          ],
+          "foreground": [
+            "viewer-left 下角的花丛与飘带",
+            "人物伸出的手臂与前方的水面",
+            "画面下缘的浅水与草叶"
+          ],
+          "background": [
+            "新月与层云",
+            "水天线与地平线上的光",
+            "雾中的远岸山影"
+          ]
+        },
+        "uncertainObservations": [
+          "地平线上的那团光是日出还是日落无法判断（只看得出位置低、颜色暖、在水上有长倒影）",
+          "人物性别从画面上判断不出（面部完全不可见，只有长发与长裙）",
+          "人物是否还活着／只是倒伏，从画面上无法判断，只能说是俯卧不动",
+          "剑尖是否真的穿入身体、还是只是插在身体后方的地里，从角度上分不清",
+          "花丛与飘带的具体数量数不清",
+          "人物身下是浅水还是湿润滩地，分辨不出"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

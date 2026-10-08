@@ -1,0 +1,439 @@
+{
+  "reviewId": "review-515",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-515.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: uncertain vs pass vs corrected"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "uncertain": 1,
+    "pass": 1,
+    "corrected": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-515.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "stone table with a second paper and a small red seal",
+          "observed": "I recorded one or two small dark objects on the parapet between the figure and the armillary sphere, logged as count null / countConfidence low because I could not separate or identify them. I did not resolve a second sheet of paper, and I did not resolve any red seal.",
+          "evidence": "The parapet surface to the viewer-right of the figure, between the held letter and the armillary sphere: at this scale and in this light the items there read only as small dark masses. The one sheet I could resolve is the lit one held in the figure's hands.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-515",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "lower-left of centre, seated at a stone parapet/table in the bottom third of the image",
+              "posture": "seated, body in three-quarter rear view turned toward viewer-right, shoulders hunched forward, head bowed",
+              "gaze": "head turned down and to the viewer-right, looking at the sheet of paper held in front of the chest; face seen in near-profile/rear three-quarter, mostly in shadow",
+              "heldObjects": [
+                "a pale sheet of paper or letter with handwritten lines, held in both hands at chest height, tilted up toward the face"
+              ],
+              "clothing": "heavy dark hooded cloak/robe with a gold-thread embroidered pattern of dotted lines and small constellation-like motifs; hood fallen back off the head; dark curly shoulder-length hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "upper half of the image, in the night sky, driven through a large translucent crystalline heart shape",
+              "orientation": "all three point-down into the heart: the centre one vertical with tip down; the viewer-left one angled down-and-right; the viewer-right one angled down-and-left",
+              "arrangement": "three in a symmetric fan/V converging into the heart, bright flare of light where each blade enters"
+            },
+            {
+              "type": "heart shape",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "centre of the upper half of the image, in the sky",
+              "orientation": "upright heart, lobes at the top, point at the bottom",
+              "arrangement": "single, rendered as a faceted translucent crystal / constellation lattice"
+            },
+            {
+              "type": "moon",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one in the upper-left sky, a second smaller one at mid-left below it",
+              "orientation": "crescent horns facing viewer-right on the upper one",
+              "arrangement": "two separate discs at different sizes"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower-right, hanging or standing at the edge of the stone structure",
+              "orientation": "upright",
+              "arrangement": "single, warm glowing"
+            },
+            {
+              "type": "armillary sphere / ringed instrument",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right of centre on the parapet surface, to the viewer-right of the figure",
+              "orientation": "upright on a stand",
+              "arrangement": "single"
+            },
+            {
+              "type": "small vessel on the parapet (inkwell or bottle)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "on the parapet surface between the figure and the armillary sphere",
+              "orientation": "upright",
+              "arrangement": "one or two small dark objects, too small and dark to separate"
+            },
+            {
+              "type": "geometric circle/arc overlay",
+              "count": null,
+              "countConfidence": "low",
+              "where": "across the whole sky, concentric thin gold dotted arcs and radiating lines",
+              "orientation": "concentric around the heart",
+              "arrangement": "overlapping nested circles; too many and too faint to count"
+            }
+          ],
+          "environment": [
+            "night sky dense with stars, nebula-like clouds, and fine diagonal streaks reading as falling rain",
+            "ruined classical colonnade / arched stone structure at the viewer-right edge, mid-height",
+            "flat stone parapet or table top in the lower third that the figure sits at",
+            "a wide calm body of water (lake) in the mid-ground with a light reflection running across it",
+            "dark conifer trees along the far shore on both sides",
+            "break in the clouds above the far shore with pale light behind it",
+            "thin ruled border frame around the image"
+          ],
+          "lightSources": [
+            "bright flares at the three points where the sword blades enter the heart",
+            "the two moons in the viewer-left sky",
+            "a warm lantern at lower-right",
+            "a pale glow in the clouds above the horizon, reflected as a streak on the water"
+          ],
+          "moonPhase": "crescent",
+          "spatialRelations": [
+            "the heart with the three swords is directly above and slightly viewer-right of the seated figure",
+            "the centre sword's tip points straight down toward the figure's head",
+            "the lake and far shore lie between the figure and the sky",
+            "the colonnade is to the viewer-right and behind the parapet",
+            "the lantern is below and viewer-right of the armillary sphere, at the base of the parapet",
+            "the upper crescent moon is at the top-left, the smaller second disc lower and still at the left edge"
+          ],
+          "foreground": [
+            "the seated cloaked figure",
+            "parapet top with the sheet of paper, the armillary sphere and small vessels",
+            "lantern at lower-right"
+          ],
+          "background": [
+            "starfield with nebula and rain streaks",
+            "crystalline heart pierced by three swords",
+            "concentric gold astronomical arcs",
+            "lake, far treeline, cloud break",
+            "ruined arcade at viewer-right"
+          ]
+        },
+        "uncertainObservations": [
+          "The second, smaller disc at mid-left may be a moon or a planet; I cannot tell which.",
+          "The upper-left moon's phase reads as a crescent but the unlit limb is faintly visible, so it could also be read as a thin crescent on an earth-lit disc.",
+          "I cannot read the writing on the sheet of paper; only ruled lines of script are visible.",
+          "The small dark items on the parapet beside the sphere are unresolvable — possibly an inkwell, a bottle, or a stack.",
+          "Whether the heart shape is meant as solid crystal or as a constellation outline is not resolvable; it reads as both.",
+          "I cannot count the concentric sky arcs.",
+          "The figure's face is almost entirely in shadow; I cannot describe features or expression."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-515",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "lower-left of center, seated at a stone parapet or desk in the bottom third of the frame",
+              "posture": "seated, leaning slightly forward, back three-quarters to the viewer, body turned toward viewer-right",
+              "gaze": "head bowed, face in lost profile, looking down at a sheet of paper held in front",
+              "heldObjects": [
+                "a single sheet of paper or letter held in both hands at chest height, roughly vertical, text side facing the figure"
+              ],
+              "clothing": "dark hooded cloak or robe with a fine glinting pattern of dots and lines across it, hood down on the shoulders, dark curly hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "upper half of the frame, in the sky above the figure",
+              "orientation": "all three points downward into a heart shape; one vertical from top-center, one angled in from upper-left, one angled in from upper-right",
+              "arrangement": "symmetrical trio converging on one point, forming a wide V with a vertical through it"
+            },
+            {
+              "type": "heart (crystalline / faceted, star-filled)",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-center of the frame, filling the middle of the sky",
+              "orientation": "upright, lobes at top, point at the bottom",
+              "arrangement": "single"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower-right, hanging or standing below the parapet edge",
+              "orientation": "upright",
+              "arrangement": "single"
+            },
+            {
+              "type": "armillary sphere / ringed astronomical instrument",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right of center, standing on the parapet beside the figure",
+              "orientation": "upright, rings tilted",
+              "arrangement": "single"
+            },
+            {
+              "type": "inkwell or small vessel",
+              "count": null,
+              "countConfidence": "low",
+              "where": "on the parapet top between the figure and the armillary sphere",
+              "orientation": "upright",
+              "arrangement": "one or two small objects grouped"
+            },
+            {
+              "type": "moon",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one in the upper-left sky, a second smaller one at mid-left below it",
+              "orientation": "discs",
+              "arrangement": "two separate discs on the left side"
+            },
+            {
+              "type": "concentric circle / orbital line overlay",
+              "count": null,
+              "countConfidence": "low",
+              "where": "drawn faintly across the whole sky, centred on the heart",
+              "orientation": "concentric rings and radiating lines",
+              "arrangement": "layered diagram over the sky"
+            }
+          ],
+          "environment": [
+            "night sky dense with stars and dark cloud banks",
+            "fine diagonal streaks across the whole image reading as falling rain",
+            "a ruined stone arcade with columns and an arch at the right edge",
+            "a flat stone terrace or parapet in the lower third",
+            "a lake or wide river on the horizon at center-right with a light reflection on it",
+            "a line of dark conifers along both the left and right of the far shore",
+            "a thin printed border line around the image"
+          ],
+          "lightSources": [
+            "glowing white flares where each sword blade enters the heart",
+            "the two moons at left",
+            "a warm lantern flame at lower-right",
+            "a break of pale light in the clouds low at center, reflected on the water",
+            "scattered starlight"
+          ],
+          "moonPhase": "gibbous — the upper-left moon reads as a large gibbous disc with a shaded limb; a second, smaller disc at mid-left is harder to read and looks crescent-to-gibbous",
+          "spatialRelations": [
+            "the heart is directly above and slightly viewer-right of the seated figure",
+            "the vertical sword descends from the top edge into the top notch of the heart",
+            "the left and right swords angle inward and down into the heart's upper lobes",
+            "the ruined arcade is to the viewer-right of and behind the figure",
+            "the lantern is below and to the viewer-right of the figure, at the parapet's base",
+            "the lake horizon runs behind the figure at about shoulder height",
+            "the two moons are on the opposite side of the frame from the ruined arcade"
+          ],
+          "foreground": [
+            "the stone parapet top with the paper, small vessel and armillary sphere",
+            "the seated cloaked figure",
+            "the lit lantern at lower-right"
+          ],
+          "background": [
+            "star-filled night sky with the crystalline heart and three swords",
+            "cloud banks and the overlaid circular diagram",
+            "the lake, far shore and conifer line",
+            "the ruined stone arcade at right"
+          ]
+        },
+        "uncertainObservations": [
+          "Cannot read any text on the held sheet of paper.",
+          "Cannot confirm the second, smaller disc at mid-left is a moon rather than a planet or a glowing orb.",
+          "The phase of the upper-left moon is hard to judge; heavy cloud crosses it.",
+          "Cannot tell whether the ringed instrument is an armillary sphere, an orrery, or a decorative sculpture.",
+          "Cannot count the small objects on the parapet beside the figure.",
+          "Cannot tell whether the diagonal streaks are rain, snow, or an applied texture."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "constellation lines and gold star points",
+          "observed": "There are TWO moons in this sky and keyObjects lists neither. A larger one sits at the upper-left corner and a smaller one lower down at the middle left, just above and left of the figure's head. Both are crescents lit along the LOWER-RIGHT limb with the unlit remainder of the disc faintly visible. The smaller disc is a genuine second moon, not a lens flare: it shows the same crescent limb and the same faint full-disc outline as the larger one.",
+          "evidence": "Larger moon roughly x=60-230 / y=60-180; smaller moon roughly x=80-260 / y=440-560, in the 560x933 image. Both enlarged 5x and brightened show a bright sickle on the lower-right edge of a dim circular disc — a flare would have no dark limb and no disc edge.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "constellation lines and gold star points",
+            "with": "constellation lines and gold star points\n  - two crescent moons, a larger one at the upper left and a smaller one at the mid left, both lit along the lower-right limb"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-515",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "lower-left quadrant, seated on the edge of a dark stone plinth/parapet above water",
+              "posture": "seated, knees to the viewer-right, body in three-quarter view seen from BEHIND and slightly left; shoulders hunched forward over what he is reading",
+              "gaze": "head in sharp profile facing the VIEWER-RIGHT and tilted DOWN; eyes on the sheet of paper held up in front of him. He does not look up at the sky and does not look back over his shoulder",
+              "heldObjects": [
+                "a single sheet of handwritten paper / letter held up at chest height in front of him; the visible hand (his right, on the viewer-right side) grips the sheet by its right edge, the other hand is behind the page"
+              ],
+              "clothing": "a long dark blue-black hooded robe/cloak, the hood lying empty on his back; the whole garment is embroidered with fine gold constellation lines joining small gold star-points; dark curly hair, bare head"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "all three in the upper half of the frame, in the sky, arranged around a large crystalline heart",
+              "orientation": "ALL THREE point DOWN/INWARD into the heart, hilts outward: the central one is exactly VERTICAL, point straight down into the top cleft of the heart; the viewer-LEFT one runs diagonally from the upper-left down to the lower-right; the viewer-RIGHT one runs diagonally from the upper-right down to the lower-left",
+              "arrangement": "a symmetrical fan/trident around the central axis. They converge on the heart but do NOT cross one another anywhere in the picture"
+            },
+            {
+              "type": "crystalline heart",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-centre of the frame, filling the middle of the sky",
+              "orientation": "upright, point downward, seen face-on",
+              "arrangement": "single, faceted like cut glass, its facets drawn as a net of gold constellation lines with star-points at the vertices"
+            },
+            {
+              "type": "moon",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one large moon at the UPPER-LEFT corner of the sky; a second, smaller moon lower down at the MIDDLE-LEFT, just above and left of the seated figure's head",
+              "orientation": "both discs lit along the LOWER-RIGHT limb",
+              "arrangement": "two separate moons in the same sky, the upper one roughly twice the apparent diameter of the lower one"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower-right, standing against the front face of the stone plinth below the table top",
+              "orientation": "upright, hanging/standing",
+              "arrangement": "single glazed metal lantern with a lit flame inside — the only warm light in the picture"
+            },
+            {
+              "type": "armillary sphere",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the flat stone table top to the viewer-right of the figure",
+              "orientation": "upright on a footed base",
+              "arrangement": "single gilded ringed sphere"
+            },
+            {
+              "type": "sealed letter / document",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "lying flat on the stone table top between the figure and the armillary sphere",
+              "orientation": "flat, face up",
+              "arrangement": "a single pale sheet bearing a red wax seal"
+            },
+            {
+              "type": "small upright cross-shaped ornament",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the stone table top, between the sealed letter and the armillary sphere",
+              "orientation": "upright on a small base",
+              "arrangement": "single; it reads as either a miniature sword stood point-down or a small cross/finial"
+            },
+            {
+              "type": "concentric astrological circle / orbit line",
+              "count": null,
+              "countConfidence": "low",
+              "where": "drawn in fine gold across the whole sky, centred roughly on the heart, with smaller ring clusters at the upper-right and right edges",
+              "orientation": "flat rings in the picture plane",
+              "arrangement": "many overlapping circles and arcs; too many and too faint to count"
+            },
+            {
+              "type": "ruined colonnade / arcade",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right edge of the frame, standing at the water's edge behind the table",
+              "orientation": "upright, receding to the right",
+              "arrangement": "one structure of fluted columns carrying a round arch and a broken entablature"
+            }
+          ],
+          "environment": [
+            "a broad still lake or flooded plain filling the middle distance behind the figure",
+            "a low range of mountains on the far horizon",
+            "a line of dark conifers along the far shore at both left and right",
+            "a polished dark stone plinth/table and parapet occupying the lower-right",
+            "fine diagonal streaks like falling rain over the whole sky",
+            "a thin gold rule border inside a black frame around the picture"
+          ],
+          "lightSources": [
+            "the two crescent moons on the left side of the sky",
+            "three concentrated star-flares exactly where the three sword points enter the heart: one at the heart's top cleft (central sword) and one in each lobe (the two diagonals)",
+            "a bright break in the cloud low on the horizon above the lake, centre-right, laying a specular path across the water",
+            "the lit lantern at the lower-right",
+            "scattered starlight and the glowing gold constellation lines"
+          ],
+          "moonPhase": "crescent",
+          "spatialRelations": [
+            "the heart with its three swords hangs in the sky directly ABOVE and slightly right of the seated figure",
+            "the central sword descends on the picture's vertical axis; the two diagonals come in symmetrically from the upper-left and upper-right",
+            "the larger moon is at the upper-left, well above and left of the heart; the smaller moon is lower and nearer, just left of and above the figure's head",
+            "the stone table with the armillary sphere, the sealed letter and the ornament is to the figure's viewer-RIGHT",
+            "the lantern sits below the table top at the lower-right, nearer the viewer",
+            "the ruined colonnade stands behind the table at the right edge",
+            "the lake lies between the figure and the distant mountains"
+          ],
+          "foreground": [
+            "the seated figure and his embroidered cloak",
+            "the dark stone plinth and table top with its objects",
+            "the lit lantern at the lower-right"
+          ],
+          "background": [
+            "the crystalline heart pierced by three swords",
+            "the two crescent moons and the gold orbit circles",
+            "the lake, far shore, conifers and mountains",
+            "the ruined colonnade at the right"
+          ]
+        },
+        "uncertainObservations": [
+          "Both moons are crescents lit on the lower-right limb with the unlit remainder faintly visible; the smaller one is dim enough that I checked it twice, but I am confident there really are TWO separate moons in this sky.",
+          "The small upright object on the table between the letter and the armillary sphere may be a miniature sword stood point-down, a cross, or a candlestick; I cannot tell.",
+          "I cannot read any of the writing on the held letter.",
+          "The central sword's blade is partly lost in the glare where it enters the heart, so I cannot confirm whether its point emerges below.",
+          "I found no clearly drawn cast shadow anywhere in this card, so I report no shadow direction.",
+          "The number of orbit circles and stars is uncountable and I did not attempt it."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+[
+ {
+  "reviewId": "review-112",
+  "verdict": "pass",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-110",
+  "verdict": "pass",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-106",
+  "verdict": "pass",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-116",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "armillary sphere on a stand at the right",
+    "observed": "a small circular spoked object resting on the ground at the right, between the figure and the water; too small and dark to resolve as a ringed sphere on a stand rather than a flat dial or wheel",
+    "evidence": "At the right, on the ground near the waterline, there is one small circle with radial spokes. Its position matches, but no vertical stand, no nested rings and no three-dimensional armature are resolvable at that scale.",
+    "confidence": "medium"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the armillary sphere stands at the lower right, between the figure and the water",
+    "observed": "a small circular instrument lies on the ground at the lower right, between the figure and the water",
+    "evidence": "Same object as above: the placement is right, the identification as an armillary sphere on a stand is not supported by what is visible.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "stack of books beside the astrolabe",
+    "observed": "a group of pale stacked flat rectangular slabs below and right of the large engraved disc at the left; whether these are books or stone blocks/steps cannot be determined",
+    "evidence": "The forms are layered flat rectangles in deep shadow with no visible spines, covers, page edges or bindings.",
+    "confidence": "medium"
+   },
+   {
+    "field": "model self-reported uncertainty",
+    "existing": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere",
+    "observed": "the object at the upper right is a large round sphere with mottled surface markings, reading full or gibbous; it is definitely not a crescent, though the exact phase cannot be pinned down because its left limb blends into the dark sky",
+    "evidence": "A complete circular disc with visible cratering/mottling is present; no crescent horns or dark-limb cut are visible. It is also not small relative to the frame.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "armillary sphere on a stand at the right",
+     "with": "small circular spoked instrument on the ground at the right (dial or ring form; not resolvable)"
+    },
+    {
+     "find": "the armillary sphere stands at the lower right, between the figure and the water",
+     "with": "a small circular instrument lies on the ground at the lower right, between the figure and the water"
+    },
+    {
+     "find": "stack of books beside the astrolabe",
+     "with": "stacked flat rectangular slabs beside the astrolabe (books or stone steps; not resolvable)"
+    },
+    {
+     "find": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere",
+     "with": "the exact phase of the large mottled sphere at upper right; it reads full or gibbous, not a crescent"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-104",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "six upright swords set along the boat's rim",
+    "observed": "several upright blades in two clusters inside the hull; I can point at seven candidate blades (four to the left of the standing figure, three to the right of the hooded figure) but could not establish a firm count",
+    "evidence": "The scene is extremely low-key. Four pale vertical shafts with crossguard-like tops are visible on the left and three on the right, but the outermost of each cluster overlaps the standing figure's ragged coat and the hull edge, so six and seven are both live readings. My blind pass recorded this count as not establishable, so this is flagged as unsupported rather than as a confirmed different number.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "six upright swords set along the boat's rim",
+     "with": "several upright swords (six or seven resolvable) set along the boat's rim"
+    },
+    {
+     "find": "exact number of swords resolvable at the boat's far rim",
+     "with": "exact number of swords; six or seven are resolvable across the two clusters and the outermost overlap the figures and hull edge"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-108",
+  "verdict": "pass",
+  "reviewer": "reviewer-e"
+ }
+]

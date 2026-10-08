@@ -1,0 +1,164 @@
+[
+ {
+  "reviewId": "review-103",
+  "verdict": "pass",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-115",
+  "verdict": "pass",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-114",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "four upright swords on the right",
+    "observed": "three upright swords on the right",
+    "evidence": "On the right side only three hilts/pommels are individually resolvable, at roughly x=418, x=455 and x=492, each with its own blade running down to the paving; the space between the outermost of these and the frame border holds no further hilt. The left row does hold four, so the total visible is seven, not eight.",
+    "confidence": "medium"
+   },
+   {
+    "field": "scene",
+    "existing": "one hand raised to a band of cloth across the eyes",
+    "observed": "both hands raised to the band of cloth across the eyes",
+    "evidence": "Two separate raised limbs are silhouetted against the background glow, converging on the head from either side and forming a triangle around it; both hands are at the level of the pale band.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "four upright swords on the right",
+     "with": "three upright swords on the right"
+    },
+    {
+     "find": "one hand raised to a band of cloth across the eyes",
+     "with": "both hands raised to a band of cloth across the eyes"
+    }
+   ]
+  },
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-102",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "broken column at right",
+    "observed": "several standing columns plus a fragment of arched ruin at right",
+    "evidence": "The right edge holds a thick fluted column in the near ground, at least two further column shafts set back behind it, and a separate fragment of arch/entablature in the upper right corner. More than one column is plainly present, so a singular 'broken column' understates what is painted (I could confirm plurality but not an exact count).",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "broken column at right",
+     "with": "colonnaded ruin with several standing columns at right"
+    },
+    {
+     "find": "the broken column to the right",
+     "with": "the columned ruin to the right"
+    }
+   ]
+  },
+  "confirmedDetails": [
+   "ten upright swords: five resolvable hilts in the left arc and five in the right arc, each seated in its own socket block — the stated count of ten matches",
+   "both the spread dark star-marked cloth and the separate pale parchment sheet are present on the dais floor"
+  ],
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-101",
+  "verdict": "pass",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-113",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects / scene",
+    "existing": "a gibbous moon in the upper right sky",
+    "observed": "a crescent moon in the upper right sky",
+    "evidence": "The lit area of the disc is a band along the right and lower-right rim, and its inner terminator is concave toward that lit limb — the signature of a crescent. The shadowed portion covers clearly more than half the disc (the unlit remainder is faintly visible as a pale circle). A gibbous phase would show the lit region covering more than half with a convex terminator; that is not what is painted.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "the staff the woman leans on, hung with a small crescent pendant and a ring",
+    "observed": "the staff she leans on carries wrapped vine, leaves and fine beaded/chain strands; no pendant or ring is resolvable on it",
+    "evidence": "At the staff's upper section I can resolve the vine wrap, small pale flowers and hanging bead/chain strands, but no discrete pendant or ring shape. The asserted objects are not something the pixels support at this resolution — the packet's own uncertainty list also hedges this item.",
+    "confidence": "low"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "beneath a gibbous moon",
+     "with": "beneath a crescent moon"
+    },
+    {
+     "find": "a gibbous moon in the upper right sky",
+     "with": "a crescent moon in the upper right sky"
+    },
+    {
+     "find": "the staff the woman leans on, hung with a small crescent pendant and a ring",
+     "with": "the staff the woman leans on, wrapped with vine and small flowers and hung with fine beaded strands"
+    }
+   ]
+  },
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-105",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene / keyObjects / spatialRelations",
+    "existing": "large dark horned silhouette cast on the rear wall",
+    "observed": "a large dark silhouette on the rear wall whose form is not identifiable",
+    "evidence": "The shape reads as a broad dark mass rising from the centre of the wall and splitting into two upward limbs. That is equally consistent with a bare tree trunk and branches, a crack or stain, or a cast shadow; nothing in the pixels distinguishes horns from those. I recorded this as unresolvable, so 'horned' is asserted beyond what the image supports (the packet hedges only whether it is cast or painted, not what it depicts).",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "a carved five-pointed star on its front face",
+    "observed": "a carved star-shaped emblem on the block's front face, point count not determinable",
+    "evidence": "The emblem is incised into the block's front face at very low luminance. A star outline is visible but the individual points cannot be separated, so five versus six points is not establishable from the pixels.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a large dark horned silhouette looming on the wall behind them",
+     "with": "a large dark silhouette of indeterminate form looming on the wall behind them"
+    },
+    {
+     "find": "large dark horned silhouette cast on the rear wall",
+     "with": "large dark silhouette on the rear wall, form indeterminate (reads as horns or as a bare tree)"
+    },
+    {
+     "find": "the horned silhouette rises behind and above both figures",
+     "with": "the silhouette rises behind and above both figures"
+    },
+    {
+     "find": "a carved five-pointed star on its front face",
+     "with": "a carved star emblem on its front face, point count not resolvable"
+    }
+   ]
+  },
+  "confirmedDetails": [
+   "two figures, one either side of the central block, both barefoot and in ragged garments — matches",
+   "two chains, one per figure, both running to the top of the central block — matches",
+   "ring/hoop held overhead in both hands by the left figure — matches, and the packet's hedge on its identity is appropriate",
+   "arched opening set low in the left wall behind the left figure — matches"
+  ],
+  "reviewer": "reviewer-a"
+ }
+]

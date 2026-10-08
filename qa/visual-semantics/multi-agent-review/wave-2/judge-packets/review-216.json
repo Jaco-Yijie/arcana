@@ -1,0 +1,253 @@
+{
+  "reviewId": "review-216",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-216.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-216.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "small white birds in flight",
+          "observed": "one small pale bird in flight was individually resolvable; a plural count is not supportable",
+          "evidence": "Only a single bird shape can be resolved, in the upper-left among the flowering branches. Nothing else in the frame resolves as a second bird; the remaining pale marks read as petals/fragments. The existing text itself flags the bird count as uncertain, yet the keyObjects line asserts plural.",
+          "confidence": "medium"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the moon disc sits behind and above the figure's head, upper right of centre",
+          "observed": "the moon is a thin crescent, not a full disc; its position (behind and above the head, upper right) is correct",
+          "evidence": "The lunar body in the upper right is a clearly crescent-shaped sliver with the remainder of the circle unlit and lost in cloud. 'Disc' implies a round full moon that is not what is painted. Position and relation to the figure's head are accurate.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "small white birds in flight",
+            "with": "at least one small white bird in flight"
+          },
+          {
+            "find": "the moon disc sits behind and above the figure's head, upper right of centre",
+            "with": "a crescent moon sits behind and above the figure's head, upper right of centre"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-216",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, upper-middle of frame",
+              "posture": "standing / leaning forward, upper body inclined to the right, long pale gown, very long pale hair blowing left",
+              "gaze": "eyes closed or nearly closed, face angled downward toward the blade in her hands",
+              "heldObjects": [
+                "a single large sword, gripped with both hands around the hilt, blade vertical and point-down"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held vertically point-down, center of frame; blade descends until its tip rests on/near the stone ledge"
+            },
+            {
+              "type": "crown",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "resting on the stone ledge at center-right, at roughly mid-height of the sword blade; the blade passes down in front of / through it"
+            },
+            {
+              "type": "bird",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "small pale bird in flight, upper-left, among the flowering branches"
+            },
+            {
+              "type": "flowering branch",
+              "count": null,
+              "countConfidence": "low",
+              "where": "trailing down the entire left edge and lower-left corner, small pale five-petal blossoms"
+            }
+          ],
+          "environment": [
+            "stone ledge / parapet platform",
+            "pale blue-white sky with thick clouds",
+            "body of water with a far shoreline and low hills at right, below the ledge",
+            "mist rising from below the platform",
+            "faint pale architecture (columns/arch) behind the figure at left"
+          ],
+          "lightSources": [
+            "diffuse bright sky; brightest area around the moon at upper right",
+            "the sword blade itself reads as a bright white vertical highlight"
+          ],
+          "moonPhase": "crescent, thin, upper right of frame",
+          "spatialRelations": [
+            "the figure occupies the upper-left half; the sword she holds runs down the vertical center",
+            "the crown sits on the ledge to her lower right, level with the middle of the blade",
+            "water and distant shore fill the right-middle background, behind and below the ledge",
+            "flowering branches frame the left edge from top to bottom"
+          ],
+          "foreground": [
+            "stone ledge with carved/weathered blocks",
+            "flowering branches lower-left",
+            "mist"
+          ],
+          "background": [
+            "clouded sky",
+            "crescent moon",
+            "water and low distant shoreline"
+          ]
+        },
+        "uncertainObservations": [
+          "moon shape reads as a crescent but the cloud overlap makes the exact phase/orientation unreliable",
+          "cannot confirm whether the figure's eyes are fully closed or lowered",
+          "only one bird could be individually resolved; faint marks nearby may or may not be additional birds",
+          "the pale vertical shapes behind the figure at left may be architecture or may be cloud/light — not resolvable",
+          "whether the sword tip actually touches the ledge or stops short is obscured by mist"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the moon disc sits behind and above the figure's head, upper right of centre",
+          "observed": "only a thin bright crescent arc is visible at upper right; no full disc edge is resolvable",
+          "evidence": "The bright shape at upper right is a narrow curved arc whose remainder blends into the pale cloud field, so a full disc cannot be confirmed. The position given (behind and above the head, upper right) is correct.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "small white birds in flight",
+          "observed": "one small pale bird shape is resolvable, at upper left among the blossoming branches; no second bird can be individually resolved",
+          "evidence": "Plural is asserted where only a single pale bird-like shape can be picked out, and even that one is faint enough to be a petal cluster.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the moon disc sits behind and above the figure's head, upper right of centre",
+            "with": "a thin bright crescent sits behind and above the figure's head, upper right of centre"
+          },
+          {
+            "find": "small white birds in flight",
+            "with": "a small pale bird shape in flight at upper left"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-216",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, standing on a raised stone platform / ledge",
+              "posture": "standing, body angled to the viewer's right, head bowed and tilted down, long pale hair streaming out to the left; both hands wrapped around the grip of a large upright sword whose point rests on the platform in front of her",
+              "gaze": "downward, eyes appear closed or lowered",
+              "heldObjects": [
+                "the hilt of a large upright sword, held in both hands"
+              ],
+              "clothing": "long pale flowing gown with a translucent veil or ribbon trailing left and right",
+              "headwear": "small blossoms / a floral circlet in the hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center, point-down and vertical, held in both of the figure's hands, blade running from her hands to the platform surface"
+            },
+            {
+              "type": "crown",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "resting on the platform beside the sword's lower blade, an open circlet with tall leaf-like points and pale gems"
+            },
+            {
+              "type": "stone platform / ledge",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower center, a carved block with a moulded cornice the figure stands on"
+            },
+            {
+              "type": "crescent in the sky",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper right, a thin bright crescent arc amid the clouds"
+            },
+            {
+              "type": "bird",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "upper left, a small pale bird shape among the blossoming branches"
+            },
+            {
+              "type": "flowering branch",
+              "count": null,
+              "countConfidence": "low",
+              "where": "left edge top and lower-left foreground; sprays of small pale blossoms, individual branches not separable"
+            },
+            {
+              "type": "distant shoreline / land mass",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right middle ground beyond the water, faint pale ridges"
+            }
+          ],
+          "environment": [
+            "pale high-key sky filled with clouds",
+            "misty water or sea at right",
+            "stone architecture suggested behind the figure at left",
+            "flowering branches framing the left side"
+          ],
+          "lightSources": [
+            "diffuse overall brightness with no single hard source; the crescent at upper right and the sword blade are the brightest elements"
+          ],
+          "moonPhase": "uncertain — a thin crescent shape is visible at upper right but its edges blend into the clouds",
+          "spatialRelations": [
+            "the crown sits on the platform at the level of the sword's mid-blade, to the right of the figure's skirt",
+            "the figure stands at the left of the platform with the open water and sky filling the right half of the frame",
+            "the blossoming branches overhang from the upper-left corner and rise again in the lower-left corner",
+            "the crescent is high above and to the right of the sword tip"
+          ],
+          "foreground": [
+            "flowering branches lower left",
+            "the stone platform and its carved face"
+          ],
+          "background": [
+            "clouded sky",
+            "hazy water",
+            "faint pale distant land at right"
+          ]
+        },
+        "uncertainObservations": [
+          "the crescent's phase and whether it is a moon disc or a cloud break cannot be determined",
+          "whether the crown rests beside the blade or is threaded around it is ambiguous at this resolution",
+          "the pale shape at upper left reads as a bird but could be a petal cluster",
+          "the figure's eyes may be closed or simply downcast",
+          "a vertical pale structure behind the figure at left may be a column or a break in the mist"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

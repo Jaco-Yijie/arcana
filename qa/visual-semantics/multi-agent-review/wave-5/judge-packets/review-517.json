@@ -1,0 +1,332 @@
+{
+  "reviewId": "review-517",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-517.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: corrected vs pass vs uncertain"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "corrected": 1,
+    "pass": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-517.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "visualTensions",
+          "existing": "the figure's body moves away while its head turns back",
+          "observed": "盲观察记录：人物大步行走，身体朝向 viewer-right，而头部也是侧面朝向 viewer-right、略低头看向前下方——头和身体同向，没有回头。（同批次的 review-512 与 review-510 我都明确记了『头向 viewer-left 回转，越过肩膀回望』，517 我记的恰恰相反。）",
+          "evidence": "人物头部呈朝 viewer-right 的侧影轮廓，下颌与鼻梁指向行进方向，颈部没有扭转；视线朝前下方的石板路",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the figure stands between the two pyramid structures, closer to the right one",
+          "observed": "盲观察记录：人物确实在两座尖顶建筑之间，但更靠近 viewer-left 那一座，站在它的前方",
+          "evidence": "人物身体与左侧尖顶建筑的门洞在画面上有重叠，右侧建筑明显更远、更小且位于其 viewer-right 后方",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the figure's body moves away while its head turns back",
+            "with": "the figure's whole body and head face the same way as it strides, eyes lowered to the path ahead"
+          },
+          {
+            "find": "the figure stands between the two pyramid structures, closer to the right one",
+            "with": "the figure stands between the two pyramid structures, closer to the left one"
+          },
+          {
+            "find": "a backward glance that keeps watch on what is left behind",
+            "with": "eyes kept on the path ahead rather than on what is left behind"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-517",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "画面正中偏左，站在石板路上",
+              "posture": "大步行走中，身体朝向 viewer-right，后腿（viewer-left）蹬直、前腿屈膝，重心前倾",
+              "gaze": "头部侧面朝向 viewer-right，略低头看向前下方",
+              "heldObjects": [
+                "双臂环抱一捆剑，抱在胸前偏 viewer-right 一侧；剑柄朝 viewer-right 上方翘起，剑身向 viewer-left 下方斜伸到身后"
+              ],
+              "clothing": "破烂的长斗篷/外袍，下摆与袖口撕成许多长条垂向 viewer-left；紧身长裤；赤脚；头发凌乱蓬松"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 4,
+              "countConfidence": "medium",
+              "where": "被人物抱在怀中",
+              "orientation": "斜向，剑柄与剑尖朝 viewer-right 上方，剑身向 viewer-left 下方",
+              "arrangement": "成束扎堆，剑柄呈小扇形错开"
+            },
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "一把在画面 viewer-left 的左侧建筑前，一把在画面 viewer-right 的右缘",
+              "orientation": "竖直插在地里，剑尖朝下、剑柄朝上",
+              "arrangement": "左右各一把，单独竖立"
+            },
+            {
+              "type": "pyramidal stone structure",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "一座在 viewer-left 中景，一座在 viewer-right 中景",
+              "orientation": "尖顶朝上的三角形立面，正面开一个深色门洞",
+              "arrangement": "左右分列，中间留出一条石板路"
+            },
+            {
+              "type": "stone paving",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面下半部，从中景蜿蜒到前景",
+              "orientation": "水平地面",
+              "arrangement": "方块石板拼成的曲折路面"
+            }
+          ],
+          "environment": [
+            "夜间户外，近乎单色的深褐黑调，颗粒质感强",
+            "两座石砌尖顶小建筑，各开一个黑洞洞的门",
+            "方石铺的路面从两座建筑之间向前景弯曲延伸",
+            "画面左上方有一道竖直的朦胧亮光，像透过雾气的光柱",
+            "画面右侧与四周是大片几乎全黑的暗部",
+            "画面左右边缘有细直的浅色边框线"
+          ],
+          "lightSources": [
+            "画面左上方的竖直朦胧亮斑/光柱（未见具体灯具或天体）",
+            "石板路面上的反光"
+          ],
+          "moonPhase": "not visible — 只有一片弥散的竖直光晕，看不到任何月轮轮廓",
+          "spatialRelations": [
+            "人物在两座尖顶建筑之间、略靠 viewer-left 的那座前方",
+            "左侧插地的剑在左建筑的 viewer-left 一侧",
+            "右侧插地的剑在右建筑的 viewer-right 一侧、画面右缘",
+            "抱着的剑束位于人物胸前，剑柄高过人物肩部",
+            "朦胧光柱在左建筑的正上方",
+            "石板路在人物脚下向 viewer-right 后方延伸，绕过右建筑"
+          ],
+          "foreground": [
+            "行走的人物与其飘散的破布条",
+            "近处的方块石板路面与人物的投影"
+          ],
+          "background": [
+            "两座尖顶石建筑及其门洞",
+            "左上方的朦胧光柱",
+            "右侧与上方的大片黑暗"
+          ]
+        },
+        "uncertainObservations": [
+          "抱在怀中的剑数：我能数出 4 个清楚的剑柄/剑首，但剑身重叠严重，不排除还有第 5 把被遮住；所以 4 这个数只能算中等把握",
+          "人物的面部几乎全在暗部，五官、表情、性别都看不出",
+          "右侧建筑再往 viewer-right 还有一团更暗的块状物，可能是第三座同类建筑，也可能只是岩壁，分辨不出",
+          "插在地上的两把剑是真的插进土里还是立在石座上，看不清",
+          "尖顶建筑表面的纹理像鳞片状石板，但具体材质分辨不出",
+          "左上方那道亮光是月光、雾中灯光还是单纯的高光处理，无法判断"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-517",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of the frame, slightly below the middle, striding across the foreground",
+              "posture": "striding / creeping forward toward the viewer-left in near profile, knees bent, weight low, torso leaning forward, both arms wrapped around a bundle clutched against the chest; barefoot",
+              "gaze": "head turned toward viewer-right and tipped down, looking back over the shoulder and down behind himself",
+              "heldObjects": [
+                "a bundle of sword hilts clutched against the chest with both arms, the blades angled down and back toward the viewer-left, hilts up at chest height"
+              ],
+              "clothing": "a ragged cloak or mantle shredded into long trailing strips that stream out behind to the viewer-left, worn over a dark tunic and loose trousers cut off at the calf; shaggy dark hair; bare feet"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword carried in the figure's arms",
+              "count": 3,
+              "countConfidence": "low",
+              "where": "bundled against the figure's chest at the center of the frame",
+              "orientation": "hilts up at chest height, blades sloping down and back toward the viewer-left",
+              "arrangement": "a loose bunch gripped together; the hilts overlap so I cannot separate them cleanly"
+            },
+            {
+              "type": "sword planted upright in the ground",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one at viewer-left beside the left pyramid structure, one at viewer-right beside the right pyramid structure",
+              "orientation": "both vertical, blades driven point-down into the ground, hilts and crossguards up",
+              "arrangement": "one standing alone on each side of the frame, symmetrically placed"
+            },
+            {
+              "type": "pyramid-shaped structure with a dark doorway",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one in the middle ground at viewer-left, one in the middle ground at viewer-right",
+              "orientation": "vertical, doorways facing the viewer",
+              "arrangement": "two separate steep-sided triangular structures, one on each side of the scene, with the paved ground running between them"
+            }
+          ],
+          "environment": [
+            "a cobbled / flagged paved ground covering the whole lower frame and curving away between the two structures",
+            "two steep pyramid or tent-shaped stone structures, each with a small dark doorway",
+            "a large flat dark wall or void filling the upper half of the frame",
+            "a soft pale wash of light on that back wall at upper viewer-left",
+            "cracked ragged edges along the left and right borders of the image"
+          ],
+          "lightSources": [
+            "a diffuse pale glow on the back wall at upper viewer-left; no lamp, flame or celestial body is visible, the source is out of frame",
+            "a secondary pale sheen on the paving to the viewer-right of the figure"
+          ],
+          "moonPhase": "not visible — no moon in frame; the upper half of the image is an unbroken dark surface with only a soft wall glow",
+          "spatialRelations": [
+            "the figure is in front of (nearer the viewer than) both pyramid structures, crossing the paved ground between them",
+            "the figure moves toward viewer-left while his head is turned back toward viewer-right",
+            "the two planted swords are behind the figure, one at the far viewer-left and one at the far viewer-right, roughly level with each other",
+            "the carried sword bundle is at the figure's chest, its blades trailing down and back to the viewer-left",
+            "the pale wall glow is above and behind the left pyramid",
+            "the figure's shadow falls down and to the viewer-left across the paving",
+            "the paved path recedes between the two pyramids toward the dark background"
+          ],
+          "foreground": [
+            "the cobbled paving and the figure's bare feet and shadow",
+            "the trailing shredded strips of the figure's cloak at viewer-left",
+            "the figure himself"
+          ],
+          "background": [
+            "the two pyramid structures with their dark doorways",
+            "the two planted swords",
+            "the dark upper wall and its pale glow"
+          ]
+        },
+        "uncertainObservations": [
+          "The number of swords in the figure's arms is my least certain reading. The hilts overlap and sit against a dark cloak; I can distinguish what look like three pommel/crossguard groups, but two or four is possible. Recorded as 3 with low confidence rather than guessed higher.",
+          "I cannot confirm that the carried objects are swords rather than staffs or spears; I can see crossguard-like forms at the top and tapering blades below, which is why I call them swords, but the blades fade into shadow.",
+          "The two planted uprights at left and right are clearly blade-shaped with crossguards, but I cannot see their points entering the ground on the left one.",
+          "The two structures read as stone pyramids, but they could equally be steep tents or roofed shelters; the surface texture is ambiguous.",
+          "The figure's head is turned back and down but I cannot read any facial features or confirm the direction of the eyes.",
+          "Whether there is anything inside the two dark doorways is not resolvable.",
+          "The pale glow on the back wall has no visible source; I cannot tell if it is moonlight, a fire out of frame, or a window."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "visualTensions",
+          "existing": "the figure's body moves away while its head turns back",
+          "observed": "I cannot find any evidence of a backward glance on this card. The head is drawn as a featureless rear silhouette: the back of the skull faces the viewer, rim-lit along its upper-left edge, with no face, eye, ear or profile visible on either side at any magnification. A head turned back would present a profile toward the viewer-left; none is drawn. In my blind pass I recorded the head as aligned with the body, i.e. facing the direction of travel, and noted that the gaze direction is simply not determinable. The same claim is restated in emphasizedAspects as 'a backward glance that keeps watch on what is left behind'.",
+          "evidence": "Head, roughly x=230-330 / y=320-400 in the 560x933 image. Enlarged 9x and brightened 3.4x it resolves only to a mass of shaggy dark hair with highlights along the top-left; the lower-right of the mass, where a cheek or jaw would fall if the head were turned back, holds no recoverable detail. For contrast, review-512 draws its backward glance explicitly, with a full three-quarter face turned opposite to the direction of travel — nothing comparable exists here.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-517",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "centre-left of the frame, striding across a cobbled yard between two structures",
+              "posture": "striding/half-running to the VIEWER-RIGHT, body pitched forward, rear (viewer-left) leg extended back, front leg bearing the weight; BAREFOOT — bare toes and bare lower legs are clearly visible on both feet",
+              "gaze": "seen from BEHIND; only the back of the head is drawn, rim-lit along the top-left. No face, eye or profile is visible at any magnification, so I cannot state a gaze direction. The head is aligned with the body, i.e. turned the same way he is travelling — it is NOT turned back over the shoulder toward the viewer",
+              "heldObjects": [
+                "a bundle of swords clamped under/against his viewer-right side, gripped by one hand at about waist height",
+                "the blades trail DOWN and BACK to the viewer-LEFT; the grips and pommels fan UP and to the viewer-RIGHT past his hand"
+              ],
+              "clothing": "a dark ragged cloak or mantle whose hem is torn into long ribbon-like streamers trailing far out behind him to the viewer-left; dark close-fitting tunic and trousers cut off at the calf; shaggy dark hair; bare head; bare feet"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword (carried)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "bundled against the figure's right side, centre of the frame",
+              "orientation": "all tilted the same way, points DOWN-LEFT (trailing behind him), pommels UP-RIGHT; parallel, not crossed",
+              "arrangement": "a single gathered sheaf. At maximum brightening I can resolve THREE wrapped grips with pommels and one cross-guard, and about three or four blade faces trailing below; a fourth grip may be hidden at the top right. The image is too dark for me to commit to a total"
+            },
+            {
+              "type": "sword (planted in the ground)",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one at the viewer-LEFT, standing in the cobbles to the left of the left structure's doorway; one at the viewer-RIGHT, standing in the ground to the right of the right structure",
+              "orientation": "both VERTICAL, points DOWN driven into the ground, hilts up with straight cross-guards",
+              "arrangement": "one on each side of the frame, upright and parallel to each other, well separated — not crossed"
+            },
+            {
+              "type": "pyramidal stone hut / tent",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one in the left middle distance, one in the right middle distance, flanking the figure",
+              "orientation": "both facing the viewer, apex up",
+              "arrangement": "two steep triangular shingled/stone structures, each with a finial at the apex and a dark rectangular doorway; the right one has a small triangular device carved over its lintel"
+            }
+          ],
+          "environment": [
+            "a cobbled/flagged yard or lane whose paving winds from the lower-left across to the right middle distance",
+            "a very dark enclosing background — walls or hillside — with no sky visible",
+            "a thin ragged printed border down the left and right edges"
+          ],
+          "lightSources": [
+            "a single soft glow high on the UPPER-LEFT of the background, behind and above the left hut — an unexplained bright patch, no lamp or disc is drawn inside it",
+            "the cobbles are lit in a broad winding band running from the lower-left up to the right, brightest in the middle of the yard",
+            "the figure is rim-lit along his upper-LEFT contour (top of the head, shoulder, cloak edge)"
+          ],
+          "moonPhase": "not visible — no sky and no moon are shown; the upper-left glow has no visible disc",
+          "spatialRelations": [
+            "the two huts stand one on each side of the figure, both behind him in depth",
+            "the left planted sword is to the LEFT of the left hut's doorway; the right planted sword is to the RIGHT of the right hut",
+            "the figure moves from the left of the frame toward the viewer-right, i.e. away from the glowing upper-left background",
+            "the left planted sword throws a long shadow down and to the viewer-RIGHT across the cobbles",
+            "the figure's own shadow falls down and to the viewer-RIGHT of his feet",
+            "both cast shadows agree on a light source up and to the viewer-LEFT"
+          ],
+          "foreground": [
+            "the lit cobblestones",
+            "the figure's bare feet and the trailing shredded cloak streamers",
+            "the trailing sword points"
+          ],
+          "background": [
+            "the two pyramidal huts with their dark doorways",
+            "the two planted swords",
+            "the glow at the upper-left and the otherwise black surroundings"
+          ]
+        },
+        "uncertainObservations": [
+          "This is the darkest of the eight. I brightened it more than three times over and large parts of the frame still hold no recoverable detail; several readings here are low-confidence.",
+          "The number of carried swords cannot be determined: three grips plus one cross-guard are resolvable, a fourth may be hidden, and the blade count below the hand reads as three or four.",
+          "No face is visible at all, so I cannot say whether he is looking ahead, down or back — I can only say the head is not turned back toward the viewer.",
+          "Whether the two structures are stone cairns/tombs, shingled huts or stiffened tents is ambiguous; they have doorways and roof finials.",
+          "The source of the upper-left glow is not drawn; it could be a moon behind cloud, a lamp out of frame or a lit opening.",
+          "I cannot confirm whether the planted swords' points are driven into the earth or merely hidden behind foreground stones."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

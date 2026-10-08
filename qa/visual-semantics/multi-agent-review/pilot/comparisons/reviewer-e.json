@@ -1,0 +1,130 @@
+[
+ {
+  "reviewId": "review-008",
+  "verdict": "pass",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-001",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "A hooded, faceless figure",
+    "observed": "a figure whose face is hidden behind long strands of hair falling forward from the crown of the head; no hood edge, seam or cowl opening is resolvable",
+    "evidence": "The head silhouette is a mass of thin vertical strands hanging forward past the chin, reading as hair rather than fabric. The surround is near-black, so a hood cannot be positively excluded either — the detail is not establishable from the pixels.",
+    "confidence": "medium"
+   },
+   {
+    "field": "scene / spatialRelations / visualTensions",
+    "existing": "a pale bird hovers in the lit wall behind",
+    "observed": "a pale glowing bird shape with fully outspread wings occupies the lit patch of the upper-right wall; whether it is a living bird in flight, a carved relief, or a light form on the stone is not determinable",
+    "evidence": "The shape has no depth cues separating it from the wall plane — its glow sits flush within the lit patch of masonry, and the wall texture is visible around and seemingly through the wing edges. 'Hovers' asserts flight that the image does not support.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "A hooded, faceless figure",
+     "with": "A faceless figure, the face hidden behind forward-hanging hair,"
+    },
+    {
+     "find": "while a pale bird hovers in the lit wall behind",
+     "with": "while a pale glowing bird with outspread wings appears on the lit wall behind"
+    },
+    {
+     "find": "the bird hovers above and to the right of the figure's head",
+     "with": "the pale bird is above and to the right of the figure's head"
+    },
+    {
+     "find": "the pale hovering bird against the heavy, motionless figure",
+     "with": "the pale glowing bird against the heavy, motionless figure"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-007",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "small lanterns hanging on the posts",
+    "observed": "lit lanterns standing on the platform floor, not hanging from the posts",
+    "evidence": "Three lanterns are individually resolvable and all sit at ground level on the stone platform: one at the lower left beside the near post's base, one at the centre beside the food spread, and one at the right on the platform near the right post's base. Each throws light downward onto the platform and casts a reflection in the wet surface beneath it. Nothing is suspended from any post; the small glows higher up are points of light within the strung garland, not lanterns on the posts.",
+    "confidence": "high"
+   },
+   {
+    "field": "deckSpecificMotifs",
+    "existing": "ringed planet with orbiting spheres",
+    "observed": "a large ringed orb at the upper right plus at least three other separate rounded bodies elsewhere in the sky (a grey cratered disc at upper left, a small disc near the right edge, a faint disc at mid-right)",
+    "evidence": "The other spheres are scattered across opposite corners of the sky rather than arranged around the ringed orb; no orbital relationship between them is visible, and the total number of bodies cannot be fixed because several faint discs may be nebula texture.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "small lanterns hanging on the posts",
+     "with": "lit lanterns standing on the platform floor"
+    },
+    {
+     "find": "exact number of small lanterns hanging on the posts",
+     "with": "exact number of lanterns standing on the platform"
+    },
+    {
+     "find": "ringed planet with orbiting spheres",
+     "with": "ringed planet and several separate spheres across the sky"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-003",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene / keyObjects / spatialRelations",
+    "existing": "a draped cloth over a low table",
+    "observed": "a pale draped cloth spread on the grassy ground in the lower left and lower centre, with goblets standing on it",
+    "evidence": "No table leg, table edge, apron or cast shadow of a table is visible anywhere; the cloth follows the contour of the grassy slope and drapes down to the lower right among the white blossoms, at the same ground level as the lantern beside it. A table hidden entirely under the cloth cannot be disproved, so the claim is simply not supportable from the pixels.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "a full moon",
+    "observed": "a large, pale, soft-edged complete disc at the upper left with no visible terminator",
+    "evidence": "The disc reads as a full circle, but it is rendered so faintly and with such soft edges against the pale sky that the phase cannot be positively confirmed. Recorded as unconfirmable in the blind pass; not a contradiction.",
+    "confidence": "low"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a table of cups glows in the foreground",
+     "with": "a cluster of cups on a draped cloth glows in the foreground"
+    },
+    {
+     "find": "a second cluster of glass goblets on a draped table in the foreground",
+     "with": "a second cluster of glass goblets on a draped cloth in the foreground"
+    },
+    {
+     "find": "a draped cloth over a low table",
+     "with": "a pale cloth draped over the ground"
+    },
+    {
+     "find": "the couple stands between the foreground table and the children",
+     "with": "the couple stands between the foreground cups and the children"
+    },
+    {
+     "find": "the table of cups sits behind them",
+     "with": "the cups on the cloth sit behind them"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ }
+]

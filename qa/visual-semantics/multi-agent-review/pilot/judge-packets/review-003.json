@@ -1,0 +1,324 @@
+{
+  "reviewId": "review-003",
+  "blindImage": "qa/visual-semantics/blind-review/review-003.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "pass": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/pilot/reveal/review-003.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-003",
+        "visibleFacts": {
+          "figureCount": 4,
+          "figures": [
+            {
+              "position": "center-left, foreground, taller",
+              "posture": "standing, seen from behind, one arm around the shoulders of the adjacent figure",
+              "gaze": "away from viewer, toward the upper right / the arc of vessels",
+              "heldObjects": [],
+              "notes": "short pale hair, long pale robe"
+            },
+            {
+              "position": "center, foreground, slightly shorter",
+              "posture": "standing, seen from behind, leaning into the taller figure, one arm extended outward to the right",
+              "gaze": "away from viewer, toward the right",
+              "heldObjects": [],
+              "notes": "long wavy pale hair with a flower or wreath in it, long pale gown"
+            },
+            {
+              "position": "middle distance, right of center",
+              "posture": "running/walking away, seen from behind",
+              "gaze": "away from viewer",
+              "heldObjects": [],
+              "notes": "child-sized, long light hair, pale dress, arms raised"
+            },
+            {
+              "position": "middle distance, right",
+              "posture": "running away, seen from behind, legs mid-stride",
+              "gaze": "away from viewer",
+              "heldObjects": [],
+              "notes": "child-sized, short curly hair, pale tunic and shorts, arms out"
+            }
+          ],
+          "objects": [
+            {
+              "type": "goblet / stemmed cup arranged in an arc across the sky",
+              "count": 11,
+              "countConfidence": "medium",
+              "where": "following the curve of the rainbow from the lower left edge up over the center and down to the lower right edge; counted individually left to right, all appear discrete and evenly spaced"
+            },
+            {
+              "type": "goblet / stemmed cup on the cloth in the foreground",
+              "count": null,
+              "countConfidence": "low",
+              "where": "clustered on a pale cloth along the bottom edge, some overlapping and some cut off by the frame; at least 5 individually resolvable"
+            },
+            {
+              "type": "lantern with a lit flame",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower left, standing on the cloth/ground, the only warm light in the image"
+            },
+            {
+              "type": "rainbow arc",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "spanning the full width of the sky, its band passing just inside the arc of vessels"
+            },
+            {
+              "type": "building with towers and steep roofs",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "middle right, across the water, partly veiled in mist"
+            },
+            {
+              "type": "moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left, large, pale blue, disc appears fully round and evenly lit"
+            },
+            {
+              "type": "bird or small flying shape",
+              "count": null,
+              "countConfidence": "low",
+              "where": "two or three tiny pale shapes against the clouds, center of frame below the arc"
+            }
+          ],
+          "environment": [
+            "grassy hillside in the foreground with white flowers",
+            "a river or lake in the middle distance",
+            "banks of soft cloud and mist",
+            "flowering branches and foliage framing the upper left and upper right corners",
+            "a thin drawn border frames the whole scene"
+          ],
+          "lightSources": [
+            "the pale moon upper left",
+            "diffuse bright sky behind the clouds",
+            "the lantern flame lower left"
+          ],
+          "moonPhase": "appears full / near-full round disc",
+          "spatialRelations": [
+            "the two adult-sized figures stand together in the foreground with their backs to the viewer, both facing the arc of vessels",
+            "the two child-sized figures are smaller and further away, running from the foreground pair toward the water and the building",
+            "the arc of vessels sits above and slightly outside the rainbow band",
+            "the foreground cluster of vessels sits on a cloth at the figures' feet, below and in front of them"
+          ],
+          "foreground": [
+            "the two embracing figures",
+            "cloth with clustered vessels",
+            "lantern",
+            "flowers and grass"
+          ],
+          "background": [
+            "rainbow and arc of vessels",
+            "moon",
+            "river, mist, towered building",
+            "cloud banks"
+          ]
+        },
+        "uncertainObservations": [
+          "the arc count of 11 is the best individual resolution I could reach; the two vessels nearest each frame edge are faint and the adjacent pair near the apex sit close together, so 10 or 12 cannot be fully excluded",
+          "the foreground vessels overlap heavily and some are clipped by the bottom edge, so no count is given",
+          "the small pale shapes mid-frame could be birds, petals or drifting light",
+          "the entire image is very low contrast and high key, which limits edge resolution throughout"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene / keyObjects / spatialRelations",
+          "existing": "a draped cloth over a low table",
+          "observed": "a pale draped cloth spread on the grassy ground in the lower left and lower centre, with goblets standing on it",
+          "evidence": "No table leg, table edge, apron or cast shadow of a table is visible anywhere; the cloth follows the contour of the grassy slope and drapes down to the lower right among the white blossoms, at the same ground level as the lantern beside it. A table hidden entirely under the cloth cannot be disproved, so the claim is simply not supportable from the pixels.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "a full moon",
+          "observed": "a large, pale, soft-edged complete disc at the upper left with no visible terminator",
+          "evidence": "The disc reads as a full circle, but it is rendered so faintly and with such soft edges against the pale sky that the phase cannot be positively confirmed. Recorded as unconfirmable in the blind pass; not a contradiction.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "a table of cups glows in the foreground",
+            "with": "a cluster of cups on a draped cloth glows in the foreground"
+          },
+          {
+            "find": "a second cluster of glass goblets on a draped table in the foreground",
+            "with": "a second cluster of glass goblets on a draped cloth in the foreground"
+          },
+          {
+            "find": "a draped cloth over a low table",
+            "with": "a pale cloth draped over the ground"
+          },
+          {
+            "find": "the couple stands between the foreground table and the children",
+            "with": "the couple stands between the foreground cups and the children"
+          },
+          {
+            "find": "the table of cups sits behind them",
+            "with": "the cups on the cloth sit behind them"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-003",
+        "visibleFacts": {
+          "figureCount": 4,
+          "figures": [
+            {
+              "position": "center-left, largest figure",
+              "posture": "standing / walking away from the viewer, back turned, one arm around the shoulders of the figure beside them",
+              "gaze": "away from the viewer, up and to the right toward the arc of vessels",
+              "appearance": "short pale hair, long pale flowing garment",
+              "heldObjects": [
+                "none visible; the near arm is wrapped around the adjacent figure"
+              ]
+            },
+            {
+              "position": "center, beside and slightly in front of the first figure",
+              "posture": "standing with the back to the viewer, one arm raised and extended out to the right",
+              "gaze": "away from the viewer, toward the right / toward the arc",
+              "appearance": "long curly light hair with a pale flower wreath or blossoms in it, long pale dress trailing on the ground",
+              "heldObjects": [
+                "right arm outstretched, hand open and empty, pointing outward to the right"
+              ]
+            },
+            {
+              "position": "right of center, middle distance, smaller (a child-sized figure)",
+              "posture": "running or skipping away from the viewer, legs apart, one arm raised",
+              "gaze": "away from the viewer",
+              "appearance": "long light hair, pale dress",
+              "heldObjects": [
+                "none clearly visible; arms raised"
+              ]
+            },
+            {
+              "position": "right, middle distance, beside the third figure (a second child-sized figure)",
+              "posture": "running away from the viewer, both arms flung outward, legs mid-stride",
+              "gaze": "away from the viewer",
+              "appearance": "short curly light hair, pale tunic and shorts",
+              "heldObjects": [
+                "none visible; arms outstretched"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "footed goblet/chalice arranged in an arc in the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "spanning the upper third of the frame, following the curve of the rainbow from the left edge up over the center and down to the right edge"
+            },
+            {
+              "type": "footed goblet/chalice standing on the ground cloth in the foreground",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower center and lower left, a loose group standing on a pale draped cloth beside the lantern"
+            },
+            {
+              "type": "rainbow",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "a broad arc spanning the sky from the left edge over the center to the right edge, with the sky goblets sitting along its inner curve"
+            },
+            {
+              "type": "lit lantern (glass-paned, with a domed top)",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower left, standing on the ground among flowers, glowing warm yellow"
+            },
+            {
+              "type": "moon (pale disc)",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left, a large soft-edged circle low in the pale sky"
+            },
+            {
+              "type": "building with pointed roofs and towers",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "middle distance at the right, on the far shore beyond the water"
+            },
+            {
+              "type": "body of water",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "middle distance on the right, a pale expanse between the figures and the building"
+            },
+            {
+              "type": "grassy slope with scattered small white flowers",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "foreground and lower right, where the two small figures are running"
+            }
+          ],
+          "environment": [
+            "pale, high-key, watercolor-like scene in white, lavender and soft blue",
+            "overhanging leafy branches and blossoms framing the upper left and upper right corners",
+            "flowering shrubs and white blossoms along the left edge and lower left",
+            "banks of soft cloud filling the middle of the sky",
+            "a grassy rise falling away toward water at the right",
+            "a pale painted border frame around the whole scene"
+          ],
+          "lightSources": [
+            "diffuse overall daylight/haze with no single hard source",
+            "the pale moon disc at upper left",
+            "the warm glow inside the lantern at lower left",
+            "faint sparkle highlights on the goblets and on the figures' garments"
+          ],
+          "moonPhase": "appears as a complete, unshaded circular disc, but it is so pale and soft-edged that the phase cannot be confirmed",
+          "spatialRelations": [
+            "the two large figures stand together at center-left with their backs to the viewer, the taller one's arm across the other's shoulders",
+            "the two small figures run away from the large pair, downhill and to the right",
+            "the arc of goblets follows the rainbow directly above and beyond all four figures",
+            "the lantern and the foreground goblets sit on the ground in the lower-left corner, nearest the viewer",
+            "the water and the distant building lie beyond the running children on the right"
+          ],
+          "foreground": [
+            "the lit lantern",
+            "a group of goblets standing on a draped pale cloth",
+            "white flowers and foliage",
+            "the two large back-turned figures"
+          ],
+          "background": [
+            "rainbow arc with the row of goblets",
+            "pale moon at upper left",
+            "cloud banks",
+            "water and the turreted building at the right",
+            "framing foliage at the top corners"
+          ]
+        },
+        "uncertainObservations": [
+          "The number of goblets in the sky arc cannot be stated reliably. Counting them one by one I resolve roughly 10 to 12 evenly spaced vessels, with the arc appearing symmetrical about the center; the outermost ones at both left and right sit close to the frame edge and to the border, and the pale rendering makes it impossible to confirm the exact total. Recording null rather than a number.",
+          "The number of foreground goblets on the cloth cannot be fixed either: at least five separate vessels are individually visible in the lower center-left, but several overlap each other and the pale cloth, and more may be hidden behind the nearest ones.",
+          "Whether small pale shapes drifting in the mid-sky (near the center-right, below the arc) are falling petals, leaves or birds is not determinable.",
+          "The faces of all four figures are turned away; no expressions, features or genders are visible.",
+          "Whether the flower shapes in the second figure's hair form a continuous wreath or are scattered blossoms is ambiguous.",
+          "The distant structure reads as a building with pointed roofs but its details dissolve into haze."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

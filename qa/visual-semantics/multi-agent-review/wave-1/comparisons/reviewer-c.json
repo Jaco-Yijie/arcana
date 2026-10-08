@@ -1,0 +1,149 @@
+[
+ {
+  "reviewId": "review-116",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "stack of books beside the astrolabe",
+    "observed": "a stack of flat slab-like rectangular forms at the lower left edge, below the glowing circular disc; they are in deep shadow and read equally as stacked stone slabs / low steps",
+    "evidence": "Re-checked the image. The forms have no visible spines, page edges, covers or colour variation — only flat horizontal planes catching a faint highlight, continuous with the rock and roots around them. Nothing in the pixels identifies them as books.",
+    "confidence": "medium"
+   },
+   {
+    "field": "model self-reported uncertainty",
+    "existing": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere",
+    "observed": "the disc at upper right is a complete round sphere with visible surface mottling/cratering, shaded along one edge; it is definitely not a crescent",
+    "evidence": "The full circular outline is unbroken against the nebula and the surface texture is visible across the whole disc. Only the exact phase (how much of the edge is shaded) remains undeterminable.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "stack of books beside the astrolabe",
+     "with": "stack of flat slab-like forms beside the astrolabe, too dark to identify as books or stone"
+    },
+    {
+     "find": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere",
+     "with": "the exact phase of the round cratered sphere at upper right"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-104",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "six upright swords set along the boat's rim",
+    "observed": "two clusters of upright blades inside the boat — about 4 hilts resolvable along the left side, about 3 along the right; at least 6, most likely 7, but the exact number is not establishable",
+    "evidence": "Re-checked the image at full size. The scene is near-black and the blades are dark-on-dark and overlapping. I could point individually at 4 pommels in the left cluster and 3 in the right, which already exceeds six, but I cannot confirm a total. This is a count the pixels do not support either way, not a confirmed different number.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "six upright swords set along the boat's rim",
+     "with": "at least six upright swords set along the boat's rim, exact count not resolvable in the darkness"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-108",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-103",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-115",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-114",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "four upright swords on the right",
+    "observed": "three upright blades are individually resolvable on the right side of the path; the left side does have four",
+    "evidence": "Re-opened and re-counted. On the right I can point at exactly three pommel-and-cross-guard units (nearest at the right frame edge, then two receding). The faint vertical darks between them resolve as cast shadows on the wall, not blades. The left row's four are clear, so this is a right-side-only discrepancy. I cannot rule out a fourth blade swallowed by the shadow, so I am not asserting a different total — only that four on the right is not supportable from the pixels.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "four upright swords on the right",
+     "with": "three upright swords resolvable on the right, with possibly more lost in shadow"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-102",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "ten upright swords set point-up in a ring of stone sockets",
+    "observed": "ten upright swords set point-DOWN into the stone sockets, with the gold hilts, cross-guards and pommels uppermost",
+    "evidence": "Every blade shows an ornamented gold pommel and cross-guard at its top end, and the blade tapers downward and disappears into a dark circular socket in the platform floor. The orientation is unambiguous at full size and the same on all ten blades. 'Point-up' inverts this.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the ring of swords encircles the fallen cloak and map in the lower half of the image",
+    "observed": "the swords form two separate arcs of five, one along the left of the circular platform and one along the right; the near edge (bottom of frame) and the far edge both have no swords, so the cloth and map are flanked rather than encircled",
+    "evidence": "The bottom foreground of the platform is completely clear of blades, and so is the gap at the centre-rear through which the standing figure is visible. The two groups of five face each other across the cloth with open gaps at both ends.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "dark tattered cloak lying spread on the platform floor",
+    "observed": "a crumpled dark blue-black cloth with gold constellation embroidery spread across the platform centre; whether it is a garment cannot be established",
+    "evidence": "The cloth is bunched and its edges are lost under the pale tan shape, so no hood, sleeve or full hem is visible. The standing figure in the middle ground is still wearing a cloak of similar colour, so reading the floor cloth as a discarded cloak is an inference the pixels do not confirm.",
+    "confidence": "low"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "torn parchment map with drawn markings",
+    "observed": "a pale tan area on the platform to the right of and partly under the dark cloth, carrying a faint grid pattern; whether it is parchment, cloth, or bare engraved stone is not determinable",
+    "evidence": "A faint rectilinear grid is visible on it, which is consistent with a map, but no edge, curl or torn margin separates it from the platform surface.",
+    "confidence": "low"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "ten upright swords set point-up in a ring of stone sockets",
+     "with": "ten upright swords set point-down into stone sockets, hilts uppermost"
+    },
+    {
+     "find": "the ring of swords encircles the fallen cloak and map in the lower half of the image",
+     "with": "two arcs of five swords flank the fallen cloth and map on the left and right of the platform, leaving open gaps at the near and far edges"
+    },
+    {
+     "find": "dark tattered cloak lying spread on the platform floor",
+     "with": "crumpled dark cloth with gold constellation embroidery spread on the platform floor"
+    },
+    {
+     "find": "torn parchment map with drawn markings",
+     "with": "pale tan area with a faint grid pattern, possibly a map or parchment"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ }
+]

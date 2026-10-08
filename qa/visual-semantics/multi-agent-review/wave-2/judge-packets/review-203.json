@@ -1,0 +1,256 @@
+{
+  "reviewId": "review-203",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-203.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: corrected vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-203.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the window occupies the full left edge, its light falling across the figure's head and shoulder",
+          "observed": "the arched window occupies only the upper portion of the left edge — roughly the top 45% of the artwork height; below its sill the left edge is taken up by the armillary sphere on its stand, the end of the stone bier, and dark floor",
+          "evidence": "The window's pointed arch begins at the top of the artwork and its opening terminates at about the level of the reclining figure's head. Everything below that point on the left edge is solid interior: the armillary tripod, the carved end panel of the bier, then the polished floor with the circular star-map. The window is not present along the lower half of the left edge at all.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the window occupies the full left edge, its light falling across the figure's head and shoulder",
+            "with": "the window occupies the upper portion of the left edge, its light falling across the figure's head and shoulder"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-203",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, occupying the middle horizontal band of the frame",
+              "posture": "lying down on the back, full length, on a long stone/carved bier or chest, head resting on a dark pillow at left, body covered by a deep-blue star-patterned coverlet",
+              "gaze": "eyes appear closed, face turned slightly upward and to the right",
+              "heldObjects": [],
+              "notes": "hands rest folded on the chest over the coverlet; dark curly shoulder-length hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "mounted point-down on the dark wall above the reclining figure; counted individually left-to-right at roughly one-third, center, and two-thirds of the frame width, each fully separated from its neighbours with clear dark gaps"
+            },
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "a separate blade laid horizontally, hilt at left, across the ornate front panel of the stone chest in the lower foreground, below and in front of the reclining figure"
+            },
+            {
+              "type": "armillary sphere on a stand",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower left, on a tripod base beside the head of the bier"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right edge, standing on the bier's far end; a small warm flame inside a metal cage"
+            },
+            {
+              "type": "arched window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left, tall pointed arch filled with a nebula/starfield and round planetary bodies"
+            },
+            {
+              "type": "round planetary body inside the window",
+              "count": null,
+              "countConfidence": "low",
+              "where": "within the arched window; at least two large discs are visible (one upper area, one mid-left) plus smaller bright points that may or may not be additional discs"
+            },
+            {
+              "type": "pillow",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "under the figure's head, left end of the bier"
+            },
+            {
+              "type": "conifer tree silhouette",
+              "count": null,
+              "countConfidence": "low",
+              "where": "dark spiky silhouettes along the lower portion of the window opening; individual trunks are not separable"
+            }
+          ],
+          "environment": [
+            "dark stone interior chamber",
+            "wall covered in faint engraved circles, grids and constellation lines",
+            "polished dark floor bearing a large circular star-chart inlay in the lower third",
+            "carved stone bier/sarcophagus-like chest with panelled sides"
+          ],
+          "lightSources": [
+            "glowing nebula/starfield through the arched window, upper left",
+            "small warm lantern flame at right",
+            "faint ambient glitter from stars embedded in the wall and coverlet"
+          ],
+          "moonPhase": "no moon resolvable; round bodies in the window are lit discs but their phase cannot be determined",
+          "spatialRelations": [
+            "the three wall swords hang in a row directly above the reclining figure's torso and legs",
+            "the single horizontal sword on the chest front is below the figure and points the opposite axis (horizontal vs vertical)",
+            "the armillary sphere is at the head end, the lantern at the foot end, bracketing the bier",
+            "the circular floor star-chart lies in front of and below the chest, nearest the viewer"
+          ],
+          "foreground": [
+            "polished floor with circular star-chart inlay",
+            "front panel of the stone chest with the horizontal sword"
+          ],
+          "background": [
+            "dark engraved wall with the three hanging swords",
+            "arched window with nebula and planets"
+          ]
+        },
+        "uncertainObservations": [
+          "total number of blades in the frame is ambiguous as a single class: three are wall-mounted and one is a separate horizontal blade on the chest — I report them as two distinct groups rather than one summed count",
+          "the number of round planetary discs inside the window cannot be resolved; some bright shapes may be nebula clouds rather than bodies",
+          "whether the figure's eyes are fully closed or narrowly open cannot be resolved at this resolution",
+          "it is unclear whether the figure is asleep or otherwise; only the reclining posture is recorded"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "dark vaulted chamber",
+          "observed": "a dark stone chamber; no ceiling or vaulting is visible anywhere in the frame",
+          "evidence": "The frame shows a flat wall covered in star-chart circles, a polished floor, and an arched window at the left. The view is cut off above the hanging blades with no springing, rib, or curved ceiling surface in view. 'Vaulted' asserts architecture the image does not show. The arch shape belongs to the window, not to a ceiling.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "dark vaulted chamber",
+            "with": "dark stone chamber"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-203",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, lying horizontally across the middle of the frame",
+              "posture": "lying supine on a raised stone bier/bed, head at left on a dark pillow, body covered from chest down by a heavy dark-blue cover, hands folded on the chest",
+              "gaze": "eyes closed, face turned slightly up and toward the viewer",
+              "heldObjects": []
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword mounted point-down on the wall",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "hanging on the wall above the reclining figure, evenly spaced left to right, all three vertical with hilts up and points down"
+            },
+            {
+              "type": "sword rendered horizontally on the front panel of the bier",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "inlaid/carved along the front face of the stone bier in the lower-center of the frame, hilt at left, blade pointing right"
+            },
+            {
+              "type": "arched window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left, tall pointed arch filled with a nebula/starfield"
+            },
+            {
+              "type": "planetary sphere visible through the window",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one in the upper part of the window, one lower in the window near the treeline"
+            },
+            {
+              "type": "armillary sphere on a tripod stand",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower left, standing on the floor beside the head of the bier"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right side, on the ledge beyond the foot of the bier; contains a small warm flame"
+            },
+            {
+              "type": "circular star-map inlay",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "set into the polished floor in the foreground, lower center"
+            },
+            {
+              "type": "conifer tree silhouettes",
+              "count": null,
+              "countConfidence": "low",
+              "where": "small dark evergreen shapes along the bottom of the window opening"
+            }
+          ],
+          "environment": [
+            "dark stone chamber",
+            "walls covered in faint constellation lines, circular zodiac-style diagrams and scattered stars",
+            "polished reflective dark floor",
+            "raised stone bier/sarcophagus-like platform with carved panels"
+          ],
+          "lightSources": [
+            "the lantern flame at right (the only warm light)",
+            "cool glow from the nebula/starfield through the arched window at left",
+            "faint self-luminous stars on the walls and floor"
+          ],
+          "moonPhase": "no moon identifiable",
+          "spatialRelations": [
+            "the three wall swords hang in a row directly above the reclining figure's body",
+            "the reclining figure's head is at the left, near the window; the feet are to the right, near the lantern",
+            "the armillary sphere stands on the floor at the far left, in front of and below the window",
+            "the horizontal sword motif on the bier's front panel is directly below the figure",
+            "the circular floor inlay occupies the foreground, nearer the viewer than the bier"
+          ],
+          "foreground": [
+            "polished floor with the circular star-map inlay"
+          ],
+          "background": [
+            "star-diagrammed wall",
+            "the nebula-filled arched window"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of spherical bodies in the window is uncertain — two round shapes are resolvable but the nebula texture makes additional faint ones possible",
+          "whether the horizontal sword on the bier's front panel is a real sword laid in a recess or a carved/inlaid relief cannot be determined",
+          "the figure's sex, and whether the eyes are closed in sleep or simply shadowed, are not determinable",
+          "the wall is covered in faint circular diagrams whose number and content I cannot resolve",
+          "cannot tell whether the wall swords are suspended, mounted on brackets, or embedded in the stone"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

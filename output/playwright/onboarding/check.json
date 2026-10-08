@@ -1,0 +1,65 @@
+[
+  {
+    "locale": "zh-CN",
+    "width": 375,
+    "firstVisit": true,
+    "persistence": true,
+    "review": true,
+    "noOverflow": true,
+    "noSessionCreated": true
+  },
+  {
+    "locale": "zh-CN",
+    "width": 390,
+    "firstVisit": true,
+    "persistence": true,
+    "review": true,
+    "noOverflow": true,
+    "noSessionCreated": true
+  },
+  {
+    "locale": "zh-CN",
+    "width": 430,
+    "firstVisit": true,
+    "persistence": true,
+    "review": true,
+    "noOverflow": true,
+    "noSessionCreated": true
+  },
+  {
+    "locale": "en-US",
+    "width": 375,
+    "firstVisit": true,
+    "persistence": true,
+    "review": true,
+    "noOverflow": true,
+    "noSessionCreated": true
+  },
+  {
+    "locale": "en-US",
+    "width": 390,
+    "firstVisit": true,
+    "persistence": true,
+    "review": true,
+    "noOverflow": true,
+    "noSessionCreated": true
+  },
+  {
+    "locale": "en-US",
+    "width": 430,
+    "firstVisit": true,
+    "persistence": true,
+    "review": true,
+    "noOverflow": true,
+    "noSessionCreated": true
+  },
+  {
+    "languageSwitch": "step preserved"
+  },
+  {
+    "existingReader": "no forced guide; review preserves session"
+  },
+  {
+    "randomMode": "preserved"
+  }
+]

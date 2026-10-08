@@ -1,0 +1,733 @@
+[
+  {
+    "reviewId": "review-516",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center, slightly viewer-left of center, lying in the lower-middle of the frame",
+          "posture": "lying face-down / prone, body horizontal across the frame, head toward viewer-right, back arched upward, partly submerged in shallow water",
+          "gaze": "head turned downward and slightly toward viewer, face mostly hidden behind long pale hair; eyes not visible",
+          "heldObjects": [],
+          "clothing": "pale white/silver translucent gauzy robe or veil draped over the back and trailing into the water; long silver-white hair; a small wreath or cluster of tiny pale flowers in the hair near the crown"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 10,
+          "countConfidence": "medium",
+          "where": "driven into the figure's back and the ground/water immediately around it, upper-left to center of frame",
+          "orientation": "blades angled upward and outward, hilts and pommels up, points down into the body and ground; fan spread roughly 60 degrees",
+          "arrangement": "fan / clustered row, blades crossing and overlapping"
+        },
+        {
+          "type": "flowering shrub",
+          "count": null,
+          "countConfidence": "low",
+          "where": "lower-left corner and scattered along the right bank",
+          "orientation": "upright growth",
+          "arrangement": "scattered clumps"
+        },
+        {
+          "type": "bare arm",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "center-lower, extended from the figure toward viewer-right, hand resting in the water",
+          "orientation": "roughly horizontal, palm down",
+          "arrangement": "single"
+        }
+      ],
+      "environment": [
+        "shallow pale water / flooded shoreline occupying the lower half of the frame",
+        "open sea or wide lake receding to a horizon at mid-right",
+        "low hills or headlands on the left edge and a small island or wooded spit at right",
+        "banked clouds filling the upper half of the sky",
+        "small pale blossoms and leafy sprigs in the foreground water"
+      ],
+      "lightSources": [
+        "low sun on the horizon at right, casting a bright vertical glitter path across the water",
+        "crescent moon in the upper-left sky",
+        "diffuse glow through the cloud bank"
+      ],
+      "moonPhase": "crescent",
+      "spatialRelations": [
+        "the swords rise above and behind the prone figure",
+        "the sun's reflection path lies to the viewer-right of the figure's head",
+        "the crescent moon is diagonally opposite the sun, upper-left vs mid-right",
+        "the figure's outstretched arm points toward the lower-right water",
+        "flowering plants in the lower-left corner are nearer the viewer than the figure"
+      ],
+      "foreground": [
+        "rippled shallow water with reflections",
+        "pale rose-like blossoms and foliage at lower left",
+        "a trailing ribbon of translucent fabric at bottom-left",
+        "small flower sprigs at bottom-right"
+      ],
+      "background": [
+        "cloud bank and pale sky",
+        "sea horizon with sun glow",
+        "distant low land masses on both sides"
+      ]
+    },
+    "uncertainObservations": [
+      "Exact sword count is uncertain; blades overlap heavily near the hilts. My count landed on 10 but 9 is possible.",
+      "Cannot tell whether the swords pass through the figure's body or are planted in the ground behind it.",
+      "Cannot determine whether the figure is clothed in a robe or wrapped in a veil/net — the fabric is translucent and merges with the water.",
+      "The pale shapes at the right edge may be a wooded island or low cloud; I cannot resolve them."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-504",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center, standing on a rocky ridge in the lower-middle of the frame",
+          "posture": "standing, weight on both legs, body in three-quarter view turned toward viewer-right, back partly to the viewer",
+          "gaze": "head tilted up and toward viewer-right, looking up at the raised sword",
+          "heldObjects": [
+            "a long straight sword gripped in the right hand (viewer-right), arm fully extended upward above head height, blade pointing straight up with the point toward the top of the frame",
+            "a second, smaller sheathed blade or dagger hanging at the left hip, hilt visible near the waist"
+          ],
+          "clothing": "short blue-grey belted tunic with decorated hem and cuffs, a long dark red cloak streaming out to viewer-left, knotted rope or cord belt, laced knee-high boots, curly dark hair, bare head"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper-center, held aloft above the figure",
+          "orientation": "vertical, point upward, crossguard near the figure's fist",
+          "arrangement": "single"
+        },
+        {
+          "type": "laurel wreath",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper-center, encircling the sword blade partway up",
+          "orientation": "horizontal ring seen nearly edge-on, open at the top",
+          "arrangement": "single, threaded onto the blade"
+        },
+        {
+          "type": "book",
+          "count": null,
+          "countConfidence": "low",
+          "where": "right side of frame, some airborne mid-right, others stacked and strewn on the ground at lower-right",
+          "orientation": "mixed; airborne ones open with covers splayed, ground ones flat and tilted",
+          "arrangement": "scattered"
+        },
+        {
+          "type": "loose paper / sheet",
+          "count": null,
+          "countConfidence": "low",
+          "where": "blowing across the right half of the frame and littering the rocky ground at bottom",
+          "orientation": "tumbling at many angles",
+          "arrangement": "scattered, wind-driven"
+        },
+        {
+          "type": "chest / casket",
+          "count": null,
+          "countConfidence": "low",
+          "where": "lower-right corner, open with chains or straps across it",
+          "orientation": "lid open and tilted toward viewer",
+          "arrangement": "one large chest with at least one smaller box beside it"
+        },
+        {
+          "type": "chain",
+          "count": null,
+          "countConfidence": "low",
+          "where": "mid-right, looping out of the airborne cluster and over the chest",
+          "orientation": "coiling, broken into loose lengths",
+          "arrangement": "tangled"
+        },
+        {
+          "type": "falling leaf",
+          "count": null,
+          "countConfidence": "low",
+          "where": "scattered across the left and center sky",
+          "orientation": "tumbling",
+          "arrangement": "scattered"
+        }
+      ],
+      "environment": [
+        "rocky clifftop or ridge the figure stands on",
+        "broad valley below with a river and a multi-arched stone bridge at left",
+        "a many-towered walled castle or city on a hill at mid-left",
+        "distant mountain range along the left horizon",
+        "heavy billowing clouds filling most of the sky",
+        "printed ruled border and corner ornaments framing the whole image"
+      ],
+      "lightSources": [
+        "a burst of radiating light at the sword's tip, upper-center, with rays spreading outward",
+        "general pale daylight behind the clouds"
+      ],
+      "moonPhase": "not visible — no moon anywhere in the frame; the sky shows daytime clouds and a light burst at the sword point",
+      "spatialRelations": [
+        "the laurel wreath sits on the blade above the figure's fist and below the light burst",
+        "the castle and bridge are at the lower-left, behind and below the figure",
+        "the airborne books, chains and papers are to the viewer-right of the figure",
+        "the open chest sits on the ground at the lower-right, below the airborne cluster",
+        "the cloak streams to viewer-left, opposite the raised arm"
+      ],
+      "foreground": [
+        "rocky ground with strewn papers and books",
+        "open chest and smaller box at lower-right",
+        "the figure's boots and lower legs"
+      ],
+      "background": [
+        "cloud-filled sky",
+        "castle on a hill, river, arched bridge",
+        "distant mountains"
+      ]
+    },
+    "uncertainObservations": [
+      "Cannot count the books or loose sheets — they overlap and many are partly cut off at the frame edge.",
+      "Cannot tell whether the object at the figure's left hip is a sheathed dagger, a sword scabbard, or a hanging pouch strap.",
+      "The airborne cluster at mid-right mixes chains, book covers and torn pages; I cannot separate how many distinct items it contains.",
+      "Unclear whether the lower-right box is a chest, a crate, or a broken reliquary."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-508",
+    "visibleFacts": {
+      "figureCount": 2,
+      "figures": [
+        {
+          "position": "viewer-left of center",
+          "posture": "standing upright, body in profile facing viewer-right toward the other figure, feet planted on a stone path",
+          "gaze": "head bowed and turned toward viewer-right, looking down at the joined hands",
+          "heldObjects": [
+            "both hands extended forward at waist-to-chest height, clasping the other figure's hands; a pale ragged cord or ribbon hangs down from the joined hands"
+          ],
+          "clothing": "dark tattered long-sleeved coat or jacket with frayed hanging strips, dark trousers, heavy laced boots; short tousled hair; rendered as a near-silhouette"
+        },
+        {
+          "position": "viewer-right of center",
+          "posture": "standing upright, body in profile facing viewer-left toward the other figure, floor-length skirt hiding the feet",
+          "gaze": "head bowed and turned toward viewer-left, looking down at the joined hands; a faint profile of the face is visible",
+          "heldObjects": [
+            "both hands extended forward at waist-to-chest height, clasped with the other figure's hands, same pale cord hanging between them"
+          ],
+          "clothing": "dark full-length gown with ragged, shredded hem and sleeve edges, hair gathered up in a bun or knot; rendered as a near-silhouette"
+        }
+      ],
+      "objects": [
+        {
+          "type": "tree",
+          "count": 2,
+          "countConfidence": "medium",
+          "where": "one at the left edge behind the left figure, one at the right edge behind the right figure",
+          "orientation": "upright, bare twisting branches spreading inward over the figures",
+          "arrangement": "one flanking each side, roughly mirrored"
+        },
+        {
+          "type": "round fruit on tree",
+          "count": null,
+          "countConfidence": "low",
+          "where": "hanging in the left-hand tree's branches",
+          "orientation": "pendant, hanging down",
+          "arrangement": "scattered through the branches"
+        },
+        {
+          "type": "serpent / coiling form",
+          "count": 1,
+          "countConfidence": "low",
+          "where": "around the trunk of the left-hand tree, mid-left of frame",
+          "orientation": "spiralling up the trunk",
+          "arrangement": "single coil"
+        },
+        {
+          "type": "hedge",
+          "count": 2,
+          "countConfidence": "medium",
+          "where": "lower-left and lower-right, lining both sides of the path",
+          "orientation": "horizontal low mass running toward the viewer",
+          "arrangement": "one per side, converging toward the figures"
+        },
+        {
+          "type": "cast shadow",
+          "count": 2,
+          "countConfidence": "medium",
+          "where": "across the paving in the lower third, running from the figures' feet toward the bottom of the frame",
+          "orientation": "pointing toward the viewer, slightly splayed apart",
+          "arrangement": "one per figure, side by side"
+        }
+      ],
+      "environment": [
+        "a cobbled or flagstone path running from the bottom edge up between the two figures",
+        "clipped hedges or garden walls flanking the path on both sides",
+        "a jagged mountain peak on the horizon directly between the two figures",
+        "very dark overall tonality; nearly monochrome brown-black",
+        "a thin printed rule line along the left edge of the image"
+      ],
+      "lightSources": [
+        "a bright radiating burst in the upper-center sky, forming a wide inverted-V or chevron of light with rays streaming downward and outward",
+        "a secondary pale glow on the horizon behind the mountain, silhouetting the figures"
+      ],
+      "moonPhase": "not visible — no moon in the frame; the overhead light is a rayed burst, not a disc",
+      "spatialRelations": [
+        "the light burst is directly above and between the two figures",
+        "the mountain peak sits on the horizon between the two figures, below the light burst",
+        "the fruiting tree is behind the left figure, the bare branching tree behind the right figure",
+        "the path runs from between the figures toward the viewer at the bottom of the frame",
+        "both shadows fall toward the viewer, away from the horizon glow"
+      ],
+      "foreground": [
+        "the cobbled path surface",
+        "the two cast shadows",
+        "the inner edges of both hedges"
+      ],
+      "background": [
+        "mountain peak and pale horizon glow",
+        "the two flanking trees",
+        "the rayed light burst in the upper sky"
+      ]
+    },
+    "uncertainObservations": [
+      "The image is extremely dark; most detail is read from silhouette edges only, so clothing and facial details are low-confidence.",
+      "I cannot confirm the coiling form on the left tree is a serpent — it could be a vine, a rope, or a broken branch.",
+      "Cannot count the fruit in the left tree.",
+      "Cannot tell what the pale ragged strands hanging from the joined hands are — cord, ribbon, cloth, or torn sleeve.",
+      "The upper light burst has a wing-like or chevron shape, but I cannot tell whether any figure or form is inside it; it may be pure light.",
+      "Cannot tell whether the dark masses flanking the path are hedges, walls, or embankments."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-503",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center-left, lying on a stone bench or tomb slab in the lower-left half of the frame",
+          "posture": "lying supine, full length, body horizontal with head at viewer-left and feet at viewer-right, head resting on a cushion",
+          "gaze": "face turned upward and slightly toward viewer-left; eyes appear closed",
+          "heldObjects": [
+            "hands folded together and resting on the chest, one over the other"
+          ],
+          "clothing": "pale cream long-sleeved undergown with a patterned band at the cuff, a rust/ochre overgarment with decorated border across the torso, a pale yellow draped blanket or robe covering the legs, curly light brown hair, bare head"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 3,
+          "countConfidence": "high",
+          "where": "mounted on the stone wall in the upper-right quadrant, side by side",
+          "orientation": "vertical, points downward, pommels up",
+          "arrangement": "an evenly spaced row of three, parallel"
+        },
+        {
+          "type": "sword",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "lying flat on the top surface of the stone slab, along its front edge below the reclining figure",
+          "orientation": "horizontal, hilt at viewer-left, point toward viewer-right",
+          "arrangement": "single"
+        },
+        {
+          "type": "cushion / pillow",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "under the figure's head at left",
+          "orientation": "flat, long axis horizontal",
+          "arrangement": "single"
+        },
+        {
+          "type": "stained glass window",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper-left, set in the wall above and behind the figure's head",
+          "orientation": "upright, pointed arch top with a rosette in the tracery",
+          "arrangement": "single tall lancet"
+        }
+      ],
+      "environment": [
+        "interior stone chamber with large ashlar block walls",
+        "a raised stone bench, tomb chest or bier with blind arcading carved along its front face",
+        "stone flagstone floor in the lower-right",
+        "a deep window embrasure with a sill at the left",
+        "printed ruled border with corner ornaments framing the whole image"
+      ],
+      "lightSources": [
+        "daylight entering through the stained glass window at upper-left, throwing a visible wedge of light rays diagonally down and to the right across the wall and onto the figure"
+      ],
+      "moonPhase": "not visible — interior scene, no sky and no moon in the frame",
+      "spatialRelations": [
+        "the three wall swords hang above and to the viewer-right of the reclining figure",
+        "the fourth sword lies horizontally below the figure, on the slab top",
+        "the window is behind and above the figure's head at the left",
+        "the light beam from the window crosses the wall between the window and the hanging swords and falls onto the figure's torso",
+        "the three hanging swords' points stop above the level of the figure's body"
+      ],
+      "foreground": [
+        "the front face of the carved stone slab with its arcading",
+        "the horizontal sword on the slab's top edge",
+        "flagstone floor at bottom-right"
+      ],
+      "background": [
+        "the block stone wall",
+        "the three mounted swords",
+        "the stained glass window and its embrasure"
+      ]
+    },
+    "uncertainObservations": [
+      "Cannot determine whether the figure is asleep or dead — eyes are closed but there is no other cue I can read.",
+      "Cannot tell whether the three swords are hung on brackets, embedded in the wall, or painted on it; no fixings are visible.",
+      "Cannot resolve the stained glass imagery beyond the rosette and vertical panel pattern.",
+      "Cannot tell whether the stone support is a bed, a bench, or a tomb chest."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-515",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "lower-left of center, seated at a stone parapet or desk in the bottom third of the frame",
+          "posture": "seated, leaning slightly forward, back three-quarters to the viewer, body turned toward viewer-right",
+          "gaze": "head bowed, face in lost profile, looking down at a sheet of paper held in front",
+          "heldObjects": [
+            "a single sheet of paper or letter held in both hands at chest height, roughly vertical, text side facing the figure"
+          ],
+          "clothing": "dark hooded cloak or robe with a fine glinting pattern of dots and lines across it, hood down on the shoulders, dark curly hair"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 3,
+          "countConfidence": "high",
+          "where": "upper half of the frame, in the sky above the figure",
+          "orientation": "all three points downward into a heart shape; one vertical from top-center, one angled in from upper-left, one angled in from upper-right",
+          "arrangement": "symmetrical trio converging on one point, forming a wide V with a vertical through it"
+        },
+        {
+          "type": "heart (crystalline / faceted, star-filled)",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper-center of the frame, filling the middle of the sky",
+          "orientation": "upright, lobes at top, point at the bottom",
+          "arrangement": "single"
+        },
+        {
+          "type": "lantern",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "lower-right, hanging or standing below the parapet edge",
+          "orientation": "upright",
+          "arrangement": "single"
+        },
+        {
+          "type": "armillary sphere / ringed astronomical instrument",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "right of center, standing on the parapet beside the figure",
+          "orientation": "upright, rings tilted",
+          "arrangement": "single"
+        },
+        {
+          "type": "inkwell or small vessel",
+          "count": null,
+          "countConfidence": "low",
+          "where": "on the parapet top between the figure and the armillary sphere",
+          "orientation": "upright",
+          "arrangement": "one or two small objects grouped"
+        },
+        {
+          "type": "moon",
+          "count": 2,
+          "countConfidence": "medium",
+          "where": "one in the upper-left sky, a second smaller one at mid-left below it",
+          "orientation": "discs",
+          "arrangement": "two separate discs on the left side"
+        },
+        {
+          "type": "concentric circle / orbital line overlay",
+          "count": null,
+          "countConfidence": "low",
+          "where": "drawn faintly across the whole sky, centred on the heart",
+          "orientation": "concentric rings and radiating lines",
+          "arrangement": "layered diagram over the sky"
+        }
+      ],
+      "environment": [
+        "night sky dense with stars and dark cloud banks",
+        "fine diagonal streaks across the whole image reading as falling rain",
+        "a ruined stone arcade with columns and an arch at the right edge",
+        "a flat stone terrace or parapet in the lower third",
+        "a lake or wide river on the horizon at center-right with a light reflection on it",
+        "a line of dark conifers along both the left and right of the far shore",
+        "a thin printed border line around the image"
+      ],
+      "lightSources": [
+        "glowing white flares where each sword blade enters the heart",
+        "the two moons at left",
+        "a warm lantern flame at lower-right",
+        "a break of pale light in the clouds low at center, reflected on the water",
+        "scattered starlight"
+      ],
+      "moonPhase": "gibbous — the upper-left moon reads as a large gibbous disc with a shaded limb; a second, smaller disc at mid-left is harder to read and looks crescent-to-gibbous",
+      "spatialRelations": [
+        "the heart is directly above and slightly viewer-right of the seated figure",
+        "the vertical sword descends from the top edge into the top notch of the heart",
+        "the left and right swords angle inward and down into the heart's upper lobes",
+        "the ruined arcade is to the viewer-right of and behind the figure",
+        "the lantern is below and to the viewer-right of the figure, at the parapet's base",
+        "the lake horizon runs behind the figure at about shoulder height",
+        "the two moons are on the opposite side of the frame from the ruined arcade"
+      ],
+      "foreground": [
+        "the stone parapet top with the paper, small vessel and armillary sphere",
+        "the seated cloaked figure",
+        "the lit lantern at lower-right"
+      ],
+      "background": [
+        "star-filled night sky with the crystalline heart and three swords",
+        "cloud banks and the overlaid circular diagram",
+        "the lake, far shore and conifer line",
+        "the ruined stone arcade at right"
+      ]
+    },
+    "uncertainObservations": [
+      "Cannot read any text on the held sheet of paper.",
+      "Cannot confirm the second, smaller disc at mid-left is a moon rather than a planet or a glowing orb.",
+      "The phase of the upper-left moon is hard to judge; heavy cloud crosses it.",
+      "Cannot tell whether the ringed instrument is an armillary sphere, an orrery, or a decorative sculpture.",
+      "Cannot count the small objects on the parapet beside the figure.",
+      "Cannot tell whether the diagonal streaks are rain, snow, or an applied texture."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-514",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center, slightly viewer-left, standing on a paved garden terrace",
+          "posture": "standing, back and left side to the viewer, body turned toward viewer-right, weight settled, long train of the gown spreading behind on the ground",
+          "gaze": "head turned toward viewer-right and tilted slightly up, looking toward the bird",
+          "heldObjects": [
+            "right arm (viewer-right) extended out and slightly up at shoulder height, hand open and empty, palm up toward the bird"
+          ],
+          "clothing": "dark full-length gown with a long trailing train, close-fitting bodice, dark hair gathered at the nape"
+        }
+      ],
+      "objects": [
+        {
+          "type": "bird",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper-right, in the air just beyond the figure's outstretched hand",
+          "orientation": "wings raised and spread, body angled head-down toward the hand",
+          "arrangement": "single, in flight"
+        },
+        {
+          "type": "pentacle disc (five-pointed star in a circle)",
+          "count": 5,
+          "countConfidence": "medium",
+          "where": "set in a row of arched niches along the upper garden wall, upper third of the frame",
+          "orientation": "upright, flat to the viewer",
+          "arrangement": "an evenly spaced horizontal row of five"
+        },
+        {
+          "type": "pentacle disc (five-pointed star in a circle)",
+          "count": 4,
+          "countConfidence": "low",
+          "where": "set in a row of small arches along the front of the low terrace wall at mid-right, running off the right edge of the frame",
+          "orientation": "upright, flat to the viewer",
+          "arrangement": "a horizontal row, partly cropped by the frame edge"
+        },
+        {
+          "type": "grapevine with fruit clusters",
+          "count": null,
+          "countConfidence": "low",
+          "where": "left third of the frame, trained on a trellis or arbour",
+          "orientation": "hanging clusters below broad leaves",
+          "arrangement": "massed foliage with multiple pendant bunches"
+        },
+        {
+          "type": "potted plant / flowering shrub",
+          "count": null,
+          "countConfidence": "low",
+          "where": "mid-right, on and behind the low terrace wall",
+          "orientation": "upright",
+          "arrangement": "a group of two or three containers"
+        },
+        {
+          "type": "stone steps",
+          "count": null,
+          "countConfidence": "low",
+          "where": "left of center, leading up into the arbour",
+          "orientation": "ascending away from the viewer",
+          "arrangement": "a short flight"
+        },
+        {
+          "type": "cast shadow",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "on the paving at lower-right, running from the figure's feet toward the bottom-right corner",
+          "orientation": "elongated, pointing away to viewer-right",
+          "arrangement": "single"
+        }
+      ],
+      "environment": [
+        "an enclosed walled garden at night or in deep shadow",
+        "a tall ivy-covered stone wall with an arcade of arched niches across the top",
+        "a lower terrace wall or balustrade with its own arcade at mid-right",
+        "paved stone ground with a visible joint pattern",
+        "dense climbing foliage covering most of the left and upper surfaces",
+        "very dark, near-monochrome sepia tonality",
+        "a thin printed border line along the left edge"
+      ],
+      "lightSources": [
+        "a strong directional light from the upper-left/behind, rimming the figure's shoulder and the bird's wings and casting the figure's shadow to the lower-right",
+        "no light-emitting object (lamp, sun or moon) is visible inside the frame"
+      ],
+      "moonPhase": "not visible — no sky is shown; the garden wall closes off the top of the frame",
+      "spatialRelations": [
+        "the bird is above and to the viewer-right of the figure's outstretched hand, not touching it",
+        "the upper row of pentacle discs runs along the wall above and behind the figure's head",
+        "the lower row of pentacle discs is to the viewer-right of the figure, below the bird",
+        "the grapevine arbour is to the viewer-left of the figure",
+        "the stone steps are behind and to the left of the figure, leading up and away",
+        "the figure's shadow falls toward the lower-right, opposite the light"
+      ],
+      "foreground": [
+        "the paved terrace and the trailing hem of the gown",
+        "the cast shadow across the paving",
+        "the lowest grapevine leaves at the left edge"
+      ],
+      "background": [
+        "the ivy-covered wall and its arcade of pentacle discs",
+        "the arbour and steps at left",
+        "potted plants and the lower arcade at right"
+      ]
+    },
+    "uncertainObservations": [
+      "The image is very dark; counts and edges are read from faint highlights only.",
+      "The lower row of pentacle discs is cut off by the right frame edge — I count 4 visible but there may be more outside the frame, so the total count is not determinable.",
+      "Cannot tell whether the bird is landing on the hand or taking off from it.",
+      "Cannot identify the bird species beyond 'a pale broad-winged bird'.",
+      "Cannot confirm the fruit clusters are grapes rather than another hanging fruit or flower.",
+      "Cannot see the figure's face at all; only the back of the head and a sliver of jaw.",
+      "Cannot determine whether the upper arcade holds exactly 5 discs — the leftmost and rightmost arches are partly obscured by foliage."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-502",
+    "visibleFacts": {
+      "figureCount": 2,
+      "figures": [
+        {
+          "position": "center-left, seated on the ground beneath a tree",
+          "posture": "seated, knees drawn up and legs angled to viewer-right, torso leaning forward, head bowed low",
+          "gaze": "head bowed, face turned down and away; eyes not visible, looking toward the ground/lap",
+          "heldObjects": [
+            "right hand (viewer-right side) raised to the forehead/temple, supporting the bowed head",
+            "left arm resting across the knees with the hand hanging limp and empty"
+          ],
+          "clothing": "pale white-grey layered gown with wide loose sleeves and a trailing skirt, long wavy pale hair falling over the shoulders, a fine beaded or chained strand across the chest"
+        },
+        {
+          "position": "upper-right, emerging from a cloud above the seated figure",
+          "posture": "upper body and head only, leaning down and toward viewer-left; the lower body dissolves into cloud",
+          "gaze": "head angled down toward the seated figure, face in three-quarter view",
+          "heldObjects": [
+            "one arm extended down and to viewer-left, hand gripping the stem of a goblet held upright at about the seated figure's head height"
+          ],
+          "clothing": "pale, almost formless drapery indistinguishable from the cloud; long flowing pale hair"
+        }
+      ],
+      "objects": [
+        {
+          "type": "cup / goblet",
+          "count": 3,
+          "countConfidence": "high",
+          "where": "on the ground in the lower-center of the frame, in front of and below the seated figure",
+          "orientation": "all upright on their feet, bowls up",
+          "arrangement": "a loose row of three, evenly spaced, left to right"
+        },
+        {
+          "type": "cup / goblet",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper-right of center, held out by the cloud figure's hand",
+          "orientation": "upright, bowl up, stem gripped",
+          "arrangement": "single, offered in mid-air"
+        },
+        {
+          "type": "tree",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "left side, trunk rising at the left edge with branches arching right across the top of the frame",
+          "orientation": "trunk leaning slightly right, canopy overhanging the seated figure",
+          "arrangement": "single"
+        },
+        {
+          "type": "white blossom / flower",
+          "count": null,
+          "countConfidence": "low",
+          "where": "throughout the tree's canopy and massed in the lower-left foreground",
+          "orientation": "mixed",
+          "arrangement": "scattered and clustered"
+        }
+      ],
+      "environment": [
+        "a grassy bank under a flowering tree",
+        "a wide lake or river filling the right half of the middle ground",
+        "low rounded hills along the horizon at right",
+        "a line of slender trees on the far shore at right",
+        "flowering ground cover in the foreground",
+        "overall very pale, high-key watercolour palette of white, lilac and pale blue"
+      ],
+      "lightSources": [
+        "a crescent moon in the sky at mid-right",
+        "a diffuse glow behind the cloud at upper-right where the second figure appears",
+        "a bright sheen reflecting off the surface of the water"
+      ],
+      "moonPhase": "crescent",
+      "spatialRelations": [
+        "the cloud figure is above and to the viewer-right of the seated figure",
+        "the offered goblet hangs in the air above and to the right of the seated figure's bowed head",
+        "the three ground cups are below and in front of the seated figure, nearer the viewer",
+        "the crescent moon is to the viewer-right of and below the cloud figure",
+        "the tree canopy arches over the seated figure from the left",
+        "the seated figure's head is turned away from the offered goblet"
+      ],
+      "foreground": [
+        "the three cups standing on the ground",
+        "massed white and lilac blossoms at lower-left and bottom",
+        "a trailing pale ribbon or drapery across the lower-left"
+      ],
+      "background": [
+        "the lake and its reflections",
+        "distant hills and the far-shore treeline",
+        "the crescent moon and cloud bank"
+      ]
+    },
+    "uncertainObservations": [
+      "Cannot tell whether the cloud figure is a full being or only a head-and-arm emerging from vapour; its lower body has no defined edge.",
+      "The second figure is counted in figureCount because a face, hair and an arm are clearly readable, but it is ambiguous whether it should count as a separate figure or as part of the cloud.",
+      "Cannot count the blossoms on the tree or in the foreground.",
+      "Cannot tell whether the seated figure's eyes are open or closed — the face is hidden by the hand and hair.",
+      "Cannot determine whether the three ground cups are empty or hold liquid; the rendering is too pale.",
+      "Cannot tell whether the pale vertical forms on the far-right shore are trees, masts, or spires."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-c"
+  }
+]

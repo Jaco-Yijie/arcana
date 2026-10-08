@@ -1,0 +1,495 @@
+{
+  "reviewId": "review-404",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-404.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 2,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-404.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-404",
+        "visibleFacts": {
+          "figureCount": 7,
+          "figures": [
+            {
+              "position": "far left, seated on the ground",
+              "posture": "seated, legs folded, hands in lap",
+              "gaze": "turned to the right, toward the group's center",
+              "heldObjects": []
+            },
+            {
+              "position": "left foreground, nearest the viewer",
+              "posture": "seated/kneeling and leaning forward over the cloth",
+              "gaze": "down and to the right, toward the discs on the ground",
+              "heldObjects": [
+                "right hand extended down, fingertips touching or about to touch one ground disc"
+              ]
+            },
+            {
+              "position": "center, behind the child",
+              "posture": "seated, upper body inclined forward",
+              "gaze": "down and to the right toward the child",
+              "heldObjects": []
+            },
+            {
+              "position": "center-right, small child",
+              "posture": "seated between the center woman and the bearded elder",
+              "gaze": "down at the glowing disc held in front of it",
+              "heldObjects": [
+                "hands near/under a glowing disc"
+              ]
+            },
+            {
+              "position": "right of center, bearded older man in a blue robe",
+              "posture": "seated, leaning toward the child",
+              "gaze": "down toward the child and the glowing disc",
+              "heldObjects": [
+                "a glowing disc held in both hands, held flat/face-up in front of the child"
+              ]
+            },
+            {
+              "position": "upper right, under a stone arch",
+              "posture": "standing",
+              "gaze": "head inclined down toward the infant it carries",
+              "heldObjects": [
+                "an infant held against the chest"
+              ]
+            },
+            {
+              "position": "upper right, carried infant",
+              "posture": "held upright against the standing figure's chest",
+              "gaze": "toward the standing figure's face",
+              "heldObjects": []
+            }
+          ],
+          "objects": [
+            {
+              "type": "round disc engraved with a five-pointed star, lying on the cloth",
+              "count": null,
+              "countConfidence": "low",
+              "where": "spread across a pale cloth on the ground in the lower center and lower right",
+              "orientation": "all lying flat, face-up, star engraving visible on most",
+              "arrangement": "a loose staggered grid of short rows receding away from the viewer; overlapping edges and soft focus on the farther ones — my best read is 9 or 10 on the ground, not resolvable to a firm number"
+            },
+            {
+              "type": "glowing disc held aloft",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "in the bearded man's hands in front of the seated child, center-right",
+              "orientation": "held flat, face-up, emitting light",
+              "arrangement": "single, separate from the ground group"
+            },
+            {
+              "type": "white long-haired dog",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right side, on the ground beside the group",
+              "orientation": "head raised, facing left toward the group",
+              "arrangement": "lying down, body stretched to the right"
+            },
+            {
+              "type": "hanging lantern with warm light",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far right edge, behind the foliage",
+              "orientation": "hanging upright",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "pale cloth spread on the ground",
+            "stone arch / gateway with columns at the right, draped in hanging wisteria",
+            "a lake with a bright vertical reflection, mountains behind",
+            "a domed pavilion and stone steps on the left shore",
+            "flowering shrubs along the lower left border"
+          ],
+          "lightSources": [
+            "a large moon at the upper left",
+            "the glowing disc in the man's hands",
+            "a small warm lantern at the far right edge",
+            "a bright reflective streak on the lake"
+          ],
+          "moonPhase": "crescent — a bright arc on the left/lower-left with the rest of the disc faintly visible; exact phase uncertain",
+          "spatialRelations": [
+            "the seven figures form an open arc around the cloth, open toward the viewer at the bottom of the frame",
+            "the dog lies to the right of the seated group, outside the arc, facing in",
+            "the standing adult and infant are behind and above the seated group, under the arch",
+            "the discs lie between the seated figures and the bottom edge; the left foreground figure reaches down to the nearest one"
+          ],
+          "foreground": [
+            "the cloth and the ground discs",
+            "the left foreground seated figure",
+            "flowers at the lower left"
+          ],
+          "background": [
+            "arch and wisteria, lake, mountains, moon, pavilion and steps"
+          ]
+        },
+        "uncertainObservations": [
+          "ground disc count is not resolvable: several overlap, the far ones are blurred into the cloth; approximately 9-10",
+          "whether the glowing disc is held by the man, the child, or both jointly cannot be determined — both pairs of hands are at it",
+          "the sex/age of the standing figure under the arch cannot be determined",
+          "the scene is moonlit but overall very bright and pale; I cannot rule out twilight rather than full night"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene / emphasizedAspects",
+          "existing": "gathers in a moonlit garden beside a colonnade and a still lake",
+          "observed": "a large pale moon is present at upper left, but the overall illumination is broad, high-key and daylight-bright rather than night-lit",
+          "evidence": "The whole frame sits in pale near-white values with no night contrast; I could not assert night from the pixels, only that a moon is visible.",
+          "confidence": "medium"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the kneeling woman and the dog flank the discs on left and right",
+          "observed": "the near-left woman is seated on the ground with legs folded, leaning forward to place a disc — not kneeling upright",
+          "evidence": "Her hip and folded legs rest on the cloth and her torso pitches forward over them; her drapery hides the lower legs, so I cannot fully exclude a kneel.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "gathers in a moonlit garden beside a colonnade and a still lake",
+            "with": "gathers in a pale, brightly lit garden beneath a visible moon, beside a colonnade and a still lake"
+          },
+          {
+            "find": "the kneeling woman and the dog flank the discs on left and right",
+            "with": "the seated, forward-leaning woman and the dog flank the discs on left and right"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-404",
+        "visibleFacts": {
+          "figureCount": 7,
+          "figures": [
+            {
+              "position": "left, mid-height",
+              "posture": "seated/kneeling on the ground, body turned to the right",
+              "gaze": "head lowered, facing right and down toward the group and the discs",
+              "heldObjects": [
+                "none visible; hands rest in lap"
+              ]
+            },
+            {
+              "position": "left-front, nearest the viewer",
+              "posture": "seated on the ground, leaning forward, one arm extended down and to the right",
+              "gaze": "head lowered, looking down at the discs laid out in front of her",
+              "heldObjects": [
+                "fingertips of the extended right hand touch / are placing one of the discs on the cloth"
+              ]
+            },
+            {
+              "position": "center",
+              "posture": "seated, upright, turned slightly right",
+              "gaze": "head lowered and turned right, looking down toward the child and the glowing disc",
+              "heldObjects": [
+                "none visible; hands together in front"
+              ]
+            },
+            {
+              "position": "center-right, small child",
+              "posture": "seated between the center woman and the elder",
+              "gaze": "head lowered, looking down at the glowing disc in front of it",
+              "heldObjects": [
+                "both hands reach toward / rest on a glowing round disc"
+              ]
+            },
+            {
+              "position": "right of the child",
+              "posture": "seated, bearded, long white hair, in a blue-grey robe, leaning slightly toward the child",
+              "gaze": "head lowered toward the child and the glowing disc",
+              "heldObjects": [
+                "holds/supports the glowing round disc in both hands together with the child"
+              ]
+            },
+            {
+              "position": "upper right, under a stone arch",
+              "posture": "standing, body turned three-quarter toward the viewer's left",
+              "gaze": "head lowered, looking down at the infant it carries",
+              "heldObjects": [
+                "an infant held against the chest"
+              ]
+            },
+            {
+              "position": "upper right, infant in the standing figure's arms",
+              "posture": "held upright against the adult's chest",
+              "gaze": "head turned toward the adult's face",
+              "heldObjects": [
+                "none"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "round disc / coin engraved with a five-pointed star",
+              "count": 10,
+              "countConfidence": "medium",
+              "where": "laid flat on a pale cloth spread across the ground in the lower-center of the frame",
+              "orientation": "all lying flat, face-up, star pattern facing the viewer",
+              "arrangement": "a loose lozenge/diamond cluster in four ranks — 2 at the far (upper) rank, 3, then 3, then 2 nearest the viewer; they are spread out with gaps between them, not touching and not in a ring"
+            },
+            {
+              "type": "glowing round disc/dish held in hands",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "at chest height between the child and the bearded elder, center-right",
+              "orientation": "held roughly horizontal, face tipped toward the viewer, emitting light",
+              "arrangement": "single, separate from the ground cluster"
+            },
+            {
+              "type": "white long-haired dog",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right side, lying on the ground at the edge of the cloth",
+              "orientation": "lying down, forelegs extended, head up and facing LEFT toward the group and the discs",
+              "arrangement": "single"
+            },
+            {
+              "type": "lit lantern",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far right, hanging/standing among the flowers beside the arch",
+              "orientation": "upright",
+              "arrangement": "single"
+            },
+            {
+              "type": "stone arch / colonnade with hanging wisteria",
+              "count": null,
+              "countConfidence": "low",
+              "where": "upper right, behind the standing figure",
+              "orientation": "upright",
+              "arrangement": "at least two arch openings visible; the structure continues off the right frame edge"
+            }
+          ],
+          "environment": [
+            "a garden terrace with a pale cloth spread on the ground",
+            "hanging wisteria and pale blossoms overhead and along both edges",
+            "a stone archway/colonnade at the right",
+            "a lake or inlet in the middle distance with a bright vertical reflection on its surface",
+            "a pale domed pavilion and a flight of steps on the far shore at the left",
+            "misty wooded hills rising on both sides of the water"
+          ],
+          "lightSources": [
+            "a large pale moon in the upper-left sky",
+            "broad diffuse bright ambient light over the whole scene",
+            "the glowing disc held by the child and the elder",
+            "a small lantern at the right",
+            "a bright specular reflection on the water"
+          ],
+          "moonPhase": "uncertain — the upper-left disc reads as a large round body with a bright crescent-to-gibbous lit limb on its left side and the rest dim; the exact phase cannot be determined",
+          "spatialRelations": [
+            "the six older figures and the child form a loose arc around the cloth, all facing inward and downward toward the discs",
+            "the discs lie on the ground BELOW and in FRONT of the seated group, nearest the viewer",
+            "the dog lies at the right end of the arc, outside the group, facing in",
+            "the standing adult with the infant is set back and above the seated group, under the arch, separated from them",
+            "the water and far shore lie behind the seated group at the left"
+          ],
+          "foreground": [
+            "the disc-covered cloth",
+            "pale flowers and foliage along the bottom and lower-left edges"
+          ],
+          "background": [
+            "lake with reflection",
+            "domed pavilion and steps on the far shore",
+            "misty hills",
+            "pale sky with the moon"
+          ]
+        },
+        "uncertainObservations": [
+          "The ground discs overlap the cloth folds and the two rearmost are partly hidden behind the front figures' garments; 10 is my best resolved count but it could be 9 or 11.",
+          "Whether the glowing object held by the child/elder is another disc of the same kind or a separate bowl/dish of light is not certain.",
+          "Light reads as bright and daylight-like despite the visible moon; I cannot assert night."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-404",
+        "visibleFacts": {
+          "figureCount": 7,
+          "figures": [
+            {
+              "position": "viewer-left, mid-height, behind and left of the kneeling foreground woman",
+              "posture": "seated or kneeling, upper body upright, torso turned toward viewer-right; lower body hidden behind the foreground figure and drapery",
+              "gaze": "head turned toward viewer-right and tilted slightly down, looking toward the central group",
+              "heldObjects": [],
+              "clothing": "pale white/ivory gown with sheer layered overlay; very long wavy pale hair; small pale blue flower ornament above the viewer-right temple"
+            },
+            {
+              "position": "foreground, viewer-left of center, lowest of the group",
+              "posture": "kneeling / sitting low on the ground, leaning forward and to viewer-right, right arm (viewer-right arm) fully extended down toward the discs on the ground",
+              "gaze": "head bowed, eyes directed down toward the discs on the ground",
+              "heldObjects": [
+                "no object held; extended hand hovers just above / touches the rim of the uppermost ground disc with the index finger"
+              ],
+              "clothing": "white sheer gown with lace-like texture; long pale wavy hair with small blue-white flowers and a beaded strand; thin gold bracelet on the extended wrist"
+            },
+            {
+              "position": "center of the image, behind the kneeling foreground woman",
+              "posture": "seated/kneeling, torso leaning forward toward viewer-right, one hand raised to her own chin/mouth",
+              "gaze": "head bowed, looking down and to viewer-right toward the child and the held disc",
+              "heldObjects": [
+                "no object; one hand raised near her own chin/lips"
+              ],
+              "clothing": "white-to-pale-blue layered gown with sheer veil over the shoulders; long pale hair"
+            },
+            {
+              "position": "center-right, low, seated between the central woman and the bearded elder",
+              "posture": "small child, seated, torso upright and turned slightly toward viewer-left",
+              "gaze": "head bowed, eyes down on the disc in her own hands",
+              "heldObjects": [
+                "a round engraved disc with a five-pointed star, held flat in both hands at chest/lap height, face tilted up toward the viewer"
+              ],
+              "clothing": "pale blue-white gown with sheer overlay; long braided/wavy light hair with a thin ornament"
+            },
+            {
+              "position": "viewer-right of center, beside the seated child",
+              "posture": "seated/kneeling, leaning in toward viewer-left over the child",
+              "gaze": "head bowed toward viewer-left, eyes down on the disc the child holds",
+              "heldObjects": [
+                "one hand (viewer-left hand) extended beneath / beside the disc the child holds, supporting or steadying it"
+              ],
+              "clothing": "elderly man: long white hair and full white beard; blue-grey layered robe with gold scrollwork embroidery and a lighter sheer mantle"
+            },
+            {
+              "position": "upper viewer-right, standing under the stone arch, furthest back of the group",
+              "posture": "standing upright, body angled toward viewer-left, head bowed over the child she carries",
+              "gaze": "head tilted down and to viewer-left, looking at the small child in her arms",
+              "heldObjects": [
+                "a small child/toddler carried against her chest and left hip"
+              ],
+              "clothing": "pale blue-white robe with a long sheer ribbon-like veil trailing down; long wavy light hair"
+            },
+            {
+              "position": "upper viewer-right, held in the standing woman's arms",
+              "posture": "small toddler/infant, held upright against the standing woman's chest, legs tucked",
+              "gaze": "head turned toward the viewer / slightly viewer-left, face forward",
+              "heldObjects": [],
+              "clothing": "pale white wrap/gown; short light hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "pentacle disc",
+              "count": 9,
+              "countConfidence": "high",
+              "where": "on the ground in the lower third of the image, lying on a pale cloth spread over the ground, between the kneeling foreground woman and the white dog",
+              "orientation": "lying flat / near-horizontal on the ground, engraved star faces up toward the viewer",
+              "arrangement": "loose staggered grid of roughly three diagonal rows receding into the picture; discs do not overlap"
+            },
+            {
+              "type": "pentacle disc",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held in the seated child's hands at center-right, supported from below by the elder's hand",
+              "orientation": "held flat, face tilted up and toward the viewer",
+              "arrangement": "single"
+            },
+            {
+              "type": "dog",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "viewer-right foreground, lying on the ground beside the discs",
+              "orientation": "body facing viewer-left, head raised and turned toward viewer-left, forepaws extended forward",
+              "arrangement": "single"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far viewer-right, standing on a stone ledge behind the flowers",
+              "orientation": "upright, cage-type lantern with a warm lit flame inside",
+              "arrangement": "single"
+            },
+            {
+              "type": "moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper viewer-left of the sky",
+              "orientation": "disc, brightest along its lower-right limb",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "night or pre-dawn sky in pale blue-white, lightly speckled",
+            "a wide body of still water (lake or bay) across the middle ground with a vertical streak of reflected light on its surface",
+            "layered hazy mountains/forested hills behind the water",
+            "a domed pavilion or temple with columns on the viewer-left shore, with broad stone steps descending to the water",
+            "a stone archway/colonnade with carved capitals on the viewer-right, framing the standing woman",
+            "wisteria-like hanging flower clusters draping from the arch and from the upper-left of the frame",
+            "white roses, pale blue blossoms and foliage massed along the left and right foreground edges",
+            "a pale cloth/veil spread flat on the ground beneath the discs",
+            "a thin decorative double-line border runs inside the image edge"
+          ],
+          "lightSources": [
+            "the moon in the upper viewer-left sky",
+            "a small lit lantern on the stone ledge at far viewer-right",
+            "a diffuse overall glow with no single hard-shadow direction; the discs and the water reflection carry the brightest highlights"
+          ],
+          "moonPhase": "crescent",
+          "spatialRelations": [
+            "the group of figures occupies the middle band of the image, arranged in a loose arc opening toward the viewer",
+            "the discs on the ground lie below and in front of all the figures",
+            "the extended hand of the kneeling foreground woman is directly above the uppermost/farthest disc of the ground array",
+            "the white dog lies to the viewer-right of the disc array, at the same ground level",
+            "the seated child is between the central woman (viewer-left of her) and the bearded elder (viewer-right of her)",
+            "the standing woman with the infant is above and behind the bearded elder",
+            "the stone arch is behind and to the viewer-right of the standing woman",
+            "the moon is above and to the viewer-left of all figures",
+            "the water and mountains lie behind the figures and below the moon"
+          ],
+          "foreground": [
+            "pentacle discs on the pale ground cloth",
+            "the kneeling woman's extended arm and hand",
+            "white roses and blue flowers along both lower corners",
+            "the white dog's forepaws and body at viewer-right"
+          ],
+          "background": [
+            "crescent moon and pale clouds",
+            "distant mountains and forested slopes",
+            "lake with a streak of reflected light",
+            "domed colonnaded pavilion and stone steps on the left shore",
+            "stone archway, columns and hanging wisteria on the right"
+          ]
+        },
+        "uncertainObservations": [
+          "The moon's phase is genuinely ambiguous: a bright crescent-shaped lit area runs along the lower-right limb, but the whole circular disc is faintly visible with crater texture, so a 'gibbous'/'full seen through haze' reading cannot be excluded. Recorded as crescent with medium confidence.",
+          "The far viewer-left figure's lower body is hidden behind the foreground woman and drapery, so I cannot tell whether she is kneeling, sitting or crouching.",
+          "I cannot determine the exact gender of several of the pale-haired figures; I have described hair, dress and build only.",
+          "The central woman's raised hand touches her own chin/lips area, but at this resolution I cannot rule out that she is holding a small thin object there.",
+          "Whether the child's disc is held purely by the child or jointly with the elder is unclear; the elder's hand is beneath the disc but the contact point is soft-focused.",
+          "The ground discs rest on a pale cloth that blends into the flowers at the edges; a further disc hidden under the drapery or behind the dog cannot be fully excluded, though I found none on close inspection.",
+          "No human statues or non-living humanoid forms were seen, so figureCount of 7 counts only living human figures (including the carried infant)."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

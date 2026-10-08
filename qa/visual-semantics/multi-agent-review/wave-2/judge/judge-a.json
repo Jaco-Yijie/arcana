@@ -1,0 +1,72 @@
+[
+  {
+    "reviewId": "review-201",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image before reading any reviewer note. On the two blades to the woman's right I can resolve, top to bottom on each: a round pommel, a decorated grip, a wide ornate crossguard, then a blade that tapers downward and disappears into the pale blossoms near the bottom edge. Neither blade has a point at its upper end. Both are driven point-DOWN into the ground. The nearer blade's hilt sits at roughly 59% of the frame width (centre-right, in front of her skirt); the second sits at roughly 86% (right edge), its hilt lower in the frame. Separately: one figure, standing in three-quarter profile facing right, head bowed, eyes closed or nearly so, both hands raised and clasped together at her chest — I could not resolve any held object between them, the region is near-white on near-white with a sheer drape passing in front. A crescent moon sits upper right, lit on its outer edge. I see a uniform fine granular speckle over the whole painting — sky, gown and foreground blossoms alike — not directional streaks falling across the sky only.",
+    "reason": "The sword orientation meets all five thresholds. (1) Unambiguous on the image: the pommel-grip-crossguard-blade stack reads cleanly top-to-bottom on both weapons. (2) Two independent reviewers reported the same thing at HIGH confidence — reviewer-a and reviewer-d, each citing the hilt-above-blade stack separately. (3) I reached the identical conclusion from the pixels before reading either of them. (4) It is a pure orientation fact, not interpretation. (5) It is expressible as exact substring replacement. I deliberately kept the patch minimal: I corrected only the up/down orientation, which both reviewers confirmed, and preserved the original 'lower right' positional wording, because the two reviewers do NOT agree on position (reviewer-a places the nearer blade at frame centre, reviewer-d accepts lower right) and the two-reviewer threshold is therefore not met for the position claim. I also did NOT patch two further items both reviewers raised, because each fails threshold (1) — the pixels are genuinely ambiguous, and both reviewers only rated them MEDIUM, as did I: the 'folded letter or paper held in both hands' (hands are clasped but no held object is resolvable at this contrast; the source model's own uncertainty list concedes it may be a letter, a card, or folded cloth, yet the scene line states it as fact) and 'rain streaks across the sky' (the speckle is uniform over every surface, not directional, and the water shows no rain disturbance). Those two remain unsupported assertions in the data and are escalated in my report for a separate uncertainty pass rather than silently rewritten here.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "two ornate swords stand point-upward among flowers below her",
+          "with": "two ornate swords stand driven point-downward into the ground among flowers below her"
+        },
+        {
+          "find": "the two swords rise from the lower right, crossing the lower half of her gown",
+          "with": "the two swords descend point-downward into the ground at the lower right, crossing the lower half of her gown"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-203",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "Looking at the image myself first: the tall pointed arched window runs from the top of the artwork down to roughly the level of the reclining figure's head — about the upper half of the left edge. Below that point the left edge is solid interior: the armillary sphere on its tripod, the carved end panel of the stone bier, then polished dark floor carrying a large circular star-chart inlay. The window is simply not present along the lower half of the left edge. I also independently count three swords mounted point-down on the wall above the figure, evenly spaced with clear dark gaps, plus one separate blade laid horizontally along the front panel of the bier — these two groups are reliable. One figure lies supine, head left on a dark pillow, hands folded on the chest, covered by a constellation-patterned coverlet. A caged lantern with a warm flame stands at the right end. The wall is flat and covered in faint circular star-chart diagrams; no ceiling, vault rib or springing is visible anywhere in the frame, but the view is also cropped above the hanging blades, so I cannot affirm or deny a vault.",
+    "reason": "The 'full left edge' claim is wrong on the pixels — I verified that independently — but only ONE reviewer (reviewer-a, and only at medium confidence) raised it; reviewer-c did not. The two-reviewer threshold for AUTO_CORRECT is explicitly not met, so I will not rewrite it. Removing the single claim is the lower-cost, safer action than handing a false spatial assertion to the interpretation model, and it is excisable as one named list entry, so nothing else in spatialRelations is lost — the reliable entries (lantern opposite the armillary sphere, floor star-map below and in front of the slab, three swords above the figure) all survive. I did NOT action reviewer-c's separate objection to 'dark vaulted chamber' in the scene line: it too is single-reviewer, the ceiling is outside the crop so the claim is neither confirmable nor refutable from pixels, and 'vaulted' is a fragment inside the scene sentence rather than a list entry — excising it would require discarding the entire scene field, a cost far out of proportion to a low-impact architectural descriptor. The two reviewers do not contradict each other here; they each flagged a different unsupported assertion, so this is not a HUMAN_REVIEW case.",
+    "uncertainItems": [
+      {
+        "field": "spatialRelations",
+        "item": "the window occupies the full left edge, its light falling across the figure's head and shoulder"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-204",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I viewed the image before reading the packet. The flat wooden boat runs stern-left to bow-right; the hull spans roughly x=50 to x=420 in the frame, so its midpoint is near x=235. The row of upright hilted blades spans roughly x=150 to x=290, centred near x=220 — squarely amidships. The cloaked figure stands at the stern (left) end, seen entirely from behind, both hands on a long pole angled down into the water at the right. Between the last blade and the prow there is a long, clearly empty stretch of hull: the only things in it are a small hanging lantern around x=318 and a coil of rope looped over the bow post near x=400. The blade row is therefore not in the bow, and does not occupy the boat's forward half. I resolve six pommels in the row, though they overlap enough that a hidden seventh cannot be excluded — I am not touching the count. Surroundings: sunlit deciduous forest, slanted light shafts from upper centre-right, grassy bank and pale path on the right shore, ferns, white daisies, mushrooms and a mossy stump across the foreground, tree trunks framing both edges.",
+    "reason": "All five thresholds are met. (1) The placement is unambiguous on the image — there is a wide, visibly empty run of hull between the last blade and the prow, and the lantern and rope sit in that gap. (2) Two independent reviewers reported the identical fact at HIGH confidence: reviewer-c and reviewer-e both state the rack is amidships and both state the forward half is clear. (3) I measured the same thing myself from the hull endpoints before reading either. (4) It is an observable position fact, not interpretation or wording taste. (5) It reduces to three exact substring replacements, each verified to occur exactly once in the reveal packet. I touched only the bow/amidships placement; I did not alter the sword count, which both reviewers flagged as unresolvable (reviewer-c left it null, reviewer-e called six a floor) and which the source file already lists under its own uncertainty, nor the lantern-at-the-prow entry, which is correct.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "a rack of upright swords is mounted in the boat's bow",
+          "with": "a rack of upright swords is mounted amidships, across the middle of the hull"
+        },
+        {
+          "find": "rack of upright swords mounted across the boat's bow",
+          "with": "rack of upright swords mounted across the middle of the boat"
+        },
+        {
+          "find": "the figure stands behind the sword rack, which occupies the boat's forward half",
+          "with": "the figure stands behind the sword rack, which occupies the middle of the boat, with open hull between it and the bow"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-206",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "I opened the image first. A kneeling figure in tattered dark robes hunches over a large corded bundle on cobblestones, head bowed, face hidden by long hair; one hand grips the hilt of a large vertical sword driven into the bundle, the other is splayed flat on the bundle. Three swords are individually resolvable. Tracing each blade axis: the left sword's pommel sits at roughly x=140 while its blade enters the bundle near x=205; the right sword's pommel sits near x=400 while its blade enters near x=355; the central sword is vertical near x=255. So on both outer swords the TOP is further from the centre than the point is — their hilts splay away from the central blade, forming a fan, while their points converge into the bundle. Under the ordinary reading of 'lean inward' (top tilting toward centre) the existing line is backwards; under a reading about where the points converge it is defensible. Background: a bright ragged break in heavy cloud at upper right backlighting the figure, a bare dead tree upper left, a cobbled road receding right toward a distant spired silhouette with specks that read as birds.",
+    "reason": "My own reading of the geometry agrees with reviewer-b: the outer hilts splay outward, so 'lean inward' is misleading as stated. But AUTO_CORRECT is explicitly barred here — this is the exact case the threshold names, one reviewer passing and only the other raising it. reviewer-e returned a clean pass and recorded 'all three swords converge on the same bundle', which is true of the points and does not contradict reviewer-b, so the two are not in direct conflict and this is not HUMAN_REVIEW either; I can read the geometry myself. AUTO_PASS would be wrong too, because reviewer-b is not merely expressing a wording preference — the lean direction is measurable and the natural reading of the existing phrase is false. Since the phrase is genuinely ambiguous between 'tops tilt in' (false) and 'points converge in' (true), and since I may not rewrite it on one reviewer's report, the conservative action is to drop the single entry rather than hand a phrase that reads backwards to the interpretation model. The loss is contained: it is one named spatialRelations entry, and the reliable neighbours survive, including 'the central sword is held upright by the figure and points down into the bundle', which I independently confirm, and the road-to-castle recession. The three-sword count, which both reviewers call a floor rather than a certainty because the figure's body covers part of the bundle, is left untouched.",
+    "uncertainItems": [
+      {
+        "field": "spatialRelations",
+        "item": "the two outer swords lean inward at angles, flanking the central blade"
+      }
+    ]
+  }
+]

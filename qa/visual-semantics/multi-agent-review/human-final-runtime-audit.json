@@ -1,0 +1,315 @@
+{
+  "humanCorrections": 7,
+  "runtimeChanged": 6,
+  "qaOnly": 1,
+  "visionCalls": 0,
+  "results": [
+    {
+      "reviewId": "review-001",
+      "card": "legacy-shadow/cups-01",
+      "reviewStatus": "corrected",
+      "runtimeChanged": true,
+      "qaChanges": [
+        {
+          "path": "figures.0.role",
+          "before": "kneeling hooded figure",
+          "after": "kneeling figure with visible loose hair and no hood"
+        },
+        {
+          "path": "figures.0.posture",
+          "before": "kneeling, head bowed so the face is entirely hidden by dark hair and hood, both hands raised holding a chalice",
+          "after": "kneeling, head bowed so the face is entirely hidden by dark hair, both hands raised holding a chalice"
+        }
+      ],
+      "runtimeAfter": {
+        "scene": "A faceless figure with visible loose hair and no hood covering the head kneels in a dark stone passage, holding a chalice from which water pours through their cupped hands into a channel below, while a pale bird hovers in the lit wall behind.",
+        "keyObjects": [
+          "stemmed chalice with textured, mottled surface",
+          "stream of water falling from the chalice",
+          "cupped hands catching the water",
+          "stone channel or gutter running toward the viewer",
+          "cobbled stone paving"
+        ],
+        "spatialRelations": [
+          "the figure sits between the dark left-hand depth and the lit wall on the right",
+          "the bird hovers above and to the right of the figure's head",
+          "the water falls from the chalice through the hands into the channel in the lower centre"
+        ],
+        "visualTensions": [
+          "bright falling water against an almost entirely black surround",
+          "the pale hovering bird against the heavy, motionless figure"
+        ],
+        "emphasizedAspects": [
+          "something opening and giving out more than can be held",
+          "capacity and flow rather than a relationship between two people",
+          "the vessel as the source of what is offered"
+        ],
+        "deckSpecificMotifs": [
+          "monochrome near-greyscale rendering with a trace of violet"
+        ]
+      }
+    },
+    {
+      "reviewId": "review-003",
+      "card": "legacy-moonlight/cups-10",
+      "reviewStatus": "corrected",
+      "runtimeChanged": true,
+      "qaChanges": [
+        {
+          "path": "confidence.uncertainDetails.1",
+          "before": "exact count of goblets on the foreground table",
+          "after": "exact count of goblets resting on the foreground cloth; the exact support beneath the cloth is unclear"
+        },
+        {
+          "path": "foreground.0",
+          "before": "a low table draped in pale patterned cloth",
+          "after": "a pale patterned cloth spread on the grass; the exact support beneath it is unclear"
+        },
+        {
+          "path": "foreground.1",
+          "before": "a cluster of glass goblets on the table",
+          "after": "a cluster of glass goblets resting on the cloth"
+        }
+      ],
+      "runtimeAfter": {
+        "scene": "A couple stands with their backs to the viewer on a misty shore, watching two children run toward a distant castle while a rainbow arcs overhead and cups resting on a cloth spread on the grass glow in the foreground.",
+        "keyObjects": [
+          "a second cluster of glass goblets resting on a cloth spread on the grass in the foreground",
+          "a rainbow band",
+          "a full moon",
+          "a lit lantern with a metal frame",
+          "a cloth spread on the grass with the cups resting on it"
+        ],
+        "spatialRelations": [
+          "the couple stands between the foreground cloth with cups and the children",
+          "the children run ahead of the couple toward the water",
+          "the sky-borne goblets arc above the couple's heads"
+        ],
+        "visualTensions": [
+          "the couple faces away from the viewer while the cups resting on the cloth sit behind them",
+          "the children move outward toward the horizon while the adults stand still"
+        ],
+        "emphasizedAspects": [
+          "a settled, long-standing bond shown by the couple's relaxed closeness",
+          "continuity across generations"
+        ],
+        "deckSpecificMotifs": [
+          "watercolour wash texture with soft edges",
+          "floral wreath and trailing ribbon details"
+        ]
+      }
+    },
+    {
+      "reviewId": "review-004",
+      "card": "legacy-classic/swords-08",
+      "reviewStatus": "corrected",
+      "runtimeChanged": true,
+      "qaChanges": [
+        {
+          "path": "composition.openness",
+          "before": "enclosed at the centre by the ring of swords, open toward the distant horizon",
+          "after": "open passage between flanking sword groups, open toward the distant horizon"
+        },
+        {
+          "path": "confidence.uncertainDetails.0",
+          "before": "exact number of swords fully resolvable in the ring",
+          "after": "five swords are confirmed on the left and four on the right, forming an open passage"
+        }
+      ],
+      "runtimeAfter": {
+        "scene": "A blindfolded woman in a long pale gown stands bound at the waist and arms in a marshy field, flanked by five upright swords to her left and four to her right, forming an open passage, with a hilltop castle under a breaking sky behind her.",
+        "keyObjects": [
+          "cloth blindfold tied over the eyes, its tail trailing to the right",
+          "thick rope coiled several times around the waist and pinning the arms",
+          "upright swords driven point-down into the ground, arranged with five to the left and four to the right, leaving an open passage",
+          "long pale gown with patterned hem",
+          "bare feet in wet mud"
+        ],
+        "spatialRelations": [
+          "five swords stand to the left and four to the right of the woman, leaving an open passage with no complete ring behind her",
+          "the castle sits far behind her on the left horizon",
+          "the water channel runs from the left middle distance toward the lower foreground"
+        ],
+        "visualTensions": [
+          "the two flanking groups of blades beside the figure against the wide open plain beyond",
+          "the bright light in the upper left against the massed dark cloud"
+        ],
+        "emphasizedAspects": [
+          "the constraint is real and physically rendered through rope and blindfold",
+          "the flanking arrangement of five swords to the left and four to the right",
+          "the bowed, still posture of being bound"
+        ],
+        "deckSpecificMotifs": [
+          "fine engraved cross-hatching in the manner of an old printed book",
+          "deep wine-red accents on the sword grips"
+        ]
+      }
+    },
+    {
+      "reviewId": "review-005",
+      "card": "legacy-moonlight/swords-06",
+      "reviewStatus": "corrected",
+      "runtimeChanged": false,
+      "qaChanges": [
+        {
+          "path": "confidence.uncertainDetails.0",
+          "before": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+          "after": "five swords are clearly visible; no additional sword can be reliably confirmed"
+        }
+      ],
+      "runtimeAfter": {
+        "scene": "A pale-robed figure stands poling a small wooden boat across still water at night, a second seated figure and a row of upright swords riding in the bow, with a distant spired castle on the far shore.",
+        "keyObjects": [
+          "small wooden boat with carved prow and stern post",
+          "long slender pole held by the standing figure",
+          "row of upright swords standing in the bow of the boat",
+          "hanging lantern with warm glow at the boat's stern",
+          "garlands of vines and small white blossoms draped along the hull"
+        ],
+        "spatialRelations": [
+          "the boat sits diagonally across the lower half, bow toward the right",
+          "the standing figure occupies the left of the boat, the seated figure the centre, the swords the right",
+          "the castle sits on the horizon at the right, beyond the water"
+        ],
+        "visualTensions": [
+          "the boat's forward diagonal against the still, level horizon",
+          "the single warm lantern glow against the cool blue night"
+        ],
+        "emphasizedAspects": [
+          "a crossing in progress, moving away from one shore toward another",
+          "the burden carried along rather than left behind",
+          "a gentle, unhurried transition"
+        ],
+        "deckSpecificMotifs": [
+          "translucent ribbon-veils streaming from the figures and boat",
+          "vine and blossom garlands wound around the hull"
+        ]
+      }
+    },
+    {
+      "reviewId": "review-009",
+      "card": "legacy-moonlight/wands-04",
+      "reviewStatus": "corrected",
+      "runtimeChanged": true,
+      "qaChanges": [
+        {
+          "path": "confidence.uncertainDetails.0",
+          "before": "exact number of poles resolved as four, but the two rear poles are partly obscured by garland",
+          "after": "three main garlanded slender poles can be reliably confirmed"
+        }
+      ],
+      "runtimeAfter": {
+        "scene": "Under a floral arch of three slender poles, a group of pale-robed women raise small cups in a moonlit garden beside a misty lake and a distant town.",
+        "keyObjects": [
+          "three slender poles forming an arch",
+          "garland of white flowers and leaves across the arch",
+          "trailing pale ribbons and beaded chains",
+          "hanging glass lanterns",
+          "small cups held by the figures"
+        ],
+        "spatialRelations": [
+          "three slender poles frame the scene",
+          "the central figures stand between the poles, in front of the draped table",
+          "the lake and town lie behind the arch, below the moon"
+        ],
+        "visualTensions": [
+          "the solid vertical poles against the dissolving mist",
+          "the close, intimate toast against the vast distant shore"
+        ],
+        "emphasizedAspects": [
+          "gathering under a structure",
+          "a moment of arrival being marked together",
+          "a framework that holds and shelters"
+        ],
+        "deckSpecificMotifs": [
+          "silver linework on pale ground",
+          "ribbons and beaded chains trailing from the arch"
+        ]
+      }
+    },
+    {
+      "reviewId": "review-010",
+      "card": "legacy-classic/swords-06",
+      "reviewStatus": "corrected",
+      "runtimeChanged": true,
+      "qaChanges": [],
+      "runtimeAfter": {
+        "scene": "A standing boatman poles a small wooden boat carrying two seated passengers (one wearing a hood, the other with uncovered hair) and a cluster of upright swords across a wide river, with a stone tower on the left bank and low mountains on the far shore.",
+        "keyObjects": [
+          "wooden rowing boat with plank hull and rope lashing",
+          "long wooden pole held by the boatman",
+          "cluster of upright swords standing in the boat",
+          "stone tower with battlements on the left bank",
+          "low mountain ridge on the far shore"
+        ],
+        "spatialRelations": [
+          "the boatman stands behind and above the two seated passengers",
+          "the swords stand between the seated passengers and the bow of the boat",
+          "the tower sits on the left bank, behind and above the boat"
+        ],
+        "visualTensions": [
+          "the boat's forward motion against the stillness of the seated figures",
+          "the sharp vertical swords against the soft horizontal water and sky"
+        ],
+        "emphasizedAspects": [
+          "a crossing in progress, moving away from what lies behind",
+          "the burden carried along with the travellers",
+          "an undramatic, steady passage rather than a decisive break"
+        ],
+        "deckSpecificMotifs": [
+          "engraved cross-hatching and fine line shading"
+        ]
+      }
+    },
+    {
+      "reviewId": "review-207",
+      "card": "legacy-moonlight/pentacles-06",
+      "reviewStatus": "corrected",
+      "runtimeChanged": true,
+      "qaChanges": [
+        {
+          "path": "figures.2.role",
+          "before": "kneeling veiled figure, left",
+          "after": "kneeling figure with visible uncovered braided hair, left"
+        },
+        {
+          "path": "figures.1.role",
+          "before": "kneeling veiled figure, right",
+          "after": "kneeling hooded figure, right"
+        },
+        {
+          "path": "foreground.3",
+          "before": "folds of the kneeling figures' veils",
+          "after": "folds of the right kneeling figure’s hood and garments"
+        }
+      ],
+      "runtimeAfter": {
+        "scene": "A tall, pale-robed woman stands holding a hanging balance in one hand and lowering a single pentacle-embossed coin toward two kneeling figures who raise their hands to receive it, the left with visible braided hair and the right wearing a hood, in a misty moon…",
+        "keyObjects": [
+          "hanging two-pan balance with chains, held by the standing woman",
+          "single round coin with a star/pentacle design being offered",
+          "round coins with star/pentacle designs lying on the draped cloth on the ground",
+          "coins resting in the balance pans",
+          "glowing lantern at lower right"
+        ],
+        "spatialRelations": [
+          "the standing woman towers over both kneeling figures",
+          "the balance hangs between the standing woman and the kneeling pair",
+          "the offered coin sits in the gap between the standing woman's hand and the right kneeling figure's cupped hands"
+        ],
+        "visualTensions": [
+          "the balance hangs level while the coin is being given from one hand only",
+          "the standing figure's height contrasts with the low kneeling postures"
+        ],
+        "emphasizedAspects": [
+          "resources moving between people",
+          "the visible terms of the exchange, shown as a balance held in view",
+          "giving and receiving as a face-to-face gesture"
+        ],
+        "deckSpecificMotifs": [
+          "watercolour-soft edges with low mist near the horizon"
+        ]
+      }
+    }
+  ]
+}

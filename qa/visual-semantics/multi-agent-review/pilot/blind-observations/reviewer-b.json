@@ -1,0 +1,395 @@
+[
+ {
+  "reviewId": "review-010",
+  "visibleFacts": {
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "left-of-center, standing at the stern/near end of a wooden boat",
+     "posture": "standing, weight on forward leg, back turned to the viewer",
+     "gaze": "away from viewer, toward the right/far distance down the water",
+     "heldObjects": [
+      "a long wooden pole/punt gripped in both hands, angled down into the water at lower left"
+     ],
+     "clothing": "rust-red/brown hooded cape over a blue-grey belted tunic, dark leggings, small pouch on the belt"
+    },
+    {
+     "position": "center of the boat, seated",
+     "posture": "seated, hunched, back to the viewer, head slightly bowed",
+     "gaze": "cannot be determined (face not visible; head turned away)",
+     "heldObjects": [
+      "none visible"
+     ],
+     "clothing": "pale cream/oatmeal cloak or shawl draped over head and shoulders; long light hair visible"
+    },
+    {
+     "position": "center-right of the boat, seated beside/behind the cream-cloaked figure",
+     "posture": "seated, back to the viewer",
+     "gaze": "cannot be determined (fully hooded, face not visible)",
+     "heldObjects": [
+      "none visible"
+     ],
+     "clothing": "dark blue-grey hooded cloak covering head and body"
+    }
+   ],
+   "objects": [
+    {
+     "type": "upright blade/sword standing point-down in the boat",
+     "count": null,
+     "countConfidence": "low",
+     "where": "clustered in the forward (right) half of the boat's interior, blades vertical with cross-guards and pommels at the top",
+     "note": "one blade sits apart and lower-left of the group, then a tight row follows to its right; I can individually resolve 5, and there appears to be a 6th whose blade overlaps a neighbour. Not stated as a number."
+    },
+    {
+     "type": "boat",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "occupies the lower half of the frame, prow pointing right, clinker/planked wooden hull with visible ribs and a rope lashing at the prow"
+    },
+    {
+     "type": "pole/punt",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held by the standing figure, running from upper center down to the water at lower left"
+    },
+    {
+     "type": "bundle/sack of cargo",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "on the boat floor in front of the seated figures, tied with rope"
+    },
+    {
+     "type": "stone tower with battlements",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left, on a rocky bank, with a ruined wall and arched openings extending right of it"
+    }
+   ],
+   "environment": [
+    "broad calm river or lake filling the lower and middle frame, hatched ripple lines",
+    "rocky left bank with grass and shrubs beneath the tower",
+    "low wooded far bank on the right with small trees",
+    "range of low hills/mountains on the right horizon",
+    "pale yellow-cream sky with long horizontal streaked clouds",
+    "decorative ruled border frame with ornamental corner scrollwork around the whole picture",
+    "ink-hatched engraving style on aged/tan paper"
+   ],
+   "lightSources": [
+    "diffuse pale light from the low horizon at center-right; no sun disc or moon is drawn"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the standing poler is behind and to the left of the two seated figures",
+    "the blades stand between the seated figures and the prow, i.e. ahead of the passengers",
+    "the boat moves away from the tower on the left bank toward the open water and distant hills at right",
+    "ripples trail behind and around the hull"
+   ],
+   "foreground": [
+    "boat hull",
+    "water surface and ripples",
+    "lower end of the pole entering the water"
+   ],
+   "background": [
+    "tower and ruined wall",
+    "far shoreline and trees",
+    "distant hills",
+    "clouded sky"
+   ]
+  },
+  "uncertainObservations": [
+   "the exact number of upright blades cannot be resolved: blades overlap and some cross-guards sit nearly edge-on; 5 are individually resolvable and a 6th is suggested",
+   "faces of all three figures are not visible, so gaze direction for the two seated figures is undetermined",
+   "whether the bundle on the boat floor is cargo, a sack, or part of a cloak is unclear"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-005",
+  "visibleFacts": {
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "left-of-center, standing in the rear half of a pale boat",
+     "posture": "standing upright, three-quarter/back view, long hair and veil streaming to the left",
+     "gaze": "toward the right, along the water toward the far shore",
+     "heldObjects": [
+      "a slender pale pole held in the right hand, raised and angled down to the water at lower left"
+     ],
+     "clothing": "long white/pale-lilac gown with a very long trailing translucent veil; very long pale hair"
+    },
+    {
+     "position": "center of the boat, seated in front of the standing figure",
+     "posture": "seated, small, back and profile to viewer, head slightly inclined",
+     "gaze": "toward the right/forward (face mostly hidden)",
+     "heldObjects": [
+      "none visible"
+     ],
+     "clothing": "white hood/veil and pale robe"
+    }
+   ],
+   "objects": [
+    {
+     "type": "upright sword standing point-down in the boat",
+     "count": null,
+     "countConfidence": "low",
+     "where": "planted in a row through the middle/forward section of the hull, hilts and pommels catching light above the gunwale, blades running down toward the boat floor",
+     "note": "I can individually resolve 5 hilts left-to-right; one further blade to the right may be a 6th or a reflection/overlap. No number asserted."
+    },
+    {
+     "type": "boat",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower center, prow to the right, pale planked hull decorated with trailing garlands of leaves and small white flowers"
+    },
+    {
+     "type": "pole",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "from the standing figure's hand down-left into the water"
+    },
+    {
+     "type": "hanging lantern",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "suspended from an ornate post at the right end (prow) of the boat, glowing warm yellow-white"
+    },
+    {
+     "type": "crescent moon",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right of the sky, bright, partly veiled by cloud"
+    },
+    {
+     "type": "distant spired building / castle with multiple tall towers",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right background, pale and hazy above the far treeline"
+    }
+   ],
+   "environment": [
+    "still pale water filling the middle and lower frame, with soft reflections and scattered floating petals",
+    "misty trees/foliage along the left edge and the far right shoreline",
+    "high pale blue-white clouded sky",
+    "flowering branches and pale blossoms intruding into the lower-left foreground",
+    "thin ruled border with ornamental corners; overall very high-key watercolor palette of white, pale blue, lilac"
+   ],
+   "lightSources": [
+    "crescent moon, upper right",
+    "the lit lantern at the boat's prow",
+    "a broad pale glow on the water below the moon"
+   ],
+   "moonPhase": "crescent (thin), horns oriented toward the lower left",
+   "spatialRelations": [
+    "the standing figure is behind the seated figure; both face the same direction, toward the prow at right",
+    "the row of blades stands between the seated figure and the lantern post at the prow",
+    "the lantern hangs at the far right of the boat, nearest the viewer's right edge",
+    "the moon is high above and to the right of the distant spires; its light falls on the water between the boat and the far shore",
+    "garlands of leaves and flowers hang down the outside of the hull into the water"
+   ],
+   "foreground": [
+    "blossoming foliage lower left",
+    "water surface and boat reflection",
+    "the boat hull and its flower garlands"
+   ],
+   "background": [
+    "misty treeline",
+    "pale spired towers at right",
+    "cloud bank and crescent moon"
+   ]
+  },
+  "uncertainObservations": [
+   "exact number of upright swords cannot be determined; blades overlap and the pale palette flattens them against the hull",
+   "whether the rightmost pale vertical is a further blade or the lantern post's shaft is ambiguous",
+   "the seated figure's face and gaze are largely hidden by the hood/veil",
+   "whether the distant structure is a building or a formation of tall pale trees is not fully resolvable through the mist"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-008",
+  "visibleFacts": {
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "left of center, standing, in near-silhouette",
+     "posture": "standing, head bowed and turned to the right toward the other figure, torso leaning slightly forward",
+     "gaze": "downward, toward the object held between the two figures",
+     "heldObjects": [
+      "right arm extended forward; fingers reaching down to/just above a small vessel",
+      "left hand or forearm appears to support the vessel from below"
+     ],
+     "clothing": "long dark hooded/loose robe with ragged trailing strands hanging from the sleeve and hem; shoulder-length ragged hair"
+    },
+    {
+     "position": "right of center, standing, facing left toward the first figure",
+     "posture": "standing upright, head slightly lowered, arms extended forward at waist height",
+     "gaze": "downward-left, toward the vessel held between them",
+     "heldObjects": [
+      "a small footed cup/goblet held forward in both hands, containing a small pale bluish flower"
+     ],
+     "clothing": "long dark fitted gown with a full trailing skirt reaching the floor; hair gathered up in a bun"
+    }
+   ],
+   "objects": [
+    {
+     "type": "goblet/cup set in a recessed wall niche",
+     "count": 5,
+     "countConfidence": "medium",
+     "where": "a horizontal row of rectangular alcoves across the upper-left and upper-center background wall; counting left to right, one stemmed cup stands in each of the five alcoves"
+    },
+    {
+     "type": "goblet/cup held between the two figures",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center of the frame at the figures' waist height, the brightest object in the image"
+    },
+    {
+     "type": "flower",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "pale blue-white bloom sitting in/above the mouth of the held cup"
+    },
+    {
+     "type": "stone staircase",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right background, steps ascending from lower center-right toward the upper right beneath an arch/column"
+    },
+    {
+     "type": "bare branches/twigs",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower left corner, thin dark growth against the wall"
+    }
+   ],
+   "environment": [
+    "very dark stone interior; almost the whole frame is near-black",
+    "rough textured stone back wall carrying the row of niches",
+    "cracked/cobbled stone floor visible as faint highlights in the lower center",
+    "an arched opening with a column at the right edge above the stairs",
+    "thin ruled border along the left and right edges of the picture"
+   ],
+   "lightSources": [
+    "a faint glow on and around the held cup and its flower (the main highlight)",
+    "weak individual glints inside each wall niche picking out the cups' rims and stems",
+    "a dim wash of light falling on the stairs at the right"
+   ],
+   "moonPhase": "no moon or sun visible (interior scene)",
+   "spatialRelations": [
+    "the two figures stand facing each other, close, with the lit cup exactly between them at the frame's center",
+    "the row of niched cups runs across the wall behind and above both figures, at roughly head height and higher",
+    "the left figure is taller and leans toward the right figure",
+    "the stairs recede behind the right figure's shoulder",
+    "the right figure's hands are lower and cupped beneath the vessel; the left figure's hand comes down onto it from above"
+   ],
+   "foreground": [
+    "the two silhouetted figures",
+    "the lit cup and flower",
+    "stone floor"
+   ],
+   "background": [
+    "niched wall with cups",
+    "staircase and arch at right",
+    "bare branches at lower left"
+   ]
+  },
+  "uncertainObservations": [
+   "extremely low light: the niche count of 5 is my best individual resolution but the leftmost and rightmost alcoves are close to the frame edge and could conceal a further one",
+   "it is unclear whether the left figure is giving, receiving, or merely touching the held cup",
+   "neither face is legible; only head orientation and posture are readable, not expression",
+   "the pale object in the cup reads as a small flower but its form is not fully resolvable",
+   "whether the left figure's second hand truly supports the cup or is only overlapping in silhouette cannot be determined"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-001",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, on a low stone step",
+     "posture": "kneeling/crouching low, shoulders rounded, head deeply bowed",
+     "gaze": "downward toward the cup in the hands; face is in full shadow and not visible",
+     "heldObjects": [
+      "a large stemmed chalice/goblet held upright in the left hand at chest height, filled to overflowing",
+      "the right hand held open and flat beneath the chalice, palm up, catching the falling water"
+     ],
+     "clothing": "dark heavy robe with long sleeves and a hood/mantle; long stringy dark hair falling over the face"
+    }
+   ],
+   "objects": [
+    {
+     "type": "chalice/goblet",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center of the frame, held in the figure's hands; it is the lightest object in the lower half of the image"
+    },
+    {
+     "type": "bird with outspread wings",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right, pale/white against the dark wall, wings spread wide and upward, head turned to the left, tail below"
+    },
+    {
+     "type": "arched doorway/opening",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper center-right background, a tall dark arch in the wall behind the figure"
+    },
+    {
+     "type": "stone step/stair flight",
+     "count": null,
+     "countConfidence": "low",
+     "where": "left middle ground, a flight receding up-left into darkness; individual treads are not separable"
+    },
+    {
+     "type": "thin bare branch/vine",
+     "count": null,
+     "countConfidence": "low",
+     "where": "right edge, lower half, crossing the dark wall"
+    }
+   ],
+   "environment": [
+    "dark stone interior or courtyard, nearly monochrome brown-black",
+    "cobbled/flagstone floor in the foreground with a low broad step running across the frame",
+    "rough textured stone wall on the right, lit where the bird appears",
+    "a stream of water pouring out of the chalice, running over the figure's open hand, falling to the step and spreading across the flagstones in the lower center",
+    "narrow ruled border at the left and right edges of the picture"
+   ],
+   "lightSources": [
+    "the glowing pale area on the right wall surrounding the bird",
+    "secondary highlight on the chalice rim and on the falling/pooling water"
+   ],
+   "moonPhase": "no moon or sun visible",
+   "spatialRelations": [
+    "the bird is above and to the right of the kneeling figure, on the wall behind them; the figure is not looking at it",
+    "the chalice is held in front of the figure's chest, and the overflow falls vertically past the right hand onto the step and then forward across the foreground stones",
+    "the stairway on the left recedes behind the figure's left shoulder",
+    "the lit wall at right is the only bright region; the left third of the frame is almost entirely black"
+   ],
+   "foreground": [
+    "flagstone floor",
+    "the spreading water",
+    "the low step"
+   ],
+   "background": [
+    "dark arch",
+    "stairs at left",
+    "lit stone wall with the bird"
+   ]
+  },
+  "uncertainObservations": [
+   "whether the bird is a living bird, a carved relief on the wall, or a projected/painted light form cannot be determined",
+   "the figure's face, expression and exact gaze are completely obscured by shadow and hair",
+   "the number of stair treads at the left is not countable in the darkness",
+   "whether the figure is kneeling on both knees or crouching on one is ambiguous under the robe",
+   "whether the dark shape upper center-right is a doorway, a window, or a niche is not certain"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ }
+]

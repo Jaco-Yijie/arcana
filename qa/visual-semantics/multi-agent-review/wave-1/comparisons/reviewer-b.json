@@ -1,0 +1,255 @@
+[
+ {
+  "reviewId": "review-107",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the shafts sweep from upper right down toward the left, converging near the gate",
+    "observed": "all shafts run mutually parallel at an identical upper-right-to-lower-left angle; none converge, and none reach the gate",
+    "evidence": "Every shaft in both the upper and lower cluster sits on the same diagonal with no angular variation between them — parallel, not convergent. The lowest-left shaft terminates around the mid-left of the sky, still clearly above and to the right of the top of the stone archway; there is an empty band of sky between the shaft field and the gateway.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects / visualTensions",
+    "existing": "near ruin versus distant intact castle",
+    "observed": "the distant structure is itself visibly ruined — broken, roofless, jagged-topped silhouettes",
+    "evidence": "The far-bank silhouette shows a tall tower with a broken, irregular crown and adjoining walls with ragged open tops and gaps; nothing reads as an intact roofline or complete battlement. The contrast asserted between a near ruin and an intact castle does not exist in the pixels.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "toward a distant castle silhouette above a still river",
+    "observed": "the shafts travel down and to the left, away from the ruined silhouette, which sits low on the right",
+    "evidence": "The ruined structures are in the lower right of the frame at the waterline; the shafts are in the upper two-thirds and angle down-left, so their direction of travel leads away from those structures, not toward them.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "eight elongated shafts with fletched ends crossing the sky",
+    "observed": "count not establishable; substantially more than eight are individually resolvable",
+    "evidence": "Two distinct clusters are present. In the upper cluster I traced roughly eight separate shafts on my own; the lower cluster, between the mid-sky and the archway height, holds roughly seven more. So eight cannot be the total. I did not establish a firm number — the faintest shafts dissolve into dark cloud — so this is flagged as unsupported rather than replaced with a different figure.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "eight elongated shafts with fletched ends crossing the sky",
+    "observed": "the shafts are tapered at one end; whether the trailing ends carry fletching is not determinable",
+    "evidence": "At this rendering scale the rear ends show small angular flares that could be fletching, a socket, or simply brush detail. The image does not support the specific claim of fletched ends.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the shafts sweep from upper right down toward the left, converging near the gate",
+     "with": "the shafts sweep from upper right down toward the left, all mutually parallel, and none reach the gate"
+    },
+    {
+     "find": "near ruin versus distant intact castle",
+     "with": "near ruin versus distant ruin across the water"
+    },
+    {
+     "find": "distant multi-towered castle silhouette",
+     "with": "distant multi-towered ruined silhouette with broken, roofless tops"
+    },
+    {
+     "find": "the castle sits on the far bank at the right, below the shafts' path",
+     "with": "the ruined structures sit on the far bank at the right, below the shafts' path"
+    },
+    {
+     "find": "toward a distant castle silhouette above a still river",
+     "with": "away to the lower left, above a ruined silhouette and a still river on the right"
+    },
+    {
+     "find": "eight elongated shafts with fletched ends crossing the sky",
+     "with": "numerous elongated tapered shafts crossing the sky in two parallel clusters (exact count not determinable; clearly more than eight)"
+    },
+    {
+     "find": "exact count of the streaking shafts (appears to be eight, some partially cropped or fading)",
+     "with": "exact count of the streaking shafts (not determinable; clearly more than eight, roughly 14-16 traceable across two clusters)"
+    },
+    {
+     "find": "gothic ruin and castle architecture",
+     "with": "gothic ruin architecture, near and far"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-109",
+  "verdict": "pass",
+  "notes": "Core facts match my frozen observations: one pale-haired figure at a long workbench, hammer in the right hand and a chisel/graver in the left with its tip on a disc, a row of round engraved discs on the bench, a metal cup/pail of slender tool shafts, a lit glass lantern with a warm flame at the right end of the bench, draped pale cloth, wisteria and blossom framing, a large round moon upper right above a distant domed skyline across water. The text wisely declines to fix a disc count, which matches my own low confidence there. The moon reading as full is consistent with what I saw. 'sits behind the bench' is not strictly verifiable since the bench hides her lower body, but that is a minor detail and the phrasing is not contradicted by anything visible.",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-111",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "horned mask with two curved horns and dark eye openings",
+    "observed": "the eye openings are pale and luminous, not dark",
+    "evidence": "Both eye apertures read as bright bluish-white shapes against the near-black mask face — they are among the lighter values in that region of the frame and are the reason the mask reads as the visual centre. 'Dark eye openings' inverts the tonal fact.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the two figures face inward toward the central mask, framing it symmetrically",
+    "observed": "both figures are seen from behind with their bodies turned away from the viewer, not turned to face the mask",
+    "evidence": "The left figure presents a full back view — shoulder blades, spine line and the rear of the head — with both arms raised overhead; his body axis points away from the viewer, not toward the plinth. The right figure is likewise seen from behind, with only her head angled slightly to her left. Neither torso is rotated toward the centre, so 'face inward toward the central mask' is not what is painted.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the chain arcs from the left figure's raised hands across the upper left of the frame",
+    "observed": "the chain stays within the figure's own silhouette — a loop between his raised hands just above his head, then draping down his back and left hip",
+    "evidence": "The upper left of the frame is open star field with a large crescent-lit sphere in it and no chain crossing it. The chain is visible only as the loop spanning his two raised hands immediately above the head, and as links running down across the shoulder, back and hip.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "horned mask with two curved horns and dark eye openings",
+     "with": "horned mask with two curved horns and pale, luminous eye openings"
+    },
+    {
+     "find": "the two figures face inward toward the central mask, framing it symmetrically",
+     "with": "both figures are seen from behind, bodies turned away from the viewer, flanking the mask symmetrically without facing it; the right figure's head is angled slightly toward the centre"
+    },
+    {
+     "find": "the chain arcs from the left figure's raised hands across the upper left of the frame",
+     "with": "the chain forms a loop between the left figure's raised hands just above his head, with further lengths draping down his back and left hip"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-117",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "two swords lying crossed on the ground at lower left",
+    "observed": "the two ground swords lie separate and roughly parallel; they neither cross nor overlap",
+    "evidence": "Both are fully visible hilt to tip. The upper one has its hilt to the upper left and its point to the lower right; the lower one repeats that orientation, offset down and to the right. There is clear bare earth between them along their whole length — no intersection point anywhere.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene / visualTensions",
+    "existing": "A young man in a torn red tunic stands on a stony shore holding three swords",
+    "observed": "the foreground figure is walking, mid-stride, not standing",
+    "evidence": "His forward boot is planted flat while the rear boot is lifted onto its toe with the heel clear of the ground, the trailing leg extended behind him, and the torso carried forward over the leading foot. The posture is unambiguously a stride in progress, directed toward the viewer's right.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "three swords held by the foreground man (one in hand, two against his chest)",
+    "observed": "one in the lowered hand is certain and two in the shoulder bundle are confirmable, but a third in the bundle cannot be ruled out",
+    "evidence": "Two rounded pommels are clearly separable above the shoulder line and two crossguards with two descending blade lengths are visible against the chest — so the stated two is the confirmable minimum, not an established total. Additional blade edges behind the cradling arm are hidden by the arm and torso. I recorded this as null rather than a number, so the assertion of exactly three total is unsupported, not wrong.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "ornamental border with floral corner motifs and a V at the top",
+    "observed": "floral corner motifs are present, but no V-shaped ornament is visible at the top; the one centred ornament I can see sits at the bottom of the frame",
+    "evidence": "The top border at centre is plain double ruling with no motif interrupting it. Curling floral flourishes occupy the upper left and upper right corners. A small dark centred ornament sits on the divider above the blank panel at the bottom edge of the frame.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two swords lying crossed on the ground at lower left",
+     "with": "two swords lying separate and roughly parallel on the ground at lower left"
+    },
+    {
+     "find": "the two fallen swords lie in the lower-left foreground, in front of and below the standing man",
+     "with": "the two fallen swords lie separate and roughly parallel in the lower-left foreground, in front of and below the walking man"
+    },
+    {
+     "find": "A young man in a torn red tunic stands on a stony shore holding three swords",
+     "with": "A young man in a torn red tunic walks along a stony shore mid-stride, holding swords"
+    },
+    {
+     "find": "the standing man faces left while the other two walk away from him",
+     "with": "the man strides to the right while turning his head to look back to the left, as the other two walk away from him"
+    },
+    {
+     "find": "three swords held by the foreground man (one in hand, two against his chest)",
+     "with": "swords held by the foreground man (one in the lowered hand; at least two cradled against the shoulder, exact bundle count not determinable)"
+    },
+    {
+     "find": "three swords are held close to the body while two lie discarded on the ground",
+     "with": "several swords are held close to the body while two lie discarded on the ground"
+    },
+    {
+     "find": "ornamental border with floral corner motifs and a V at the top",
+     "with": "ornamental border with floral corner motifs and a centred ornament at the bottom"
+    },
+    {
+     "find": "whether the two swords on the ground are crossed or simply overlapping",
+     "with": "(resolved: the two ground swords are separate and roughly parallel, neither crossed nor overlapping)"
+    },
+    {
+     "find": "confidence=high",
+     "with": "confidence=medium"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-112",
+  "verdict": "pass",
+  "notes": "Core facts match: one pale-haired figure in a sheer gown seated behind a draped stone ledge, a goblet raised in her hand, a row of goblets with pale liquid along the ledge in front of her, sheer fabric trailing over the ledge edge, white roses and blossoms at the lower left, wisteria framing the upper corners, a crescent moon, a domed colonnaded pavilion behind and to her right, and a bright reflected light path on the sea behind the ledge. The text declines to state a goblet count, which matches my own low confidence (I read roughly eight on the ledge with the leftmost clipped by the frame, plus the one held). Roses also appear at the lower right, and the ledge is more a curved sweep than a straight diagonal, but both are minor wording differences rather than factual errors. The one white bird I saw flying at the left over the water falls under the text's own flagged uncertainty about pale shapes being birds or clouds.",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-110",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "long translucent ribbons trailing from the poles",
+    "observed": "the long translucent trailing material reads as the figures' own gowns, veils and sashes; nothing is confirmable as a ribbon attached to a pole",
+    "evidence": "The streaming pale sheets originate at the figures' shoulders, waists and hems and fall away behind their bodies. The poles themselves read as bare shafts with small twigs and leaves. The only thing hanging from a pole that I could resolve is a single small pendant near the top of the central figure's raised shaft. Some pale wisps near the upper left pole are indistinguishable from mist and the overhanging branches.",
+    "confidence": "medium"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the central figure stands nearest the viewer, the others arranged in a loose ring around her",
+    "observed": "the five are spread across the frame width in a shallow left-to-right arc at broadly similar depth, not a ring around the central figure",
+    "evidence": "All five heads sit on a shallow arc across the frame; the second and fourth are set slightly further back and higher in the haze, while the first and fifth are at the sides at roughly the central figure's depth. No figure is placed behind or on the far side of the central figure, which a ring arrangement would require. 'Nearest the viewer' for the central figure is defensible — she is the lowest and most fully rendered — but 'a loose ring around her' is not supported, and the haze makes depth cues weak enough that I could not establish the arrangement precisely either.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "long translucent ribbons trailing from the poles",
+     "with": "long translucent gowns, veils and sashes trailing from the figures; a small pendant hanging from the central pole"
+    },
+    {
+     "find": "the central figure stands nearest the viewer, the others arranged in a loose ring around her",
+     "with": "the central figure stands nearest the viewer, the others spread across the frame in a shallow arc at broadly similar depth, two of them set further back in the mist"
+    },
+    {
+     "find": "figures facing inward from different directions",
+     "with": "figures turned inward from the left and right edges toward the centre"
+    }
+   ]
+  },
+  "notes": "The figure count of five matches my own count of five distinct heads. The X-shaped crossing of the poles in the upper centre, the crescent moon, the ruined columned arcade at the upper right, the shallow rippled water with floating petals, the flower crowns and the white blossoms at the lower left all match. The text's own flagged uncertainty about the exact pole count is appropriate: I could trace four shafts end to end and could not confirm whether one or two further segments are separate poles or occluded parts of those four. I read the disc as a clear crescent.",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-106",
+  "verdict": "pass",
+  "notes": "Strong match. The nine blades hanging point-down in a three-by-three grid of arched niches is confirmed — I resolved all nine individually, the bottom-centre one's hilt and upper blade being visible with only its tip occluded by the figure's bowed head. Also confirmed: one seated figure hunched at the desk with the head propped on one hand and a quill in the other over an open handwritten book; the lit lantern with a warm flame at the desk's left as the brightest warm point; an armillary sphere at the left edge and a second ringed sphere at the right, with a further round banded object low on the right that supports the text's reading of a globe; loose papers on the desk; gold constellation lines across the sky and inside the niches; a thin crescent moon at the upper left; water with a distant low treeline visible to either side of the niche wall; and the gold border with tick marks. The text's self-flagged uncertainties (small discs in the niches, paper and book counts, buildings versus trees on the horizon) match my own unresolved items — I also could not identify the small pointed structure on the left shore.",
+  "reviewer": "reviewer-b"
+ }
+]

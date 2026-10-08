@@ -19,7 +19,7 @@
 import { createContext, useCallback, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import type { DeckId } from '@/decks/ids'
-import { DEFAULT_DECK_ID, resolveDeckId } from '@/decks/ids'
+import { DEFAULT_DECK_ID, resolveProductionDeckId } from '@/decks/ids'
 import { getDeck } from '@/decks/registry'
 import { StorageKeys, readJSON, writeJSON } from '@/utils/storage'
 
@@ -38,11 +38,19 @@ export const DeckContext = createContext<DeckContextValue | null>(null)
  * v1 的 key 刻意**不删除** —— 万一映射表将来要修，原值还在。
  */
 function loadDeckId(): DeckId {
+  /* 【为什么这里用 resolveProductionDeckId 而不是 resolveDeckId】
+     这个值是「下一次抽牌用哪副」，不是历史记录。
+     曾经在 /dev/decks 里选过一副未完成的牌组，它会一直躺在 localStorage 里，
+     于是用户回到首页看到的是一副自己根本选不了、也抽不了的牌。
+     不在正式清单里就回落到默认牌组 —— 这一步会自愈。
+
+     历史 session 与日记走的是另一条路（resolveDeckId，不做生产过滤），
+     那边存着什么就读出什么，绝不改写。 */
   const v2 = readJSON<string | null>(StorageKeys.deck, null)
-  if (v2 !== null) return resolveDeckId(v2, 2)
+  if (v2 !== null) return resolveProductionDeckId(v2, 2)
 
   const v1 = readJSON<string | null>(StorageKeys.deckV1, null)
-  const migrated = resolveDeckId(v1, 1)
+  const migrated = resolveProductionDeckId(v1, 1)
   if (v1 !== null) writeJSON(StorageKeys.deck, migrated)
   return v1 !== null ? migrated : DEFAULT_DECK_ID
 }

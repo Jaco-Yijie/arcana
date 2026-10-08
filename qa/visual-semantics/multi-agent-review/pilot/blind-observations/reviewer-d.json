@@ -1,0 +1,390 @@
+[
+ {
+  "reviewId": "review-009",
+  "visibleFacts": {
+   "style": "soft pastel watercolour, pale lilac/white palette, thin light border line",
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "left of centre, partly occluded by a vertical garlanded pole",
+     "posture": "standing, upper body only clearly visible",
+     "gaze": "turned toward centre-right, head slightly tilted",
+     "heldObjects": [],
+     "notes": "dark/brown hair, pale gown; hands not visible in frame"
+    },
+    {
+     "position": "centre, nearest the viewer",
+     "posture": "standing, three-quarter/back view, body turned to the right",
+     "gaze": "toward the raised hands / toward the right-hand figure",
+     "heldObjects": [
+      "a cup raised overhead in the right hand"
+     ],
+     "notes": "tallest figure; long wavy light-brown hair loose to the waist, white floral wreath on the head, long pale gown with a sash/belt at the waist and a trailing translucent overlayer"
+    },
+    {
+     "position": "right of centre",
+     "posture": "standing, facing left toward the centre figure",
+     "gaze": "toward the centre figure / toward the raised cups",
+     "heldObjects": [
+      "a cup raised in the near hand"
+     ],
+     "notes": "pale lilac gown, braided hair with small flowers"
+    }
+   ],
+   "objects": [
+    {
+     "type": "cup / goblet",
+     "count": null,
+     "countConfidence": "low",
+     "where": "two are raised and nearly touching at upper centre, one held by the centre figure and one by the right figure; the draped table behind them carries small pale vessels that cannot be individually resolved"
+    },
+    {
+     "type": "lantern",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "two hang from the garland in the upper-left quadrant at different heights; one stands on the ground at lower right"
+    },
+    {
+     "type": "tall garlanded pole / pillar",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one at left (behind the leftmost figure), one at right; both wrapped in leaves, white blossoms and ribbons, running from the top of the frame to the ground. Further greenery hangs at the extreme left edge that may or may not belong to a third pole"
+    },
+    {
+     "type": "draped table",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "centre, behind and between the figures; white cloth, small indistinct items on top"
+    },
+    {
+     "type": "background figures",
+     "count": null,
+     "countConfidence": "low",
+     "where": "a pale indistinct crowd along the right middle-ground beyond the right-hand pole; individual bodies are not separable"
+    },
+    {
+     "type": "tall spire / tower",
+     "count": null,
+     "countConfidence": "low",
+     "where": "one thin pale spire in the left middle distance above the garland; additional towers appear in the hillside town at right"
+    }
+   ],
+   "environment": [
+    "outdoor night or twilight scene",
+    "a canopy of leafy garland with hanging ribbons and swags strung between the poles across the top third",
+    "a broad lake or bay across the middle of the frame with a pale light-path on its surface",
+    "a hillside town with buildings, towers and small lit windows on the far right shore",
+    "trees along the far shoreline",
+    "grass and white daisies / flowering plants filling the lower left and lower right foreground"
+   ],
+   "lightSources": [
+    "large pale round moon in the upper right sky",
+    "warm glow inside the two hanging lanterns and the ground lantern",
+    "reflected light streak on the water"
+   ],
+   "moonPhase": "uncertain — a bright round disc, reads as full or near-full, but its edge is softened by cloud",
+   "spatialRelations": [
+    "the centre and right figures face each other and each raise a cup; the two cups almost meet above the centre of the frame",
+    "the left figure stands behind and to the side of the centre figure, partly hidden by the left pole",
+    "the draped table sits between and behind the figures",
+    "the two garlanded poles frame the group like a canopy, with the lake and town visible between them",
+    "the moon sits in the upper right, diagonally opposite the hanging lanterns in the upper left"
+   ],
+   "foreground": [
+    "white daisies and leafy plants",
+    "grass",
+    "the standing ground lantern at lower right"
+   ],
+   "background": [
+    "lake with light reflection",
+    "hillside town with towers",
+    "distant treeline",
+    "moon and pale clouds"
+   ]
+  },
+  "uncertainObservations": [
+   "total number of cups cannot be fixed: two raised cups are clearly resolvable, but pale objects on the table may or may not be additional vessels",
+   "the number of people in the right-hand background crowd cannot be counted",
+   "moon phase not determinable with confidence (round but cloud-softened)",
+   "whether a third garlanded pole exists at the extreme left frame edge, or whether that greenery belongs to the left pole",
+   "hands of the leftmost figure are not visible, so nothing can be said about what she holds"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-004",
+  "visibleFacts": {
+   "style": "sepia/ink engraving or etching on a parchment ground, inside an ornate cream printed border with floral ornaments at all four corners; small illegible marks at bottom-left and bottom-right inside the border",
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "centre of the frame, standing on wet muddy ground",
+     "posture": "standing upright, barefoot, head bowed and tilted down toward her left; body slightly turned",
+     "gaze": "not determinable — the eyes are covered",
+     "heldObjects": [],
+     "notes": "young woman with long curly hair blowing to the right; a light cloth blindfold tied across the eyes; long pale long-sleeved dress with a patterned band near the hem; arms are bound to her sides by rope so the hands are not visible"
+    }
+   ],
+   "objects": [
+    {
+     "type": "upright blade planted point-down in the ground",
+     "count": null,
+     "countConfidence": "low",
+     "where": "arranged around the figure on both sides; I resolve 4 on the left (two nearer/larger at far left, two smaller and farther back toward the centre-left) and at least 3 on the right (one large in the near right foreground, one to its right, and at least one smaller farther back). Total reads as 7 or 8 but the rear ones overlap and fade into the hatching, so I will not fix a number"
+    },
+    {
+     "type": "rope binding",
+     "count": null,
+     "countConfidence": "medium",
+     "where": "coiled several times around the upper arms and chest, again around the waist/hips, with a loose end hanging down past her right hip"
+    },
+    {
+     "type": "blindfold",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "tied across the eyes, knotted at the side, ends trailing into the hair"
+    },
+    {
+     "type": "ruined castle / fortress on a hill",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper left middle distance, on a raised mound; several broken towers, but individual towers are not separately countable"
+    }
+   ],
+   "environment": [
+    "flat marshy ground with tufts of grass and small stones",
+    "a winding stream or muddy water channel running from the background down through the centre foreground, passing beside the figure's feet",
+    "tall reeds / grasses at the right edge",
+    "hatched cloudy sky occupying the upper third"
+   ],
+   "lightSources": [
+    "a sun in the upper-left corner with straight radiating rays cast diagonally down to the right; rendered as a pale yellow glow partly behind cloud"
+   ],
+   "sunPresent": true,
+   "moonPhase": null,
+   "crown": false,
+   "halo": false,
+   "wings": false,
+   "throne": false,
+   "horse": false,
+   "spatialRelations": [
+    "the blades stand in the ground on both sides of the figure, forming a loose corridor she stands in the middle of",
+    "the stream runs between the blades from background to foreground, passing just left of her feet",
+    "the hilltop ruin sits behind and to the left of her head",
+    "the sun's rays fall from upper left across her bowed head"
+   ],
+   "foreground": [
+    "muddy water channel",
+    "the two largest blades, one at far left and one at right",
+    "scattered stones and grass tufts"
+   ],
+   "background": [
+    "hilltop ruin",
+    "low horizon",
+    "reed beds",
+    "hatched clouds and sun rays"
+   ]
+  },
+  "uncertainObservations": [
+   "the exact number of planted blades cannot be determined — the rearmost ones overlap each other and merge with the background hatching; I can only say at least 7 are present, possibly 8",
+   "whether the figure's hands are tied in front or behind cannot be seen; they are not visible at all",
+   "the ruined structure on the hill may be a castle or a fortified wall; the number of its towers is not countable",
+   "the light source in the upper left is a rayed disc partly behind cloud; it reads as a sun but its outline is not fully drawn"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-010",
+  "visibleFacts": {
+   "style": "coloured ink engraving on parchment ground, muted ochre/blue/rust palette, inside a printed double-rule border with small corner ornaments",
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "left of centre, at the near end of the boat",
+     "posture": "standing, back to the viewer, weight forward, both hands gripping a long pole",
+     "gaze": "away from the viewer, toward the water ahead / the right distance",
+     "heldObjects": [
+      "a long straight pole held in both hands, its lower end entering the water on his left"
+     ],
+     "notes": "brown hair; a rust-red hooded cape with a scalloped edge over a blue-grey belted tunic; a small leather pouch hanging at the hip; dark hose and boots"
+    },
+    {
+     "position": "centre of the boat, seated low",
+     "posture": "seated, back to the viewer, shoulders wrapped",
+     "gaze": "away from the viewer, forward along the boat",
+     "heldObjects": [],
+     "notes": "long light-brown hair falling over a pale cream cloak or shawl"
+    },
+    {
+     "position": "immediately right of the seated centre figure",
+     "posture": "seated, back to the viewer, head covered and slightly bowed",
+     "gaze": "away from the viewer, forward",
+     "heldObjects": [],
+     "notes": "dark blue-grey hooded cloak covering the head entirely; smaller in scale than the figure beside them"
+    }
+   ],
+   "objects": [
+    {
+     "type": "upright blade standing hilt-up inside the boat",
+     "count": null,
+     "countConfidence": "low",
+     "where": "along the right side of the boat, points resting on the hull floor and hilts in the air; the leftmost one stands slightly apart and is clearly separate, and a tight row stands to its right. I resolve about five in that row, giving a total that reads as six, but the row members overlap so I will not fix the number"
+    },
+    {
+     "type": "boat",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "occupies the lower half of the frame; wooden, clinker/plank built, open, with visible cross-braces at the near end and coiled rope on the right rim"
+    },
+    {
+     "type": "bundle / sack of cargo",
+     "count": null,
+     "countConfidence": "low",
+     "where": "on the boat floor in front of the seated figures; one or two soft bundles, not clearly separable"
+    },
+    {
+     "type": "stone tower with battlements",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left, on a rocky bank above the water; an adjoining lower ruined wall or building extends to its right"
+    }
+   ],
+   "environment": [
+    "a wide river or lake, surface rendered in fine horizontal ripple lines, with ripples spreading from the pole where it enters the water",
+    "rocky left bank with vegetation below the tower",
+    "far shore with trees and low scrub along the right middle distance",
+    "a range of low mountains on the right horizon",
+    "pale sky with long hatched clouds occupying the upper third"
+   ],
+   "lightSources": [
+    "a diffuse pale glow low on the horizon near the centre-right, behind the far shore; no distinct solar or lunar disc is drawn"
+   ],
+   "moonPhase": null,
+   "crown": false,
+   "halo": false,
+   "wings": false,
+   "horse": false,
+   "spatialRelations": [
+    "the standing figure is at the near end of the boat, behind and to the left of the two seated figures; all three face away from the viewer in the same direction",
+    "the upright blades are clustered in the far right portion of the boat, beyond the two seated figures",
+    "the pole runs diagonally from the standing figure's hands down to the left, entering the water in the lower-left foreground",
+    "the tower sits on the left bank, behind and above the standing figure's shoulder",
+    "the boat is moving away from the near shore toward the open water and mountains at the right"
+   ],
+   "foreground": [
+    "the boat and its occupants",
+    "rippled water below the hull",
+    "the lower end of the pole entering the water"
+   ],
+   "background": [
+    "stone tower and ruin on the left bank",
+    "far treed shoreline",
+    "distant mountains",
+    "hatched clouds"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of upright blades cannot be fixed: one stands clearly apart at the left of the group and a tightly overlapping row stands to its right, reading as about five, so the total is at least five and appears to be six",
+   "the hooded figure on the right may be a child or a smaller adult; nothing of the face or body is visible",
+   "the cargo on the boat floor may be one bundle or several",
+   "no distinct sun or moon disc is visible, only a horizon glow, so no phase can be reported"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-005",
+  "visibleFacts": {
+   "style": "soft pale watercolour in white, ice blue and lilac, with a thin ornamented border line and small corner flourishes",
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "left of centre, standing in the boat toward its near end",
+     "posture": "standing upright, three-quarter back view, body turned to the right",
+     "gaze": "away from the viewer, out over the water toward the right distance",
+     "heldObjects": [
+      "a long slender pole held in one hand, running diagonally down to the left and into the water",
+      "the other arm is raised forward at about chest height, hand near the face; whatever is in that hand, if anything, is not resolvable"
+     ],
+     "notes": "very long pale silver-white hair streaming left; a long white gown with a long translucent veil or train blowing out to the left behind her"
+    },
+    {
+     "position": "centre of the boat, in front of and to the right of the standing figure",
+     "posture": "seated or kneeling low in the boat, back to the viewer",
+     "gaze": "away from the viewer, forward along the boat",
+     "heldObjects": [],
+     "notes": "pale hair, white garment, noticeably smaller in scale than the standing figure"
+    }
+   ],
+   "objects": [
+    {
+     "type": "upright blade standing hilt-up in the boat",
+     "count": 5,
+     "countConfidence": "medium",
+     "where": "in a staggered row in the right half of the boat, points resting on the hull floor and ornate hilts raised; pommel heights step upward from left to right"
+    },
+    {
+     "type": "boat",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "spans the lower centre of the frame; pale wooden hull with a raised prow at the left, decorated along the outside with a swag of greenery and small white flowers"
+    },
+    {
+     "type": "lantern",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "hanging from an ornamented post at the far right end of the boat, glowing warm; its light reflects on the water below it"
+    },
+    {
+     "type": "tall spired building",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "in the right middle distance behind mist, a pale mass of tall thin spires and pinnacles; it reads as a single structure but individual spires cannot be counted"
+    }
+   ],
+   "environment": [
+    "still water filling most of the frame, with soft reflections and a pale vertical light path below the distant spires",
+    "pale frost-toned trees and foliage along the left edge and across the far shoreline",
+    "cloudy sky in the upper third, light blue and white",
+    "pale flowering branches with white blossoms in the lower-left foreground"
+   ],
+   "lightSources": [
+    "a crescent moon in the upper right sky",
+    "the hanging lantern at the right end of the boat",
+    "a diffuse glow behind the distant spires reflected on the water"
+   ],
+   "moonPhase": "crescent — a thin bright crescent whose opening faces down and to the left",
+   "crown": false,
+   "halo": false,
+   "wings": false,
+   "horse": false,
+   "spatialRelations": [
+    "the standing figure is behind and to the left of the seated figure; both face away from the viewer in the same direction",
+    "the row of upright blades stands beyond the seated figure, between her and the lantern post at the boat's far end",
+    "the pole runs from the standing figure's hand diagonally down past the boat's left side into the water",
+    "the crescent moon is in the upper right, roughly above the distant spired building",
+    "the boat sits on open still water with the foreground blossoms partly overlapping its lower left"
+   ],
+   "foreground": [
+    "pale flowering branches at lower left",
+    "the boat's decorated hull",
+    "water surface with scattered pale petal-like flecks"
+   ],
+   "background": [
+    "misty spired building at right",
+    "far treeline",
+    "crescent moon and clouds"
+   ]
+  },
+  "uncertainObservations": [
+   "the two rightmost blades in the row stand close together; the count of 5 is my best resolution but the pair could conceivably be three overlapping",
+   "the standing figure's raised forward hand may be holding something small or may be empty — it cannot be resolved",
+   "the distant pale structure could be a castle or a cathedral-like building; only a silhouette of spires is visible and their number is not countable",
+   "a small indistinct pale form sits at the left rim of the boat near the prow; it may be a decorative element of the hull or a separate object"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ }
+]

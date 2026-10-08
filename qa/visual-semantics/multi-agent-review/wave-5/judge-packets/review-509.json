@@ -1,0 +1,415 @@
+{
+  "reviewId": "review-509",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-509.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-509.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "central bright point of light where the staff tips converge",
+          "observed": "盲观察记录：圆形地纹正中心确实有 1 个发光点，但法杖的发光尖端并没有汇聚到那里；我记下的是内侧一圈同心环上有 4 个独立的发光节点（左上、右上、左下、右下），每名持杖者的杖尖分别指向其中一个节点，杖尖与圆心之间仍隔着相当距离",
+          "evidence": "地面星图上可见一圈同心环，环上 4 处金色亮点与各自最近的杖尖相接；圆心另有一个单独的亮点，没有任何杖尖触及",
+          "confidence": "medium"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+          "observed": "五根杖确实呈辐辏状由外向内、略向下指，但杖尖落在内环的发光节点上，彼此并不相接；我记录的节点数是 4（中等把握），并存疑是否有第 5 个被人物遮住",
+          "evidence": "杖尖的光晕各自独立，分布在环上四个方位，没有在中心重合",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "each holding a glowing-tipped staff angled inward toward a luminous point at the centre of a large engraved circular diagram",
+            "with": "each holding a glowing-tipped staff angled inward toward one of several glowing nodes spaced around an inner ring of a large engraved circular diagram, which is separately lit at its centre"
+          },
+          {
+            "find": "central bright point of light where the staff tips converge",
+            "with": "glowing nodes spaced around an inner ring where the staff tips point, plus a separate bright point at the circle's centre"
+          },
+          {
+            "find": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+            "with": "the five staffs radiate inward and their lit tips reach glowing nodes spaced around an inner ring of the engraved circle, short of the separate point of light at its centre"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-509",
+        "visibleFacts": {
+          "figureCount": 5,
+          "figures": [
+            {
+              "position": "画面上方偏左（圆形场地的远侧左）",
+              "posture": "站立，双腿分开呈弓步，身体朝向画面中心（viewer-right 下方）",
+              "gaze": "头部朝向画面中心的发光点，俯视",
+              "heldObjects": [
+                "双手握一根细长杖/棍，自肩高斜向下指向场地上左上方的一个发光节点"
+              ],
+              "clothing": "深色短上衣配披风，腿部有绑腿与靴子；短发"
+            },
+            {
+              "position": "画面上方偏右（圆形场地的远侧右）",
+              "posture": "站立，弓步，身体朝向画面中心（viewer-left 下方）",
+              "gaze": "头部朝向场地中心，俯视",
+              "heldObjects": [
+                "双手握一根细长杖，自肩高斜向下指向右上方的发光节点"
+              ],
+              "clothing": "深蓝紫色长披风/斗篷，内着紧身衣与靴子"
+            },
+            {
+              "position": "viewer-left 中部（画面左缘，近侧左）",
+              "posture": "站立，弓步，侧身朝向 viewer-right（场地中心）",
+              "gaze": "头部朝向 viewer-right 的场地中心，平视",
+              "heldObjects": [
+                "双手握一根细长杖，近乎水平地向 viewer-right 伸出，杖尖指向左下方的发光节点"
+              ],
+              "clothing": "深色上衣外罩大披风，披风上有星点纹样；短发"
+            },
+            {
+              "position": "viewer-right 中部（画面右缘，近侧右）",
+              "posture": "站立，侧身朝向 viewer-left（场地中心），重心前倾",
+              "gaze": "头部朝向 viewer-left 的场地中心",
+              "heldObjects": [
+                "双手握一根细长杖，近乎水平地向 viewer-left 伸出，杖尖指向右下方的发光节点"
+              ],
+              "clothing": "紫色/深蓝垂坠长袍，布料分层飘动；长发"
+            },
+            {
+              "position": "画面下方正中（最近侧，背对观者）",
+              "posture": "站立偏弓步，整个背部朝向观者，身体朝向画面深处",
+              "gaze": "后脑朝向观者，无法看到面部；头朝向场地中心方向",
+              "heldObjects": [
+                "右手（viewer-right 那只）握一根细长杖，自腰高斜向上伸向 viewer-right，杖尖指向右下方的发光节点"
+              ],
+              "clothing": "深蓝带星点的长斗篷，肩部有链扣/串珠装饰；短发"
+            }
+          ],
+          "objects": [
+            {
+              "type": "staff",
+              "count": 5,
+              "countConfidence": "high",
+              "where": "五名人物各持一根，全部指向场地内侧",
+              "orientation": "细长杆状，均呈由外向内、略向下的斜向",
+              "arrangement": "围绕圆形场地呈辐辏状向中心汇聚"
+            },
+            {
+              "type": "glowing node",
+              "count": 4,
+              "countConfidence": "medium",
+              "where": "圆形地纹的一圈同心环上，分别在左上、右上、左下、右下",
+              "orientation": "点状发光，无方向",
+              "arrangement": "沿一圈圆环大致四等分分布"
+            },
+            {
+              "type": "central glow",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "圆形地纹的正中心",
+              "orientation": "点状发光",
+              "arrangement": "单个"
+            },
+            {
+              "type": "engraved circle diagram",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "铺装广场地面，占据画面中下部大部分",
+              "orientation": "水平地面上，以透视压扁成椭圆",
+              "arrangement": "多重同心圆加密集放射线，金色发光线条，内有星点与细小刻度"
+            },
+            {
+              "type": "domed pavilion",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "viewer-left 中上部，场地外侧",
+              "orientation": "立面正对偏右",
+              "arrangement": "单座，列柱支撑圆顶，内部放置一具大型环形/轮状仪器"
+            },
+            {
+              "type": "column with ring instrument",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "viewer-right 中上部，场地外侧",
+              "orientation": "竖直柱身，顶端安放一个带辐条的环形仪器",
+              "arrangement": "单座"
+            },
+            {
+              "type": "celestial sphere",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "一个大的在右上天空，一个较小的在左中偏上天空",
+              "orientation": "圆盘状天体，边缘有轻微明暗交界",
+              "arrangement": "分散两处"
+            },
+            {
+              "type": "bright star",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面上方正中偏左的天空",
+              "orientation": "点光源，带放射状芒刺",
+              "arrangement": "单颗，明显比周围星点亮；周围有以它为圆心的同心圆虚线"
+            },
+            {
+              "type": "ruined pillar / broken wall",
+              "count": null,
+              "countConfidence": "low",
+              "where": "场地四周中景，左右两侧与中部远处",
+              "orientation": "竖直残段",
+              "arrangement": "散落"
+            }
+          ],
+          "environment": [
+            "夜晚户外，圆形石砌铺装广场，边缘有碎石与残垣",
+            "广场地面刻有发光的同心圆与放射线星图",
+            "中远景是一片水域/海湾，台阶从广场通向水边",
+            "水面尽头的山峦之间有一片金色的日出或日落辉光，并在水面留下倒影",
+            "两侧有针叶树剪影",
+            "天空布满星点与粉紫、青绿色的星云带",
+            "天空上叠加着淡金色虚线构成的星座连线与同心圆网格",
+            "画面四周有细金色双线边框"
+          ],
+          "lightSources": [
+            "地面圆环上的 4 个金色发光节点",
+            "圆心的金色发光点",
+            "天空上方正中的一颗明亮带芒星",
+            "远处水平线上的金色辉光（日出/日落）",
+            "左侧圆顶亭内透出的微弱暖光"
+          ],
+          "moonPhase": "gibbous — 右上天空一个较大的淡蓝灰色球体呈接近满圆的圆盘、左侧边缘有一道轻微阴影；左中另有一个较小的紫蓝色球体，形态类似",
+          "spatialRelations": [
+            "五名人物呈环状围在圆形地纹外缘，背对观者的那名在最近侧",
+            "所有法杖的尖端都朝向圆心方向",
+            "圆顶亭在 viewer-left 的场地外侧，立柱仪器在 viewer-right 的场地外侧，两者大致左右对称",
+            "明亮带芒星在天空正上方、水平线辉光的正上方",
+            "较大的球体在明亮带芒星的 viewer-right 上方",
+            "水域与远山在广场的正后方"
+          ],
+          "foreground": [
+            "背对观者的人物及其斗篷下摆",
+            "广场近侧的石板铺装与地面刻纹",
+            "左下角地面上一个十字形/罗盘形的小标记"
+          ],
+          "background": [
+            "圆顶亭与柱顶仪器",
+            "残柱与断墙",
+            "针叶树剪影与远山",
+            "海湾与水平线辉光",
+            "星空、星云带与星座网格"
+          ]
+        },
+        "uncertainObservations": [
+          "发光节点到底是 4 个还是 5 个：我能清楚数出环上 4 个，但有两根法杖（viewer-right 那名与最近侧背对观者那名）似乎指向同一个右下节点，不排除还有一个被人物遮住的第五个节点",
+          "五人手持的到底是法杖、长棍还是细剑，杆身细长无护手、尖端被光晕包住，分辨不出",
+          "天空中那两个球体是月亮还是行星分辨不出；它们都没有明显的月牙形，我按圆盘明暗记为近满相",
+          "最近侧背对观者的人物腰间似乎还别着一样东西（短杖或剑柄），看不清",
+          "五名人物的性别/面部细节大多看不清，只能从发型与衣褶粗分",
+          "左下角地面那个十字形小标记是刻纹、罗盘还是一件实物，分辨不出"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+          "observed": "The lit staff tips do not meet. They come to rest at separate glowing points spaced apart around an inner ring, well short of the hub, and the hub carries its own single brighter glow that is distinct from them.",
+          "evidence": "Four glowing points are clearly spaced around the inner ring of the engraved diagram at a visible radius from the hub, with dark engraved ground between each of them and the hub; the central glow sits alone at the exact geometric centre with no staff shaft reaching it.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+            "with": "the five staffs radiate inward and their lit tips come to rest at separate glowing points spaced around an inner ring, short of the circle's centre"
+          },
+          {
+            "find": "central bright point of light where the staff tips converge",
+            "with": "central bright point of light at the hub of the diagram, set inside the ring of lit staff tips"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-509",
+        "visibleFacts": {
+          "figureCount": 5,
+          "figures": [
+            {
+              "position": "upper viewer-left, standing just outside the ring",
+              "posture": "standing with legs apart in a braced wide stance, body angled toward the viewer-right and down toward the ring center",
+              "gaze": "head turned down and toward viewer-right, toward the center of the ring",
+              "heldObjects": [
+                "a long slender staff gripped in both hands at about waist height, angled down and to the viewer-right, its far tip resting at a glowing point on the ring"
+              ],
+              "clothing": "dark fitted tunic and trousers with a belt, a short cape or mantle at the shoulders; dark hair"
+            },
+            {
+              "position": "upper viewer-right, standing just outside the ring, mirroring the upper-left figure",
+              "posture": "standing with legs apart, body angled toward the viewer-left and down toward the ring center",
+              "gaze": "head turned down and toward viewer-left, toward the center of the ring",
+              "heldObjects": [
+                "a long slender staff gripped in both hands at about waist height, angled down and to the viewer-left, its far tip resting at a glowing point on the ring"
+              ],
+              "clothing": "dark long coat or robe over trousers, belted; dark hair"
+            },
+            {
+              "position": "mid viewer-left, at the left edge, nearer the viewer than the upper-left figure",
+              "posture": "standing in a deep braced stance, body angled toward viewer-right, leaning in toward the ring",
+              "gaze": "head turned toward viewer-right, down toward the ring",
+              "heldObjects": [
+                "a long slender staff held in both hands roughly horizontally, extending to the viewer-right, its far tip at a glowing point on the ring"
+              ],
+              "clothing": "dark tunic with a long cloak flaring back to the viewer-left; dark hair"
+            },
+            {
+              "position": "mid viewer-right, at the right edge, nearer the viewer than the upper-right figure",
+              "posture": "standing in a braced stance, body angled toward viewer-left, leaning in toward the ring",
+              "gaze": "head turned toward viewer-left, down toward the ring",
+              "heldObjects": [
+                "a long slender staff held in both hands roughly horizontally, extending to the viewer-left, its far tip at a glowing point on the ring"
+              ],
+              "clothing": "long flowing robe or gown with a cloak catching the light, long hair"
+            },
+            {
+              "position": "bottom center, closest to the viewer, seen from behind",
+              "posture": "standing in a wide braced lunge, back to the viewer, torso turned slightly to viewer-right",
+              "gaze": "head turned away from the viewer, facing up/forward into the ring",
+              "heldObjects": [
+                "a long slender staff held out to the viewer-right at about waist height, its far tip at a glowing point on the ring"
+              ],
+              "clothing": "dark layered coat with chain or cord detail across the chest, high boots; dark hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "staff / wand",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "one in the hands of each figure, all reaching inward over the inscribed ground circle",
+              "orientation": "all roughly horizontal or angled slightly downward, far tips pointing inward toward the ring",
+              "arrangement": "radiating inward from five points around the circle, like spokes converging on the center"
+            },
+            {
+              "type": "glowing point of light on the ground circle",
+              "count": 5,
+              "countConfidence": "low",
+              "where": "four spaced around the inner ring where the staff tips land, plus one brighter point at the exact center of the circle",
+              "orientation": "flat, lying on the ground plane",
+              "arrangement": "four in a rough quadrilateral around the hub plus one at the hub; I cannot be certain the hub glow is a staff tip rather than the pattern's own center"
+            },
+            {
+              "type": "inscribed ground circle",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "filling the center and lower half of the frame, seen in steep perspective",
+              "orientation": "flat in the horizontal ground plane",
+              "arrangement": "a single large disc of concentric rings crossed by fine radial lines, like a web or compass rose"
+            },
+            {
+              "type": "domed pavilion / rotunda",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper viewer-left, on a rise behind the figures",
+              "orientation": "vertical, columns facing the viewer",
+              "arrangement": "single colonnaded structure with a ribbed dome; a large circular wheel-like form is visible inside it"
+            },
+            {
+              "type": "stone column topped with a sphere",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper viewer-right, on a rise behind the figures",
+              "orientation": "vertical",
+              "arrangement": "single free-standing column with a ball or orb on its capital"
+            },
+            {
+              "type": "large pale sphere in the sky",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one large one at the upper right of the sky, one smaller at the left edge about a third down",
+              "orientation": "flat discs against the sky",
+              "arrangement": "two separate bodies, no symmetry"
+            },
+            {
+              "type": "cross- or sword-shaped marker standing in the ground",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "lower viewer-left, outside the ring, among the rubble",
+              "orientation": "vertical, planted in the ground",
+              "arrangement": "single upright with a short crossbar"
+            }
+          ],
+          "environment": [
+            "a wide star-dense night sky with a nebula / Milky Way band sweeping from upper-left to center",
+            "a fine gold geometric overlay of concentric arcs, radial lines and constellation-style linked dots across the sky",
+            "a bright single star high at the top center",
+            "a stone plateau inscribed with the great circle, its edges broken into rubble",
+            "a domed pavilion on a rise at viewer-left and a sphere-topped column on a rise at viewer-right",
+            "ruined walls and standing stones in the middle distance",
+            "dark conifer trees along the middle distance on both sides",
+            "a body of water on the far horizon at center with a warm golden glow across it",
+            "low mountains behind the water",
+            "a thin decorative border line running around the inside edge of the image"
+          ],
+          "lightSources": [
+            "the glowing staff tips and the glowing hub on the ground circle",
+            "a warm golden glow at the center horizon over the water",
+            "the bright star at the top center",
+            "the overall starfield and nebula glow"
+          ],
+          "moonPhase": "not visible — no clearly identifiable moon; two large pale spheres hang in the sky and read as planets, with no crisp terminator I can call a phase",
+          "spatialRelations": [
+            "the five figures stand around the perimeter of the inscribed ground circle, two in the upper half, two at the mid left and right edges, one at the bottom center nearest the viewer",
+            "every staff points inward from its figure toward the circle's hub",
+            "the glowing hub is at the geometric center of the circle and of the frame's lower half",
+            "the domed pavilion is behind and to the viewer-left of the upper-left figure",
+            "the sphere-topped column is behind and to the viewer-right of the upper-right figure",
+            "the water and its golden glow sit on the horizon directly behind the circle's center",
+            "the bright star is directly above the circle's center, near the top edge",
+            "the large pale sphere is in the sky above and to the viewer-right of the upper-right figure",
+            "rubble and the small upright marker lie outside the circle at the lower viewer-left"
+          ],
+          "foreground": [
+            "the bottom-center figure seen from behind",
+            "broken rock and rubble along the bottom corners",
+            "the small upright cross/sword marker at lower viewer-left",
+            "the near arc of the inscribed ground circle"
+          ],
+          "background": [
+            "the night sky, nebula, geometric overlay and bright star",
+            "the two pale spheres",
+            "the domed pavilion, the sphere-topped column, ruins and conifers",
+            "the glowing horizon water and the mountains behind it"
+          ]
+        },
+        "uncertainObservations": [
+          "The glowing points: I can resolve four around the inner ring plus one brighter glow at the exact center. Whether the center glow is a fifth staff tip or simply the hub of the inscribed pattern is not determinable, so the staff-tip-to-glow mapping is uncertain even though I am reasonably confident there are five figures and five staffs.",
+          "The bottom-center figure's staff runs to the viewer-right and its tip overlaps the lower-right glow; I cannot fully separate it from the mid-right figure's staff where they cross.",
+          "The exact shape of the staff tips (plain, budded, bladed) is lost in the glare of the glow.",
+          "The two pale spheres in the sky could be planets or moons; I cannot resolve a phase on either and will not name one.",
+          "The circular form inside the pavilion at upper-left reads as a large spoked wheel but is small and dark.",
+          "The upright at lower viewer-left could be a cross, a grave marker, or a sword planted point-down; the crossbar is visible but the lower end is buried.",
+          "I cannot read any facial features on any of the five figures; all are backlit or in shadow.",
+          "Figure genders are not determinable and I have not assigned any."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "reviewId": "review-313",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-313.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-313.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects / scene / visualTensions",
+          "existing": "torn paper or parchment sheet split by the blade",
+          "observed": "an open book/codex lying face-up on the slab, its two pages spread; the central line is the spine gutter, not a tear",
+          "evidence": "The pale object has a V-shaped valley running from under the sword tip down toward the viewer, with a page plane rising away on each side — the gutter of an open book. Along the front edge, below that valley, there is a visible wedge of stacked page edges giving the object real thickness, which a single flat sheet could not have. The two outer edges curve up slightly as bound pages do. Nothing in the object reads as a ragged or cut separation.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "torn paper or parchment sheet split by the blade",
+            "with": "open book lying face-up, its spine gutter beneath the blade's point"
+          },
+          {
+            "find": "driving a sword point-down into a torn document on a stone slab",
+            "with": "resting a sword point-down on an open book on a stone slab"
+          },
+          {
+            "find": "the intact sheet of paper against its clean tear",
+            "with": "the pale open book against the surrounding darkness"
+          },
+          {
+            "find": "whether the sheet is a single document or two overlapping sheets",
+            "with": "whether the blade's point merely rests on the open book or is driven through it"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-313",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, standing behind a stone altar/tomb",
+              "posture": "standing upright, facing the viewer, one arm extended forward and down across the altar, the other arm reaching out to the right",
+              "gaze": "toward the viewer / slightly down at the altar; the face is almost entirely in shadow under the crown",
+              "heldObjects": [
+                "a sword, held by the hilt in the forward (viewer's left) hand, its point resting on the open book",
+                "an upright bar of the iron gate, gripped in the other (viewer's right) hand"
+              ],
+              "appearance": "tall pointed/spiked crown, heavy dark cloak and robe with an ornate collar and a jeweled or embroidered chest ornament, sleeves reaching the wrists"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of frame, held forward over the altar top",
+              "orientation": "point-DOWN, angled steeply downward, tip touching the open book on the altar; hilt and crossguard uppermost near the figure's hand",
+              "arrangement": "single blade — no other blade is present anywhere in the frame"
+            },
+            {
+              "type": "open book",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lying open on the flat top of the altar, center",
+              "orientation": "lying flat, both pages spread face-up, spine running toward the viewer",
+              "arrangement": "single; it is the brightest object in the frame"
+            },
+            {
+              "type": "altar / stone tomb-chest",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower center, between the viewer and the figure",
+              "orientation": "rectangular block, front face toward the viewer",
+              "arrangement": "single, its front face carved with a butterfly/moth relief with spread wings"
+            },
+            {
+              "type": "iron gate",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right side of the frame",
+              "orientation": "vertical bars with spear-point finials along the top; the gate stands swung open toward the viewer",
+              "arrangement": "one leaf visible, hinged at the right and opened inward; a lock/latch plate is visible on the bar the figure grips"
+            },
+            {
+              "type": "crown",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the figure's head",
+              "orientation": "upright, multiple tall points",
+              "arrangement": "single"
+            },
+            {
+              "type": "spired building / cathedral",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "middle distance beyond the gate, center-right",
+              "orientation": "vertical spires silhouetted against the sky",
+              "arrangement": "single structure with several pointed towers"
+            },
+            {
+              "type": "stone step",
+              "count": null,
+              "countConfidence": "low",
+              "where": "beyond the gate, descending to the right into the dark landscape",
+              "orientation": "horizontal treads receding",
+              "arrangement": "a flight; individual treads are not reliably countable"
+            }
+          ],
+          "environment": [
+            "dark stone interior at left — a heavy wall or pillar in deep shadow",
+            "stone flagstone floor",
+            "the open gate at right opening onto an exterior",
+            "a heavily clouded sky beyond with a pale break in the clouds",
+            "dark landscape and a spired building beyond the gate",
+            "the whole image is very low key, near-monochrome brown/charcoal"
+          ],
+          "lightSources": [
+            "pale light entering from the sky/opening at the upper right, through and around the gate — it falls on the book, the blade and the altar top, which are the brightest surfaces"
+          ],
+          "moonPhase": "not determinable — no moon disc is visible; there is only a pale backlit break in the clouds at the upper right",
+          "spatialRelations": [
+            "the figure stands behind the altar, the altar between him and the viewer",
+            "the sword crosses from his hand down to the book, connecting the figure to the altar top",
+            "his other arm reaches right to hold the open gate, so his two arms span from the altar at center to the gate at the right edge",
+            "the altar sits inside the dark interior; the lit exterior lies beyond the gate on the right",
+            "the butterfly relief is on the altar's front, directly below the open book"
+          ],
+          "foreground": [
+            "stone altar with butterfly relief",
+            "open book on the altar",
+            "downward-pointing sword",
+            "flagstone floor"
+          ],
+          "background": [
+            "crowned figure",
+            "open iron gate with spear-point tops",
+            "clouded sky with a pale break",
+            "distant spired building and descending steps"
+          ]
+        },
+        "uncertainObservations": [
+          "The figure's face is entirely in shadow — features, expression and gaze direction cannot be confirmed.",
+          "Whether the sword's tip merely rests on the book or is driven through it cannot be determined.",
+          "Whether the book's pages carry text or are blank cannot be resolved.",
+          "Whether there is a light source behind the clouds (a hidden moon) cannot be determined; only a diffuse pale break is visible.",
+          "The number of spires on the distant building cannot be counted reliably."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "torn paper or parchment sheet split by the blade",
+          "observed": "An open book lying face-up on the slab — two pale facing pages tented up from a central gutter, with a visible page-block thickness at the front edge — not a single flat sheet, and not torn.",
+          "evidence": "The pale form reads as two planes meeting in a V at the centre where the blade tip sits, and the front edge of the object shows the stepped thickness of a stack of pages; there is no tear line anywhere apart from the blade itself.",
+          "confidence": "medium"
+        },
+        {
+          "field": "visualTensions",
+          "existing": "the intact sheet of paper against its clean tear",
+          "observed": "Same error carried forward: the object is an open book, and no tear is visible in it.",
+          "evidence": "The only thing interrupting the pages is the blade tip resting in the central gutter.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "driving a sword point-down into a torn document on a stone slab",
+            "with": "driving a sword point-down into an open book on a stone slab"
+          },
+          {
+            "find": "torn paper or parchment sheet split by the blade",
+            "with": "open book lying face-up, the blade tip resting in its central gutter"
+          },
+          {
+            "find": "the intact sheet of paper against its clean tear",
+            "with": "the pale open pages against the surrounding blackness"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-313",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, standing behind a stone table/slab",
+              "posture": "standing upright, facing the viewer, right arm (viewer's left) extended forward and angled downward, left arm (viewer's right) raised and reaching sideways",
+              "gaze": "toward the viewer / slightly downward; the face is deep in shadow under the crown and cannot be read",
+              "heldObjects": [
+                "a pale luminous blade held point-DOWN in the extended right hand, its tip resting on or driven into an open book lying on the slab",
+                "the left hand grips a vertical bar of the open iron gate at the right"
+              ],
+              "clothing": "heavy dark cloak/mantle over a robe; an ornate vertical band down the chest with a cross-shaped or cruciform ornament at its center",
+              "headwear": "a tall spiked/pointed crown"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center, angled down-left from the figure's hand onto the open book",
+              "orientation": "point-DOWN, tip touching/entering the book; hilt and crossguard uppermost near the hand",
+              "arrangement": "single blade, the only one in the frame"
+            },
+            {
+              "type": "open book",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center, lying flat on the top of the stone slab",
+              "orientation": "spread open, pages facing up, spine toward the viewer",
+              "arrangement": "single, pale pages catching the strongest light in the frame"
+            },
+            {
+              "type": "stone table / altar block / sarcophagus",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "foreground center, spanning most of the lower half",
+              "orientation": "front face toward the viewer, flat top surface",
+              "arrangement": "single; a butterfly or moth is carved in relief on the centre of its front face"
+            },
+            {
+              "type": "carved butterfly/moth relief",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "front face of the stone block, centered",
+              "orientation": "wings spread, head up",
+              "arrangement": "single relief panel"
+            },
+            {
+              "type": "wrought-iron gate leaf",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right side, standing open, swung toward the viewer",
+              "orientation": "vertical bars topped with spear-point finials pointing UP",
+              "arrangement": "one leaf clearly visible and open; a matching second leaf is not resolvable"
+            },
+            {
+              "type": "distant spires / gothic towers",
+              "count": null,
+              "countConfidence": "low",
+              "where": "middle distance beyond the gate, right of center",
+              "orientation": "vertical, silhouetted",
+              "arrangement": "a clustered group of pointed spires; individual towers overlap and cannot be separated"
+            },
+            {
+              "type": "stone steps / descending rubble path",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "beyond the gate, lower right, leading away from the gateway",
+              "orientation": "descending away from the viewer",
+              "arrangement": "single broken flight"
+            }
+          ],
+          "environment": [
+            "dark stone interior on the left (wall and a pier/column in deep shadow)",
+            "an open gateway on the right revealing an outdoor night landscape",
+            "cobbled floor in the lower right",
+            "cloud-dappled night sky"
+          ],
+          "lightSources": [
+            "a diffuse pale glow behind the mottled clouds in the upper right, silhouetting the spires; the blade and the open book are themselves noticeably brighter than everything around them"
+          ],
+          "moonPhase": "uncertain — a bright patch of sky shows through the clouds but no clean lunar disc or crescent edge is resolvable",
+          "spatialRelations": [
+            "the figure stands centered behind the slab, the slab between the figure and the viewer",
+            "the blade descends from the figure's hand to the book, linking hand, blade and book on one diagonal",
+            "the open gate is immediately to the figure's left (viewer's right), and the figure's hand is on it",
+            "interior darkness fills the left half, the outdoor view fills the right half; the figure straddles the boundary"
+          ],
+          "foreground": [
+            "stone slab with the open book",
+            "butterfly relief",
+            "cobbles at lower right"
+          ],
+          "background": [
+            "open iron gate",
+            "night sky with dappled cloud",
+            "distant spires",
+            "broken steps"
+          ]
+        },
+        "uncertainObservations": [
+          "the figure's face is unreadable; whether there is a face, a skull, or empty shadow under the crown cannot be determined",
+          "the exact count of points on the crown is not resolvable",
+          "whether the blade's tip actually pierces the book or only rests on it is ambiguous",
+          "the number of distant spires cannot be counted",
+          "whether a second gate leaf exists off-frame to the right is undetermined",
+          "the source of the pale glow behind the clouds cannot be identified"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

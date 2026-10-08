@@ -1,0 +1,254 @@
+{
+  "reviewId": "review-312",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-312.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-312.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "three upright swords set into arched wall niches",
+          "observed": "three swords hung POINT-DOWN in the niches — round pommel uppermost, crossguard below it, blade tapering downward",
+          "evidence": "In each of the three recesses a small disc pommel sits at the top, a horizontal crossguard just under it, and the blade narrows to a point at the bottom of the niche.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the three niche swords are aligned in a row above and to the left of the figure",
+          "observed": "the row of three sits above the figure's torso and head end, i.e. above and to the RIGHT of centre; the upper LEFT is occupied by the gothic window",
+          "evidence": "The niches span the centre-right of the back wall while the figure's head rests at the right end of the slab and the bare feet are at the far left; the leaded window is the only thing at upper left.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "bandaging a forearm",
+          "observed": "the hands are clasped together at the chest around a narrow pale strip whose identity is not resolvable — it could be a bandage, a cloth, a scroll or a small blade",
+          "evidence": "The strip is visible only as a short pale diagonal between the two hands; no wrapping around the forearm can actually be traced at this light level.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "three swords set upright in arched wall niches",
+            "with": "three swords hung point-down in arched wall niches"
+          },
+          {
+            "find": "three upright swords set into arched wall niches",
+            "with": "three swords hung point-down in arched wall niches"
+          },
+          {
+            "find": "the three niche swords are aligned in a row above and to the left of the figure",
+            "with": "the three niche swords are aligned in a row above the figure, over the head end at the right"
+          },
+          {
+            "find": "bandaging a forearm",
+            "with": "hands clasped at the chest around a narrow pale strip of cloth"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-312",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, lying along a stone bench/slab that runs left-to-right across the frame",
+              "posture": "LYING on the back, head at the right end propped on a raised headrest/cushion, torso slightly inclined, knees loosely drawn up, bare feet exposed at the left end, a heavy dark cover drawn over the body from the chest down",
+              "gaze": "downward toward its own hands at the chest; head bowed/tilted forward, eyes not clearly open",
+              "heldObjects": [
+                "both hands are brought together at the chest around a narrow pale vertical object"
+              ],
+              "appearance": "dark curly hair, dark long-sleeved garment"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword/blade mounted in a wall niche",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "upper right of the frame, one in each of three tall pointed-arch recesses in the back wall",
+              "orientation": "all three point DOWN — round pommel at the top, horizontal crossguard below it, blade hanging downward; all vertical and parallel",
+              "arrangement": "an evenly spaced row of 3 side by side, all at the same height, no gaps between them beyond the wall piers"
+            },
+            {
+              "type": "sword/blade lying flat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower right foreground, resting on a low stone ledge/step",
+              "orientation": "HORIZONTAL, lying flat; hilt and pommel at the right, blade tip pointing left",
+              "arrangement": "single, alone on the ledge"
+            },
+            {
+              "type": "stone bench / slab bier",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center, supporting the lying figure",
+              "orientation": "long axis left-to-right",
+              "arrangement": "single; its front face carries carved pointed-arch panelling"
+            },
+            {
+              "type": "tall traceried gothic window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left wall, upper left, reaching from near the ceiling down to the level of the bench",
+              "orientation": "upright, pointed arch with a rosette in the head",
+              "arrangement": "single, on the side wall perpendicular to the back wall"
+            },
+            {
+              "type": "step",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower left, descending away from the bench toward the bottom-left corner",
+              "orientation": "horizontal treads",
+              "arrangement": "a short flight of about 3-4, the lowest ones lost in shadow"
+            }
+          ],
+          "environment": [
+            "dark stone interior, chapel- or crypt-like",
+            "back wall with three arched recesses",
+            "left wall with a single large traceried window",
+            "stone floor with steps at the lower left and a raised ledge at the lower right",
+            "almost entirely brown-black monochrome"
+          ],
+          "lightSources": [
+            "weak grey daylight through the left gothic window — the only light in the frame; everything else is lit by its falloff"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the three wall-mounted blades hang directly above and behind the lying figure, at the right-hand end of the room, over the figure's head end",
+            "the fourth blade lies flat on a ledge in front of and below the bench, separated from the other three — it is not part of the row",
+            "the window on the left faces the figure's bare feet; light falls from left to right across the body",
+            "the steps at lower left lead down and away, out of frame"
+          ],
+          "foreground": [
+            "the lower stone ledge with the horizontal blade",
+            "the steps at lower left",
+            "the carved front face of the bench"
+          ],
+          "background": [
+            "back wall with the three niched blades",
+            "shadowed ceiling"
+          ]
+        },
+        "uncertainObservations": [
+          "what the figure holds at the chest is genuinely ambiguous — a narrow pale vertical strip that could be a small blade, a rolled cloth, a scroll, or simply the hands clasped; I will not name it",
+          "whether the figure's eyes are open or closed is not determinable",
+          "whether the recesses are windows (open to outside) or blind niches cannot be told; no light comes through them",
+          "the number of steps at the lower left cannot be counted; the lower ones are in full shadow",
+          "whether the figure is on a bench, a bed, or a tomb slab is not determinable from the visible carving alone"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects / scene",
+          "existing": "three upright swords set into arched wall niches",
+          "observed": "three swords mounted hilt-up / point-DOWN in the three arched niches",
+          "evidence": "In each niche the pommel and cross-guard sit at the top and the blade tapers downward to a point near the niche floor; 'upright' reads as point-up and states the wrong direction.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "three upright swords set into arched wall niches",
+            "with": "three swords mounted point-down (hilts uppermost) in arched wall niches"
+          },
+          {
+            "find": "three swords set upright in arched wall niches",
+            "with": "three swords mounted point-down in arched wall niches"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-312",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-right, lying on a raised stone bier/slab",
+              "posture": "reclining / lying on the back, upper body propped against a cushioned headrest at the right end, legs extended to the left, bare feet exposed at the left end",
+              "gaze": "head bowed, face angled downward toward own hands",
+              "heldObjects": [
+                "a small narrow object gripped in both hands at chest height — appears blade-like or a short hilt, too dark to resolve"
+              ],
+              "clothing": "long dark robe/covering draped over the body from chest to ankles; feet left bare"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword/blade",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "upper right, one inside each of three tall pointed arch niches/windows in the back wall",
+              "orientation": "point-DOWN — pommel and cross-guard at the top of each niche, blade tapering downward",
+              "arrangement": "an evenly spaced horizontal row of three, all three at roughly the same height, no gaps between them; they occupy the three arches of a single tracery group"
+            },
+            {
+              "type": "sword/blade",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower right, lying flat on a stone ledge/step below and in front of the bier",
+              "orientation": "horizontal, hilt at the right, point toward the left",
+              "arrangement": "single, isolated, separated from the wall group by the full height of the bier"
+            },
+            {
+              "type": "stained-glass lancet window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left wall, upper half",
+              "orientation": "vertical, pointed arch top with a circular rosette above the glazing",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "dark stone interior, gothic vaulted chamber",
+            "raised carved stone bier/tomb slab with arcaded relief panels on its front face",
+            "stone steps descending at the lower left",
+            "back wall with three pointed-arch niches"
+          ],
+          "lightSources": [
+            "dim pale light through the stained-glass lancet window on the left wall — the only light source; everything else falls away into near-black"
+          ],
+          "moonPhase": "no moon or sun visible",
+          "spatialRelations": [
+            "the three wall blades hang directly above and behind the reclining figure",
+            "the single ground blade lies on a lower ledge in front of the bier, outside and below the group of three",
+            "the figure's head is at the right, nearer the lit window is to the left behind the feet",
+            "steps at lower left lead up toward the bier platform"
+          ],
+          "foreground": [
+            "stone steps at lower left",
+            "the ledge bearing the single horizontal blade at lower right"
+          ],
+          "background": [
+            "the three arched niches with their blades",
+            "dark stone wall surface and faint vault ribs"
+          ]
+        },
+        "uncertainObservations": [
+          "the small object clasped in the figure's hands cannot be resolved — it may be a short blade, a hilt, or clasped hands only",
+          "whether the figure's eyes are open or closed is not determinable at this light level",
+          "faint vertical shapes in deep shadow at the far back center could be columns or additional niches; not countable"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

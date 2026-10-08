@@ -1,0 +1,76 @@
+[
+  {
+    "reviewId": "review-212",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image before reading any reviewer notes. Upper-left wall holds a dark rectangular case divided into a 3x3 lattice: nine blades, one per pane. In every pane the pommel and crossguard sit at the TOP of the compartment and the blade tapers downward to a point at the bottom — all nine hang hilt-up / point-down, with no exception in any of the three rows. Count of nine is unambiguous (3+3+3). Separately: a figure sits on the near edge of the bed, back to viewer, right arm raised to the curtain at the tall window; barefoot; a pale wedge of daylight crosses the cracked floor; a spired cityscape is visible outside.",
+    "reason": "All five AUTO_CORRECT gates are met. (1) The orientation is unambiguous on the pixels — hilt mass at top, taper to a point at bottom, repeated nine times. (2) TWO independent reviewers reported the same thing in their blind observations: reviewer-b wrote 'one blade hangs point-down in each compartment' and reviewer-e wrote 'each hilt-up and point-down'. Reviewer-e's overall verdict was 'pass', but the agreement test is on the blind observation, and reviewer-e recorded the identical orientation independently. (3) I reached the same conclusion from the image on my own, before opening the packet. (4) Blade orientation is an observable fact (朝向), not interpretation. (5) The fix is two exact substring replacements, both verified unique in the reveal packet with grep -F. 'Upright sword' conventionally reads as point-up, so the existing wording asserts the inverse of what is on the card; this is a factual error, not a phrasing preference.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "nine upright swords displayed one per panel",
+          "with": "nine swords displayed one per panel, each hanging point-down with its hilt uppermost"
+        },
+        {
+          "find": "nine-panel wall cabinet holding nine upright swords",
+          "with": "nine-panel wall cabinet holding nine point-down swords"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-215",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "I viewed the image before reading the packet. One figure, curly dark hair, green-brown woodland tunic and boots, mid-stride on a forest path; right arm raised holding one long straight sword point-up, left hand braced on a thick vine; one dark bird perched upper left; vine arches enclosing both sides; mushrooms lower left and white star-flowers along the bottom. On the blade specifically: the fist and crossguard sit low, and the blade runs a long bare stretch upward before any foliage appears. The leaves cluster from roughly a third of the way up the blade to about two-thirds toward the tip — mid-to-upper blade, not near the hilt. I also cannot tell from the pixels whether that foliage is attached to the blade or is background creeper passing in front of it.",
+    "reason": "The existing keyObjects entry makes two assertions and neither survives. POSITION: 'near the hilt' is contradicted by what I see — the foliage sits mid-to-upper blade with a clear bare gap above the crossguard. ATTACHMENT: 'growing along' asserts the sprig is attached, and both reviewers independently said this is undeterminable (reviewer-a: 'whether the green sprigs near the blade are attached to the sword or are background foliage passing in front of it cannot be determined'; reviewer-c: 'whether the foliage on the blade is growing from it or merely draped over it is not determinable'), as did the generating model's own self-reported uncertainty. I did NOT take AUTO_CORRECT: only reviewer-c raised the position error, reviewer-a passed and never stated a position along the blade, so gate 2 (two independent reviewers reporting the same thing) is not met, and the schema says to step away from AUTO_CORRECT when hesitating. Dropping this single item is the lowest-loss move: the sword itself, the bird, the vines, the path, the mushrooms and the flowers are all independently confirmed by both reviewers and stay intact.",
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "small leafy sprig growing along the sword blade near the hilt"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-216",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "I viewed the image before the packet. High-key pale blue/white painting. One figure, long pale hair, flowing gown and translucent veil, standing on a carved stone plinth, head bowed, both hands gripping the hilt of one large sword held vertically POINT-DOWN, the blade descending to the plinth surface. An ornate pointed crown sits low on the blade near the plinth. BIRDS: I can pick out exactly one small pale bird-like shape, upper left among the blossoming branches — I cannot resolve a second, and even that one is faint enough that I would not swear it is a bird rather than a petal cluster. MOON: at upper right there is a thin bright crescent arc, not a full round disc; its unlit remainder is lost in cloud, and I cannot rule out that the bright arc is a break in the clouds.",
+    "reason": "Two separate assertions in the existing description outrun the evidence, and both reviewers independently reported each of them (reviewer-c and reviewer-e both filed the plural-birds issue and both filed the moon-disc issue, from independent blind passes; both returned verdict 'uncertain'). I reached the same two conclusions on my own before reading them. I deliberately did NOT take AUTO_CORRECT on the moon despite the two-reviewer agreement, because gate 1 (the visual fact must be unambiguous) fails: both reviewers rated it medium confidence and both put it in their own uncertainObservations — reviewer-c 'cloud overlap makes the exact phase/orientation unreliable', reviewer-e 'whether it is a moon disc or a cloud break cannot be determined'. Swapping 'disc' for 'crescent' would trade one unverified claim for another slightly better one, when the honest state is that the lunar body's form is not resolvable. Same logic on the birds: the count is not merely wrong-plural, it is unresolvable, so correcting it to 'one' would still assert more than the pixels support. Naming both items individually rather than discarding whole fields: the rest of keyObjects (sword, crown, plinth, veil, blossoming branch) and the other three spatialRelations entries are confirmed by both reviewers and by me, and they survive intact.",
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "small white birds in flight"
+      },
+      {
+        "field": "spatialRelations",
+        "item": "the moon disc sits behind and above the figure's head, upper right of centre"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-217",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I counted the image myself before opening the packet. Engraving-style card: one prone figure lying face-down on barren stony ground, head to the left, legs to the right, both arms flung outward with open empty hands, rust-red cloak bunched over the back, blue-grey tunic and pale wrist cuffs. Blades stand upright out of the back, driven point-down. I enumerated the round pommels one at a time against the open sky, left to right: (1) far left, low; (2) left, tall; (3) left-of-centre, medium; (4) centre-left, the tallest; (5) centre, the short low one; (6) centre, tall; (7) centre-right, medium; (8) right, medium-tall; (9) far right, low. NINE pommels. The pommels are silhouetted separately against sky and do not overlap each other — only the blade shafts overlap further down where they converge into the body. No tenth pommel breaks the skyline anywhere in the fan. Background: dark hatched storm sky, a low sun on the sea horizon at right with a light column on the water, a dark flat-topped cliff at the far left horizon.",
+    "reason": "All five gates are met. (1) The count is unambiguous on the specific thing being asserted: the existing text claims 'ten upright swords with round pommels and straight crossguards', and pommels are exactly what IS individually resolvable here — both reviewers note the pommels do not overlap, only the blades do. There are nine. (2) TWO independent reviewers reported it: reviewer-b and reviewer-d both counted nine, both verdict 'corrected'. (3) I reached nine independently, before reading either. Decisively, all three enumerations match slot-for-slot by position and height — far-left low, left tall, left-of-centre medium, centre-left tallest, centre short, centre tall, centre-right medium, right medium-tall, far-right low. Three blind passes agreeing on nine LOCATIONS, not merely on the number nine, is what lifts this past the reviewers' individually hedged 'medium'. (4) Count is an observable fact. (5) Three exact substring replacements, each verified present and unique in the reveal packet with grep -F. On the reviewers' shared caveat that a fully occluded tenth blade cannot be ruled out: that residual applies to any count and cannot be evidence FOR ten; meanwhile 'ten' is the number the card-name prior would supply, which is precisely the failure mode this round exists to catch, and reviewer-d explicitly recorded refusing to adjust toward an expected total. I kept the word 'upright' in the scene string: the blades are driven point-down into the back but stand upright, so 'upright' is accurate and only the numeral needed changing. I also patched the model's own self-reported uncertainty line so the file does not keep asserting ten after the correction.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "ten upright swords with round pommels and straight crossguards",
+          "with": "nine upright swords with round pommels and straight crossguards"
+        },
+        {
+          "find": "ten swords driven upright into the back",
+          "with": "nine swords driven upright into the back"
+        },
+        {
+          "find": "exact count of swords is ten as resolved, though the central cluster overlaps slightly",
+          "with": "exact count of swords is nine as resolved, though the central cluster overlaps slightly"
+        }
+      ]
+    }
+  }
+]

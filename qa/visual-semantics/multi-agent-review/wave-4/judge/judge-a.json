@@ -1,0 +1,83 @@
+[
+  {
+    "reviewId": "review-401",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image before reading any packet. The entire frame is high-key: white-to-pale-blue clouded sky, near-white sea, white stone, white gown and veils. There is no deep blue, no lavender-dark field, no night ground anywhere in the frame — the darkest values in the image are mid-grey foliage at the lower left. A fairly thick crescent moon does sit in the upper-right sky and a bright glittering light path runs down the sea below it, so the sea is genuinely lit by that light source; the scene is simultaneously high-key and moonlit.",
+    "reason": "Meets all five gates for the deckSpecificMotifs line only. (1) The absence of a dark ground is unambiguous on the pixels. (2) Two independent Reviewers recorded it separately in their blind observations: reviewer-d ('no deep blue or night-dark ground anywhere in the frame', confidence high) and reviewer-a ('Sky, sea and drapery are all near-white in value; there is no dark field anywhere in the frame') — reviewer-a's overall verdict was uncertain, but he independently logged the same ground-value fact, which satisfies the two-reporter threshold. (3) I reached the same conclusion on my own pass. (4) Presence/absence of a dark ground is an observable fact, not a reading. (5) It is a single exact substring swap. I REJECT reviewer-d's second proposed patch (scene: 'moonlit sea' -> 'daylight-like illumination'): only reviewer-d raised it, reviewer-a explicitly recorded day-vs-night as undeterminable, and the moonlit-water reading is interpretation, not an observable. The crescent moon and its reflected light column on the water are both plainly present, so 'moonlit sea' stands.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "silver linework on a deep blue-lavender night ground",
+          "with": "pale silver-lavender linework on a light, near-white ground"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-404",
+    "decision": "AUTO_PASS",
+    "confidence": "medium",
+    "independentFinding": "I viewed the image first. Seven human figures (incl. a carried infant) plus one white long-haired dog lying at the right. Nine pentacle discs lie face-up on a pale cloth on the ground, and a tenth glowing pentacle is held by the seated child with the bearded elder's hand supporting it from below. Background: a large pale moon at the upper left, a still lake with a vertical light reflection, a domed colonnaded pavilion and steps on the far shore, misty hills, a stone archway with wisteria at the right, and a lit cage lantern on a ledge at the far right. On the foreground woman's posture: her hip and torso are low to the ground and pitched forward, but her lower legs are completely hidden under drapery -- I cannot distinguish kneeling from sitting-low. On the light: the frame is high-key and pale throughout, yet a moon and a moon-path on the water are both plainly present; I cannot assert daylight.",
+    "reason": "Both of reviewer-e's issues fail the bar, and the other two Reviewers passed. (1) 'moonlit garden' -> 'brightly lit': this is interpretation of mood, not an observable. reviewer-e himself wrote 'I could not assert night from the pixels, only that a moon is visible'. The other two independently read the opposite way -- reviewer-c logged lightSources 'a large moon at the upper left' and only hedged twilight-vs-night, reviewer-f logged the environment as 'night or pre-dawn sky'. So the two-reporter threshold is not met and the pixels do not contradict 'moonlit': a moon and its reflection streak are both there. (2) 'kneeling woman' -> 'seated, forward-leaning': directly contradicted by reviewer-f, who independently recorded 'kneeling / sitting low on the ground' and twice called her 'the kneeling foreground woman'; reviewer-c recorded the hybrid 'seated/kneeling'. reviewer-e's own evidence concedes 'her drapery hides the lower legs, so I cannot fully exclude a kneel'. My own close crop confirms the lower legs are not visible. Unresolvable at this resolution and not an unambiguous visual fact, so no correction. I deliberately do NOT mark this item uncertain: the load-bearing content of that spatialRelations line is the left-right flanking of the discs by woman and dog, which is correct and independently confirmed by all three Reviewers, and dropping the item to excise one borderline posture adjective would cost more evidence than it saves. Note also that the existing text never asserts a disc count ('a scatter of gold pentacle discs') and already self-flags the count as uncertain, so the 9-vs-10 spread across Reviewers needs no action.",
+    "overturnedReviewer": true
+  },
+  {
+    "reviewId": "review-406",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I viewed the image before reading the packet. Three women stand in a shallow inward-facing ring, each raising one stemmed goblet; exactly three goblets, all upright, rims converging at a single high point below the moon. The moon at upper centre-right is a LARGE COMPLETE ROUND DISC with visible crater mottling and a soft shading along the lower-left limb -- there is no crescent sliver anywhere; at 5x magnification it reads gibbous to full. Behind the figures, between the centre and right figure, I can clearly see a water surface: horizontal ripple bands with a vertical bright reflection path running down from the moon toward a baluster post, i.e. a terrace overlooking water. On the lower-right table: a shallow footed bowl heaped with white and purple grapes and round fruit, a lidded ornate glass decanter, and a lit candle in a glass holder. The whole frame is high-key and pale.",
+    "reason": "Meets all five gates for the moon phase only. (1) At 5x the disc is unambiguously a full round face, not a crescent. (2) Two independent Reviewers reported it separately and at high confidence: reviewer-b ('The disc is a complete circle with only a soft shading on its lower-left limb; there is no crescent sliver', confidence high) and reviewer-e ('a large full round face with only a softly shaded lower-left limb', confidence high). (3) I reached the same conclusion on my own pass before reading either. (4) Crescent-vs-round is pure observable shape. (5) Two exact substring swaps. NOTE on find strings: the bare string 'crescent moon' occurs TWICE in the reveal packet (line 3 in scene, line 7 as a keyObject), so I deliberately used longer unique anchors -- 'beneath a crescent moon' and the full keyObject line '  - crescent moon' -- each verified unique with grep -F. I REJECT the two other proposed changes. (a) 'at night' -> daylight: interpretation, not observable, and reviewer-b's own evidence concedes 'whether this is meant as daylight, twilight or a very luminous night cannot be settled from the pixels'. The threshold is not met and I leave the wording alone. (b) reviewer-e's 'separating them from the water' -> 'open sky, no water visible': this is factually wrong and I overturn it. Water IS visible between the figures -- I magnified that band and it shows horizontal ripple banding with a vertical moon-reflection path -- and reviewer-b independently recorded 'water/sea and a bright stepped stairway of light in the center distance' in his environment list. reviewer-e read the moon path as 'a flight of pale steps'; the existing text stands.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "beneath a crescent moon",
+          "with": "beneath a large pale gibbous-to-full moon"
+        },
+        {
+          "find": "  - crescent moon",
+          "with": "  - large pale gibbous-to-full moon disc"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-407",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "I viewed the image first and brightened it 3.4x to read the near-black wall. A lone robed figure seen from behind stands on a tiled floor before a dark stone wall of arched niches, each niche holding a footed chalice with a distinct object above it. I can resolve exactly SEVEN niches: upper row of four (serpent, tower/turret, crown, leafy branch) and lower row of three (key at far left, a white cloth the figure's right hand is lifting off the centre one, an oval mirror-like disc at the right). The figure's left arm is raised toward the upper-left niche. Critically, measuring the niche centres, the upper row is evenly spaced, while in the lower row the far-left-to-centre gap is roughly double the centre-to-right gap, and the figure's body stands exactly in that double-width span. I independently judged, before reading any packet, that one more lower-row niche could be hidden behind the robe. I can neither confirm nor exclude it, so I cannot verify that seven is the total.",
+    "reason": "Not AUTO_CORRECT, because the correct number is unknown -- the ambiguity itself is the finding, and I have no unambiguous fact to patch to. Not AUTO_PASS, because the description asserts a total ('seven arched wall niches') that the pixels do not establish. Two independent Reviewers recorded exactly this, independently of each other and of me: reviewer-d ('the lower row jumps from the far-left niche straight to the centre one, a gap about twice the other spacing, and the figure's body fills that position... the asserted total of seven is not verifiable') and reviewer-f, who went further and ran a brightness scan along the lower ledge line, finding lit ledge under the three visible niches but 'a completely dark span across the robe's width, so the wall there is occluded rather than shown to be blank'. My own measurement agrees. I name the two specific items rather than discarding whole fields. I remove BOTH numeric items, not just the keyObjects one, because 'four niches in an upper row, three in a lower row' re-asserts the same unverifiable total of seven -- dropping only one would leave the downstream model able to reconstruct 'seven' anyway. The cost is low: the remaining keyObjects still enumerate each niche's contents by position (upper-left serpent, second upper tower, third upper crown, upper-right branch, lower-left key), so the two-row niche-wall layout survives without the unverified count. Note that the model's own self-reported uncertainty already includes 'the precise number of niches fully visible at the left edge', which corroborates the flag. reviewer-b passed but raised no counter-observation on the niche count, so nothing is overturned.",
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "seven arched wall niches"
+      },
+      {
+        "field": "spatialRelations",
+        "item": "four niches in an upper row, three in a lower row"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-408",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I viewed the image before reading the packet and magnified the hands 3x. The foreground woman is seen from behind, arms LOWERED, a sword in each fist at hip height: hilts up in the grip, blades running DOWN and outward past her skirt toward the ground, forming a shallow inverted V. No part of either blade rises above the hand -- neither is upright. Three further swords lie flat on the ground in the foreground; I resolved three distinct pommel-grip-crossguard assemblies with blades running right. A second pale figure walks away barefoot through ankle-deep water at the right, empty-handed. A large round mottled moon sits at the upper right with two birds; white chrysanthemum-like blossoms fill the lower left. Her head is turned to the viewer's RIGHT in near-profile, looking down toward the water and the departing figure.",
+    "reason": "Meets all five gates for the held-sword orientation. (1) At 3x the orientation is unambiguous: hilts up, points down, nothing above the grip. (2) Two independent Reviewers reported it separately and both at HIGH confidence: reviewer-c ('both held blades hang DOWN at her sides... neither blade rises above the grip') and reviewer-e ('both points aim at the ground, neither is raised'). Both also independently flagged that the same error repeats in visualTensions. (3) I reached the identical conclusion on my own pass before reading either. (4) Blade orientation is a pure observable. (5) Two exact substring swaps, each verified unique with grep -F. For the visualTensions line I used reviewer-e's minimal wording, which removes only the false word 'upright' and keeps the held-vs-discarded contrast, rather than reviewer-c's 'echo', which rewrites the tension itself on a wording preference. I REJECT three other proposals. (a) 'toward a moonlit horizon' -> daylit (reviewer-c, medium confidence; reviewer-e logged it only as an uncertainObservation): light-source mood is an inference, not an observable of the kind this gate admits, both Reviewers hedged, and a large moon is plainly in the frame, so the existing wording is not falsified. (b) reviewer-e's visualTensions 'face opposite directions' fix: raised by one Reviewer only, at medium confidence, and directly contradicted by reviewer-c's blind observation ('she is turned away from both the distant figure and the water'). I note for the record that on my own look reviewer-e has the better read -- her head is clearly turned to the viewer's right, toward the departing figure, so reviewer-c's observation is the wrong one -- but a single-Reviewer item about head-versus-body orientation in an interpretive field does not clear the AUTO_CORRECT bar, so I leave the line alone. (c) The ground-sword count: reviewer-c recorded null ('at least 3, possibly more'), reviewer-e recorded 3 with a note that a fourth could be hidden. I independently located exactly three hilts, which matches the existing 'three swords lying crossed on the ground', so the existing number stands and I do not mark it uncertain.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "two swords held upright by the foreground figure",
+          "with": "two swords held hilt-up at the foreground figure's lowered sides, blades angled down and outward with both points toward the ground"
+        },
+        {
+          "find": "the upright held swords contrast with the swords lying discarded on the ground",
+          "with": "the still-gripped swords, points lowered, contrast with the swords lying discarded on the ground"
+        }
+      ]
+    }
+  }
+]

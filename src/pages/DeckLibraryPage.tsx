@@ -1,3 +1,4 @@
+import { SignatureArt } from '@/atmosphere/SignatureArt'
 /**
  * Deck Library —— 数字牌柜（Digital Tarot Cabinet）。
  *
@@ -27,13 +28,14 @@ import { useState } from 'react'
 import type { CSSProperties } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { designTransition } from '@/design/motion'
 import { AppShell } from '@/components/layout/AppShell'
 import { Button } from '@/components/atoms/Button'
 import { CardFrame } from '@/components/card/CardFrame'
 import { DeckCardBack } from '@/components/card/DeckCardBack'
 import { DeckCover } from '@/components/deck/DeckCover'
 import { TarotCardFace } from '@/components/card/TarotCardFace'
-import { decks } from '@/decks/registry'
+import { decks, productionDecks } from '@/decks/registry'
 import type { DeckDefinition } from '@/decks/types'
 import { getAtmosphere } from '@/atmosphere/registry'
 import { PREVIEW_CARD_IDS } from '@/decks/artwork/manifests'
@@ -114,10 +116,11 @@ function DeckRow({
     <div
       style={scope}
       className={[
-        'overflow-hidden rounded-[var(--deck-radius)] border transition-colors duration-[var(--duration-base)]',
+        'deck-gallery-item relative isolate overflow-hidden rounded-[var(--deck-radius)] border transition-colors duration-[var(--duration-base)]',
         active ? 'border-silver/45 bg-surface-1/40' : 'border-line-hairline bg-bg-void/30',
       ].join(' ')}
     >
+      <SignatureArt deckId={deck.deckId} />
       {/* 选中区与展开区是**分离**的两个可点区域。
           如果「展开才能选」，展开就成了必要步骤，用户会觉得必须读完才敢选，
           这一页就变重了 —— 而它本该是一次轻的偏好选择。 */}
@@ -127,7 +130,7 @@ function DeckRow({
         aria-checked={active}
         onClick={onSelect}
         animate={{ scale: active ? 1 : 0.995 }}
-        transition={{ duration: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
+        transition={designTransition('quick')}
         className="flex w-full flex-col gap-5 p-[var(--deck-pad)] text-left sm:flex-row sm:items-start sm:gap-7"
       >
         {/* 封面 —— 第一视觉入口。它不是任何一张牌，可以画得比单张牌更放得开 */}
@@ -223,7 +226,7 @@ function DeckHeading({
             它是固定文案，字符集在子集覆盖范围内（display-keys.json） */}
         <span
           className="text-[22px] leading-tight text-text-hi sm:text-[26px]"
-          style={{ fontFamily: 'var(--font-display)', fontWeight: 300, letterSpacing: '0.08em' }}
+          style={{ fontFamily: 'var(--font-oracle)', fontWeight: 400, letterSpacing: 'var(--tracking-oracle)' }}
         >
           {deckName(t, deck.deckId)}
         </span>
@@ -250,18 +253,19 @@ export default function DeckLibraryPage({ showAll = false }: { showAll?: boolean
   const [expandedId, setExpandedId] = useState<string | null>(null)
   const toggle = (id: string) => setExpandedId((prev) => (prev === id ? null : id))
 
-  /* ── 正式页只陈列**能用**的牌组 ──
+  /* ── 正式页只陈列对外开放的五套 ──
      【为什么是过滤而不是删数据】
-     未开工的牌组仍然登记在 registry 里，它们是后续产能，
+     未完成的牌组仍然登记在 registry 里，它们是后续产能，
      `/dev/decks` 仍然能看到全部十套。删掉数据会让下一批开工时无处落脚。
 
-     【为什么按 isDeckPlayable 而不是写死五个 id】
-     写死的话，那五套画完的那天需要有人记得回来改这一行 ——
-     而「记得」正是这次出问题的原因：C3 交付 390 张之后，
-     这一页仍然把 0/78 的空壳摆在主位，标题写着「现行牌组」，
-     文案说「上面五套的插画还在制作中」，而事实已经完全反过来了。
-     改成数据驱动之后，牌组能不能抽由资产决定，这一页自动跟上。 */
-  const shelf = showAll ? decks : decks.filter((d) => isDeckPlayable(d.deckId))
+     【为什么从 isDeckPlayable 换成 PRODUCTION_DECK_IDS】
+     上一版按资产是否齐备来判断，理由是「数据驱动，不用有人记得回来改」。
+     那个理由今天仍然对，但 isDeckPlayable 只看得到原画，看不到
+     视觉语义齐没齐、QA 过没过 —— 而「这副牌能不能给用户用」现在是这三件事之和。
+     换成显式清单之后，「忘记更新」这个风险由 deck:check 的双向断言接管：
+     任何一套真正齐备却不在清单里的牌组都会让它失败。
+     产品决定放在清单里，防遗忘放在断言里，各归其位。 */
+  const shelf = showAll ? decks : productionDecks
 
   /* key 刻意**不**放进这个对象：藏在 spread 里的 key 静态检查看不到，
      React 19 也不再推荐这种写法。调用处显式写 key。 */

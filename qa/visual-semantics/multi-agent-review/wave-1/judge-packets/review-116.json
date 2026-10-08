@@ -1,0 +1,310 @@
+{
+  "reviewId": "review-116",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-116.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-116.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "stack of books beside the astrolabe",
+          "observed": "a stack of flat slab-like rectangular forms at the lower left edge, below the glowing circular disc; they are in deep shadow and read equally as stacked stone slabs / low steps",
+          "evidence": "Re-checked the image. The forms have no visible spines, page edges, covers or colour variation — only flat horizontal planes catching a faint highlight, continuous with the rock and roots around them. Nothing in the pixels identifies them as books.",
+          "confidence": "medium"
+        },
+        {
+          "field": "model self-reported uncertainty",
+          "existing": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere",
+          "observed": "the disc at upper right is a complete round sphere with visible surface mottling/cratering, shaded along one edge; it is definitely not a crescent",
+          "evidence": "The full circular outline is unbroken against the nebula and the surface texture is visible across the whole disc. Only the exact phase (how much of the edge is shaded) remains undeterminable.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "stack of books beside the astrolabe",
+            "with": "stack of flat slab-like forms beside the astrolabe, too dark to identify as books or stone"
+          },
+          {
+            "find": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere",
+            "with": "the exact phase of the round cratered sphere at upper right"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-116",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left-of-center, seated on the ground at the base of a large tree",
+              "posture": "seated, knees drawn up, right elbow on knee, head propped against the right hand, shoulders slumped, barefoot (bare foot visible at lower right of the body)",
+              "gaze": "eyes appear lowered / downward, head tilted, not toward the floating cup",
+              "heldObjects": [],
+              "clothing": "long dark blue-black robe/cloak with faint star-like speckling, dark curly hair"
+            }
+          ],
+          "partialFigures": [
+            {
+              "description": "a disembodied pale hand and forearm emerging from a purple nebula-like cloud at center-right, extended toward the left, presenting a golden goblet",
+              "note": "no body or face attached; not counted as a full figure"
+            }
+          ],
+          "objects": [
+            {
+              "type": "golden goblet / stemmed cup",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "standing upright in a row on the stone paving in the foreground, bottom-center; left one, middle one, right one, all upright, none tipped over"
+            },
+            {
+              "type": "golden goblet / stemmed cup",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held aloft mid-air at center-right by the hand emerging from the nebula"
+            },
+            {
+              "type": "tree",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "large gnarled trunk and canopy filling the upper-left quadrant, branches reaching across the top of the frame"
+            },
+            {
+              "type": "circular engraved star-chart / astrolabe disc",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "glowing gold circular diagram on the ground/rock at left, behind and below the figure"
+            },
+            {
+              "type": "small circular ring device on a post",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far right middle-ground near the pavilion, a gold ring/armillary shape"
+            },
+            {
+              "type": "domed pavilion with columns",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far right middle-ground, on the shoreline"
+            },
+            {
+              "type": "celestial orb / moon-like body",
+              "count": 2,
+              "countConfidence": "low",
+              "where": "one clearly cratered grey-blue sphere upper right; one much fainter, larger, dim circle upper left partly behind the tree"
+            }
+          ],
+          "environment": [
+            "night sky dense with stars",
+            "large purple-pink nebula sweeping from upper-right to center-right",
+            "thin gold constellation lines and geometric star-map circles drawn across the sky",
+            "cracked stone paving in the foreground",
+            "rocky ground and roots at left",
+            "a lake or bay in the right middle-ground",
+            "distant mountains and a warm orange band of light at the horizon on the right",
+            "ornate gold-and-black decorative border framing the whole picture"
+          ],
+          "lightSources": [
+            "glow from the nebula behind the floating cup",
+            "warm orange horizon band at right (low sun glow)",
+            "the cratered orb upper right",
+            "faint golden glow from the engraved disc at left",
+            "the goblets themselves catch gold highlights"
+          ],
+          "moonPhase": "uncertain",
+          "spatialRelations": [
+            "the seated figure occupies the left half; the offered cup floats to the right of and slightly above their head",
+            "the figure's head is turned/tilted away from the floating cup rather than toward it",
+            "the three grounded cups sit in front of and below the figure, nearer the viewer than the figure's feet",
+            "the tree canopy overhangs the figure from above and behind"
+          ],
+          "foreground": [
+            "cracked stone pavement",
+            "three upright golden goblets"
+          ],
+          "background": [
+            "starfield and nebula",
+            "lake, distant mountains, horizon glow",
+            "domed pavilion at right"
+          ]
+        },
+        "uncertainObservations": [
+          "exact phase of the cratered orb upper right cannot be determined; it is partly shaded on one side",
+          "the second, much fainter circle upper left may be another celestial body or a lens/halo effect — not confidently an object",
+          "the figure's eyes are in deep shadow; the downward gaze is inferred from head tilt, not from clearly visible eyes",
+          "whether the figure's hand touches the face or the hair is unclear"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "armillary sphere on a stand at the right",
+          "observed": "a small circular spoked object resting on the ground at the right, between the figure and the water; too small and dark to resolve as a ringed sphere on a stand rather than a flat dial or wheel",
+          "evidence": "At the right, on the ground near the waterline, there is one small circle with radial spokes. Its position matches, but no vertical stand, no nested rings and no three-dimensional armature are resolvable at that scale.",
+          "confidence": "medium"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the armillary sphere stands at the lower right, between the figure and the water",
+          "observed": "a small circular instrument lies on the ground at the lower right, between the figure and the water",
+          "evidence": "Same object as above: the placement is right, the identification as an armillary sphere on a stand is not supported by what is visible.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "stack of books beside the astrolabe",
+          "observed": "a group of pale stacked flat rectangular slabs below and right of the large engraved disc at the left; whether these are books or stone blocks/steps cannot be determined",
+          "evidence": "The forms are layered flat rectangles in deep shadow with no visible spines, covers, page edges or bindings.",
+          "confidence": "medium"
+        },
+        {
+          "field": "model self-reported uncertainty",
+          "existing": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere",
+          "observed": "the object at the upper right is a large round sphere with mottled surface markings, reading full or gibbous; it is definitely not a crescent, though the exact phase cannot be pinned down because its left limb blends into the dark sky",
+          "evidence": "A complete circular disc with visible cratering/mottling is present; no crescent horns or dark-limb cut are visible. It is also not small relative to the frame.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "armillary sphere on a stand at the right",
+            "with": "small circular spoked instrument on the ground at the right (dial or ring form; not resolvable)"
+          },
+          {
+            "find": "the armillary sphere stands at the lower right, between the figure and the water",
+            "with": "a small circular instrument lies on the ground at the lower right, between the figure and the water"
+          },
+          {
+            "find": "stack of books beside the astrolabe",
+            "with": "stacked flat rectangular slabs beside the astrolabe (books or stone steps; not resolvable)"
+          },
+          {
+            "find": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere",
+            "with": "the exact phase of the large mottled sphere at upper right; it reads full or gibbous, not a crescent"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-116",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center, seated on the ground at the base of a large tree",
+              "posture": "seated, knees drawn up, one arm resting across the knee, the other elbow on the knee with the cheek/chin resting on that hand; bare feet visible on the stone",
+              "gaze": "head tilted, face turned toward the right and slightly downward, away from the floating vessel rather than directly at it",
+              "heldObjects": [
+                "nothing in either hand"
+              ],
+              "otherDetails": [
+                "dark tousled hair",
+                "long dark patterned robe covering the legs",
+                "a small glint of jewellery or trim at the chest"
+              ]
+            }
+          ],
+          "partialFigures": [
+            {
+              "description": "a pale open hand and forearm emerging from the nebula/cloud at the right, extended toward the floating vessel; no body, head or shoulder attached to it is visible",
+              "position": "right of center, at about mid-height"
+            }
+          ],
+          "objects": [
+            {
+              "type": "golden footed goblet standing on the ground",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "three separate goblets on the stone paving across the foreground, left, center and right of the lower frame, evenly spaced, none overlapping"
+            },
+            {
+              "type": "golden footed goblet floating in the air",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "mid-frame right of center, level with the seated figure's head, just left of the emerging hand"
+            },
+            {
+              "type": "engraved circular dial / astrolabe-like disc",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "a large glowing one on the surface at the left edge behind the figure, and a smaller one at the right on the ground near the water"
+            },
+            {
+              "type": "domed colonnade / rotunda",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the far shore at the right, small in the distance"
+            },
+            {
+              "type": "large sphere / orb in the sky",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper right of the sky, showing mottled surface markings"
+            }
+          ],
+          "environment": [
+            "a massive gnarled tree with thick bark rising along the left edge, its branches spreading across the top of the frame",
+            "night sky dense with stars, with a large magenta-violet nebula sweeping through the right half",
+            "faint geometric circles, arcs and constellation lines overlaid on the sky",
+            "a low warm band of light along the horizon at the right, behind distant hills",
+            "a body of water in the middle right distance",
+            "cracked stone paving filling the foreground, with a faintly glowing track running from the lower right toward the middle distance",
+            "a thin ornamental border frames the artwork"
+          ],
+          "lightSources": [
+            "the nebula glow at the right",
+            "the warm horizon band at the right",
+            "the four goblets themselves, which glow",
+            "the glowing engraved dial at the left",
+            "faint luminescence along the cracks in the paving"
+          ],
+          "moonPhase": "uncertain — the large orb at the upper right appears full or near-full but its left limb blends into the dark sky; a second, much fainter pale disc is visible at the upper left",
+          "spatialRelations": [
+            "the three ground goblets are in front of and below the seated figure, nearer to the viewer",
+            "the floating goblet is at head height to the figure's right, held out by the disembodied hand emerging from the nebula",
+            "the figure's head and the floating goblet are at almost the same height, separated by empty sky",
+            "the tree rises directly behind and over the seated figure",
+            "the rotunda, water and horizon glow are all on the right side, beyond the figure"
+          ],
+          "foreground": [
+            "cracked stone paving",
+            "three standing goblets",
+            "the seated figure and the tree base"
+          ],
+          "background": [
+            "starfield and nebula",
+            "large orb upper right",
+            "distant hills, water and domed rotunda",
+            "warm horizon band"
+          ]
+        },
+        "uncertainObservations": [
+          "the phase of the large orb at the upper right cannot be reliably determined; it reads as full or gibbous but its edge is lost against the sky",
+          "the pale disc at the upper left may be a second orb, a lens flare or a faint painted circle",
+          "whether the floating goblet is resting in the emerging hand or hovering just clear of it cannot be resolved",
+          "the figure's eyes are in shadow; the precise gaze direction is a best reading of head tilt only",
+          "the small circular object at the right on the ground may be a dial, a wheel or an ornament",
+          "the goblets appear to contain liquid but the contents are not clearly visible"
+        ],
+        "reviewConfidence": "medium-high",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

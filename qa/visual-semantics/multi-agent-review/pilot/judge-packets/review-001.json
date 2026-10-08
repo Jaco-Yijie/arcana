@@ -1,0 +1,263 @@
+{
+  "reviewId": "review-001",
+  "blindImage": "qa/visual-semantics/blind-review/review-001.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/pilot/reveal/review-001.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "deckSpecificMotifs",
+          "existing": "monochrome near-greyscale rendering with a trace of violet",
+          "observed": "the palette reads as warm brown/sepia-black with ivory-amber highlights; I saw no violet anywhere in the frame",
+          "evidence": "The stone wall, the robe, the paving and the lit patch around the pale bird are all warm brown-to-amber in tone; the only near-neutral areas are the deepest blacks. 'Near-greyscale' is arguable, but the asserted violet trace is not supported by anything visible.",
+          "confidence": "medium"
+        },
+        {
+          "field": "scene / keyObjects",
+          "existing": "cupped hands catching the water",
+          "observed": "one hand grips the chalice's body/stem while the other single hand is held open, palm up, beneath the falling stream",
+          "evidence": "The water does not pass through two cupped hands; the left hand supports the vessel at chest height and only the right hand is extended flat under the overflow before it falls to the step. The phrasing overstates a two-handed cupping that is not in the pixels.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "monochrome near-greyscale rendering with a trace of violet",
+            "with": "near-monochrome warm brown/sepia rendering"
+          },
+          {
+            "find": "cupped hands catching the water",
+            "with": "one open hand held beneath the falling water"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-001",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, on a low stone step",
+              "posture": "kneeling/crouching low, shoulders rounded, head deeply bowed",
+              "gaze": "downward toward the cup in the hands; face is in full shadow and not visible",
+              "heldObjects": [
+                "a large stemmed chalice/goblet held upright in the left hand at chest height, filled to overflowing",
+                "the right hand held open and flat beneath the chalice, palm up, catching the falling water"
+              ],
+              "clothing": "dark heavy robe with long sleeves and a hood/mantle; long stringy dark hair falling over the face"
+            }
+          ],
+          "objects": [
+            {
+              "type": "chalice/goblet",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of the frame, held in the figure's hands; it is the lightest object in the lower half of the image"
+            },
+            {
+              "type": "bird with outspread wings",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right, pale/white against the dark wall, wings spread wide and upward, head turned to the left, tail below"
+            },
+            {
+              "type": "arched doorway/opening",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper center-right background, a tall dark arch in the wall behind the figure"
+            },
+            {
+              "type": "stone step/stair flight",
+              "count": null,
+              "countConfidence": "low",
+              "where": "left middle ground, a flight receding up-left into darkness; individual treads are not separable"
+            },
+            {
+              "type": "thin bare branch/vine",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right edge, lower half, crossing the dark wall"
+            }
+          ],
+          "environment": [
+            "dark stone interior or courtyard, nearly monochrome brown-black",
+            "cobbled/flagstone floor in the foreground with a low broad step running across the frame",
+            "rough textured stone wall on the right, lit where the bird appears",
+            "a stream of water pouring out of the chalice, running over the figure's open hand, falling to the step and spreading across the flagstones in the lower center",
+            "narrow ruled border at the left and right edges of the picture"
+          ],
+          "lightSources": [
+            "the glowing pale area on the right wall surrounding the bird",
+            "secondary highlight on the chalice rim and on the falling/pooling water"
+          ],
+          "moonPhase": "no moon or sun visible",
+          "spatialRelations": [
+            "the bird is above and to the right of the kneeling figure, on the wall behind them; the figure is not looking at it",
+            "the chalice is held in front of the figure's chest, and the overflow falls vertically past the right hand onto the step and then forward across the foreground stones",
+            "the stairway on the left recedes behind the figure's left shoulder",
+            "the lit wall at right is the only bright region; the left third of the frame is almost entirely black"
+          ],
+          "foreground": [
+            "flagstone floor",
+            "the spreading water",
+            "the low step"
+          ],
+          "background": [
+            "dark arch",
+            "stairs at left",
+            "lit stone wall with the bird"
+          ]
+        },
+        "uncertainObservations": [
+          "whether the bird is a living bird, a carved relief on the wall, or a projected/painted light form cannot be determined",
+          "the figure's face, expression and exact gaze are completely obscured by shadow and hair",
+          "the number of stair treads at the left is not countable in the darkness",
+          "whether the figure is kneeling on both knees or crouching on one is ambiguous under the robe",
+          "whether the dark shape upper center-right is a doorway, a window, or a niche is not certain"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "A hooded, faceless figure",
+          "observed": "a figure whose face is hidden behind long strands of hair falling forward from the crown of the head; no hood edge, seam or cowl opening is resolvable",
+          "evidence": "The head silhouette is a mass of thin vertical strands hanging forward past the chin, reading as hair rather than fabric. The surround is near-black, so a hood cannot be positively excluded either — the detail is not establishable from the pixels.",
+          "confidence": "medium"
+        },
+        {
+          "field": "scene / spatialRelations / visualTensions",
+          "existing": "a pale bird hovers in the lit wall behind",
+          "observed": "a pale glowing bird shape with fully outspread wings occupies the lit patch of the upper-right wall; whether it is a living bird in flight, a carved relief, or a light form on the stone is not determinable",
+          "evidence": "The shape has no depth cues separating it from the wall plane — its glow sits flush within the lit patch of masonry, and the wall texture is visible around and seemingly through the wing edges. 'Hovers' asserts flight that the image does not support.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "A hooded, faceless figure",
+            "with": "A faceless figure, the face hidden behind forward-hanging hair,"
+          },
+          {
+            "find": "while a pale bird hovers in the lit wall behind",
+            "with": "while a pale glowing bird with outspread wings appears on the lit wall behind"
+          },
+          {
+            "find": "the bird hovers above and to the right of the figure's head",
+            "with": "the pale bird is above and to the right of the figure's head"
+          },
+          {
+            "find": "the pale hovering bird against the heavy, motionless figure",
+            "with": "the pale glowing bird against the heavy, motionless figure"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-001",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, occupying the middle of the frame",
+              "posture": "kneeling / crouched low on the stone ground, torso hunched forward, head bowed so the face is hidden behind hanging hair",
+              "gaze": "downward, toward the vessel and the spilling water (face not visible)",
+              "appearance": "dark heavy robe with long hanging strands; long dark hair falling forward over the face; robe pooled on the ground behind",
+              "heldObjects": [
+                "a large footed goblet/chalice gripped in one hand at chest height, tilted so liquid pours over its rim",
+                "the other hand held open and cupped below the goblet, palm up, catching/letting the water run through"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "goblet/chalice (large, footed, metallic, overflowing)",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held at chest height in the center of the frame"
+            },
+            {
+              "type": "bird with fully outspread wings, glowing pale white",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right, on/against the lit wall, wings spread, head turned to the left, tail feathers trailing down"
+            },
+            {
+              "type": "arched doorway / arched opening",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper center-right, behind and above the figure, partly in shadow"
+            },
+            {
+              "type": "staircase",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "left side, mid-height, a flight of stone steps receding into darkness"
+            },
+            {
+              "type": "water stream",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "pours from the goblet rim, past the cupped hand, down onto the paving and into a recessed channel running toward the bottom of the frame"
+            }
+          ],
+          "environment": [
+            "dark stone interior or courtyard",
+            "cobbled / block paving covering the lower half of the frame",
+            "a low stone step or ledge crossing the lower third horizontally",
+            "a narrow recessed channel or gutter in the paving carrying the water toward the viewer",
+            "textured stone wall on the right",
+            "bare thin branches at the right edge",
+            "painted dark border frame around the scene"
+          ],
+          "lightSources": [
+            "the glowing white bird on the upper-right wall, the strongest light in the frame",
+            "a pool of light on the right-hand wall around the bird",
+            "specular highlights on the goblet and on the falling and pooled water"
+          ],
+          "moonPhase": "no moon or sun visible",
+          "spatialRelations": [
+            "the bird is above and to the right of the kneeling figure, and its glow falls on the wall rather than on the figure",
+            "the goblet is directly in front of the figure's chest, and the water falls vertically from it to the ground between the figure's knees and the viewer",
+            "the water gathers and runs away from the figure toward the bottom edge of the frame",
+            "the staircase on the left and the arch above are both in deep shadow behind the figure"
+          ],
+          "foreground": [
+            "wet cobbled paving",
+            "the water channel with running water and highlights"
+          ],
+          "background": [
+            "stone staircase at left",
+            "arched opening upper center-right",
+            "lit wall with the glowing bird",
+            "bare branches at the right edge"
+          ]
+        },
+        "uncertainObservations": [
+          "Whether the glowing bird is a living bird, a carved relief on the wall, or a projected/painted image on the stone cannot be determined.",
+          "The figure's face, expression and gender are not visible at all.",
+          "Whether the figure is kneeling on both knees, sitting back on the heels, or crouching is not resolvable because the robe conceals the legs.",
+          "The number of steps in the left-hand staircase cannot be counted; they fade into black.",
+          "Whether the second (lower) hand is catching the water or simply open beneath it is ambiguous."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

@@ -1,0 +1,568 @@
+[
+ {
+  "reviewId": "review-412",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, lower-middle of frame on a path",
+     "posture": "standing / mid-stride walking, seen from directly behind",
+     "gaze": "head faces away from viewer, forward along the path toward the lit city ahead; not turned back",
+     "heldObjects": [
+      "a large bundle of long wooden staves carried across the back and shoulders, lashed with rope around the torso"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "long wooden stave with a lit flame at its upper tip",
+     "count": 10,
+     "countConfidence": "medium",
+     "where": "strapped across the figure's back and shoulders, shafts crossing behind the torso, tips rising above the figure",
+     "orientation": "all shafts angle upward and outward; burning tips point UP and away from the body; butt ends point down toward the ground",
+     "arrangement": "two fans, one splaying to the upper-left (5 lit tips resolvable) and one to the upper-right (5 lit tips resolvable), crossing in an X behind the shoulders; there is an open gap at the center directly above the figure's head where no stave rises"
+    },
+    {
+     "type": "rope binding",
+     "count": null,
+     "countConfidence": "low",
+     "where": "wrapped around the figure's chest/torso holding the two stave fans",
+     "orientation": "horizontal wraps",
+     "arrangement": "one visible wrap on each side of the torso; exact number of turns not resolvable"
+    }
+   ],
+   "environment": [
+    "rocky, wet, stony path descending toward the lower foreground",
+    "steep dark slope with scrub on the left",
+    "wide night sky filled with dense stars and a purple Milky Way band",
+    "faint gold geometric constellation lines and circular astrolabe-like diagrams overlaid on the sky",
+    "distant city on the right with a large dome, a tall tower with a lit cupola, many small lit windows",
+    "a river or water channel below the city reflecting its lights",
+    "a band of dim blue-orange twilight glow along the horizon behind the city"
+   ],
+   "lightSources": [
+    "the burning tips of the staves (warm gold)",
+    "lit windows and lamps of the distant city",
+    "a dim grey-blue sphere (moon) in the upper-left sky",
+    "stars / Milky Way",
+    "faint residual twilight glow at the horizon"
+   ],
+   "moonPhase": "uncertain — the upper-left sphere reads as a full round disc but is dark and unevenly lit, so the phase cannot be determined",
+   "spatialRelations": [
+    "the figure is between the viewer and the city; it is walking away from the viewer",
+    "the city sits to the right of the path's vanishing point, not straight ahead",
+    "the stave bundle is wider than the figure's body on both sides",
+    "the figure's shadow / the wet path reflects light ahead of it"
+   ],
+   "foreground": [
+    "wet dark stones and rubble",
+    "puddled reflective path surface"
+   ],
+   "background": [
+    "domed and towered lit city",
+    "water",
+    "star-filled night sky with drawn constellation geometry"
+   ]
+  },
+  "uncertainObservations": [
+   "The staves overlap heavily inside each bundle; only the lit tips are individually resolvable (5 left, 5 right). Unlit shafts could raise the true total.",
+   "Whether the dark sphere upper-left is a moon or a planet cannot be determined."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-410",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, standing on a round stone platform in water",
+     "posture": "standing, seen from behind, weight even, feet apart",
+     "gaze": "head faces away from viewer, tilted up toward the great wheel above; face not visible",
+     "heldObjects": [
+      "nothing held; the raised right arm reaches up and its fingertips touch the lower rim of the wheel"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "large circular wheel / disc of concentric rings in the sky",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper half of the frame, centered",
+     "orientation": "flat-on to the viewer, upright",
+     "arrangement": "one closed ring with multiple nested rings, radial spokes, and a small bright hub at center; four bright glowing nodes sit on the rim at the top, left, right and bottom (the bottom node is the one the figure's hand touches)"
+    },
+    {
+     "type": "constellation figure drawn in stars at the frame corners",
+     "count": 4,
+     "countConfidence": "high",
+     "where": "upper-left, upper-right, lower-left, lower-right, one in each corner around the wheel",
+     "orientation": "upper-left winged humanoid faces right/inward; upper-right bird with spread wings faces left/inward; lower-left horned bovine faces right/inward; lower-right maned lion faces left/inward",
+     "arrangement": "four corners, all facing inward toward the central wheel"
+    },
+    {
+     "type": "armillary sphere / ringed globe on a stand",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "on the stone platform, one to the figure's right (viewer's left) and one to the figure's left (viewer's right), flanking the figure",
+     "orientation": "upright on tripod-style stands",
+     "arrangement": "flanking pair, one each side of the standing figure"
+    },
+    {
+     "type": "small colonnaded pavilion / ruined portico on the far shore",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "far left edge and far right edge at the waterline",
+     "orientation": "facing inward toward the water",
+     "arrangement": "one at each side of the frame, symmetrical"
+    },
+    {
+     "type": "planet-like sphere floating in the sky/scene",
+     "count": null,
+     "countConfidence": "low",
+     "where": "several scattered — two inside the wheel's upper area, one lower-left near the water, one lower-right, one bottom-left corner",
+     "orientation": "n/a",
+     "arrangement": "scattered, no pattern"
+    }
+   ],
+   "environment": [
+    "still dark water filling the lower third, reflecting the sky and platform",
+    "circular tiered stone platform / island",
+    "low dark mountain ridge across the horizon",
+    "dense star field with nebula clouds in violet and blue",
+    "fine gold grid and tick-mark lines ruled across the sky"
+   ],
+   "lightSources": [
+    "the glowing gold wheel and its four rim nodes",
+    "a warm orange band of twilight glow low on the horizon behind the mountains",
+    "stars and the constellation lines",
+    "small warm lamp glows at the two shoreline pavilions"
+   ],
+   "moonPhase": "not applicable / uncertain — no single dominant moon; several small spheres appear but none clearly phase-lit",
+   "spatialRelations": [
+    "the figure stands at the center of the platform directly beneath the wheel; its raised arm bridges the gap between platform and wheel",
+    "the wheel's bottom rim node is directly above the figure's hand",
+    "the two armillary spheres sit lower than the figure's shoulders, on the platform deck",
+    "the four constellation beasts surround the wheel, one per corner"
+   ],
+   "foreground": [
+    "dark reflective water with vertical light reflections",
+    "the stone platform edge"
+   ],
+   "background": [
+    "mountain ridge",
+    "twilight horizon glow",
+    "star field with nebulae and ruled gold sky-grid"
+   ]
+  },
+  "uncertainObservations": [
+   "The exact number of floating planet-spheres cannot be counted reliably; several are faint or cut by the frame.",
+   "Whether the lower-right object on the platform is a second armillary sphere or a different ringed instrument is not fully resolvable.",
+   "Time of day reads as night, but a strong orange band at the horizon means it could be late dusk."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-406",
+  "visibleFacts": {
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "left",
+     "posture": "standing, body turned toward center, seen three-quarter from behind",
+     "gaze": "head tilted up and toward the center, looking at the raised vessels",
+     "heldObjects": [
+      "one stemmed goblet raised overhead in the near (right) arm"
+     ]
+    },
+    {
+     "position": "center",
+     "posture": "standing, back largely to the viewer, body turned slightly right",
+     "gaze": "head turned away from the viewer toward the upper center/right, face not visible",
+     "heldObjects": [
+      "one stemmed goblet raised overhead"
+     ]
+    },
+    {
+     "position": "right",
+     "posture": "standing, body turned toward center, three-quarter rear view",
+     "gaze": "head turned toward the center-left, looking at the raised vessels",
+     "heldObjects": [
+      "one stemmed goblet raised overhead in the near (left) arm"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "stemmed goblet / cup",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "raised high at the top center of the frame, above the three figures' heads",
+     "orientation": "all upright, bowls open upward",
+     "arrangement": "clustered together, rims nearly touching; one slightly left and lower, one highest at center, one right and lower — an inward-facing triangle, not a row"
+    },
+    {
+     "type": "flower crown / blossoms in hair",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "one on each figure's head",
+     "orientation": "n/a",
+     "arrangement": "one per figure"
+    },
+    {
+     "type": "round fruits (grape-like) in a shallow footed bowl",
+     "count": null,
+     "countConfidence": "low",
+     "where": "on a draped table in the lower-right foreground",
+     "orientation": "n/a",
+     "arrangement": "heaped in a single bowl; individual fruits too small and overlapping to count"
+    },
+    {
+     "type": "lit candle / small lamp",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "on the table at the far lower right, beside the fruit bowl",
+     "orientation": "upright",
+     "arrangement": "single"
+    }
+   ],
+   "environment": [
+    "an open terrace or balcony with a pale stone balustrade running behind and below the figures",
+    "a flight of pale steps visible behind the center figure, leading up/away",
+    "flowering vines with white blossoms and hanging wisteria-like sprays framing the upper-left and upper-right corners",
+    "pale flowering shrubs along the lower-left edge",
+    "a bright, high, cloud-filled sky"
+   ],
+   "lightSources": [
+    "a large pale luminous disc (moon) high in the upper center-right of the sky",
+    "broad diffuse bright ambient light filling the whole scene",
+    "a small candle flame on the table at lower right"
+   ],
+   "moonPhase": "uncertain — the disc reads as nearly full / gibbous with a softly shaded lower-left limb, but the haze prevents a definite call",
+   "spatialRelations": [
+    "the three figures stand close together in a shallow arc, all angled inward toward the point where the cups meet",
+    "the left and right figures flank the center figure; the center figure is slightly forward/lower",
+    "all three raised arms converge upward to the same point",
+    "the table with fruit and candle sits in front of and below the right figure, in the near foreground"
+   ],
+   "foreground": [
+    "draped white table with fruit bowl and candle",
+    "pale flowering plants at lower left"
+   ],
+   "background": [
+    "balustrade and steps",
+    "bright clouded sky with the pale disc"
+   ]
+  },
+  "uncertainObservations": [
+   "The overall palette is extremely pale and high-key; the light reads as bright and daylight-like even though a moon disc is present, so 'night' cannot be asserted from the pixels.",
+   "Fruit in the bowl cannot be individually counted."
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-416",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, on a grassy rise",
+     "posture": "standing, mid-step, walking toward the right; barefoot; seen from behind in three-quarter view",
+     "gaze": "head turned to the viewer's right, in profile, looking forward/outward across the valley — the same direction the body is moving, NOT looking back",
+     "heldObjects": [
+      "one long slender leafy branch/rod held in the right hand, gripped about mid-shaft"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "long slender leafy branch / budding rod",
+     "count": null,
+     "countConfidence": "low",
+     "where": "floating across the sky in the upper two-thirds of the frame, plus one held by the figure",
+     "orientation": "the sky branches all lie on the same diagonal, running from upper-left down to lower-right, roughly parallel; the held branch is near-vertical, leaning slightly to the right, with its leafy tip UP and its butt end down past the figure's hip",
+     "arrangement": "the sky branches are stacked as a set of parallel diagonal streaks, evenly spaced, none crossing; I can resolve roughly six such diagonals but the topmost and faintest ones blur into the cloud and some are cut by the left and right frame edges"
+    }
+   ],
+   "environment": [
+    "a grassy, flower-dotted hilltop in the lower-left foreground",
+    "pale white blossoms and foliage along the lower-left edge",
+    "a misty valley to the right with a winding pale river",
+    "a low arched bridge and small pale structures in the middle distance at right",
+    "soft blue-grey hills fading into haze on the right",
+    "a bright cloud-filled sky occupying most of the frame"
+   ],
+   "lightSources": [
+    "a large pale luminous disc at the upper right (moon-like, with faint surface mottling), partly veiled by cloud",
+    "broad diffuse bright light filling the sky; the scene reads clearly as daytime-bright, not night",
+    "a bright specular glint on the river in the middle right"
+   ],
+   "moonPhase": "uncertain — the disc appears as a full or near-full round face but its right side runs off the frame edge and cloud covers part of it",
+   "spatialRelations": [
+    "the figure stands on the near, higher ground; the valley and river lie below and to the right",
+    "the floating branches pass behind and above the figure, none touching her",
+    "the held branch's tip rises to about the level of the figure's shoulder/head",
+    "the figure's long hair and gown stream to the LEFT, opposite her direction of travel"
+   ],
+   "foreground": [
+    "grass, small white flowers, leafy shrubs on the hilltop"
+   ],
+   "background": [
+    "misty river valley with a bridge",
+    "hazy hills",
+    "bright clouded sky with the pale disc"
+   ]
+  },
+  "uncertainObservations": [
+   "The number of floating sky branches cannot be counted reliably — they are pale, low-contrast, partly hidden by cloud, and several are cut off by the frame. My best estimate is about six, but I will not state it as a count.",
+   "Whether the bright disc is a moon or a sun cannot be determined; it has faint mottling suggesting a moon but the sky is daylight-bright."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-404",
+  "visibleFacts": {
+   "figureCount": 7,
+   "figures": [
+    {
+     "position": "left, mid-height",
+     "posture": "seated/kneeling on the ground, body turned to the right",
+     "gaze": "head lowered, facing right and down toward the group and the discs",
+     "heldObjects": [
+      "none visible; hands rest in lap"
+     ]
+    },
+    {
+     "position": "left-front, nearest the viewer",
+     "posture": "seated on the ground, leaning forward, one arm extended down and to the right",
+     "gaze": "head lowered, looking down at the discs laid out in front of her",
+     "heldObjects": [
+      "fingertips of the extended right hand touch / are placing one of the discs on the cloth"
+     ]
+    },
+    {
+     "position": "center",
+     "posture": "seated, upright, turned slightly right",
+     "gaze": "head lowered and turned right, looking down toward the child and the glowing disc",
+     "heldObjects": [
+      "none visible; hands together in front"
+     ]
+    },
+    {
+     "position": "center-right, small child",
+     "posture": "seated between the center woman and the elder",
+     "gaze": "head lowered, looking down at the glowing disc in front of it",
+     "heldObjects": [
+      "both hands reach toward / rest on a glowing round disc"
+     ]
+    },
+    {
+     "position": "right of the child",
+     "posture": "seated, bearded, long white hair, in a blue-grey robe, leaning slightly toward the child",
+     "gaze": "head lowered toward the child and the glowing disc",
+     "heldObjects": [
+      "holds/supports the glowing round disc in both hands together with the child"
+     ]
+    },
+    {
+     "position": "upper right, under a stone arch",
+     "posture": "standing, body turned three-quarter toward the viewer's left",
+     "gaze": "head lowered, looking down at the infant it carries",
+     "heldObjects": [
+      "an infant held against the chest"
+     ]
+    },
+    {
+     "position": "upper right, infant in the standing figure's arms",
+     "posture": "held upright against the adult's chest",
+     "gaze": "head turned toward the adult's face",
+     "heldObjects": [
+      "none"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "round disc / coin engraved with a five-pointed star",
+     "count": 10,
+     "countConfidence": "medium",
+     "where": "laid flat on a pale cloth spread across the ground in the lower-center of the frame",
+     "orientation": "all lying flat, face-up, star pattern facing the viewer",
+     "arrangement": "a loose lozenge/diamond cluster in four ranks — 2 at the far (upper) rank, 3, then 3, then 2 nearest the viewer; they are spread out with gaps between them, not touching and not in a ring"
+    },
+    {
+     "type": "glowing round disc/dish held in hands",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "at chest height between the child and the bearded elder, center-right",
+     "orientation": "held roughly horizontal, face tipped toward the viewer, emitting light",
+     "arrangement": "single, separate from the ground cluster"
+    },
+    {
+     "type": "white long-haired dog",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right side, lying on the ground at the edge of the cloth",
+     "orientation": "lying down, forelegs extended, head up and facing LEFT toward the group and the discs",
+     "arrangement": "single"
+    },
+    {
+     "type": "lit lantern",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "far right, hanging/standing among the flowers beside the arch",
+     "orientation": "upright",
+     "arrangement": "single"
+    },
+    {
+     "type": "stone arch / colonnade with hanging wisteria",
+     "count": null,
+     "countConfidence": "low",
+     "where": "upper right, behind the standing figure",
+     "orientation": "upright",
+     "arrangement": "at least two arch openings visible; the structure continues off the right frame edge"
+    }
+   ],
+   "environment": [
+    "a garden terrace with a pale cloth spread on the ground",
+    "hanging wisteria and pale blossoms overhead and along both edges",
+    "a stone archway/colonnade at the right",
+    "a lake or inlet in the middle distance with a bright vertical reflection on its surface",
+    "a pale domed pavilion and a flight of steps on the far shore at the left",
+    "misty wooded hills rising on both sides of the water"
+   ],
+   "lightSources": [
+    "a large pale moon in the upper-left sky",
+    "broad diffuse bright ambient light over the whole scene",
+    "the glowing disc held by the child and the elder",
+    "a small lantern at the right",
+    "a bright specular reflection on the water"
+   ],
+   "moonPhase": "uncertain — the upper-left disc reads as a large round body with a bright crescent-to-gibbous lit limb on its left side and the rest dim; the exact phase cannot be determined",
+   "spatialRelations": [
+    "the six older figures and the child form a loose arc around the cloth, all facing inward and downward toward the discs",
+    "the discs lie on the ground BELOW and in FRONT of the seated group, nearest the viewer",
+    "the dog lies at the right end of the arc, outside the group, facing in",
+    "the standing adult with the infant is set back and above the seated group, under the arch, separated from them",
+    "the water and far shore lie behind the seated group at the left"
+   ],
+   "foreground": [
+    "the disc-covered cloth",
+    "pale flowers and foliage along the bottom and lower-left edges"
+   ],
+   "background": [
+    "lake with reflection",
+    "domed pavilion and steps on the far shore",
+    "misty hills",
+    "pale sky with the moon"
+   ]
+  },
+  "uncertainObservations": [
+   "The ground discs overlap the cloth folds and the two rearmost are partly hidden behind the front figures' garments; 10 is my best resolved count but it could be 9 or 11.",
+   "Whether the glowing object held by the child/elder is another disc of the same kind or a separate bowl/dish of light is not certain.",
+   "Light reads as bright and daylight-like despite the visible moon; I cannot assert night."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-408",
+  "visibleFacts": {
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "left of center, foreground, dominant",
+     "posture": "standing upright on wet ground, seen from behind in three-quarter rear view, back bare",
+     "gaze": "head turned to the viewer's right and tilted downward — looking back/down over her own shoulder toward the water and the distant figure, not forward",
+     "heldObjects": [
+      "one long straight blade in each hand — two blades total"
+     ]
+    },
+    {
+     "position": "middle distance, right side, standing in shallow water",
+     "posture": "standing upright, pale and semi-transparent, seen from behind",
+     "gaze": "head faces away from the viewer, out toward the water/horizon; face not visible",
+     "heldObjects": [
+      "none visible"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "long straight blade with a crossguard",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "held one in each of the standing figure's hands, at about hip height",
+     "orientation": "hilts UP in the fists, blades angled DOWN and outward away from the body — both points aimed at the ground, neither raised",
+     "arrangement": "a flanking pair, one on each side of the figure, forming a shallow inverted V"
+    },
+    {
+     "type": "long straight blade with a crossguard",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "lying flat on the wet ground across the bottom foreground of the frame",
+     "orientation": "all lying horizontal/flat on the ground, points toward the right side of the frame, hilts toward the left",
+     "arrangement": "laid roughly parallel on shallow diagonals, overlapping and crossing one another near the center; they do not form a ring or a fan"
+    },
+    {
+     "type": "pale round-headed flower (chrysanthemum/lotus-like)",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered along the lower-left corner and bottom edge, among the grounded blades",
+     "orientation": "heads facing the viewer",
+     "arrangement": "scattered clumps; several are cut by the frame and too pale to separate"
+    },
+    {
+     "type": "bird in flight",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "right side of the sky, small and distant, above the horizon",
+     "orientation": "wings spread, flying toward the left/upper-left",
+     "arrangement": "two, separated, not in formation"
+    }
+   ],
+   "environment": [
+    "a flat wet tidal shore / shallow water plain filling the lower and right areas",
+    "patches of dark weed or moss on the wet ground and in the shallows",
+    "a still water surface with mirror reflections at the right",
+    "a low flat horizon",
+    "a sky filled with soft layered cloud"
+   ],
+   "lightSources": [
+    "a large pale luminous disc (moon) at the upper right, partly behind cloud",
+    "broad diffuse bright overcast light across the whole scene — it reads as daytime-bright, not night"
+   ],
+   "moonPhase": "uncertain — the visible portion reads as a large round disc with a slightly shaded lower-left limb, but cloud and the frame edge obscure it",
+   "spatialRelations": [
+    "the grounded blades lie in front of (nearer the viewer than) the standing figure, between her feet and the bottom edge",
+    "the two held blades hang outside the line of her hips on each side",
+    "the second, translucent figure stands well behind and to the right, in ankle-deep water, walking away from the viewer",
+    "the main figure's turned head is oriented toward that distant figure",
+    "her hair and drapery stream to the LEFT, away from the direction her head is turned"
+   ],
+   "foreground": [
+    "blades lying flat on wet ground",
+    "pale flowers",
+    "dark weed clumps"
+   ],
+   "background": [
+    "still shallow water with reflections",
+    "flat horizon",
+    "clouded sky with the pale disc",
+    "two small birds"
+   ]
+  },
+  "uncertainObservations": [
+   "The blades lying on the ground overlap heavily and their hilts are partly buried in the flowers and weed; 3 is my best resolved count but a fourth could be hidden under the crossings. Total blades in frame would then be 5.",
+   "Whether the distant translucent figure is a person or a figure-shaped mist column cannot be resolved with certainty.",
+   "Light source: bright and overcast; a moon-like disc is present but the illumination reads as daylight."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ }
+]

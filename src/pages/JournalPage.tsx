@@ -11,12 +11,15 @@ import { getCard } from '@/data/deck'
 import { resolveDeckId } from '@/decks/ids'
 import { formatRelative, truncate } from '@/utils/format'
 import { useI18n } from '@/i18n'
+import { useAuth } from '@/store/AuthContext'
+import { AccountSyncNotice } from '@/features/auth/ReadingSync'
 import { spreadName } from '@/i18n/domain'
 
 export default function JournalPage() {
+  const { user } = useAuth()
   const navigate = useNavigate()
   const { t, locale } = useI18n()
-  const sourceSummaries = useMemo(() => listEntries().map(toSummary), [])
+  const sourceSummaries = useMemo(() => listEntries().filter(entry => !entry.userId || entry.userId === user?.id).map(toSummary), [user?.id])
 
   const localized = useLocalizedContent(sourceSummaries)
   const summaries = localized.value
@@ -37,6 +40,7 @@ export default function JournalPage() {
 
   return (
     <AppShell back="/" title={t('journal.title')}>
+      <AccountSyncNotice />
       <div className="flex flex-col gap-3 pt-2">
         {summaries.map((s) => (
           <Link

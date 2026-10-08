@@ -1,0 +1,217 @@
+[
+ {
+  "reviewId": "review-307",
+  "verdict": "pass",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-309",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the woman stands to the left of the panel, her hands at its upper edge",
+    "observed": "she kneels/crouches to the left of the panel, her hands at its upper edge",
+    "evidence": "Her bent knee in a pale cream garment rests on the ground at lower left, and her head sits only slightly above the top edge of the panel — she is down at the panel's level, not standing over it.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "spool of dark thread beside the bowl",
+    "observed": "spool of bright pink/rose thread beside the bowl",
+    "evidence": "The spool at lower left is the only saturated pink accent in the lower-left still life; the thread wound on it is clearly rose, not dark.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the woman stands to the left of the panel, her hands at its upper edge",
+     "with": "the woman kneels to the left of the panel, her hands at its upper edge"
+    },
+    {
+     "find": "spool of dark thread beside the bowl",
+     "with": "spool of pink thread beside the bowl"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-311",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the sword stands vertically at the centre, its point rising above the figure's head",
+    "observed": "the sword stands vertically point-DOWN, driven into the altar top; what rises above the figure's head is the grip and round pommel",
+    "evidence": "The small round pommel is at the very top with the crossguard below it, and the blade descends from the crossguard through the altar's top face and continues down its cracked front — the point is inside the stone, not in the air.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "gripping the hilt of a glowing upright sword",
+    "observed": "the raised hand grips the blade below the crossguard, not the hilt; the sword hangs point-down",
+    "evidence": "The figure's hand sits clearly beneath the crossguard bar, on the ricasso/blade, while grip and pommel are well above it out of reach.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "cracked wall with radiating fracture lines",
+    "observed": "a fan-vaulted stone ceiling whose masonry ribs radiate outward from a point directly above the sword",
+    "evidence": "The radiating pattern occupies the top of the frame and curves like a dome seen from below, in regular masonry courses, with the light shaft descending from its apex; the only actual crack is in the altar block's front face.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the sword stands vertically at the centre, its point rising above the figure's head",
+     "with": "the sword stands vertically at the centre, driven point-down into the altar, its grip and pommel rising above the figure's head"
+    },
+    {
+     "find": "gripping the hilt of a glowing upright sword",
+     "with": "gripping the blade of a glowing sword driven point-down"
+    },
+    {
+     "find": "cracked wall with radiating fracture lines",
+     "with": "fan-vaulted ceiling with stone ribs radiating from a point above the sword"
+    },
+    {
+     "find": "the cracked wall spreads behind and above the sword",
+     "with": "the fan vault spreads above the sword"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-317",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+    "observed": "one cloaked figure STANDS in the rear of the boat working a long pole; only the nearer figure is seated",
+    "evidence": "The rear figure's full upright body and cloak are visible well above the gunwale with both hands high on the pole; the text contradicts its own later phrase 'the standing figure'.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the boat occupies the lower centre, its bow toward the viewer",
+    "observed": "the boat is seen from astern; its bow points away from the viewer, toward the lit horizon",
+    "evidence": "The broad rounded transom is nearest the viewer and the hull narrows at the far end; both figures face away toward the horizon glow, which is the direction of travel.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+     "with": "One cloaked figure stands poling a wooden boat across dark water while a second sits before them"
+    },
+    {
+     "find": "the boat occupies the lower centre, its bow toward the viewer",
+     "with": "the boat occupies the lower centre, seen from astern, its bow pointing away toward the horizon"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-312",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "three upright swords set into arched wall niches",
+    "observed": "three swords hung POINT-DOWN in the niches — round pommel uppermost, crossguard below it, blade tapering downward",
+    "evidence": "In each of the three recesses a small disc pommel sits at the top, a horizontal crossguard just under it, and the blade narrows to a point at the bottom of the niche.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the three niche swords are aligned in a row above and to the left of the figure",
+    "observed": "the row of three sits above the figure's torso and head end, i.e. above and to the RIGHT of centre; the upper LEFT is occupied by the gothic window",
+    "evidence": "The niches span the centre-right of the back wall while the figure's head rests at the right end of the slab and the bare feet are at the far left; the leaded window is the only thing at upper left.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "bandaging a forearm",
+    "observed": "the hands are clasped together at the chest around a narrow pale strip whose identity is not resolvable — it could be a bandage, a cloth, a scroll or a small blade",
+    "evidence": "The strip is visible only as a short pale diagonal between the two hands; no wrapping around the forearm can actually be traced at this light level.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "three swords set upright in arched wall niches",
+     "with": "three swords hung point-down in arched wall niches"
+    },
+    {
+     "find": "three upright swords set into arched wall niches",
+     "with": "three swords hung point-down in arched wall niches"
+    },
+    {
+     "find": "the three niche swords are aligned in a row above and to the left of the figure",
+     "with": "the three niche swords are aligned in a row above the figure, over the head end at the right"
+    },
+    {
+     "find": "bandaging a forearm",
+     "with": "hands clasped at the chest around a narrow pale strip of cloth"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-310",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "emphasizedAspects",
+    "existing": "a completed circuit, shown as a closed wreath ring",
+    "observed": "the wreath is NOT closed — it is two separate arcs joined only by the tie at the top, with a wide open gap at the bottom that the figure's path passes through",
+    "evidence": "The left and right foliage arcs both terminate short of the ground, leaving the paving and the figure's cast shadow running out through the opening; a second smaller gap shows where the two arcs' lower ends stop short at the right.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a completed circuit, shown as a closed wreath ring",
+     "with": "a completed circuit, shown as two wreath arcs joined at the top and open at the bottom"
+    },
+    {
+     "find": "the enclosing wreath ring versus the open horizon beyond it",
+     "with": "the enclosing wreath arcs versus the open horizon beyond them"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-306",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "kneels on a forest floor at dawn",
+    "observed": "a low sun sits on the horizon with visible rays, but nothing in the frame distinguishes sunrise from sunset",
+    "evidence": "The sun is right at the horizon line behind the figure with a pale yellow-white sky; there is no shadow direction, sky gradient or other cue that fixes it as morning rather than evening.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "kneels on a forest floor at dawn",
+     "with": "kneels on a forest floor under a low sun on the horizon"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ }
+]

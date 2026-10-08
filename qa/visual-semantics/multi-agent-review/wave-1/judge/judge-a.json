@@ -1,0 +1,68 @@
+[
+  {
+    "reviewId": "review-102",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image before reading any reviewer notes and zoomed the foreground at 6x. Ten swords stand on a circular engraved stone dais: five on the left arc, five on the right arc, each with an ornamented gold pommel and cross-guard at its TOP end and the blade tapering downward into a dark round socket cut into the floor. The orientation is identical on all ten. The dais's near rim is fully inside the frame (its front face and engraved band are visible, not cropped) and carries no swords; the far-centre gap, through which the cloaked figure is visible, carries none either. So the two groups of five face each other across the cloth rather than ringing it. The pale tan sheet is a torn parchment with ragged, lifted edges and drawn line-work, clearly sitting on top of the stone.",
+    "reason": "Meets all five thresholds on two items. (1) Orientation: unambiguous at 6x on all ten blades; reviewer-c raised it as a high-confidence issue, and reviewer-a independently recorded 'blades set point-down into the stone... hilts and pommels catching light' in its own blind observation, so two reviewers report the same thing; I reached the same conclusion from the pixels myself; it is observable orientation, not interpretation; and it is a single precise substring. 'Point-up' is a straight inversion of what is painted. (2) Layout: reviewer-c flagged 'encircles' as wrong and reviewer-a independently described 'two symmetrical arcs... with a gap in the middle'; I verified the near rim is in frame and empty, so 'encircles' is a positional error, also fixable as one substring. I deliberately did NOT patch reviewer-a's 'broken column at right' plural complaint (completeness preference, reviewer-c could not count them either) nor reviewer-c's low-confidence doubts about the cloth and the parchment — at 5x the tan sheet shows torn edges and drawn markings, so the existing wording stands and reviewer-c is overturned there.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "ten upright swords set point-up in a ring of stone sockets",
+          "with": "ten upright swords set point-down into stone sockets, hilts and pommels uppermost"
+        },
+        {
+          "find": "the ring of swords encircles the fallen cloak and map in the lower half of the image",
+          "with": "two arcs of five swords flank the fallen cloak and map on the left and right of the platform, leaving the near and far edges of the circle open"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-104",
+    "decision": "AUTO_PASS",
+    "confidence": "high",
+    "independentFinding": "I opened the image first and found it extremely low-key, so I pulled the two sword clusters out separately at 8x with brightness lifted and autocontrast applied. At that exposure the count is unambiguous: exactly THREE swords stand in the left cluster and exactly THREE in the right, six in total, every one hilt-and-pommel up with the blade driven down into the stone-block boat. Each blade shows a distinct pale shaft, a crossguard and a round pommel, with clear dark gaps between them and no partially occluded fourth shaft in either group. Two figures only: a standing poler in a ragged coat, back to the viewer, gripping a long pole that angles down-left into the water, and a hooded figure seated low and to his right. The hull is stacked stone blocks, as described.",
+    "reason": "Both reviewers reached 'not resolvable, six or seven' only because they read the image at native exposure, where the blades are dark-on-dark. That is a limit of how they looked, not a property of the picture. With the gamma lifted the blades separate cleanly and the count resolves to six, matching the existing description exactly. Reviewer-c's 'about 4 hilts resolvable along the left' and reviewer-e's 'three or four pale vertical blades' are both mistakes: the shape immediately right of the third left-hand sword is the standing figure's dark tattered coat hem crossed by the punt pole, and it has neither pommel nor crossguard and is dark rather than pale. Hedging the description to 'at least six... exact count not resolvable' would discard a fact the pixels do support, which is a real loss, so the existing 'six upright swords' stands.",
+    "overturnedReviewer": true
+  },
+  {
+    "reviewId": "review-105",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "I viewed the image before the packet and then re-exposed the rear wall at 3x with heavy gamma lift. The dark mass is a broad vertical column rising from floor level behind the plinth that forks into two thick limbs sweeping outward and upward toward the top corners, with a lit patch of wall between them. It has no secondary twigs, which is unlike a tree, and no head or skull mass at the fork, which is unlike a horned skull; the limbs simply continue off the top of the frame. I could not decide between horns, a bare trunk, a stain and a cast shadow, and nothing in the pixels settles it. Separately I DID resolve the plinth emblem: at 6x it is a five-pointed star, and an inverted one at that, with two points up, two side points joined by a horizontal bar in the lower half, and a single point descending below it. Not a hexagram. I also resolved the chains: the right figure wears a closed metal ring around the neck and grips the chain with both hands at the chest, while the left figure holds an open ring clear above its bowed head.",
+    "reason": "Both reviewers independently reported the wall shape as indeterminate, and my own re-exposed read agrees, so 'horned' is an assertion the pixels do not carry. It is exactly the failure mode this wave exists to catch: the traditional iconography of the card supplies the horns, not the image. I did not take AUTO_CORRECT, because the corrected claim would be 'form indeterminate', which is an absence of a finding rather than an unambiguous observable fact, and threshold 1 is not met. I name all three items that carry the word rather than discarding a whole field. The scene sentence is included deliberately: it is the most-read field, and deleting the keyObjects and spatialRelations lines while leaving 'horned' standing in scene would both leave the unsupported claim in the place that matters most and leave the record self-contradictory. A human restoring it need only drop one adjective; the rest of that sentence (two ragged barefoot figures, chained to a stone block, dim vaulted stone chamber) I verified as accurate and it is suggested verbatim below. I OVERTURN reviewer-a on the star: the point count is resolvable at sufficient exposure and 'five-pointed' is correct, so that claim stays.",
+    "uncertainItems": [
+      {
+        "field": "scene",
+        "item": "Two ragged, barefoot figures stand chained to a stone block in a dim vaulted stone chamber, with a large dark horned silhouette looming on the wall behind them."
+      },
+      {
+        "field": "keyObjects",
+        "item": "large dark horned silhouette cast on the rear wall"
+      },
+      {
+        "field": "spatialRelations",
+        "item": "the horned silhouette rises behind and above both figures, centred on the wall"
+      }
+    ],
+    "suggestedSceneRestoration": "Two ragged, barefoot figures stand chained to a stone block in a dim vaulted stone chamber, with a large dark branching silhouette of indeterminate form looming on the wall behind them."
+  },
+  {
+    "reviewId": "review-107",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I viewed the image first, then measured the sky rather than eyeballing it. I sheared the sky region by a single uniform slope; every shaft became horizontal at the same shear, which is direct proof that all of them are mutually parallel with no convergence. In the sheared view the shafts separate into eight cleanly isolated horizontal streaks. I cross-checked this three ways: a perpendicular-axis projection gave the same eight lateral positions stably across assumed slopes from 0.74 to 0.86; the one anomalously long streak turned out at high magnification to be a single blade (tapered tip, crossguard notch, flared grip) smeared by slight perspective, not two end to end; and a sweep of the far-left sky strip found no shafts outside the sampled region. Count is eight. Each shaft also trails a distinctly darker streak running down-left from its tip. The lowest shaft's tip stops around (173,408), with a band of open sky between it and the top of the gate masonry; nothing intersects the archway. One figure, back turned, one hand gripping a bar of the open wrought-iron gate leaf, facing a warm glow inside the arch.",
+    "reason": "Threshold check on the one item I am patching, 'converging near the gate'. Both reviewer-b and reviewer-d independently raised it, both at high confidence, and both also state the shafts never reach the gate. I reached the same conclusion independently and by measurement, not impression: a single global shear rectifies all eight, which is exactly what parallelism means and what convergence would rule out. It is observable geometry, not interpretation, and it is one precise substring. I OVERTURN both reviewers on the sword count, which was their headline issue. Reviewer-b read 14-16 and reviewer-d read 18-20, and both are wrong in the same way: every shaft carries a dark motion trail below and left of its tip, and counting blade plus trail as two objects yields almost exactly reviewer-b's 14-16 from a true count of eight. The existing 'eight' is correct and must not be hedged away. I also decline the 'distant intact castle' change. At 6x the far tower reads to me as a gothic tower with symmetric corner pinnacles, which is as consistent with intact architecture as with a broken crown, so the reviewers' replacement is not established either; the existing wording stays rather than being swapped for an equally unsupported one. Two residual items a human may want to look at, which I did not act on because only one reviewer raised each and neither is resolvable at this rendering scale: whether the shafts' trailing ends are fletching or sword grips, and whether the far-bank structures are intact or ruined.",
+    "overturnedReviewer": true,
+    "patch": {
+      "replace": [
+        {
+          "find": "the shafts sweep from upper right down toward the left, converging near the gate",
+          "with": "the shafts sweep from upper right down toward the left, all mutually parallel rather than converging, and none of them reach the gate"
+        }
+      ]
+    }
+  }
+]

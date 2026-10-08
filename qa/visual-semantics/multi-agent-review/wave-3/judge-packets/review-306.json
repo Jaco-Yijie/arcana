@@ -1,0 +1,240 @@
+{
+  "reviewId": "review-306",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-306.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-306.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "kneels on a forest floor at dawn",
+          "observed": "a low sun sits on the horizon with visible rays, but nothing in the frame distinguishes sunrise from sunset",
+          "evidence": "The sun is right at the horizon line behind the figure with a pale yellow-white sky; there is no shadow direction, sky gradient or other cue that fixes it as morning rather than evening.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "kneels on a forest floor at dawn",
+            "with": "kneels on a forest floor under a low sun on the horizon"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-306",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "upper right, on a grassy slope above the foreground",
+              "posture": "KNEELING/crouching, seen from behind, both arms raised and spread outward holding the two edges of a green cloak open and away from the body like wings",
+              "gaze": "away from the viewer, toward the low sun on the horizon",
+              "heldObjects": [
+                "the two edges of the cloak, one in each hand"
+              ],
+              "appearance": "dark curly hair, green hooded cloak over a pale undergarment, bare lower legs"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword/blade lying on the ground",
+              "count": 5,
+              "countConfidence": "high",
+              "where": "the UPPER of two rows, across the middle of the foreground slope — at roughly evenly spaced intervals from left to right",
+              "orientation": "all hilts UP (pommel and crossguard toward the top of the frame, i.e. toward the figure), blades extending DOWN toward the bottom of the frame; all lying flat on the ground, roughly parallel and near-vertical in the picture plane",
+              "arrangement": "a single straight row of 5, evenly spaced, no gaps larger than the regular spacing"
+            },
+            {
+              "type": "sword/blade lying on the ground",
+              "count": 5,
+              "countConfidence": "high",
+              "where": "the LOWER of the two rows, nearer the viewer and rendered larger — from left to right across the bottom of the slope",
+              "orientation": "same as the upper row: hilts up, blade tips pointing down toward the bottom of the frame, all flat on the ground",
+              "arrangement": "a single straight row of 5, evenly spaced and slightly offset from the upper row's spacing"
+            },
+            {
+              "type": "woven wicker basket",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "midground center-left, on the ground below and to the left of the kneeling figure",
+              "orientation": "upright, mouth up",
+              "arrangement": "single"
+            },
+            {
+              "type": "pale cloth bundle",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the ground immediately left of the basket",
+              "orientation": "n/a",
+              "arrangement": "single"
+            },
+            {
+              "type": "mushroom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered along the left edge and in the lower-left corner among the ferns",
+              "orientation": "caps up",
+              "arrangement": "several small clusters, overlapping; not reliably countable"
+            },
+            {
+              "type": "large tree trunk",
+              "count": null,
+              "countConfidence": "low",
+              "where": "framing both sides — a thick moss-covered trunk at the left, several slimmer trunks at the right",
+              "orientation": "vertical",
+              "arrangement": "a stand on each side, receding; individual trunks merge in the canopy"
+            }
+          ],
+          "environment": [
+            "daylight, low sun",
+            "open woodland clearing on a hillside",
+            "tall trees with dense green canopy framing left and right",
+            "a river or lake in the valley below in the midground",
+            "distant low hills on the horizon",
+            "pale yellow-white sky at the horizon behind the sun",
+            "ferns, grass, leaf litter, moss and mushrooms across the foreground",
+            "an ornate painted border of vines and bracket fungi around the picture edges"
+          ],
+          "lightSources": [
+            "a low sun on the horizon at center-left of the opening, with visible rays; it backlights the figure and the trees"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the ten blades lie on the slope BETWEEN the viewer and the figure — the figure is beyond and above them",
+            "the two rows run parallel to each other and parallel to the bottom edge of the frame, the lower row closer to the viewer and drawn larger",
+            "all blade hilts face uphill toward the figure and the sun; all tips face downhill toward the viewer",
+            "the basket sits between the rows of blades and the figure",
+            "the sun is roughly on the same horizontal band as the figure's shoulders, off to the figure's left"
+          ],
+          "foreground": [
+            "the two rows of blades on the leaf-littered slope",
+            "ferns and mushrooms at the lower left",
+            "grass and undergrowth"
+          ],
+          "background": [
+            "sunlit river valley, distant hills, forest canopy, bright horizon sky"
+          ]
+        },
+        "uncertainObservations": [
+          "whether the sun is rising or setting cannot be determined",
+          "the mushrooms along the left edge cannot be counted individually",
+          "whether the pale object beside the basket is a cloth bundle, a sack, or a stone is ambiguous",
+          "the blades' guards are wrapped/bound with cord, so hilt construction details are partly obscured — but pommel-up / tip-down orientation is unambiguous on all ten",
+          "the number of tree trunks framing the scene is not countable"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "kneels on a forest floor at dawn",
+          "observed": "a low sun sits on the horizon with visible rays; nothing in the frame distinguishes dawn from dusk",
+          "evidence": "The only time cue is a partly visible solar disc low behind the far treeline with a warm sky gradient — equally consistent with sunrise or sunset.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "kneels on a forest floor at dawn",
+            "with": "kneels on a forest floor under a low sun on the horizon"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-306",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "upper right of center, on a grassy slope",
+              "posture": "kneeling or crouching low on the ground, seen from behind, both arms spread wide outward holding the edges of a cloak open",
+              "gaze": "facing away from the viewer, toward the sunlit horizon",
+              "heldObjects": [
+                "the two outspread edges/corners of a green cloak or cloth"
+              ],
+              "clothing": "green hooded cloak over a pale undergarment"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword/blade (each in a scabbard or wrapped sheath)",
+              "count": 10,
+              "countConfidence": "high",
+              "where": "on the ground across the lower half of the frame, laid on leaf litter and moss",
+              "orientation": "all point-DOWN toward the bottom of the frame — every hilt and cross-guard is at the upper end, every tip at the lower end; all lying flat, roughly parallel, tilted very slightly",
+              "arrangement": "TWO STAGGERED HORIZONTAL ROWS. Back/upper row of 5 (left to right, evenly spaced, no gaps). Front/lower row of 5 (left to right, offset so each front blade sits between two of the back row). Counted individually: back row = 1,2,3,4,5; front row = 1,2,3,4,5."
+            },
+            {
+              "type": "wicker basket",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the ground just below and left of the kneeling figure",
+              "orientation": "upright, open top",
+              "arrangement": "single, sitting between the figure and the top row of blades"
+            },
+            {
+              "type": "mushroom / fungus cluster",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered along the left foreground grass, the lower-left corner, and painted into the decorative border at the corners",
+              "orientation": "caps upward",
+              "arrangement": "scattered clusters, not a formal arrangement — too many overlapping small caps to count reliably"
+            }
+          ],
+          "environment": [
+            "deciduous woodland with tall trunks framing both sides",
+            "grassy moss-covered slope in the middle ground",
+            "ferns and low foliage in the foreground corners",
+            "a river or lake valley with low hills on the horizon",
+            "a painted vine-and-fungus decorative border on all four sides"
+          ],
+          "lightSources": [
+            "a low sun on the horizon at center-left, disc partly visible with visible rays streaking outward; warm sky gradient above it"
+          ],
+          "moonPhase": "no moon; a sun is present, low on the horizon, disc partially visible behind the far treeline",
+          "spatialRelations": [
+            "the ten blades lie downslope and in front of the kneeling figure, between the figure and the viewer",
+            "the basket sits directly between the figure and the nearest row of blades",
+            "the figure faces away, toward the sun on the horizon, with arms spread wide",
+            "trees flank the scene on both sides forming a natural vertical frame around the bright horizon gap"
+          ],
+          "foreground": [
+            "the two rows of blades",
+            "ferns, moss, mushrooms, fallen leaves",
+            "painted border"
+          ],
+          "background": [
+            "forest canopy",
+            "river valley",
+            "low hills",
+            "sun on the horizon"
+          ]
+        },
+        "uncertainObservations": [
+          "a pale rounded object lies on the ground immediately left of the basket — possibly a gourd, a bundle, or a stone; cannot identify",
+          "whether the figure is kneeling or sitting back on the heels is ambiguous from behind",
+          "whether the blades are bare or each enclosed in a fabric-wrapped scabbard is ambiguous — the lower two-thirds of each appears wrapped/bound",
+          "mushroom count not attempted; too many small overlapping caps"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

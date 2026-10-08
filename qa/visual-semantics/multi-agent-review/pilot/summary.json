@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "mode": "pilot",
+  "generatedAt": "2026-10-08T08:19:44.010Z",
+  "total": 11,
+  "decisions": {
+    "AUTO_PASS": 2,
+    "AUTO_CORRECT": 2,
+    "MARK_UNCERTAIN": 1,
+    "HUMAN_REVIEW": 0,
+    "CORRECTED": 6,
+    "UNJUDGED": 0
+  },
+  "finalDistribution": {
+    "PASS": 2,
+    "AUTO_CORRECT": 2,
+    "CORRECTED": 6,
+    "MARK_UNCERTAIN": 1,
+    "HUMAN_REVIEW": 0
+  },
+  "humanFinalApplied": [
+    "review-001",
+    "review-003",
+    "review-004",
+    "review-005",
+    "review-009",
+    "review-010"
+  ],
+  "finalRecords": [
+    {
+      "reviewId": "review-001",
+      "card": "legacy-shadow/cups-01",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-002",
+      "card": "legacy-shadow/pentacles-07",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-003",
+      "card": "legacy-moonlight/cups-10",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-004",
+      "card": "legacy-classic/swords-08",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-005",
+      "card": "legacy-moonlight/swords-06",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-006",
+      "card": "legacy-forest/swords-05",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-007",
+      "card": "legacy-celestial/wands-04",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-008",
+      "card": "legacy-shadow/cups-06",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-009",
+      "card": "legacy-moonlight/wands-04",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-010",
+      "card": "legacy-classic/swords-06",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-011",
+      "card": "legacy-celestial/wands-06",
+      "finalStatus": "AUTO_CORRECT"
+    }
+  ],
+  "unresolvedTasks": [],
+  "reviewerVerdicts": {
+    "pass": 7,
+    "uncertain": 9,
+    "corrected": 6
+  },
+  "reviewerVerdictAgreement": {
+    "agree": 7,
+    "total": 11,
+    "rate": 63.6
+  },
+  "runtimeRisks": [
+    "Spatial relation word overlap is not semantic agreement; semantic agreement rate is unavailable without additional independent comparison.",
+    "First two reviewers only; null abstentions and ambiguous object pairings excluded. Third reviewers inform Judges, not primary-pair rates."
+  ],
+  "byDeck": {
+    "legacy-shadow": {
+      "CORRECTED": 1,
+      "AUTO_PASS": 2
+    },
+    "legacy-moonlight": {
+      "CORRECTED": 3
+    },
+    "legacy-classic": {
+      "CORRECTED": 2
+    },
+    "legacy-forest": {
+      "MARK_UNCERTAIN": 1
+    },
+    "legacy-celestial": {
+      "AUTO_CORRECT": 2
+    }
+  },
+  "agreement": {
+    "note": "分母只计「两人都对该项表过态」的情况。一方写 null 是弃权，不算分歧。",
+    "dualReviewedImages": 11,
+    "exactAgreementRate": 90.9,
+    "denominators": {
+      "figureCount": {
+        "agree": 9,
+        "total": 9,
+        "details": []
+      },
+      "objectCount": {
+        "agree": 18,
+        "total": 19,
+        "details": [
+          "review-009 pole 3 vs 2"
+        ]
+      },
+      "moonPhase": {
+        "agree": 3,
+        "total": 3,
+        "details": []
+      },
+      "exact": {
+        "agree": 10,
+        "total": 11,
+        "details": []
+      }
+    },
+    "heldObjectRate": 100,
+    "heldObjectCounts": {
+      "agree": 1,
+      "total": 1,
+      "details": []
+    },
+    "postureRate": 100,
+    "postureCounts": {
+      "agree": 2,
+      "total": 2,
+      "details": []
+    },
+    "gazeRate": null,
+    "gazeCounts": {
+      "agree": 0,
+      "total": 0,
+      "details": []
+    },
+    "structuredLabelNote": "held object / posture / gaze 只在单人图或唯一位置匹配人物间比明确归一标签；不同措辞、身份和遮挡无法自动完整语义对齐，不能解释成全部视觉事实准确率。",
+    "figureCountRate": 100,
+    "objectCountRate": 94.7,
+    "moonPhaseRate": 100,
+    "spatialRelationWordOverlapMedian": 47.5,
+    "spatialRelationNote": "这是两人空间关系描述的词袋重合度中位数，不是语义一致率。同一个关系用不同措辞表达是常态，该值天生偏低，只看趋势。",
+    "disagreements": {
+      "figureCount": [],
+      "objectCount": [
+        "review-009 pole 3 vs 2"
+      ],
+      "moonPhase": []
+    },
+    "ambiguousPairings": [
+      "review-002 pentacle (2 vs 2 条，配对不确定)",
+      "review-009 lantern (2 vs 1 条，配对不确定)",
+      "review-010 boat (2 vs 1 条，配对不确定)",
+      "review-011 wand (1 vs 2 条，配对不确定)"
+    ]
+  },
+  "judgeVerdictDivergenceCounts": {
+    "divergent": 0,
+    "compared": 8
+  },
+  "judgeVerdictDivergenceRate": 0,
+  "judgeSelfDeclaredOverturns": [
+    "review-001",
+    "review-004",
+    "review-006",
+    "review-009",
+    "review-010"
+  ],
+  "uncertainRate": 9.1,
+  "humanReviewRate": 0,
+  "correctionRate": 72.7,
+  "control": {
+    "reviewId": "review-011",
+    "card": "legacy-celestial/wands-06",
+    "groundTruth": "画面右侧 4 支竖立权杖 + 骑手手持 1 支；现有生成值写的是 five upright wands",
+    "reviewerVerdicts": [
+      {
+        "reviewer": "reviewer-a",
+        "verdict": "corrected"
+      },
+      {
+        "reviewer": "reviewer-c",
+        "verdict": "corrected"
+      }
+    ],
+    "judgeDecision": "AUTO_CORRECT",
+    "caught": true
+  }
+}

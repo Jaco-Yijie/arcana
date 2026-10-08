@@ -7,13 +7,14 @@ import type { ButtonHTMLAttributes, ReactNode, Ref } from 'react'
  * 在这套设计系统里，「主要」由更亮的描边 + 更高的文字对比度表达，
  * 而不是由更大的颜色面积表达 —— 大色块按钮会立刻把页面拉向电商/游戏 UI。
  *
- * 三档语义：
+ * 按钮语义：
  * - primary：这一步的主要动作（继续、开始解读）。一屏最多一个。
+ * - secondary：保留当前结果（保存解读）。
  * - ghost：并列的次要动作（保留我的问题、查看全部牌阵）。
  * - quiet：可忽略的第三动作（跳过、返回、稍后再说）。
  */
 
-export type ButtonVariant = 'primary' | 'ghost' | 'quiet'
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'quiet'
 export type ButtonSize = 'md' | 'lg'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -58,12 +59,13 @@ const VARIANT: Record<ButtonVariant, string> = {
     'text-text-hi bg-surface-1/70 border border-silver/40',
     'shadow-flat backdrop-blur-sm',
     'hover:border-silver/60 hover:bg-surface-2/70',
-    'active:scale-[0.985] active:bg-surface-1/90',
+    'active:translate-y-px active:bg-surface-1/90',
   ].join(' '),
+  secondary: 'border border-line-soft bg-transparent text-text-hi active:translate-y-px',
   ghost: [
     'text-text-mid bg-transparent border border-line-hairline',
     'hover:text-text-hi hover:border-line-soft',
-    'active:scale-[0.985] active:bg-surface-1/40',
+    'active:bg-surface-1/40',
   ].join(' '),
   quiet: [
     'text-text-low bg-transparent border border-transparent px-3',

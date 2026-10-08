@@ -1,0 +1,119 @@
+[
+ {
+  "reviewId": "review-203",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the window occupies the full left edge, its light falling across the figure's head and shoulder",
+    "observed": "the arched window occupies only the upper portion of the left edge — roughly the top 45% of the artwork height; below its sill the left edge is taken up by the armillary sphere on its stand, the end of the stone bier, and dark floor",
+    "evidence": "The window's pointed arch begins at the top of the artwork and its opening terminates at about the level of the reclining figure's head. Everything below that point on the left edge is solid interior: the armillary tripod, the carved end panel of the bier, then the polished floor with the circular star-map. The window is not present along the lower half of the left edge at all.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the window occupies the full left edge, its light falling across the figure's head and shoulder",
+     "with": "the window occupies the upper portion of the left edge, its light falling across the figure's head and shoulder"
+    }
+   ]
+  },
+  "notes": "Everything else is faithful. The three wall blades are correctly described as mounted point-down (hilts up, tips down) — I independently resolved each of the three with clear dark gaps between them. The single separate horizontal blade on the front panel of the slab, the armillary sphere at the head end, the caged lantern at the foot end, the pillow, and the circular floor star-map all match. The model's self-reported uncertainty about the window spheres and the dark shapes at the window's base correctly matches details I also could not resolve.",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-215",
+  "verdict": "pass",
+  "notes": "Faithful throughout. One blade, raised aloft in the raised hand, angled up-right with its tip near the top of the frame — matches. One black bird perched upper left above and behind the figure — matches. Vine arch, receding dirt path, pale mushroom cluster lower left, small white star-flowers in the undergrowth, carved botanical border — all match. Critically, the model asserted no number for the mushrooms or flowers and flagged both as unresolvable, which is exactly what I recorded as null. Its uncertainty about whether the leafy sprig is attached to the blade or merely overlapping it matches my own unresolved note.",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-214",
+  "verdict": "pass",
+  "notes": "Faithful throughout. Two blades, one per hand, crossed in an X over the torso with both blades rising above the shoulders toward the upper corners — I traced each blade individually from hilt to tip and the count and the X arrangement are correct. Blindfold, star-patterned robe, pendant, stone slab seat, armillary sphere lower left, lit lantern lower right, crescent moon directly above the head and centred in the sky, sea horizon running behind the figure at roughly shoulder height — all confirmed. The model's uncertainty about whether the horizon structures are buildings or rock forms matches my own unresolved note about the two island landmasses.",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-202",
+  "verdict": "pass",
+  "notes": "Faithful, and notably careful on the highest-risk item. The model wrote 'a row of tall bare poles' and 'row of tall bare poles set in square planters' without asserting a number, and explicitly listed 'exact number of planted poles along the path (several, partially overlapping)' as unresolved — this matches my own finding exactly: I could resolve four planted shafts at only medium confidence in a very dark, low-exposure image and declined to give a summed total. The arrangement is also correct: the poles form a row along the right side of the path receding toward the gate, not a ring or an enclosure. Walking figure seen from behind with a wreathed staff, the sleeved arm reaching from the opening above and to the left, the stone-paved path curving up to the lit arched gateway in the distant wall, and the shoulder bag all match. The model's uncertainty over whether the wreath is being placed on the staff or taken from it matches my own unresolved note about that overlap.",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-201",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "two ornate swords stand point-upward among flowers below her",
+    "observed": "both blades are driven point-DOWNWARD into the ground — pommel and crossguard at the top, blade tapering downward and disappearing into the pale foliage at the bottom of the frame",
+    "evidence": "On the centre blade I can resolve, top to bottom: a round pommel, then a wide ornate crossguard, then the blade descending and narrowing until it is lost in the blossoms near the bottom edge. The right-hand blade shows the identical sequence, its pommel and crossguard set lower in the frame than the centre one. Neither shows a hilt at the bottom. The orientation is inverted from what the text asserts.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the two swords rise from the lower right, crossing the lower half of her gown",
+    "observed": "the blades descend rather than rise, and they are not both at the lower right — one stands at roughly the horizontal centre of the frame (this is the one that overlaps the lower half of her gown), the other stands well to its right",
+    "evidence": "Same hilt-above-blade evidence as above. Positionally, the nearer blade's crossguard sits at about the middle of the frame width, directly in front of her skirt; only the second blade is in the right-hand third. The pair does not originate from a single lower-right point.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "folded letter or paper held in both hands",
+    "observed": "her two hands are raised and clasped together in front of her chest; I could not resolve any held object",
+    "evidence": "The palette in this region is near-white-on-white and the fingers read as interlaced. There may be a pale shape between them, but it is not separable from the gown and the sheer drape passing in front. The text asserts a specific object the pixels do not support — and the model's own uncertainty list concedes it may be a letter, a card, or folded cloth, yet the scene line states it as fact.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "rain streaks across the sky",
+    "observed": "I recorded clouds and a fine pale speckling/grain over the whole image, but no directional rain streaks",
+    "evidence": "The entire painting carries the same soft high-key granular texture, in the sky, on the gown and over the foreground blossoms alike. Because it is uniform across every surface rather than falling in one direction across the sky, I cannot confirm it as rain. This is an assertion the image does not clearly support.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two ornate swords stand point-upward among flowers below her",
+     "with": "two ornate swords stand driven point-downward among flowers below her"
+    },
+    {
+     "find": "the two swords rise from the lower right, crossing the lower half of her gown",
+     "with": "the two swords are driven point-downward into the ground, the nearer one at the centre of the frame crossing the lower half of her gown and the second further to the right"
+    },
+    {
+     "find": "holding a folded letter",
+     "with": "her hands clasped together at her chest"
+    },
+    {
+     "find": "folded letter or paper held in both hands",
+     "with": "both hands raised and clasped together at the chest; any held object is not resolvable"
+    },
+    {
+     "find": "stands in soft rain beside a moonlit balustrade",
+     "with": "stands beside a moonlit balustrade"
+    },
+    {
+     "find": "rain streaks across the sky",
+     "with": "fine pale speckling and drifting cloud across the sky"
+    }
+   ]
+  },
+  "notes": "The sword COUNT of two is correct and passes. The error is orientation, of exactly the kind flagged: point-up asserted where both blades are driven point-down. Also correct and passing: the woman in the left half in profile with head bowed, the crescent moon upper right above the water and balustrade, the stone balustrade with a carved urn, and the uncountable white blossoms.",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-213",
+  "verdict": "pass",
+  "notes": "Faithful throughout. Exactly one blade, gripped in the raised hand and held vertically point-UP through the centre of the image with the glowing crown suspended above its tip — orientation confirmed, hilt at the bottom in the hand, tip uppermost. One crown of golden line-light, flanked by two curved branches of light, one left and one right, centred on the same vertical axis as the blade — the count of two branches and the symmetrical flanking arrangement both confirmed. Armillary sphere on a stand at the left, ringed dial instrument on a stand at the right, small globe on a stand at lower right, circular engraved inlay in the platform floor, horizon glow and its water reflection sitting behind the figure below the blade's midpoint — all match. The model declined to number the lanterns and declined to classify the dark discs as moons or planets, both of which match the nulls I recorded.",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-205",
+  "verdict": "pass",
+  "notes": "Faithful throughout. Two blades with ornate hilts crossed diagonally over the chest, hilts at opposite shoulders, both held against the torso — count and crossed arrangement confirmed. Blindfold, leafy sprigs in the hair, layered green and cream garments, moss-covered boulder seat, still reflective water to the right and behind her meeting a rocky far bank, crescent moon in the upper right above the treeline, white star-shaped flowers lower left, mushroom forms at the lower corners, botanical border — all match. The model asserted no mushroom or flower number and flagged the mushroom count as unresolvable, matching my nulls. Minor wording only, not flagged as an issue: I read the water as a stream narrowing into the distance rather than a closed pool, but it is calm and reflective enough that 'pool' is a defensible reading of the same water.",
+  "reviewer": "reviewer-a"
+ }
+]

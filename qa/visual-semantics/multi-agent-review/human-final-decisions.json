@@ -1,0 +1,211 @@
+[
+  {
+    "reviewId": "review-001",
+    "deckId": "legacy-shadow",
+    "cardId": "cups-01",
+    "decision": "CORRECTED",
+    "reviewMethod": "human-final",
+    "reviewer": "user",
+    "reviewedAt": "2026-10-08",
+    "reason": "头发裸露，没有兜帽；面部仍不可辨认，保留 faceless。",
+    "replace": [
+      {
+        "find": "A hooded, faceless figure",
+        "with": "A faceless figure with visible loose hair and no hood covering the head"
+      }
+    ],
+    "qaOverrides": {
+      "figures.0.role": "kneeling figure with visible loose hair and no hood",
+      "figures.0.posture": "kneeling, head bowed so the face is entirely hidden by dark hair, both hands raised holding a chalice"
+    },
+    "qaOriginal": {
+      "figures.0.role": "kneeling hooded figure",
+      "figures.0.posture": "kneeling, head bowed so the face is entirely hidden by dark hair and hood, both hands raised holding a chalice"
+    }
+  },
+  {
+    "reviewId": "review-003",
+    "deckId": "legacy-moonlight",
+    "cardId": "cups-10",
+    "decision": "CORRECTED",
+    "reviewMethod": "human-final",
+    "reviewer": "user",
+    "reviewedAt": "2026-10-08",
+    "reason": "确认杯子在草地上的布上；未确认桌子，底部支撑物及材质不确定，不推定石头。",
+    "replace": [
+      {
+        "find": "a table of cups glows in the foreground",
+        "with": "cups resting on a cloth spread on the grass glow in the foreground"
+      },
+      {
+        "find": "a second cluster of glass goblets on a draped table in the foreground",
+        "with": "a second cluster of glass goblets resting on a cloth spread on the grass in the foreground"
+      },
+      {
+        "find": "a draped cloth over a low table",
+        "with": "a cloth spread on the grass with the cups resting on it"
+      },
+      {
+        "find": "the couple stands between the foreground table and the children",
+        "with": "the couple stands between the foreground cloth with cups and the children"
+      },
+      {
+        "find": "the table of cups sits behind them",
+        "with": "the cups resting on the cloth sit behind them"
+      }
+    ],
+    "qaOverrides": {
+      "confidence.uncertainDetails.1": "exact count of goblets resting on the foreground cloth; the exact support beneath the cloth is unclear",
+      "foreground.0": "a pale patterned cloth spread on the grass; the exact support beneath it is unclear",
+      "foreground.1": "a cluster of glass goblets resting on the cloth"
+    },
+    "qaOriginal": {
+      "confidence.uncertainDetails.1": "exact count of goblets on the foreground table",
+      "foreground.0": "a low table draped in pale patterned cloth",
+      "foreground.1": "a cluster of glass goblets on the table"
+    },
+    "qaUncertainFields": [
+      "support beneath the foreground cloth",
+      "material of that support"
+    ],
+    "uncertainItems": [
+      {
+        "field": "emphasizedAspects",
+        "item": "ordinary domestic warmth in the shared table and running children"
+      }
+    ],
+    "patch": {
+      "emphasizedAspects": [
+        "a settled, long-standing bond shown by the couple's relaxed closeness",
+        "continuity across generations"
+      ]
+    }
+  },
+  {
+    "reviewId": "review-004",
+    "deckId": "legacy-classic",
+    "cardId": "swords-08",
+    "decision": "CORRECTED",
+    "reviewMethod": "human-final",
+    "reviewer": "user",
+    "reviewedAt": "2026-10-08",
+    "reason": "确认左5右4，形成开放夹道，没有完整环绕；数量以 Artwork 为准。",
+    "replace": [
+      {
+        "find": "encircled by upright swords driven into the ground",
+        "with": "flanked by five upright swords to her left and four to her right, forming an open passage"
+      },
+      {
+        "find": "arranged in a loose ring around the figure",
+        "with": "arranged with five to the left and four to the right, leaving an open passage"
+      },
+      {
+        "find": "the woman stands at the centre with swords planted to her left, right and behind her",
+        "with": "five swords stand to the left and four to the right of the woman, leaving an open passage with no complete ring behind her"
+      },
+      {
+        "find": "the tight ring of blades around the figure against the wide open plain beyond",
+        "with": "the two flanking groups of blades beside the figure against the wide open plain beyond"
+      },
+      {
+        "find": "the encircling enclosure of the swords",
+        "with": "the flanking arrangement of five swords to the left and four to the right"
+      }
+    ],
+    "qaOverrides": {
+      "composition.openness": "open passage between flanking sword groups, open toward the distant horizon",
+      "confidence.uncertainDetails.0": "five swords are confirmed on the left and four on the right, forming an open passage"
+    },
+    "qaOriginal": {
+      "composition.openness": "enclosed at the centre by the ring of swords, open toward the distant horizon",
+      "confidence.uncertainDetails.0": "exact number of swords fully resolvable in the ring"
+    }
+  },
+  {
+    "reviewId": "review-005",
+    "deckId": "legacy-moonlight",
+    "cardId": "swords-06",
+    "decision": "CORRECTED",
+    "reviewMethod": "human-final",
+    "reviewer": "user",
+    "reviewedAt": "2026-10-08",
+    "reason": "五把剑清晰可辨，无法可靠确认额外一把；原错误仅在 QA uncertainDetails，不新增 Runtime 描述。",
+    "replace": [],
+    "qaOverrides": {
+      "confidence.uncertainDetails.0": "five swords are clearly visible; no additional sword can be reliably confirmed"
+    },
+    "qaOriginal": {
+      "confidence.uncertainDetails.0": "exact number of swords standing in the bow (appears to be six, some overlapping)"
+    }
+  },
+  {
+    "reviewId": "review-009",
+    "deckId": "legacy-moonlight",
+    "cardId": "wands-04",
+    "decision": "CORRECTED",
+    "reviewMethod": "human-final",
+    "reviewer": "user",
+    "reviewedAt": "2026-10-08",
+    "reason": "确认3根主要花环杆；去除原4根和左右各2根断言，不猜未确认分布。",
+    "replace": [
+      {
+        "find": "four slender poles",
+        "with": "three slender poles"
+      },
+      {
+        "find": "the four poles frame the scene, two at left and two at right",
+        "with": "three slender poles frame the scene"
+      }
+    ],
+    "qaOverrides": {
+      "confidence.uncertainDetails.0": "three main garlanded slender poles can be reliably confirmed"
+    },
+    "qaOriginal": {
+      "confidence.uncertainDetails.0": "exact number of poles resolved as four, but the two rear poles are partly obscured by garland"
+    }
+  },
+  {
+    "reviewId": "review-010",
+    "deckId": "legacy-classic",
+    "cardId": "swords-06",
+    "decision": "CORRECTED",
+    "reviewMethod": "human-final",
+    "reviewer": "user",
+    "reviewedAt": "2026-10-08",
+    "reason": "两名坐着乘客中仅一人戴兜帽，中间乘客头发裸露；不添加位置未明确的未佩戴帽子。",
+    "replace": [
+      {
+        "find": "two seated, hooded passengers",
+        "with": "two seated passengers (one wearing a hood, the other with uncovered hair)"
+      }
+    ],
+    "qaOverrides": {},
+    "qaOriginal": {}
+  },
+  {
+    "reviewId": "review-207",
+    "deckId": "legacy-moonlight",
+    "cardId": "pentacles-06",
+    "decision": "CORRECTED",
+    "reviewMethod": "human-final",
+    "reviewer": "user",
+    "reviewedAt": "2026-10-08",
+    "reason": "左下编发裸露、没有面纱或兜帽；右侧头部有兜帽。",
+    "replace": [
+      {
+        "find": "two kneeling, veiled figures who raise their hands to receive it",
+        "with": "two kneeling figures who raise their hands to receive it, the left with visible braided hair and the right wearing a hood"
+      }
+    ],
+    "qaOverrides": {
+      "figures.2.role": "kneeling figure with visible uncovered braided hair, left",
+      "figures.1.role": "kneeling hooded figure, right",
+      "foreground.3": "folds of the right kneeling figure’s hood and garments"
+    },
+    "qaOriginal": {
+      "figures.2.role": "kneeling veiled figure, left",
+      "figures.1.role": "kneeling veiled figure, right",
+      "foreground.3": "folds of the kneeling figures' veils"
+    }
+  }
+]

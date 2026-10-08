@@ -1,0 +1,3670 @@
+{
+  "latency": {
+    "n": 33,
+    "p50": 1943,
+    "p95": 2764,
+    "max": 3421,
+    "extraWaitP50": 343,
+    "extraWaitP95": 1164
+  },
+  "cases": {
+    "Case 1 关系 · 继续主动联系": [
+      {
+        "latencyMs": 3421,
+        "reason": null,
+        "knownFacts": [],
+        "questions": [
+          {
+            "id": "current_contact",
+            "question": "目前你们的联系状态更接近哪一种？",
+            "options": [
+              {
+                "id": "mostly_me",
+                "label": "主要是我主动联系"
+              },
+              {
+                "id": "balanced",
+                "label": "双方差不多主动"
+              },
+              {
+                "id": "mostly_them",
+                "label": "主要是他主动联系"
+              },
+              {
+                "id": "no_contact",
+                "label": "最近基本没有联系"
+              }
+            ]
+          },
+          {
+            "id": "their_response",
+            "question": "你主动联系时，对方通常的反应是？",
+            "options": [
+              {
+                "id": "warm",
+                "label": "回应积极，会聊下去"
+              },
+              {
+                "id": "short",
+                "label": "会回，但比较简短"
+              },
+              {
+                "id": "slow",
+                "label": "回复很慢"
+              },
+              {
+                "id": "often_none",
+                "label": "常常不回"
+              },
+              {
+                "id": "not_tried",
+                "label": "最近没怎么联系过"
+              }
+            ]
+          },
+          {
+            "id": "what_changed",
+            "question": "最近发生了什么，让你开始犹豫要不要继续主动？",
+            "options": [
+              {
+                "id": "no_progress",
+                "label": "一直没进展"
+              },
+              {
+                "id": "rejected_once",
+                "label": "被推掉过一次见面"
+              },
+              {
+                "id": "cold_recently",
+                "label": "对方最近变冷淡"
+              },
+              {
+                "id": "tired",
+                "label": "我自己觉得累了"
+              },
+              {
+                "id": "others_say",
+                "label": "身边人劝我别再主动"
+              }
+            ]
+          },
+          {
+            "id": "want_to_know",
+            "question": "这次你最想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "their_attitude",
+                "label": "对方现在到底怎么想"
+              },
+              {
+                "id": "keep_or_stop",
+                "label": "要不要继续主动"
+              },
+              {
+                "id": "how_to_act",
+                "label": "接下来怎么和他相处"
+              },
+              {
+                "id": "my_own_state",
+                "label": "我自己该不该放下"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2198,
+        "reason": null,
+        "knownFacts": [],
+        "questions": [
+          {
+            "id": "current_contact",
+            "question": "最近这段时间，你们的联系状态更接近哪一种？",
+            "options": [
+              {
+                "id": "mostly_me",
+                "label": "主要是我主动联系"
+              },
+              {
+                "id": "balanced",
+                "label": "双方差不多主动"
+              },
+              {
+                "id": "mostly_them",
+                "label": "主要是他主动联系"
+              },
+              {
+                "id": "no_contact",
+                "label": "最近基本没有联系"
+              }
+            ]
+          },
+          {
+            "id": "their_response",
+            "question": "你主动联系时，对方通常怎么回应？",
+            "options": [
+              {
+                "id": "warm",
+                "label": "回应积极，会聊下去"
+              },
+              {
+                "id": "short",
+                "label": "会回，但比较简短"
+              },
+              {
+                "id": "slow",
+                "label": "回复比较慢"
+              },
+              {
+                "id": "often_none",
+                "label": "常常不回"
+              },
+              {
+                "id": "unsure",
+                "label": "说不太准"
+              }
+            ]
+          },
+          {
+            "id": "my_reason",
+            "question": "你想弄清楚要不要继续主动，最主要是因为什么？",
+            "options": [
+              {
+                "id": "no_response",
+                "label": "对方回应变冷淡了"
+              },
+              {
+                "id": "tired",
+                "label": "我自己觉得有点累"
+              },
+              {
+                "id": "want_meet",
+                "label": "我想推进见面或关系"
+              },
+              {
+                "id": "unclear",
+                "label": "不清楚对方怎么想"
+              },
+              {
+                "id": "others_say",
+                "label": "身边人说了些什么"
+              }
+            ]
+          },
+          {
+            "id": "my_feeling",
+            "question": "这段时间你自己的感觉更接近哪一种？",
+            "options": [
+              {
+                "id": "ok",
+                "label": "还好，不太受影响"
+              },
+              {
+                "id": "tired",
+                "label": "有点累"
+              },
+              {
+                "id": "anxious",
+                "label": "比较煎熬"
+              },
+              {
+                "id": "confused",
+                "label": "说不清，很乱"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1742,
+        "reason": null,
+        "knownFacts": [],
+        "questions": [
+          {
+            "id": "contact_pattern",
+            "question": "最近这段时间，你们之间的主动联系大致是什么状态？",
+            "options": [
+              {
+                "id": "mostly_me",
+                "label": "主要是我主动"
+              },
+              {
+                "id": "balanced",
+                "label": "双方差不多"
+              },
+              {
+                "id": "mostly_them",
+                "label": "主要是对方主动"
+              },
+              {
+                "id": "no_contact",
+                "label": "最近基本没联系"
+              },
+              {
+                "id": "unsure",
+                "label": "说不清"
+              }
+            ]
+          },
+          {
+            "id": "response_situation",
+            "question": "你主动联系时，对方通常是什么反应？",
+            "options": [
+              {
+                "id": "warm",
+                "label": "回应积极，会聊下去"
+              },
+              {
+                "id": "short",
+                "label": "会回，但比较简短"
+              },
+              {
+                "id": "slow",
+                "label": "回复比较慢"
+              },
+              {
+                "id": "often_none",
+                "label": "常常不回"
+              },
+              {
+                "id": "not_tried",
+                "label": "最近还没联系过"
+              }
+            ]
+          },
+          {
+            "id": "my_concern",
+            "question": "这件事上，你现在最想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "whether_wanted",
+                "label": "对方是否还愿意来往"
+              },
+              {
+                "id": "how_much_effort",
+                "label": "我还要投入多少精力"
+              },
+              {
+                "id": "when_to_stop",
+                "label": "什么情况下该停下来"
+              },
+              {
+                "id": "how_to_act",
+                "label": "接下来具体怎么做"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ],
+    "Case 2 关系 · 分手三个月复合": [
+      {
+        "latencyMs": 1755,
+        "reason": null,
+        "knownFacts": [
+          "分手三个月"
+        ],
+        "questions": [
+          {
+            "id": "current_contact",
+            "question": "你们现在的联系状态更接近哪一种？",
+            "options": [
+              {
+                "id": "no_contact",
+                "label": "基本没有联系"
+              },
+              {
+                "id": "occasional",
+                "label": "偶尔联系"
+              },
+              {
+                "id": "frequent",
+                "label": "经常联系"
+              },
+              {
+                "id": "daily",
+                "label": "几乎每天联系"
+              },
+              {
+                "id": "unsure",
+                "label": "不确定"
+              }
+            ]
+          },
+          {
+            "id": "initiator",
+            "question": "最近的联系主要是谁先开口？",
+            "options": [
+              {
+                "id": "mostly_me",
+                "label": "主要是我主动"
+              },
+              {
+                "id": "balanced",
+                "label": "双方差不多"
+              },
+              {
+                "id": "mostly_them",
+                "label": "主要是对方主动"
+              },
+              {
+                "id": "no_contact",
+                "label": "最近没有联系"
+              }
+            ]
+          },
+          {
+            "id": "breakup_reason",
+            "question": "这次分手的原因，更接近下面哪一类？",
+            "options": [
+              {
+                "id": "daily_conflict",
+                "label": "日常矛盾积累"
+              },
+              {
+                "id": "trust",
+                "label": "信任或边界问题"
+              },
+              {
+                "id": "future_plan",
+                "label": "未来规划不一致"
+              },
+              {
+                "id": "family",
+                "label": "家人或外部压力"
+              },
+              {
+                "id": "feelings_fade",
+                "label": "感情变淡"
+              },
+              {
+                "id": "other",
+                "label": "其他或不便说"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1539,
+        "reason": null,
+        "knownFacts": [
+          "分手三个月"
+        ],
+        "questions": [
+          {
+            "id": "contact_status",
+            "question": "你们现在还有联系吗？",
+            "options": [
+              {
+                "id": "no_contact",
+                "label": "基本没有联系"
+              },
+              {
+                "id": "occasional",
+                "label": "偶尔联系"
+              },
+              {
+                "id": "regular",
+                "label": "经常联系"
+              },
+              {
+                "id": "uncertain",
+                "label": "不确定"
+              }
+            ]
+          },
+          {
+            "id": "breakup_initiator",
+            "question": "这次分手主要是谁提出的？",
+            "options": [
+              {
+                "id": "me",
+                "label": "我提出的"
+              },
+              {
+                "id": "both",
+                "label": "双方一起决定的"
+              },
+              {
+                "id": "other",
+                "label": "对方提出的"
+              },
+              {
+                "id": "unclear",
+                "label": "说不清"
+              }
+            ]
+          },
+          {
+            "id": "contact_initiative",
+            "question": "最近一段时间，联系主要是谁主动？",
+            "options": [
+              {
+                "id": "mostly_me",
+                "label": "主要是我主动"
+              },
+              {
+                "id": "balanced",
+                "label": "双方差不多"
+              },
+              {
+                "id": "mostly_other",
+                "label": "主要是对方主动"
+              },
+              {
+                "id": "no_contact",
+                "label": "最近没有联系"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1907,
+        "reason": null,
+        "knownFacts": [
+          "已经分手",
+          "分手三个月",
+          "用户想知道是否还有可能复合"
+        ],
+        "questions": [
+          {
+            "id": "current_contact",
+            "question": "你们目前的状态更接近哪一种？",
+            "options": [
+              {
+                "id": "no_contact",
+                "label": "基本没有联系"
+              },
+              {
+                "id": "occasional",
+                "label": "偶尔联系几句"
+              },
+              {
+                "id": "regular",
+                "label": "经常联系，但没提复合"
+              },
+              {
+                "id": "meet_sometimes",
+                "label": "偶尔会见面"
+              },
+              {
+                "id": "unsure",
+                "label": "不确定"
+              }
+            ]
+          },
+          {
+            "id": "breakup_reason",
+            "question": "这次分手最主要的原因更接近哪一类？",
+            "options": [
+              {
+                "id": "daily_conflict",
+                "label": "日常矛盾积累"
+              },
+              {
+                "id": "long_distance",
+                "label": "距离或现实安排"
+              },
+              {
+                "id": "family_pressure",
+                "label": "家人或外界压力"
+              },
+              {
+                "id": "trust_issue",
+                "label": "信任或第三方问题"
+              },
+              {
+                "id": "life_direction",
+                "label": "未来规划不一致"
+              },
+              {
+                "id": "unsure",
+                "label": "说不清"
+              }
+            ]
+          },
+          {
+            "id": "who_initiated",
+            "question": "分手这件事主要是谁提出的？",
+            "options": [
+              {
+                "id": "me",
+                "label": "我提出的"
+              },
+              {
+                "id": "other",
+                "label": "对方提出的"
+              },
+              {
+                "id": "both",
+                "label": "双方一起决定的"
+              },
+              {
+                "id": "unsure",
+                "label": "说不清"
+              }
+            ]
+          },
+          {
+            "id": "what_i_want",
+            "question": "你现在最想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "other_feeling",
+                "label": "对方现在怎么想"
+              },
+              {
+                "id": "my_own_choice",
+                "label": "我自己要不要再试"
+              },
+              {
+                "id": "how_to_act",
+                "label": "接下来该怎么做"
+              },
+              {
+                "id": "accept_and_move",
+                "label": "怎么放下往前走"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ],
+    "Case 3 工作 · 已拿 offer 工资只多一点": [
+      {
+        "latencyMs": 1965,
+        "reason": null,
+        "knownFacts": [
+          "已经拿到新 Offer",
+          "新 Offer 工资只比现在多一点"
+        ],
+        "questions": [
+          {
+            "id": "reason_for_leaving",
+            "question": "现在考虑离开，最主要的原因是？",
+            "options": [
+              {
+                "id": "growth",
+                "label": "发展空间有限"
+              },
+              {
+                "id": "salary",
+                "label": "收入不满意"
+              },
+              {
+                "id": "boss",
+                "label": "和上级相处不顺"
+              },
+              {
+                "id": "culture",
+                "label": "公司氛围不合适"
+              },
+              {
+                "id": "stability",
+                "label": "公司前景不确定"
+              },
+              {
+                "id": "other",
+                "label": "其他"
+              }
+            ]
+          },
+          {
+            "id": "new_offer_appeal",
+            "question": "新 Offer 除了工资，还有什么吸引你？",
+            "options": [
+              {
+                "id": "industry",
+                "label": "行业或赛道更好"
+              },
+              {
+                "id": "role",
+                "label": "岗位内容更想做"
+              },
+              {
+                "id": "growth_room",
+                "label": "晋升空间更大"
+              },
+              {
+                "id": "commute",
+                "label": "通勤或城市更合适"
+              },
+              {
+                "id": "stability",
+                "label": "公司更稳定"
+              },
+              {
+                "id": "nothing",
+                "label": "暂时说不上来"
+              }
+            ]
+          },
+          {
+            "id": "main_worry",
+            "question": "跳过去之后，你最担心的是哪件事？",
+            "options": [
+              {
+                "id": "new_env",
+                "label": "新环境不适应"
+              },
+              {
+                "id": "probation",
+                "label": "试用期不确定"
+              },
+              {
+                "id": "pay_gap",
+                "label": "涨薪幅度太小"
+              },
+              {
+                "id": "future_switch",
+                "label": "以后再跳不好解释"
+              },
+              {
+                "id": "lose_current",
+                "label": "放弃现在已有的积累"
+              },
+              {
+                "id": "no_worry",
+                "label": "目前没有特别担心的"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1704,
+        "reason": null,
+        "knownFacts": [
+          "已经拿到新 Offer",
+          "新 Offer 的工资只比现在多一点"
+        ],
+        "questions": [
+          {
+            "id": "reason_for_considering",
+            "question": "现在会考虑跳过去，最主要的原因是什么？",
+            "options": [
+              {
+                "id": "growth",
+                "label": "发展空间更大"
+              },
+              {
+                "id": "company",
+                "label": "公司或平台更好"
+              },
+              {
+                "id": "boss_team",
+                "label": "现在的团队或上级不合适"
+              },
+              {
+                "id": "location",
+                "label": "通勤或城市更合适"
+              },
+              {
+                "id": "stability",
+                "label": "现在的工作不稳定"
+              },
+              {
+                "id": "other",
+                "label": "其他原因"
+              }
+            ]
+          },
+          {
+            "id": "current_situation",
+            "question": "现在这份工作目前的状况更接近哪一种？",
+            "options": [
+              {
+                "id": "stable_ok",
+                "label": "稳定，没什么大问题"
+              },
+              {
+                "id": "no_growth",
+                "label": "看不到上升空间"
+              },
+              {
+                "id": "heavy_pressure",
+                "label": "压力大，做得比较累"
+              },
+              {
+                "id": "at_risk",
+                "label": "有裁员或变动的风险"
+              },
+              {
+                "id": "just_started",
+                "label": "刚入职不久"
+              }
+            ]
+          },
+          {
+            "id": "biggest_worry",
+            "question": "关于跳过去这件事，你目前最在意的是哪一点？",
+            "options": [
+              {
+                "id": "income_change",
+                "label": "收入变化太小"
+              },
+              {
+                "id": "new_env_risk",
+                "label": "新环境是否合适"
+              },
+              {
+                "id": "lose_current",
+                "label": "放弃现在已有的东西"
+              },
+              {
+                "id": "future_gap",
+                "label": "以后涨薪的空间"
+              },
+              {
+                "id": "not_sure",
+                "label": "还没想清楚"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2429,
+        "reason": null,
+        "knownFacts": [
+          "已经拿到新 Offer",
+          "新 Offer 的工资只比现在多一点"
+        ],
+        "questions": [
+          {
+            "id": "reason_for_considering",
+            "question": "现在会考虑跳槽，最主要的原因是哪一种？",
+            "options": [
+              {
+                "id": "salary_growth",
+                "label": "想涨薪，但幅度不满意"
+              },
+              {
+                "id": "current_dissatisfied",
+                "label": "对现在的工作不满意"
+              },
+              {
+                "id": "new_opportunity",
+                "label": "新工作本身有吸引力"
+              },
+              {
+                "id": "pushed_out",
+                "label": "现在的工作待不下去了"
+              },
+              {
+                "id": "no_clear_reason",
+                "label": "说不太清楚，只是机会来了"
+              }
+            ]
+          },
+          {
+            "id": "new_job_appeal",
+            "question": "新 Offer 除了工资，还有哪一项是现在工作没有的？",
+            "options": [
+              {
+                "id": "growth_space",
+                "label": "成长或晋升空间"
+              },
+              {
+                "id": "industry_or_role",
+                "label": "更想做的行业或岗位"
+              },
+              {
+                "id": "stability",
+                "label": "更稳定或更规范"
+              },
+              {
+                "id": "commute_or_hours",
+                "label": "通勤或作息更合适"
+              },
+              {
+                "id": "nothing_else",
+                "label": "除了工资，没有别的"
+              },
+              {
+                "id": "not_sure_yet",
+                "label": "还没了解清楚"
+              }
+            ]
+          },
+          {
+            "id": "main_worry",
+            "question": "这件事上，你最担心的是哪一点？",
+            "options": [
+              {
+                "id": "regret_after_jump",
+                "label": "跳过去之后后悔"
+              },
+              {
+                "id": "miss_current",
+                "label": "错过现在岗位的机会"
+              },
+              {
+                "id": "income_risk",
+                "label": "收入或稳定性有风险"
+              },
+              {
+                "id": "decision_pressure",
+                "label": "要在期限内做决定"
+              },
+              {
+                "id": "no_worry",
+                "label": "没有特别担心的"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ],
+    "Example B 工作 · 新 offer 该不该跳槽": [
+      {
+        "latencyMs": 2764,
+        "reason": null,
+        "knownFacts": [
+          "已经拿到了一个新 Offer",
+          "新 Offer 的工资只比现在高一点"
+        ],
+        "questions": [
+          {
+            "id": "reason_to_leave",
+            "question": "你考虑离开现在这份工作，最主要的原因是哪一种？",
+            "options": [
+              {
+                "id": "salary",
+                "label": "收入不够"
+              },
+              {
+                "id": "growth",
+                "label": "发展空间有限"
+              },
+              {
+                "id": "boss_team",
+                "label": "和上级或团队不合"
+              },
+              {
+                "id": "workload",
+                "label": "加班或通勤太重"
+              },
+              {
+                "id": "industry",
+                "label": "想换行业方向"
+              },
+              {
+                "id": "no_clear_reason",
+                "label": "说不上来，只是待腻了"
+              }
+            ]
+          },
+          {
+            "id": "new_offer_appeal",
+            "question": "除了工资，这个新 Offer 吸引你的地方是什么？",
+            "options": [
+              {
+                "id": "role_content",
+                "label": "工作内容更想做"
+              },
+              {
+                "id": "growth_space",
+                "label": "发展空间更大"
+              },
+              {
+                "id": "company_brand",
+                "label": "公司或平台更好"
+              },
+              {
+                "id": "work_life",
+                "label": "节奏或通勤更舒服"
+              },
+              {
+                "id": "people",
+                "label": "团队或上级更合得来"
+              },
+              {
+                "id": "nothing_much",
+                "label": "其实没有特别吸引的"
+              }
+            ]
+          },
+          {
+            "id": "main_worry",
+            "question": "关于跳过去之后，你最担心的是哪一件事？",
+            "options": [
+              {
+                "id": "income_not_worth",
+                "label": "涨得少，不值当"
+              },
+              {
+                "id": "adaptation",
+                "label": "新环境不适应"
+              },
+              {
+                "id": "stability",
+                "label": "新公司不稳定"
+              },
+              {
+                "id": "regret",
+                "label": "去了会后悔"
+              },
+              {
+                "id": "stay_risk",
+                "label": "留下会错过机会"
+              },
+              {
+                "id": "no_worry",
+                "label": "暂时没有特别担心"
+              }
+            ]
+          },
+          {
+            "id": "other_options",
+            "question": "除了这个 Offer，你目前手上还有别的选择吗？",
+            "options": [
+              {
+                "id": "other_offer",
+                "label": "还有别的 Offer"
+              },
+              {
+                "id": "internal_move",
+                "label": "现公司内有转岗机会"
+              },
+              {
+                "id": "interviewing",
+                "label": "还在面试其他家"
+              },
+              {
+                "id": "only_this",
+                "label": "只有这一个"
+              },
+              {
+                "id": "not_looking",
+                "label": "没在找，是对方找来的"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2216,
+        "reason": null,
+        "knownFacts": [
+          "已经拿到了一个新 Offer",
+          "新 Offer 的工资只比现在高一点"
+        ],
+        "questions": [
+          {
+            "id": "leave_reason",
+            "question": "目前考虑离开现在这份工作，最主要的原因是？",
+            "options": [
+              {
+                "id": "growth",
+                "label": "发展空间有限"
+              },
+              {
+                "id": "income",
+                "label": "收入不满意"
+              },
+              {
+                "id": "atmosphere",
+                "label": "团队或氛围不合"
+              },
+              {
+                "id": "stability",
+                "label": "公司前景不稳"
+              },
+              {
+                "id": "commute",
+                "label": "通勤或作息问题"
+              },
+              {
+                "id": "other",
+                "label": "其他"
+              }
+            ]
+          },
+          {
+            "id": "new_attraction",
+            "question": "新 Offer 除了工资，最吸引你的是哪一点？",
+            "options": [
+              {
+                "id": "direction",
+                "label": "方向更想做"
+              },
+              {
+                "id": "growth_room",
+                "label": "成长空间更大"
+              },
+              {
+                "id": "brand",
+                "label": "平台或公司更好"
+              },
+              {
+                "id": "workload",
+                "label": "工作强度更合适"
+              },
+              {
+                "id": "location",
+                "label": "地点或通勤更好"
+              },
+              {
+                "id": "nothing",
+                "label": "没有特别吸引的地方"
+              }
+            ]
+          },
+          {
+            "id": "main_worry",
+            "question": "关于跳槽，你现在最担心的是哪一件事？",
+            "options": [
+              {
+                "id": "new_env",
+                "label": "新环境不适应"
+              },
+              {
+                "id": "income_drop",
+                "label": "实际收入反而变少"
+              },
+              {
+                "id": "stability",
+                "label": "新公司不够稳定"
+              },
+              {
+                "id": "give_up",
+                "label": "放弃现在积累的东西"
+              },
+              {
+                "id": "regret",
+                "label": "以后会后悔这个决定"
+              },
+              {
+                "id": "unsure",
+                "label": "还说不清楚"
+              }
+            ]
+          },
+          {
+            "id": "current_feeling",
+            "question": "面对这个选择，你现在的感觉更接近哪一种？",
+            "options": [
+              {
+                "id": "calm",
+                "label": "比较平静，能慢慢想"
+              },
+              {
+                "id": "anxious",
+                "label": "有点焦虑，想尽快定"
+              },
+              {
+                "id": "tired",
+                "label": "有点累，不太想再纠结"
+              },
+              {
+                "id": "eager",
+                "label": "挺期待，想早点换"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2508,
+        "reason": null,
+        "knownFacts": [
+          "已经拿到了一个新 Offer",
+          "新 Offer 的工资只比现在高一点",
+          "用户在考虑是否跳槽"
+        ],
+        "questions": [
+          {
+            "id": "reason_to_leave",
+            "question": "目前想离开现在这份工作，最主要的原因是哪一类？",
+            "options": [
+              {
+                "id": "growth",
+                "label": "成长空间有限"
+              },
+              {
+                "id": "income",
+                "label": "收入不满意"
+              },
+              {
+                "id": "people",
+                "label": "团队或上级关系"
+              },
+              {
+                "id": "stability",
+                "label": "稳定性或公司前景"
+              },
+              {
+                "id": "no_clear_reason",
+                "label": "说不太清，就是待腻了"
+              }
+            ]
+          },
+          {
+            "id": "new_offer_appeal",
+            "question": "除了工资，新 Offer 最吸引你的是哪一点？",
+            "options": [
+              {
+                "id": "role_content",
+                "label": "工作内容更想做"
+              },
+              {
+                "id": "industry",
+                "label": "行业或公司更有前景"
+              },
+              {
+                "id": "commute",
+                "label": "通勤或城市更合适"
+              },
+              {
+                "id": "title",
+                "label": "职位或头衔更高"
+              },
+              {
+                "id": "nothing_else",
+                "label": "除了工资，没有别的"
+              }
+            ]
+          },
+          {
+            "id": "main_worry",
+            "question": "关于跳槽，你现在最担心的是哪一件事？",
+            "options": [
+              {
+                "id": "worse_than_now",
+                "label": "去了发现还不如现在"
+              },
+              {
+                "id": "short_tenure",
+                "label": "待不久又要再换"
+              },
+              {
+                "id": "lost_seniority",
+                "label": "丢掉现在的积累"
+              },
+              {
+                "id": "income_gap",
+                "label": "涨幅太小不划算"
+              },
+              {
+                "id": "no_worry",
+                "label": "暂时没有特别担心的"
+              }
+            ]
+          },
+          {
+            "id": "other_options",
+            "question": "除了这个 Offer，你手上还有其他实际的选择吗？",
+            "options": [
+              {
+                "id": "staying",
+                "label": "留在现在这份工作"
+              },
+              {
+                "id": "other_offers",
+                "label": "还有别的 Offer 在谈"
+              },
+              {
+                "id": "internal_move",
+                "label": "公司内部有转岗机会"
+              },
+              {
+                "id": "planning_search",
+                "label": "打算重新开始找"
+              },
+              {
+                "id": "none",
+                "label": "目前就这一个选择"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ],
+    "Case 4 A/B · 选 A 还是 B 工作": [
+      {
+        "latencyMs": 1858,
+        "reason": null,
+        "knownFacts": [
+          "用户面前有两个工作选项：A 工作和 B 工作"
+        ],
+        "questions": [
+          {
+            "id": "decision_stage",
+            "question": "目前这个选择进行到哪一步了？",
+            "options": [
+              {
+                "id": "both_offers",
+                "label": "两个 offer 都已拿到"
+              },
+              {
+                "id": "one_offer",
+                "label": "只拿到其中一个 offer"
+              },
+              {
+                "id": "still_applying",
+                "label": "都还在申请或面试中"
+              },
+              {
+                "id": "other_stage",
+                "label": "情况不太一样"
+              }
+            ]
+          },
+          {
+            "id": "main_difference",
+            "question": "两个选项之间，你最在意的是哪方面的差别？",
+            "options": [
+              {
+                "id": "income",
+                "label": "收入高低"
+              },
+              {
+                "id": "stability",
+                "label": "稳定与风险"
+              },
+              {
+                "id": "growth",
+                "label": "成长空间"
+              },
+              {
+                "id": "time_life",
+                "label": "时间与生活安排"
+              },
+              {
+                "id": "people_env",
+                "label": "团队与工作环境"
+              },
+              {
+                "id": "location",
+                "label": "城市或通勤"
+              }
+            ]
+          },
+          {
+            "id": "biggest_concern",
+            "question": "做这个决定时，你目前最放不下的是哪一点？",
+            "options": [
+              {
+                "id": "choose_wrong",
+                "label": "怕选错后后悔"
+              },
+              {
+                "id": "give_up",
+                "label": "怕放弃另一个的机会"
+              },
+              {
+                "id": "others_view",
+                "label": "在意家人或他人的看法"
+              },
+              {
+                "id": "info_not_enough",
+                "label": "觉得信息还不够"
+              },
+              {
+                "id": "no_clear_concern",
+                "label": "说不上最担心什么"
+              }
+            ]
+          },
+          {
+            "id": "deadline",
+            "question": "这个决定需要在多久内做出？",
+            "options": [
+              {
+                "id": "within_week",
+                "label": "一周以内"
+              },
+              {
+                "id": "within_month",
+                "label": "一个月以内"
+              },
+              {
+                "id": "no_deadline",
+                "label": "没有明确期限"
+              },
+              {
+                "id": "already_overdue",
+                "label": "已经拖了一段时间"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2103,
+        "reason": null,
+        "knownFacts": [
+          "用户在两个工作选项 A 和 B 之间做选择"
+        ],
+        "questions": [
+          {
+            "id": "offer_status",
+            "question": "目前这两个工作的进展到哪一步了？",
+            "options": [
+              {
+                "id": "both_offers",
+                "label": "两个都已拿到 offer"
+              },
+              {
+                "id": "one_offer",
+                "label": "只有一个已拿到 offer"
+              },
+              {
+                "id": "both_in_process",
+                "label": "两个都还在流程中"
+              },
+              {
+                "id": "one_in_process",
+                "label": "一个在流程，一个没消息"
+              },
+              {
+                "id": "other",
+                "label": "其他情况"
+              }
+            ]
+          },
+          {
+            "id": "main_difference",
+            "question": "这两个工作最主要的差别在哪方面？",
+            "options": [
+              {
+                "id": "income",
+                "label": "收入高低"
+              },
+              {
+                "id": "stability",
+                "label": "稳定程度"
+              },
+              {
+                "id": "growth",
+                "label": "成长空间"
+              },
+              {
+                "id": "interest",
+                "label": "是否是自己想做的方向"
+              },
+              {
+                "id": "commute_location",
+                "label": "通勤或所在城市"
+              },
+              {
+                "id": "workload",
+                "label": "工作强度与时间"
+              }
+            ]
+          },
+          {
+            "id": "decision_priority",
+            "question": "这次做选择时，你最看重的是哪一点？",
+            "options": [
+              {
+                "id": "short_term_income",
+                "label": "短期收入"
+              },
+              {
+                "id": "long_term_growth",
+                "label": "长期发展"
+              },
+              {
+                "id": "stability",
+                "label": "稳定与保障"
+              },
+              {
+                "id": "personal_interest",
+                "label": "自己是否喜欢"
+              },
+              {
+                "id": "life_arrangement",
+                "label": "和生活安排的配合"
+              },
+              {
+                "id": "not_sure",
+                "label": "还没想清楚"
+              }
+            ]
+          },
+          {
+            "id": "current_situation",
+            "question": "你目前的工作状态是？",
+            "options": [
+              {
+                "id": "currently_employed",
+                "label": "在职，考虑换"
+              },
+              {
+                "id": "between_jobs",
+                "label": "目前没有工作"
+              },
+              {
+                "id": "just_graduated",
+                "label": "刚毕业或即将毕业"
+              },
+              {
+                "id": "other",
+                "label": "其他情况"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2180,
+        "reason": null,
+        "knownFacts": [
+          "用户面临在两个工作机会之间做选择"
+        ],
+        "questions": [
+          {
+            "id": "option_difference",
+            "question": "这两个工作在什么方面差别最明显？",
+            "options": [
+              {
+                "id": "income",
+                "label": "收入水平"
+              },
+              {
+                "id": "stability",
+                "label": "稳定性"
+              },
+              {
+                "id": "growth",
+                "label": "发展空间"
+              },
+              {
+                "id": "workload",
+                "label": "工作强度"
+              },
+              {
+                "id": "location",
+                "label": "城市或通勤"
+              },
+              {
+                "id": "unsure",
+                "label": "说不清，各有各的"
+              }
+            ]
+          },
+          {
+            "id": "current_situation",
+            "question": "你目前的工作状态是？",
+            "options": [
+              {
+                "id": "employed_choosing",
+                "label": "在职，正在考虑换"
+              },
+              {
+                "id": "not_working",
+                "label": "目前没有工作"
+              },
+              {
+                "id": "just_graduated",
+                "label": "刚毕业或即将毕业"
+              },
+              {
+                "id": "between_jobs",
+                "label": "刚离职，正在找"
+              }
+            ]
+          },
+          {
+            "id": "decision_deadline",
+            "question": "这次决定需要多久内做出？",
+            "options": [
+              {
+                "id": "within_week",
+                "label": "一周以内"
+              },
+              {
+                "id": "within_month",
+                "label": "一个月以内"
+              },
+              {
+                "id": "one_to_three_months",
+                "label": "一到三个月"
+              },
+              {
+                "id": "no_deadline",
+                "label": "没有明确期限"
+              }
+            ]
+          },
+          {
+            "id": "main_concern",
+            "question": "这次选择里，你最想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "which_fits_me",
+                "label": "哪个更适合我"
+              },
+              {
+                "id": "risk_of_each",
+                "label": "各自的风险"
+              },
+              {
+                "id": "long_term",
+                "label": "长期会带来什么"
+              },
+              {
+                "id": "family_impact",
+                "label": "对生活和家人的影响"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ],
+    "Example A 关系 · 每天聊天但不见面": [
+      {
+        "latencyMs": 1716,
+        "reason": null,
+        "knownFacts": [
+          "他最近每天都会跟我聊天",
+          "他一直不愿意见面"
+        ],
+        "questions": [
+          {
+            "id": "chat_initiative",
+            "question": "最近的聊天主要是谁先开口？",
+            "options": [
+              {
+                "id": "mostly_me",
+                "label": "主要是我主动"
+              },
+              {
+                "id": "balanced",
+                "label": "双方差不多"
+              },
+              {
+                "id": "mostly_him",
+                "label": "主要是他主动"
+              },
+              {
+                "id": "unsure",
+                "label": "不太确定"
+              }
+            ]
+          },
+          {
+            "id": "meeting_attempt",
+            "question": "关于见面，目前的情况是？",
+            "options": [
+              {
+                "id": "not_asked",
+                "label": "我还没提过见面"
+              },
+              {
+                "id": "asked_postponed",
+                "label": "我提过，被推后了"
+              },
+              {
+                "id": "asked_refused",
+                "label": "我提过，他明确拒绝"
+              },
+              {
+                "id": "he_said_busy",
+                "label": "他说忙，没定时间"
+              },
+              {
+                "id": "other",
+                "label": "其他情况"
+              }
+            ]
+          },
+          {
+            "id": "duration",
+            "question": "这样的状态持续多久了？",
+            "options": [
+              {
+                "id": "under_month",
+                "label": "不到一个月"
+              },
+              {
+                "id": "one_to_three",
+                "label": "一至三个月"
+              },
+              {
+                "id": "three_to_six",
+                "label": "三到六个月"
+              },
+              {
+                "id": "over_six",
+                "label": "半年以上"
+              }
+            ]
+          },
+          {
+            "id": "feeling_now",
+            "question": "这段时间你自己的感觉更接近哪一种？",
+            "options": [
+              {
+                "id": "okay",
+                "label": "还好，能接受"
+              },
+              {
+                "id": "tired",
+                "label": "有点累"
+              },
+              {
+                "id": "anxious",
+                "label": "比较不安"
+              },
+              {
+                "id": "struggling",
+                "label": "比较煎熬"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2147,
+        "reason": null,
+        "knownFacts": [
+          "他最近每天都会跟我聊天",
+          "他一直不愿意见面",
+          "用户想知道这段关系是否值得继续"
+        ],
+        "questions": [
+          {
+            "id": "meeting_attempts",
+            "question": "关于见面这件事，目前的情况更接近哪一种？",
+            "options": [
+              {
+                "id": "i_raised_rejected",
+                "label": "我提过见面，被推掉了"
+              },
+              {
+                "id": "i_raised_no_reply",
+                "label": "我提过见面，对方没回应"
+              },
+              {
+                "id": "never_raised",
+                "label": "我还没提过见面"
+              },
+              {
+                "id": "he_promised_later",
+                "label": "对方说以后再说，但没定时间"
+              },
+              {
+                "id": "other",
+                "label": "其他情况"
+              }
+            ]
+          },
+          {
+            "id": "chat_initiative",
+            "question": "最近这段时间，聊天通常是谁先开口？",
+            "options": [
+              {
+                "id": "mostly_me",
+                "label": "主要是我主动"
+              },
+              {
+                "id": "balanced",
+                "label": "双方差不多"
+              },
+              {
+                "id": "mostly_him",
+                "label": "主要是他主动"
+              },
+              {
+                "id": "unclear",
+                "label": "说不清"
+              }
+            ]
+          },
+          {
+            "id": "duration",
+            "question": "这种「每天聊天但不见面」的状态持续多久了？",
+            "options": [
+              {
+                "id": "under_month",
+                "label": "不到一个月"
+              },
+              {
+                "id": "one_to_three_months",
+                "label": "一到三个月"
+              },
+              {
+                "id": "three_to_six_months",
+                "label": "三个月到半年"
+              },
+              {
+                "id": "over_six_months",
+                "label": "半年以上"
+              }
+            ]
+          },
+          {
+            "id": "your_feeling",
+            "question": "这段时间你自己的感觉更接近哪一种？",
+            "options": [
+              {
+                "id": "fine",
+                "label": "还好，不太受影响"
+              },
+              {
+                "id": "a_bit_tired",
+                "label": "有点累"
+              },
+              {
+                "id": "fairly_uneasy",
+                "label": "比较不安"
+              },
+              {
+                "id": "quite_painful",
+                "label": "比较煎熬"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1943,
+        "reason": null,
+        "knownFacts": [
+          "他最近每天都会跟我聊天",
+          "他一直不愿意见面",
+          "用户在考虑这段关系是否值得继续"
+        ],
+        "questions": [
+          {
+            "id": "contact_initiative",
+            "question": "目前每天的聊天，主要是谁先开始的？",
+            "options": [
+              {
+                "id": "mostly_me",
+                "label": "主要是我主动"
+              },
+              {
+                "id": "balanced",
+                "label": "双方差不多"
+              },
+              {
+                "id": "mostly_him",
+                "label": "主要是他主动"
+              },
+              {
+                "id": "unsure",
+                "label": "说不清"
+              }
+            ]
+          },
+          {
+            "id": "meeting_attempt",
+            "question": "关于见面这件事，目前已经出现过哪些情况？",
+            "options": [
+              {
+                "id": "i_asked_once",
+                "label": "我提过，他没答应"
+              },
+              {
+                "id": "i_asked_many",
+                "label": "我提过多次，都被推掉"
+              },
+              {
+                "id": "he_promised",
+                "label": "他答应过但没实现"
+              },
+              {
+                "id": "never_asked",
+                "label": "我还没提过见面"
+              },
+              {
+                "id": "he_asked_me",
+                "label": "他提过，是我没去"
+              }
+            ]
+          },
+          {
+            "id": "duration",
+            "question": "你们这样每天聊天、但不见面的状态持续多久了？",
+            "options": [
+              {
+                "id": "under_month",
+                "label": "不到一个月"
+              },
+              {
+                "id": "one_to_three",
+                "label": "一到三个月"
+              },
+              {
+                "id": "over_three",
+                "label": "三个月以上"
+              },
+              {
+                "id": "unsure",
+                "label": "说不清"
+              }
+            ]
+          },
+          {
+            "id": "my_feeling",
+            "question": "这段时间你自己的感觉更接近哪一种？",
+            "options": [
+              {
+                "id": "okay",
+                "label": "还好，不太影响我"
+              },
+              {
+                "id": "tired",
+                "label": "有点累"
+              },
+              {
+                "id": "anxious",
+                "label": "比较煎熬"
+              },
+              {
+                "id": "numb",
+                "label": "已经没什么感觉"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ],
+    "Example C 学习 · 考试还有一个月": [
+      {
+        "latencyMs": 2436,
+        "reason": null,
+        "knownFacts": [
+          "考试还有一个月",
+          "现在每天学很多",
+          "成绩一直没有提高"
+        ],
+        "questions": [
+          {
+            "id": "score_pattern",
+            "question": "成绩没有提高，具体更接近哪种情况？",
+            "options": [
+              {
+                "id": "flat_all",
+                "label": "各科都原地不动"
+              },
+              {
+                "id": "some_up_some_down",
+                "label": "有的科目升有的降"
+              },
+              {
+                "id": "only_hard_part",
+                "label": "难题部分一直上不去"
+              },
+              {
+                "id": "mock_unstable",
+                "label": "模考忽高忽低"
+              },
+              {
+                "id": "not_sure",
+                "label": "说不太清楚"
+              }
+            ]
+          },
+          {
+            "id": "study_way",
+            "question": "现在每天的学习主要是什么形式？",
+            "options": [
+              {
+                "id": "new_content",
+                "label": "大量看新内容"
+              },
+              {
+                "id": "repeat_review",
+                "label": "反复看已学内容"
+              },
+              {
+                "id": "practice_papers",
+                "label": "刷题做卷子"
+              },
+              {
+                "id": "recite_memorize",
+                "label": "背诵记忆为主"
+              },
+              {
+                "id": "mixed",
+                "label": "几种混着来"
+              }
+            ]
+          },
+          {
+            "id": "after_practice",
+            "question": "做完题或考完试之后，通常怎么处理？",
+            "options": [
+              {
+                "id": "analyze_errors",
+                "label": "会整理错题并重做"
+              },
+              {
+                "id": "look_answers",
+                "label": "只看对错和答案"
+              },
+              {
+                "id": "redo_same_type",
+                "label": "会再练同类型题"
+              },
+              {
+                "id": "move_on",
+                "label": "直接进入下一套"
+              },
+              {
+                "id": "rarely_review",
+                "label": "基本不回头看"
+              }
+            ]
+          },
+          {
+            "id": "biggest_worry",
+            "question": "这一个月里，你最想先弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "where_time_goes",
+                "label": "时间该往哪里放"
+              },
+              {
+                "id": "why_no_gain",
+                "label": "为什么投入没效果"
+              },
+              {
+                "id": "hold_score",
+                "label": "怎么把现有水平稳住"
+              },
+              {
+                "id": "mental_state",
+                "label": "怎么让自己不慌"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1965,
+        "reason": null,
+        "knownFacts": [
+          "考试还有一个月",
+          "现在每天学很多",
+          "成绩一直没有提高"
+        ],
+        "questions": [
+          {
+            "id": "score_stage",
+            "question": "成绩没有提高，主要体现在哪方面？",
+            "options": [
+              {
+                "id": "mock_stable",
+                "label": "模考分数一直卡住"
+              },
+              {
+                "id": "mock_fluctuate",
+                "label": "分数忽高忽低"
+              },
+              {
+                "id": "wrong_repeat",
+                "label": "同类题反复做错"
+              },
+              {
+                "id": "know_but_slow",
+                "label": "会做但总做不完"
+              },
+              {
+                "id": "not_sure",
+                "label": "说不太清楚"
+              }
+            ]
+          },
+          {
+            "id": "current_method",
+            "question": "你现在每天的学习主要是什么方式？",
+            "options": [
+              {
+                "id": "new_content",
+                "label": "继续学新内容"
+              },
+              {
+                "id": "repeat_review",
+                "label": "反复看已学内容"
+              },
+              {
+                "id": "past_papers",
+                "label": "集中刷真题/套卷"
+              },
+              {
+                "id": "notes_summary",
+                "label": "整理笔记和错题"
+              },
+              {
+                "id": "mixed",
+                "label": "几种混着来"
+              }
+            ]
+          },
+          {
+            "id": "biggest_worry",
+            "question": "这一个月里，你最想先弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "where_time_goes",
+                "label": "时间该优先花在哪"
+              },
+              {
+                "id": "why_no_gain",
+                "label": "为什么投入没换来提高"
+              },
+              {
+                "id": "keep_or_change",
+                "label": "要不要换现在的学法"
+              },
+              {
+                "id": "hold_state",
+                "label": "怎么让状态稳住"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2257,
+        "reason": null,
+        "knownFacts": [
+          "考试还有一个月",
+          "每天学很多",
+          "成绩一直没有提高"
+        ],
+        "questions": [
+          {
+            "id": "current_method",
+            "question": "你现在的复习方式主要是哪一种？",
+            "options": [
+              {
+                "id": "new_content",
+                "label": "继续学新内容/新题"
+              },
+              {
+                "id": "repeat_wrong",
+                "label": "反复做错题和旧题"
+              },
+              {
+                "id": "mock_exam",
+                "label": "整套模拟限时练"
+              },
+              {
+                "id": "notes_review",
+                "label": "看笔记和讲义"
+              },
+              {
+                "id": "mixed",
+                "label": "几种混着来"
+              }
+            ]
+          },
+          {
+            "id": "stuck_subject",
+            "question": "成绩停住的情况更接近哪一种？",
+            "options": [
+              {
+                "id": "all_subjects",
+                "label": "各科都停住"
+              },
+              {
+                "id": "one_subject",
+                "label": "只有某一科停住"
+              },
+              {
+                "id": "specific_type",
+                "label": "某类题型总出错"
+              },
+              {
+                "id": "unclear",
+                "label": "说不清是哪一块"
+              }
+            ]
+          },
+          {
+            "id": "recent_change",
+            "question": "最近一个月你的复习状态有什么变化？",
+            "options": [
+              {
+                "id": "more_time",
+                "label": "时间加多了但没起色"
+              },
+              {
+                "id": "same_as_before",
+                "label": "和之前差不多"
+              },
+              {
+                "id": "less_time",
+                "label": "时间反而变少了"
+              },
+              {
+                "id": "sleep_affected",
+                "label": "睡眠或状态受影响"
+              }
+            ]
+          },
+          {
+            "id": "want_clarify",
+            "question": "这次你最想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "where_problem",
+                "label": "问题出在哪个环节"
+              },
+              {
+                "id": "how_adjust",
+                "label": "接下来怎么调整安排"
+              },
+              {
+                "id": "whether_enough",
+                "label": "剩一个月还来不来得及"
+              },
+              {
+                "id": "how_steady",
+                "label": "怎么让自己稳住"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ],
+    "Case 5 非常详细的问题": [
+      {
+        "latencyMs": 762,
+        "reason": null,
+        "knownFacts": [
+          "分手三个月",
+          "上个月重新联系",
+          "最近两周他每天主动找我",
+          "他一直回避见面",
+          "我已经直接问过一次",
+          "他说最近工作忙",
+          "我想知道还要不要继续投入这段关系"
+        ],
+        "questions": [],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1858,
+        "reason": null,
+        "knownFacts": [
+          "分手三个月",
+          "上个月重新联系",
+          "最近两周他每天主动找我",
+          "他一直回避见面",
+          "我已经直接问过一次",
+          "他说最近工作忙",
+          "我想知道还要不要继续投入这段关系"
+        ],
+        "questions": [
+          {
+            "id": "my_current_investment",
+            "question": "这段时间你这边实际是怎么投入的？",
+            "options": [
+              {
+                "id": "reply_only",
+                "label": "基本只回应他的消息"
+              },
+              {
+                "id": "also_initiate",
+                "label": "我也会主动找他"
+              },
+              {
+                "id": "meet_pressure",
+                "label": "我提过见面或约时间"
+              },
+              {
+                "id": "waiting",
+                "label": "我主要等他安排"
+              },
+              {
+                "id": "other",
+                "label": "其他"
+              }
+            ]
+          }
+        ],
+        "dropped": [
+          "原问题已给出 7 条事实，只保留 1 题"
+        ]
+      },
+      {
+        "latencyMs": 1786,
+        "reason": null,
+        "knownFacts": [
+          "分手三个月",
+          "上个月重新联系",
+          "他最近两周每天主动找我",
+          "他一直回避见面",
+          "我已直接问过一次，他说最近工作忙",
+          "我想判断还要不要继续投入"
+        ],
+        "questions": [
+          {
+            "id": "my_current_investment",
+            "question": "这两周里，你这边实际是怎么回应的？",
+            "options": [
+              {
+                "id": "always_reply",
+                "label": "他找我我都会回"
+              },
+              {
+                "id": "sometimes_reply",
+                "label": "有时回，有时不回"
+              },
+              {
+                "id": "often_initiate",
+                "label": "我也会主动找他"
+              },
+              {
+                "id": "rarely_reply",
+                "label": "我回得比较少"
+              },
+              {
+                "id": "no_reply_now",
+                "label": "最近我没怎么回"
+              }
+            ]
+          }
+        ],
+        "dropped": [
+          "原问题已给出 6 条事实，只保留 1 题"
+        ]
+      }
+    ],
+    "Case 9 English": [
+      {
+        "latencyMs": 2069,
+        "reason": null,
+        "knownFacts": [
+          "The user has messaged him first every time for the past month."
+        ],
+        "questions": [
+          {
+            "id": "his_response_pattern",
+            "question": "When you reach out first, how does he usually respond?",
+            "options": [
+              {
+                "id": "replies_fast",
+                "label": "Replies quickly"
+              },
+              {
+                "id": "replies_slow",
+                "label": "Replies slowly"
+              },
+              {
+                "id": "replies_brief",
+                "label": "Replies but very briefly"
+              },
+              {
+                "id": "often_no_reply",
+                "label": "Often doesn't reply"
+              },
+              {
+                "id": "varies",
+                "label": "It varies a lot"
+              }
+            ]
+          },
+          {
+            "id": "last_meetup",
+            "question": "When did you two last actually meet or talk on a call?",
+            "options": [
+              {
+                "id": "within_week",
+                "label": "Within the past week"
+              },
+              {
+                "id": "two_four_weeks",
+                "label": "Two to four weeks ago"
+              },
+              {
+                "id": "over_month",
+                "label": "More than a month ago"
+              },
+              {
+                "id": "only_texting",
+                "label": "Only texting, no meeting or calls"
+              }
+            ]
+          },
+          {
+            "id": "what_you_want",
+            "question": "What are you most trying to figure out right now?",
+            "options": [
+              {
+                "id": "whether_he_cares",
+                "label": "Whether he still cares"
+              },
+              {
+                "id": "whether_to_stop",
+                "label": "Whether to stop reaching out"
+              },
+              {
+                "id": "how_to_shift",
+                "label": "How to get him to reach out too"
+              },
+              {
+                "id": "what_it_means",
+                "label": "What his behavior means"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2120,
+        "reason": null,
+        "knownFacts": [
+          "The user has messaged him first every time for the past month",
+          "The user is considering whether to keep reaching out"
+        ],
+        "questions": [
+          {
+            "id": "his_response_pattern",
+            "question": "When you reach out first, how does he usually respond?",
+            "options": [
+              {
+                "id": "replies_quickly",
+                "label": "Replies quickly"
+              },
+              {
+                "id": "replies_slowly",
+                "label": "Replies slowly"
+              },
+              {
+                "id": "short_replies",
+                "label": "Replies but very briefly"
+              },
+              {
+                "id": "often_no_reply",
+                "label": "Often doesn't reply"
+              },
+              {
+                "id": "varies",
+                "label": "It varies a lot"
+              }
+            ]
+          },
+          {
+            "id": "last_meetup",
+            "question": "Has anything happened in person during this past month?",
+            "options": [
+              {
+                "id": "met_he_suggested",
+                "label": "We met, he suggested it"
+              },
+              {
+                "id": "met_i_suggested",
+                "label": "We met, I suggested it"
+              },
+              {
+                "id": "i_asked_he_declined",
+                "label": "I asked to meet, he declined"
+              },
+              {
+                "id": "no_meeting",
+                "label": "We haven't met at all"
+              }
+            ]
+          },
+          {
+            "id": "what_user_wants",
+            "question": "What are you most hoping to figure out right now?",
+            "options": [
+              {
+                "id": "whether_he_is_interested",
+                "label": "Whether he's still interested"
+              },
+              {
+                "id": "whether_to_stop",
+                "label": "Whether to stop reaching out"
+              },
+              {
+                "id": "how_to_change_pattern",
+                "label": "How to change this pattern"
+              },
+              {
+                "id": "whether_to_wait",
+                "label": "Whether to wait longer"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 2355,
+        "reason": null,
+        "knownFacts": [
+          "She has messaged him first every time for the past month",
+          "She is deciding whether to keep reaching out"
+        ],
+        "questions": [
+          {
+            "id": "his_response_pattern",
+            "question": "When you reach out, how does he usually respond?",
+            "options": [
+              {
+                "id": "quick_and_warm",
+                "label": "Quick and warm replies"
+              },
+              {
+                "id": "slow_replies",
+                "label": "Replies, but slowly"
+              },
+              {
+                "id": "short_replies",
+                "label": "Replies, but very briefly"
+              },
+              {
+                "id": "often_no_reply",
+                "label": "Often no reply at all"
+              },
+              {
+                "id": "mixed",
+                "label": "It varies a lot"
+              }
+            ]
+          },
+          {
+            "id": "last_meetup",
+            "question": "When did you two last see each other in person?",
+            "options": [
+              {
+                "id": "within_week",
+                "label": "Within the past week"
+              },
+              {
+                "id": "within_month",
+                "label": "Within the past month"
+              },
+              {
+                "id": "one_to_three_months",
+                "label": "One to three months ago"
+              },
+              {
+                "id": "longer_than_three_months",
+                "label": "More than three months ago"
+              },
+              {
+                "id": "never_met",
+                "label": "We have never met in person"
+              }
+            ]
+          },
+          {
+            "id": "what_prompted_question",
+            "question": "What made you start wondering about this now?",
+            "options": [
+              {
+                "id": "something_changed",
+                "label": "Something changed recently"
+              },
+              {
+                "id": "feels_one_sided",
+                "label": "It feels one-sided to me"
+              },
+              {
+                "id": "someone_said",
+                "label": "Someone else brought it up"
+              },
+              {
+                "id": "been_thinking",
+                "label": "I have been thinking about it a while"
+              },
+              {
+                "id": "upcoming_decision",
+                "label": "A decision is coming up"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ],
+    "Case 10 医疗": [
+      {
+        "latencyMs": 1532,
+        "reason": null,
+        "knownFacts": [
+          "用户最近总是头疼",
+          "用户想知道牌面是否说明自己得了什么病"
+        ],
+        "questions": [
+          {
+            "id": "focus_this_time",
+            "question": "这次抽牌，你最想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "fear_of_illness",
+                "label": "怎么面对这份担心"
+              },
+              {
+                "id": "whether_to_go",
+                "label": "要不要去医院、先做什么"
+              },
+              {
+                "id": "daily_impact",
+                "label": "头疼对生活的影响"
+              },
+              {
+                "id": "other",
+                "label": "其他"
+              }
+            ]
+          }
+        ],
+        "dropped": [
+          "第 1 题触及医疗 / 法律边界：关于这次头疼，你目前做过哪些事？"
+        ]
+      },
+      {
+        "latencyMs": 1641,
+        "reason": null,
+        "knownFacts": [
+          "最近总是头疼",
+          "用户想知道头疼是否意味着得了什么病"
+        ],
+        "questions": [
+          {
+            "id": "consulted_doctor",
+            "question": "关于这次头疼，你目前做过哪些事？",
+            "options": [
+              {
+                "id": "not_yet",
+                "label": "还没去看过医生"
+              },
+              {
+                "id": "booked_or_visited",
+                "label": "已经就诊或预约了"
+              },
+              {
+                "id": "checked_online",
+                "label": "只在网上查过资料"
+              },
+              {
+                "id": "other",
+                "label": "其他情况"
+              }
+            ]
+          },
+          {
+            "id": "what_to_sort",
+            "question": "这次你更想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "worry_how_to_face",
+                "label": "怎么面对这份担心"
+              },
+              {
+                "id": "whether_to_see_doctor",
+                "label": "要不要去看医生"
+              },
+              {
+                "id": "how_to_prepare",
+                "label": "接下来先做什么准备"
+              },
+              {
+                "id": "not_sure",
+                "label": "还没想清楚"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1484,
+        "reason": null,
+        "knownFacts": [
+          "用户最近总是头疼",
+          "用户想知道牌是否说明自己得了什么病"
+        ],
+        "questions": [
+          {
+            "id": "medical_consult",
+            "question": "关于这次头疼，你目前的情况更接近哪一种？",
+            "options": [
+              {
+                "id": "seen_doctor",
+                "label": "已经看过医生"
+              },
+              {
+                "id": "plan_to_see",
+                "label": "打算去看，还没去"
+              },
+              {
+                "id": "not_considering",
+                "label": "暂时没打算去看"
+              },
+              {
+                "id": "uncertain",
+                "label": "还不确定"
+              }
+            ]
+          },
+          {
+            "id": "focus_now",
+            "question": "这次你更想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "worry_about_health",
+                "label": "怎么面对这份担心"
+              },
+              {
+                "id": "whether_to_see_doctor",
+                "label": "要不要去看医生"
+              },
+              {
+                "id": "what_to_do_next",
+                "label": "接下来先做什么"
+              },
+              {
+                "id": "other",
+                "label": "其他"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ],
+    "Case 11 法律": [
+      {
+        "latencyMs": 1074,
+        "reason": null,
+        "knownFacts": [],
+        "questions": [
+          {
+            "id": "focus",
+            "question": "这次你更想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "process",
+                "label": "接下来先做什么准备"
+              },
+              {
+                "id": "lawyer",
+                "label": "是否要找律师咨询"
+              },
+              {
+                "id": "uncertainty",
+                "label": "怎么面对结果的不确定"
+              },
+              {
+                "id": "consuming",
+                "label": "这件事的持续消耗"
+              },
+              {
+                "id": "other",
+                "label": "其他"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1611,
+        "reason": null,
+        "knownFacts": [],
+        "questions": [
+          {
+            "id": "current_stage",
+            "question": "这场官司目前进行到哪一步了？",
+            "options": [
+              {
+                "id": "pre_lawyer",
+                "label": "还没找律师咨询"
+              },
+              {
+                "id": "consulted",
+                "label": "已咨询过律师"
+              },
+              {
+                "id": "filed",
+                "label": "已立案，等待开庭"
+              },
+              {
+                "id": "in_trial",
+                "label": "正在审理中"
+              },
+              {
+                "id": "awaiting",
+                "label": "已开庭，等结果"
+              }
+            ]
+          },
+          {
+            "id": "biggest_concern",
+            "question": "这件事目前最消耗你的是哪一块？",
+            "options": [
+              {
+                "id": "outcome",
+                "label": "结果一直悬着"
+              },
+              {
+                "id": "process",
+                "label": "流程反复、拖得久"
+              },
+              {
+                "id": "cost",
+                "label": "时间和花费的消耗"
+              },
+              {
+                "id": "relationship",
+                "label": "和对方的关系僵着"
+              },
+              {
+                "id": "daily",
+                "label": "影响日常工作和生活"
+              }
+            ]
+          },
+          {
+            "id": "want_clarify",
+            "question": "你这次最想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "next_step",
+                "label": "接下来先做什么准备"
+              },
+              {
+                "id": "how_to_face",
+                "label": "怎么面对这份不确定"
+              },
+              {
+                "id": "when_to_stop",
+                "label": "要不要继续投入下去"
+              },
+              {
+                "id": "communication",
+                "label": "怎么和对方沟通"
+              },
+              {
+                "id": "not_sure",
+                "label": "还不太确定"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      },
+      {
+        "latencyMs": 1756,
+        "reason": null,
+        "knownFacts": [],
+        "questions": [
+          {
+            "id": "stage",
+            "question": "这场官司目前进行到哪一步了？",
+            "options": [
+              {
+                "id": "consulting",
+                "label": "还在咨询阶段"
+              },
+              {
+                "id": "filed",
+                "label": "已立案等开庭"
+              },
+              {
+                "id": "trial_done",
+                "label": "已开庭等结果"
+              },
+              {
+                "id": "appeal",
+                "label": "一审后在上诉阶段"
+              },
+              {
+                "id": "not_started",
+                "label": "还没走法律程序"
+              }
+            ]
+          },
+          {
+            "id": "goal",
+            "question": "这次你最想弄清楚的是哪一点？",
+            "options": [
+              {
+                "id": "next_step",
+                "label": "接下来先做什么准备"
+              },
+              {
+                "id": "lawyer",
+                "label": "要不要请律师、怎么配合"
+              },
+              {
+                "id": "uncertainty",
+                "label": "怎么面对结果的不确定"
+              },
+              {
+                "id": "cost",
+                "label": "还要投入多少时间和精力"
+              },
+              {
+                "id": "emotion",
+                "label": "怎么让自己撑过这段时间"
+              }
+            ]
+          },
+          {
+            "id": "support",
+            "question": "目前你身边的情况更接近哪一种？",
+            "options": [
+              {
+                "id": "has_lawyer",
+                "label": "已经咨询过律师"
+              },
+              {
+                "id": "no_lawyer",
+                "label": "还没咨询过律师"
+              },
+              {
+                "id": "self_handling",
+                "label": "打算自己处理"
+              },
+              {
+                "id": "family_support",
+                "label": "有家人朋友在帮"
+              },
+              {
+                "id": "alone",
+                "label": "基本是自己一个人扛"
+              }
+            ]
+          }
+        ],
+        "dropped": []
+      }
+    ]
+  },
+  "readingComparison": [
+    {
+      "variant": "A 跳过（不回答）",
+      "answers": [],
+      "reading": {
+        "version": 2,
+        "readingTheme": "不是要不要继续主动，而是先分清这份主动是新的心动，还是旧习惯的重复",
+        "overallEnergy": "三张正位，能量是流动的，但方向并不一致：现状是情感刚打开，阻碍是熟悉的惯性在拽人回去，建议却是一把刚点燃的火。整副牌在说：你手里有新的动力，但如果不先看清阻碍位那张恶魔，它很容易被耗进同一条老路里。",
+        "cards": [
+          {
+            "cardId": "cups-01",
+            "cardName": "圣杯首牌",
+            "position": "现状",
+            "orientation": "upright",
+            "interpretation": "圣杯首牌落在「现状」，是情感刚刚打开、还没定型的阶段。杯里的水是新的，不是陈旧的怨气或疲惫，说明你此刻对这段关系仍有一层愿意靠近的柔软。",
+            "connectionToQuestion": "这解释了你为什么还在考虑继续主动：不是完全没感觉了，而是那份感觉还在，只是不知道它值不值得再被拿出来。"
+          },
+          {
+            "cardId": "major-15",
+            "cardName": "恶魔",
+            "position": "阻碍",
+            "orientation": "upright",
+            "interpretation": "恶魔正位落在「阻碍」，锁链是松的，但人没有走。它指的不是对方有多坏，而是这段关系里有一种熟悉的吸引，让你即使觉得不太对，也还是想再试一次。",
+            "connectionToQuestion": "你问「还应该继续主动吗」，这张牌提醒：真正拖住你的可能不是他会不会回应，而是你心里那个「再主动一次也许就会不一样」的惯性。"
+          },
+          {
+            "cardId": "wands-01",
+            "cardName": "权杖首牌",
+            "position": "建议",
+            "orientation": "upright",
+            "interpretation": "权杖首牌是刚点燃的火，落在「建议」位，它支持行动，但行动的方向不是重复旧动作，而是把这份冲动用在能带来新信息的地方。",
+            "connectionToQuestion": "它没有让你压抑主动的冲动，而是提醒你：如果继续主动，就换一种方式，让这次主动能让你看清关系，而不是又陷进同一个循环。"
+          }
+        ],
+        "relationships": [
+          {
+            "cards": [
+              "cups-01",
+              "major-15"
+            ],
+            "kind": "conflicting",
+            "interpretation": "现状的圣杯首牌是新的情感流动，阻碍的恶魔却是旧的惯性吸引。两者都在拉你：一边是真实的柔软，一边是熟悉的消耗。这正是你犹豫的来源。"
+          },
+          {
+            "cards": [
+              "major-15",
+              "wands-01"
+            ],
+            "kind": "turning-point",
+            "interpretation": "恶魔的锁链是松的，权杖首牌的火是新的。建议位给出的出路就是：用一次新的、有意识的行动，去测试那条锁链到底还拴不拴得住你。"
+          }
+        ],
+        "narrative": "圣杯首牌说明你现在心里还有感觉，这份感觉是新的，不是已经耗尽的疲惫。但恶魔正位提醒你，这段关系里可能一直有一种熟悉的吸引，让你即使隐约觉得不对，也还是想再试一次。权杖首牌没有叫你停下来，它给的是火：你可以主动，但要用这次主动去验证一件事——你到底是真心想靠近，还是只是习惯了靠近他。三张牌连起来，答案不在他那边，而在你这次主动的出发点。",
+        "answerToQuestion": "我不建议你继续用和之前一样的方式主动联系他。现状位的圣杯首牌说明你心里还有新的情感，但阻碍位的恶魔正位在提醒：这段关系里有一种熟悉的惯性，可能让你把「再主动一次」当成习惯，而不是真正的选择。建议位的权杖首牌支持你行动，但行动的方向应该是打破循环，而不是重复旧动作。所以下一步不是「要不要主动」，而是换一种主动：在联系他之前，先问自己这次联系是为了表达真实的感受，还是为了缓解那种熟悉的不安。如果答案是前者，就去；如果是后者，就先把这次冲动放一放。",
+        "decisionDriver": {
+          "coreIssue": "你现在的主动，是出于新的心动，还是出于对旧有模式的惯性？",
+          "whyItMatters": "如果是前者，这份主动值得被表达；如果是后者，继续主动只是在喂养那个让你消耗的循环。分清这一点，比「要不要主动」本身更决定答案。",
+          "evidence": [
+            "现状位圣杯首牌正位：情感是新的，有真实的柔软在流动",
+            "阻碍位恶魔正位：存在一种熟悉的、可能消耗的吸引，锁链是松的但人没走",
+            "建议位权杖首牌正位：支持用一次新的行动去打破惯性，而不是重复旧动作"
+          ]
+        },
+        "actionPlan": [
+          {
+            "action": "下次想联系他之前，先停下来问自己一句：这次主动，是因为有具体的话想对他说，还是因为不联系会不安？",
+            "reason": "恶魔正位说明你容易把主动当成缓解不安的惯性动作，权杖首牌的火如果不用在清醒的地方，就会被旧模式消耗掉。",
+            "evidence": [
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "熟悉的吸引可能让主动变成重复的惯性"
+              },
+              {
+                "cardId": "wands-01",
+                "position": "建议",
+                "orientation": "upright",
+                "signal": "新的行动应该带来新的信息，而不是重复旧动作"
+              }
+            ],
+            "timeframe": "下一次想联系他的时候"
+          },
+          {
+            "action": "如果答案是「有具体的话想说」，就只说那件事，不额外找话题延长对话；如果答案是「不联系会不安」，就暂时不联系，把冲动用在别的事上。",
+            "reason": "圣杯首牌的情感值得被真实表达，但恶魔的惯性会引诱你用无关话题把对话拉长，好让自己暂时安心。只表达真实内容，才能让这次主动有意义。",
+            "evidence": [
+              {
+                "cardId": "cups-01",
+                "position": "现状",
+                "orientation": "upright",
+                "signal": "真实的情感还在，值得被表达"
+              },
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "惯性会让人用多余的联系来缓解不安"
+              }
+            ]
+          }
+        ],
+        "watchFor": [
+          "你联系他之后，是感到平静，还是更焦虑——用行为判断：你是否在发出消息后不停查看手机、反复回想自己说得对不对",
+          "他是否只在你主动时才回应，还是也会主动发起一次联系",
+          "你下次想联系他时，是带着具体想说的话，还是只是觉得「该联系了」"
+        ],
+        "reflectionQuestions": [
+          "如果这次主动之后，他仍然只是被动回应，你会更想继续主动，还是终于能停下来？"
+        ],
+        "safetyNotice": null,
+        "meta": {
+          "provider": "deepseek",
+          "model": "deepseek-v4-pro",
+          "generatedAt": 1790042279629,
+          "latencyMs": 22536,
+          "toneAdjusted": false,
+          "readingMode": "standard",
+          "promptVersion": "v2",
+          "language": "zh",
+          "repaired": false
+        }
+      },
+      "ms": 22538,
+      "amplification": []
+    },
+    {
+      "variant": "B 回答全部",
+      "answers": [
+        {
+          "questionId": "current_contact",
+          "question": "目前你们的联系状态更接近哪一种？",
+          "selectedOptionId": "mostly_me",
+          "selectedOptionLabel": "主要是我主动联系"
+        },
+        {
+          "questionId": "their_response",
+          "question": "你主动联系时，对方通常的反应是？",
+          "selectedOptionId": "slow",
+          "selectedOptionLabel": "回复很慢"
+        },
+        {
+          "questionId": "what_changed",
+          "question": "最近发生了什么，让你开始犹豫要不要继续主动？",
+          "selectedOptionId": "no_progress",
+          "selectedOptionLabel": "一直没进展"
+        },
+        {
+          "questionId": "want_to_know",
+          "question": "这次你最想弄清楚的是哪一点？",
+          "selectedOptionId": "keep_or_stop",
+          "selectedOptionLabel": "要不要继续主动"
+        }
+      ],
+      "reading": {
+        "version": 2,
+        "readingTheme": "真正的问题不是要不要继续主动，而是你被一段没有对等回应的模式困住了。",
+        "overallEnergy": "三张牌全部正位，表面上看是积极的，但恶魔正位卡在阻碍位，让整副牌的能量变得沉重。现状的圣杯首牌是情感的涌动，建议的权杖首牌是行动的冲动，但中间横着一个松不开的锁链——你明明可以走，却还是想再试一次。",
+        "cards": [
+          {
+            "cardId": "cups-01",
+            "cardName": "圣杯首牌",
+            "position": "现状",
+            "orientation": "upright",
+            "interpretation": "圣杯首牌正位落在现状，说明你心里确实还有一股真实的情感在流动，它没有消失，甚至可能还在溢出。但这股情感目前是单向的：杯口朝向你，却没有一个接住它的容器。",
+            "connectionToQuestion": "你主动联系他，不是因为你没事做，而是因为这份感情还在。只是它一直没有得到对等的回应，所以才会让你犹豫要不要继续。"
+          },
+          {
+            "cardId": "major-15",
+            "cardName": "恶魔",
+            "position": "阻碍",
+            "orientation": "upright",
+            "interpretation": "恶魔正位是这副牌里最重要的一张。它出现在阻碍位，说明拖住你的不是对方，而是你自己的惯性。锁链是松的，你随时可以走，但你一次次回到那个熟悉的位置：主动联系、等他回复、然后失望。",
+            "connectionToQuestion": "你补充的背景说「主要是我主动联系」「回复很慢」「一直没进展」，这正是恶魔的典型模式：不是对方绑住你，而是你习惯了这种不对等，甚至害怕停下来之后连这点联系都没有。"
+          },
+          {
+            "cardId": "wands-01",
+            "cardName": "权杖首牌",
+            "position": "建议",
+            "orientation": "upright",
+            "interpretation": "权杖首牌正位在建议位，是一股刚刚点燃的行动力。它建议你把那股还在涌动的感情，从「继续主动」转向「为自己做点什么」。火是向上的，不是反复扑向一个没有回应的方向。",
+            "connectionToQuestion": "你问要不要继续主动，这张牌给出的答案不是「再主动一次」，而是换一种主动：把力气用在别的地方，或者至少先停下来看看，没有你的主动，这段关系会不会自己动一下。"
+          }
+        ],
+        "relationships": [
+          {
+            "cards": [
+              "cups-01",
+              "major-15"
+            ],
+            "kind": "conflicting",
+            "interpretation": "现状的圣杯首牌是情感的流动，阻碍的恶魔是惯性的锁链。情感让你想靠近，惯性让你停不下来。两者冲突的结果是：你明知道没有进展，却还是忍不住再试一次。"
+          },
+          {
+            "cards": [
+              "major-15",
+              "wands-01"
+            ],
+            "kind": "turning-point",
+            "interpretation": "恶魔是整副牌的枢纽。建议位的权杖首牌只有在打破恶魔的惯性之后才有意义：如果你继续用同样的方式主动，权杖的火只会烧得更累；如果你先停下来，权杖的火才能转向别处。"
+          }
+        ],
+        "narrative": "你现在卡在一个很典型的位置：心里有感情（圣杯首牌），手里有行动力（权杖首牌），但中间隔着一个恶魔。恶魔不是别人，是你自己养成的惯性——你习惯了主动，习惯了等待，习惯了没有进展却还是继续。你补充的背景里说「主要是我主动联系」「回复很慢」「一直没进展」，这三句话拼起来，就是恶魔正位最准确的描述。你问要不要继续主动，牌面没有直接说「不要」，但它把问题还给了你：如果你继续主动，得到的只会是同样的结果；如果你停下来，你才能真正看到，这段关系里除了你的主动，还剩什么。",
+        "answerToQuestion": "我不建议你继续用现在的方式主动联系他。你已经主动了这么久，他回复很慢，而且一直没有进展，这正好对应恶魔正位所描述的模式：不是他绑住你，而是你习惯了这种不对等。建议位的权杖首牌正位是一张行动牌，但它的行动方向不是继续扑向他，而是把那股还燃着的火，转向你自己。你可以先停下来，不再主动发起联系，看看他会不会有所动作。如果他没有任何反应，那答案其实已经很明显了；如果他开始主动，那你们的关系才真正有机会从单向变成双向。",
+        "decisionDriver": {
+          "coreIssue": "不是对方值不值得你继续主动，而是你愿不愿意承认：锁链其实在你手里。",
+          "whyItMatters": "只要你不承认这段关系目前是你在单方面维持，你就会继续用「再主动一次」来逃避那个更难受的问题：如果我不主动，我们是不是就真的没联系了。",
+          "evidence": [
+            "现状位圣杯首牌正位：情感还在，但它是单向的，没有回应",
+            "阻碍位恶魔正位：模式是习惯，不是爱，锁链是松的",
+            "建议位权杖首牌正位：行动力应该转向别处，而不是继续消耗在同一个方向"
+          ]
+        },
+        "actionPlan": [
+          {
+            "action": "从今天起，不再主动发起任何联系，包括分享日常、问他在干嘛、节日问候。",
+            "reason": "你主动了这么久，得到的都是慢回复和没进展。继续主动只会让恶魔的惯性更牢固，而停下来是验证这段关系是否对等的唯一方式。",
+            "evidence": [
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "松开的锁链说明你本来就可以不主动，是你自己一次次回到那个位置"
+              },
+              {
+                "cardId": "wands-01",
+                "position": "建议",
+                "orientation": "upright",
+                "signal": "权杖的火需要新的方向，而不是继续烧向同一个没有回应的地方"
+              }
+            ],
+            "timeframe": "下一次你习惯性想找他的时候"
+          },
+          {
+            "action": "把你原本用来想他、等回复、纠结要不要主动的时间，固定用来做一件能让自己有成就感的小事。",
+            "reason": "权杖首牌是一股刚点燃的动力，如果不用在别处，它就会变成继续主动的冲动。给这股火一个具体的出口，你才不会被它反复拉回旧模式。",
+            "evidence": [
+              {
+                "cardId": "wands-01",
+                "position": "建议",
+                "orientation": "upright",
+                "signal": "新动力需要被立刻用掉，而不是收藏起来继续内耗"
+              }
+            ]
+          },
+          {
+            "action": "如果他之后主动联系你，不要马上回到以前那种「秒回、热情、找话题」的状态，先正常回应，观察他是否愿意持续投入。",
+            "reason": "恶魔的惯性很容易在对方一有反应时就复发。你需要先确认这不是一次性的、低成本的回应，而是他真的愿意把关系往双向推。",
+            "evidence": [
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "恶魔的锁链是松的，但惯性很强，一旦对方给一点甜头，你很容易又回到原来的位置"
+              }
+            ],
+            "timeframe": "他下次主动联系你的时候"
+          }
+        ],
+        "watchFor": [
+          "你不主动之后，他是否会在一个合理的时间内主动联系你",
+          "他主动联系你的内容是否只是「在吗」「最近怎么样」这种低成本试探，还是有实质性的分享或邀约",
+          "你自己是否能在不主动联系他的情况下，仍然把注意力放在自己的生活上"
+        ],
+        "reflectionQuestions": [
+          "如果停下来之后，他完全没有主动联系你，你愿意接受这段关系其实只是你一个人在维持吗？"
+        ],
+        "safetyNotice": null,
+        "meta": {
+          "provider": "deepseek",
+          "model": "deepseek-v4-pro",
+          "generatedAt": 1790042303956,
+          "latencyMs": 24322,
+          "toneAdjusted": false,
+          "readingMode": "standard",
+          "promptVersion": "v2",
+          "language": "zh",
+          "repaired": false
+        }
+      },
+      "ms": 24324,
+      "amplification": []
+    },
+    {
+      "variant": "C 只回答第一题",
+      "answers": [
+        {
+          "questionId": "current_contact",
+          "question": "目前你们的联系状态更接近哪一种？",
+          "selectedOptionId": "mostly_me",
+          "selectedOptionLabel": "主要是我主动联系"
+        }
+      ],
+      "reading": {
+        "version": 2,
+        "readingTheme": "真正卡住你的不是联系本身，而是那种停不下来的惯性",
+        "overallEnergy": "三张牌全部正位，看起来没有逆位的阻力，但恶魔正位落在阻碍，把整件事的基调定成了：你明知该停下，却还是想再试一次。两张首牌一水一火，都指向新的开始，但真正的出口不在继续联系，而在先看清那根锁链到底有没有上锁。",
+        "cards": [
+          {
+            "cardId": "cups-01",
+            "cardName": "圣杯首牌",
+            "position": "现状",
+            "orientation": "upright",
+            "interpretation": "圣杯首牌正位落在现状，说明你心里那点新的感受是真实的，不是错觉。杯子是满的，水是活的，你确实有想靠近的冲动，也愿意为这段关系再付出一次。",
+            "connectionToQuestion": "这正好对应你说的“主要是我主动联系”——你的主动不是被迫的，而是心里确实有东西在往外冒。"
+          },
+          {
+            "cardId": "major-15",
+            "cardName": "恶魔",
+            "position": "阻碍",
+            "orientation": "upright",
+            "interpretation": "恶魔正位落在阻碍，是整副牌最重的一张。它说的是：真正拖住你的不是对方不回应，而是你已经形成了一种“不联系就难受，联系了也没变好”的循环。锁链是松的，但你一直没伸手去摘。",
+            "connectionToQuestion": "你问“还应该继续主动联系他吗”，但牌面显示，你其实已经意识到继续主动可能只是在重复同一种消耗，只是那个惯性让你停不下来。"
+          },
+          {
+            "cardId": "wands-01",
+            "cardName": "权杖首牌",
+            "position": "建议",
+            "orientation": "upright",
+            "interpretation": "权杖首牌正位落在建议，是一根刚点燃的火把。它不让你把热情收起来，而是让你把那股劲用在一个新的动作上——不是再找他聊一次，而是先把自己从“必须主动”的惯性里抽出来。",
+            "connectionToQuestion": "这张牌支持你行动，但行动的方向不是继续原来的主动，而是换个方式使用你现在的动力。"
+          }
+        ],
+        "relationships": [
+          {
+            "cards": [
+              "cups-01",
+              "major-15"
+            ],
+            "kind": "conflicting",
+            "interpretation": "现状位的圣杯首牌是开放的、想靠近的，阻碍位的恶魔却是重复的、消耗的。两股力量在拉扯：一边是真实的情感，一边是停不下来的惯性。这就是你现在的困境。"
+          },
+          {
+            "cards": [
+              "major-15",
+              "wands-01"
+            ],
+            "kind": "turning-point",
+            "interpretation": "恶魔正位是整副牌的枢纽。权杖首牌作为建议，不是让你继续往恶魔的循环里添柴，而是让你用这根新的火把去烧断那根松开的锁链。"
+          }
+        ],
+        "narrative": "圣杯首牌正位说明你不是没感觉，相反，你的感觉是新鲜的、满的。可恶魔正位落在阻碍，把这份感觉拖进了一个重复的模式：你不联系就慌，联系了又没进展，于是更想联系。权杖首牌正位作为建议，不是让你把火把继续递给对方，而是让你用它照亮自己那根松开的锁链。整副牌的重心因此不在“要不要继续主动”，而在“你能不能先停一次，看看会发生什么”。",
+        "answerToQuestion": "我不建议你继续主动联系他。问题原文里你说“主要是我主动联系”，而阻碍位的恶魔正位说明，这种持续主动已经变成一种消耗性的惯性，而不是在推进关系。现状位的圣杯首牌虽然显示你还有真实的感情，但这份感情正被你的主动习惯绑架。建议位的权杖首牌支持你立刻行动，但这个行动是停下来，把主动的力气收回来，看看他会不会往前走一步。如果在你停止主动之后，他完全没有反应，那你就得到了比继续联系更真实的答案。",
+        "decisionDriver": {
+          "coreIssue": "不是“他值不值得你继续主动”，而是“你愿不愿意先停下来，看看没有你主动时，这段关系还剩下什么”。",
+          "whyItMatters": "因为恶魔正位说明，继续主动只会让你更累，却不会给你新的答案。只有先停一下，你才能知道对方会不会往前走一步，以及你自己到底是在喜欢，还是只是习惯了主动。",
+          "evidence": [
+            "现状位圣杯首牌正位：你确实有真实的感受和主动的意愿",
+            "阻碍位恶魔正位：真正的阻力是重复主动带来的惯性消耗",
+            "建议位权杖首牌正位：支持你立刻行动，但行动方向是打破循环，而不是继续原样主动"
+          ]
+        },
+        "actionPlan": [
+          {
+            "action": "从今天起，不再主动发起任何联系，包括分享日常、问候、找话题。",
+            "reason": "你已经主动到形成惯性，继续主动只会重复恶魔正位的消耗模式。停下来是唯一能让你看清对方是否愿意投入的动作。",
+            "evidence": [
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "重复主动已经变成消耗性的循环"
+              },
+              {
+                "cardId": "wands-01",
+                "position": "建议",
+                "orientation": "upright",
+                "signal": "行动的火花应该用来打破循环，而不是继续原来的主动"
+              }
+            ]
+          },
+          {
+            "action": "把你原本想联系他的那股劲，转去做一件只属于你自己的事，比如运动、见朋友、完成一件拖延的小事。",
+            "reason": "权杖首牌的火需要出口，如果不用在别处，它很容易又变成一次“忍不住联系”。把动力转移，是防止你重新滑回恶魔循环的关键。",
+            "evidence": [
+              {
+                "cardId": "wands-01",
+                "position": "建议",
+                "orientation": "upright",
+                "signal": "新的动力需要被立刻用掉，而不是继续投向旧模式"
+              }
+            ]
+          }
+        ],
+        "watchFor": [
+          "在你停止主动后，他是否主动联系你一次，哪怕只是简单问候",
+          "你是否在停止主动后，又忍不住找借口联系他——如果有，说明恶魔的惯性比你以为的更强"
+        ],
+        "reflectionQuestions": [
+          "如果在你停止主动之后，他始终没有联系你，你愿意接受“这段关系主要靠你维持”这个事实吗？"
+        ],
+        "safetyNotice": null,
+        "meta": {
+          "provider": "deepseek",
+          "model": "deepseek-v4-pro",
+          "generatedAt": 1790042324683,
+          "latencyMs": 20723,
+          "toneAdjusted": false,
+          "readingMode": "standard",
+          "promptVersion": "v2",
+          "language": "zh",
+          "repaired": false
+        }
+      },
+      "ms": 20724,
+      "amplification": []
+    },
+    {
+      "variant": "D 只答「最近主要是我主动」",
+      "answers": [
+        {
+          "questionId": "who_initiates",
+          "question": "目前你们的联系主要是谁在主动？",
+          "selectedOptionId": "mostly_me",
+          "selectedOptionLabel": "最近主要是我主动"
+        }
+      ],
+      "reading": {
+        "version": 2,
+        "readingTheme": "真正要做的不是再主动一次，而是分辨这份主动里，有多少是新的喜欢，有多少是熟悉的惯性。",
+        "overallEnergy": "三张牌全部正位，且两张首牌落在现状与建议，能量是向前的、有冲动的。但恶魔正位卡在中间，说明这股向前里混着一段熟悉的拉扯：不是没感觉，而是感觉里有一部分在重复旧模式。",
+        "cards": [
+          {
+            "cardId": "cups-01",
+            "cardName": "圣杯首牌",
+            "position": "现状",
+            "orientation": "upright",
+            "interpretation": "圣杯首牌正位落在现状：你心里确实有一股新的、柔软的感受正在涌出来，还没有固定形状。它不全是旧账，也不全是幻想，是一份真实的、想靠近的心情。",
+            "connectionToQuestion": "这解释了为什么你还在想「要不要继续主动」——因为感受本身是活的，不是已经凉掉的执念。"
+          },
+          {
+            "cardId": "major-15",
+            "cardName": "恶魔",
+            "position": "阻碍",
+            "orientation": "upright",
+            "interpretation": "恶魔正位落在阻碍，锁链是松的，火把是倒悬的：真正困住你的不是他，而是「一直是我主动」这个模式本身带来的熟悉感。它让你分不清，你现在想找他，是因为新的心动，还是因为回到那个角色里最不费力。",
+            "connectionToQuestion": "你补充说「最近主要是我主动」，这正好是恶魔的锁链：主动不是错，但重复的主动会变成一种默认分工，让你在关系还没成形前，就已经把自己固定在「发起者」的位置上。"
+          },
+          {
+            "cardId": "wands-01",
+            "cardName": "权杖首牌",
+            "position": "建议",
+            "orientation": "upright",
+            "interpretation": "权杖首牌正位落在建议，是一根刚点燃的火把：它支持你把冲动用掉，但不是用来重复旧动作，而是用来做一个和之前不同的、有方向感的动作。",
+            "connectionToQuestion": "它不建议你憋着，也不建议你继续用同一种方式主动。它建议的是：让这次主动变成一次新的行动，而不是第三次同样的试探。"
+          }
+        ],
+        "relationships": [
+          {
+            "cards": [
+              "cups-01",
+              "major-15"
+            ],
+            "kind": "conflicting",
+            "interpretation": "现状位的圣杯首牌是新的感受，阻碍位的恶魔是旧的惯性，两张牌在同一个问题里打架：你的心动是真的，但你的主动方式可能是旧的。所以问题不是「该不该主动」，而是「这次主动，是不是还在重复旧脚本」。"
+          },
+          {
+            "cards": [
+              "major-15",
+              "wands-01"
+            ],
+            "kind": "turning-point",
+            "interpretation": "恶魔正位是锁链松了，权杖首牌正位是火把刚点燃，两张牌连起来就是出路：不是挣脱感觉，而是换一种方式用它。建议位的权杖首牌是整副牌的枢纽，它把「继续主动」翻译成了「用新的方式主动」。"
+          }
+        ],
+        "narrative": "圣杯首牌说明你心里的感受是新的、活的，不是已经过期的执念；恶魔提醒你，这份感受正在被一个旧模式接住——你习惯了由自己来发起，于是每次心动都自动翻译成「再主动一次」。权杖首牌给的出路不是停下来，而是换一种主动：不是再找个话题去试探，而是把你正在经历的这个拉扯，直接说出来。这副牌的重心不在「主动还是放弃」，而在「用新的方式，还是重复旧的方式」。",
+        "answerToQuestion": "我不建议你继续用和之前一样的方式主动联系他，但也不建议你因为害怕变成「一直主动的那个人」就硬憋着。你补充说最近主要都是你在主动，这本身不是问题，问题在于它已经变成一种默认模式——恶魔正位落在阻碍，说的就是这个：锁链是松的，但重复的主动会让你越来越难分清，你是真的想他，还是只是回到了那个熟悉的位置。圣杯首牌说明你的感受是真实的，权杖首牌建议你把这份冲动用在一个新的动作上：下一次联系时，不再只是找个话题，而是直接说出你注意到最近都是你在主动，并告诉他你希望关系能更对等。说完之后，看他的反应——不是看他有没有秒回，而是看他接下来会不会主动发起一次联系。",
+        "decisionDriver": {
+          "coreIssue": "不是要不要继续主动，而是你这次的主动，是新的心动在推你，还是「一直是我主动」的惯性在推你。",
+          "whyItMatters": "如果分不清这两件事，你越主动，越是在给自己套上那个「发起者」的锁链。分清了，主动本身没有错，错的是重复同一种主动。",
+          "evidence": [
+            "现状位圣杯首牌正位：新的感受是真实的，不是应该压下去的东西",
+            "阻碍位恶魔正位：主动已经变成一种熟悉的模式，锁链是松的，但你没有松手",
+            "建议位权杖首牌正位：支持把冲动用掉，但要用在新的方向上"
+          ]
+        },
+        "actionPlan": [
+          {
+            "action": "下一次联系时，不再用「在干嘛」这类话题开头，而是直接说：「我注意到最近好像都是我在主动找你，我其实希望我们之间能更对等一点。」",
+            "reason": "你之前一直在重复同一种主动，恶魔正位说明这个模式本身已经变成阻碍；权杖首牌支持你把冲动用在新的方向上，而把你看到的不对等说出来，就是那个新方向。",
+            "evidence": [
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "重复的主动已经变成默认模式，锁链是松的，但需要你自己松开"
+              },
+              {
+                "cardId": "wands-01",
+                "position": "建议",
+                "orientation": "upright",
+                "signal": "支持把冲动用掉，但要用在新的、有方向感的动作上"
+              }
+            ],
+            "timeframe": "下一次你准备主动联系他时"
+          },
+          {
+            "action": "说完之后，不要马上补一句「没事你忙就算了」或「我没有怪你的意思」，就停在那里，等他回应。",
+            "reason": "如果你说完立刻自己把话收回去，就又回到了旧模式里：你负责发起，也负责缓和，对方不需要做任何调整。",
+            "evidence": [
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "恶魔的锁链之所以能维持，是因为每次都是你自己重新套回去"
+              }
+            ]
+          }
+        ],
+        "watchFor": [
+          "你说出「希望更对等」之后，他是否在之后至少主动发起一次联系，而不只是回复你",
+          "他是正面接住这句话，还是用「最近太忙」「你想多了」之类的话绕开——后者就是恶魔的锁链还在起作用"
+        ],
+        "reflectionQuestions": [
+          "如果这次说开之后，他仍然只是回复、从不主动发起，你还愿意继续用现在这种方式维持联系吗？"
+        ],
+        "safetyNotice": null,
+        "meta": {
+          "provider": "deepseek",
+          "model": "deepseek-v4-pro",
+          "generatedAt": 1790042348954,
+          "latencyMs": 24268,
+          "toneAdjusted": false,
+          "readingMode": "standard",
+          "promptVersion": "v2",
+          "language": "zh",
+          "repaired": false
+        }
+      },
+      "ms": 24269,
+      "amplification": []
+    },
+    {
+      "variant": "E 只答「他回复比较慢」",
+      "answers": [
+        {
+          "questionId": "reply_speed",
+          "question": "你主动联系后，对方通常怎么回应？",
+          "selectedOptionId": "slow",
+          "selectedOptionLabel": "回复比较慢"
+        }
+      ],
+      "reading": {
+        "version": 2,
+        "readingTheme": "问题不在要不要继续主动，而在你是不是在重复一个自己已经知道消耗的模式",
+        "overallEnergy": "三张牌全是正位，但力量并不轻松：情感在涌出来，行动在点火，中间却卡着一张恶魔。整副牌的重心是惯性，不是勇气。",
+        "cards": [
+          {
+            "cardId": "cups-01",
+            "cardName": "圣杯首牌",
+            "position": "现状",
+            "orientation": "upright",
+            "interpretation": "圣杯首牌正位落在「现状」，是一股还没有具体形状、但真实存在的情感。杯子的水是溢出来的，说明你现在确实有想靠近他的冲动，不是理性算出来的。",
+            "connectionToQuestion": "这正是你还在问「要不要继续主动」的原因：不是没事找事，而是心里那股想联系他的感觉还没过去。"
+          },
+          {
+            "cardId": "major-15",
+            "cardName": "恶魔",
+            "position": "阻碍",
+            "orientation": "upright",
+            "interpretation": "恶魔正位落在「阻碍」，它说的不是对方坏，而是一种你很容易重复的模式。牌面上的锁链是松的，但人没有走开，因为熟悉。落在这一格，它指向的是：继续主动这个动作本身，可能已经变成了一种惯性，而不是每一次都真的想联系。",
+            "connectionToQuestion": "你补充说他的回应节奏偏慢，这本身就会让人更想再发一条去确认。可越是这样，越容易把「想联系」和「想确认他还在」混在一起。"
+          },
+          {
+            "cardId": "wands-01",
+            "cardName": "权杖首牌",
+            "position": "建议",
+            "orientation": "upright",
+            "interpretation": "权杖首牌正位落在「建议」，是一根刚点燃的火把。它支持行动，但支持的是有方向的行动，不是重复旧动作。这股动力适合被立刻用掉，而不是攒着等。",
+            "connectionToQuestion": "它没有否定你主动，但它在提醒：如果继续主动，应该换一种主动，而不是第三次、第四次重复同一种联系。"
+          }
+        ],
+        "relationships": [
+          {
+            "cards": [
+              "cups-01",
+              "major-15",
+              "wands-01"
+            ],
+            "kind": "turning-point",
+            "interpretation": "恶魔正位是整副牌的枢纽：现状位的圣杯首牌是情感在涌，建议位的权杖首牌是行动在点火，但中间卡着恶魔，说明真正决定走向的不是有没有感觉或有没有动力，而是你有没有把「想联系」和「重复惯性」分开。"
+          }
+        ],
+        "narrative": "你心里现在确实有想联系他的感觉，这不是假装的，圣杯首牌的水是满的。但恶魔正位卡在中间，它在问：你现在想发消息，是因为这一刻真的想和他说点什么，还是因为上一次他没回、你心里空了一下？他回应慢，会放大那个空，让你更想再发一条去填。可越填越像在重复同一个动作。权杖首牌给了你出路：不是别主动，而是别再用同一种方式主动。把火点在新的方向上，而不是点在同一根已经烧过两次的柴上。",
+        "answerToQuestion": "我不建议你继续用现在这种方式主动联系他。你补充说他回应比较慢，而你自己也还在问要不要继续，这已经说明前几次主动没有给你带来真正的回应；阻碍位的恶魔正位更直接：继续主动可能已经变成一种惯性，而不是每一次都真的想联系。建议位的权杖首牌不是让你停下，而是让你换一种主动：把你想说的具体内容说出来，而不是发一句「在吗」或分享一个链接去试探。如果他连你认真说的话都还是慢吞吞地回，那你就要重新看这段关系值不值得你一直当那个先开口的人。",
+        "decisionDriver": {
+          "coreIssue": "不是「还应不应该主动」，而是「我继续主动，是在回应新的感觉，还是在重复一个已经知道会消耗自己的动作」。",
+          "whyItMatters": "如果是前者，主动一次没毛病；如果是后者，再主动几次也只会让你更累，因为问题的根源不是他回得慢，而是你停不下来。",
+          "evidence": [
+            "现状位圣杯首牌正位：情感确实在涌，说明你不是没有理由想联系",
+            "阻碍位恶魔正位：松开的锁链和熟悉感，指向惯性而非真实吸引",
+            "建议位权杖首牌正位：它支持行动，但更支持打破旧模式的新行动"
+          ]
+        },
+        "actionPlan": [
+          {
+            "action": "下一次你想联系他时，先问自己：我是真的有一件具体的事想说，还是只是因为他还没回我、我想再发一条确认一下？如果是后者，先不要发。",
+            "reason": "恶魔正位说明你容易把「想联系」和「想确认」混在一起，他回应慢又会加重这一点。先分清，你才不会把主动变成填坑。",
+            "evidence": [
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "松开的锁链：不是离不开，是习惯性地回去"
+              }
+            ]
+          },
+          {
+            "action": "如果确实有具体的事想说，就直说这件事，不问他「在吗」「忙不忙」这类试探性开场。",
+            "reason": "权杖首牌正位支持有方向的行动，而不是重复旧动作。直说内容，他回不回、回得快慢，你都能更快判断他到底愿不愿意接住你。",
+            "evidence": [
+              {
+                "cardId": "wands-01",
+                "position": "建议",
+                "orientation": "upright",
+                "signal": "刚点燃的火：适合被立刻用掉，而不是收藏起来"
+              }
+            ],
+            "timeframe": "下一次你真正想和他说某件具体事情的时候"
+          }
+        ],
+        "watchFor": [
+          "你发出一条具体内容后，他是否给出实质回应，而不只是一个字或一个表情",
+          "你是否又在收到简短回复后，马上另找话题继续发消息"
+        ],
+        "reflectionQuestions": [
+          "如果接下来你不再主动发那些试探性消息，他还会不会主动找你？"
+        ],
+        "safetyNotice": null,
+        "meta": {
+          "provider": "deepseek",
+          "model": "deepseek-v4-pro",
+          "generatedAt": 1790042370769,
+          "latencyMs": 21813,
+          "toneAdjusted": false,
+          "readingMode": "standard",
+          "promptVersion": "v2",
+          "language": "zh",
+          "repaired": false
+        }
+      },
+      "ms": 21816,
+      "amplification": []
+    },
+    {
+      "variant": "F 只答「我主动得有点累」",
+      "answers": [
+        {
+          "questionId": "how_you_feel",
+          "question": "这段时间你自己的感觉更接近哪一种？",
+          "selectedOptionId": "tired",
+          "selectedOptionLabel": "我主动得有点累"
+        }
+      ],
+      "reading": {
+        "version": 2,
+        "readingTheme": "不是要不要继续主动，而是这份主动里有多少是喜欢、多少是惯性",
+        "overallEnergy": "三张牌全是正位，而且两张首牌把感受和行动都摆在明面上，说明你并没有真的冷淡，只是被消耗感盖住了。真正卡住的是恶魔正位：你怕的不是没回应，而是自己又回到那个熟悉的模式里。",
+        "cards": [
+          {
+            "cardId": "cups-01",
+            "cardName": "圣杯首牌",
+            "position": "现状",
+            "orientation": "upright",
+            "interpretation": "正位的圣杯首牌落在现状，说明你心里那点好感并没有消失，它还是新的、愿意敞开的，只是现在被「累」盖住了。溢出的杯不是空杯，是你还有情感在流。",
+            "connectionToQuestion": "你已经主动得有点累，但牌面没有显示感情已经耗尽，只是它暂时没有形状，不知道该往哪里去。"
+          },
+          {
+            "cardId": "major-15",
+            "cardName": "恶魔",
+            "position": "阻碍",
+            "orientation": "upright",
+            "interpretation": "恶魔正位是松开的锁链：你随时可以走，却一直回来。落在阻碍，它指的不是他多坏，而是「主动联系他」这件事已经变成一种惯性，一种不联系就不安、联系了又累的重复。",
+            "connectionToQuestion": "你说「主动得有点累」，这正好是恶魔的模式：不是没有力气，而是力气花在了重复的动作上，没有换回对等的回应。"
+          },
+          {
+            "cardId": "wands-01",
+            "cardName": "权杖首牌",
+            "position": "建议",
+            "orientation": "upright",
+            "interpretation": "权杖首牌是刚点燃的火，它建议你把那股还有的冲动，从「继续找他」转移到「为自己做点新的、有行动力的事」上。不是收藏感受，而是立刻用掉它。",
+            "connectionToQuestion": "它没有否定你的主动，但提醒你：如果主动只能换来消耗，那这份行动力更值得投向别处，而不是继续填同一个坑。"
+          }
+        ],
+        "relationships": [
+          {
+            "cards": [
+              "major-15",
+              "wands-01"
+            ],
+            "kind": "conflicting",
+            "interpretation": "阻碍位的恶魔是重复的惯性，建议位的权杖首牌是新的行动，两者方向相反。出路因此不是「再主动一次」或「彻底断联」，而是把「主动」这个动作用在新的地方，打破重复。"
+          }
+        ],
+        "narrative": "圣杯首牌说明你心里那点好感没有死，只是被持续主动的累盖住了。恶魔正位点出真正的阻碍：不是他，是你自己把「主动联系」坐实成了一种不联系就空、联系了又累的惯性。权杖首牌给出的方向很明确：把这股还没灭的火，从「继续找他」转到「为自己做点新的、有行动力的事」上。这副牌的重心因此不在「要不要联系他」，而在「你还要不要继续被这个循环消耗」。",
+        "answerToQuestion": "我不建议你继续用现在这种「主动联系」的方式去填那个洞，因为阻碍位的恶魔正位说明它已经变成消耗你的惯性，而不是感情的表达。你主动得有点累，但现状位的圣杯首牌显示你的感情并没有消失，只是被重复的动作压住了。建议位的权杖首牌支持你把这份还有的冲动，先用在别的地方：去做一件你一直想做但没做的事，或者去接触一个能给你回应的人。如果之后他主动联系你，你可以回应，但不必再当那个唯一发起的人。",
+        "decisionDriver": {
+          "coreIssue": "真正决定答案的不是他回不回应，而是你愿不愿意继续用「主动联系」来喂养一种已经让你累的惯性。",
+          "whyItMatters": "如果你不处理惯性，继续主动只会重复消耗；如果你彻底不联系，又可能只是把恶魔的锁链从「联系」换成「忍住不联系」，还是被它牵着。只有把行动力转向新的对象，惯性才会松。",
+          "evidence": [
+            "现状位圣杯首牌正位：感情还在，不是消失，所以问题不在感情本身",
+            "阻碍位恶魔正位：主动联系已经变成重复的惯性，锁链是松的但你没走",
+            "建议位权杖首牌正位：新的行动力应该被立刻用在别处，而不是继续投入旧模式"
+          ]
+        },
+        "actionPlan": [
+          {
+            "action": "把「主动联系他」这个动作，换成一件只为你自己做的、有行动力的事，比如去运动、约一个朋友、开始一件搁置的小项目。",
+            "reason": "你已经主动得有点累，说明继续同样的动作只会加重消耗；权杖首牌建议把冲动用在新的地方，而不是继续填同一个坑。",
+            "evidence": [
+              {
+                "cardId": "wands-01",
+                "position": "建议",
+                "orientation": "upright",
+                "signal": "新的行动力应该被立刻用掉，而不是收藏或继续投向旧对象"
+              },
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "重复主动已经变成惯性，打破它的方式是换一个动作"
+              }
+            ]
+          },
+          {
+            "action": "如果他之后主动联系你，可以回应，但不要因为他回了一句就又立刻回到「天天主动找话题」的模式。",
+            "reason": "恶魔的锁链是松的，你随时可以不走回头路；权杖首牌的火要用来点燃新东西，而不是重新烧回旧循环。",
+            "evidence": [
+              {
+                "cardId": "major-15",
+                "position": "阻碍",
+                "orientation": "upright",
+                "signal": "惯性会借着一个回应把你拉回去，要警惕"
+              },
+              {
+                "cardId": "wands-01",
+                "position": "建议",
+                "orientation": "upright",
+                "signal": "保持行动力的方向，不被旧模式吸走"
+              }
+            ]
+          }
+        ],
+        "watchFor": [
+          "他是否主动发起至少一次联系，而不只是回复你",
+          "你是否在收到他的简短回复后，又忍不住马上找下一个话题——如果是，说明惯性还在"
+        ],
+        "reflectionQuestions": [
+          "如果接下来他仍然不主动，你是否能接受「感情还在，但不再由你一个人推进」？"
+        ],
+        "safetyNotice": null,
+        "meta": {
+          "provider": "deepseek",
+          "model": "deepseek-v4-pro",
+          "generatedAt": 1790042391349,
+          "latencyMs": 20576,
+          "toneAdjusted": false,
+          "readingMode": "standard",
+          "promptVersion": "v2",
+          "language": "zh",
+          "repaired": false
+        }
+      },
+      "ms": 20577,
+      "amplification": []
+    }
+  ]
+}

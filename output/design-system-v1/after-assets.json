@@ -1,0 +1,60 @@
+{
+  "beforeBytes": 800177,
+  "afterBytes": 808056,
+  "deltaBytes": 7879,
+  "fontBytes": 121780,
+  "entry": [
+    {
+      "path": "/assets/index-BA4OoxFL.js",
+      "bytes": 45
+    },
+    {
+      "path": "/assets/rolldown-runtime-B0Z9INg1.js",
+      "bytes": 901
+    },
+    {
+      "path": "/assets/vendor-react-ChfBSDHL.js",
+      "bytes": 189573
+    },
+    {
+      "path": "/assets/client-D8JP0Bu9.js",
+      "bytes": 756
+    },
+    {
+      "path": "/assets/localized-C2uP6Jf_.js",
+      "bytes": 25637
+    },
+    {
+      "path": "/assets/LanguageSwitcher-COpePBhB.js",
+      "bytes": 5313
+    },
+    {
+      "path": "/assets/vendor-router-D8RYwU3Z.js",
+      "bytes": 38216
+    },
+    {
+      "path": "/assets/storage-B-UT1Pch.js",
+      "bytes": 717
+    },
+    {
+      "path": "/assets/ids-Bz1K3Onz.js",
+      "bytes": 629
+    },
+    {
+      "path": "/assets/is-prop-valid_framer-motion-DaI4EYS0.js",
+      "bytes": 224
+    },
+    {
+      "path": "/assets/vendor-motion-AR70rnU2.js",
+      "bytes": 139570
+    },
+    {
+      "path": "/assets/arcana-Cu2rJlkN.js",
+      "bytes": 328520
+    },
+    {
+      "path": "/assets/arcana-BK21LBww.css",
+      "bytes": 77955
+    }
+  ]
+}

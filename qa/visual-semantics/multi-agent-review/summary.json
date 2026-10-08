@@ -1,0 +1,707 @@
+{
+  "version": 1,
+  "mode": "all-95",
+  "generatedAt": "2026-10-08T08:22:05.659Z",
+  "total": 95,
+  "decisions": {
+    "AUTO_PASS": 28,
+    "AUTO_CORRECT": 36,
+    "MARK_UNCERTAIN": 24,
+    "HUMAN_REVIEW": 0,
+    "CORRECTED": 7,
+    "UNJUDGED": 0
+  },
+  "finalDistribution": {
+    "PASS": 28,
+    "AUTO_CORRECT": 36,
+    "CORRECTED": 7,
+    "MARK_UNCERTAIN": 24,
+    "HUMAN_REVIEW": 0
+  },
+  "humanFinalApplied": [
+    "review-001",
+    "review-003",
+    "review-004",
+    "review-005",
+    "review-009",
+    "review-010",
+    "review-207"
+  ],
+  "finalRecords": [
+    {
+      "reviewId": "review-001",
+      "card": "legacy-shadow/cups-01",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-002",
+      "card": "legacy-shadow/pentacles-07",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-003",
+      "card": "legacy-moonlight/cups-10",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-004",
+      "card": "legacy-classic/swords-08",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-005",
+      "card": "legacy-moonlight/swords-06",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-006",
+      "card": "legacy-forest/swords-05",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-007",
+      "card": "legacy-celestial/wands-04",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-008",
+      "card": "legacy-shadow/cups-06",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-009",
+      "card": "legacy-moonlight/wands-04",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-010",
+      "card": "legacy-classic/swords-06",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-101",
+      "card": "legacy-forest/swords-04",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-102",
+      "card": "legacy-celestial/swords-10",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-103",
+      "card": "legacy-classic/swords-03",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-104",
+      "card": "legacy-shadow/swords-06",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-105",
+      "card": "legacy-shadow/major-15",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-106",
+      "card": "legacy-celestial/swords-09",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-107",
+      "card": "legacy-shadow/wands-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-108",
+      "card": "legacy-classic/swords-09",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-109",
+      "card": "legacy-moonlight/pentacles-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-110",
+      "card": "legacy-moonlight/wands-05",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-111",
+      "card": "legacy-celestial/major-15",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-112",
+      "card": "legacy-moonlight/cups-09",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-113",
+      "card": "legacy-moonlight/wands-09",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-114",
+      "card": "legacy-shadow/swords-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-115",
+      "card": "legacy-moonlight/major-15",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-116",
+      "card": "legacy-celestial/cups-04",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-117",
+      "card": "legacy-classic/swords-05",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-201",
+      "card": "legacy-moonlight/swords-03",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-202",
+      "card": "legacy-shadow/wands-06",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-203",
+      "card": "legacy-celestial/swords-04",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-204",
+      "card": "legacy-forest/swords-06",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-205",
+      "card": "legacy-forest/swords-02",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-206",
+      "card": "legacy-shadow/swords-03",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-207",
+      "card": "legacy-moonlight/pentacles-06",
+      "finalStatus": "CORRECTED"
+    },
+    {
+      "reviewId": "review-208",
+      "card": "legacy-shadow/pentacles-13",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-209",
+      "card": "legacy-classic/swords-02",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-210",
+      "card": "legacy-shadow/major-03",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-211",
+      "card": "legacy-forest/swords-07",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-212",
+      "card": "legacy-shadow/swords-09",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-213",
+      "card": "legacy-celestial/swords-01",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-214",
+      "card": "legacy-celestial/swords-02",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-215",
+      "card": "legacy-forest/swords-01",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-216",
+      "card": "legacy-moonlight/swords-01",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-217",
+      "card": "legacy-classic/swords-10",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-301",
+      "card": "legacy-shadow/major-04",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-302",
+      "card": "legacy-shadow/cups-13",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-303",
+      "card": "legacy-celestial/swords-05",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-304",
+      "card": "legacy-shadow/pentacles-03",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-305",
+      "card": "legacy-moonlight/swords-04",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-306",
+      "card": "legacy-forest/swords-10",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-307",
+      "card": "legacy-shadow/wands-04",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-308",
+      "card": "legacy-shadow/swords-05",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-309",
+      "card": "legacy-forest/swords-03",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-310",
+      "card": "legacy-shadow/major-21",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-311",
+      "card": "legacy-shadow/swords-01",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-312",
+      "card": "legacy-shadow/swords-04",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-313",
+      "card": "legacy-shadow/swords-14",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-314",
+      "card": "legacy-celestial/major-20",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-315",
+      "card": "legacy-forest/swords-09",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-316",
+      "card": "legacy-celestial/swords-07",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-317",
+      "card": "legacy-celestial/swords-06",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-401",
+      "card": "legacy-moonlight/swords-02",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-402",
+      "card": "legacy-shadow/swords-10",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-403",
+      "card": "legacy-shadow/cups-14",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-404",
+      "card": "legacy-moonlight/pentacles-10",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-405",
+      "card": "legacy-shadow/pentacles-14",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-406",
+      "card": "legacy-moonlight/cups-03",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-407",
+      "card": "legacy-shadow/cups-07",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-408",
+      "card": "legacy-moonlight/swords-05",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-409",
+      "card": "legacy-shadow/wands-07",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-410",
+      "card": "legacy-celestial/major-10",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-411",
+      "card": "legacy-shadow/wands-05",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-412",
+      "card": "legacy-celestial/wands-10",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-413",
+      "card": "legacy-shadow/cups-11",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-414",
+      "card": "legacy-moonlight/swords-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-415",
+      "card": "legacy-forest/swords-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-416",
+      "card": "legacy-moonlight/wands-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-417",
+      "card": "legacy-celestial/swords-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-501",
+      "card": "legacy-shadow/swords-02",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-502",
+      "card": "legacy-moonlight/cups-04",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-503",
+      "card": "legacy-classic/swords-04",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-504",
+      "card": "legacy-classic/swords-01",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-505",
+      "card": "legacy-celestial/cups-03",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-506",
+      "card": "legacy-moonlight/swords-09",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-507",
+      "card": "legacy-shadow/major-10",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-508",
+      "card": "legacy-shadow/major-06",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-509",
+      "card": "legacy-celestial/wands-05",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-510",
+      "card": "legacy-moonlight/swords-07",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-511",
+      "card": "legacy-shadow/wands-09",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-512",
+      "card": "legacy-classic/swords-07",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-513",
+      "card": "legacy-shadow/pentacles-10",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-514",
+      "card": "legacy-shadow/pentacles-09",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-515",
+      "card": "legacy-celestial/swords-03",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-516",
+      "card": "legacy-moonlight/swords-10",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-517",
+      "card": "legacy-shadow/swords-07",
+      "finalStatus": "MARK_UNCERTAIN"
+    }
+  ],
+  "unresolvedTasks": [],
+  "reviewerVerdicts": {
+    "pass": 75,
+    "uncertain": 52,
+    "corrected": 83
+  },
+  "reviewerVerdictAgreement": {
+    "agree": 63,
+    "total": 95,
+    "rate": 66.3
+  },
+  "runtimeRisks": [
+    "Spatial relation word overlap is not semantic agreement; semantic agreement rate is unavailable without additional independent comparison.",
+    "First two reviewers only; null abstentions and ambiguous object pairings excluded. Third reviewers inform Judges, not primary-pair rates."
+  ],
+  "byDeck": {
+    "legacy-shadow": {
+      "CORRECTED": 1,
+      "AUTO_PASS": 15,
+      "MARK_UNCERTAIN": 8,
+      "AUTO_CORRECT": 11
+    },
+    "legacy-moonlight": {
+      "CORRECTED": 4,
+      "AUTO_CORRECT": 9,
+      "MARK_UNCERTAIN": 4,
+      "AUTO_PASS": 5
+    },
+    "legacy-classic": {
+      "CORRECTED": 2,
+      "AUTO_PASS": 3,
+      "AUTO_CORRECT": 3,
+      "MARK_UNCERTAIN": 2
+    },
+    "legacy-forest": {
+      "MARK_UNCERTAIN": 2,
+      "AUTO_PASS": 2,
+      "AUTO_CORRECT": 6
+    },
+    "legacy-celestial": {
+      "AUTO_CORRECT": 7,
+      "AUTO_PASS": 3,
+      "MARK_UNCERTAIN": 8
+    }
+  },
+  "agreement": {
+    "note": "分母只计「两人都对该项表过态」的情况。一方写 null 是弃权，不算分歧。",
+    "dualReviewedImages": 95,
+    "exactAgreementRate": 92.6,
+    "denominators": {
+      "figureCount": {
+        "agree": 92,
+        "total": 92,
+        "details": []
+      },
+      "objectCount": {
+        "agree": 138,
+        "total": 145,
+        "details": [
+          "review-009 pole 3 vs 2",
+          "review-116 pentacle 1 vs 2",
+          "review-309 basket 2 vs 1",
+          "review-414 sword 9 vs 8",
+          "review-415 sword 7 vs 8",
+          "review-509 sphere 2 vs 1",
+          "review-510 lantern 2 vs 1"
+        ]
+      },
+      "moonPhase": {
+        "agree": 38,
+        "total": 38,
+        "details": []
+      },
+      "exact": {
+        "agree": 88,
+        "total": 95,
+        "details": []
+      }
+    },
+    "heldObjectRate": 84,
+    "heldObjectCounts": {
+      "agree": 21,
+      "total": 25,
+      "details": []
+    },
+    "postureRate": 98,
+    "postureCounts": {
+      "agree": 49,
+      "total": 50,
+      "details": []
+    },
+    "gazeRate": 90.5,
+    "gazeCounts": {
+      "agree": 19,
+      "total": 21,
+      "details": []
+    },
+    "structuredLabelNote": "held object / posture / gaze 只在单人图或唯一位置匹配人物间比明确归一标签；不同措辞、身份和遮挡无法自动完整语义对齐，不能解释成全部视觉事实准确率。",
+    "figureCountRate": 100,
+    "objectCountRate": 95.2,
+    "moonPhaseRate": 100,
+    "spatialRelationWordOverlapMedian": 51.9,
+    "spatialRelationNote": "这是两人空间关系描述的词袋重合度中位数，不是语义一致率。同一个关系用不同措辞表达是常态，该值天生偏低，只看趋势。",
+    "disagreements": {
+      "figureCount": [],
+      "objectCount": [
+        "review-009 pole 3 vs 2",
+        "review-116 pentacle 1 vs 2",
+        "review-309 basket 2 vs 1",
+        "review-414 sword 9 vs 8",
+        "review-415 sword 7 vs 8",
+        "review-509 sphere 2 vs 1",
+        "review-510 lantern 2 vs 1"
+      ],
+      "moonPhase": []
+    },
+    "ambiguousPairings": [
+      "review-002 pentacle (2 vs 2 条，配对不确定)",
+      "review-009 lantern (2 vs 1 条，配对不确定)",
+      "review-010 boat (2 vs 1 条，配对不确定)",
+      "review-101 sword (2 vs 2 条，配对不确定)",
+      "review-102 sword (3 vs 3 条，配对不确定)",
+      "review-112 cup (2 vs 2 条，配对不确定)",
+      "review-114 sword (4 vs 3 条，配对不确定)",
+      "review-116 cup (2 vs 2 条，配对不确定)",
+      "review-117 sword (4 vs 3 条，配对不确定)",
+      "review-202 box (2 vs 1 条，配对不确定)",
+      "review-203 sword (2 vs 2 条，配对不确定)",
+      "review-203 window (2 vs 2 条，配对不确定)",
+      "review-204 boat (2 vs 1 条，配对不确定)",
+      "review-207 pentacle (3 vs 3 条，配对不确定)",
+      "review-208 plant (1 vs 2 条，配对不确定)",
+      "review-211 sword (2 vs 2 条，配对不确定)",
+      "review-305 sword (2 vs 3 条，配对不确定)",
+      "review-404 pentacle (2 vs 1 条，配对不确定)",
+      "review-405 pentacle (1 vs 2 条，配对不确定)",
+      "review-407 cup (2 vs 3 条，配对不确定)",
+      "review-408 sword (2 vs 2 条，配对不确定)",
+      "review-502 cup (1 vs 2 条，配对不确定)",
+      "review-503 sword (2 vs 2 条，配对不确定)",
+      "review-505 cup (2 vs 1 条，配对不确定)",
+      "review-507 wheel (1 vs 2 条，配对不确定)",
+      "review-508 tree (2 vs 1 条，配对不确定)",
+      "review-510 sword (2 vs 2 条，配对不确定)",
+      "review-511 wand (2 vs 1 条，配对不确定)",
+      "review-512 sword (2 vs 2 条，配对不确定)",
+      "review-513 pentacle (1 vs 2 条，配对不确定)",
+      "review-514 pentacle (1 vs 2 条，配对不确定)",
+      "review-517 sword (2 vs 2 条，配对不确定)"
+    ]
+  },
+  "judgeVerdictDivergenceCounts": {
+    "divergent": 10,
+    "compared": 92
+  },
+  "judgeVerdictDivergenceRate": 10.9,
+  "judgeSelfDeclaredOverturns": [
+    "review-001",
+    "review-004",
+    "review-006",
+    "review-009",
+    "review-010",
+    "review-104",
+    "review-107",
+    "review-111",
+    "review-113",
+    "review-114",
+    "review-207",
+    "review-301",
+    "review-302",
+    "review-312",
+    "review-313",
+    "review-404",
+    "review-409",
+    "review-413",
+    "review-501",
+    "review-503",
+    "review-504",
+    "review-505",
+    "review-506",
+    "review-512",
+    "review-515",
+    "review-517"
+  ],
+  "uncertainRate": 25.3,
+  "humanReviewRate": 0,
+  "correctionRate": 45.3,
+  "control": null,
+  "qaClosure": {
+    "status": "closed",
+    "humanFinalApplied": 7,
+    "humanCorrectionsAddedToReviewLayer": 7,
+    "runtimeModifiedCardsThisRound": 6,
+    "qaOnlyCorrections": 1,
+    "deepseekVisionCalls": 0,
+    "reviewerReruns": 0,
+    "judgeReruns": 0,
+    "generatedFilesByteIdentical": 11,
+    "validation": "validation-human-final/results.json"
+  }
+}

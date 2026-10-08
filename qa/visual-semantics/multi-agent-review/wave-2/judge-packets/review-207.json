@@ -1,0 +1,291 @@
+{
+  "reviewId": "review-207",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-207.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "pass": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-207.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-207",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "center, upper-middle of frame",
+              "posture": "standing, slightly stooped forward",
+              "gaze": "downward and to the right, toward the kneeling right-hand figure; eyes appear nearly closed",
+              "heldObjects": [
+                "a hanging balance/scales suspended from a horizontal beam, held in the left hand",
+                "a single flat round disc pinched between thumb and fingers of the extended right hand"
+              ],
+              "appearance": "pale layered translucent gown and long veil, flower ornament in pale upswept hair, no crown"
+            },
+            {
+              "position": "right, lower-middle",
+              "posture": "kneeling / sitting back on heels, torso upright, turned three-quarters toward center",
+              "gaze": "upward toward the standing figure's extended hand",
+              "heldObjects": [],
+              "hands": "both palms cupped open and raised, empty",
+              "appearance": "pale hooded veil over head, long pale-lavender robe"
+            },
+            {
+              "position": "lower left",
+              "posture": "kneeling, body turned away from viewer, seen from behind-left",
+              "gaze": "toward the center of the frame / toward the standing figure",
+              "heldObjects": [],
+              "hands": "both hands raised, palms up and open, empty",
+              "appearance": "hooded pale mantle, flowers in the hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "balance/scales",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held in the standing figure's left hand, center-left; two chain-hung pans"
+            },
+            {
+              "type": "round flat disc",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "in the standing figure's extended right hand, center-right"
+            },
+            {
+              "type": "round flat disc",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one lying in each pan of the balance (left pan one, right pan one)"
+            },
+            {
+              "type": "round flat disc",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered flat on the pale ground across the bottom of the frame; a cluster of roughly five in the bottom-center group plus two or three fainter, paler ones on the ground slightly higher and to the right"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower right, resting on the ground beside the kneeling right figure, small warm flame inside"
+            },
+            {
+              "type": "crescent moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right sky, thin crescent with horns pointing left"
+            },
+            {
+              "type": "stone column/balustrade",
+              "count": null,
+              "countConfidence": "low",
+              "where": "left middle ground, a railing and at least one column, partly hidden by hanging foliage"
+            }
+          ],
+          "environment": [
+            "hanging wisteria-like blossom vines draping from upper left",
+            "pale flowering shrubs along the left and bottom edges",
+            "stone balustrade and columns at left",
+            "broad still water/river across the right middle ground with a bright vertical light reflection on it",
+            "faint distant spires or towers on the far bank, upper right",
+            "pale hazy sky with soft clouds",
+            "a painted decorative border frame around the whole scene"
+          ],
+          "lightSources": [
+            "thin crescent moon, upper right",
+            "small lit lantern, lower right",
+            "diffuse pale glow behind the standing figure"
+          ],
+          "moonPhase": "thin crescent, horns opening to the left",
+          "spatialRelations": [
+            "the standing figure occupies the vertical center and is taller than both kneeling figures",
+            "its right arm reaches across to the right and the disc it holds hangs directly above the right figure's cupped palms, the two not touching",
+            "the scales hang on the opposite (left) side of the standing figure's body, over the lower-left kneeling figure",
+            "both kneeling figures face inward toward the standing figure, forming a rough triangle",
+            "the scattered ground discs lie between and below the two kneeling figures"
+          ],
+          "foreground": [
+            "pale flowers, bottom left and bottom right",
+            "scattered discs on the ground",
+            "the lower-left kneeling figure"
+          ],
+          "background": [
+            "water",
+            "distant spires",
+            "crescent moon",
+            "clouds",
+            "hanging vines"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of discs lying on the ground cannot be resolved reliably; they are pale-on-pale, partly overlapping and some fade into the background",
+          "whether the two pale ovals on the ground mid-frame are further discs or reflections is unclear",
+          "the standing figure's eyes are narrow/downcast; whether they are fully closed cannot be determined",
+          "the distant structures on the far shore may be towers, trees, or both",
+          "it cannot be determined whether the hanging balance is held or merely draped over the fingers"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "two kneeling, veiled figures who raise their hands to receive it",
+          "observed": "only the right-hand kneeling figure has a covered head; the left-hand kneeling figure reads as bare-headed, with pale braided hair dressed with small flowers and a shawl across the shoulders",
+          "evidence": "The right figure's head covering runs continuously from crown to shoulder; on the left figure the braid pattern and floral ornament are visible on the head itself, with the shawl starting at the shoulder line.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "round coins with star/pentacle designs lying on the draped cloth on the ground",
+          "observed": "the discs lie on a pale, softly washed ground; whether there is a draped cloth beneath them cannot be resolved",
+          "evidence": "The foreground is a near-white wash with no distinguishable cloth hem, fold shadow or edge separating a textile from the ground.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two kneeling, veiled figures who raise their hands to receive it",
+            "with": "two kneeling figures who raise their hands to receive it, the right one veiled"
+          },
+          {
+            "find": "round coins with star/pentacle designs lying on the draped cloth on the ground",
+            "with": "round coins with star/pentacle designs lying on the pale ground"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-207",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "center, upper-middle, the tallest figure",
+              "posture": "standing, body angled slightly to the viewer's right, head bowed",
+              "gaze": "eyes lowered/closed, face turned down and to the right toward the kneeling figure on the right",
+              "heldObjects": [
+                "a hanging balance scale suspended from her raised left hand (viewer's left)",
+                "a single round disc held between the fingers of her extended right arm, offered downward"
+              ],
+              "appearance": "very pale silver hair with a flower ornament, long translucent white gown and veil; no crown, no blindfold, no wings"
+            },
+            {
+              "position": "lower right",
+              "posture": "kneeling, upright torso, seen in profile facing left toward the center figure",
+              "gaze": "looking up and left at the standing figure's offered hand",
+              "heldObjects": [
+                "nothing; both hands are raised and cupped open, palms up, to receive"
+              ],
+              "appearance": "pale hooded or veiled head covering, layered lavender-white robe"
+            },
+            {
+              "position": "lower left",
+              "posture": "kneeling, seen from behind and slightly to the side, facing right toward the center",
+              "gaze": "away from the viewer, toward the center figure",
+              "heldObjects": [
+                "nothing; both hands raised and cupped open, palms up"
+              ],
+              "appearance": "pale braided hair with flowers, lavender-grey robe and shawl"
+            }
+          ],
+          "objects": [
+            {
+              "type": "balance scale with two pans",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held aloft by the standing figure, left of center, both pans hanging at about the same height"
+            },
+            {
+              "type": "round disc / coin held in hand",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "between the standing figure's fingers, extended right of center toward the kneeling figure's cupped hands"
+            },
+            {
+              "type": "round disc / coin resting in the scale pans",
+              "count": null,
+              "countConfidence": "low",
+              "where": "small pale round objects sit in both pans of the balance; each pan holds at least one, possibly two, and they overlap in the wash"
+            },
+            {
+              "type": "round disc / coin on the ground",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a scattered cluster lying flat on the pale ground across the lower-center foreground, roughly six to eight discs, some overlapping and some half-dissolved into the background wash"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower right, standing on the ground beside the right-hand kneeling figure, warm glow inside"
+            },
+            {
+              "type": "white flower",
+              "count": null,
+              "countConfidence": "low",
+              "where": "banked along the lower left and lower right edges and hanging as wisteria-like sprays at the upper left"
+            }
+          ],
+          "environment": [
+            "a pale open terrace or shore",
+            "a stone balustrade and columned structure at the left, partly behind hanging wisteria",
+            "a broad bright body of water in the middle distance with a light streak on it",
+            "faint pale spires or buildings on the far shore at the right",
+            "hanging blossom sprays from above at the upper left",
+            "a thin drawn inner border frame"
+          ],
+          "lightSources": [
+            "a crescent moon in the upper right of the sky",
+            "one lit lantern at lower right",
+            "a diffuse overall glow, brightest behind the standing figure"
+          ],
+          "moonPhase": "crescent, thick, lit on the right/lower-right limb",
+          "spatialRelations": [
+            "the standing figure is between and above the two kneeling figures, forming a triangle",
+            "the scale hangs on her left side over the left kneeling figure's head; the offered disc is on her right side over the right kneeling figure's cupped hands",
+            "both kneeling figures face inward toward her with hands raised in the same receiving gesture",
+            "the loose discs lie on the ground between and slightly in front of all three figures",
+            "the lantern sits at the right kneeling figure's outer side, nearest the frame edge"
+          ],
+          "foreground": [
+            "the two kneeling figures",
+            "the ground-level discs",
+            "flowering plants at both lower corners",
+            "the lantern"
+          ],
+          "background": [
+            "water",
+            "distant shoreline structures",
+            "sky with crescent moon",
+            "colonnade and balustrade at left"
+          ],
+          "palette": "very pale lavender, white and silver-blue; low contrast"
+        },
+        "uncertainObservations": [
+          "The number of discs on the ground cannot be resolved reliably — they overlap and several fade into the pale ground; I count roughly six to eight but will not commit to a number.",
+          "The contents of the two scale pans (one disc each, or two, or a heap) is not resolvable.",
+          "Whether the offered object is a disc, a coin or a small round stone is not determinable beyond 'a flat round object with a patterned face'.",
+          "I cannot tell whether the left kneeling figure's hands are empty or holding something very pale."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

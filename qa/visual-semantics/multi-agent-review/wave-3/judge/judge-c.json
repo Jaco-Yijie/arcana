@@ -1,0 +1,68 @@
+[
+  {
+    "reviewId": "review-314",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "Looking at the image myself before reading any reviewer: every object I can resolve in a figure's hands is the same flat, pale, open rectangular form held at chest height - the three figures at the bottom left, the hooded figure seated in the small boat at bottom right, and the waders scattered across the middle distance. Several of them glow faintly. I cannot find a single rolled, furled or spindled object anywhere in the frame. At this rendering size I also cannot positively confirm these are books or tablets rather than panels or lids - I can only confirm they are flat and open. Separately, I did see two ringed instruments on stands on the left platform, a larger multi-ring sphere and a smaller globe beside it, not one.",
+    "reason": "The keyObjects entry asserts two object classes joined by 'and', and the second one ('scrolls') is a positive claim I cannot substantiate from the pixels. Reviewer-a affirmatively reports no rolled or furled form is resolvable anywhere; reviewer-c independently records in its uncertainObservations that 'whether the pale objects held are books, scrolls or lids is not resolvable at this size'. So the two reviewers do not jointly assert a replacement fact - one says the class is absent, the other says the class is undecidable - which fails the AUTO_CORRECT bar (no two-reviewer agreement on a single observable fact, and the fact is not unambiguous on the image). Dropping the item is the minimal-loss move: it removes an unverifiable object class rather than rewriting it into a different unverifiable one. I am naming the single item rather than the field, so the other seven keyObjects entries survive. The scene sentence repeats the same unverified word ('holding open tablets and scrolls') but I am not touching it, because dropping the whole scene line to remove two words would cost far more than it saves - flagging the keyObjects item is enough to stop the interpretation model from treating scrolls as established. On reviewer-c's separate armillary-sphere point I do NOT correct: both reviewers logged that count at only medium confidence, and more importantly 'armillary sphere on a stand' is an under-specified entry, not a false one - it never claims there is exactly one - so there is no factual error to fix.",
+    "uncertainItems": [
+      { "field": "keyObjects", "item": "open tablets and scrolls held by the figures" }
+    ]
+  },
+  {
+    "reviewId": "review-315",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "Looking at the image myself first: the room is unmistakably lit by bright daylight. The multi-paned window on the right is filled with sunlit green foliage and throws a strong warm wash across the curtain, the sill ferns, the bed and the woman's back; the small candle on the foreground table is a minor accent, not the dominant source. Nothing in the frame reads as night. On the wall behind her, each mounted blade carries a rounded pommel and brass collar at the TOP, a brass crossguard about a third of the way down, and a dark blade that continues below and tapers to a point near the bottom - the wide part of every blade is uppermost and the taper is lowest, i.e. they hang hilt-up, point-down. I could not fix the number of blades; I read roughly five but the leftmost is veiled by ivy and the rightmost dissolves into shadow.",
+    "reason": "Both gates are met on both edits. (1) Night vs daylight: reviewer-a and reviewer-c independently raised exactly this, both at high confidence, and I reached the same conclusion from the image before reading either. It is an observable fact about the dominant light source, not a wording preference, and the existing file already contradicts itself - its own scene line says 'daylight enters through a curtained window' while emphasizedAspects says 'sleepless night-time distress'. (2) Blade orientation: reviewer-a raised it at high confidence, and reviewer-c independently recorded the identical observation in its blind pass ('all hang hilts UP, blades pointing DOWN toward the floor') - this is two independent reviewers reporting the same thing, not one passing. I verified it myself. Orientation is exactly the observable-fact class, and 'upright' in an orientation-sensitive field reads as point-up, which is the reverse of what is on the wall. Both changes express as exact substring replacements, verified verbatim against reveal/review-315.md. I deliberately leave the blade COUNT alone: the two reviewers disagree (five vs at-least-four) and the file's own self-reported uncertainty already flags 'exact number of swords on the wall rack', so no action is needed. I also leave the scene clause 'a rack of swords hangs on the wall behind her' untouched, since it makes no orientation claim and is not wrong.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "wooden wall rack holding upright swords with dark blades and brass-toned hilts",
+          "with": "wooden wall rack holding swords hung point-down, dark blades below brass-toned crossguards and pommels"
+        },
+        {
+          "find": "sleepless night-time distress",
+          "with": "daytime distress in a bright, sunlit room"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-316",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "Looking at the image myself first: on the table at the left, two swords stand vertically, and both show an ornate cross-guard and ring pommel at the TOP with the blade narrowing downward into a short cylindrical socket at the table surface. Neither points skyward. The cloaked figure stands centre-right with its back to me, mid-stride toward the lit horizon on the right, carrying a tight bundle of blades against its right side with the hilts projecting above the shoulder. I could pick out roughly four distinct cross-guards at the top of that bundle but the shafts below overlap and merge into the dark cloak, so I cannot fix a total. I could NOT determine which way the head is facing - it is a dark silhouette against a dark sky.",
+    "reason": "All five gates are met for the table-sword orientation. (1) The fact is unambiguous on the image and I verified it myself before reading any reviewer. (2) Reviewer-c AND reviewer-e independently raised this exact item, both at high confidence - not one passing and one objecting. (3) I reached the same conclusion independently. (4) Orientation is a pure observable fact, not interpretation. (5) It expresses as one precise substring replacement, checked verbatim against reveal/review-316.md. I am deliberately NOT touching two other things the reviewers raised. First, the head direction in visualTensions: reviewer-c says the head turns right toward the lit horizon while reviewer-e says it turns back over the shoulder toward the table on the left - a direct contradiction - and I could not resolve it from the pixels either, so 'the figure's body faces away while the head turns back toward the camp' stays as-is and should be treated as unverified; it sits in visualTensions, a soft field, so leaving it costs less than acting on a coin-flip. Second, the carried-bundle count: both reviewers agree the total is unresolvable, but they disagree on how many hilts are separable (three vs four), so I will not write a replacement number - and the file's own self-reported uncertainty already flags that count, which limits the downstream damage.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "two upright swords standing point-up in cylindrical holders on a table",
+          "with": "two swords standing hilt-up, blades driven point-down into cylindrical holders on a table"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-317",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "Looking at the image myself first: there are two figures in the boat and they are not both seated. The farther figure STANDS upright - full torso, shoulders and head rise well clear of the gunwale, cloak falling in vertical folds to the boat's floor - with both hands high on a long pole/oar that angles down into the water off the boat's right side. Only the nearer figure, wrapped in a patterned blue-violet cloak, is seated. The boat is seen from astern: the end nearest me is the broad, rounded, carved transom, and the hull narrows away toward the far end; both figures face away from me toward the golden horizon glow, and the reflected light track runs from the horizon down the water toward the boat. So the bow points away, not toward the viewer. Upright blades line both rails - I read three to a side but could not rule out another hidden behind the standing figure's cloak.",
+    "reason": "Both edits clear all five gates. Posture: reviewer-b and reviewer-d independently raised that one figure stands rather than sits, both at high confidence, and I saw it unaided - the standing/seated split is unmistakable in the silhouette. The existing file is also self-contradictory, since its own keyObjects line already says 'long wooden oar held by the standing figure' while the scene says both figures sit. Boat orientation: reviewer-b and reviewer-d again both raised it independently (medium and high), and I confirmed it myself from the carved transom nearest the viewer, the hull tapering away, and both figures facing the horizon glow. Both are observable facts - posture and orientation - not interpretation, and both express as exact substring replacements verified verbatim against reveal/review-317.md. I chose reviewer-d's framing over reviewer-b's for the scene line because reviewer-b's rewrite drops 'Two cloaked figures' from the opening, and the count of two is correct and worth keeping. I avoid the word 'poling': reviewer-d notes it cannot be determined whether the implement is a single oar or a punting pole, so I keep the neutral 'at the oar', which matches the existing keyObjects wording. I take no action on the blade count - both reviewers report six as a floor at only medium confidence, and the file's self-reported uncertainty already flags 'exact number of sword blades visible'.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+          "with": "Two cloaked figures travel in a wooden rowboat on dark water, one seated and one standing at the oar"
+        },
+        {
+          "find": "the boat occupies the lower centre, its bow toward the viewer",
+          "with": "the boat occupies the lower centre, seen from astern, its bow pointing away toward the horizon"
+        }
+      ]
+    }
+  }
+]

@@ -65,3 +65,19 @@ qa/release/network-*.txt
 deployment/*
 !deployment/README.md
 !deployment/production-checklist.md
+
+# 视觉语义人工抽查导出的图片 —— 可随时重新生成，不进 git
+qa/visual-semantics/png/
+
+# Multi-Agent Visual QA —— 匿名审核图是从 png/ 派生的临时产物，
+# 每次 blind-review-prepare 重新生成；per-image 的 Agent 原始输出量大且只在本轮有意义。
+# 留在 git 里的是结论：manifest.json / judge/ / summary.json / human-review-queue.md
+qa/visual-semantics/blind-review/
+qa/visual-semantics/multi-agent-review/blind-observations/
+qa/visual-semantics/multi-agent-review/comparisons/
+
+# Local browser snapshots and reproducible screenshots; keep JSON QA reports.
+.playwright-cli/
+output/**/*.png
+output/**/*.jpg
+output/**/*.yml

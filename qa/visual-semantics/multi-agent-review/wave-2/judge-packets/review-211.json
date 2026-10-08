@@ -1,0 +1,282 @@
+{
+  "reviewId": "review-211",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-211.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-211.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "while glancing back over his shoulder",
+          "observed": "the head is in profile facing right, the same direction he is walking; he is not looking back",
+          "evidence": "The face (nose, eye, jaw) is on the right side of the head with the hair mass to its left, and both boots and the forward-leaning torso point right. The camp is behind him at the left, so his gaze is along his line of travel, away from the camp.",
+          "confidence": "high"
+        },
+        {
+          "field": "visualTensions",
+          "existing": "the figure's body moves away while his head turns back",
+          "observed": "body and head both face the direction of travel; there is no backward turn",
+          "evidence": "No part of the head or shoulders is rotated toward the tent side of the frame.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "while glancing back over his shoulder",
+            "with": "while looking ahead in the direction he is walking"
+          },
+          {
+            "find": "the figure's body moves away while his head turns back",
+            "with": "the camp lies behind him and he does not turn his head toward it"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-211",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "right of center, mid-frame",
+              "posture": "walking/striding to the right, body leaning forward, weight on the back leg, head turned in profile looking right and slightly back",
+              "gaze": "to the right, ahead along the direction of travel",
+              "heldObjects": [
+                "a bundle of swords strapped across the back, not in the hands",
+                "the right arm is extended forward and down, hand open and empty, as if pushing aside foliage"
+              ],
+              "appearance": "dark curly hair, layered ragged green cloak and hood-collar, cream shirt, wrapped/laced leg bindings, boots"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": null,
+              "countConfidence": "low",
+              "where": "bundled together and carried on the figure's back; the hilts and round pommels project above the right shoulder — I can individually resolve four pommels in a row, but the bundle is bound in cloth/cord and further blades could be hidden behind them"
+            },
+            {
+              "type": "sword",
+              "count": null,
+              "countConfidence": "low",
+              "where": "standing upright in a wooden A-frame rack at the left of the frame; two hilts are clearly separable (one at far left, one at center of the rack) with a possible third partly behind them"
+            },
+            {
+              "type": "tent",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left of center, middle ground, a pale canvas ridge tent with a visible pole and guy lines"
+            },
+            {
+              "type": "campfire ring",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "ground in front of the tent, a ring of stones with dark ash inside; no flame visible"
+            },
+            {
+              "type": "basket",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower left, woven basket on the ground at the foot of the sword rack"
+            },
+            {
+              "type": "cooking pot/kettle",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "hanging from the tent pole assembly, small pale vessel"
+            },
+            {
+              "type": "wooden rack",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left foreground, an A-frame/trestle of poles supporting the standing swords"
+            },
+            {
+              "type": "tree",
+              "count": null,
+              "countConfidence": "low",
+              "where": "many slender pale trunks filling the whole background; too numerous and overlapping to count"
+            }
+          ],
+          "environment": [
+            "dense light-filled woodland with slender pale trunks",
+            "shafts of sunlight coming down from the upper center",
+            "a worn dirt path running from the tent toward the lower right",
+            "ferns in the bottom-left and bottom-right foreground",
+            "leaf litter and twigs on the ground",
+            "a decorative painted border with mushrooms and fern fronds at the corners"
+          ],
+          "lightSources": [
+            "daylight filtering down through the canopy from the upper center-left"
+          ],
+          "moonPhase": "not applicable — no moon visible",
+          "spatialRelations": [
+            "the figure is moving away from the tent and rack, which are behind and to the left",
+            "the rack of standing swords is on the opposite side of the frame from the swords on the figure's back",
+            "the figure's forward foot is off the path, in the undergrowth at the right",
+            "the tent sits at the far end of the path in the middle ground"
+          ],
+          "foreground": [
+            "ferns",
+            "dirt path",
+            "the walking figure's legs and boots"
+          ],
+          "background": [
+            "tent",
+            "forest trunks",
+            "sunlight shafts"
+          ],
+          "notableTension": [
+            "the figure is moving away from the camp while the camp itself is unattended and no other person is visible"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of swords in the carried bundle cannot be stated reliably — four pommels are individually visible but the bundle is wrapped and overlapping",
+          "the number of swords in the left-hand rack cannot be stated reliably — two are clear, a third is ambiguous",
+          "whether the ring of stones contains live embers or only cold ash cannot be determined",
+          "no second person is visible anywhere in the frame, but the dark tent interior is not readable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "carrying a bundle of swords on his back while glancing back over his shoulder",
+          "observed": "the head faces the same direction as the movement — forward and to the right, slightly downward at the path ahead; it is not turned back toward the camp",
+          "evidence": "The hair mass sits on the rear/upper-left of the skull and the face is in profile on the right side, with nose, lips and chin all pointing right toward the frame edge — the same direction as the advancing leg and the leaning torso. The sword bundle sits on the left side of the torso, confirming his back is toward the camp and his face away from it.",
+          "confidence": "high"
+        },
+        {
+          "field": "visualTensions",
+          "existing": "the figure's body moves away while his head turns back",
+          "observed": "body and head both point the same way; there is no counter-turn of the head",
+          "evidence": "Same profile evidence as above — the face is on the leading side of the head, not the trailing side.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "carrying a bundle of swords on his back while glancing back over his shoulder",
+            "with": "carrying a bundle of swords on his back, his face turned ahead in the direction he is walking"
+          },
+          {
+            "find": "the figure's body moves away while his head turns back",
+            "with": "the orderly camp behind him against his unbroken forward stride away from it"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-211",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "right of center, mid-frame, striding across and out toward the right",
+              "posture": "walking / mid-stride, body in profile facing right, leaning slightly forward, one leg advanced with boot planted on the path",
+              "gaze": "face in profile looking ahead to the right, slightly downward",
+              "heldObjects": [
+                "nothing in the hands — the visible arm hangs free and low, fingers open; the swords are carried strapped on the back, not held"
+              ],
+              "appearance": "dark curly hair, layered ragged green cloak/tunic with a hood collar, pale undershirt, wrapped leggings, laced leather boots; a bound bundle of swords rides high on the back"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword carried in the back bundle",
+              "count": 4,
+              "countConfidence": "medium",
+              "where": "strapped diagonally across the figure's back with hilts projecting above the right shoulder. I resolve four separate round pommels in a row with their grips and cross-guards beneath them; the blades below disappear into a wrapped/corded bundle"
+            },
+            {
+              "type": "sword standing in the wooden rack",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "left of frame, at the mid-left, set point-down into a low wooden A-frame rack; I resolve three distinct hilts — two upright with dark grips and round pommels, one leaning to the right"
+            },
+            {
+              "type": "tent",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left-center middle distance, a pale canvas A-frame ridge tent with a guy line and a crossed pole finial"
+            },
+            {
+              "type": "wicker basket",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower left, on the ground beside the sword rack"
+            },
+            {
+              "type": "hanging pot / kettle",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "suspended from the tent's front pole, center-left"
+            },
+            {
+              "type": "fire pit / ring of stones",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the ground just right of the tent, a dark ring with ash inside"
+            },
+            {
+              "type": "mushroom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "pale caps painted into the decorative border at the bottom-left and bottom-right corners, not part of the scene proper"
+            }
+          ],
+          "environment": [
+            "a sunlit birch-and-green deciduous woodland with tall slender trunks receding into haze",
+            "god-rays of sunlight slanting down from the upper center",
+            "a bare dirt path curving from the lower left up past the tent",
+            "large ferns and undergrowth across the whole foreground",
+            "a decorative painted border of leaves, ferns, fungus and pine-cone motifs"
+          ],
+          "lightSources": [
+            "daylight shafts through the canopy from the upper center-left"
+          ],
+          "moonPhase": null,
+          "spatialRelations": [
+            "the figure walks rightward and away from the camp, with the tent and the sword rack behind him on the left",
+            "the rack of standing swords and the basket are on the near-left of the path; the tent and fire pit are further back",
+            "the carried bundle's hilts rise past the figure's head on his far side",
+            "the path leads from the lower-left foreground back toward the tent, while the figure moves off it to the right into the undergrowth"
+          ],
+          "foreground": [
+            "ferns and forest floor litter",
+            "the figure's legs and boots",
+            "the sword rack and basket at the left"
+          ],
+          "background": [
+            "woodland trunks",
+            "sunlit haze",
+            "tent and camp"
+          ],
+          "palette": "greens, browns and pale gold; daylight"
+        },
+        "uncertainObservations": [
+          "The back bundle is corded and overlapping — four pommels are individually resolvable, but additional blades could be concealed inside the wrap. I am NOT inferring a total from the bundle's thickness.",
+          "The rack count of three is my best individual resolution; the rack's far side is occluded by the figure's cloak and by the basket, so a fourth hilt could be hidden.",
+          "The dark ring on the ground near the tent reads as a fire pit but could be a coil of rope.",
+          "Whether the figure's far (hidden) hand holds anything is not determinable."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

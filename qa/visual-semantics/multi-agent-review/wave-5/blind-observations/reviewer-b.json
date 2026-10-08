@@ -1,0 +1,807 @@
+[
+  {
+    "reviewId": "review-507",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "viewer-left，约占画面左三分之一，位于一段石阶上",
+          "posture": "站立前倾、弓步攀登状；右腿（viewer-right 那条）屈膝踏在高一级台阶上，左腿后蹬伸直；上身前倾朝向 viewer-right",
+          "gaze": "头部侧面朝向 viewer-right，面向巨轮的轮毂，视线略向上",
+          "heldObjects": [
+            "双臂同时向前上方（viewer-right、略高于肩）伸出，双手握在巨轮中心轮毂侧面的一个凸起/把手上，像在推"
+          ],
+          "clothing": "长款破烂外袍/斗篷，下摆撕裂成许多长条向 viewer-left 后方飘散；紧身裤腿；短发凌乱"
+        }
+      ],
+      "objects": [
+        {
+          "type": "wheel",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面右侧及中部，巨大，占据画面约三分之二，顶部被画面上缘截断",
+          "orientation": "轮面正对观者，轴心水平、轮盘竖直",
+          "arrangement": "单个巨轮；其右后方还能看到至少一道同心的环形结构"
+        },
+        {
+          "type": "spoke",
+          "count": 8,
+          "countConfidence": "medium",
+          "where": "从巨轮中心轮毂向外辐射",
+          "orientation": "放射状；其中一根近乎竖直向上，两根向 viewer-right 呈楔形宽板",
+          "arrangement": "环绕轮毂等分排列；左下方若干根被人物遮住"
+        },
+        {
+          "type": "carved relief panel",
+          "count": 3,
+          "countConfidence": "medium",
+          "where": "嵌在巨轮的辐条/楔形板上：一块在正上方竖直辐条上，一块在 viewer-right 偏上的楔形板上，一块在 viewer-right 偏下的楔形板上",
+          "orientation": "随辐条方向，竖直/斜向",
+          "arrangement": "分散在轮面不同扇区"
+        },
+        {
+          "type": "stone step",
+          "count": null,
+          "countConfidence": "low",
+          "where": "画面左下，人物脚下，向 viewer-left 下方延伸",
+          "orientation": "水平台面，逐级下降",
+          "arrangement": "一道阶梯"
+        }
+      ],
+      "environment": [
+        "幽暗的大型石砌室内空间，高大拱券",
+        "viewer-left 背景有数个尖拱窗/拱廊，窗格隐约可见",
+        "画面左上角有一处带格栅的穹顶或天窗结构",
+        "左下角是方格石板地面",
+        "人物脚下为一段石阶与一块凸出的石台",
+        "巨轮右后方另有一圈巨大的同心环状构件",
+        "整幅画面为近乎单色的深褐黑调，颗粒/刮痕质感明显"
+      ],
+      "lightSources": [
+        "左上方穹顶/天窗透入的微弱冷光",
+        "viewer-left 拱窗透入的极弱光",
+        "巨轮边缘与辐条上的高光（来源未直接可见）"
+      ],
+      "moonPhase": "not visible — 室内场景，画面中没有天空或月亮",
+      "spatialRelations": [
+        "人物在巨轮的 viewer-left 一侧",
+        "人物双手所在位置与巨轮轮毂重合",
+        "石阶在人物脚下并向 viewer-left 下方延伸",
+        "拱窗与穹顶在人物的上方及后方（viewer-left）",
+        "方格地面在石阶的 viewer-left 下方",
+        "第二道环形构件在主轮的右后方"
+      ],
+      "foreground": [
+        "左下角方格石板地面",
+        "石阶与石台"
+      ],
+      "background": [
+        "拱券与拱窗构成的室内立面",
+        "左上方带格栅的穹顶/天窗",
+        "右后方的同心环形结构"
+      ]
+    },
+    "uncertainObservations": [
+      "辐条数目：中心左下若干根被人物身体挡住，我只能确认上方与右侧的 6 根左右，推到 8 根是基于可见夹角推算，不敢写死",
+      "正上方竖直辐条上的浮雕是一条弯曲的 S 形/蛇形细长物，但首尾细节看不清，无法确定是动物还是纯装饰纹样",
+      "viewer-right 偏上楔形板上的浮雕像一个直立的、头部细长突出的四足/人形生物侧影，具体是什么分辨不出",
+      "viewer-right 偏下楔形板上的浮雕像一个带翼的趴伏生物，但轮廓被暗部吞掉，看不清",
+      "人物是左手在上还是右手在上分辨不出，只能确认两只手都搭在轮毂上",
+      "轮毂中心是否有可转动的曲柄/把手，还是人物直接推轮面，看不清",
+      "画面顶部巨轮被截断，轮的完整直径不可知"
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-509",
+    "visibleFacts": {
+      "figureCount": 5,
+      "figures": [
+        {
+          "position": "画面上方偏左（圆形场地的远侧左）",
+          "posture": "站立，双腿分开呈弓步，身体朝向画面中心（viewer-right 下方）",
+          "gaze": "头部朝向画面中心的发光点，俯视",
+          "heldObjects": [
+            "双手握一根细长杖/棍，自肩高斜向下指向场地上左上方的一个发光节点"
+          ],
+          "clothing": "深色短上衣配披风，腿部有绑腿与靴子；短发"
+        },
+        {
+          "position": "画面上方偏右（圆形场地的远侧右）",
+          "posture": "站立，弓步，身体朝向画面中心（viewer-left 下方）",
+          "gaze": "头部朝向场地中心，俯视",
+          "heldObjects": [
+            "双手握一根细长杖，自肩高斜向下指向右上方的发光节点"
+          ],
+          "clothing": "深蓝紫色长披风/斗篷，内着紧身衣与靴子"
+        },
+        {
+          "position": "viewer-left 中部（画面左缘，近侧左）",
+          "posture": "站立，弓步，侧身朝向 viewer-right（场地中心）",
+          "gaze": "头部朝向 viewer-right 的场地中心，平视",
+          "heldObjects": [
+            "双手握一根细长杖，近乎水平地向 viewer-right 伸出，杖尖指向左下方的发光节点"
+          ],
+          "clothing": "深色上衣外罩大披风，披风上有星点纹样；短发"
+        },
+        {
+          "position": "viewer-right 中部（画面右缘，近侧右）",
+          "posture": "站立，侧身朝向 viewer-left（场地中心），重心前倾",
+          "gaze": "头部朝向 viewer-left 的场地中心",
+          "heldObjects": [
+            "双手握一根细长杖，近乎水平地向 viewer-left 伸出，杖尖指向右下方的发光节点"
+          ],
+          "clothing": "紫色/深蓝垂坠长袍，布料分层飘动；长发"
+        },
+        {
+          "position": "画面下方正中（最近侧，背对观者）",
+          "posture": "站立偏弓步，整个背部朝向观者，身体朝向画面深处",
+          "gaze": "后脑朝向观者，无法看到面部；头朝向场地中心方向",
+          "heldObjects": [
+            "右手（viewer-right 那只）握一根细长杖，自腰高斜向上伸向 viewer-right，杖尖指向右下方的发光节点"
+          ],
+          "clothing": "深蓝带星点的长斗篷，肩部有链扣/串珠装饰；短发"
+        }
+      ],
+      "objects": [
+        {
+          "type": "staff",
+          "count": 5,
+          "countConfidence": "high",
+          "where": "五名人物各持一根，全部指向场地内侧",
+          "orientation": "细长杆状，均呈由外向内、略向下的斜向",
+          "arrangement": "围绕圆形场地呈辐辏状向中心汇聚"
+        },
+        {
+          "type": "glowing node",
+          "count": 4,
+          "countConfidence": "medium",
+          "where": "圆形地纹的一圈同心环上，分别在左上、右上、左下、右下",
+          "orientation": "点状发光，无方向",
+          "arrangement": "沿一圈圆环大致四等分分布"
+        },
+        {
+          "type": "central glow",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "圆形地纹的正中心",
+          "orientation": "点状发光",
+          "arrangement": "单个"
+        },
+        {
+          "type": "engraved circle diagram",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "铺装广场地面，占据画面中下部大部分",
+          "orientation": "水平地面上，以透视压扁成椭圆",
+          "arrangement": "多重同心圆加密集放射线，金色发光线条，内有星点与细小刻度"
+        },
+        {
+          "type": "domed pavilion",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "viewer-left 中上部，场地外侧",
+          "orientation": "立面正对偏右",
+          "arrangement": "单座，列柱支撑圆顶，内部放置一具大型环形/轮状仪器"
+        },
+        {
+          "type": "column with ring instrument",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "viewer-right 中上部，场地外侧",
+          "orientation": "竖直柱身，顶端安放一个带辐条的环形仪器",
+          "arrangement": "单座"
+        },
+        {
+          "type": "celestial sphere",
+          "count": 2,
+          "countConfidence": "medium",
+          "where": "一个大的在右上天空，一个较小的在左中偏上天空",
+          "orientation": "圆盘状天体，边缘有轻微明暗交界",
+          "arrangement": "分散两处"
+        },
+        {
+          "type": "bright star",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面上方正中偏左的天空",
+          "orientation": "点光源，带放射状芒刺",
+          "arrangement": "单颗，明显比周围星点亮；周围有以它为圆心的同心圆虚线"
+        },
+        {
+          "type": "ruined pillar / broken wall",
+          "count": null,
+          "countConfidence": "low",
+          "where": "场地四周中景，左右两侧与中部远处",
+          "orientation": "竖直残段",
+          "arrangement": "散落"
+        }
+      ],
+      "environment": [
+        "夜晚户外，圆形石砌铺装广场，边缘有碎石与残垣",
+        "广场地面刻有发光的同心圆与放射线星图",
+        "中远景是一片水域/海湾，台阶从广场通向水边",
+        "水面尽头的山峦之间有一片金色的日出或日落辉光，并在水面留下倒影",
+        "两侧有针叶树剪影",
+        "天空布满星点与粉紫、青绿色的星云带",
+        "天空上叠加着淡金色虚线构成的星座连线与同心圆网格",
+        "画面四周有细金色双线边框"
+      ],
+      "lightSources": [
+        "地面圆环上的 4 个金色发光节点",
+        "圆心的金色发光点",
+        "天空上方正中的一颗明亮带芒星",
+        "远处水平线上的金色辉光（日出/日落）",
+        "左侧圆顶亭内透出的微弱暖光"
+      ],
+      "moonPhase": "gibbous — 右上天空一个较大的淡蓝灰色球体呈接近满圆的圆盘、左侧边缘有一道轻微阴影；左中另有一个较小的紫蓝色球体，形态类似",
+      "spatialRelations": [
+        "五名人物呈环状围在圆形地纹外缘，背对观者的那名在最近侧",
+        "所有法杖的尖端都朝向圆心方向",
+        "圆顶亭在 viewer-left 的场地外侧，立柱仪器在 viewer-right 的场地外侧，两者大致左右对称",
+        "明亮带芒星在天空正上方、水平线辉光的正上方",
+        "较大的球体在明亮带芒星的 viewer-right 上方",
+        "水域与远山在广场的正后方"
+      ],
+      "foreground": [
+        "背对观者的人物及其斗篷下摆",
+        "广场近侧的石板铺装与地面刻纹",
+        "左下角地面上一个十字形/罗盘形的小标记"
+      ],
+      "background": [
+        "圆顶亭与柱顶仪器",
+        "残柱与断墙",
+        "针叶树剪影与远山",
+        "海湾与水平线辉光",
+        "星空、星云带与星座网格"
+      ]
+    },
+    "uncertainObservations": [
+      "发光节点到底是 4 个还是 5 个：我能清楚数出环上 4 个，但有两根法杖（viewer-right 那名与最近侧背对观者那名）似乎指向同一个右下节点，不排除还有一个被人物遮住的第五个节点",
+      "五人手持的到底是法杖、长棍还是细剑，杆身细长无护手、尖端被光晕包住，分辨不出",
+      "天空中那两个球体是月亮还是行星分辨不出；它们都没有明显的月牙形，我按圆盘明暗记为近满相",
+      "最近侧背对观者的人物腰间似乎还别着一样东西（短杖或剑柄），看不清",
+      "五名人物的性别/面部细节大多看不清，只能从发型与衣褶粗分",
+      "左下角地面那个十字形小标记是刻纹、罗盘还是一件实物，分辨不出"
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-511",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "画面正中偏左，站在一道石砌门洞里",
+          "posture": "直立，略含胸，重心稳定；身体正面朝向观者",
+          "gaze": "低头，面部朝下，看不见眼睛；视线朝向身前地面",
+          "heldObjects": [
+            "一根长杆：下端在身体 viewer-left 的腰胯高度，杆身斜穿胸前，上端伸到 viewer-right 的头顶上方",
+            "靠下的那只手（viewer-left）在腰腹高度握住杆身",
+            "靠上的那只手（viewer-right）举到额头高度，既扶着杆也贴着头"
+          ],
+          "clothing": "破烂的长衣/罩衫，下摆撕成条状；额头上缠着一条浅色布带；赤脚"
+        }
+      ],
+      "objects": [
+        {
+          "type": "staff",
+          "count": 8,
+          "countConfidence": "high",
+          "where": "门洞两侧的矮石墙上，viewer-left 4 根、viewer-right 4 根",
+          "orientation": "竖直插立，粗端在下、细端在上，顶端自由",
+          "arrangement": "左右各一排，等距并列"
+        },
+        {
+          "type": "staff",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "人物身前，被双手握持",
+          "orientation": "斜向，自 viewer-left 下方斜指 viewer-right 上方",
+          "arrangement": "单根"
+        },
+        {
+          "type": "stone pedestal block",
+          "count": 8,
+          "countConfidence": "high",
+          "where": "矮墙顶部，每根竖立的长杆下方各一个",
+          "orientation": "方块状，水平放置",
+          "arrangement": "左右各 4 个，一排"
+        },
+        {
+          "type": "gateway",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面正中，人物所在处",
+          "orientation": "竖直门框，开口正对观者",
+          "arrangement": "单座，带厚重的过梁"
+        }
+      ],
+      "environment": [
+        "夜间/昏暗的户外，近乎单色的深褐黑调",
+        "一道低矮的石砌墙横贯画面左右，墙顶立着成排长杆",
+        "墙中央开一处带厚过梁的石门洞",
+        "门洞后方是一片发亮的雾霭天空，远处可见一座尖塔/城镇剪影",
+        "门洞内外是鹅卵石/碎石铺的小路，从远处穿过门洞延伸到画面前景",
+        "画面上方是浓重的暗云/暗幕",
+        "画面左右边缘有细直的浅色边框线"
+      ],
+      "lightSources": [
+        "门洞后方（人物背后）的大片白亮雾光，是画面唯一光源，形成逆光剪影"
+      ],
+      "moonPhase": "not visible — 天空被云雾与暗部覆盖，没有可辨认的月亮",
+      "spatialRelations": [
+        "人物站在门洞的开口中央，身体压在亮光之前形成剪影",
+        "成排长杆分列在人物的 viewer-left 与 viewer-right 两侧，并在矮墙顶上",
+        "人物手持的那根杆横在身体正前方，与两侧竖立的杆呈明显斜角对比",
+        "人物的长影从脚下向观者方向（画面正下方偏左）投射",
+        "远处尖塔在人物的 viewer-right 一侧、门洞亮光之中",
+        "鹅卵石路从门洞内延伸到前景"
+      ],
+      "foreground": [
+        "鹅卵石路面",
+        "人物投向观者的长影",
+        "矮墙的近侧暗面"
+      ],
+      "background": [
+        "门洞后的亮雾天空",
+        "远处尖塔/城镇剪影",
+        "画面上方的暗云"
+      ]
+    },
+    "uncertainObservations": [
+      "额头上的浅色布带是绷带还是发带，分辨不出",
+      "人物的面部完全处在逆光暗部，五官、表情、年龄都看不见",
+      "衣物下摆的条状物是撕裂的布条还是绑带，看不清",
+      "远处亮光中的那个竖直剪影像塔或尖顶建筑，但细节分辨不出，也可能只是一棵树",
+      "矮墙在画面左右两端是否还延伸出更多石台/长杆（被边框和暗部截断），无法确认；我只统计了画面内清晰可见的 8 根",
+      "画面上方大片暗区是云、是室内穹顶还是单纯的暗底，分辨不出"
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-517",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "画面正中偏左，站在石板路上",
+          "posture": "大步行走中，身体朝向 viewer-right，后腿（viewer-left）蹬直、前腿屈膝，重心前倾",
+          "gaze": "头部侧面朝向 viewer-right，略低头看向前下方",
+          "heldObjects": [
+            "双臂环抱一捆剑，抱在胸前偏 viewer-right 一侧；剑柄朝 viewer-right 上方翘起，剑身向 viewer-left 下方斜伸到身后"
+          ],
+          "clothing": "破烂的长斗篷/外袍，下摆与袖口撕成许多长条垂向 viewer-left；紧身长裤；赤脚；头发凌乱蓬松"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 4,
+          "countConfidence": "medium",
+          "where": "被人物抱在怀中",
+          "orientation": "斜向，剑柄与剑尖朝 viewer-right 上方，剑身向 viewer-left 下方",
+          "arrangement": "成束扎堆，剑柄呈小扇形错开"
+        },
+        {
+          "type": "sword",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "一把在画面 viewer-left 的左侧建筑前，一把在画面 viewer-right 的右缘",
+          "orientation": "竖直插在地里，剑尖朝下、剑柄朝上",
+          "arrangement": "左右各一把，单独竖立"
+        },
+        {
+          "type": "pyramidal stone structure",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "一座在 viewer-left 中景，一座在 viewer-right 中景",
+          "orientation": "尖顶朝上的三角形立面，正面开一个深色门洞",
+          "arrangement": "左右分列，中间留出一条石板路"
+        },
+        {
+          "type": "stone paving",
+          "count": null,
+          "countConfidence": "low",
+          "where": "画面下半部，从中景蜿蜒到前景",
+          "orientation": "水平地面",
+          "arrangement": "方块石板拼成的曲折路面"
+        }
+      ],
+      "environment": [
+        "夜间户外，近乎单色的深褐黑调，颗粒质感强",
+        "两座石砌尖顶小建筑，各开一个黑洞洞的门",
+        "方石铺的路面从两座建筑之间向前景弯曲延伸",
+        "画面左上方有一道竖直的朦胧亮光，像透过雾气的光柱",
+        "画面右侧与四周是大片几乎全黑的暗部",
+        "画面左右边缘有细直的浅色边框线"
+      ],
+      "lightSources": [
+        "画面左上方的竖直朦胧亮斑/光柱（未见具体灯具或天体）",
+        "石板路面上的反光"
+      ],
+      "moonPhase": "not visible — 只有一片弥散的竖直光晕，看不到任何月轮轮廓",
+      "spatialRelations": [
+        "人物在两座尖顶建筑之间、略靠 viewer-left 的那座前方",
+        "左侧插地的剑在左建筑的 viewer-left 一侧",
+        "右侧插地的剑在右建筑的 viewer-right 一侧、画面右缘",
+        "抱着的剑束位于人物胸前，剑柄高过人物肩部",
+        "朦胧光柱在左建筑的正上方",
+        "石板路在人物脚下向 viewer-right 后方延伸，绕过右建筑"
+      ],
+      "foreground": [
+        "行走的人物与其飘散的破布条",
+        "近处的方块石板路面与人物的投影"
+      ],
+      "background": [
+        "两座尖顶石建筑及其门洞",
+        "左上方的朦胧光柱",
+        "右侧与上方的大片黑暗"
+      ]
+    },
+    "uncertainObservations": [
+      "抱在怀中的剑数：我能数出 4 个清楚的剑柄/剑首，但剑身重叠严重，不排除还有第 5 把被遮住；所以 4 这个数只能算中等把握",
+      "人物的面部几乎全在暗部，五官、表情、性别都看不出",
+      "右侧建筑再往 viewer-right 还有一团更暗的块状物，可能是第三座同类建筑，也可能只是岩壁，分辨不出",
+      "插在地上的两把剑是真的插进土里还是立在石座上，看不清",
+      "尖顶建筑表面的纹理像鳞片状石板，但具体材质分辨不出",
+      "左上方那道亮光是月光、雾中灯光还是单纯的高光处理，无法判断"
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-512",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "画面正中偏左，走在一条土路上",
+          "posture": "大步行走，身体朝向 viewer-right，后腿（viewer-left）蹬直、前腿屈膝前迈，上身前倾",
+          "gaze": "头向 viewer-left 回转，越过肩膀向后看；眼睛朝 viewer-left 偏下方，眉头微皱"
+        , "heldObjects": [
+            "双臂抱着一捆剑，横在胸腹前；剑柄朝 viewer-right 上方，剑身朝 viewer-left 下方；双手（左手在下托住，右臂环在上）夹住剑束"
+          ],
+          "clothing": "蓝灰色束腰短袍，外披锈红色/砖红色带兜帽的披肩围巾，腰间系带并有小皮囊，米黄色紧身裤，小腿缠绑带的高帮靴；棕色卷发"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 5,
+          "countConfidence": "medium",
+          "where": "被人物抱在胸前",
+          "orientation": "斜向，剑首朝 viewer-right 上方，剑尖朝 viewer-left 下方",
+          "arrangement": "成束，剑身并排呈扇形，剑柄错开成阶梯状"
+        },
+        {
+          "type": "sword",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "画面左下，人物身后的地面上，靠近帐篷",
+          "orientation": "剑尖朝下插进/斜倚地面，剑柄朝上，剑身略向 viewer-right 倾斜",
+          "arrangement": "两把并列，几乎平行"
+        },
+        {
+          "type": "tent",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面 viewer-left 上部与中部",
+          "orientation": "斜向，帐门朝 viewer-right 敞开",
+          "arrangement": "单顶大帐，有尖顶与拉索"
+        },
+        {
+          "type": "banner",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "帐篷顶部旗杆上，画面左上",
+          "orientation": "竖直悬挂的长方形旗面",
+          "arrangement": "单面，深红底色上有一个浅色纹章图案"
+        },
+        {
+          "type": "lantern",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "帐篷内部，画面左中",
+          "orientation": "立在帐内的小桌/箱上",
+          "arrangement": "单盏，玻璃罩内有橙黄色火光"
+        },
+        {
+          "type": "castle",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面右侧中景的山丘顶上",
+          "orientation": "正面朝向 viewer-left",
+          "arrangement": "单座，带雉堞的方塔与围墙，塔顶有一面小旗"
+        },
+        {
+          "type": "boulder",
+          "count": null,
+          "countConfidence": "low",
+          "where": "画面左下角与左缘",
+          "orientation": "不规则卧石",
+          "arrangement": "散落几块"
+        }
+      ],
+      "environment": [
+        "白天户外，浅米黄与褐绿色调的版画/铜版刻线风格",
+        "一条土路从画面左下向右上方的山丘蜿蜒",
+        "路两侧是乱石、草丛与矮灌木",
+        "右侧有一座长满植被的山丘，顶上立着城堡",
+        "天空多云，云层以细密的刻线表现",
+        "画面四周有米黄色装饰性边框，四角有卷草纹角饰"
+      ],
+      "lightSources": [
+        "帐篷内的提灯火光（暖色，画面左中）",
+        "天空的散射日光（无直接可见的太阳）"
+      ],
+      "moonPhase": "not visible — 白天多云天空，画面中没有月亮",
+      "spatialRelations": [
+        "人物在帐篷的 viewer-right 前方，正朝 viewer-right 走离帐篷",
+        "两把插地的剑在人物的 viewer-left 后方、帐篷前的地上",
+        "人物抱着的剑束位于其胸腹正前方，剑柄朝向 viewer-right",
+        "城堡在人物的 viewer-right 后上方的山丘上",
+        "旗帜在帐篷顶部、画面最左上",
+        "提灯在帐篷开口的内侧深处",
+        "土路从人物脚下向 viewer-right 上方通向城堡"
+      ],
+      "foreground": [
+        "行走中的人物与剑束",
+        "左下角的两把插地剑与大块卧石",
+        "脚下的土路与碎石草丛"
+      ],
+      "background": [
+        "帐篷、旗杆与旗帜",
+        "山丘与山顶城堡",
+        "刻线表现的多云天空"
+      ]
+    },
+    "uncertainObservations": [
+      "抱着的剑的数目：剑身部分我能数出 5 条并排的刃面，但清晰可见的轮形剑首只有 4 个，第 5 把的剑首应是被挡住了；所以 5 这个数只能算中等把握",
+      "旗面上的纹章图案是什么（像某种盘绕的兽形或花卉），分辨不出",
+      "腰间挂的是皮囊、钱袋还是刀鞘，看不清",
+      "帐篷内除提灯外还有一张桌子/箱子和若干杂物，具体是什么分辨不出",
+      "山丘城堡旗杆上小旗的颜色与纹样太小，看不清",
+      "人物的鞋是靴子还是裹腿加软鞋，分辨不出"
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-510",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "画面中部偏左，站在一片浅色滩地/缓坡上",
+          "posture": "站立行走中，身体与背部朝向 viewer-right 后方（约四分之三背面对观者）",
+          "gaze": "头向 viewer-left 回转，越过肩膀回望；视线朝 viewer-left 略向下",
+          "heldObjects": [
+            "双臂在身前环抱一捆剑，剑柄朝 viewer-right 上方高出肩头，剑身向 viewer-left 下方斜伸到腰胯以下"
+          ],
+          "clothing": "银白与淡紫灰的多层长袍/外套，外罩大量半透明的薄纱飘带与串珠流苏；系带及膝长靴；银白色蓬松长发"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 4,
+          "countConfidence": "medium",
+          "where": "被人物抱在怀中",
+          "orientation": "斜向，剑首朝 viewer-right 上方，剑尖朝 viewer-left 下方",
+          "arrangement": "成束，剑柄呈扇形错开"
+        },
+        {
+          "type": "sword",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "画面右下角前景，躺在一块垂落的浅色布幔上",
+          "orientation": "剑柄朝 viewer-right 上方，剑尖朝 viewer-left 下方，近乎平行斜躺",
+          "arrangement": "两把并排，剑身上缠绕着淡紫色飘带"
+        },
+        {
+          "type": "pavilion tent",
+          "count": null,
+          "countConfidence": "low",
+          "where": "画面 viewer-right 中景，成片排列",
+          "orientation": "尖顶帐篷，垂幔向下",
+          "arrangement": "一片营地，前后重叠至少三四顶，但相互遮挡数不清"
+        },
+        {
+          "type": "lantern",
+          "count": 2,
+          "countConfidence": "medium",
+          "where": "营地中，一盏在帐篷内侧透出暖光，一盏挂在 viewer-right 的支架上",
+          "orientation": "竖直悬挂/立放",
+          "arrangement": "分散两处"
+        },
+        {
+          "type": "banner on pole",
+          "count": null,
+          "countConfidence": "low",
+          "where": "营地上方，画面 viewer-right 中上部",
+          "orientation": "竖直旗杆，旗面向 viewer-left 横向飘",
+          "arrangement": "数面，被帐篷与纱幔挡住数不清"
+        },
+        {
+          "type": "crescent moon",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面左上角天空",
+          "orientation": "亮缘在 viewer-left 上方，月牙开口朝 viewer-right 下方",
+          "arrangement": "单个，部分被云遮住"
+        }
+      ],
+      "environment": [
+        "清晨/黄昏的淡彩水彩风格，整体是极浅的白、淡蓝、淡紫色调",
+        "画面 viewer-left 是一片平静的水面/湖泊，远处有淡蓝色的山丘剪影",
+        "人物脚下是浅色的碎石滩地",
+        "画面 viewer-right 是一片白色帐篷营地，帐幔层层垂落",
+        "画面右上角垂下一根开着白色花朵的树枝",
+        "画面左下角有白色花丛与叶簇",
+        "空中飘着细小的白色花瓣",
+        "画面四周有浅色细线边框，四角有藤蔓状角饰"
+      ],
+      "lightSources": [
+        "左上角的月牙（冷光）",
+        "营地帐篷内透出的暖黄灯光",
+        "viewer-right 悬挂的提灯暖光",
+        "天空整体的弥散柔光"
+      ],
+      "moonPhase": "crescent — 位于画面左上角，亮缘在 viewer-left 上侧，牙尖朝 viewer-right，部分被云遮挡",
+      "spatialRelations": [
+        "人物在营地的 viewer-left 前方，正朝 viewer-right 后方（营地）走去，但头回望 viewer-left",
+        "两把平放的剑在人物的 viewer-right 下方前景，位置比人物更靠近观者",
+        "月牙在人物头部的 viewer-left 上方",
+        "水面与远山在人物的 viewer-left 后方",
+        "开花的树枝在画面 viewer-right 上角，悬在营地之上",
+        "白色花丛在画面 viewer-left 下角"
+      ],
+      "foreground": [
+        "右下角垂落的浅色布幔与其上的两把剑、缠绕的飘带",
+        "左下角的白色花丛与叶簇",
+        "人物脚下的碎石滩"
+      ],
+      "background": [
+        "左侧水面与远山",
+        "右侧白色帐篷营地与旗杆",
+        "右上角开花的树枝",
+        "布满淡云的天空与月牙"
+      ]
+    },
+    "uncertainObservations": [
+      "抱着的剑的数目：剑首我能清楚数出 4 个，但剑身在纱幔与高光中重叠，可能还有第 5 把被遮住，所以只能给中等把握",
+      "人物的性别看不出，面容偏中性",
+      "营地帐篷的确切数量数不清，帐幔前后重叠且色调几乎与背景同化",
+      "旗杆/旗帜的数量数不清，原因同上",
+      "右下角布幔上那两把剑是躺在布上还是插在布下的地里，分辨不出",
+      "右上角树枝上开的是什么花（像白蔷薇），分辨不出",
+      "画面整体亮度极高、对比极低，许多细部边界无法确定"
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-506",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "画面中部偏左，坐在一张床上",
+          "posture": "坐姿，上身前倾，含胸驼背，双肘向前并拢；身体朝向 viewer-right",
+          "gaze": "低头，整张脸埋在双手掌心里，看不见面部与视线方向",
+          "heldObjects": [
+            "双手抬到脸部高度，手掌捂住整个面部；手中没有拿任何器物"
+          ],
+          "clothing": "白色/极浅的薄纱睡裙，领口宽大露出肩颈，袖口有蕾丝；银白色长发披散到腰部"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 8,
+          "countConfidence": "high",
+          "where": "画面 viewer-left 的墙面上，自画面上缘一直排到人物头部后方",
+          "orientation": "全部水平，剑柄朝 viewer-left，剑尖朝 viewer-right",
+          "arrangement": "上下等距堆叠成一列，像挂在墙上的陈列架"
+        },
+        {
+          "type": "bed",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面下半部，人物坐在上面",
+          "orientation": "床头朝 viewer-left，床面向 viewer-right 下方铺开",
+          "arrangement": "单张，铺着淡蓝紫色被褥与白色床单，左侧有一个白色枕头"
+        },
+        {
+          "type": "bedpost with finial",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面右下，床的 viewer-right 一角",
+          "orientation": "竖直柱身，顶端一个球形饰头",
+          "arrangement": "单根，连着带卷草纹的金属床栏"
+        },
+        {
+          "type": "lantern",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面右下角，床边地面/台面上",
+          "orientation": "六角形灯笼，立放",
+          "arrangement": "单盏，内有暖黄色火焰"
+        },
+        {
+          "type": "full moon",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "画面右上角，窗外天空中",
+          "orientation": "完整圆盘，表面可见环形山斑纹",
+          "arrangement": "单个，周围有云"
+        },
+        {
+          "type": "white flower",
+          "count": null,
+          "countConfidence": "low",
+          "where": "画面左下角，床边",
+          "orientation": "花朵朝向不一",
+          "arrangement": "一丛，花朵与叶片交叠数不清"
+        },
+        {
+          "type": "balustrade",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "画面 viewer-right 中部，窗外/阳台上",
+          "orientation": "水平栏杆，带竖直栏柱",
+          "arrangement": "一段"
+        }
+      ],
+      "environment": [
+        "夜晚的室内卧房，极浅的白、淡蓝、淡紫水彩调",
+        "viewer-left 是挂满剑的墙面，墙上爬着细碎的藤蔓与小花",
+        "viewer-right 是一处敞开的大窗/落地门，垂着白色薄纱帘",
+        "窗外可见栏杆、远处的海湾或湖面与淡蓝色山丘剪影",
+        "窗外天空有云，右上角悬着满月",
+        "床上铺着层层叠叠的淡蓝紫色被褥与白纱",
+        "画面四周有浅色细线边框，四角有藤蔓状角饰"
+      ],
+      "lightSources": [
+        "右上角的满月（冷光，画面主光源）",
+        "右下角灯笼内的暖黄火焰",
+        "窗外天空的弥散微光"
+      ],
+      "moonPhase": "full — 完整圆盘，盘面可见深浅斑纹，位于画面右上角窗外，周围环绕云层",
+      "spatialRelations": [
+        "成排的剑在人物的 viewer-left 后上方墙面上，剑尖全部指向人物所在的 viewer-right 方向",
+        "人物坐在床中部偏左，被褥向 viewer-right 下方铺展",
+        "枕头在人物的 viewer-left 侧",
+        "窗与月亮在人物的 viewer-right 上方",
+        "灯笼与床柱在人物的 viewer-right 下方前景",
+        "白色花丛在人物的 viewer-left 下方前景",
+        "栏杆与远景水面在窗外、人物的 viewer-right 后方"
+      ],
+      "foreground": [
+        "右下角的灯笼、床柱与金属床栏",
+        "左下角的白色花丛与叶簇",
+        "床前垂落的被褥与白纱"
+      ],
+      "background": [
+        "挂满剑的墙面与墙上藤蔓",
+        "敞开的窗、纱帘与栏杆",
+        "窗外的水面、远山、云与满月"
+      ]
+    },
+    "uncertainObservations": [
+      "墙上剑的数量我上下数了两遍都是 8 把，但最下面一把紧贴人物头发、最上面一把紧贴画面上缘，若上下还有被截断或被遮的，我无法确认",
+      "人物的面部完全被双手遮住，表情、年龄、性别都无法判断（只能从体态与发型粗分）",
+      "床左侧浅色块到底是枕头、靠垫还是堆起的被褥，分辨不出",
+      "窗外远景是海、湖还是云海，分辨不出",
+      "左下角白色花朵的种类（像白蔷薇或白芍药）分辨不出，数量也数不清",
+      "墙面上的细碎纹样是真实藤蔓还是壁纸图案，分辨不出",
+      "灯笼是立在地面、矮柜还是床头台上，被纱幔挡住看不清"
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-b"
+  }
+]

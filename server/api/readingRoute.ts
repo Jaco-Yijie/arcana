@@ -143,6 +143,14 @@ export async function handleReadingStream(
 
   send('phase', { phase: context.readingMode === 'deep' ? 'thinking' : 'writing' })
 
+  if (config.provider === 'mock') {
+    const result = await new MockReadingProvider().generate(context)
+    if (result.ok) send('done', { reading: result.reading })
+    else send('failed', { error: result.error })
+    res.end()
+    return
+  }
+
   /**
    * 生成逻辑（含「最多重试一次」）在 server/reading/generateReading.ts，
    * 与 20 次稳定性测试脚本共用同一份 —— 测的就是线上真正跑的东西。

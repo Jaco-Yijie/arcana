@@ -1,11 +1,13 @@
 import { handleTranslation } from './api/translationRoute.ts'
+import { handleUserApi } from './api/userRoute.ts'
+import { handleAdminApi } from './api/adminRoute.ts'
 /**
  * Arcana 后端。
  *
  * 开发：Vite(5173) 把 `/api` 代理到这里(8787)
  * 生产：这一个进程同时托管 `dist/` 与 `/api`
  *
- * 存在的唯一理由：**让 DEEPSEEK_API_KEY 待在浏览器碰不到的地方。**
+ * 服务端保管模型密钥、签发登录会话，并通过 PostgreSQL 保存用户数据。
  * 浏览器永远只跟本站说话，从不直接访问 api.deepseek.com。
  */
 
@@ -17,6 +19,7 @@ import { extname, join, normalize, resolve } from 'node:path'
 import { config, describeConfig } from './env.ts'
 import { handleConfig, handleReading, handleReadingStream } from './api/readingRoute.ts'
 import { handleFollowUp } from './api/followUpRoute.ts'
+import { handleContextQuestions } from './api/contextIntakeRoute.ts'
 import { sendJson } from './http.ts'
 import { applySecurityHeaders, assetOrigin, cspMode, handleCspReport } from './security.ts'
 import { registerCardText } from '../src/data/deck/localized.ts'
@@ -105,6 +108,8 @@ const server = createServer((req, res) => {
 
   void (async () => {
     try {
+      if (await handleAdminApi(req, res, url)) return
+      if (await handleUserApi(req, res, url)) return
       if (url.pathname === '/api/tarot/translate' && req.method === 'POST') { await handleTranslation(req, res); return }
       if (url.pathname === '/api/tarot/reading' && req.method === 'POST') {
         await handleReading(req, res)
@@ -112,6 +117,10 @@ const server = createServer((req, res) => {
       }
       if (url.pathname === '/api/tarot/reading/stream' && req.method === 'POST') {
         await handleReadingStream(req, res)
+        return
+      }
+      if (url.pathname === '/api/tarot/context-questions' && req.method === 'POST') {
+        await handleContextQuestions(req, res)
         return
       }
       if (url.pathname === '/api/tarot/followup' && req.method === 'POST') {

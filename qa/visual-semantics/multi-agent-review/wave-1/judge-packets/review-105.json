@@ -1,0 +1,297 @@
+{
+  "reviewId": "review-105",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-105.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-105.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene / keyObjects / spatialRelations",
+          "existing": "large dark horned silhouette cast on the rear wall",
+          "observed": "a large dark silhouette on the rear wall whose form is not identifiable",
+          "evidence": "The shape reads as a broad dark mass rising from the centre of the wall and splitting into two upward limbs. That is equally consistent with a bare tree trunk and branches, a crack or stain, or a cast shadow; nothing in the pixels distinguishes horns from those. I recorded this as unresolvable, so 'horned' is asserted beyond what the image supports (the packet hedges only whether it is cast or painted, not what it depicts).",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "a carved five-pointed star on its front face",
+          "observed": "a carved star-shaped emblem on the block's front face, point count not determinable",
+          "evidence": "The emblem is incised into the block's front face at very low luminance. A star outline is visible but the individual points cannot be separated, so five versus six points is not establishable from the pixels.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "a large dark horned silhouette looming on the wall behind them",
+            "with": "a large dark silhouette of indeterminate form looming on the wall behind them"
+          },
+          {
+            "find": "large dark horned silhouette cast on the rear wall",
+            "with": "large dark silhouette on the rear wall, form indeterminate (reads as horns or as a bare tree)"
+          },
+          {
+            "find": "the horned silhouette rises behind and above both figures",
+            "with": "the silhouette rises behind and above both figures"
+          },
+          {
+            "find": "a carved five-pointed star on its front face",
+            "with": "a carved star emblem on its front face, point count not resolvable"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-105",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left of center",
+              "posture": "standing, barefoot, facing the viewer but with the head tipped back/down under the object; both arms raised straight above the head",
+              "gaze": "not determinable — the face is in deep shadow and partly behind the raised object",
+              "heldObjects": [
+                "a ring- or hoop-shaped object held aloft in both hands above the head"
+              ],
+              "appearance": "dark ragged garment with a torn, shredded hem ending around the knee; bare lower legs and feet; a chain running from the neck/shoulder area"
+            },
+            {
+              "position": "right of center",
+              "posture": "standing, barefoot, body facing the viewer, head bowed low; both hands raised together in front of the face/chest",
+              "gaze": "downward — the face is obscured by hanging hair and shadow",
+              "heldObjects": [
+                "nothing clearly identifiable; the hands are clasped or pressed together in front of the face"
+              ],
+              "appearance": "long dark hair falling over the face; a long dark ragged robe reaching the ankles; bare feet; a chain running from the neck/chest area"
+            }
+          ],
+          "objects": [
+            {
+              "type": "human figure",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one left of the central block, one right of it"
+            },
+            {
+              "type": "ring / hoop / open circular object",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "held above the left figure's head in both hands; it reads as a flat open circle or band seen at a slight angle"
+            },
+            {
+              "type": "chain",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one chain runs from the left figure down and to the right, to the top of the central block; a second runs from the right figure down and to the left, to the same block — one per figure"
+            },
+            {
+              "type": "rectangular stone block / pedestal",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "dead center of the lower half, between the two figures; its top is a flat slab and its front face carries an incised star-shaped emblem"
+            },
+            {
+              "type": "incised star-shaped emblem",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "carved or scratched into the front face of the central stone block"
+            },
+            {
+              "type": "arched doorway / recessed arch",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "lower left, set into the stone wall behind the left figure; dark and closed or empty"
+            },
+            {
+              "type": "large dark silhouette on the back wall",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "upper center, a looming branching dark shape spanning most of the upper background — reads as a bare tree trunk with two upward limbs, or as a stain/shadow on the wall; its nature is not resolvable"
+            },
+            {
+              "type": "metal ring / fitting on the block's side",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "right face of the central block, near where the right figure's chain approaches"
+            }
+          ],
+          "environment": [
+            "a dark stone interior or walled enclosure",
+            "rough masonry wall on the left with visible courses of stone",
+            "a cobbled/flagstone floor with a lighter paved strip running from the block toward the bottom of the frame",
+            "overall extremely low-key: most of the frame is near-black with only rim-light picking out edges",
+            "a thin painted rule border at the left and right edges"
+          ],
+          "lightSources": [
+            "a single unseen light source from above and slightly in front, rim-lighting the tops of both figures' shoulders and arms, the top slab of the block, and the paved strip on the floor; the source itself is not in frame"
+          ],
+          "moonPhase": "not visible",
+          "spatialRelations": [
+            "the two figures stand on opposite sides of the central stone block, both facing roughly toward the viewer rather than toward each other",
+            "a chain runs from each figure to the top of the block, so both are linked to the same central object but not directly to one another",
+            "the left figure's raised object is the highest lit element in the frame; the right figure's head is the lowest-held",
+            "the arched doorway is behind and to the left of the left figure, at floor level",
+            "the large dark silhouette rises behind and between both figures on the back wall",
+            "neither figure touches the other; neither touches the block with their hands"
+          ],
+          "foreground": [
+            "paved floor strip",
+            "lower hems and bare feet of both figures"
+          ],
+          "background": [
+            "stone wall",
+            "arched doorway",
+            "large indistinct dark silhouette"
+          ]
+        },
+        "uncertainObservations": [
+          "the object held above the left figure's head cannot be identified with confidence — it reads as an open ring, hoop, circlet or thin disc; no interior detail is visible",
+          "whether the central block's front emblem is a five-pointed or six-pointed star is not resolvable at this brightness",
+          "the large dark shape on the back wall may be a tree, a pair of horns, a crack, or a cast shadow — it cannot be identified",
+          "what the right figure holds (if anything) between the clasped hands is not visible",
+          "whether the chains are attached to collars, wrists or the garments cannot be seen; the attachment points are in shadow",
+          "whether the arched opening at lower left is a door, a window or a niche cannot be determined",
+          "both figures' facial features and expressions are entirely lost to shadow"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene / keyObjects / spatialRelations",
+          "existing": "large dark horned silhouette cast on the rear wall",
+          "observed": "a large dark branching silhouette on the rear wall whose form is ambiguous",
+          "evidence": "The shape is a thick vertical trunk rising from behind the block that splits into two limbs curving outward and upward. It reads equally well as a bare tree or root mass as it does as a pair of horns, and the image is too low-key to settle which. The text itself flags whether the shape is cast or painted, but asserts 'horned' without hedging. I did not establish a tree — I established that the reading is not determinable.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "large dark horned silhouette cast on the rear wall",
+            "with": "large dark branching silhouette on the rear wall, readable as either horns or a bare tree"
+          },
+          {
+            "find": "with a large dark horned silhouette looming on the wall behind them",
+            "with": "with a large dark branching silhouette looming on the wall behind them"
+          },
+          {
+            "find": "the horned silhouette rises behind and above both figures, centred on the wall",
+            "with": "the branching silhouette rises behind and above both figures, centred on the wall"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-105",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left of center",
+              "posture": "standing upright, barefoot, both arms raised straight above the head",
+              "gaze": "head bowed/tilted downward, face in deep shadow, not readable",
+              "heldObjects": [
+                "a circular ring or hoop, held in both hands above the head"
+              ],
+              "details": "long ragged tattered robe with frayed hanging strips at the sleeves and hem, bare lower legs and bare feet, a heavy chain draped across the chest and running away to the right"
+            },
+            {
+              "position": "right of center",
+              "posture": "standing upright, barefoot, head bowed low, both hands raised and held together near the chin/chest",
+              "gaze": "downward, face obscured by hanging hair and shadow",
+              "heldObjects": [
+                "appears to be gripping the chain with both hands, though the hands are in shadow"
+              ],
+              "details": "long dark hair falling over the face, long ragged robe with frayed hem, bare feet"
+            }
+          ],
+          "objects": [
+            {
+              "type": "chain",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one running from the left figure's chest down to the top of the central block; one running from the right figure's hands down to the top of the central block"
+            },
+            {
+              "type": "ring / hoop",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held aloft above the left figure's head"
+            },
+            {
+              "type": "stone block / pedestal",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "dead center, between the two figures, roughly waist height"
+            },
+            {
+              "type": "engraved five-pointed star within a circle",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "carved into the front face of the central stone block"
+            },
+            {
+              "type": "metal ring/handle fixed to the block",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the right-hand side of the stone block, mid-height"
+            },
+            {
+              "type": "arched doorway with plank door",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "far left, set into the stone wall, behind and left of the left figure"
+            }
+          ],
+          "environment": [
+            "a dark stone chamber or vault",
+            "rough stone block walls, most clearly on the left",
+            "cobbled/flagged floor receding toward the back",
+            "a large dark branching silhouette on the rear wall resembling a tree or root system"
+          ],
+          "lightSources": [
+            "weak diffuse light from above and slightly behind the viewer, pooling on the floor between and in front of the two figures; no lamp, flame, sun or moon visible in frame"
+          ],
+          "moonPhase": null,
+          "spatialRelations": [
+            "the two figures face each other across the central stone block",
+            "both chains converge on the top surface of the block, anchoring the figures to it",
+            "the branching dark shape on the wall rises directly behind and between the two figures",
+            "the arched door sits well to the left, behind the left figure, apparently shut",
+            "the left figure is taller in frame and stands slightly closer to the viewer than the right figure"
+          ],
+          "foreground": [
+            "cobbled floor with a pale pooled highlight",
+            "bare feet of both figures"
+          ],
+          "background": [
+            "dark stone wall",
+            "arched door at left",
+            "large branching silhouette"
+          ]
+        },
+        "uncertainObservations": [
+          "The image is extremely low-key; large areas are near-black and detail there cannot be recovered.",
+          "The engraved emblem on the block face reads as a five-pointed star inside a circle, but the contrast is very low and the point count is not fully certain.",
+          "Whether the right figure's hands are gripping the chain, clasped in front of the face, or holding some small object cannot be determined.",
+          "The branching shape on the rear wall could be a painted/carved tree, actual roots, a crack, or a cast shadow — I cannot tell which.",
+          "Neither figure's facial features or expression are visible."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

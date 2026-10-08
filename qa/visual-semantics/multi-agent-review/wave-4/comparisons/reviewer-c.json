@@ -1,0 +1,134 @@
+[
+ {
+  "reviewId": "review-416",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "a moonlit sky above a misty river landscape",
+    "observed": "bright pale-blue daylight sky with sunlit white cloud; a large pale moon disc is visible but is not the light source",
+    "evidence": "The whole scene is high-key daylight — white cumulus lit from the upper right, bright haze on the hills, a sun-bright reflection on the river. Nothing in the frame is lit as night.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a moonlit sky above a misty river landscape",
+     "with": "a bright daylight sky, a pale moon disc still visible in it, above a misty river landscape"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-404",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-408",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "two swords held upright by the foreground figure",
+    "observed": "both held blades hang DOWN at her sides — arms lowered, the left-hand blade angling down-left and the right-hand blade down-right, tips toward the ground",
+    "evidence": "Her hands are at hip height with the blades running downward past her skirt to the shoreline; neither blade rises above the grip. Same error repeats in visualTensions.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "toward a moonlit horizon",
+    "observed": "bright overcast daylight; a pale moon disc is present in the upper right but the scene is daylit",
+    "evidence": "Sky is pale and bright with lit cloud, the shore and water read as flat daylight, no night value anywhere.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "three swords lying crossed on the ground",
+    "observed": "count not resolvable — at least 3 overlapping near-parallel blades lying flat, tips toward the right/lower right; could be more",
+    "evidence": "The foreground blades overlap and fade into the flowers and pebbles; I recorded null rather than a number, so this is flagged uncertain, not wrong.",
+    "confidence": "low"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two swords held upright by the foreground figure",
+     "with": "two swords held point-down at the foreground figure's sides, arms lowered"
+    },
+    {
+     "find": "the upright held swords contrast with the swords lying discarded on the ground",
+     "with": "the lowered, point-down held swords echo the swords lying discarded on the ground"
+    },
+    {
+     "find": "toward a moonlit horizon",
+     "with": "toward a bright daylit horizon under a pale moon"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-403",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-415",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "visualTensions",
+    "existing": "the cloth binds her hands and head yet trails loose and free",
+    "observed": "only the head is bound (blindfold); the hands are free — the left arm hangs down and out with the hand open and empty, the right hand loosely grips the shawl at her chest",
+    "evidence": "The pale strip hangs from the chest/right hand down across the skirt; no loop or wrap crosses either wrist, and the extended left hand shows spread, unbound fingers.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the cloth binds her hands and head yet trails loose and free",
+     "with": "the cloth covers her eyes yet her hands are free, one open and reaching, the strip trailing loose"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-414",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "emphasizedAspects",
+    "existing": "a surrounding ring of blades that is present but not touching",
+    "observed": "not a ring — two loose groups flanking her, roughly four to the left and four to the right, with open water directly in front of her and open misted water directly behind",
+    "evidence": "The bottom-center foreground and the whole mid-ground behind her are empty water; the blades only occupy the left and right thirds, so the arrangement has large gaps front and back.",
+    "confidence": "medium"
+   },
+   {
+    "field": "scene",
+    "existing": "beneath a large crescent moon in a misty blue night",
+    "observed": "very high-key, bright pale light with a crescent moon in a large bright halo — reads closer to bright daylight mist than to night",
+    "evidence": "Whites are near-paper-white across sky, water and figure with no dark values anywhere; I could not call this night from the pixels, so flagging as uncertain rather than plainly wrong.",
+    "confidence": "low"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a surrounding ring of blades that is present but not touching",
+     "with": "blades flanking her on both sides, close but not touching, with open water ahead and behind"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-402",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ }
+]

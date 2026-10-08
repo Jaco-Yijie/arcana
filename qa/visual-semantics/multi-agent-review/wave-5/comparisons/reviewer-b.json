@@ -1,0 +1,152 @@
+[
+  {
+    "reviewId": "review-507",
+    "verdict": "pass",
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-509",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "central bright point of light where the staff tips converge",
+        "observed": "盲观察记录：圆形地纹正中心确实有 1 个发光点，但法杖的发光尖端并没有汇聚到那里；我记下的是内侧一圈同心环上有 4 个独立的发光节点（左上、右上、左下、右下），每名持杖者的杖尖分别指向其中一个节点，杖尖与圆心之间仍隔着相当距离",
+        "evidence": "地面星图上可见一圈同心环，环上 4 处金色亮点与各自最近的杖尖相接；圆心另有一个单独的亮点，没有任何杖尖触及",
+        "confidence": "medium"
+      },
+      {
+        "field": "spatialRelations",
+        "existing": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+        "observed": "五根杖确实呈辐辏状由外向内、略向下指，但杖尖落在内环的发光节点上，彼此并不相接；我记录的节点数是 4（中等把握），并存疑是否有第 5 个被人物遮住",
+        "evidence": "杖尖的光晕各自独立，分布在环上四个方位，没有在中心重合",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "each holding a glowing-tipped staff angled inward toward a luminous point at the centre of a large engraved circular diagram",
+          "with": "each holding a glowing-tipped staff angled inward toward one of several glowing nodes spaced around an inner ring of a large engraved circular diagram, which is separately lit at its centre"
+        },
+        {
+          "find": "central bright point of light where the staff tips converge",
+          "with": "glowing nodes spaced around an inner ring where the staff tips point, plus a separate bright point at the circle's centre"
+        },
+        {
+          "find": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+          "with": "the five staffs radiate inward and their lit tips reach glowing nodes spaced around an inner ring of the engraved circle, short of the separate point of light at its centre"
+        }
+      ]
+    },
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-511",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "visualTensions",
+        "existing": "the figure's forward stance against the shadow trailing behind him",
+        "observed": "盲观察记录：人物是直立、略含胸、重心稳定地站在门洞里，身体正面朝向观者，没有前冲/迈步的姿态；唯一光源在他背后的门洞，影子是从脚下向观者方向（画面正下方偏左）投出的，也就是在他身前，不在身后",
+        "evidence": "门洞亮雾形成逆光剪影，长影自人物双脚向画面前景延伸；该揭示包自己的 spatialRelations 也写的是 shadow stretches forward toward the viewer，与这条自相矛盾",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "the figure's forward stance against the shadow trailing behind him",
+          "with": "the figure's still, slightly hunched stance against the long shadow thrown forward toward the viewer"
+        }
+      ]
+    },
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-517",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "visualTensions",
+        "existing": "the figure's body moves away while its head turns back",
+        "observed": "盲观察记录：人物大步行走，身体朝向 viewer-right，而头部也是侧面朝向 viewer-right、略低头看向前下方——头和身体同向，没有回头。（同批次的 review-512 与 review-510 我都明确记了『头向 viewer-left 回转，越过肩膀回望』，517 我记的恰恰相反。）",
+        "evidence": "人物头部呈朝 viewer-right 的侧影轮廓，下颌与鼻梁指向行进方向，颈部没有扭转；视线朝前下方的石板路",
+        "confidence": "high"
+      },
+      {
+        "field": "spatialRelations",
+        "existing": "the figure stands between the two pyramid structures, closer to the right one",
+        "observed": "盲观察记录：人物确实在两座尖顶建筑之间，但更靠近 viewer-left 那一座，站在它的前方",
+        "evidence": "人物身体与左侧尖顶建筑的门洞在画面上有重叠，右侧建筑明显更远、更小且位于其 viewer-right 后方",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "the figure's body moves away while its head turns back",
+          "with": "the figure's whole body and head face the same way as it strides, eyes lowered to the path ahead"
+        },
+        {
+          "find": "the figure stands between the two pyramid structures, closer to the right one",
+          "with": "the figure stands between the two pyramid structures, closer to the left one"
+        },
+        {
+          "find": "a backward glance that keeps watch on what is left behind",
+          "with": "eyes kept on the path ahead rather than on what is left behind"
+        }
+      ]
+    },
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-512",
+    "verdict": "pass",
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-510",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "two swords lying crossed on the ground in the lower right",
+        "observed": "盲观察记录：右下角前景的两把剑是并排、几乎平行地斜躺着（剑柄朝 viewer-right 上方、剑尖朝 viewer-left 下方），不是交叉；而且它们躺在一块垂落的浅色布幔上，不是直接在地面上，剑身上还缠着淡紫色飘带",
+        "evidence": "两条剑身的轴线在画面上保持大致相同的倾角、始终没有相交；下方可见布幔的褶皱与边缘",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "two swords lying crossed on the ground in the lower right",
+          "with": "two swords lying side by side, nearly parallel, on draped pale cloth in the lower right"
+        }
+      ]
+    },
+    "reviewer": "reviewer-b"
+  },
+  {
+    "reviewId": "review-506",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "nine swords mounted horizontally on the wall",
+        "observed": "盲观察记录：墙上水平排列的剑我上下数了两遍都是 8 把（剑柄朝 viewer-left、剑尖朝 viewer-right，等距堆叠成一列）。复看图像核实我当初记下的这个疑点后，自上缘到人物头发处仍只能数出 8 个剑柄，最下面一把之下是床栏与藤蔓装饰，没有第 9 把",
+        "evidence": "左侧墙面上的剑柄十字护手自上而下等距出现 8 次；最上一把紧贴边框、最下一把恰在人物发顶上方，其下即为金属床栏卷草纹",
+        "confidence": "high"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "nine swords mounted horizontally on the wall",
+          "with": "eight swords mounted horizontally on the wall"
+        }
+      ]
+    },
+    "reviewer": "reviewer-b"
+  }
+]

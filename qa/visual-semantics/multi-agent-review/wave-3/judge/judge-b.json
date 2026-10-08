@@ -1,0 +1,82 @@
+[
+  {
+    "reviewId": "review-309",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image before reading any reviewer notes. A woman in a green/olive cloak with pale lace-edged undersleeves is low to the ground on the left: a bent, pale-cream-clad knee and lower leg rest on the earth at the lower left under her cloak, and the crown of her head sits only slightly above the top rail of the work frame whose base rests on the ground. She is kneeling/crouching, not standing. Her hands are together over the frame's upper edge, gaze down. On the stretched surface is one red heart-shaped patch, point down, pierced by exactly three swords: the centre one vertical with pommel up, the left and right ones angled inward. Heavy rain streaks the whole frame; forest, a river valley in the right background, baskets, pots, a spool, mushrooms and ferns around the base; ornate botanical border.",
+    "reason": "All five gates are met for the posture item and only that item. (1) The posture is visually unambiguous: the bent knee on the ground and the head barely clearing the frame's top rail cannot be produced by a standing figure. (2) reviewer-b and reviewer-d independently flagged the identical field and the identical fact (spatialRelations: 'stands' is wrong, she kneels/crouches), each at high confidence, before seeing each other. (3) I reached the same conclusion from the image on my own. (4) Posture is an observable fact, not interpretation. (5) The fix is a single-word substring replacement. I deliberately did NOT carry the reviewers' other suggestions: 'wooden panel' -> 'stretched woven cloth' was raised by reviewer-d alone (reviewer-b recorded the same object as a 'wooden work frame / stretched panel' without filing an issue), so it fails gate 2 despite my own reading of a visible warp-and-weft weave; and the spool colour is actively contradicted between reviewers (reviewer-b: pink/rose, reviewer-d: dark red), so it fails gate 1. I also kept reviewer-b's 'to the left of' wording rather than reviewer-d's 'behind', since the two disagree on depth and only the standing/kneeling fact is jointly attested.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "the woman stands to the left of the panel, her hands at its upper edge",
+          "with": "the woman kneels to the left of the panel, her hands at its upper edge"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-310",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I viewed the image before reading any reviewer notes. A near-monochrome, very dark plate. One figure, seen from behind, mid-stride and barefoot, in a long ragged-hemmed coat, walking away from the viewer toward a pale glow low on the horizon; a long shadow is thrown back toward the viewer across cracked paving. One slender pointed rod/blade in each hand, two total, both angled down and outward. The foliage surround is NOT a closed ring: two leafy arcs rise from the lower left and lower right, meet and are bound by a ribbon knot at the top centre (two ribbon tails hanging into the opening), and at the bottom they terminate separately, leaving a wide gap through which the paving and the figure's cast shadow run out of the frame. Four carved corner heads outside the foliage: human profile upper left, hooked-beak raptor upper right, horned bovine lower left, maned lion lower right. Reflective wet expanse and a distant spired skyline behind the figure.",
+    "reason": "All five gates are met. (1) The wreath's bottom gap is unambiguous on the image: the two arcs visibly stop short above the pavement and the figure's shadow passes out through the opening. (2) reviewer-b and reviewer-e independently filed the same issue on the same text, each at high confidence, and each independently proposed amending both 'a closed wreath ring' and 'the enclosing wreath ring'. (3) I reached the same conclusion unaided. (4) Open-vs-closed is a presence/absence fact, not interpretation. (5) Two exact substring replacements suffice. I used the more conservative wording of the two proposals: I corrected only the false visual claim ('closed ring' -> 'open arch bound at the top') and left the interpretive framing ('a completed circuit', 'the enclosing ... versus the open horizon') intact, rather than adopting reviewer-e's broader rewrite of the theme itself. Note the rest of the file already describes the foliage correctly as an 'arch' in scene and keyObjects, so these two entries were the only inconsistent ones.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "a completed circuit, shown as a closed wreath ring",
+          "with": "a completed circuit, shown as an open wreath arch bound at the top and parted at the bottom"
+        },
+        {
+          "find": "the enclosing wreath ring versus the open horizon beyond it",
+          "with": "the enclosing wreath arch versus the open horizon beyond its bottom gap"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-311",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I viewed the image before reading any reviewer notes. A dark vaulted stone chamber. One cloaked figure, seen from behind, left of centre, one arm raised and extended to the sword on the central axis. The sword is vertical and POINT-DOWN: a small round pommel sits at the very top, the straight crossguard below it, and the glowing blade descends from there past the figure's hand into the top face of a stone block/altar, where a large vertical crack splits the block's front face directly in line with the tip. A circular incised disc with radiating spokes rings the entry point on the altar top. A pale bare-branching mass spreads symmetrically left and right behind the blade at about crossguard height. Overhead the ceiling is a fan/rib vault in regular masonry courses radiating from a point directly above the sword, with a light shaft descending from its apex. An arched doorway with steps sits at the right; leaning slabs at the left.",
+    "reason": "All five gates are met for the sword's orientation. (1) The orientation is unambiguous: pommel at the top, crossguard beneath it, blade running down into the stone, and the altar's crack directly in line with the buried tip. (2) reviewer-b and reviewer-d independently filed the identical issue against the identical spatialRelations line, both at high confidence, with essentially the same proposed wording. (3) I reached the same conclusion unaided. (4) Orientation is an observable fact, explicitly in scope. (5) One exact substring replacement. I withheld reviewer-b's two solo items. Its 'gripping the hilt' -> 'gripping the blade below the crossguard' is directly contradicted by reviewer-d, who records the hand on the grip, so the visual fact is not unambiguous (gate 1 fails). Its 'cracked wall with radiating fracture lines' -> 'fan-vaulted ceiling' was filed by reviewer-b alone; reviewer-d's blind observation does independently describe a fan/rib vault overhead and places the only crack in the altar block, and I read it the same way, but reviewer-d did not raise it at the comparison stage, so I am short of the two-reviewer bar and declined rather than hesitate into a correction. FLAG FOR A LATER PASS: keyObjects 'cracked wall with radiating fracture lines' and spatialRelations 'the cracked wall spreads behind and above the sword' are, in my own reading, a fan vault rather than a fractured wall, and the visualTensions entries that build on 'the towering fracture pattern' and 'the radiating cracks' inherit that reading.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "the sword stands vertically at the centre, its point rising above the figure's head",
+          "with": "the sword stands vertically at the centre, driven point-down into the altar, its crossguard, grip and pommel rising above the figure's head"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-312",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I viewed the image before reading any reviewer notes, then magnified two regions because the plate is extremely dark. Back wall: three tall pointed-arch niches, one sword in each. Magnified, every one is unambiguously HILT-UP / POINT-DOWN — round pommel at the top, wrapped grip, horizontal crossguard, blade tapering downward to a point near the niche floor. The three niches sit across the centre-and-right of the back wall; the only thing at upper left is the traceried lancet window. A fourth sword lies flat and horizontal on a low stone ledge at the lower right, hilt right, point left. The figure reclines on a carved stone slab, head propped at the RIGHT end, bare feet at the LEFT end. Magnified, the figure's lower forearm is visibly WRAPPED in a pale strip in distinct parallel coils running wrist-to-elbow, while the other hand pinches the strip's free end and draws it taut upward — the figure is binding its own forearm. Short flight of steps at lower left.",
+    "reason": "AUTO_CORRECT on the niche swords' orientation only; all five gates pass decisively. (1) At magnification the orientation is beyond doubt: pommel, grip and crossguard at the top of each niche, point at the bottom. (2) reviewer-b and reviewer-e independently filed the identical issue against both occurrences of the wording, and each proposed the same correction. (3) I confirmed it myself from the image. (4) Orientation is an observable fact. (5) Two exact substring replacements. I left visualTensions' 'the upright blades above versus the laid-down blade below' untouched: there 'upright' means vertical as opposed to lying flat, which is still accurate. OVERTURNED: reviewer-b's third issue asked to strip 'bandaging a forearm' down to 'hands clasped at the chest around a narrow pale strip', on the grounds that no wrapping around a forearm could be traced. Both reviewers declared the object unresolvable at full-frame scale, and I nearly marked it uncertain on that basis, but magnifying the chest region settles it: the pale strip is plainly wound in repeated coils around the forearm with the free end held in the other hand. The existing 'bandaging a forearm' and the keyObject 'strip of pale cloth wound around the figure's forearm' are correct and must be kept, so I filed no uncertainty against them. FLAG FOR A LATER PASS: spatialRelations 'the three niche swords are aligned in a row above and to the left of the figure' is wrong in my own reading — the niches are above the figure's torso and head end at the centre-right, and the upper left holds the window. reviewer-b filed this; reviewer-e did not file it but independently located the blades 'upper right' in its blind observation. Because only one reviewer filed it at the comparison stage I held it back rather than hesitate into a correction.",
+    "overturnedReviewer": true,
+    "patch": {
+      "replace": [
+        {
+          "find": "three swords set upright in arched wall niches",
+          "with": "three swords mounted point-down in arched wall niches"
+        },
+        {
+          "find": "three upright swords set into arched wall niches",
+          "with": "three swords mounted point-down (hilts uppermost) in arched wall niches"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-313",
+    "decision": "AUTO_PASS",
+    "confidence": "high",
+    "independentFinding": "I viewed the image before reading any reviewer notes, and on first pass at full-frame scale I misread the pale object as a cracked stone lid, so I magnified it twice. Magnified, it is a single thin, roughly square sheet of parchment lying flat on the dark stone slab, and it is TORN. Both halves lie coplanar with the slab top — there is no tented V, no valley, no pages rising away from a centre line. The dark line between them is ragged and irregular in width, with uneven fibrous edges and the two sides slightly offset: a tear, not a straight bound gutter. The tear runs all the way through the sheet's near edge, notching it into two separately drooping corners — an open book lying spine-toward-the-viewer would show a continuous bound edge there, not a gap. The near edge is a single thin lip that curls down over the slab's chamfered corner; there is no stacked page-block. The sword's bright point rests exactly at the head of the tear. Elsewhere: one crowned, dark-robed figure facing the viewer, face lost in shadow under a tall spiked crown, one hand on the sword, the other gripping a bar of the open spear-topped iron gate at right; a butterfly carved in relief on the slab's front face; clouded night sky with a pale break and distant gothic spires beyond the gate.",
+    "reason": "Both reviewers are mistaken and the existing description is right. reviewer-a (high confidence) and reviewer-d (medium) independently converged on 'open book', but they converged on the same misreading, and agreement between two reviewers is not evidence when magnification contradicts both. Their two stated pieces of evidence do not survive the zoom: the 'spine gutter V' is in fact a ragged, variable-width tear whose halves are flat and coplanar rather than tented, and the 'wedge of stacked page edges' at the front is the sheet's own torn corner draping over the slab's chamfered edge, a single thin lip with no page block behind it. The decisive detail neither reviewer accounted for is that the split passes straight through the sheet's near edge and divides it into two separately hanging corners; a bound book cannot be open that way. There is also no cover, no boards, no leaves and no binding anywhere on the object. So keyObjects 'torn paper or parchment sheet split by the blade', the scene phrase 'driving a sword point-down into a torn document on a stone slab', and visualTensions 'the intact sheet of paper against its clean tear' all stand, and I reject both reviewers' patches in full, since every one of their proposed edits descends from the book reading. Minor note, not acted on and not a correction: 'clean tear' in visualTensions is a slightly generous description of what is actually a ragged tear, but that is wording, not an observable-fact error, and neither reviewer raised it.",
+    "overturnedReviewer": true
+  }
+]

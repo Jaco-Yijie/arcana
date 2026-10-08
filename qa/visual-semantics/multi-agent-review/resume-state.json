@@ -1,0 +1,72 @@
+{
+  "reviewerComplete": 95,
+  "comparisonComplete": 95,
+  "finalRecordsAtResume": 77,
+  "disputedJudgesComplete": 58,
+  "disputedJudgesMissing": 15,
+  "unanimousPassRecordsMissing": 2,
+  "rejudge": [
+    "review-110",
+    "review-303"
+  ],
+  "rateLimitLogPersisted": false,
+  "rateLimitFailuresFromUserHandoff": [
+    "wave-5 shard a",
+    "wave-5 shard b",
+    "wave-5 shard c",
+    "review-110/review-303 rejudge"
+  ],
+  "runs": [
+    {
+      "run": "pilot",
+      "total": 11,
+      "observations": 22,
+      "comparisons": 22,
+      "initialJudgeRecords": 11
+    },
+    {
+      "run": "wave-1",
+      "total": 17,
+      "observations": 36,
+      "comparisons": 36,
+      "initialJudgeRecords": 17
+    },
+    {
+      "run": "wave-2",
+      "total": 17,
+      "observations": 39,
+      "comparisons": 39,
+      "initialJudgeRecords": 17
+    },
+    {
+      "run": "wave-3",
+      "total": 17,
+      "observations": 35,
+      "comparisons": 35,
+      "initialJudgeRecords": 17
+    },
+    {
+      "run": "wave-4",
+      "total": 17,
+      "observations": 38,
+      "comparisons": 38,
+      "initialJudgeRecords": 17
+    },
+    {
+      "run": "wave-5",
+      "total": 17,
+      "observations": 42,
+      "comparisons": 42,
+      "initialJudgeRecords": 0
+    }
+  ],
+  "anonymousReviewIds": 96,
+  "spotCheckTotal": 95,
+  "extraControlCase": 1,
+  "allRecordsAtResume": 78,
+  "disputedJudgesCompleteIncludingControl": 59,
+  "unanimousPassComplete": 19,
+  "pendingDisputed": 15,
+  "rejudgeCount": 2,
+  "persistedFailedOutputs": 0
+}

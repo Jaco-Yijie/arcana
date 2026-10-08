@@ -123,16 +123,24 @@ export default defineConfig(() => ({
          * 二、react / framer-motion 这类依赖在版本不变时哈希不变，
          *     发一次业务代码不会让用户重下整包。
          */
-        manualChunks(id: string) {
-          if (!id.includes('node_modules')) return undefined
-          if (id.includes('framer-motion') || id.includes('motion-dom') || id.includes('motion-utils')) {
-            return 'vendor-motion'
-          }
-          if (id.includes('react-router')) return 'vendor-router'
-          if (id.includes('/react/') || id.includes('/react-dom/') || id.includes('scheduler')) {
-            return 'vendor-react'
-          }
-          return 'vendor'
+        strictExecutionOrder: true,
+        codeSplitting: {
+          // Keep shared React dependencies out of the lazy admin chart chunk.
+          includeDependenciesRecursively: false,
+          groups: [{ name(id: string) {
+            if (!id.includes('node_modules')) return undefined
+            if (/\/node_modules\/(recharts|@reduxjs\/toolkit|redux|react-redux|reselect|immer|decimal\.js-light|es-toolkit|eventemitter3|victory-vendor|d3-[^/]+|internmap|use-sync-external-store|clsx|tiny-invariant)\//.test(id)) {
+              return 'vendor-admin-charts'
+            }
+            if (id.includes('framer-motion') || id.includes('motion-dom') || id.includes('motion-utils')) {
+              return 'vendor-motion'
+            }
+            if (id.includes('react-router')) return 'vendor-router'
+            if (id.includes('/react/') || id.includes('/react-dom/') || id.includes('scheduler')) {
+              return 'vendor-react'
+            }
+            return 'vendor'
+          } }],
         },
       },
     },

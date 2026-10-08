@@ -1,0 +1,58 @@
+[
+  {
+    "reviewId": "review-301",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the blind image and then zoomed 5x with brightness lift on the head region. The figure is seated hunched forward on a high-backed stone throne, head dropped low. The head is a rounded mass of rim-lit strands reading as shoulder-length hair; its silhouette against the lighter hillside is unbroken - no band, no points, no metallic specular glint, although metal elsewhere in the frame (the staff orb, the throne relief) does catch hard highlights. I see no crown. Separately I zoomed the middle-distance stair flight: there IS a small structure with a pointed-arch opening at the top of the steps, clearly resolvable once brightened.",
+    "reason": "All five AUTO_CORRECT gates are met for the crown item and only for that item. (1) The absence of a crown is unambiguous on the pixels once the head is brightened - a smooth hair silhouette with no headgear. (2) TWO independent reviewers reported the same thing: reviewer-a ('no crown is present') and reviewer-d ('no crown or headpiece is resolvable'). (3) I reached the same conclusion from my own zoom before reading either packet entry. (4) It is a presence/absence fact, not interpretation. (5) It is one exact substring swap, and the model's own self-reported uncertainty list already concedes 'whether the figure wears a crown or headpiece', so the scene line asserts more than the model itself claims to know. I took reviewer-d's more conservative replacement wording over reviewer-a's 'bare-headed': I can confirm no crown, but I cannot rule out a hood, so the patch removes the crown claim without asserting hair. I deliberately did NOT patch the other two issues. Reviewer-a's 'ram-head armrests' plural objection is single-sourced (reviewer-d counted two ram heads without objecting to the plural), so it fails gate 2. Reviewer-d's 'no arched gate' objection I overturn outright: at 5x brightened zoom a small pointed-arch gateway is plainly visible at the head of the stair flight, so 'flight of steps rising to a small arched gate' is correct as written and stays.",
+    "overturnedReviewer": true,
+    "patch": {
+      "replace": [
+        {
+          "find": "a crowned figure seated on an ornate throne",
+          "with": "a dark-robed figure, head bowed and in shadow, seated on an ornate throne"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-302",
+    "decision": "AUTO_PASS",
+    "confidence": "high",
+    "independentFinding": "Seated woman on a carved stone throne (shell/fan motif on the backrest), head bowed over a tall ornate footed goblet, moon upper right over dark water with a reflection streak, steps descending right. I zoomed two contested regions. (a) THE VESSEL'S SUPPORT: at 3x brightened zoom the goblet's foot stands on a soft, folded, brocade-patterned surface that falls away in vertical drapery - her gown over her knees. Stone throne arms flank it on BOTH sides at a similar height, which is what made it look like a ledge at full-frame scale, but the surface directly under the foot is unmistakably cloth, not masonry. (b) THE HEADPIECE: at 5x zoom it is NOT a regular repeating structure. It is an irregular, asymmetric tangle of thin branching twig-like spikes of uneven length and angle, with small bead-like glints, clustered more heavily at the left and right temples. It reads as thorn branchwork catching moonlight.",
+    "reason": "Both reviewer corrections fail on my own inspection, so the existing text stands. Reviewer-a's highest-confidence claim - that the vessel 'stands on the flat stone seat, her gown draping to the right of it' - is contradicted by the pixels: the drapery runs UNDER the goblet's foot, so the existing 'resting on the figure's lap' is right and reviewer-c independently read it the same way. Reviewer-a and reviewer-c did both flag the headpiece, so that item clears the two-reviewer gate, but it fails gates 1 and 3: both argued from 'manufactured regularity' and 'regular repeating points', and at 5x zoom I see the opposite - irregular branching twig forms. I will not overturn a defensible existing reading on an argument my own zoom contradicts, and the reveal already self-flags 'whether the head ornament is a thorn circlet or a thin metal crown'. The remaining two objections are single-sourced and fail gate 2: reviewer-a alone disputes the 'hinged' lid (no hinge is resolvable, but none is ruled out either) and the plural 'spire silhouettes' (already hedged in the reveal's own uncertainty list as 'the exact number of spire silhouettes'). Nothing here warrants MARK_UNCERTAIN, because the two claims I could not verify are already carried as declared uncertainties in the source record.",
+    "overturnedReviewer": true
+  },
+  {
+    "reviewId": "review-304",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "Three figures around a trestle workbench under a large gothic arch, three pentacle medallions in gabled niches above (I zoomed these: three five-pointed stars in rings, all point-UP, the centre one higher and larger). On the depth question I read the image the same way before opening the packet: the RIGHT figure is the nearest to the viewer, not the furthest. It is the largest figure in the frame, its robe overlaps and passes in front of the bench's near-right end, and its hem runs down past the left figure's hem toward the bottom-right of the picture area. The left figure is distinctly smaller and stands across the bench on the far side, next to the centre figure. I also zoomed the right figure: bare-headed with dark hair and a hood folded down at the back of the neck, holding a large stiff sheet that does carry drawn architectural lines, and the centre figure holds a single chisel-like tool point-down on the block with the other hand flat on the stone - no mallet is visible.",
+    "reason": "All five AUTO_CORRECT gates are met. (1) The depth ordering is unambiguous on the pixels, carried by three independent cues at once: relative figure scale, the robe's overlap in front of the bench, and the hem's position lower in the frame. (2) TWO independent reviewers reported exactly this: reviewer-c ('the right figure stands nearer the viewer than the left', medium) and reviewer-e ('it is the largest figure in the frame, on the near side of the bench', high). They converged on the same wrong clause and quoted the identical find string. (3) I reached the same conclusion from my own look. (4) It is a position fact, not interpretation. (5) It is one exact substring swap; I confirmed with grep -F that 'the right figure stands slightly further back than the left' occurs exactly once in the reveal, so the replacement is unambiguous. I used reviewer-e's fuller replacement wording over reviewer-c's because it fixes both halves of the relation - it states where the right figure is AND where the left figure is - and reviewer-e held this at high confidence. No other field was contested by either reviewer, and the remaining items I spot-checked (three point-up pentacles, the centre figure's chisel, the right figure's drawn sheet) match the existing text.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "the right figure stands slightly further back than the left",
+          "with": "the right figure stands nearer the viewer, on the near side of the bench, while the left figure stands across it"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-306",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "Sunlit woodland slope. I counted the swords myself at 2.6x zoom: exactly TEN, in two rows of five (back row 5, front row 5, the front row offset so each sits between two of the back row). Every one lies flat with pommel and crossguard at the UPPER end and tip at the lower end, and every one is clearly SHEATHED - each has a scabbard with a decorative metal chape at the tip and leather straps wrapped around the body, so no bare blade is exposed anywhere. The figure kneels with its back to the viewer, bare-headed with dark curly hair, hood folded down at the shoulders, both arms spread wide holding the two edges of a green cloak open toward the light. On the contested point: the sun is a low disc sitting on the horizon behind the far treeline with visible rays and a warm sky wash above it. I can find no cue anywhere in the frame - no shadow direction, no sky-gradient asymmetry, no dew, no mist, nothing - that separates sunrise from sunset.",
+    "reason": "All five AUTO_CORRECT gates are met. (1) The visual fact that goes INTO the text is unambiguous and I verified it at zoom: a low solar disc on the horizon with visible rays. (2) TWO independent reviewers reported the same thing - reviewer-b and reviewer-e both flagged 'at dawn' as undeterminable, and they independently produced byte-identical patches, same find string and same replacement text. (3) I reached the same conclusion from my own look before reading the packet. (4) The patch moves the text FROM an interpretation ('dawn', a time-of-day inference the pixels cannot support) TO an observable position fact (the sun is low on the horizon); it asserts strictly less than the original and nothing I have not verified. (5) It is one exact substring swap, and I confirmed with grep -F that 'kneels on a forest floor at dawn' occurs exactly once in the reveal. I considered MARK_UNCERTAIN and rejected it: the scene field holds a single sentence, so flagging it would discard the whole line - including the sword count, the two-row layout, the cloth gesture and the valley, all of which I independently verified as correct - in order to remove one unsupported word. The schema warns about exactly that cost and says to name the narrowest item possible. The patch achieves the same goal, handing nothing unverified to the interpretation model, at near-zero loss. I checked the rest of the record against my zoom and found no other problem: 'ten sheathed swords with ornate hilts and scabbard tips, laid flat in two rows of five' is exactly right, including the 'sheathed' qualifier that reviewer-e had listed as unresolvable.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "kneels on a forest floor at dawn",
+          "with": "kneels on a forest floor under a low sun on the horizon"
+        }
+      ]
+    }
+  }
+]

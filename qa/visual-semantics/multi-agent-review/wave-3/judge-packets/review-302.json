@@ -1,0 +1,286 @@
+{
+  "reviewId": "review-302",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-302.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-302.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects / spatialRelations",
+          "existing": "ornate footed metal vessel with a hinged lid, resting on the figure's lap",
+          "observed": "the footed vessel stands on the flat stone seat/ledge in front of her, not on her lap",
+          "evidence": "The goblet's foot rests on a distinctly lighter grey horizontal stone surface whose front edge runs across the frame; that same stone seat continues to the left under the figure. Her gown drapes down and to the right of the vessel, below and beyond the stone surface it stands on. The vessel is clearly supported by masonry, not by fabric or by her knees.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "thin circlet of dark thorny branches on the head",
+          "observed": "an ornate pointed metal crown/tiara with bright specular glints",
+          "evidence": "The headpiece is a regular, repeating structure of upward points with several small hard specular highlights along it — the signature of worked metal. It does not show the irregular, tangled branching a thorn circlet would. The existing text's own uncertainty note already concedes it may be a thin metal crown, so the flat assertion of 'thorny branches' is not supported.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "narrow spire silhouettes on the far right horizon",
+          "observed": "one narrow spire is resolvable on the right; a plural count cannot be supported",
+          "evidence": "Only a single slender pointed silhouette stands clear of the darkness on the right beyond the water. The rest of that zone is undifferentiated black. The existing text's own uncertainty note concedes the number cannot be fixed.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "with a hinged lid",
+          "observed": "a separate round disc held upright in her other hand beside the vessel's rim; no hinge is visible",
+          "evidence": "The round lit disc is held on edge by her far hand, clear of and above the cup's mouth, with dark space between the disc and the rim. No hinge, pin or connecting arm can be seen joining the two. Whether the disc is the cup's lid, a mirror or a separate object cannot be determined from the image.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "ornate footed metal vessel with a hinged lid, resting on the figure's lap",
+            "with": "ornate footed metal vessel standing on the stone seat in front of the figure, with a round disc held beside its rim"
+          },
+          {
+            "find": "the vessel is centred on the figure's lap, between her two hands",
+            "with": "the vessel stands on the stone seat in front of the figure, her two hands raised above and beside it"
+          },
+          {
+            "find": "working with a small tool at an ornate lidded vessel resting on her lap",
+            "with": "working with a small tool at an ornate vessel standing on the stone seat before her"
+          },
+          {
+            "find": "thin circlet of dark thorny branches on the head",
+            "with": "ornate pointed metal crown or tiara on the head"
+          },
+          {
+            "find": "narrow spire silhouettes on the far right horizon",
+            "with": "a narrow spire silhouette on the far right horizon"
+          },
+          {
+            "find": "the pale sphere sits high right, above the spire silhouettes",
+            "with": "the pale sphere sits high right, above the spire silhouette"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-302",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, seated on a large stone throne",
+              "posture": "seated, knees toward the viewer's right, torso turned slightly right, head bowed forward and down, shoulders rounded",
+              "gaze": "downward, eyes lowered toward the vessel in front of her",
+              "heldObjects": [
+                "a small slender implement held in the near (viewer's left) hand, poised above the vessel's mouth",
+                "a round disc/lid held upright in the far (viewer's right) hand at the vessel's right side"
+              ],
+              "appearance": "ornate spiked crown or tiara, long veil falling over both shoulders, dark embroidered gown with a heavily draped skirt spilling down the throne and onto the step, long dark hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "chalice/goblet",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "resting on the stone seat/ledge directly in front of the seated figure, center of frame",
+              "orientation": "upright, open bowl facing up",
+              "arrangement": "single, isolated — nothing else stands beside it"
+            },
+            {
+              "type": "round disc / lid",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "held in the figure's far hand just to the right of the chalice's rim",
+              "orientation": "held on edge, face angled toward the viewer, catching the light",
+              "arrangement": "single"
+            },
+            {
+              "type": "throne",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left and center, its tall back panel rising behind the figure",
+              "orientation": "facing the viewer's right",
+              "arrangement": "single; the back panel carries a carved fan/shell motif in its upper corner"
+            },
+            {
+              "type": "moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right of the frame, partly cut by the right edge",
+              "orientation": "n/a",
+              "arrangement": "single large disc with visible surface mottling/craters"
+            },
+            {
+              "type": "distant spire/tower",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right side, silhouetted against the dark sky beyond the water",
+              "orientation": "vertical",
+              "arrangement": "single, slender and pointed"
+            },
+            {
+              "type": "stone step",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower right, descending from the platform toward the water",
+              "orientation": "horizontal treads",
+              "arrangement": "a short flight, two or three treads resolvable before they fade into darkness"
+            }
+          ],
+          "environment": [
+            "very dark, near-monochrome sepia/charcoal scene",
+            "stone platform or terrace",
+            "tall dark architecture/columns rising behind and right of the throne",
+            "still black water at the right with a narrow moonlight reflection streak",
+            "steps leading down to the water"
+          ],
+          "lightSources": [
+            "the moon at the upper right",
+            "its reflection on the water below right"
+          ],
+          "moonPhase": "appears full or near-full (a complete bright disc, no clear terminator visible)",
+          "spatialRelations": [
+            "the figure sits facing right, bent over the chalice which stands on the ledge between her knees and the viewer",
+            "the moon is behind and above her to the right, on the opposite side of the frame from the throne back",
+            "the water and steps lie to the right and below, at a lower level than the throne platform"
+          ],
+          "foreground": [
+            "seated figure, throne, chalice, draped skirt spreading across the lower left"
+          ],
+          "background": [
+            "dark columnar architecture",
+            "moon",
+            "distant spire",
+            "moonlit water"
+          ]
+        },
+        "uncertainObservations": [
+          "The small implement in the near hand cannot be identified — it is slender with a small crosspiece near its lower end; it could be a key, a stylus, a small cross or a stirring rod.",
+          "Whether the round object in the other hand is the chalice's lid, a mirror, or a separate disc cannot be determined.",
+          "Moon phase read as full/near-full but the right side of the disc is cut off by the frame edge, so this is not certain.",
+          "The figure's expression is only partly visible — eyes appear closed or lowered, but the light level is very low.",
+          "Contents of the chalice cannot be seen."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "thin circlet of dark thorny branches on the head",
+          "observed": "an ornate metallic crown with upright pointed jewelled finials, worn over a long dark veil",
+          "evidence": "The headpiece is a bright, symmetric band of gold-toned metal with regular pointed uprights and bead/jewel highlights catching the moonlight — manufactured regularity, not irregular dark branchwork.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "thin circlet of dark thorny branches on the head",
+            "with": "ornate jewelled metal crown with pointed finials, worn over a long dark veil"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-302",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, seated on a large stone throne",
+              "posture": "seated, knees together and angled to the viewer's right, torso leaning forward over her lap, head bowed",
+              "gaze": "downward, directly into the vessel she holds",
+              "heldObjects": [
+                "left hand holds the hinged lid of the vessel open, tilted back",
+                "right hand holds a thin straight implement (rod/stylus/key-like) angled down toward the vessel's mouth"
+              ],
+              "clothing": "long dark gown with embroidered bodice and trailing skirt; a long dark veil falling from under the crown over both shoulders",
+              "headwear": "an ornate spiked and jewelled crown worn over the veil"
+            }
+          ],
+          "objects": [
+            {
+              "type": "footed vessel / goblet with a hinged lid",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "resting on her right knee/lap at the center of the frame",
+              "orientation": "upright, mouth up, lid swung open to the right",
+              "arrangement": "single, held between both hands"
+            },
+            {
+              "type": "stone throne",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left of center, filling the left third of the frame",
+              "orientation": "backrest upright, facing right-of-frame",
+              "arrangement": "single; the backrest is carved with a large fan/shell motif"
+            },
+            {
+              "type": "tall dark tower or spire silhouette",
+              "count": null,
+              "countConfidence": "low",
+              "where": "background right, across the water",
+              "orientation": "vertical",
+              "arrangement": "at least one sharply pointed spire at the right edge plus broader dark masses behind the throne; they overlap and cannot be separated"
+            },
+            {
+              "type": "stone step descending toward the water",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower right, leading from the throne platform down to the waterline",
+              "orientation": "horizontal treads",
+              "arrangement": "a short flight; individual treads blur into shadow"
+            }
+          ],
+          "environment": [
+            "a stone terrace or platform at night",
+            "still dark water at the right with a vertical moonlight reflection on it",
+            "dark architecture — walls, piers and a pointed spire — behind and to the right",
+            "an aged, cracked paper-like border at the left edge of the image"
+          ],
+          "lightSources": [
+            "a large pale sphere (moon) high at the upper right, partly overlapping the right frame edge, lighting her face, hands, the crown and the vessel from that side",
+            "the moonlight streak on the water at lower right"
+          ],
+          "moonPhase": "uncertain — a large round mottled disc with a bright right limb; it reads as full or gibbous but the left side fades into darkness rather than showing a clean terminator",
+          "spatialRelations": [
+            "the woman sits with the throne behind her on the left and the open moonlit water to her right",
+            "the vessel is at the exact center of the composition, directly beneath her lowered face",
+            "her veil and skirt spill leftward and downward over the throne's seat and the platform"
+          ],
+          "foreground": [
+            "the throne, the seated crowned woman, and the lidded vessel"
+          ],
+          "background": [
+            "dark towers and walls",
+            "moonlit water and steps",
+            "the moon at upper right"
+          ]
+        },
+        "uncertainObservations": [
+          "the thin implement in her right hand cannot be identified — it could be a stylus, a key, a pin or a small blade",
+          "whether the vessel's lid is attached by a hinge or simply lifted away is not resolvable",
+          "the moon's phase and whether its disc is clipped by the frame edge are both uncertain",
+          "her facial expression is lit but ambiguous; only that the eyes are lowered is certain",
+          "the number of towers/spires in the background cannot be counted — the silhouettes merge"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

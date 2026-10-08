@@ -1,0 +1,197 @@
+[
+ {
+  "reviewId": "review-412",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects / spatialRelations",
+    "existing": "crescent moon",
+    "observed": "a dim grey-blue sphere in the upper-left sky reading as a full round disc, unevenly and faintly lit; phase not determinable",
+    "evidence": "The upper-left body shows a complete circular outline with no bright limb and no dark-limb cusp, so I could not confirm a crescent; I recorded moonPhase as uncertain.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "crescent moon",
+     "with": "dim round moon disc, phase indeterminate"
+    },
+    {
+     "find": "whether the moon is waxing or waning",
+     "with": "the moon's phase — it reads as a full round dim disc, not clearly crescent"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-410",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "visualTensions / spatialRelations",
+    "existing": "the reaching hand almost but not quite touching the ring",
+    "observed": "the raised fingertips appear to meet the glowing node on the wheel's lower rim; contact vs. a small gap is not resolvable",
+    "evidence": "A bright rim node sits exactly at the fingertips with no visible dark gap between hand and rim, so 'not quite touching' may overstate a separation I cannot see.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the reaching hand almost but not quite touching the ring",
+     "with": "the reaching hand meeting the glowing node on the ring's lower rim"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-406",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "stand on a balustraded terrace at night, raising three stemmed goblets together beneath a crescent moon",
+    "observed": "the scene is lit by broad, diffuse, daylight-bright light — pale blue-white sky with sunlit white clouds; the moon disc is large and reads near-full/gibbous, not a crescent",
+    "evidence": "Nothing in the frame reads as night: the sky is high-key blue-white with bright cumulus, shadows are absent, and the disc at upper centre-right is a large full round face with only a softly shaded lower-left limb.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "separating them from the water",
+    "observed": "no water is visible; behind the balustrade there is open bright sky and a flight of pale steps",
+    "evidence": "The area beyond the balustrade is cloud and sky with a pale stair behind the centre figure; no water surface, shoreline or reflection appears anywhere in the frame.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "stand on a balustraded terrace at night, raising three stemmed goblets together beneath a crescent moon",
+     "with": "stand on a balustraded terrace in bright, diffuse, daylight-like light, raising three stemmed goblets together beneath a large pale near-full moon disc"
+    },
+    {
+     "find": "crescent moon",
+     "with": "large pale moon disc, reading near-full/gibbous"
+    },
+    {
+     "find": "separating them from the water",
+     "with": "separating them from the open sky, with a flight of pale steps beyond"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-416",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "her staff rising into the same diagonal axis",
+    "observed": "the held branch is near-vertical, leaning only slightly to the right; it crosses the wands' shallow upper-left-to-lower-right diagonal rather than aligning with it",
+    "evidence": "The held shaft runs steeply up from her hip past her shoulder, while every sky wand lies on a shallow, near-horizontal downward slope — the two axes are close to perpendicular.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "streaks diagonally across a moonlit sky",
+    "observed": "the sky is daylight-bright — blue-white with sunlit cloud — with a large pale moon disc visible in it; the illumination does not read as moonlight",
+    "evidence": "Ambient light is high-key and broad, the river carries a bright specular glint, and the landscape is rendered in daylight haze rather than night values.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "her staff rising into the same diagonal axis",
+     "with": "her staff held near-vertical, crossing the wands' diagonal rather than aligning with it"
+    },
+    {
+     "find": "streaks diagonally across a moonlit sky",
+     "with": "streaks diagonally across a bright, daylight-lit sky carrying a large pale moon disc"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-404",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene / emphasizedAspects",
+    "existing": "gathers in a moonlit garden beside a colonnade and a still lake",
+    "observed": "a large pale moon is present at upper left, but the overall illumination is broad, high-key and daylight-bright rather than night-lit",
+    "evidence": "The whole frame sits in pale near-white values with no night contrast; I could not assert night from the pixels, only that a moon is visible.",
+    "confidence": "medium"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the kneeling woman and the dog flank the discs on left and right",
+    "observed": "the near-left woman is seated on the ground with legs folded, leaning forward to place a disc — not kneeling upright",
+    "evidence": "Her hip and folded legs rest on the cloth and her torso pitches forward over them; her drapery hides the lower legs, so I cannot fully exclude a kneel.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "gathers in a moonlit garden beside a colonnade and a still lake",
+     "with": "gathers in a pale, brightly lit garden beneath a visible moon, beside a colonnade and a still lake"
+    },
+    {
+     "find": "the kneeling woman and the dog flank the discs on left and right",
+     "with": "the seated, forward-leaning woman and the dog flank the discs on left and right"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-408",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "two swords held upright by the foreground figure",
+    "observed": "both blades are held hilt-up in the fists at hip height with the blades angled DOWN and outward; both points aim at the ground, neither is raised",
+    "evidence": "Each blade descends from the fist away from the body toward the wet ground, forming a shallow inverted V below the hips — no part of either blade rises above the hand.",
+    "confidence": "high"
+   },
+   {
+    "field": "visualTensions",
+    "existing": "the upright held swords contrast with the swords lying discarded on the ground",
+    "observed": "the held swords are lowered, points down, so the contrast with the grounded swords is one of grip, not of raised vs. lowered",
+    "evidence": "Same observation as above — the held blades point downward, not upward.",
+    "confidence": "high"
+   },
+   {
+    "field": "visualTensions",
+    "existing": "the two figures are separated by distance and face opposite directions",
+    "observed": "both figures have their backs to the viewer; the foreground figure's head is turned to the right and tilted down, oriented toward the water and the departing figure",
+    "evidence": "Her face is shown in near-profile turned toward the right of frame where the second figure stands, so the heads are not facing opposite ways.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two swords held upright by the foreground figure",
+     "with": "two swords held hilt-up with the blades angled down and outward, both points toward the ground"
+    },
+    {
+     "find": "the upright held swords contrast with the swords lying discarded on the ground",
+     "with": "the still-gripped swords, points lowered, contrast with the swords lying discarded on the ground"
+    },
+    {
+     "find": "the two figures are separated by distance and face opposite directions",
+     "with": "the two figures are separated by distance, both backs to the viewer, the near one's head turned toward the departing figure"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ }
+]

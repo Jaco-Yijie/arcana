@@ -1,0 +1,160 @@
+[
+ {
+  "reviewId": "review-212",
+  "verdict": "pass",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-210",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+    "observed": "she is seated on the low stone block, leaning far forward, not kneeling beside it",
+    "evidence": "Her hip rests on top of the stone with the reddish underskirt draping over its front face, and her crowned head sits roughly the height of a seated figure above the soil — too high for a kneel. The packet's own spatialRelations line already says 'the woman sits in the lower centre', contradicting its scene line.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "carved disc bearing a circle-and-cross symbol, lower right",
+    "observed": "a large shield-shaped plate leaning upright against the stone; its outline is elongated with a tapering lower end, not circular, and no break is visible",
+    "evidence": "The silhouette is an elongated tilted form, not a round disc, and nothing in it reads as a fracture — 'broken' and 'disc' both assert more than the pixels support (it could also be a round plate seen obliquely, which is exactly why the shape should not be asserted).",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+     "with": "A crowned woman sits on a low stone block in a dark overgrown garden"
+    },
+    {
+     "find": "stone block or ledge she kneels beside",
+     "with": "low stone block or ledge she sits on"
+    },
+    {
+     "find": "carved disc bearing a circle-and-cross symbol, lower right",
+     "with": "shield-shaped plate bearing a circle-and-cross symbol, leaning upright at lower right"
+    },
+    {
+     "find": "engraved circle-and-cross symbol on a broken stone disc",
+     "with": "engraved circle-and-cross symbol on a leaning shield-shaped stone plate"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-206",
+  "verdict": "pass",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-216",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the moon disc sits behind and above the figure's head, upper right of centre",
+    "observed": "only a thin bright crescent arc is visible at upper right; no full disc edge is resolvable",
+    "evidence": "The bright shape at upper right is a narrow curved arc whose remainder blends into the pale cloud field, so a full disc cannot be confirmed. The position given (behind and above the head, upper right) is correct.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "small white birds in flight",
+    "observed": "one small pale bird shape is resolvable, at upper left among the blossoming branches; no second bird can be individually resolved",
+    "evidence": "Plural is asserted where only a single pale bird-like shape can be picked out, and even that one is faint enough to be a petal cluster.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the moon disc sits behind and above the figure's head, upper right of centre",
+     "with": "a thin bright crescent sits behind and above the figure's head, upper right of centre"
+    },
+    {
+     "find": "small white birds in flight",
+     "with": "a small pale bird shape in flight at upper left"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-204",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "a rack of upright swords is mounted in the boat's bow",
+    "observed": "the row of upright blades stands amidships, straddling the middle of the hull; the bow section ahead of it is clear except for the hanging lantern and the rope-looped bow post",
+    "evidence": "The blade row occupies roughly the central third of the hull, with the standing figure aft of it and a substantial empty length of boat between the last blade and the bow. This is a placement fact, not wording.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the figure stands behind the sword rack, which occupies the boat's forward half",
+    "observed": "the figure stands at the stern end nearest the viewer; the blade row straddles the boat's midpoint rather than occupying its forward half",
+    "evidence": "The row spans across the middle of the hull, not the forward half — the forward half toward the bow is largely empty.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a rack of upright swords is mounted in the boat's bow",
+     "with": "a rack of upright swords is mounted amidships"
+    },
+    {
+     "find": "rack of upright swords mounted across the boat's bow",
+     "with": "rack of upright swords mounted across the boat amidships"
+    },
+    {
+     "find": "the figure stands behind the sword rack, which occupies the boat's forward half",
+     "with": "the figure stands at the stern behind the sword rack, which straddles the middle of the hull, leaving the bow clear"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-208",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "small seedling with exposed bare roots on the ground",
+    "observed": "a small plant with a thin stem and a few leaves sitting in the dark soil; fine radiating filaments at its base may be roots, or may be surrounding stems and leaf litter",
+    "evidence": "Whether the plant is uprooted or growing in place cannot be settled at this light level — the filaments below the leaves are not clearly distinguishable from the debris on the soil. The packet itself flags the nearby thin stem as ambiguous for the same reason.",
+    "confidence": "medium"
+   },
+   {
+    "field": "visualTensions",
+    "existing": "the lit disc and doorway against the surrounding near-black field",
+    "observed": "the engraved disc reads as faintly luminous, but the doorway interior is dark, not lit",
+    "evidence": "The panels inside the arch are dim and catch only weak light; the packet's own spatialRelations line calls it 'the dark interior of the doorway'.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "small seedling with exposed bare roots on the ground",
+     "with": "small seedling on the ground, its base a spray of fine filaments that may be roots or surrounding stems"
+    },
+    {
+     "find": "the other hand reaching down toward a small uprooted seedling",
+     "with": "the other hand reaching down toward a small seedling on the ground"
+    },
+    {
+     "find": "the lit disc and doorway against the surrounding near-black field",
+     "with": "the faintly lit disc against the surrounding near-black field and the dark doorway"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ }
+]

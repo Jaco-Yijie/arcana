@@ -1,0 +1,73 @@
+[
+  {
+    "reviewId": "review-516",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "thin chains draped between the sword hilts",
+        "observed": "I recorded ornate decorated hilts and pommels on the fanned swords, but no chain spanning between them. I could not resolve whether the fine pale linework around the hilt cluster is chain, ornament, or mist.",
+        "evidence": "The hilt cluster in the upper-left/centre of the frame, where the blades overlap; at this resolution the fine silver strands there read ambiguously against the misted background.",
+        "confidence": "low"
+      }
+    ],
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-504",
+    "verdict": "pass",
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-508",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "a serpent coiled around the trunk of the left tree",
+        "observed": "I recorded a coiling form spiralling up the left tree's trunk but could not confirm it is a serpent; it could equally be a vine, a rope, or a broken branch.",
+        "evidence": "Mid-left of frame, on the trunk of the fruiting tree. The image is near-monochrome black and the form is read only from faint edge highlights — no head, eye, or scale pattern is resolvable.",
+        "confidence": "low"
+      }
+    ],
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-503",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "scene",
+        "existing": "in a vaulted stone chamber",
+        "observed": "I recorded an interior stone chamber of large ashlar blocks with a tall lancet window, but no ceiling is shown anywhere in the frame, so I cannot confirm the chamber is vaulted. The only arcading I could see is carved on the front face of the stone slab, not overhead.",
+        "evidence": "The top edge of the image is wall and window only; the frame crops well below any ceiling line. The blind arcading is on the slab's front face in the lower half of the picture.",
+        "confidence": "low"
+      }
+    ],
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-515",
+    "verdict": "pass",
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-514",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "a potted plant at the lower left",
+        "observed": "I recorded the clearly identifiable potted plants / flowering shrubs at mid-right, on and behind the low terrace wall. At the lower left I recorded the grapevine arbour and the stone steps, plus one pale pedestal-like form near the steps that I could not identify as a planter rather than a plinth, urn, or garden ornament.",
+        "evidence": "Left of centre, beside the foot of the stone steps, around the vertical mid-height of the frame: a pale narrow stem-and-base shape in deep shadow. The unambiguous containers with foliage are on the opposite side, at mid-right above the balustrade.",
+        "confidence": "low"
+      }
+    ],
+    "reviewer": "reviewer-c"
+  },
+  {
+    "reviewId": "review-502",
+    "verdict": "pass",
+    "reviewer": "reviewer-c"
+  }
+]

@@ -1,0 +1,615 @@
+[
+ {
+  "reviewId": "review-401",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center",
+     "posture": "seated on a low pale stone block/ledge, knees together, long skirt pooling over the stone and onto the paving",
+     "gaze": "head faces forward toward the viewer, tilted very slightly downward; eyes are covered by a white cloth band tied across them, so no gaze direction is visible",
+     "heldObjects": [
+      "long blade in the right hand",
+      "long blade in the left hand"
+     ],
+     "armPosition": "both forearms crossed at the wrists in front of the chest/stomach, each hand gripping one hilt"
+    }
+   ],
+   "objects": [
+    {
+     "type": "long straight blade with a crossguard",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "held in front of the torso, tips reaching up past the level of the figure's head to the upper left and upper right",
+     "orientation": "both point UP and outward (tips up, hilts down at chest level)",
+     "arrangement": "crossed in an X in front of the chest, wrists overlapping; left-hand blade angles up to the right, right-hand blade angles up to the left"
+    },
+    {
+     "type": "stone baluster / short pillar on a railing",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "left edge, mid-height",
+     "orientation": "upright",
+     "arrangement": "single, at the left frame edge"
+    },
+    {
+     "type": "small rocky islets on the horizon",
+     "count": null,
+     "countConfidence": "low",
+     "where": "right side, far distance on the water",
+     "orientation": "n/a",
+     "arrangement": "scattered along the horizon; too small and pale to resolve individually"
+    }
+   ],
+   "environment": [
+    "open water / sea filling the middle distance, with a bright vertical light-path on its surface right of center",
+    "pale stone paving and stone steps in the foreground",
+    "pale stone balustrade and pillar at left",
+    "hanging flowering branches with small white blossoms across the upper left",
+    "small pale flowers and foliage at lower left",
+    "pale blue sky with soft white clouds"
+   ],
+   "lightSources": [
+    "broad diffuse bright daylight-style illumination over the whole scene",
+    "a thin crescent moon in the upper right of the sky",
+    "a bright reflected light column on the water right of center"
+   ],
+   "moonPhase": "thin crescent; the bright limb reads as lying along the outer (upper-right) edge with the dark disc toward the lower left, but the exact orientation is not fully resolvable",
+   "spatialRelations": [
+    "the seated figure is centered, with the sea behind her and the stone balustrade to her right side of frame (viewer's left)",
+    "the two blade tips frame her head symmetrically, one on each side",
+    "the crescent moon sits in the sky above and to the right of her head",
+    "the flowering branches hang down into the frame above and left of her"
+   ],
+   "foreground": [
+    "stone paving",
+    "stone step/ledge the figure sits on",
+    "flowers and leaves at lower left",
+    "draped translucent fabric spreading across the stone"
+   ],
+   "background": [
+    "sea",
+    "distant pale islets at right",
+    "cloudy pale-blue sky",
+    "crescent moon"
+   ]
+  },
+  "uncertainObservations": [
+   "The scene is lit like bright overcast daylight yet a crescent moon is visible; I record both rather than picking one.",
+   "Exact orientation of the crescent's horns is uncertain at this resolution.",
+   "Number of distant islets on the horizon cannot be resolved.",
+   "Whether the figure sits on a block or on a wide step is ambiguous; the surface is a pale stone slab either way."
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-413",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left of center",
+     "posture": "standing upright on wet ground, body in profile facing right, weight even, feet visible at the hem",
+     "gaze": "head bowed sharply downward, face in right-facing profile, eyes directed down into the vessel held at chest height — not looking at the lit doorway",
+     "heldObjects": [
+      "a footed cup/goblet, held in both hands at chest height"
+     ],
+     "clothing": "long heavily tattered cloak/robe with many hanging shredded strips, hood fallen back, hem dragging on the ground"
+    }
+   ],
+   "objects": [
+    {
+     "type": "footed cup / goblet",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "cradled in both hands at the figure's chest, center-left",
+     "orientation": "upright, mouth up; a faint pale vapor or light rises from its mouth",
+     "arrangement": "single object"
+    },
+    {
+     "type": "arched stone doorway set into a rock face",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right of center, middle distance",
+     "orientation": "upright, facing left toward the figure",
+     "arrangement": "single portal with carved surround; light escapes from its base/lower edge"
+    },
+    {
+     "type": "loose stones/pebbles",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered across the wet foreground ground",
+     "orientation": "n/a",
+     "arrangement": "scattered, too many and too dim to count"
+    }
+   ],
+   "environment": [
+    "dark night scene, very low overall light",
+    "wet shore/shallow water with a thin line of ripples or surf running left-to-right across the middle ground",
+    "a rock face or cliff on the right containing the doorway",
+    "wet, reflective stony ground in the foreground",
+    "an aged/mottled border texture at the frame edges"
+   ],
+   "lightSources": [
+    "light spilling out from around and beneath the arched doorway at right, casting a bright reflective streak on the wet ground",
+    "faint pale glow/vapor rising from the cup in the figure's hands"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the figure stands on the near shore at left, the lit doorway is behind and to the right of him",
+    "he faces right (toward the doorway's side of the frame) but his head is bowed to the cup, not raised toward the door",
+    "a long dark shadow runs diagonally from the lower right of the frame away from the doorway's light",
+    "the band of surf/ripples passes between the figure and the doorway"
+   ],
+   "foreground": [
+    "wet stony ground with scattered pebbles",
+    "the figure's trailing tattered hem",
+    "a large diagonal shadow at lower right"
+   ],
+   "background": [
+    "dark rock face",
+    "arched lit doorway",
+    "black sky with no visible stars or moon"
+   ]
+  },
+  "uncertainObservations": [
+   "Whether the pale wisp above the cup is steam, smoke or light cannot be determined.",
+   "It is not resolvable whether the door itself is open; the light appears to come from a gap at its base/edges.",
+   "The body of water's extent (pool vs. sea) is unclear in the darkness.",
+   "The cast shadow at lower right may belong to an object outside the frame; its source is not visible."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-405",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left",
+     "posture": "standing, seen from behind in three-quarter view, turned toward the right side of the frame",
+     "gaze": "head turned to the right in profile, looking toward the gate/chute area he is touching; face mostly in shadow",
+     "heldObjects": [
+      "a glowing disc bearing a five-pointed star inside a circle, held up in the raised left hand"
+     ],
+     "armPosition": "left arm raised and bent, holding the glowing disc aloft at shoulder/head height on the far left; right arm extended forward and slightly down, hand on a lever/handle at the gate structure",
+     "clothing": "long patterned brocade cloak with a very long train trailing down and to the left across the pavement"
+    }
+   ],
+   "objects": [
+    {
+     "type": "glowing disc with an inscribed five-pointed star (circle enclosing the star)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held aloft in the raised left hand, left of the figure's head",
+     "orientation": "face-on to the viewer, upright, star point at the top",
+     "arrangement": "single object, the brightest thing in the frame"
+    },
+    {
+     "type": "wooden barrel/tub holding poured material",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "below the chute at center-right, and a second one immediately to its right",
+     "orientation": "upright, open tops",
+     "arrangement": "side by side beneath and to the right of the chute"
+    },
+    {
+     "type": "sack",
+     "count": 2,
+     "countConfidence": "low",
+     "where": "one pale bulging sack at lower right edge; one lower flatter sack/cushion shape in the foreground center-right",
+     "orientation": "resting on the ground",
+     "arrangement": "loosely grouped at the foot of the barrels"
+    },
+    {
+     "type": "horned bull/ox head sculpture",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "mounted on the stone facade high above the archway, upper right",
+     "orientation": "facing out toward the viewer/left, horns spreading horizontally",
+     "arrangement": "single, centered over the arch"
+    },
+    {
+     "type": "barred/studded gate inside a stone arch",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right of center, middle ground",
+     "orientation": "upright, facing left",
+     "arrangement": "single arched opening in a large stone facade"
+    },
+    {
+     "type": "stream of small granular material (grain or coins) pouring from a chute",
+     "count": null,
+     "countConfidence": "low",
+     "where": "from a spout below the gate down into the barrel",
+     "orientation": "falling downward",
+     "arrangement": "a continuous pouring stream; individual grains not countable"
+    }
+   ],
+   "environment": [
+    "night scene, very dark overall",
+    "large stone facade with an arch on the right half of the frame",
+    "a dark gothic castle/spired building silhouetted on a rise in the upper-left distance",
+    "a long flight of steps zig-zagging up the hillside toward that building",
+    "cobbled/flagstone pavement in the foreground",
+    "aged border texture at the frame edges"
+   ],
+   "lightSources": [
+    "the glowing star-disc in the figure's raised hand (primary)",
+    "faint ambient sky glow behind the distant building",
+    "weak reflected light on the poured stream and the wet-looking pavement"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the figure stands left of the stone facade, back to the viewer, facing right",
+    "his raised disc is on the outer (left) side of his body; his lowered right hand touches the chute mechanism on the facade",
+    "the pouring stream falls between him and the barrels",
+    "the castle and the ascending stair are far behind his raised arm, upper left",
+    "his shadow and cloak train extend down and to the lower right/left across the pavement"
+   ],
+   "foreground": [
+    "cobbled pavement",
+    "the trailing cloak",
+    "a sack/cushion shape",
+    "cast shadow toward lower right"
+   ],
+   "background": [
+    "hillside castle with spires",
+    "long ascending stairway",
+    "dark starless-looking sky"
+   ]
+  },
+  "uncertainObservations": [
+   "Whether the pouring material is grain, sand, or coins cannot be determined at this brightness.",
+   "The exact number of sacks/containers on the right is uncertain; shapes overlap and merge with shadow.",
+   "It is unclear whether the object the right hand touches is a lever, a spigot, or a chute edge.",
+   "No second glowing disc is visible anywhere, but the deep shadow in the left third could conceal detail."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-407",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, standing on a paved floor",
+     "posture": "standing, barefoot, seen from behind (back to the viewer), facing the wall",
+     "gaze": "head faces the wall, away from the viewer, tilted slightly up toward the raised hand; face not visible",
+     "heldObjects": [
+      "a pale cloth/rag in the right hand"
+     ],
+     "armPosition": "left arm raised high and extended up-left toward the leftmost upper niche, bare hand open; right arm extended out to the right and slightly down, draping the cloth over the vessel in a lower niche",
+     "clothing": "long draped robe with a tattered/frayed hem reaching the ankles"
+    }
+   ],
+   "objects": [
+    {
+     "type": "footed cup / chalice standing in an arched wall niche",
+     "count": 7,
+     "countConfidence": "medium",
+     "where": "four in an upper row and three visible in a lower row across the wall",
+     "orientation": "all upright, mouth up, each standing on the niche floor",
+     "arrangement": "a grid of arched niches in two rows; upper row of four is evenly spaced left to right; the lower row has a conspicuous GAP directly behind the figure's head and torso, between the far-left lower niche and the center lower niche — a lower niche in that position would be hidden by the figure, so the true total may be 8"
+    },
+    {
+     "type": "emblem/contents sitting in or above each upper-row cup",
+     "count": 4,
+     "countConfidence": "medium",
+     "where": "upper row, left to right",
+     "orientation": "upright above each cup's mouth",
+     "arrangement": "(1) a coiled serpent shape, (2) a small crenellated tower, (3) a small crown, (4) a sprig of leaves/palm fronds"
+    },
+    {
+     "type": "emblem/contents in the visible lower-row cups",
+     "count": 3,
+     "countConfidence": "low",
+     "where": "lower row, left to right",
+     "orientation": "upright above each cup's mouth",
+     "arrangement": "(1) a small key-or-flower shaped object on a stem, (2) the cloth the figure is draping (its contents hidden by the cloth), (3) an oval ring/loop shape"
+    }
+   ],
+   "environment": [
+    "a dark stone/plaster wall filling most of the frame, cut with arched recessed niches",
+    "a paved stone floor in the lower third",
+    "very dim, low-contrast interior lighting; no sky, no window visible",
+    "aged border texture at the frame edges"
+   ],
+   "lightSources": [
+    "a soft light falling on the floor behind and around the figure from a source outside the frame (low and roughly behind the viewer/right), casting the figure's shadow forward toward the bottom of the frame",
+    "faint rim light on the niche edges and on the cups"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the figure stands directly in front of the wall, occluding the part of the lower row where an additional niche would fall",
+    "the raised left hand reaches toward the upper-left niche but does not appear to touch its cup",
+    "the right hand's cloth hangs over the mouth of the center lower niche's cup",
+    "the figure's shadow runs down the floor toward the viewer"
+   ],
+   "foreground": [
+    "paved floor",
+    "the figure's bare feet and frayed hem",
+    "cast shadow running toward the bottom edge"
+   ],
+   "background": [
+    "niched stone wall",
+    "cups in niches"
+   ]
+  },
+  "uncertainObservations": [
+   "The cup count is 7 individually resolvable; a possible 8th lower-row niche is occluded by the figure's body, exactly where the lower row's spacing breaks. I cannot confirm or rule it out.",
+   "The leftmost upper niche is close to the frame edge and slightly clipped; its cup is still visible.",
+   "Several emblem shapes (especially the lower row) are too dark to identify with confidence.",
+   "The direction and nature of the light source cannot be determined; only its effect on the floor is visible."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-409",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "upper center, standing on top of a raised stone platform/wall",
+     "posture": "standing with feet planted wide apart and knees bent in a braced stance, torso turned toward the right of frame, arms extended forward",
+     "gaze": "head faces right, in the same direction the staff extends and the body is braced; not turned back over the shoulder",
+     "heldObjects": [
+      "a long wooden pole/staff gripped in both hands"
+     ],
+     "clothing": "short jacket/tunic with a ragged hanging fringe at the hip, trousers"
+    }
+   ],
+   "objects": [
+    {
+     "type": "long wooden pole/staff held by the figure",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "across the figure's body at chest height, extending well beyond him on both sides",
+     "orientation": "held roughly HORIZONTAL, tilting slightly downward to the left and slightly upward to the right",
+     "arrangement": "single, gripped with both hands near the center-right of its length"
+    },
+    {
+     "type": "wooden stake/pole planted in the ground around the base of the platform",
+     "count": null,
+     "countConfidence": "low",
+     "where": "in the lower half of the frame, ringing the foot of the stone platform on the left, right and bottom",
+     "orientation": "all point UP and OUTWARD — each is bedded in the ground at its lower end with its sharp tip raised away from the platform; none point down",
+     "arrangement": "a radiating fan/palisade splayed outward around the platform base rather than a straight row; several overlap in the darkness. I can individually resolve roughly 7-9 of them (about 3-4 on the left, about 3 on the right, and 1-2 at the bottom center) but cannot commit to an exact number"
+    }
+   ],
+   "environment": [
+    "a large block-built stone platform/parapet occupying the center of the frame, with arched openings visible in its lower face",
+    "dark sloping ground around the platform base",
+    "a black, featureless upper background — no sky detail, no horizon",
+    "aged border texture at the frame edges"
+   ],
+   "lightSources": [
+    "a single dim light from above/upper-left that catches the top surface of the platform, the figure's shoulders and arms, and the upper edges of the stakes; source itself not visible in frame",
+    "no visible sun, moon, fire or lamp"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the figure stands on top of the platform, above and behind the ring of stakes",
+    "the stakes lean away from the platform in all directions, their tips rising toward the viewer and the frame edges",
+    "the staff's right end passes over the edge of the platform and over the stakes below on that side",
+    "the figure's stance and head both face right; his left side leads the pose"
+   ],
+   "foreground": [
+    "the outward-leaning stakes",
+    "dark ground"
+   ],
+   "background": [
+    "black void above the platform"
+   ]
+  },
+  "uncertainObservations": [
+   "The number of planted stakes cannot be determined reliably: they overlap, several run off the bottom edge, and the lighting is too dim to separate them. Estimated range 7-9.",
+   "Whether the staff is a plain pole or has any fitting at its ends is not resolvable.",
+   "Whether the scene is outdoors at night or inside a very dark space cannot be determined; there is no sky detail.",
+   "The dark openings in the platform face may be arches, windows or shadows."
+  ],
+  "reviewConfidence": "low",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-411",
+  "visibleFacts": {
+   "figureCount": 5,
+   "figures": [
+    {
+     "position": "top center, beyond the far rim of the opening",
+     "posture": "standing, seen from a high angle from behind/above, leaning slightly forward",
+     "gaze": "head down toward the center of the opening",
+     "heldObjects": [
+      "one long pole/staff, gripped with both hands, angled down-and-inward toward the center"
+     ]
+    },
+    {
+     "position": "upper left",
+     "posture": "standing at the rim, torso leaning in toward the center",
+     "gaze": "head lowered toward the center",
+     "heldObjects": [
+      "one long pole/staff, gripped with both hands and extended to the right toward the center"
+     ]
+    },
+    {
+     "position": "upper right",
+     "posture": "standing at the rim, leaning in",
+     "gaze": "head lowered toward the center",
+     "heldObjects": [
+      "one long pole/staff, extended to the left toward the center"
+     ]
+    },
+    {
+     "position": "lower left",
+     "posture": "standing at the rim, back to the viewer, leaning in",
+     "gaze": "head down/away from the viewer toward the center",
+     "heldObjects": [
+      "one long pole/staff, extended up-and-right toward the center"
+     ]
+    },
+    {
+     "position": "lower right",
+     "posture": "standing at the rim, back to the viewer, leaning in",
+     "gaze": "head down/away from the viewer toward the center",
+     "heldObjects": [
+      "one long pole/staff, extended up-and-left toward the center"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "long wooden pole/staff",
+     "count": 5,
+     "countConfidence": "high",
+     "where": "one per figure, each running from the figure's hands inward over the mouth of the circular opening",
+     "orientation": "each lies roughly HORIZONTAL over the pit, angled slightly downward toward the center; none is planted upright and none points down into the shaft",
+     "arrangement": "radial spokes converging on and crossing at a single point at the center of the opening, forming a star-shaped crossing; the poles are held, not free-standing"
+    },
+    {
+     "type": "circular stone-lined opening / well shaft",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center of the frame, viewed from directly above",
+     "orientation": "opening faces up toward the viewer; the shaft recedes into blackness",
+     "arrangement": "single circular mouth with a stone ring and concentric paving rings around it"
+    },
+    {
+     "type": "arched doorway",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper right, in a wall beyond the paved area",
+     "orientation": "upright, facing into the courtyard",
+     "arrangement": "single"
+    }
+   ],
+   "environment": [
+    "high overhead/bird's-eye viewpoint looking down",
+    "a stone-paved courtyard with irregular flagstones and concentric rings of paving around the well mouth",
+    "a wall with an arched doorway at upper right",
+    "a wall or structure at upper left",
+    "very dark overall; no sky visible from this downward angle",
+    "aged border texture at the frame edges"
+   ],
+   "lightSources": [
+    "a soft light from the upper left falling across the paving and the figures' shoulders; source not visible in frame",
+    "the shaft itself is unlit and reads as black"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the five figures are arranged around the rim of the opening, not evenly: the largest gap in the ring is at the bottom center of the frame (between the lower-left and lower-right figures), with a second, smaller gap on the left between the upper-left and lower-left figures; it is an open ring, not a closed circle of bodies",
+    "all five lean inward and all five poles converge at one crossing point over the center of the shaft",
+    "no figure is standing inside the opening; all stand on the paving outside its rim"
+   ],
+   "foreground": [
+    "paved stone, the lower-left and lower-right figures seen from directly above"
+   ],
+   "background": [
+    "courtyard wall and arched doorway at the top of the frame"
+   ]
+  },
+  "uncertainObservations": [
+   "Faces are not visible from this angle for any figure; 'gaze' is inferred only from head tilt, which reads as downward for all five.",
+   "Whether the poles actually touch each other at the center or merely overlap visually cannot be determined.",
+   "Clothing detail on the figures is not resolvable beyond long dark garments.",
+   "Whether the central opening is a well, cistern or pit cannot be determined; only a dark circular shaft is visible."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-417",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, on a path between two ranks of upright blades",
+     "posture": "standing/mid-stride, walking FORWARD toward the viewer, barefoot on wet ground; weight on the forward foot",
+     "gaze": "head bowed, tilted downward and slightly to her right; both hands raised to her face lifting a pale translucent band of cloth away from/over her eyes — her eyes are covered or just being uncovered, not looking at the viewer",
+     "heldObjects": [
+      "a pale gauzy cloth band held in both hands at eye level"
+     ],
+     "clothing": "long dark gown patterned with stars/constellation-like gold marks, layered and trailing; long dark wavy hair blown to her left"
+    }
+   ],
+   "objects": [
+    {
+     "type": "long upright blade with a round pommel, each standing on a dark rectangular stone plinth",
+     "count": 8,
+     "countConfidence": "medium",
+     "where": "four to the left of the central path and four to the right, receding into the middle distance",
+     "orientation": "every one points UP — blade vertical, tip up, round pommel at the very top, hilt below, base set into the plinth; none inverted",
+     "arrangement": "two flanking ranks forming an avenue/corridor, with an open gap down the middle where the figure walks; within each rank the blades step back and rise in a staggered line"
+    },
+    {
+     "type": "dark rectangular stone plinth/base",
+     "count": 8,
+     "countConfidence": "low",
+     "where": "one beneath each blade, in two rows on the wet ground",
+     "orientation": "upright blocks",
+     "arrangement": "matching the two flanking ranks"
+    },
+    {
+     "type": "domed observatory-like building with a lit opening",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "middle distance, right of center, on a low rise reached by steps",
+     "orientation": "dome open/lit toward the viewer",
+     "arrangement": "single, its light reflected in the water below it"
+    },
+    {
+     "type": "planet/moon disc in the sky",
+     "count": null,
+     "countConfidence": "low",
+     "where": "a large grey cratered disc upper right; a smaller grey disc upper left; at least one or two much smaller discs near the right edge and upper center",
+     "orientation": "n/a",
+     "arrangement": "scattered across the starfield; the smallest ones blend into the star haze and cannot be separated reliably"
+    }
+   ],
+   "environment": [
+    "night sky filling the upper half — dense starfield, a coloured nebula/galaxy band running diagonally, thin gold constellation lines and orbital rings drawn over it",
+    "wet, reflective flats/shallow water in the foreground mirroring the blades and the sky",
+    "dark low hills on the horizon at left",
+    "a faint pale twilight glow along the horizon",
+    "dark trees/foliage mass at right, behind the right-hand rank",
+    "decorative border with gold corner ornament at the frame edges"
+   ],
+   "lightSources": [
+    "the starfield and nebula band (broad ambient)",
+    "the lit opening of the domed building in the middle distance, with a reflected light column on the water",
+    "faint self-glow along the blades themselves",
+    "a pale band of residual light at the horizon"
+   ],
+   "moonPhase": "the large disc upper right is rendered as a full, fully-lit cratered sphere; the smaller disc upper left also reads as full/round — no crescent anywhere",
+   "spatialRelations": [
+    "the figure walks forward down the open central gap between the two ranks of upright blades, toward the viewer",
+    "her head is bowed and her hands are at her face; she is not looking where she steps",
+    "the domed building sits behind her right shoulder (viewer's right), well beyond the near ranks",
+    "the blades nearest the viewer are largest at the outer frame edges and diminish toward the center distance"
+   ],
+   "foreground": [
+    "wet reflective ground with puddles and small stones",
+    "the nearest plinths and blades at both frame edges",
+    "the figure's bare feet and trailing hem"
+   ],
+   "background": [
+    "starfield with nebula and constellation lines",
+    "large full planet/moon upper right",
+    "distant hills",
+    "lit domed building and its water reflection"
+   ]
+  },
+  "uncertainObservations": [
+   "The blade count of 8 (4 left + 4 right) is my best resolution; the most distant blade in each rank is small and partly lost in haze, so 8 could be off by one.",
+   "Whether the figure is pulling the cloth off her eyes or tying it on cannot be determined from a still image; the cloth is in her hands at eye level either way.",
+   "The number of small planetary discs in the sky cannot be counted; several candidates are indistinguishable from bright stars.",
+   "The identity of the domed structure (observatory vs. temple) is not determinable; only a dome with a lit opening and an approach stair is visible."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ }
+]

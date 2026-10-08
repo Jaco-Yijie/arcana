@@ -1,0 +1,470 @@
+[
+ {
+  "reviewId": "review-008",
+  "visibleFacts": {
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "left of center",
+     "posture": "standing, upper body leaning/bowing forward toward the other figure, head tilted down",
+     "gaze": "downward, toward the object held between the two figures",
+     "appearance": "near-total silhouette; long shaggy hair to the shoulders; long dark robe with ragged trailing strands hanging from the sleeve and hem, reaching the ground",
+     "heldObjects": [
+      "right hand extended downward, fingers just above / touching a pale flower sitting in the vessel below"
+     ]
+    },
+    {
+     "position": "right of center",
+     "posture": "standing upright, facing left toward the other figure",
+     "gaze": "downward and to the left, toward the vessel",
+     "appearance": "silhouette; hair gathered up at the back of the head; long full-length gown with a wide skirt spreading on the floor",
+     "heldObjects": [
+      "a small footed cup/goblet, supported in both forward-extended hands at waist height"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "cup/goblet held by the figures",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "between the two figures at waist height, held in the right-hand figure's hands"
+    },
+    {
+     "type": "flower (pale, bluish-white, small bloom)",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "resting in / rising out of the held cup; it is the brightest small element in the frame"
+    },
+    {
+     "type": "wall niche (recessed rectangular alcove), each containing one goblet",
+     "count": 5,
+     "countConfidence": "medium",
+     "where": "in a horizontal row across the back wall, upper third of the image, above and behind both figures"
+    },
+    {
+     "type": "goblet standing inside a wall niche",
+     "count": 5,
+     "countConfidence": "medium",
+     "where": "one per niche, each faintly lit so its stem and bowl are readable"
+    },
+    {
+     "type": "staircase",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right edge, rising from lower right toward upper right, behind the right-hand figure"
+    }
+   ],
+   "environment": [
+    "dark stone interior",
+    "back wall with a row of recessed alcoves",
+    "arched opening / column and vaulting at the upper right",
+    "stone steps ascending at the right edge",
+    "cracked, irregular stone or flagstone floor",
+    "bare thin branches or twigs at the lower left",
+    "a painted dark border frame around the whole scene"
+   ],
+   "lightSources": [
+    "faint glow inside each wall niche illuminating the goblets",
+    "the pale flower in the held cup, which is the brightest point in the lower half",
+    "weak ambient light from the upper right near the arch/staircase"
+   ],
+   "moonPhase": "no moon or sun visible",
+   "spatialRelations": [
+    "the two figures face each other in profile and their hands meet at the cup between them",
+    "the row of lit niches runs horizontally directly above the two figures' heads",
+    "the staircase is behind and to the right of the right-hand figure",
+    "both figures are rendered almost entirely as black silhouettes against a slightly lighter wall"
+   ],
+   "foreground": [
+    "the two silhouetted figures",
+    "the held cup and its flower",
+    "cracked floor stones",
+    "bare branches at lower left"
+   ],
+   "background": [
+    "wall with the row of lit niches and their goblets",
+    "arch and column at upper right",
+    "ascending stone steps at right"
+   ]
+  },
+  "uncertainObservations": [
+   "The scene is extremely low-key; both figures are near-black, so facial features, expressions and exact hand positions cannot be resolved.",
+   "The niche count of 5 is my best individual resolution, but the leftmost niche sits close to where the wall panel ends and the frame darkens, so a sixth partially cut-off niche at the left edge cannot be fully excluded.",
+   "Whether the left figure's hand is touching the flower, the rim of the cup, or the other figure's hand is not determinable.",
+   "The bright object in the cup reads as a small pale flower, but its exact form (flower vs. small light source) is ambiguous.",
+   "The figures' genders/ages are inferred from silhouette shape only and should be treated as unresolved."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-001",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, occupying the middle of the frame",
+     "posture": "kneeling / crouched low on the stone ground, torso hunched forward, head bowed so the face is hidden behind hanging hair",
+     "gaze": "downward, toward the vessel and the spilling water (face not visible)",
+     "appearance": "dark heavy robe with long hanging strands; long dark hair falling forward over the face; robe pooled on the ground behind",
+     "heldObjects": [
+      "a large footed goblet/chalice gripped in one hand at chest height, tilted so liquid pours over its rim",
+      "the other hand held open and cupped below the goblet, palm up, catching/letting the water run through"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "goblet/chalice (large, footed, metallic, overflowing)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held at chest height in the center of the frame"
+    },
+    {
+     "type": "bird with fully outspread wings, glowing pale white",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right, on/against the lit wall, wings spread, head turned to the left, tail feathers trailing down"
+    },
+    {
+     "type": "arched doorway / arched opening",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper center-right, behind and above the figure, partly in shadow"
+    },
+    {
+     "type": "staircase",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "left side, mid-height, a flight of stone steps receding into darkness"
+    },
+    {
+     "type": "water stream",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "pours from the goblet rim, past the cupped hand, down onto the paving and into a recessed channel running toward the bottom of the frame"
+    }
+   ],
+   "environment": [
+    "dark stone interior or courtyard",
+    "cobbled / block paving covering the lower half of the frame",
+    "a low stone step or ledge crossing the lower third horizontally",
+    "a narrow recessed channel or gutter in the paving carrying the water toward the viewer",
+    "textured stone wall on the right",
+    "bare thin branches at the right edge",
+    "painted dark border frame around the scene"
+   ],
+   "lightSources": [
+    "the glowing white bird on the upper-right wall, the strongest light in the frame",
+    "a pool of light on the right-hand wall around the bird",
+    "specular highlights on the goblet and on the falling and pooled water"
+   ],
+   "moonPhase": "no moon or sun visible",
+   "spatialRelations": [
+    "the bird is above and to the right of the kneeling figure, and its glow falls on the wall rather than on the figure",
+    "the goblet is directly in front of the figure's chest, and the water falls vertically from it to the ground between the figure's knees and the viewer",
+    "the water gathers and runs away from the figure toward the bottom edge of the frame",
+    "the staircase on the left and the arch above are both in deep shadow behind the figure"
+   ],
+   "foreground": [
+    "wet cobbled paving",
+    "the water channel with running water and highlights"
+   ],
+   "background": [
+    "stone staircase at left",
+    "arched opening upper center-right",
+    "lit wall with the glowing bird",
+    "bare branches at the right edge"
+   ]
+  },
+  "uncertainObservations": [
+   "Whether the glowing bird is a living bird, a carved relief on the wall, or a projected/painted image on the stone cannot be determined.",
+   "The figure's face, expression and gender are not visible at all.",
+   "Whether the figure is kneeling on both knees, sitting back on the heels, or crouching is not resolvable because the robe conceals the legs.",
+   "The number of steps in the left-hand staircase cannot be counted; they fade into black.",
+   "Whether the second (lower) hand is catching the water or simply open beneath it is ambiguous."
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-007",
+  "visibleFacts": {
+   "figureCount": 4,
+   "figures": [
+    {
+     "position": "left, nearest the viewer",
+     "posture": "standing / stepping forward with the back to the viewer",
+     "gaze": "away from the viewer, toward the right-hand pair",
+     "appearance": "short curly hair, long dark travelling cloak, boots, a pack or bundle carried on the back",
+     "heldObjects": [
+      "a carried pack/satchel on the back; hands not clearly visible"
+     ]
+    },
+    {
+     "position": "left of center, beside the first figure",
+     "posture": "standing with the back to the viewer, one arm raised and extended forward to the right",
+     "gaze": "away from the viewer, toward the right-hand pair",
+     "appearance": "long hooded robe or veil, pale patterned full-length gown",
+     "heldObjects": [
+      "right hand open and extended forward, apparently empty or reaching toward something small and glowing"
+     ]
+    },
+    {
+     "position": "right of center",
+     "posture": "standing, facing left toward the approaching pair",
+     "gaze": "toward the two back-turned figures",
+     "appearance": "long embroidered gown, long hair, a small crown or tiara on the head",
+     "heldObjects": [
+      "hands forward near the platter, possibly steadying it"
+     ]
+    },
+    {
+     "position": "right, outermost of the pair",
+     "posture": "standing, facing left toward the approaching pair",
+     "gaze": "toward the two back-turned figures",
+     "appearance": "dark jacket/doublet with a high collar, short hair",
+     "heldObjects": [
+      "a flat tray or platter held at waist height, carrying small rounded items (fruit or similar)"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "pillar/post wrapped in vines and garlands",
+     "count": 4,
+     "countConfidence": "medium",
+     "where": "two at the left and two at the right, framing the platform and supporting the hanging garland"
+    },
+    {
+     "type": "hanging garland/swag of leaves and flowers with ribbons",
+     "count": null,
+     "countConfidence": "low",
+     "where": "strung between the pillar tops across the upper third; the swags overlap and merge so individual spans cannot be separated"
+    },
+    {
+     "type": "lit lantern",
+     "count": null,
+     "countConfidence": "low",
+     "where": "on the platform floor: one at lower left, one near the center beside the food, one at the right edge of the platform; more small glows may be lanterns or reflections"
+    },
+    {
+     "type": "large celestial sphere in the sky",
+     "count": null,
+     "countConfidence": "low",
+     "where": "a grey cratered disc at upper left; a large ringed orb at upper right; at least two smaller faint discs near the right edge and mid-right"
+    },
+    {
+     "type": "bright star with visible rays",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper center, below the apex of the arched constellation lines"
+    },
+    {
+     "type": "platter/bowl of food on the ground",
+     "count": null,
+     "countConfidence": "low",
+     "where": "center of the platform, a low spread of dishes and rounded fruit on and beside a patterned rug"
+    },
+    {
+     "type": "patterned rug/carpet",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "center of the platform beneath the food"
+    },
+    {
+     "type": "tree",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "left edge, foliage overhanging into the frame"
+    }
+   ],
+   "environment": [
+    "circular stone platform inscribed with a geometric/circular pattern",
+    "wet reflective surface in the lower third mirroring the figures and lights",
+    "a body of water behind the platform on both left and right",
+    "distant shoreline with small warm lights at left and right (a settlement)",
+    "low mountains on the horizon",
+    "dense star field and nebula clouds filling the sky",
+    "fine golden constellation lines and circular diagrams drawn across the sky",
+    "painted dark border frame around the scene"
+   ],
+   "lightSources": [
+    "lanterns on the platform floor",
+    "the star field and nebula glow in the sky",
+    "distant shoreline lights on both sides",
+    "small sparkles along the garlands and pillars"
+   ],
+   "moonPhase": "uncertain — the grey disc at upper left appears close to fully lit but its terminator is not clearly resolvable; the large orb at upper right has a visible ring and is a different kind of body",
+   "spatialRelations": [
+    "two back-turned figures at the left approach two forward-facing figures at the right across the platform",
+    "the food and rug lie on the ground between the two pairs",
+    "the garland-hung pillars frame all four figures, two pillars behind each pair",
+    "the water and distant shore lie behind the platform and below the horizon line",
+    "the reflections of the figures and lanterns extend toward the bottom edge"
+   ],
+   "foreground": [
+    "reflective wet platform surface with reflections",
+    "lanterns",
+    "the four figures",
+    "the rug and food"
+   ],
+   "background": [
+    "water",
+    "distant lit shoreline",
+    "mountains",
+    "star field with constellation lines and multiple celestial bodies"
+   ]
+  },
+  "uncertainObservations": [
+   "The number of celestial spheres cannot be stated: at least four rounded bodies are visible (upper left, upper right large ringed one, one near the right edge, one faint at mid-right), but several fainter discs may be nebula texture rather than bodies.",
+   "The lantern count cannot be fixed; three are clearly individually resolvable on the platform but additional warm points may be lanterns, candles or reflections.",
+   "What the second figure's extended hand holds or reaches for is ambiguous — there is a small glow between her hand and the third figure.",
+   "The head ornament on the third figure reads as a small crown or tiara but could be a flower wreath.",
+   "The items on the carried tray are small and rounded; identifying them as fruit is at the edge of resolution.",
+   "Whether the figures are stationary or mid-stride is not determinable."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-003",
+  "visibleFacts": {
+   "figureCount": 4,
+   "figures": [
+    {
+     "position": "center-left, largest figure",
+     "posture": "standing / walking away from the viewer, back turned, one arm around the shoulders of the figure beside them",
+     "gaze": "away from the viewer, up and to the right toward the arc of vessels",
+     "appearance": "short pale hair, long pale flowing garment",
+     "heldObjects": [
+      "none visible; the near arm is wrapped around the adjacent figure"
+     ]
+    },
+    {
+     "position": "center, beside and slightly in front of the first figure",
+     "posture": "standing with the back to the viewer, one arm raised and extended out to the right",
+     "gaze": "away from the viewer, toward the right / toward the arc",
+     "appearance": "long curly light hair with a pale flower wreath or blossoms in it, long pale dress trailing on the ground",
+     "heldObjects": [
+      "right arm outstretched, hand open and empty, pointing outward to the right"
+     ]
+    },
+    {
+     "position": "right of center, middle distance, smaller (a child-sized figure)",
+     "posture": "running or skipping away from the viewer, legs apart, one arm raised",
+     "gaze": "away from the viewer",
+     "appearance": "long light hair, pale dress",
+     "heldObjects": [
+      "none clearly visible; arms raised"
+     ]
+    },
+    {
+     "position": "right, middle distance, beside the third figure (a second child-sized figure)",
+     "posture": "running away from the viewer, both arms flung outward, legs mid-stride",
+     "gaze": "away from the viewer",
+     "appearance": "short curly light hair, pale tunic and shorts",
+     "heldObjects": [
+      "none visible; arms outstretched"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "footed goblet/chalice arranged in an arc in the sky",
+     "count": null,
+     "countConfidence": "low",
+     "where": "spanning the upper third of the frame, following the curve of the rainbow from the left edge up over the center and down to the right edge"
+    },
+    {
+     "type": "footed goblet/chalice standing on the ground cloth in the foreground",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower center and lower left, a loose group standing on a pale draped cloth beside the lantern"
+    },
+    {
+     "type": "rainbow",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "a broad arc spanning the sky from the left edge over the center to the right edge, with the sky goblets sitting along its inner curve"
+    },
+    {
+     "type": "lit lantern (glass-paned, with a domed top)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower left, standing on the ground among flowers, glowing warm yellow"
+    },
+    {
+     "type": "moon (pale disc)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left, a large soft-edged circle low in the pale sky"
+    },
+    {
+     "type": "building with pointed roofs and towers",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "middle distance at the right, on the far shore beyond the water"
+    },
+    {
+     "type": "body of water",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "middle distance on the right, a pale expanse between the figures and the building"
+    },
+    {
+     "type": "grassy slope with scattered small white flowers",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "foreground and lower right, where the two small figures are running"
+    }
+   ],
+   "environment": [
+    "pale, high-key, watercolor-like scene in white, lavender and soft blue",
+    "overhanging leafy branches and blossoms framing the upper left and upper right corners",
+    "flowering shrubs and white blossoms along the left edge and lower left",
+    "banks of soft cloud filling the middle of the sky",
+    "a grassy rise falling away toward water at the right",
+    "a pale painted border frame around the whole scene"
+   ],
+   "lightSources": [
+    "diffuse overall daylight/haze with no single hard source",
+    "the pale moon disc at upper left",
+    "the warm glow inside the lantern at lower left",
+    "faint sparkle highlights on the goblets and on the figures' garments"
+   ],
+   "moonPhase": "appears as a complete, unshaded circular disc, but it is so pale and soft-edged that the phase cannot be confirmed",
+   "spatialRelations": [
+    "the two large figures stand together at center-left with their backs to the viewer, the taller one's arm across the other's shoulders",
+    "the two small figures run away from the large pair, downhill and to the right",
+    "the arc of goblets follows the rainbow directly above and beyond all four figures",
+    "the lantern and the foreground goblets sit on the ground in the lower-left corner, nearest the viewer",
+    "the water and the distant building lie beyond the running children on the right"
+   ],
+   "foreground": [
+    "the lit lantern",
+    "a group of goblets standing on a draped pale cloth",
+    "white flowers and foliage",
+    "the two large back-turned figures"
+   ],
+   "background": [
+    "rainbow arc with the row of goblets",
+    "pale moon at upper left",
+    "cloud banks",
+    "water and the turreted building at the right",
+    "framing foliage at the top corners"
+   ]
+  },
+  "uncertainObservations": [
+   "The number of goblets in the sky arc cannot be stated reliably. Counting them one by one I resolve roughly 10 to 12 evenly spaced vessels, with the arc appearing symmetrical about the center; the outermost ones at both left and right sit close to the frame edge and to the border, and the pale rendering makes it impossible to confirm the exact total. Recording null rather than a number.",
+   "The number of foreground goblets on the cloth cannot be fixed either: at least five separate vessels are individually visible in the lower center-left, but several overlap each other and the pale cloth, and more may be hidden behind the nearest ones.",
+   "Whether small pale shapes drifting in the mid-sky (near the center-right, below the arc) are falling petals, leaves or birds is not determinable.",
+   "The faces of all four figures are turned away; no expressions, features or genders are visible.",
+   "Whether the flower shapes in the second figure's hair form a continuous wreath or are scattered blossoms is ambiguous.",
+   "The distant structure reads as a building with pointed roofs but its details dissolve into haze."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ }
+]

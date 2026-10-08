@@ -1,0 +1,16 @@
+{
+  "run": "wave-1",
+  "count": 2,
+  "cards": [
+    {
+      "reviewId": "review-109",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-109.png",
+      "split": "reviewer-b=pass vs reviewer-d=uncertain"
+    },
+    {
+      "reviewId": "review-110",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-110.png",
+      "split": "reviewer-b=uncertain vs reviewer-e=pass"
+    }
+  ]
+}

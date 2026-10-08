@@ -1,0 +1,138 @@
+[
+ {
+  "reviewId": "review-001",
+  "decision": "HUMAN_REVIEW",
+  "confidence": "medium",
+  "independentFinding": "I opened the image first. One hand grips the chalice bowl; a single second hand is held open palm-up beneath the overflow — not two cupped hands. Brightening the head region shows wet stringy hair parted at the crown and falling forward past the chin, with no hood edge, seam or cowl opening; I read the figure as bare-headed. I also sampled the pixels: the frame is overwhelmingly warm amber (dominant hue bucket 30 degrees, mean saturation 0.285) and violet-ish pixels are 0.038 percent of the lit area — effectively none. The pale bird sits flush inside the lit patch of masonry with wall texture reading around its wing edges; I cannot tell flight from relief from light-form.",
+  "reason": "The two reviewers directly contradict each other on the head: reviewer-b's frozen observation records 'a hood/mantle', reviewer-e records hair with no resolvable hood. I overturn reviewer-b — at 7x with brightening it is hair, not fabric. Separately, the demonstrably false 'trace of violet' was raised by only one reviewer, so it fails the dual-agreement bar even though I measured it as wrong. Nothing here clears AUTO_CORRECT.",
+  "overturnedReviewer": true,
+  "disputedFacts": [
+   "whether the figure's head is covered by a hood or only by forward-hanging hair",
+   "whether 'cupped hands' (plural) or one open hand is beneath the chalice",
+   "whether any violet exists in the palette (I measured none)",
+   "whether the pale bird is in flight, a carved relief, or a light form on the wall"
+  ],
+  "askHumanToVerifyOnly": "Is the kneeling figure's head covered by a hood, or bare with hair hanging forward over the face?"
+ },
+ {
+  "reviewId": "review-003",
+  "decision": "HUMAN_REVIEW",
+  "confidence": "medium",
+  "independentFinding": "Counted before reading anything: 11 goblets along the rainbow arc (shafts at roughly x=97,135,171,213,257,303,346,390,432,468,498) and 8 goblets in the foreground group (six in the rear arrangement, two nearer the viewer). The foreground cloth reads to me as draped over the grassy slope beside the lantern, with no table leg, apron or edge visible — but there is a faint horizontal break in the cloth on the right where the surface seems to drop, so a low table under the cloth is not excluded.",
+  "reason": "Reviewer-c returned pass and reviewer-e alone raised the table-versus-cloth point, so the dual-agreement bar for AUTO_CORRECT fails by the stated exclusion — even though c's own frozen observation also describes a cloth on the ground and never mentions a table. The 'table' wording is load-bearing in scene, keyObjects, spatialRelations and visualTensions, so dropping a field would destroy good content and a patch would touch five places; that is a human call.",
+  "overturnedReviewer": false,
+  "disputedFacts": [
+   "whether the foreground cups stand on a low table or on a cloth laid on the ground",
+   "whether the disc at upper left can be confirmed as a full moon"
+  ],
+  "askHumanToVerifyOnly": "Are the foreground cups standing on a table, or on a cloth laid directly on the grassy ground?"
+ },
+ {
+  "reviewId": "review-004",
+  "decision": "HUMAN_REVIEW",
+  "confidence": "medium",
+  "independentFinding": "My own count at 7x, before reading the packet: nine planted swords — five to her left (pommels near x=76, 111, 135, 159, 216) and four to her right (x=389, 421, 452, 481). The ground directly behind her, where the stream runs back into the middle distance, carries no blade at all, so the blades flank her as a corridor rather than closing into a ring.",
+  "reason": "Reviewer-a returned pass and only reviewer-d raised the ring-versus-flanking point, so AUTO_CORRECT is excluded by rule — although a's own frozen observation also lists only a LEFT group and a RIGHT group and never a blade behind her. I additionally disagree with both reviewers on the count: they report 'at least 7, possibly 8'; I resolve nine distinct hilts with nine separate blades. Two independent reasons for a human to look.",
+  "overturnedReviewer": true,
+  "disputedFacts": [
+   "whether swords stand behind the figure ('encircled', 'loose ring') or only to her left and right",
+   "the number of planted swords — reviewers say 7 or 8, I count 9"
+  ],
+  "askHumanToVerifyOnly": "Is any sword planted in the ground directly behind the woman, or are they all to her left and right?"
+ },
+ {
+  "reviewId": "review-005",
+  "decision": "HUMAN_REVIEW",
+  "confidence": "medium",
+  "independentFinding": "At 6x I resolve exactly five upright swords in the boat — five pommels, five crossguards, five blades running down to the hull, with a clear empty gap between the fifth and the ornate finial post. There is no sixth. The lit lantern hangs from that ornate post at the right-hand end of the boat, outboard of and beyond the swords; the poling figure stands at the left-hand end. Both ends of the hull are raised and decorated, so which end is bow and which is stern is not determinable from the image.",
+  "reason": "Two separate problems and they pull apart. On the count both reviewers independently resolved five and rejected six, and I agree — but neither would assert five, and the guidance says not to write in a number nobody will stand behind. On the lantern the reviewers flatly contradict each other about the boat's orientation: reviewer-b places the prow at the right (making the lantern the bow), reviewer-d's own observation places the prow at the left (making the lantern the stern, i.e. the existing text correct). That contradiction, unaddressed, blocks an auto-write on this file.",
+  "overturnedReviewer": false,
+  "disputedFacts": [
+   "the number of upright swords — existing text says six, both reviewers and I resolve five",
+   "which end of the boat is the bow, and therefore whether the lantern is at the bow or the stern"
+  ],
+  "askHumanToVerifyOnly": "How many upright swords stand in the boat — five, or six?"
+ },
+ {
+  "reviewId": "review-006",
+  "decision": "MARK_UNCERTAIN",
+  "confidence": "medium",
+  "independentFinding": "Two hilts, two crossguards and two scabbard throats are unambiguous in the kneeling figure's grip, and at the bottom of the bundle two brass scabbard chapes are visible. But a third parallel shaft runs down to the right of them and vanishes behind the boot and undergrowth without a resolvable tip, so I cannot close the count at two. The two swords lying in the water are cleanly two. The departing figure does carry a visible satchel on a shoulder strap.",
+  "reason": "Both reviewers independently reached the same conclusion — two hilts clear, blade group possibly two or three, no number assertable — and my own look agrees. The existing keyObjects asserts 'two swords held upright', a count the image cannot support. Per the rule, the field is dropped rather than guessed at; I am not substituting a number. I do overturn reviewer-c's secondary doubt about the satchel: the strap and bag are plainly drawn at the departing figure's back and hip.",
+  "overturnedReviewer": true,
+  "uncertainFields": [
+   "keyObjects"
+  ]
+ },
+ {
+  "reviewId": "review-007",
+  "decision": "AUTO_CORRECT",
+  "confidence": "high",
+  "independentFinding": "On my first pass, before opening the packet, I noted the lanterns as sitting on the platform floor: one at lower left by the near post's base, one at centre beside the food spread, one at lower right. Each has a visible base resting on the inlaid stone and its own reflection in the wet surface. Zooming the post tops shows flower clusters, ribbons and tiny wound point-lights — nothing suspended from any post.",
+  "reason": "Both reviewers independently returned 'corrected' on exactly this fact and described it identically (lanterns standing on the platform, nothing hanging from the posts); I reached the same conclusion on my own. It is a pure position fact, and the fix is two exact, uniquely-anchored substring swaps. Reviewer-e's separate 'ringed planet with orbiting spheres' point was raised by one reviewer only and is not included.",
+  "overturnedReviewer": false,
+  "patch": {
+   "replace": [
+    {
+     "find": "- small lanterns hanging on the posts",
+     "with": "- small lanterns standing on the platform floor"
+    },
+    {
+     "find": "exact number of small lanterns hanging on the posts",
+     "with": "exact number of lanterns standing on the platform floor"
+    }
+   ]
+  }
+ },
+ {
+  "reviewId": "review-009",
+  "decision": "HUMAN_REVIEW",
+  "confidence": "medium",
+  "independentFinding": "With contrast raised I resolve three full-height garlanded poles — one at the far left (x about 90), one slender one at centre (x about 252, traceable from the garland down past the table to the ground), and one at the right (x about 397). I find no fourth: the area right of the right-hand pole is shrubbery and the faint crowd. Separately, and against both reviewers, the leftmost foreground figure IS holding a small stemmed cup raised near her chin — it is clearly drawn at 10x. So all three foreground figures hold cups, and 'a group of pale-robed women raise small cups' is faithful.",
+  "reason": "The reviewers disagree with each other on the count (reviewer-a resolves three, reviewer-d resolves two) and I land on three, overturning reviewer-d — the centre shaft is a genuine separate pole. Nobody, including me, can establish the asserted four. More seriously, reviewer-d's suggested patch ('two of them raising cups') would write a new error into the data: the left figure's cup is visible. Nothing here may be applied automatically.",
+  "overturnedReviewer": true,
+  "disputedFacts": [
+   "the number of garlanded poles — text says four, reviewer-a says three, reviewer-d says two, I resolve three",
+   "the 'two at left and two at right' arrangement, which I do not see",
+   "whether the leftmost figure holds a cup — both reviewers say her hands are hidden, I can see a cup"
+  ],
+  "askHumanToVerifyOnly": "How many garlanded poles run the full height of the picture — two, three, or four?"
+ },
+ {
+  "reviewId": "review-010",
+  "decision": "HUMAN_REVIEW",
+  "confidence": "high",
+  "independentFinding": "At 10x the two seated passengers are plainly different: the centre one is bare-headed with long wavy brown hair drawn over the crown and down the back, the cream cloak resting on the shoulders BELOW the hair; the one to its right is fully covered by a dark hood with no hair showing. Only one is hooded. I also count six upright swords in the boat (pommels near x=810, 975, 1120, 1255, 1360, 1440), and I see no oars or oarlocks anywhere in the hull.",
+  "reason": "Reviewer-b returned pass and described the centre passenger's cloak as 'draped over head and shoulders'; reviewer-d recorded it as bare-headed. They contradict each other, and reviewer-b passed, so the dual-agreement bar fails twice over. I overturn reviewer-b: it is hair, not a hood. Because a reviewer's frozen observation is on the other side, this needs a person rather than an automatic write.",
+  "overturnedReviewer": true,
+  "disputedFacts": [
+   "whether both seated passengers are hooded",
+   "whether 'rowing boat' is right when the only propulsion visible is the pole"
+  ],
+  "askHumanToVerifyOnly": "Are BOTH seated passengers hooded, or only one?"
+ },
+ {
+  "reviewId": "review-011",
+  "decision": "AUTO_CORRECT",
+  "confidence": "high",
+  "independentFinding": "Before reading the packet I counted the planted staves in the right third: four, each with its own sheaf-like leafy finial, its own unbroken shaft running down into the shallow water, and its own reflection. There is no fifth shaft anywhere in the row, and the gap to the border is empty horizon glow. The rider's own staff is a separate object — gold, with a ring/wreath finial and a star — and the text already lists it on its own line.",
+  "reason": "Both reviewers independently counted four at high confidence, giving the same shaft positions; my own count agrees; the rider's staff cannot be the fifth because it is listed separately. This is a plain count fixed by three exact, non-overlapping substring swaps. Reviewer-c's separate low-confidence point about the 'spherical instrument' in the building window was raised by one reviewer only and is not included.",
+  "overturnedReviewer": false,
+  "patch": {
+   "replace": [
+    {
+     "find": "a row of five upright wands",
+     "with": "a row of four upright wands"
+    },
+    {
+     "find": "five upright wands with gold spear-like tips and purple ribbons",
+     "with": "four upright wands with gold spear-like tips and purple ribbons"
+    },
+    {
+     "find": "the five wands stand in a row to the right",
+     "with": "the four wands stand in a row to the right"
+    }
+   ]
+  }
+ }
+]

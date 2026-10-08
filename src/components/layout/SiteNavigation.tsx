@@ -3,13 +3,17 @@ import { Link, NavLink } from 'react-router-dom'
 import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
 import { needsOnboarding } from '@/features/onboarding/state'
 import { useI18n } from '@/i18n'
+import { useAuth } from '@/store/AuthContext'
 
 export function SiteNavigation() {
+  const { user } = useAuth()
   const { t } = useI18n()
   const menu = useRef<HTMLDetailsElement>(null)
   const summary = useRef<HTMLElement>(null)
   const close = () => { if (menu.current) menu.current.open = false }
   const links = <>
+    {user?.role === 'admin' && <NavLink to="/admin" onClick={close}>{t('admin.navigation')}</NavLink>}
+    <NavLink to="/login" onClick={close}>{t(user ? 'auth.account' : 'auth.login')}</NavLink>
     <NavLink to="/what-is-tarot" className="site-nav-tarot" onClick={close}>{t('navigation.tarot')}</NavLink>
     <NavLink to="/decks" onClick={close}>{t('home.nav.decks')}</NavLink>
     <Link to={needsOnboarding() ? '/guide' : '/decks'} className="site-nav-begin" onClick={close}>{t('navigation.begin')}</Link>

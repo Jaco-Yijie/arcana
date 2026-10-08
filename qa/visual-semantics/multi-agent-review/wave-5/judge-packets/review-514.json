@@ -1,0 +1,261 @@
+{
+  "reviewId": "review-514",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-514.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-514.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "a potted plant at the lower left",
+          "observed": "I recorded two planted urns / garden pots, but on the viewer-RIGHT, on and beside the lower parapet behind the figure. At the viewer-left I recorded only the vine trellis, the stone steps and a single upright stone pedestal / small column among the vines — no pot.",
+          "evidence": "Lower-right quadrant: two upright planted containers sit beside the pentacle parapet, catching the light. Lower-left quadrant: steps, trellis and a slim pedestal shaft. I also recorded in my blind pass that the lower-left quadrant of this image is effectively unreadable, so I cannot assert that nothing is there — hence low confidence rather than a correction.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-514",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "centre-left, standing on a paved garden terrace in the lower-middle of the image",
+              "posture": "standing, seen from behind in three-quarter rear view, body turned toward viewer-right, one arm extended up and out to the viewer-right",
+              "gaze": "head turned to the viewer-right and tilted slightly up, looking toward the bird above the outstretched hand; face in near-total shadow, only the profile edge catches light",
+              "heldObjects": [
+                "nothing held; the viewer-right arm is extended up and outward, hand open with fingers spread at roughly head height, directly under the bird"
+              ],
+              "clothing": "long dark high-necked gown with a very long train pooling and trailing across the paving behind to the viewer-left; dark hair gathered up; no visible headdress"
+            }
+          ],
+          "objects": [
+            {
+              "type": "pentacle (five-pointed star in a disc)",
+              "count": 9,
+              "countConfidence": "medium",
+              "where": "5 set in a row of arched niches in the upper garden wall across the top of the image; 4 set in arched panels along the lower parapet at viewer-right",
+              "orientation": "all flat discs facing the viewer, each star with a single point upward",
+              "arrangement": "two horizontal rows: an upper row of 5 and a lower row of 4"
+            },
+            {
+              "type": "bird",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-right of centre, in the air just above and beyond the figure's outstretched hand",
+              "orientation": "wings raised and spread, body angled toward the viewer-right, head turned toward the hand",
+              "arrangement": "single, in flight"
+            },
+            {
+              "type": "grapevine with hanging grape clusters",
+              "count": null,
+              "countConfidence": "low",
+              "where": "viewer-left third of the image, trained on supports beside the stairway",
+              "orientation": "vertical trellis with clusters hanging downward",
+              "arrangement": "many overlapping clusters; too dark and overlapping to count"
+            },
+            {
+              "type": "planted urn / garden pot",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "viewer-right, on and beside the lower parapet behind the figure",
+              "orientation": "upright",
+              "arrangement": "two, side by side at slightly different depths"
+            },
+            {
+              "type": "stone pedestal / small column",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "viewer-left, beside the stairway among the vines",
+              "orientation": "upright",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "enclosed walled garden at night or in deep shade; overall image is very dark, near monochrome brown-black",
+            "tall rear garden wall topped by a run of arched niches holding pentacle discs",
+            "dense ivy and climbing foliage covering the wall",
+            "a flight of stone steps rising at the viewer-left, flanked by vine trellises",
+            "flowering shrubs and potted plants at viewer-right",
+            "stone paving in the foreground, wet or polished enough to catch light",
+            "a low parapet wall at viewer-right with its own arched pentacle panels",
+            "a ruled double border frame around the image"
+          ],
+          "lightSources": [
+            "a single off-screen light source low and to the viewer-right, casting the figure's long shadow across the paving to the viewer-left and rim-lighting the bird's wings and the figure's extended arm"
+          ],
+          "moonPhase": "not visible — no sky or moon appears in the frame; the garden is enclosed by wall and foliage",
+          "spatialRelations": [
+            "the bird is above and to the viewer-right of the figure's outstretched hand",
+            "the row of 5 pentacles runs along the wall above and behind the figure's head",
+            "the row of 4 pentacles is on the parapet to the viewer-right of and below the figure",
+            "the figure's cast shadow falls to the viewer-left across the paving, away from the parapet",
+            "the stairway and vine trellis are to the viewer-left of the figure",
+            "the potted plants are to the viewer-right of the figure, between her and the parapet"
+          ],
+          "foreground": [
+            "paved terrace with the figure's trailing gown and long cast shadow",
+            "the standing figure"
+          ],
+          "background": [
+            "ivy-covered wall with arched pentacle niches",
+            "vine trellis and stone steps at viewer-left",
+            "parapet with pentacle panels and planted urns at viewer-right"
+          ]
+        },
+        "uncertainObservations": [
+          "Pentacle total of 9 is a count of what is legible; the lower parapet runs off the right edge and the upper niche row is cut by the frame, so one or more further discs could be out of frame or lost in shadow. Count confidence is medium for this reason.",
+          "The bird's species is not determinable; it is a pale mid-sized bird with broad spread wings, seen mostly as a silhouette with rim light.",
+          "I cannot tell whether the bird is landing on the hand, taking off from it, or simply hovering near it.",
+          "The figure's face is entirely in shadow; sex, age and expression are not readable from the image, and my reading of the figure as wearing a gown is based on the garment silhouette only.",
+          "I cannot tell whether the hanging clusters on the viewer-left trellis are grapes or wisteria-type flowers; both readings fit the shapes.",
+          "The light source itself is outside the frame; I can only infer its direction from the shadow.",
+          "The overall image is extremely dark; detail in the lower-left quadrant is effectively unreadable."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "a potted plant at the lower left",
+          "observed": "I recorded the clearly identifiable potted plants / flowering shrubs at mid-right, on and behind the low terrace wall. At the lower left I recorded the grapevine arbour and the stone steps, plus one pale pedestal-like form near the steps that I could not identify as a planter rather than a plinth, urn, or garden ornament.",
+          "evidence": "Left of centre, beside the foot of the stone steps, around the vertical mid-height of the frame: a pale narrow stem-and-base shape in deep shadow. The unambiguous containers with foliage are on the opposite side, at mid-right above the balustrade.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-514",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, slightly viewer-left, standing on a paved garden terrace",
+              "posture": "standing, back and left side to the viewer, body turned toward viewer-right, weight settled, long train of the gown spreading behind on the ground",
+              "gaze": "head turned toward viewer-right and tilted slightly up, looking toward the bird",
+              "heldObjects": [
+                "right arm (viewer-right) extended out and slightly up at shoulder height, hand open and empty, palm up toward the bird"
+              ],
+              "clothing": "dark full-length gown with a long trailing train, close-fitting bodice, dark hair gathered at the nape"
+            }
+          ],
+          "objects": [
+            {
+              "type": "bird",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-right, in the air just beyond the figure's outstretched hand",
+              "orientation": "wings raised and spread, body angled head-down toward the hand",
+              "arrangement": "single, in flight"
+            },
+            {
+              "type": "pentacle disc (five-pointed star in a circle)",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "set in a row of arched niches along the upper garden wall, upper third of the frame",
+              "orientation": "upright, flat to the viewer",
+              "arrangement": "an evenly spaced horizontal row of five"
+            },
+            {
+              "type": "pentacle disc (five-pointed star in a circle)",
+              "count": 4,
+              "countConfidence": "low",
+              "where": "set in a row of small arches along the front of the low terrace wall at mid-right, running off the right edge of the frame",
+              "orientation": "upright, flat to the viewer",
+              "arrangement": "a horizontal row, partly cropped by the frame edge"
+            },
+            {
+              "type": "grapevine with fruit clusters",
+              "count": null,
+              "countConfidence": "low",
+              "where": "left third of the frame, trained on a trellis or arbour",
+              "orientation": "hanging clusters below broad leaves",
+              "arrangement": "massed foliage with multiple pendant bunches"
+            },
+            {
+              "type": "potted plant / flowering shrub",
+              "count": null,
+              "countConfidence": "low",
+              "where": "mid-right, on and behind the low terrace wall",
+              "orientation": "upright",
+              "arrangement": "a group of two or three containers"
+            },
+            {
+              "type": "stone steps",
+              "count": null,
+              "countConfidence": "low",
+              "where": "left of center, leading up into the arbour",
+              "orientation": "ascending away from the viewer",
+              "arrangement": "a short flight"
+            },
+            {
+              "type": "cast shadow",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the paving at lower-right, running from the figure's feet toward the bottom-right corner",
+              "orientation": "elongated, pointing away to viewer-right",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "an enclosed walled garden at night or in deep shadow",
+            "a tall ivy-covered stone wall with an arcade of arched niches across the top",
+            "a lower terrace wall or balustrade with its own arcade at mid-right",
+            "paved stone ground with a visible joint pattern",
+            "dense climbing foliage covering most of the left and upper surfaces",
+            "very dark, near-monochrome sepia tonality",
+            "a thin printed border line along the left edge"
+          ],
+          "lightSources": [
+            "a strong directional light from the upper-left/behind, rimming the figure's shoulder and the bird's wings and casting the figure's shadow to the lower-right",
+            "no light-emitting object (lamp, sun or moon) is visible inside the frame"
+          ],
+          "moonPhase": "not visible — no sky is shown; the garden wall closes off the top of the frame",
+          "spatialRelations": [
+            "the bird is above and to the viewer-right of the figure's outstretched hand, not touching it",
+            "the upper row of pentacle discs runs along the wall above and behind the figure's head",
+            "the lower row of pentacle discs is to the viewer-right of the figure, below the bird",
+            "the grapevine arbour is to the viewer-left of the figure",
+            "the stone steps are behind and to the left of the figure, leading up and away",
+            "the figure's shadow falls toward the lower-right, opposite the light"
+          ],
+          "foreground": [
+            "the paved terrace and the trailing hem of the gown",
+            "the cast shadow across the paving",
+            "the lowest grapevine leaves at the left edge"
+          ],
+          "background": [
+            "the ivy-covered wall and its arcade of pentacle discs",
+            "the arbour and steps at left",
+            "potted plants and the lower arcade at right"
+          ]
+        },
+        "uncertainObservations": [
+          "The image is very dark; counts and edges are read from faint highlights only.",
+          "The lower row of pentacle discs is cut off by the right frame edge — I count 4 visible but there may be more outside the frame, so the total count is not determinable.",
+          "Cannot tell whether the bird is landing on the hand or taking off from it.",
+          "Cannot identify the bird species beyond 'a pale broad-winged bird'.",
+          "Cannot confirm the fruit clusters are grapes rather than another hanging fruit or flower.",
+          "Cannot see the figure's face at all; only the back of the head and a sliver of jaw.",
+          "Cannot determine whether the upper arcade holds exactly 5 discs — the leftmost and rightmost arches are partly obscured by foliage."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

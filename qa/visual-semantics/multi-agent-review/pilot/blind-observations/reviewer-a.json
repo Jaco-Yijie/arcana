@@ -1,0 +1,509 @@
+[
+ {
+  "reviewId": "review-002",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, mid-height",
+     "posture": "standing, bent forward sharply at the waist, knees slightly bent, in three-quarter rear/profile view",
+     "gaze": "downward and to the left, toward the vine his hands touch",
+     "heldObjects": [
+      "a thorny/bare vine or branch, gripped with both hands — upper right hand at the vine's mid-height, lower left hand near its base"
+     ],
+     "clothing": "dark ragged long tunic or smock with an apron-like overlayer, dark boots, dark shoulder-length hair"
+    }
+   ],
+   "objects": [
+    {
+     "type": "five-pointed-star disc set in a wall trellis",
+     "count": 4,
+     "countConfidence": "medium-high",
+     "where": "on the vine-covered stone wall filling the left half; individually resolved at upper-left cell, upper-right cell, mid-left cell, mid-right cell of the lattice grid. The lattice continues into lower and right cells that are empty or too dark to read."
+    },
+    {
+     "type": "five-pointed-star disc on a stone planter box",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "one on the front face of each of the three stone boxes stepping down the right foreground — upper box (farthest), middle box, lower box (nearest, largest)"
+    },
+    {
+     "type": "stone planter/trough box with soil and young seedlings",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "right foreground, arranged in a descending diagonal from mid-right toward bottom-center"
+    },
+    {
+     "type": "long-handled tool with a flat head (hoe- or spade-like)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "leaning against the wall at far left, head resting on the ground at bottom-left"
+    },
+    {
+     "type": "bare gnarled tree",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper-right corner, branches spreading over the dark sky; further trunks may be merged into the dark mass"
+    }
+   ],
+   "environment": [
+    "tall stone wall covered in dark ivy/moss, left half of frame",
+    "wooden or iron lattice/trellis grid fixed to that wall",
+    "climbing thorny vine trained up the trellis, its live tendrils near the figure's hands",
+    "wet flagstone or cobbled ground",
+    "stone staircase in the right-middle distance, ascending away from the viewer",
+    "ruined stone arch or gateway at the top of the staircase",
+    "night sky, no stars resolvable"
+   ],
+   "lightSources": [
+    "faint cool light from the upper right, around and beyond the ruined arch",
+    "weak edge-light skimming the wall discs and the figure's forearms"
+   ],
+   "moonPhase": "no moon visible in frame",
+   "spatialRelations": [
+    "the figure stands with his back to the right-hand garden and faces the discs-bearing wall",
+    "the wall discs are above and left of him; the planter discs are behind and right of him, receding toward the frame's bottom edge",
+    "the staircase and arch sit directly above the row of planters, deep in the picture",
+    "the tool at far left is separated from the figure by a stretch of shadowed wall"
+   ],
+   "foreground": [
+    "nearest stone planter box with its star disc and seedlings, bottom-center-right",
+    "wet dark paving"
+   ],
+   "background": [
+    "staircase and ruined arch",
+    "bare tree",
+    "unlit sky"
+   ],
+   "palette": "near-monochrome charcoal/olive-black with faint warm highlights"
+  },
+  "uncertainObservations": [
+   "The lower rows and right-hand column of the wall lattice are in deep shadow behind foliage; additional discs could be present there and I cannot confirm or exclude them. The count of 4 is only for discs I individually resolved.",
+   "Two small dark upright shapes near the top of the staircase, beside the arch, might be figures, posts or vegetation — not resolvable.",
+   "The head of the leaning tool is in shadow; whether it is a hoe, spade or rake cannot be determined.",
+   "Whether the trellis grid is 3x3 or larger cannot be determined because its lower edge fades into darkness."
+  ],
+  "reviewConfidence": "medium-high",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-006",
+  "visibleFacts": {
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "left foreground, occupying the left third",
+     "posture": "kneeling on the left knee with the right knee raised, torso leaning forward and down",
+     "gaze": "downward, eyes lowered toward the blades / the ground in front of the knee",
+     "heldObjects": [
+      "a gathered bundle of upright blades, gripped with both hands — the right hand around the grips at chest height, the left hand steadying the blades lower down"
+     ],
+     "clothing": "hooded green-grey cloak over a pale undershirt, layered ragged tunic, leather pouch at the hip, wrapped boots; dark tousled hair"
+    },
+    {
+     "position": "middle distance, right of center, standing on the path",
+     "posture": "standing/walking away from the viewer, body turned three-quarters away, cloak blowing to the left",
+     "gaze": "away from the viewer, up the path (head turned slightly so a sliver of profile shows)",
+     "heldObjects": [
+      "none resolvable"
+     ],
+     "clothing": "long hooded travelling cloak, belt with a hanging satchel; rendered soft and hazy"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword/blade held upright by the kneeling figure",
+     "count": null,
+     "countConfidence": "low",
+     "where": "clustered vertically against the kneeling figure's chest and right knee; two cross-guards and two pommels are individually resolvable at the top, but the blade shapes below overlap and may be two or three"
+    },
+    {
+     "type": "sword/blade lying on the wet ground",
+     "count": 2,
+     "countConfidence": "medium-high",
+     "where": "lower-center foreground in the mud and standing water — one running from upper-right to lower-left with its point at the left, and a second below it, roughly parallel, its point toward the bottom-left; the two overlap near the hilt of the lower one"
+    },
+    {
+     "type": "mushroom/toadstool",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "bottom-left corner on the painted border — a cluster of two larger caps plus one small one; a further pale cap sits at bottom-center-right"
+    },
+    {
+     "type": "loose leaf blowing in the air",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered mid-air above and around the distant figure, upper-right quadrant"
+    },
+    {
+     "type": "butterfly or moth",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "top-right corner, sitting on the painted border ornament"
+    }
+   ],
+   "environment": [
+    "dense temperate forest of slim straight trunks receding into haze",
+    "a narrow muddy footpath running from bottom-center into the depth of the frame",
+    "standing water and puddles along the path, reflecting the sky",
+    "ferns and broadleaf undergrowth on both banks",
+    "fallen brown leaves over the ground",
+    "a painted ornamental border of vines, ferns and mushrooms framing all four sides"
+   ],
+   "lightSources": [
+    "diffuse bright daylight from the top-center/upper-right, behind the trees, creating a pale glow at the vanishing point of the path"
+   ],
+   "moonPhase": "not applicable — no moon or sun disc visible",
+   "spatialRelations": [
+    "the kneeling figure is in the near foreground at left; the walking figure is far up the same path at the right, much smaller and hazier",
+    "the two ground blades lie between the two figures in depth, nearer the viewer than the walking figure",
+    "the kneeling figure faces down and left, away from the departing figure; he does not look at her",
+    "the path physically connects both figures and both ground blades"
+   ],
+   "foreground": [
+    "kneeling figure and the bundle of upright blades",
+    "two blades lying in the mud and water",
+    "wet leaf litter, ferns, mushrooms on the border"
+   ],
+   "background": [
+    "receding forest trunks",
+    "the walking cloaked figure",
+    "bright hazy light at the end of the path"
+   ],
+   "palette": "muted greens, olive, grey-brown, pale cream light"
+  },
+  "uncertainObservations": [
+   "The number of blades held by the kneeling figure cannot be resolved: two hilts are clearly separate, but the overlapping blades below could belong to two or three weapons. I am not stating a number.",
+   "The total number of blades in the frame is therefore also indeterminate; I can only say 'two on the ground plus at least two held'.",
+   "The distant figure's sex, face and whether anything is carried in the hands are not resolvable at that scale.",
+   "The small pale caps at bottom-center-right may be mushrooms or pale flowers.",
+   "Whether the kneeling figure's eyes are open or closed cannot be determined."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-011",
+  "visibleFacts": {
+   "figureCount": null,
+   "figures": [
+    {
+     "position": "left of center, mounted, upper-middle of the frame",
+     "posture": "seated upright astride a horse, body facing right, one arm raised gripping a tall staff vertically, the other hand low at the reins",
+     "gaze": "forward and slightly upward, toward the right of the frame",
+     "heldObjects": [
+      "a tall ornate golden staff with a ring/wreath finial and a bright star at its tip"
+     ],
+     "clothing": "deep blue-violet robe and cloak with gold embroidery, gold shoulder ornaments; a laurel/leaf wreath crown on the head",
+     "crown": "yes — a golden laurel-leaf wreath"
+    },
+    {
+     "position": "lower left, on the bank behind and below the horse",
+     "posture": "a crowd of small dark standing figures, mostly silhouetted, some facing the rider",
+     "gaze": "several appear turned toward the rider",
+     "heldObjects": [
+      "not resolvable"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "upright planted stave/pole with a sprouting leafy top",
+     "count": 4,
+     "countConfidence": "high",
+     "where": "right third of the frame, planted in the shallow water and bank, individually resolved left to right: (1) the shortest, nearest the horse's head, its leafy crown highest-left; (2) next to its right, slightly taller crown; (3) the third, crown a little lower; (4) the rightmost, crown lowest. Each shaft runs unbroken down into the water and casts a reflection."
+    },
+    {
+     "type": "ornate golden staff held by the rider",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held vertically by the rider, distinct in form and material from the four planted staves — gold, with a looped ring finial, hanging ribbons, and a radiant star at the top"
+    },
+    {
+     "type": "horse",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center, dark-coated, walking to the right with the near foreleg raised and bent; bridle, chest-strap, gold-trimmed caparison and tasseled harness"
+    },
+    {
+     "type": "domed building with lit windows",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "far left edge, behind the crowd — a large ribbed dome, an arched lit window and a round clock-like or rose-window disc glowing gold"
+    },
+    {
+     "type": "crescent moon",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right quadrant, pale grey-blue, the lit crescent along its left/lower-left limb, with the unlit disc faintly visible"
+    },
+    {
+     "type": "additional faint spherical body (planet-like disc)",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "below and slightly right of the crescent, a dim ringless sphere against the star field"
+    }
+   ],
+   "environment": [
+    "night sky filling the upper two-thirds: dense star field, a violet-and-magenta nebula/galaxy band on the right, thin gold constellation lines and circular orbital arcs drawn over the stars",
+    "shallow still water across the entire foreground, mirroring the horse, the staves and the sky",
+    "a low bank of grass and rock at bottom-right where the staves are planted",
+    "a distant low horizon with a warm orange-gold glow and small spires/treeline at right",
+    "narrow gold ornamental border on the left and right edges"
+   ],
+   "lightSources": [
+    "the star at the tip of the rider's staff (brightest point in the frame)",
+    "warm orange glow along the distant horizon at right",
+    "gold lit windows of the domed building at left",
+    "faint moonlight/starlight overall"
+   ],
+   "moonPhase": "crescent — a thin lit sliver on the left side of the disc; whether waxing or waning is not determinable from the image alone",
+   "spatialRelations": [
+    "the rider and horse face right, moving toward the row of four planted staves",
+    "the four staves stand between the horse and the right edge, all on the far side of the water from the crowd",
+    "the crowd is behind and below the horse on the left bank, the domed building behind them",
+    "the crescent moon sits high above and right of the rider's staff-star",
+    "everything above the waterline is doubled as a reflection in the foreground water"
+   ],
+   "foreground": [
+    "reflective shallow water with shimmering vertical light trails",
+    "rocks and grass at bottom-right and bottom-left"
+   ],
+   "background": [
+    "star field, nebula, constellation lines",
+    "crescent moon and faint second sphere",
+    "domed building and crowd at left",
+    "glowing horizon at right"
+   ],
+   "palette": "deep indigo and violet with gold accents"
+  },
+  "uncertainObservations": [
+   "The crowd at lower left cannot be counted — the figures are small, dark and overlapping, and some merge with the rock and the building's shadow. Total figure count in the frame is therefore null.",
+   "The rider's facial features are small; expression is not reliably readable.",
+   "The faint sphere below the crescent may be a planet, a second moon, or a nebula knot.",
+   "Whether the horse's rear hooves are in the water or on a bank is obscured by reflection.",
+   "It is uncertain whether the fourth (rightmost) stave is planted in water or on the far bank."
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-009",
+  "visibleFacts": {
+   "figureCount": null,
+   "figures": [
+    {
+     "position": "left of center, partly occluded behind the central figure",
+     "posture": "standing, turned toward the right/center",
+     "gaze": "toward the center of the group",
+     "heldObjects": [
+      "not resolvable — hands are hidden behind the central figure"
+     ],
+     "clothing": "pale lilac gown, long dark hair, a small pale flower circlet on the head"
+    },
+    {
+     "position": "center, nearest the viewer, the largest figure",
+     "posture": "standing, back three-quarters to the viewer, weight on one leg, right arm raised high",
+     "gaze": "toward the right-hand figure",
+     "heldObjects": [
+      "a stemmed goblet raised at head height in the right hand"
+     ],
+     "clothing": "long pale cream-lilac gown with a sash at the waist and a trailing veil; long loose hair; a white flower crown"
+    },
+    {
+     "position": "right of center, facing left",
+     "posture": "standing, turned to face the central figure, right arm raised to meet hers",
+     "gaze": "toward the central figure",
+     "heldObjects": [
+      "a stemmed goblet raised at chin/eye height",
+      "possibly something in the lowered left hand, not resolvable"
+     ],
+     "clothing": "pale lavender gown, braided hair, a flower circlet"
+    },
+    {
+     "position": "right background and center-background behind the table",
+     "posture": "a diffuse group of standing figures, very pale and washed out",
+     "gaze": "unresolvable",
+     "heldObjects": [
+      "unresolvable"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "raised stemmed goblet/cup",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "at the center of the frame at head height, two goblets brought together almost rim to rim — one from the central figure's raised right hand, one from the right figure's raised right hand"
+    },
+    {
+     "type": "garlanded vertical pole of an arbour",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "individually resolved: one thick pole at the far left running the full height, one slender pole at center-left rising behind the garland, one thick pole at center-right running the full height"
+    },
+    {
+     "type": "hanging lantern",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "left of center, suspended from the flower garland — one larger and lower, one smaller and slightly left/below it"
+    },
+    {
+     "type": "standing lantern on the ground",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "lower right, among the white flowers at the base of the right-hand pole"
+    },
+    {
+     "type": "table with a pale cloth",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "center, behind and below the raised goblets, bearing small pale objects (bottles, glasses or flowers — not resolvable)"
+    },
+    {
+     "type": "moon",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right, a large soft pale disc partly behind cloud"
+    }
+   ],
+   "environment": [
+    "an arbour or canopy of poles hung with flowering garlands, trailing ribbons and streamers across the whole top of the frame",
+    "white daisy-like flowers and green foliage filling the lower left, lower right and the ground",
+    "a broad calm body of water (lake or bay) across the middle distance with a bright vertical light reflection on it",
+    "a hillside town of pale buildings, towers and slim spires along the far shore at the right",
+    "trees along the opposite shoreline",
+    "pale overcast-lit sky with soft clouds",
+    "a thin drawn border line framing the image"
+   ],
+   "lightSources": [
+    "the pale moon at upper right",
+    "the small hanging lanterns and the ground lantern, faintly glowing warm",
+    "scattered warm window lights in the distant town",
+    "an overall diffuse ambient glow with no hard shadows"
+   ],
+   "moonPhase": "appears full or nearly full — a complete round pale disc, but its edges are soft and partly veiled by cloud, so full vs. gibbous cannot be settled",
+   "spatialRelations": [
+    "the three foreground figures stand close together in a loose arc under the arbour, the two on the right touching their raised goblets together at the group's center",
+    "the leftmost figure stands slightly behind the central one and is partly hidden by her",
+    "the table sits behind the group, between them and the water",
+    "the arbour poles frame the group, one at each side and one rising behind them",
+    "the moon is up and to the right, above the distant town; its reflection appears on the water"
+   ],
+   "foreground": [
+    "the three figures",
+    "white flowers and foliage along the bottom edge",
+    "the ground lantern at lower right"
+   ],
+   "background": [
+    "the lake and its light reflection",
+    "the hillside town with spires",
+    "the moon and clouds",
+    "the faint crowd of additional figures at the right"
+   ],
+   "palette": "very high-key watercolour — white, lilac, pale blue, soft sage green"
+  },
+  "uncertainObservations": [
+   "Total figure count cannot be given: three figures are resolvable in the foreground, but the right-hand and center-background hold a pale, washed-out crowd of further figures that cannot be separated or counted.",
+   "The number of raised cups is stated only for cups I could individually resolve (two). The leftmost figure's hands are hidden behind the central figure, so she may or may not also hold one. Do not treat 2 as a total.",
+   "A possible fourth arbour pole may stand behind the right-hand one; the wash makes it impossible to confirm.",
+   "The small objects on the table are not identifiable.",
+   "The moon's exact phase is indeterminate due to cloud veiling.",
+   "It is unclear whether the right figure holds anything in her lowered left hand."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-004",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of the frame, standing",
+     "posture": "standing upright and still, barefoot, head bowed and tilted down to her right; arms pinned to her sides by binding",
+     "gaze": "not determinable — the eyes are covered",
+     "heldObjects": [
+      "nothing — the hands are bound at the sides, one hand visible at the hip"
+     ],
+     "clothing": "long pale ankle-length gown with an embroidered hem band; long curly hair blowing to the right",
+     "blindfold": "yes — a wide pale cloth band tied across the eyes, knot and tail visible at the right side of the head",
+     "bindings": "a heavy rope wound several times around the upper arms and chest and again around the waist/hips, with a loose rope end hanging down past the knee"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword planted point-down in the ground, blade upright",
+     "count": null,
+     "countConfidence": "low",
+     "where": "arranged around the figure in two groups. LEFT group, individually resolved: (1) far left, nearest the viewer, large hilt low in the frame; (2) just right of it, hilt slightly higher, shorter blade; (3) further back, hilt high, slimmer; (4) nearest the figure's left, hilt high, slimmest. RIGHT group: (5) a slim one set far back, close to the figure's right elbow, hilt high; (6) a large near one at right with a round pommel; (7) another large near one at the far right. A possible eighth pommel sits between (6) and (7) and I cannot confirm it."
+    },
+    {
+     "type": "ruined castle or fortress on a hill",
+     "count": 1,
+     "countConfidence": "medium-high",
+     "where": "left middle distance, a broken multi-towered silhouette on a rise"
+    },
+    {
+     "type": "sun",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left corner, a warm pale disc with long straight rays fanning down and right across the sky"
+    },
+    {
+     "type": "stream or watercourse",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "winding from beneath the castle in the left distance down through the middle ground and into the muddy foreground at the figure's feet"
+    },
+    {
+     "type": "clump of tall reeds/grasses",
+     "count": null,
+     "countConfidence": "low",
+     "where": "right middle ground, several sparse tufts"
+    }
+   ],
+   "environment": [
+    "flat, bleak, waterlogged plain with churned mud, puddles and scattered stones",
+    "overcast sky worked in fine engraved hatching with a bank of clouds at upper right",
+    "sparse dead grass and weeds",
+    "a printed ornamental border with foliate corner ornaments on all four sides",
+    "faint small marks in the lower border corners resembling an artist's signature/date"
+   ],
+   "lightSources": [
+    "the sun at upper left, its rays raking across the upper-left third of the scene"
+   ],
+   "moonPhase": "not applicable — no moon; a sun is present instead",
+   "spatialRelations": [
+    "the planted swords stand in the ground on both sides of the figure, forming a corridor or enclosure around her; none touches her",
+    "the nearest swords are level with or slightly in front of her feet, the others recede behind her",
+    "the stream runs from the castle at the far left, past the sword line, and ends in the puddles at her bare feet",
+    "the sun is behind her upper left; the figure's head is bowed away from it",
+    "the castle sits on the horizon behind the left group of swords"
+   ],
+   "foreground": [
+    "the nearest planted swords at left and right",
+    "muddy ground, puddles, loose stones",
+    "the figure's bare feet"
+   ],
+   "background": [
+    "the ruined castle on its hill",
+    "the winding stream",
+    "the hatched sky and clouds",
+    "the sun and its rays"
+   ],
+   "palette": "sepia/ink engraving on aged cream paper with muted ochre and pale blue-grey washes",
+   "style": "line engraving / etching with cross-hatching"
+  },
+  "uncertainObservations": [
+   "The sword count is deliberately left null. I can individually resolve seven upright swords (four in the left group, three in the right), and there appears to be one further round pommel between the two large right-hand swords that I cannot confirm as a separate weapon. So: at least 7, possibly 8. I am not stating a single number.",
+   "The right group's hilts overlap each other at similar depths, which is the specific reason the count is unreliable there.",
+   "It cannot be determined whether the figure's eyes are open behind the blindfold, or whether her mouth is open.",
+   "Whether the winding pale line from the castle is a stream, a road or a flooded track is ambiguous.",
+   "The distant structure is read as a ruined fortification, but its architecture is too small and hatched to be certain it is not a rock outcrop.",
+   "The marks in the lower border corners may be a signature, plate number or decorative ticks."
+  ],
+  "reviewConfidence": "medium-high",
+  "reviewer": "reviewer-a"
+ }
+]

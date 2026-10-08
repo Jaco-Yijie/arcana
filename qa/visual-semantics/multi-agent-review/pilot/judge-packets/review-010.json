@@ -1,0 +1,258 @@
+{
+  "reviewId": "review-010",
+  "blindImage": "qa/visual-semantics/blind-review/review-010.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs corrected"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "pass": 1,
+    "corrected": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/pilot/reveal/review-010.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-010",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "left-of-center, standing at the stern/near end of a wooden boat",
+              "posture": "standing, weight on forward leg, back turned to the viewer",
+              "gaze": "away from viewer, toward the right/far distance down the water",
+              "heldObjects": [
+                "a long wooden pole/punt gripped in both hands, angled down into the water at lower left"
+              ],
+              "clothing": "rust-red/brown hooded cape over a blue-grey belted tunic, dark leggings, small pouch on the belt"
+            },
+            {
+              "position": "center of the boat, seated",
+              "posture": "seated, hunched, back to the viewer, head slightly bowed",
+              "gaze": "cannot be determined (face not visible; head turned away)",
+              "heldObjects": [
+                "none visible"
+              ],
+              "clothing": "pale cream/oatmeal cloak or shawl draped over head and shoulders; long light hair visible"
+            },
+            {
+              "position": "center-right of the boat, seated beside/behind the cream-cloaked figure",
+              "posture": "seated, back to the viewer",
+              "gaze": "cannot be determined (fully hooded, face not visible)",
+              "heldObjects": [
+                "none visible"
+              ],
+              "clothing": "dark blue-grey hooded cloak covering head and body"
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright blade/sword standing point-down in the boat",
+              "count": null,
+              "countConfidence": "low",
+              "where": "clustered in the forward (right) half of the boat's interior, blades vertical with cross-guards and pommels at the top",
+              "note": "one blade sits apart and lower-left of the group, then a tight row follows to its right; I can individually resolve 5, and there appears to be a 6th whose blade overlaps a neighbour. Not stated as a number."
+            },
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "occupies the lower half of the frame, prow pointing right, clinker/planked wooden hull with visible ribs and a rope lashing at the prow"
+            },
+            {
+              "type": "pole/punt",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held by the standing figure, running from upper center down to the water at lower left"
+            },
+            {
+              "type": "bundle/sack of cargo",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the boat floor in front of the seated figures, tied with rope"
+            },
+            {
+              "type": "stone tower with battlements",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left, on a rocky bank, with a ruined wall and arched openings extending right of it"
+            }
+          ],
+          "environment": [
+            "broad calm river or lake filling the lower and middle frame, hatched ripple lines",
+            "rocky left bank with grass and shrubs beneath the tower",
+            "low wooded far bank on the right with small trees",
+            "range of low hills/mountains on the right horizon",
+            "pale yellow-cream sky with long horizontal streaked clouds",
+            "decorative ruled border frame with ornamental corner scrollwork around the whole picture",
+            "ink-hatched engraving style on aged/tan paper"
+          ],
+          "lightSources": [
+            "diffuse pale light from the low horizon at center-right; no sun disc or moon is drawn"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the standing poler is behind and to the left of the two seated figures",
+            "the blades stand between the seated figures and the prow, i.e. ahead of the passengers",
+            "the boat moves away from the tower on the left bank toward the open water and distant hills at right",
+            "ripples trail behind and around the hull"
+          ],
+          "foreground": [
+            "boat hull",
+            "water surface and ripples",
+            "lower end of the pole entering the water"
+          ],
+          "background": [
+            "tower and ruined wall",
+            "far shoreline and trees",
+            "distant hills",
+            "clouded sky"
+          ]
+        },
+        "uncertainObservations": [
+          "the exact number of upright blades cannot be resolved: blades overlap and some cross-guards sit nearly edge-on; 5 are individually resolvable and a 6th is suggested",
+          "faces of all three figures are not visible, so gaze direction for the two seated figures is undetermined",
+          "whether the bundle on the boat floor is cargo, a sack, or part of a cloak is unclear"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "two seated, hooded passengers",
+          "observed": "two seated passengers, only one of whom is hooded",
+          "evidence": "The centre seated figure is bare-headed with long light-brown hair falling loose over a pale cream cloak; the figure immediately to its right wears a dark blue-grey hood that fully covers the head. The difference is plainly visible.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "wooden rowing boat with plank hull and rope lashing",
+          "observed": "the boat is poled, not rowed — no oars, thole pins or oarlocks appear anywhere in the hull",
+          "evidence": "The only propulsion device in the frame is the long straight pole in the standing figure's hands, entering the water at lower left. The text's own scene line says 'poles a small wooden boat', so keyObjects contradicts it.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two seated, hooded passengers",
+            "with": "two seated passengers, one hooded and one bare-headed"
+          },
+          {
+            "find": "wooden rowing boat with plank hull and rope lashing",
+            "with": "wooden boat with plank hull and rope lashing, driven by a pole"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-010",
+        "visibleFacts": {
+          "style": "coloured ink engraving on parchment ground, muted ochre/blue/rust palette, inside a printed double-rule border with small corner ornaments",
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "left of centre, at the near end of the boat",
+              "posture": "standing, back to the viewer, weight forward, both hands gripping a long pole",
+              "gaze": "away from the viewer, toward the water ahead / the right distance",
+              "heldObjects": [
+                "a long straight pole held in both hands, its lower end entering the water on his left"
+              ],
+              "notes": "brown hair; a rust-red hooded cape with a scalloped edge over a blue-grey belted tunic; a small leather pouch hanging at the hip; dark hose and boots"
+            },
+            {
+              "position": "centre of the boat, seated low",
+              "posture": "seated, back to the viewer, shoulders wrapped",
+              "gaze": "away from the viewer, forward along the boat",
+              "heldObjects": [],
+              "notes": "long light-brown hair falling over a pale cream cloak or shawl"
+            },
+            {
+              "position": "immediately right of the seated centre figure",
+              "posture": "seated, back to the viewer, head covered and slightly bowed",
+              "gaze": "away from the viewer, forward",
+              "heldObjects": [],
+              "notes": "dark blue-grey hooded cloak covering the head entirely; smaller in scale than the figure beside them"
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright blade standing hilt-up inside the boat",
+              "count": null,
+              "countConfidence": "low",
+              "where": "along the right side of the boat, points resting on the hull floor and hilts in the air; the leftmost one stands slightly apart and is clearly separate, and a tight row stands to its right. I resolve about five in that row, giving a total that reads as six, but the row members overlap so I will not fix the number"
+            },
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "occupies the lower half of the frame; wooden, clinker/plank built, open, with visible cross-braces at the near end and coiled rope on the right rim"
+            },
+            {
+              "type": "bundle / sack of cargo",
+              "count": null,
+              "countConfidence": "low",
+              "where": "on the boat floor in front of the seated figures; one or two soft bundles, not clearly separable"
+            },
+            {
+              "type": "stone tower with battlements",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left, on a rocky bank above the water; an adjoining lower ruined wall or building extends to its right"
+            }
+          ],
+          "environment": [
+            "a wide river or lake, surface rendered in fine horizontal ripple lines, with ripples spreading from the pole where it enters the water",
+            "rocky left bank with vegetation below the tower",
+            "far shore with trees and low scrub along the right middle distance",
+            "a range of low mountains on the right horizon",
+            "pale sky with long hatched clouds occupying the upper third"
+          ],
+          "lightSources": [
+            "a diffuse pale glow low on the horizon near the centre-right, behind the far shore; no distinct solar or lunar disc is drawn"
+          ],
+          "moonPhase": null,
+          "crown": false,
+          "halo": false,
+          "wings": false,
+          "horse": false,
+          "spatialRelations": [
+            "the standing figure is at the near end of the boat, behind and to the left of the two seated figures; all three face away from the viewer in the same direction",
+            "the upright blades are clustered in the far right portion of the boat, beyond the two seated figures",
+            "the pole runs diagonally from the standing figure's hands down to the left, entering the water in the lower-left foreground",
+            "the tower sits on the left bank, behind and above the standing figure's shoulder",
+            "the boat is moving away from the near shore toward the open water and mountains at the right"
+          ],
+          "foreground": [
+            "the boat and its occupants",
+            "rippled water below the hull",
+            "the lower end of the pole entering the water"
+          ],
+          "background": [
+            "stone tower and ruin on the left bank",
+            "far treed shoreline",
+            "distant mountains",
+            "hatched clouds"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of upright blades cannot be fixed: one stands clearly apart at the left of the group and a tightly overlapping row stands to its right, reading as about five, so the total is at least five and appears to be six",
+          "the hooded figure on the right may be a child or a smaller adult; nothing of the face or body is visible",
+          "the cargo on the boat floor may be one bundle or several",
+          "no distinct sun or moon disc is visible, only a horizon glow, so no phase can be reported"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

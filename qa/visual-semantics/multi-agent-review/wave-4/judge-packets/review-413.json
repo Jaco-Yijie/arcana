@@ -1,0 +1,198 @@
+{
+  "reviewId": "review-413",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-413.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-413.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "fish-like form rising above the cup",
+          "observed": "a faint pale plume/vapour rising from the cup; I could not resolve it into a fish or any other definite form",
+          "evidence": "At this resolution the shape above the rim is a soft luminous smear with scattered specks; the model itself lists fish-vs-flame as uncertain.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-413",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center, occupying the full height of the left half",
+              "posture": "standing upright on wet ground, seen in profile facing the viewer's right; shoulders rounded, head bowed sharply forward and down; not seated, not kneeling",
+              "gaze": "looking straight down into the vessel held at chest height; the face is in profile turned right, the eyes are cast down, not toward the lit doorway behind and above",
+              "heldObjects": [
+                "a single footed cup/bowl, cradled in BOTH hands at chest height, held upright, with a faint pale vapour or glow rising out of it toward the figure's face"
+              ],
+              "clothing": "a long, heavy, tattered patterned robe or cloak reaching the ground, torn strips hanging from the sleeve and hem; dark unkempt hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "footed cup / vessel",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held in both hands at the figure's chest, left-center of frame",
+              "orientation": "upright, opening upward, faint vapour rising",
+              "arrangement": "single object; no other vessel appears anywhere in the frame"
+            },
+            {
+              "type": "stone doorway / arched gate set into a rock face",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right of center, mid-height, raised above the shore",
+              "orientation": "upright, facing the viewer's left toward the figure; round-arched with carved jambs and a dark leaf/door within",
+              "arrangement": "single opening; a bright light spills out from its base down onto the wet ground"
+            },
+            {
+              "type": "scattered stones/pebbles on the wet flat",
+              "count": null,
+              "countConfidence": "low",
+              "where": "the foreground and middle ground on the right",
+              "orientation": "lying on the ground",
+              "arrangement": "irregular scatter; individual stones are too small and too dark to tally"
+            }
+          ],
+          "environment": [
+            "a wide wet tidal flat / shore with shallow water and low breaking waves running across the middle of the frame from the left",
+            "a dark rocky cliff or headland on the right into which the doorway is built",
+            "a very dark, textured sky with no visible celestial body",
+            "a long dark shadow stretching from the lower right up toward the lit doorway"
+          ],
+          "lightSources": [
+            "a bright pale glow at the foot of the arched doorway, spilling out and reflecting in a long streak across the wet ground and the shallow water",
+            "a faint luminous vapour rising from the cup, catching the figure's face and hands",
+            "no moon and no sun is visible"
+          ],
+          "moonPhase": "not visible — no lunar disc in the frame",
+          "spatialRelations": [
+            "the figure stands on the shore with the sea at his back (viewer-left) and the lit doorway ahead of him to the viewer-right, but he does NOT face or look at the doorway — his head is bowed to the cup",
+            "the doorway sits higher than the figure, set up in the rock, and its light falls down and across toward the lower right, not onto the figure's face",
+            "the long cast shadow runs from the lower-right foreground toward the doorway's light",
+            "the waterline runs behind the figure, roughly at his knee level in the picture plane"
+          ],
+          "foreground": [
+            "wet dark sand with scattered pebbles and reflected light streaks",
+            "the trailing hem and torn strips of the robe"
+          ],
+          "background": [
+            "dark sea and low surf on the left",
+            "the rock face, the arched lit doorway on the right",
+            "black sky"
+          ]
+        },
+        "uncertainObservations": [
+          "The scene is extremely dark; details of the robe's pattern, the figure's feet, and anything inside the doorway are not resolvable.",
+          "The exact nature of what rises from the cup (steam, smoke, sparks or light) cannot be determined — only that a faint pale plume is present above the rim.",
+          "I cannot tell whether the figure is barefoot; the hem covers the feet."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "fish-like form rising above the cup",
+          "observed": "a faint pale wisp rising from the cup's mouth; its form could not be resolved as a fish, a flame or vapour",
+          "evidence": "At this brightness the shape above the cup reads only as a small pale plume with scattered bright specks. I recorded it as unresolvable rather than fish-shaped; the existing text asserts a specific identity where I recorded none.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-413",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center",
+              "posture": "standing upright on wet ground, body in profile facing right, weight even, feet visible at the hem",
+              "gaze": "head bowed sharply downward, face in right-facing profile, eyes directed down into the vessel held at chest height — not looking at the lit doorway",
+              "heldObjects": [
+                "a footed cup/goblet, held in both hands at chest height"
+              ],
+              "clothing": "long heavily tattered cloak/robe with many hanging shredded strips, hood fallen back, hem dragging on the ground"
+            }
+          ],
+          "objects": [
+            {
+              "type": "footed cup / goblet",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "cradled in both hands at the figure's chest, center-left",
+              "orientation": "upright, mouth up; a faint pale vapor or light rises from its mouth",
+              "arrangement": "single object"
+            },
+            {
+              "type": "arched stone doorway set into a rock face",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right of center, middle distance",
+              "orientation": "upright, facing left toward the figure",
+              "arrangement": "single portal with carved surround; light escapes from its base/lower edge"
+            },
+            {
+              "type": "loose stones/pebbles",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered across the wet foreground ground",
+              "orientation": "n/a",
+              "arrangement": "scattered, too many and too dim to count"
+            }
+          ],
+          "environment": [
+            "dark night scene, very low overall light",
+            "wet shore/shallow water with a thin line of ripples or surf running left-to-right across the middle ground",
+            "a rock face or cliff on the right containing the doorway",
+            "wet, reflective stony ground in the foreground",
+            "an aged/mottled border texture at the frame edges"
+          ],
+          "lightSources": [
+            "light spilling out from around and beneath the arched doorway at right, casting a bright reflective streak on the wet ground",
+            "faint pale glow/vapor rising from the cup in the figure's hands"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure stands on the near shore at left, the lit doorway is behind and to the right of him",
+            "he faces right (toward the doorway's side of the frame) but his head is bowed to the cup, not raised toward the door",
+            "a long dark shadow runs diagonally from the lower right of the frame away from the doorway's light",
+            "the band of surf/ripples passes between the figure and the doorway"
+          ],
+          "foreground": [
+            "wet stony ground with scattered pebbles",
+            "the figure's trailing tattered hem",
+            "a large diagonal shadow at lower right"
+          ],
+          "background": [
+            "dark rock face",
+            "arched lit doorway",
+            "black sky with no visible stars or moon"
+          ]
+        },
+        "uncertainObservations": [
+          "Whether the pale wisp above the cup is steam, smoke or light cannot be determined.",
+          "It is not resolvable whether the door itself is open; the light appears to come from a gap at its base/edges.",
+          "The body of water's extent (pool vs. sea) is unclear in the darkness.",
+          "The cast shadow at lower right may belong to an object outside the frame; its source is not visible."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

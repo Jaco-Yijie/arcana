@@ -1,0 +1,503 @@
+[
+  {
+    "reviewId": "review-404",
+    "visibleFacts": {
+      "figureCount": 7,
+      "figures": [
+        {
+          "position": "viewer-left, mid-height, behind and left of the kneeling foreground woman",
+          "posture": "seated or kneeling, upper body upright, torso turned toward viewer-right; lower body hidden behind the foreground figure and drapery",
+          "gaze": "head turned toward viewer-right and tilted slightly down, looking toward the central group",
+          "heldObjects": [],
+          "clothing": "pale white/ivory gown with sheer layered overlay; very long wavy pale hair; small pale blue flower ornament above the viewer-right temple"
+        },
+        {
+          "position": "foreground, viewer-left of center, lowest of the group",
+          "posture": "kneeling / sitting low on the ground, leaning forward and to viewer-right, right arm (viewer-right arm) fully extended down toward the discs on the ground",
+          "gaze": "head bowed, eyes directed down toward the discs on the ground",
+          "heldObjects": ["no object held; extended hand hovers just above / touches the rim of the uppermost ground disc with the index finger"],
+          "clothing": "white sheer gown with lace-like texture; long pale wavy hair with small blue-white flowers and a beaded strand; thin gold bracelet on the extended wrist"
+        },
+        {
+          "position": "center of the image, behind the kneeling foreground woman",
+          "posture": "seated/kneeling, torso leaning forward toward viewer-right, one hand raised to her own chin/mouth",
+          "gaze": "head bowed, looking down and to viewer-right toward the child and the held disc",
+          "heldObjects": ["no object; one hand raised near her own chin/lips"],
+          "clothing": "white-to-pale-blue layered gown with sheer veil over the shoulders; long pale hair"
+        },
+        {
+          "position": "center-right, low, seated between the central woman and the bearded elder",
+          "posture": "small child, seated, torso upright and turned slightly toward viewer-left",
+          "gaze": "head bowed, eyes down on the disc in her own hands",
+          "heldObjects": ["a round engraved disc with a five-pointed star, held flat in both hands at chest/lap height, face tilted up toward the viewer"],
+          "clothing": "pale blue-white gown with sheer overlay; long braided/wavy light hair with a thin ornament"
+        },
+        {
+          "position": "viewer-right of center, beside the seated child",
+          "posture": "seated/kneeling, leaning in toward viewer-left over the child",
+          "gaze": "head bowed toward viewer-left, eyes down on the disc the child holds",
+          "heldObjects": ["one hand (viewer-left hand) extended beneath / beside the disc the child holds, supporting or steadying it"],
+          "clothing": "elderly man: long white hair and full white beard; blue-grey layered robe with gold scrollwork embroidery and a lighter sheer mantle"
+        },
+        {
+          "position": "upper viewer-right, standing under the stone arch, furthest back of the group",
+          "posture": "standing upright, body angled toward viewer-left, head bowed over the child she carries",
+          "gaze": "head tilted down and to viewer-left, looking at the small child in her arms",
+          "heldObjects": ["a small child/toddler carried against her chest and left hip"],
+          "clothing": "pale blue-white robe with a long sheer ribbon-like veil trailing down; long wavy light hair"
+        },
+        {
+          "position": "upper viewer-right, held in the standing woman's arms",
+          "posture": "small toddler/infant, held upright against the standing woman's chest, legs tucked",
+          "gaze": "head turned toward the viewer / slightly viewer-left, face forward",
+          "heldObjects": [],
+          "clothing": "pale white wrap/gown; short light hair"
+        }
+      ],
+      "objects": [
+        {
+          "type": "pentacle disc",
+          "count": 9,
+          "countConfidence": "high",
+          "where": "on the ground in the lower third of the image, lying on a pale cloth spread over the ground, between the kneeling foreground woman and the white dog",
+          "orientation": "lying flat / near-horizontal on the ground, engraved star faces up toward the viewer",
+          "arrangement": "loose staggered grid of roughly three diagonal rows receding into the picture; discs do not overlap"
+        },
+        {
+          "type": "pentacle disc",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "held in the seated child's hands at center-right, supported from below by the elder's hand",
+          "orientation": "held flat, face tilted up and toward the viewer",
+          "arrangement": "single"
+        },
+        {
+          "type": "dog",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "viewer-right foreground, lying on the ground beside the discs",
+          "orientation": "body facing viewer-left, head raised and turned toward viewer-left, forepaws extended forward",
+          "arrangement": "single"
+        },
+        {
+          "type": "lantern",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "far viewer-right, standing on a stone ledge behind the flowers",
+          "orientation": "upright, cage-type lantern with a warm lit flame inside",
+          "arrangement": "single"
+        },
+        {
+          "type": "moon",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper viewer-left of the sky",
+          "orientation": "disc, brightest along its lower-right limb",
+          "arrangement": "single"
+        }
+      ],
+      "environment": [
+        "night or pre-dawn sky in pale blue-white, lightly speckled",
+        "a wide body of still water (lake or bay) across the middle ground with a vertical streak of reflected light on its surface",
+        "layered hazy mountains/forested hills behind the water",
+        "a domed pavilion or temple with columns on the viewer-left shore, with broad stone steps descending to the water",
+        "a stone archway/colonnade with carved capitals on the viewer-right, framing the standing woman",
+        "wisteria-like hanging flower clusters draping from the arch and from the upper-left of the frame",
+        "white roses, pale blue blossoms and foliage massed along the left and right foreground edges",
+        "a pale cloth/veil spread flat on the ground beneath the discs",
+        "a thin decorative double-line border runs inside the image edge"
+      ],
+      "lightSources": [
+        "the moon in the upper viewer-left sky",
+        "a small lit lantern on the stone ledge at far viewer-right",
+        "a diffuse overall glow with no single hard-shadow direction; the discs and the water reflection carry the brightest highlights"
+      ],
+      "moonPhase": "crescent",
+      "spatialRelations": [
+        "the group of figures occupies the middle band of the image, arranged in a loose arc opening toward the viewer",
+        "the discs on the ground lie below and in front of all the figures",
+        "the extended hand of the kneeling foreground woman is directly above the uppermost/farthest disc of the ground array",
+        "the white dog lies to the viewer-right of the disc array, at the same ground level",
+        "the seated child is between the central woman (viewer-left of her) and the bearded elder (viewer-right of her)",
+        "the standing woman with the infant is above and behind the bearded elder",
+        "the stone arch is behind and to the viewer-right of the standing woman",
+        "the moon is above and to the viewer-left of all figures",
+        "the water and mountains lie behind the figures and below the moon"
+      ],
+      "foreground": [
+        "pentacle discs on the pale ground cloth",
+        "the kneeling woman's extended arm and hand",
+        "white roses and blue flowers along both lower corners",
+        "the white dog's forepaws and body at viewer-right"
+      ],
+      "background": [
+        "crescent moon and pale clouds",
+        "distant mountains and forested slopes",
+        "lake with a streak of reflected light",
+        "domed colonnaded pavilion and stone steps on the left shore",
+        "stone archway, columns and hanging wisteria on the right"
+      ]
+    },
+    "uncertainObservations": [
+      "The moon's phase is genuinely ambiguous: a bright crescent-shaped lit area runs along the lower-right limb, but the whole circular disc is faintly visible with crater texture, so a 'gibbous'/'full seen through haze' reading cannot be excluded. Recorded as crescent with medium confidence.",
+      "The far viewer-left figure's lower body is hidden behind the foreground woman and drapery, so I cannot tell whether she is kneeling, sitting or crouching.",
+      "I cannot determine the exact gender of several of the pale-haired figures; I have described hair, dress and build only.",
+      "The central woman's raised hand touches her own chin/lips area, but at this resolution I cannot rule out that she is holding a small thin object there.",
+      "Whether the child's disc is held purely by the child or jointly with the elder is unclear; the elder's hand is beneath the disc but the contact point is soft-focused.",
+      "The ground discs rest on a pale cloth that blends into the flowers at the edges; a further disc hidden under the drapery or behind the dog cannot be fully excluded, though I found none on close inspection.",
+      "No human statues or non-living humanoid forms were seen, so figureCount of 7 counts only living human figures (including the carried infant)."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-407",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center-left of the image, standing on the floor in front of the wall, occupying roughly the lower two-thirds of the height",
+          "posture": "standing, seen from behind, weight on both feet, body slightly turned toward viewer-left; viewer-left arm raised high above the head, viewer-right arm extended horizontally to the side at about chest height; barefoot",
+          "gaze": "head seen from behind, turned slightly toward viewer-left and tilted up toward the raised hand; face not visible",
+          "heldObjects": [
+            "raised viewer-left hand: empty, palm open, fingers spread, reaching up toward the cup in the top-left niche without clearly touching it",
+            "extended viewer-right hand: gripping a pale cloth/veil at about chest height, the cloth hanging down over the cup in the lower-center niche"
+          ],
+          "clothing": "a long dark draped robe or toga with a shoulder wrap and long ragged vertical folds reaching the ankles; dark short/curly hair; bare feet"
+        }
+      ],
+      "objects": [
+        {
+          "type": "cup",
+          "count": 7,
+          "countConfidence": "medium",
+          "where": "set one per arched niche in the stone wall behind the figure, arranged in two horizontal rows",
+          "orientation": "all upright, standing on the niche ledges, each a stemmed goblet/chalice on a footed base",
+          "arrangement": "two rows: four in the upper row, three visible in the lower row, evenly spaced across the wall"
+        },
+        {
+          "type": "niche",
+          "count": 7,
+          "countConfidence": "medium",
+          "where": "cut into the stone wall that fills the whole background",
+          "orientation": "upright arched recesses with flat ledges at the bottom",
+          "arrangement": "two horizontal rows, four above and three visible below"
+        },
+        {
+          "type": "serpent",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "rising out of the cup in the top row, far viewer-left niche",
+          "orientation": "upright, reared in an S-curve with the head at the top",
+          "arrangement": "single, inside one cup"
+        },
+        {
+          "type": "tower",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "standing in the cup in the top row, second from viewer-left",
+          "orientation": "upright, crenellated battlement at the top",
+          "arrangement": "single, inside one cup"
+        },
+        {
+          "type": "crown",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "resting on/above the cup in the top row, third from viewer-left",
+          "orientation": "upright, points facing up",
+          "arrangement": "single, inside one cup"
+        },
+        {
+          "type": "leafy branch",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "rising from the cup in the top row, far viewer-right niche",
+          "orientation": "upright, fronds splaying symmetrically to both sides",
+          "arrangement": "single, inside one cup"
+        },
+        {
+          "type": "key",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "standing in the cup in the lower row, far viewer-left niche",
+          "orientation": "upright, trefoil/clover-shaped bow at the top, shaft down into the cup",
+          "arrangement": "single, inside one cup"
+        },
+        {
+          "type": "cloth",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "over the cup in the lower row, center niche; held at its upper corner by the figure's extended viewer-right hand",
+          "orientation": "hanging down, draping across the cup's bowl",
+          "arrangement": "single, inside/over one cup"
+        },
+        {
+          "type": "oval mirror or jewel",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "above the cup in the lower row, far viewer-right niche",
+          "orientation": "upright oval with a bright rim and a darker interior",
+          "arrangement": "single, inside one cup"
+        }
+      ],
+      "environment": [
+        "a large stone or masonry wall with heavy, grainy texture filling the entire background",
+        "arched recessed niches cut into the wall in two rows",
+        "a stone-tiled floor in the lower fifth of the image, receding toward the wall",
+        "a bright irregular patch of light cast on the floor around and to the viewer-right of the figure's feet",
+        "the figure's long shadow thrown across the floor toward the lower viewer-left",
+        "thin double-line decorative borders along the left and right edges of the image",
+        "no sky, window, horizon or outdoor element anywhere in frame"
+      ],
+      "lightSources": [
+        "an off-frame light from the viewer-right / front-right, inferred from the rim-lit right edges of the niche frames, the lit floor patch and the shadow falling to the viewer-left",
+        "a faint self-glow on each cup and its contents, brighter than the surrounding wall",
+        "no visible lamp, flame, candle or luminous body inside the frame"
+      ],
+      "moonPhase": "not visible — the scene is a closed interior wall with no sky in frame",
+      "spatialRelations": [
+        "the figure stands in front of the wall, between the viewer and the niches, occluding part of the lower row",
+        "the raised viewer-left hand is below and just right of the top-left niche holding the serpent cup",
+        "the extended viewer-right hand is immediately to the viewer-left of the lower-center cloth-draped cup",
+        "the upper row of four niches sits above the figure's shoulder line",
+        "the lower row of niches sits at roughly the figure's hip-to-chest height",
+        "the figure's shadow runs from the feet toward the lower viewer-left corner",
+        "the floor meets the wall just below the lower row of niches"
+      ],
+      "foreground": [
+        "the stone floor tiles and the lit patch",
+        "the figure's shadow",
+        "the lower hem of the robe"
+      ],
+      "background": [
+        "the textured stone wall",
+        "the two rows of arched niches with cups"
+      ]
+    },
+    "uncertainObservations": [
+      "The image is extremely dark overall; nearly all detail required brightness/contrast boosting to read, so counts and contents carry residual risk.",
+      "Cup count is the main uncertainty. I can see 7 cups (4 upper, 3 lower). The horizontal spacing of the lower row is irregular: the gap between the far-left (key) niche and the center (cloth) niche is roughly double the gap between the center and right niches, which is wide enough for one more niche to sit entirely behind the figure's robe. I could not confirm or rule out an 8th occluded cup; nothing in the visible wall edges to either side of the robe shows a niche frame.",
+      "The content of the lower-right cup reads as an upright oval with a bright rim — most consistent with a mirror or a large oval gem, but I cannot resolve which.",
+      "I cannot tell whether the figure is placing the cloth onto the lower-center cup or lifting it off.",
+      "Whether the raised hand actually touches the serpent cup's base is unclear; the fingertips appear to stop just short of the niche ledge.",
+      "The figure's sex, age and face are not determinable — the figure is seen entirely from behind.",
+      "The exact direction of the off-frame light is inferred from shadow and rim-light only; no light source is visible in frame."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-409",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "upper-center of the image, standing on top of a stone wall / rampart",
+          "posture": "standing with legs wide apart in a braced, low stance, knees bent, torso squared toward the viewer but turned slightly toward viewer-right; both arms forward and apart at chest height",
+          "gaze": "head in profile facing viewer-right, chin slightly lowered, looking out past the staff",
+          "heldObjects": [
+            "a single long wooden staff gripped in both hands across the front of the body at roughly chest height, held almost horizontally and tilting slightly down toward viewer-right; the staff extends well past both hands, further on the viewer-left side"
+          ],
+          "clothing": "a dark fitted jacket/tunic with a ragged, torn, strip-like hem hanging to the thighs; dark trousers; boots or wrapped footwear; short tousled wind-blown hair"
+        }
+      ],
+      "objects": [
+        {
+          "type": "staff",
+          "count": 6,
+          "countConfidence": "medium",
+          "where": "rising from below/behind the stone wall in the lower two-thirds of the image, three on the viewer-left side and three on the viewer-right side of the wall",
+          "orientation": "near-vertical but each leaning at a different angle, tapered points aimed up toward the top of the frame; lower ends disappear into darkness below the frame",
+          "arrangement": "a loose fan / palisade splayed outward around the wall, none crossing the figure"
+        },
+        {
+          "type": "staff",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "in the figure's two hands at the top of the image",
+          "orientation": "horizontal, tipped slightly down toward viewer-right",
+          "arrangement": "single"
+        },
+        {
+          "type": "arched opening",
+          "count": null,
+          "countConfidence": "low",
+          "where": "in the face of the stone wall below the figure, viewer-right of center",
+          "orientation": "upright arches set into the wall face",
+          "arrangement": "spaced along the wall; several dark voids are visible but merge with the surrounding shadow"
+        }
+      ],
+      "environment": [
+        "a massive stone-block wall / rampart, its flat top running diagonally from lower-left to upper-right, on which the figure stands",
+        "the near face of the wall built of large rectangular blocks, rim-lit along its upper edge",
+        "dark arched voids or recesses in the wall face below the figure",
+        "a nearly black, featureless background above and behind the figure — no sky detail, stars, horizon or landscape resolvable",
+        "a deep dark void below the wall from which the staves rise",
+        "thin double-line decorative borders along the left and right edges of the image"
+      ],
+      "lightSources": [
+        "an off-frame light high on the viewer-right, inferred from the rim-light along the figure's right contour, the lit top edge of the wall and the highlights on the viewer-right faces of the staves",
+        "no lamp, flame, moon, star or luminous object visible in frame"
+      ],
+      "moonPhase": "not visible — the sky area is uniformly black with no moon, stars or clouds resolvable",
+      "spatialRelations": [
+        "the figure stands on top of the wall, above everything else in the frame",
+        "the held staff crosses in front of the figure's torso, its viewer-left end overhanging the empty dark space to the left",
+        "the six rising staves are all below the figure and splay outward to either side of the wall",
+        "three staves are on the viewer-left of the wall, three on the viewer-right",
+        "the tips of the rising staves all stop below the level of the figure's feet",
+        "the wall's top edge recedes from lower-left toward upper-right",
+        "the arched openings are in the wall face below and to the viewer-right of the figure"
+      ],
+      "foreground": [
+        "the rising staves and their pointed tips",
+        "the dark lower face of the stone wall"
+      ],
+      "background": [
+        "an undifferentiated black field above the wall"
+      ]
+    },
+    "uncertainObservations": [
+      "The image is very dark and low-contrast; everything below the figure had to be brightness-boosted to read, so the stave count is my main uncertainty.",
+      "I count 6 rising staves (tips at roughly 17%, 30%, 43% of image width on the left side and 65%, 70%, 77% on the right). A seventh stave fully hidden behind the wall mass or running off the bottom-right corner cannot be excluded; two of the right-hand shafts run close together and could in principle be one forked stave or two.",
+      "I cannot tell whether the rising staves are planted in the ground, held by unseen hands, or part of a structure — their lower ends are lost in darkness.",
+      "The number of arched openings in the wall is not countable; the dark voids blend into the shadow, so I recorded null.",
+      "The figure's sex and age are not determinable; the face is in shadowed profile.",
+      "I cannot confirm whether the footwear is boots or wrapped cloth.",
+      "Whether the background is open night sky or an enclosed dark space is undeterminable — there is no horizon, star or architectural cue above the wall."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-410",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center of the image, slightly viewer-left of center, standing on a round tiered stone platform in the lower-middle third",
+          "posture": "standing upright, seen from behind, feet planted apart; viewer-right arm raised high and fully extended above the head with the index finger pointing up; viewer-left arm hanging down at the side",
+          "gaze": "head seen from behind, tilted up toward the raised hand and the great wheel; face not visible",
+          "heldObjects": [
+            "nothing held; the raised viewer-right hand's extended fingertip reaches the lower rim of the large celestial wheel, appearing to touch or nearly touch it"
+          ],
+          "clothing": "a long dark blue/charcoal robe reaching the ankles, with a sash or belt at the waist and a trailing ribbon/scarf flowing to the viewer-left; short dark hair; the robe fabric is speckled with small star-like points"
+        }
+      ],
+      "objects": [
+        {
+          "type": "celestial wheel",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "dominating the upper two-thirds of the sky, centered horizontally, its lower rim just above the figure's raised fingertip",
+          "orientation": "flat-on to the viewer, upright circular disc",
+          "arrangement": "single; built of many concentric gold rings with inscribed tick-mark and glyph bands, radial spokes to the rim, a radiant star at the exact center, and four larger round marker nodes at the top, bottom, viewer-left and viewer-right of the rim"
+        },
+        {
+          "type": "constellation creature",
+          "count": 4,
+          "countConfidence": "high",
+          "where": "one in each corner region of the sky around the wheel",
+          "orientation": "all in side/three-quarter profile, drawn as star points joined by thin lines",
+          "arrangement": "one per corner: upper-viewer-left a winged humanoid holding an open book; upper-viewer-right a bird of prey/eagle with wings spread; lower-viewer-left a horned bull/ox facing viewer-right; lower-viewer-right a maned lion facing viewer-left"
+        },
+        {
+          "type": "armillary sphere",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "on the platform, viewer-left of the figure",
+          "orientation": "upright on a footed pedestal, rings crossing at several angles",
+          "arrangement": "single"
+        },
+        {
+          "type": "astronomical ring instrument",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "on the platform, viewer-right of the figure",
+          "orientation": "upright on a pedestal, a graduated ring/disc with crossed spokes and a finial on top",
+          "arrangement": "single"
+        },
+        {
+          "type": "lantern",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "on the platform at the foot of the viewer-right instrument",
+          "orientation": "upright, small, with a warm lit flame inside casting a vertical reflection on the water",
+          "arrangement": "single"
+        },
+        {
+          "type": "planet orb",
+          "count": null,
+          "countConfidence": "low",
+          "where": "floating inside the wheel (several small orbs) and low near the water surface in the lower corners",
+          "orientation": "spheres, variously lit from one side",
+          "arrangement": "scattered; at least two or three inside the wheel's field and three near the lower edges of the frame"
+        },
+        {
+          "type": "building",
+          "count": 2,
+          "countConfidence": "medium",
+          "where": "on the far shores at the viewer-left and viewer-right edges, at the waterline",
+          "orientation": "upright classical colonnaded structures with arches, lit from within",
+          "arrangement": "one at each side edge"
+        }
+      ],
+      "environment": [
+        "a deep blue-black star-filled night sky filling the upper two-thirds",
+        "a vast flat expanse of still, dark, reflective water filling the lower third",
+        "a round tiered stone platform of several stacked circular steps rising just above the waterline at image center",
+        "a low mountain range across the far horizon behind the water",
+        "a band of warm pink/orange twilight glow with streaked clouds along the horizon",
+        "a vertical streak of light reflected on the water beneath the horizon glow",
+        "classical colonnaded buildings with lit interiors on the far shores at both side edges",
+        "mirror reflections of the platform, the instruments, the lantern and the floating orbs in the water",
+        "faint gold geodetic / graticule lines and tick-marked scale strips running along the inner left and right borders",
+        "thin double-line decorative borders along the left and right edges of the image"
+      ],
+      "lightSources": [
+        "the great celestial wheel itself, glowing gold in the upper sky",
+        "the small lantern on the platform at the figure's viewer-right",
+        "warm pink/orange twilight glow along the horizon behind the mountains",
+        "scattered stars and the glowing constellation lines",
+        "lit windows/interiors of the shoreline buildings",
+        "glow from the floating planet orbs"
+      ],
+      "moonPhase": "not visible — no identifiable moon; several small cratered spheres float as planet-like orbs inside the wheel and near the water, but none is presented as the scene's moon",
+      "spatialRelations": [
+        "the figure stands at the center of the round platform, which sits at the center of the water",
+        "the figure's raised fingertip is directly below the lower rim of the celestial wheel and aligned with the wheel's vertical axis",
+        "the celestial wheel is centered above the figure and fills the sky above the horizon",
+        "the four constellation creatures surround the wheel, one per corner, outside its rim",
+        "the armillary sphere is on the platform to the figure's viewer-left; the ring instrument and lantern are on the platform to the figure's viewer-right",
+        "the mountains and horizon glow lie behind the platform, below the wheel",
+        "the shoreline buildings are at the far viewer-left and far viewer-right, level with the horizon",
+        "the platform and figure are mirrored in the water directly below them",
+        "the floating orbs sit in front of and to both sides of the platform, nearest the lower frame edge"
+      ],
+      "foreground": [
+        "the water surface with reflections",
+        "the floating planet orbs in the lower corners",
+        "the lowest step of the stone platform"
+      ],
+      "background": [
+        "the celestial wheel",
+        "the four constellation creatures",
+        "the star field and nebula bands",
+        "the distant mountains and twilight horizon",
+        "the shoreline buildings"
+      ]
+    },
+    "uncertainObservations": [
+      "The upper-viewer-left constellation is a clearly humanoid winged figure holding an open book. It is drawn as star-lines, not as a living person, so I did not include it in figureCount; if constellation humanoids count, figureCount would be 2. Flagging the ambiguity as the schema requires.",
+      "I did not attempt an exact count of the celestial wheel's radial spokes or of the glyphs on its inscribed bands; the subdivisions are too fine and repeat at several radii.",
+      "The number of floating planet orbs is not reliably countable: some are partly cut by the frame edge, some blend into the water reflections and some sit inside the wheel's field. Recorded as null.",
+      "The device on the platform at the figure's viewer-right reads as a graduated ring or small astrolabe/armillary on a pedestal, but I cannot resolve its type with confidence.",
+      "I cannot tell whether the raised fingertip makes contact with the wheel's rim or stops just short of it.",
+      "The shoreline structures at the left and right edges are small and partly cut by the frame; I counted two but a further structure hidden in the glare is possible.",
+      "The figure's sex and age are not determinable — the figure is seen entirely from behind.",
+      "Whether the horizon glow is sunset or sunrise cannot be determined."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-f"
+  }
+]

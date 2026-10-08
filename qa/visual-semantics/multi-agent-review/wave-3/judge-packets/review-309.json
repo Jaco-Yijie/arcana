@@ -1,0 +1,334 @@
+{
+  "reviewId": "review-309",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-309.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-309.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the woman stands to the left of the panel, her hands at its upper edge",
+          "observed": "she kneels/crouches to the left of the panel, her hands at its upper edge",
+          "evidence": "Her bent knee in a pale cream garment rests on the ground at lower left, and her head sits only slightly above the top edge of the panel — she is down at the panel's level, not standing over it.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "spool of dark thread beside the bowl",
+          "observed": "spool of bright pink/rose thread beside the bowl",
+          "evidence": "The spool at lower left is the only saturated pink accent in the lower-left still life; the thread wound on it is clearly rose, not dark.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the woman stands to the left of the panel, her hands at its upper edge",
+            "with": "the woman kneels to the left of the panel, her hands at its upper edge"
+          },
+          {
+            "find": "spool of dark thread beside the bowl",
+            "with": "spool of pink thread beside the bowl"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-309",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "upper left / left of center, occupying the upper-left quadrant",
+              "posture": "kneeling or seated leaning forward over a work frame, both arms extended forward and down, hands together at the top edge of the panel",
+              "gaze": "downward, toward her own hands and the panel",
+              "heldObjects": [
+                "a needle or fine tool between the fingertips of the right hand (very small, partly obscured)",
+                "the top edge of the stitched panel, gripped by the left hand"
+              ],
+              "appearance": "dark curly hair pinned up, loose strands wet against the face; green robe over a paler undergarment; woven/knitted shawl over the shoulder; hair and shoulders appear wet"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade/sword",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "piercing a large red heart-shaped applique on the stitched panel, center of the frame",
+              "orientation": "all three hilts up, points down into the heart; the center one is vertical, the left and right ones are angled diagonally so the three converge toward the lower center of the heart",
+              "arrangement": "a symmetrical fan/trio — one vertical in the middle, one tilted to each side; no fourth blade anywhere in the frame"
+            },
+            {
+              "type": "heart-shaped applique",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of the stitched panel",
+              "orientation": "point downward",
+              "arrangement": "single, centered, with visible stitch lines running through it"
+            },
+            {
+              "type": "wooden work frame / stretched panel",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center-right, propped upright on the ground in front of the figure",
+              "orientation": "upright, tilted slightly back",
+              "arrangement": "single rectangular frame filling the middle of the composition"
+            },
+            {
+              "type": "woven basket",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one at the right edge beside the frame, one partly visible at the far left edge behind the figure",
+              "orientation": "upright",
+              "arrangement": "one on each side of the scene, both partly cut by the frame edge"
+            },
+            {
+              "type": "ceramic jug/vessel",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "lower left, on the ground",
+              "orientation": "upright",
+              "arrangement": "one pale round-bellied jug in front, a darker bowl behind/beside it"
+            },
+            {
+              "type": "spool of thread",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "lower left, beside the pale jug",
+              "orientation": "upright",
+              "arrangement": "single; reddish-pink thread wound on it"
+            },
+            {
+              "type": "mushroom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower left corner, on the ground",
+              "orientation": "caps upward",
+              "arrangement": "a small cluster of at least 3, overlapping"
+            },
+            {
+              "type": "wooden box/chest",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "lower right, beside the frame, with red cloth draped over it",
+              "orientation": "upright",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "daytime, overcast",
+            "heavy rain falling in visible streaks across the whole frame",
+            "forest — large tree trunks at left and right, leafy branch overhanging from the upper right",
+            "a river or stream winding through a wooded valley in the right background",
+            "grey storm clouds filling the sky gap",
+            "ferns, grass, small white daisies across the bottom",
+            "an ornate painted/illuminated border of vines and scrollwork around all four edges of the picture"
+          ],
+          "lightSources": [
+            "flat diffuse daylight from the overcast sky; the brightest area is the cloud break in the upper right background"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure leans in from the upper left over the panel, which stands between her and the viewer",
+            "the three blades sit on the panel at roughly chest height relative to the seated figure",
+            "the baskets, jug and box are scattered on the ground at both lower corners, framing the panel",
+            "the river recedes into the background directly behind and to the right of the panel"
+          ],
+          "foreground": [
+            "ferns, daisies, mushrooms, jug, spool, wooden box, red cloth"
+          ],
+          "background": [
+            "rain-lashed forest, river valley, storm clouds"
+          ]
+        },
+        "uncertainObservations": [
+          "whether the two flanking blades are angled point-down-inward (as recorded) or are set at a shallower tilt cannot be fixed with total certainty; the center blade is unambiguously point-down and vertical",
+          "whether the small object in the right hand is a needle, a pin, or simply the thread is not resolvable at this scale",
+          "whether the blades are stitched onto the panel as applique or are real objects laid across it is ambiguous",
+          "the exact number of mushrooms in the lower-left cluster cannot be counted",
+          "the left-edge basket is mostly cut off by the border and could be a bundle rather than a basket"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the woman stands to the left of the panel, her hands at its upper edge",
+          "observed": "She is kneeling/crouching low behind the panel, not standing; her legs are bent under her and her torso leans forward over the frame.",
+          "evidence": "A bent pale-clad knee and lower leg are clearly visible at the lower left beneath her green cloak, and her shoulders sit barely above the frame's top rail — a standing figure could not be that low relative to a panel whose base rests on the ground.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "large weathered wooden panel or board",
+          "observed": "A square wooden frame holding stretched coarse woven cloth, i.e. an embroidery/tapestry frame — the working surface is fabric, not wood.",
+          "evidence": "The whole inner face shows a visible warp-and-weft weave running to the frame's edges, and the heart patch and blades are stitched through it; the wood is only the four surrounding bars.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "bends over a large wooden panel on which a red heart-shaped patch is pierced by three swords",
+            "with": "kneels over a square frame of stretched woven cloth on which a red heart-shaped patch is pierced by three swords"
+          },
+          {
+            "find": "large weathered wooden panel or board",
+            "with": "square wooden frame holding stretched coarse woven cloth"
+          },
+          {
+            "find": "the woman stands to the left of the panel, her hands at its upper edge",
+            "with": "the woman kneels behind the panel, left of centre, her hands over its upper edge"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-309",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "upper left to center, behind a large square frame",
+              "posture": "kneeling or crouching low, torso leaning forward over the frame, shoulders rounded",
+              "gaze": "downward at the fabric in front of her; eyes lowered, mouth closed, brow slightly drawn",
+              "heldObjects": [
+                "both hands rest on the upper edge of the stretched fabric; the fingers of both hands are positioned as if stitching — a fine thread or needle may be pinched between them but is at the limit of resolution"
+              ],
+              "clothing": "a green hooded robe/mantle over a pale undergarment with wide, lace-edged sleeves; damp curly dark hair gathered up with loose strands falling over the face"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "all three converge on a large red heart-shaped patch stitched to the fabric panel",
+              "orientation": "MIXED and specific — the CENTER blade is vertical with pommel and crossguard UP at the top of the heart and its blade running straight DOWN through the heart's midline; the LEFT blade is diagonal with its pommel/grip low and outward at the lower left and its point directed INWARD and UPWARD into the heart; the RIGHT blade is diagonal with its pommel/grip low and outward at the lower right and its point directed INWARD and UPWARD into the heart",
+              "arrangement": "one vertical down the centre, flanked by two symmetric diagonals rising inward from below — a converging fan, not a row and not a ring; all three meet inside the red heart"
+            },
+            {
+              "type": "red heart-shaped applique/patch",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of the stretched fabric panel",
+              "orientation": "point of the heart downward, lobes upward",
+              "arrangement": "single, sewn onto the panel with visible stitch lines along its edges and down its middle"
+            },
+            {
+              "type": "embroidery/tapestry frame with stretched fabric",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center foreground, occupying most of the lower half",
+              "orientation": "upright, flat face toward the viewer",
+              "arrangement": "single square wooden frame holding coarse woven cloth"
+            },
+            {
+              "type": "wicker basket",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right side, mid-height, beside the frame",
+              "orientation": "upright, open top",
+              "arrangement": "single; filled with skeins of wool/yarn"
+            },
+            {
+              "type": "ceramic jug / pot",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower left, at the base of the frame",
+              "orientation": "upright",
+              "arrangement": "a small cluster of two or three vessels plus a shallow bowl, overlapping and partly hidden by foliage"
+            },
+            {
+              "type": "spool of red thread",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "lower left, among the pots",
+              "orientation": "upright",
+              "arrangement": "single spool wound with dark red thread"
+            },
+            {
+              "type": "mushroom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower left corner, on the ground",
+              "orientation": "caps facing up/outward",
+              "arrangement": "a small cluster of two or three overlapping caps"
+            },
+            {
+              "type": "wooden box/chest",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "lower right, partly behind ferns",
+              "orientation": "upright, lid closed",
+              "arrangement": "single"
+            },
+            {
+              "type": "red cloth pile",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right of the frame, draped over the box/ground",
+              "orientation": "heaped",
+              "arrangement": "single mass of the same red as the heart patch"
+            }
+          ],
+          "environment": [
+            "a wet forest clearing",
+            "steady diagonal rain streaking across the whole frame",
+            "heavy grey overcast sky with broken clouds",
+            "tall tree trunks left and right, leafy branches overhanging from the upper right",
+            "a river or stream winding through a wooded valley in the middle distance at right",
+            "ferns, grass, small white daisies and mushrooms in the foreground",
+            "a decorative painted border with botanical scrollwork frames the whole image"
+          ],
+          "lightSources": [
+            "flat, diffuse daylight from the overcast sky; no sun disc, no lamp, no directional highlight"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure is behind the frame, the frame between her and the viewer; her hands come over its top edge",
+            "the three blades all point into the single red heart at the panel's centre",
+            "the basket of wool sits to the right of the frame at roughly the same depth",
+            "the pots and thread sit to the left of the frame, lower",
+            "the river valley is visible over the figure's right shoulder (viewer's right), behind the tree line",
+            "rain falls across everything, including the figure and the panel"
+          ],
+          "foreground": [
+            "ferns",
+            "mushrooms",
+            "daisies",
+            "wet ground",
+            "the lower edge of the embroidery frame"
+          ],
+          "background": [
+            "forest",
+            "overcast sky",
+            "river valley",
+            "distant tree-covered slopes"
+          ]
+        },
+        "uncertainObservations": [
+          "whether a needle and thread are actually held between the figure's fingers cannot be confirmed at this resolution",
+          "the number of small vessels at the lower left cannot be resolved — they overlap and are partly covered by foliage",
+          "the number of mushroom caps in the lower-left cluster cannot be resolved",
+          "whether the blades are physical objects standing in front of the panel or are themselves embroidered/appliqued onto it is ambiguous — they cast no clear shadow on the cloth",
+          "the contents of the wicker basket read as wool skeins but could be something else"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

@@ -13,6 +13,7 @@
  */
 
 import type {
+  ContextIntakeAnswer,
   QuestionCategory,
   ReadingContext,
   ReadingContextCard,
@@ -28,6 +29,7 @@ import { classifyQuestion } from '../../src/features/reading/questionCategory.ts
 import { selectDomainMeaning } from '../../src/features/reading/domainMeaning.ts'
 import { detectRisk } from '../../src/features/reading/safety.ts'
 import { localizeCard } from '../../src/data/deck/localized.ts'
+import { getDeckVisualSemantics, projectVisualEvidence } from '../../src/data/deckVisualSemantics/index.ts'
 import { LOCALE_OF, normalizeLanguage, positionLabel, positionMeaning, spreadDescription, spreadName } from '../i18n.ts'
 import { DOMAIN_LABEL_EN } from '../../src/features/reading/domainMeaning.ts'
 import type { SpreadId } from '../../src/types/spread.ts'
@@ -105,6 +107,13 @@ export function rebuildContext(request: ReadingRequest): ReadingContext {
   const language = normalizeLanguage(request.language)
   const locale = LOCALE_OF[language]
 
+  /* 牌组。它必须在建卡之前定下来 —— 每张牌要拿它去查视觉语义。
+     【deckId 本身仍然没有任何语义】它只是查表的钥匙：没有一行代码
+     会因为它叫 'legacy-shadow' 就让解读变暗。能进 Prompt 的只有
+     查出来的、来自真实原画的那条预生成记录（见 ReadingContextCard.deckVisualEvidence）。 */
+  const deckId = typeof request.deckId === 'string' ? request.deckId.slice(0, 32) : null
+  const readingMode = request.readingMode === 'deep' ? 'deep' : 'standard'
+
   const question0 = typeof request.question === 'string' ? request.question.trim() : ''
   const mode0 = request.mode === 'random' ? 'random' : 'question'
   const questionCategory = classifyQuestion(
@@ -173,6 +182,12 @@ export function rebuildContext(request: ReadingRequest): ReadingContext {
         reversed: [...text.keywordsReversed],
       },
       symbols: [...text.symbols],
+      /* 这副牌组实际怎么画这张牌。查表拿不到就整个字段不存在 ——
+         Prompt 里那一节也就不会出现，解读退回改造前的形态。 */
+      ...(() => {
+        const evidence = projectVisualEvidence(getDeckVisualSemantics(deckId, card.id), readingMode)
+        return evidence ? { deckVisualEvidence: evidence } : {}
+      })(),
     }
   })
 
@@ -197,9 +212,41 @@ export function rebuildContext(request: ReadingRequest): ReadingContext {
     cards,
     stats: computeStats(cards),
     // 用户选的模式。默认 standard —— 不替用户决定要不要多花一分钟
-    readingMode: request.readingMode === 'deep' ? 'deep' : 'standard',
-    // 只记录，不参与任何判断。写进 Prompt 是明确禁止的（见 ReadingContext.deckId）
-    deckId: typeof request.deckId === 'string' ? request.deckId.slice(0, 32) : null,
+    readingMode,
+    /* deckId 本身**仍然不进 Prompt**，也仍然不参与任何判断。
+       它现在多了一个用途：作为 deckVisualEvidence 的查表键。
+       「牌组名影响解读」和「牌组的真实画面影响解读」是两件完全不同的事，
+       这一层只允许后者。 */
+    deckId,
     safetyNotice: risk.notice,
+    riskCategories: risk.categories,
+    ...(mode === 'question' ? sanitizeUserContext(request.userContext) : {}),
   }
+}
+
+/* ── 解读前背景提问的回答 ─────────────────────────────────────────
+ * 这些文字来自浏览器，和用户问题一样是**用户提供的数据**：
+ * 限条数、限长度、去掉不完整的条目，但不改写内容。
+ * 只保留实际回答的题；一题都没有时整个字段不出现，Prompt 里那一节也就不存在。 */
+const USER_CONTEXT_LIMITS = { maxAnswers: 4, maxQuestionChars: 80, maxLabelChars: 40, maxIdChars: 40 }
+
+function sanitizeUserContext(raw: unknown): { userContext?: ContextIntakeAnswer[] } {
+  const answers = (raw as { answers?: unknown } | undefined)?.answers
+  if (!Array.isArray(answers)) return {}
+  const out: ContextIntakeAnswer[] = []
+  const seen = new Set<string>()
+  for (const item of answers) {
+    if (out.length >= USER_CONTEXT_LIMITS.maxAnswers) break
+    if (typeof item !== 'object' || item === null) continue
+    const a = item as Record<string, unknown>
+    const text = (v: unknown, max: number) => (typeof v === 'string' ? v.trim().replace(/\s+/g, ' ').slice(0, max) : '')
+    const questionId = text(a.questionId, USER_CONTEXT_LIMITS.maxIdChars)
+    const question = text(a.question, USER_CONTEXT_LIMITS.maxQuestionChars)
+    const selectedOptionId = text(a.selectedOptionId, USER_CONTEXT_LIMITS.maxIdChars)
+    const selectedOptionLabel = text(a.selectedOptionLabel, USER_CONTEXT_LIMITS.maxLabelChars)
+    if (!questionId || !question || !selectedOptionLabel || seen.has(questionId)) continue
+    seen.add(questionId)
+    out.push({ questionId, question, selectedOptionId, selectedOptionLabel })
+  }
+  return out.length > 0 ? { userContext: out } : {}
 }

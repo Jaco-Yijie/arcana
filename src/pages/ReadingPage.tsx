@@ -1,6 +1,10 @@
+import { deckVisualScope } from '@/atmosphere/visualScope'
+import { DECK_SIGNATURES } from '@/atmosphere/signatures'
+import { SignatureArt } from '@/atmosphere/SignatureArt'
 import { useLocalizedContent, TranslationStatus } from '@/i18n/useLocalizedContent'
 import { LanguageSwitcher } from '@/components/identity/LanguageSwitcher'
 import { AppShell } from '@/components/layout/AppShell'
+import { ReadingSyncStatus } from '@/features/auth/ReadingSync'
 import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/atoms/Button'
@@ -13,7 +17,7 @@ import { useSession } from '@/hooks/useSession'
 import { useSettings } from '@/hooks/useSettings'
 import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
-import { resolveDeckId } from '@/decks/ids'
+import { resolveDeckId, resolveProductionDeckId } from '@/decks/ids'
 import { buildFollowUpContext } from '@/features/reading/buildReadingInput'
 import { requestFollowUp } from '@/features/reading/followUpClient'
 import { FollowUpSection } from '@/features/reading/FollowUpSection'
@@ -21,7 +25,6 @@ import { ReadingBody, fallbackNotice, type ReadingBodyData } from '@/features/re
 import { useReading } from '@/hooks/useReading'
 import { ReadingModePicker } from '@/features/reading/ReadingModePicker'
 import type { ReadingMode } from '@/types/reading'
-import { WIDTH_STYLE } from '@/components/layout/AppShell'
 import { useI18n } from '@/i18n'
 import { positionLabel, spreadName } from '@/i18n/domain'
 import { useCardName } from '@/hooks/useCardText'
@@ -143,8 +146,13 @@ export default function ReadingPage() {
           connection: c.connectionToQuestion,
         })),
         relationships: structured.relationships.map((r) => r.interpretation),
+        // V2.5 之前存下的解读没有 decisionDriver
+        driver: structured.decisionDriver ?? null,
         narrative: structured.narrative,
         answer: structured.answerToQuestion,
+        // V2.4 之前存下的解读没有这两个字段
+        actions: structured.actionPlan ?? [],
+        watchFor: structured.watchFor ?? [],
         reflections: structured.reflectionQuestions,
       }
     : {
@@ -156,8 +164,11 @@ export default function ReadingPage() {
           interpretation: c.interpretation,
         })),
         relationships: partial.relationships,
+        driver: partial.driver,
         narrative: partial.narrative,
         answer: partial.answer,
+        actions: partial.actions,
+        watchFor: partial.watchFor,
         reflections: partial.reflections,
       }
   const structuredNotice = structured ? fallbackNotice(structured, localFallback, t) : null
@@ -195,8 +206,11 @@ export default function ReadingPage() {
 
   const finish = (destination: 'journal' | 'share' | 'new' = 'journal') => {
     if (!complete || followUpBusy) return
-    // 保留这次阅读实际使用的牌组，即使全局选择在阅读期间发生过变化。
-    if (destination === 'new') setDeckId(resolveDeckId(session.deckId, session.deckSchema))
+    /* 保留这次阅读实际使用的牌组，即使全局选择在阅读期间发生过变化。
+       用 resolveProductionDeckId：这是在为**下一次**抽牌定牌组，
+       而这条会话可能来自一副已经不再对外开放的牌 —— 那种情况下回落默认，
+       不能让用户被带进一副选不了的牌里。本条会话自己的 deckId 不受影响。 */
+    if (destination === 'new') setDeckId(resolveProductionDeckId(session.deckId, session.deckSchema))
     const id = completeSession()
     setFinishedTo(destination === 'new'
       ? '/question?mode=question'
@@ -204,8 +218,10 @@ export default function ReadingPage() {
   }
 
   return (
-    <div className="relative mx-auto flex min-h-[100dvh] w-full flex-col"
-      style={{ maxWidth: WIDTH_STYLE.column }}>
+    <div className="reading-experience relative mx-auto flex min-h-[100dvh] w-full flex-col"
+      data-texture={DECK_SIGNATURES[resolveDeckId(session.deckId, session.deckSchema)].texture}
+      style={{ ...deckVisualScope(resolveDeckId(session.deckId, session.deckSchema)), maxWidth: 'var(--measure-reading)' }}>
+      <SignatureArt deckId={resolveDeckId(session.deckId, session.deckSchema)} />
       <LanguageSwitcher className="language-corner" />
       <header
         className="flex items-center justify-between px-4 py-2"
@@ -237,7 +253,7 @@ export default function ReadingPage() {
           className 上的宽度会被 CardFrame 的 inline style 静默覆盖
           （它自己的文档里专门警告过这个陷阱），所以牌从来没有 40px，
           一直是 sm 档。现在改走 `width` 这个唯一出口。 */}
-      <section className="px-5 pb-1 pt-1">
+      <section className="reading-frontispiece px-5 pb-1 pt-1">
         {session.question ? (
           <>
             <span className="eyebrow">{t('reading.question')}</span>
@@ -281,7 +297,7 @@ export default function ReadingPage() {
         ))}
       </div>
 
-      <main className="flex-1 px-5 pb-4">
+      <main className="reading-book flex-1">
         {shouldAsk ? (
           <ReadingModePicker
             value={mode}
@@ -444,6 +460,9 @@ export default function ReadingPage() {
               onSend={send}
             />
           </>
+        )}
+        {complete && (
+          <ReadingSyncStatus />
         )}
         {complete && (
           <ReadingCompletionActions

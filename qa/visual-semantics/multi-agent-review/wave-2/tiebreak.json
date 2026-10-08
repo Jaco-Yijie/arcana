@@ -1,0 +1,31 @@
+{
+  "run": "wave-2",
+  "count": 5,
+  "cards": [
+    {
+      "reviewId": "review-206",
+      "blindImage": "qa/visual-semantics/blind-review/wave-2/review-206.png",
+      "split": "reviewer-b=corrected vs reviewer-e=pass"
+    },
+    {
+      "reviewId": "review-207",
+      "blindImage": "qa/visual-semantics/blind-review/wave-2/review-207.png",
+      "split": "reviewer-b=pass vs reviewer-d=uncertain"
+    },
+    {
+      "reviewId": "review-208",
+      "blindImage": "qa/visual-semantics/blind-review/wave-2/review-208.png",
+      "split": "reviewer-c=pass vs reviewer-e=uncertain"
+    },
+    {
+      "reviewId": "review-212",
+      "blindImage": "qa/visual-semantics/blind-review/wave-2/review-212.png",
+      "split": "reviewer-b=corrected vs reviewer-e=pass"
+    },
+    {
+      "reviewId": "review-215",
+      "blindImage": "qa/visual-semantics/blind-review/wave-2/review-215.png",
+      "split": "reviewer-a=pass vs reviewer-c=corrected"
+    }
+  ]
+}

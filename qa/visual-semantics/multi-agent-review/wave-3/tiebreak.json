@@ -1,0 +1,11 @@
+{
+  "run": "wave-3",
+  "count": 1,
+  "cards": [
+    {
+      "reviewId": "review-303",
+      "blindImage": "qa/visual-semantics/blind-review/wave-3/review-303.png",
+      "split": "reviewer-a=uncertain vs reviewer-c=pass"
+    }
+  ]
+}

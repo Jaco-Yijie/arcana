@@ -1,0 +1,51 @@
+[
+  {
+    "reviewId": "review-409",
+    "decision": "AUTO_PASS",
+    "confidence": "high",
+    "independentFinding": "I opened the image and, because it is extremely dark, applied a gamma lift and overlaid a pixel grid to measure the stakes rather than eyeball them. I can resolve 6 sharpened stakes rising from the dark ground below the platform. I measured each shaft's 2D lean from its bright tip down along its highlight: left-side stakes run tip(95,432)->base(59,595) and tip(174,477)->base(109,775), i.e. the tip is up-and-RIGHT of the base; right-side stakes run tip(392,517)->base(440,750), tip(431,450)->base(492,640), tip(360,635)->base(400,835), i.e. the tip is up-and-LEFT of the base; one central stake at tip(242,535)->base(262,835) is essentially vertical. The tips therefore CONVERGE upward toward the platform while the lower ends splay outward toward the frame edges. The figure stands on top of the platform in a wide braced stance holding one long staff roughly horizontally in both hands.",
+    "reason": "Reviewer-d's suggested correction asserts the stakes 'point upward and outward, splayed away from the platform'; reviewer-b and reviewer-f use the same outward-splay language in their blind observations ('tips point UPWARD and outward, away from the lower center', 'splay outward to either side of the wall'). The two-reviewer threshold is met for the claim, but threshold 3 fails: my own measurement of the image gives the opposite. Reviewer-b's specific wording is inverted - he wrote 'the left-hand ones lean up-and-left, the right-hand ones lean up-and-right', while measurement shows left-hand ones lean up-and-right and right-hand ones lean up-and-left. What the reviewers correctly saw is the bases splaying outward; they then mis-attributed that splay to the tips. The existing text 'the figure stands above the stakes, which point upward toward the platform' is accurate as written, so the patch would introduce an error rather than fix one. I am not marking the stake count uncertain because the existing file already lists 'exact number of stakes visible, as several are cropped or lost in shadow' under its own uncertainty notes, which matches all three reviewers and my own reading.",
+    "overturnedReviewer": true
+  },
+  {
+    "reviewId": "review-410",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "I opened the image and zoomed the raised hand at 9x and at 16x nearest-neighbour. The figure stands back-to-viewer on a round tiered platform in water, viewer-right arm raised with index finger extended toward the wheel's lower rim node. Against the wheel's main graduated band there is a clear gap, but a thin hairline arc of the wheel and the wheel's vertical axis stem come down exactly to the fingertip. At native resolution the fingertip and that line are separated by at most one or two pixels, and the glow around the node bleeds over the finger, so I cannot establish whether there is contact or a small gap. The rest of the described scene checks out: four constellation line-figures (winged humanoid with an open book upper-left, winged bird upper-right, bull lower-left, lion lower-right), a large armillary sphere on the figure's viewer-left and a smaller ringed instrument plus a lit lantern on the viewer-right, warm horizon glow behind mountains, platform mirrored in the water.",
+    "reason": "The existing visualTensions item asserts a definite separation ('almost but not quite'), and builds a tension on it. Reviewer-e flagged it and reviewer-f independently recorded in his blind observation that he 'cannot tell whether the raised fingertip makes contact with the wheel's rim or stops just short of it'; reviewer-b, although he voted pass, also recorded it non-committally as 'touching or nearly touching'. So the unresolvability is independently on record from more than one reviewer and matches my own zoom. I am NOT applying reviewer-e's patch: it swaps one unverifiable assertion (a gap) for the opposite unverifiable assertion (contact), which fails threshold 1 - the visual fact is ambiguous, not unambiguous. The correct action is to drop the over-asserted item rather than flip it. I am naming only the visualTensions item; the spatialRelations line 'its raised hand nearly touching the ring's lower rim' is a soft hedge compatible with either reading, so I am leaving it in to minimise loss.",
+    "uncertainItems": [
+      {
+        "field": "visualTensions",
+        "item": "the reaching hand almost but not quite touching the ring"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-412",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image and zoomed the upper-left celestial body (around x=155-225, y=70-140) at 12x, both raw and brightness-lifted. It is a complete circular disc: the full rim outline is traceable the whole way round, the interior shows surface mottling, and the only bright areas are warm amber highlights along the lower-left and lower-right limbs. There is no crescent sliver and no terminator cutting across the disc. I also independently counted the staves to check nothing else was off: 5 glowing tips on the left bundle and 5 on the right, 10 in total, each bundle rope-lashed, which matches the existing description and both reviewers.",
+    "reason": "All five AUTO_CORRECT thresholds hold. (1) The fact is unambiguous on the image - a full circular outline is plainly visible at native resolution, and 'crescent' is simply the wrong shape. (2) Two independent Reviewers reported the same thing in their blind observations before comparing: reviewer-b recorded moonPhase as 'gibbous - partly shaded on one side; uncertain' and wrote that the body is 'a near-complete round disc ... no thin crescent sliver'; reviewer-e recorded moonPhase as 'the upper-left sphere reads as a full round disc' with the phase undeterminable. Both filed it as an issue against the same existing string. (3) I reached the same conclusion from my own zoom. (4) It is an observable shape fact, not interpretation. (5) The fix is two precise substring replacements. I deliberately did NOT adopt reviewer-b's 'gibbous', because that is the one point where the two reviewers diverge and I cannot read a phase off the disc either; the replacement asserts only the part both reviewers and I independently agree on - a full round disc, phase indeterminate. I verified both find strings with grep -oF against reveal/review-412.md: each occurs exactly once (line 11 and line 39).",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "crescent moon",
+          "with": "dim round moon disc with its full circular outline visible, phase indeterminate"
+        },
+        {
+          "find": "whether the moon is waxing or waning",
+          "with": "the moon's phase - the full disc outline is visible and no crescent terminator can be read"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-413",
+    "decision": "AUTO_PASS",
+    "confidence": "high",
+    "independentFinding": "I opened the image and isolated the 47x45 pixel region above the cup rim (x 258-305, y 355-400), normalised its contrast and upscaled it 18x. The shape resolves unmistakably into a fish: a round eye with a dark pupil and pale ring near the upper right, a curved gill-cover arc behind it, a pointed snout, a dorsal fin ridge along the upper back, a pectoral fin low on the left flank, and a forked caudal tail dipping back toward the cup's rim. The body arcs head-up out of the goblet, with scattered bright droplets around it. I also checked the rest of the scene: the cup is held in both hands at chest height by a figure in profile facing viewer-right with the head bowed; the arch in the rock face contains a closed panelled door with light leaking along its right edge and under its threshold, throwing a bright band across the wet stony sand toward the lower right; sea and surf lie behind and to the left.",
+    "reason": "Both reviewer-a and reviewer-d independently report the same thing - that the shape above the cup is an unresolvable pale plume - and both want the fish claim removed. The two-reviewer threshold is met for their claim, but what they recorded is the limit of their own inspection, not a property of the image. 'I could not resolve it' is not the same as 'it is not there', and MARK_UNCERTAIN is reserved for facts I cannot verify. I can verify this one: at 18x with contrast normalisation the fish anatomy is explicit, and reviewer-a himself rated his issue confidence 'low'. Marking it uncertain would delete a real, resolvable and distinctive detail, along with the dependent keyObjects entry about the droplets around the fish form. The existing wording is also already appropriately hedged as 'fish-like form', and the file's own self-reported uncertainty already carries 'whether the shape rising from the cup is a fish or a flame-like form', so nothing is over-asserted. Everything else in the existing description checks out against my own reading, including the closed door inside the lit arch and the light band running toward the lower right.",
+    "overturnedReviewer": true
+  }
+]

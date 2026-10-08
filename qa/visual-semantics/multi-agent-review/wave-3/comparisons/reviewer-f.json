@@ -1,0 +1,35 @@
+[
+  {
+    "reviewId": "review-303",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "gold-framed border with corner compass rosettes",
+        "observed": "The card border is a thin gold double rule plus a ticked, ruler-like measuring band running down the left and right edges only. There is no rosette, compass rose or any other ornament at any of the four corners; the top and bottom edges carry only the plain thin rule.",
+        "evidence": "All four corners of the frame are visible and unobstructed. At the top-left and top-right corners (around x=18-30 and x=530-545, y=68) and at the bottom-left and bottom-right corners the border resolves at high zoom into two parallel gold hairlines with a column of short tick marks beside them. Scanning the full top edge strip and the full bottom edge strip shows an unbroken plain rule with no ornament anywhere along them.",
+        "confidence": "high"
+      },
+      {
+        "field": "deckSpecificMotifs",
+        "existing": "ornamental gold border with compass rosettes",
+        "observed": "Same point restated as a motif: the border ornament is a ticked measuring scale down the two side edges, not compass rosettes.",
+        "evidence": "The tick-mark band is visible along the left and right edges for the full height of the card; no rosette form appears anywhere on the frame.",
+        "confidence": "high"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "gold-framed border with corner compass rosettes",
+          "with": "thin gold double-rule border with a ticked measuring band down the left and right edges"
+        },
+        {
+          "find": "ornamental gold border with compass rosettes",
+          "with": "ornamental gold border with a ticked measuring scale along the side edges"
+        }
+      ]
+    },
+    "reviewer": "reviewer-f"
+  }
+]

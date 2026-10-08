@@ -1,0 +1,357 @@
+{
+  "reviewId": "review-501",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-501.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain vs corrected"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 1,
+    "uncertain": 1,
+    "corrected": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-501.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-501",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "centre of the image, seated on paved ground in the middle band",
+              "posture": "seated/kneeling with the skirt spread wide around her on the pavement, torso upright and facing the viewer, shoulders slightly turned to the viewer-left",
+              "gaze": "head upright and facing forward toward the viewer, slightly tilted down; eyes appear closed or heavily lowered",
+              "heldObjects": [
+                "viewer-right hand: grips a sword by the hilt at hip height, arm hanging down alongside the body, blade angled down and out to the viewer-right with the tip resting on or near the ground",
+                "viewer-left hand: raised to the head at forehead height, fingers at the edge of the cloth band wrapped around the brow, as if lifting or pushing it up"
+              ],
+              "clothing": "dark long-sleeved off-the-shoulder gown with a full skirt and a trailing dark veil/shawl falling from the raised arm; long dark hair; a dark cloth band wrapped around the head at the forehead, pushed up above the eyes"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one to the viewer-left of the figure and one to the viewer-right, both at her sides, forming a wide V",
+              "orientation": "both angled downward and outward with the tips down on the pavement, hilts up near her hips; the viewer-left blade points down-left, the viewer-right blade points down-right",
+              "arrangement": "two, splayed symmetrically in a V away from the body"
+            },
+            {
+              "type": "moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-right of the sky",
+              "orientation": "disc with the bright limb toward the viewer-right and a shadowed sliver at the viewer-left edge",
+              "arrangement": "single"
+            },
+            {
+              "type": "carved circular floor motif",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "on the pavement in the lower third, one at the viewer-left and one at the viewer-right, below and outside each sword tip",
+              "orientation": "flat on the ground, facing up",
+              "arrangement": "two, left and right, roughly mirrored; the viewer-left one reads as a radiating sunburst, the viewer-right one as a crescent"
+            },
+            {
+              "type": "door",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-left, at the top of a short flight of steps",
+              "orientation": "vertical, closed, set in an arched stone surround with a round traceried window above it",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "night scene, almost entirely dark brown-black with a narrow tonal range",
+            "cracked stone pavement covering the whole lower half, catching pale light",
+            "a closed wooden door at the viewer-left reached by about four stone steps, set in an ivy-hung arched stone wall",
+            "a circular traceried window above the door",
+            "a large body of still water filling the right middle ground, with a long light reflection running toward the viewer",
+            "a low dark shoreline or ruined structures on the far right bank",
+            "heavy cloud across the upper sky",
+            "a torn/deckled edge treatment and thin border at the sides of the image"
+          ],
+          "lightSources": [
+            "the moon in the upper-right sky",
+            "the moon's reflection as a bright vertical streak on the water",
+            "two small bright glints at the two sword tips where they meet the pavement"
+          ],
+          "moonPhase": "gibbous",
+          "spatialRelations": [
+            "the figure is centred between the two swords, one at each side",
+            "the moon is in the sky above and to the viewer-right of the figure's head",
+            "the door and steps are behind and to the viewer-left of the figure",
+            "the water is behind and to the viewer-right of the figure, at the same side as the moon",
+            "the two carved floor motifs lie in front of the figure, beyond the tips of the swords, one on each side",
+            "the figure's raised hand is at her own forehead, at the edge of the head band"
+          ],
+          "foreground": [
+            "cracked pavement with the two carved circular motifs",
+            "the two sword tips and their light glints",
+            "the spread skirt of the seated figure"
+          ],
+          "background": [
+            "arched doorway, steps and ivy at the viewer-left",
+            "moonlit water and far shore at the viewer-right",
+            "clouded night sky and the moon"
+          ]
+        },
+        "uncertainObservations": [
+          "The viewer-left sword is NOT clearly gripped: no hand is on its hilt, because that arm is raised to the head. I cannot tell whether that sword is propped, planted in the ground, or simply resting against her.",
+          "The cloth band around the head sits above the eyes rather than over them, and I cannot tell whether her eyes beneath it are closed, lowered, or open in deep shadow.",
+          "I cannot tell whether the raised hand is pushing the band up, pulling it down, or merely touching it.",
+          "Moon phase read as gibbous (most of the disc lit, a shadowed sliver at the viewer-left limb), but the dark sky and heavy grain make the terminator soft; a 'full' reading is possible.",
+          "The carved floor motifs are heavily worn and partly in shadow; my sunburst/crescent reading of them is tentative.",
+          "The far-right shoreline shapes could be ruins, buildings or rocks; not resolvable.",
+          "The image is extremely dark overall, which limits certainty on all shadow detail."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "A dark-robed woman sits on a cracked stone pavement at night, one hand raised to her head and the other holding a downward-pointing sword, with a second sword planted in the ground beside her, a moonlit sea and a dark doorway behind her.",
+          "observed": "My frozen blind read recorded a sword hilt in each of the figure's two hands at hip height, blades angled down and out to both sides, rather than one sword held and a second one standing planted in the ground on its own. My observation also did not record a hand raised to the head in the posture field, so my own record of the arms is internally thin on this point.",
+          "evidence": "Both sword hilts sit at roughly the same height on either side of the figure's hips, level with each other, and both blades splay outward in a mirrored V; I separately noted that I could not resolve whether either point actually touches the paving.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-501",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, slightly below middle of the frame",
+              "posture": "seated/kneeling low on the paving, torso upright, body squarely frontal toward the viewer, skirt spread out around her on the ground",
+              "gaze": "head tilted slightly down and toward viewer-left; eyes appear open and cast downward, not meeting the viewer",
+              "heldObjects": [
+                "a long straight sword in her viewer-left hand (her right), held low at hip height, blade angled down and out to viewer-left, point resting on / near the ground, a small bright spark of light at the point",
+                "a long straight sword in her viewer-right hand (her left), held low at hip height, blade angled down and out to viewer-right, point resting on / near the ground"
+              ],
+              "clothing": "dark long-sleeved floor-length gown with a wide scooped neckline that bares one shoulder, heavy draped skirt, a dark shawl or drape over the arms; long dark hair, and a dark band or wrap around the head/forehead"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one in each of the figure's hands, blades reaching down to the paving on both sides of her",
+              "orientation": "both blades angled downward, points toward the ground, hilts up at the figure's hips",
+              "arrangement": "a symmetric outward V / splayed pair, mirrored left and right"
+            },
+            {
+              "type": "ground medallion / carved paving roundel",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "in the foreground paving below the figure, one toward viewer-left and one toward viewer-right",
+              "orientation": "flat, set into the horizontal ground plane",
+              "arrangement": "two separate circular carvings, one on each side of the lower frame; the left one has radiating spokes/rays, the right one a hooked crescent-like curve",
+              "note": null
+            },
+            {
+              "type": "door",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper viewer-left, at the top of a short flight of stone steps",
+              "orientation": "vertical, facing roughly toward the viewer-right",
+              "arrangement": "single tall plank door in a stone surround, with a round tracery window set in the wall above it"
+            },
+            {
+              "type": "stone step",
+              "count": null,
+              "countConfidence": "low",
+              "where": "below the door at viewer-left, descending toward the paving",
+              "orientation": "horizontal treads stacked vertically",
+              "arrangement": "a short straight flight; individual treads blur into shadow"
+            }
+          ],
+          "environment": [
+            "cracked flagstone / crazed stone paving covering the whole foreground",
+            "a stone wall with a plank door and an arched tracery window at upper viewer-left",
+            "a short stone stair descending from that door",
+            "climbing vines or dead creeper over the wall and door frame",
+            "a broad flat body of water filling the right middle ground",
+            "a low dark shoreline or ruined structures on the far side of the water at viewer-right",
+            "heavy broken cloud across the upper sky"
+          ],
+          "lightSources": [
+            "a large moon in the upper viewer-right sky, the dominant light",
+            "a glint/spark at the point of the viewer-left sword",
+            "a long specular moon-track on the water at viewer-right"
+          ],
+          "moonPhase": "gibbous",
+          "spatialRelations": [
+            "the figure is at the convergence of two pale light-paths that run out to the lower-left and lower-right corners",
+            "the door and stair are behind and to the viewer-left of the figure",
+            "the water and the moon are behind and to the viewer-right of the figure",
+            "the moon sits above and to the right of the figure's head",
+            "the two carved roundels lie in front of (nearer the viewer than) the figure, one under each sword point",
+            "the moonlight track on the water runs toward the lower-left, pointing back toward the figure"
+          ],
+          "foreground": [
+            "cracked paving stones",
+            "the two carved circular roundels",
+            "the lower halves of both sword blades and their points"
+          ],
+          "background": [
+            "moon and clouded night sky",
+            "water with moon reflection",
+            "distant dark shoreline silhouettes",
+            "the walled doorway and stair at viewer-left"
+          ]
+        },
+        "uncertainObservations": [
+          "The moon's terminator is soft; the lit portion clearly covers more than half the disc so I read it as gibbous, but the shadowed left limb is faint enough that a crescent reading cannot be fully excluded.",
+          "The dark band across the figure's forehead could be a headband, a woven circlet, or hair falling across the brow; I cannot tell whether her eyes are covered. They read as uncovered.",
+          "Whether the sword points actually touch the ground or hover just above it is not resolvable.",
+          "The carvings on the two foreground roundels are eroded; I can see a radial/rayed pattern on the left and a hooked curve on the right but cannot make out finer detail.",
+          "The dark shapes on the far shore at viewer-right could be ruined buildings, rocks, or distant trees.",
+          "Whether the figure is kneeling or sitting cross-legged is hidden by the spread of the skirt."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-d"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "large gibbous moon",
+          "observed": "The moon is a CRESCENT, lit along the viewer-right limb, with the unlit remainder of the disc faintly visible. At most about half the disc is lit — it is not gibbous.",
+          "evidence": "Moon at the upper right of the sky, roughly x=390-530 / y=90-230 in the 560x933 image. Enlarged 5x and brightened, the boundary between the lit and unlit areas is clearly CONCAVE, bowing rightward into the bright side, which is the signature of a crescent; a gibbous moon's terminator bows the other way. A 3-level posterisation of the same crop shows the lit area as an unmistakable sickle with horns pointing up-left and down-left.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "large gibbous moon",
+            "with": "large crescent moon, lit along its right limb"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-501",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, slightly left of the vertical midline, occupying the lower-middle of the frame",
+              "posture": "kneeling / sitting back on the heels on a cracked stone pavement; body squared to the viewer, torso upright, long skirt spread out around her on the ground",
+              "gaze": "head faces forward toward the viewer and is tilted slightly downward; eyes appear closed or heavily downcast. NOT turned over either shoulder",
+              "heldObjects": [
+                "viewer-right hand: grips a sword hilt at roughly hip height, arm extended down and outward; blade angles down-right with the point resting on the pavement",
+                "viewer-left hand: raised up to her own head, fingers touching the hairline/temple above the left brow — holding no object",
+                "the viewer-left sword is NOT in a hand: its hilt sits free in mid-air beside her skirt with the blade angling down-left to the pavement, appearing planted/standing rather than held"
+              ],
+              "clothing": "dark long-sleeved off-shoulder gown with a heavy pleated skirt and a draped shawl over the viewer-left shoulder; long dark hair loose past the shoulders; a dark narrow band/ribbon of cloth lies across the forehead above the eyebrows (sitting on the brow, not covering the eyes)"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one to the figure's viewer-left, one to her viewer-right, both in the lower half of the frame flanking her skirt",
+              "orientation": "both blades angle downward and outward from her waist height to the ground; points DOWN, touching the pavement",
+              "arrangement": "splayed apart in a V / X-limb shape, mirrored on either side of her — they do NOT cross, do not touch each other, and are not parallel"
+            },
+            {
+              "type": "carved pavement emblem",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "inlaid flat in the cracked pavement in the foreground: one on the viewer-left, one on the viewer-right, roughly symmetric and below each sword tip",
+              "orientation": "flat on the ground, seen from above",
+              "arrangement": "one per side; viewer-left emblem is a radiating sun/star rosette with a ring of triangular rays, viewer-right emblem is a plain crescent"
+            },
+            {
+              "type": "door",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "background viewer-left, set in a dark stone wall at the top of a short flight of steps",
+              "orientation": "upright, closed, facing the viewer",
+              "arrangement": "single; a circular tracery window / rose motif sits above the lintel"
+            },
+            {
+              "type": "steps",
+              "count": null,
+              "countConfidence": "low",
+              "where": "background viewer-left, descending from the door toward the pavement",
+              "orientation": "horizontal treads receding",
+              "arrangement": "a short stacked flight; individual treads blur into shadow"
+            },
+            {
+              "type": "tower / distant structure",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far background viewer-right, standing in or at the edge of the water",
+              "orientation": "upright silhouette",
+              "arrangement": "single small silhouette on the moonlit water"
+            }
+          ],
+          "environment": [
+            "cracked, crazed stone pavement covering the whole foreground and midground",
+            "dark stone wall with a doorway and steps at viewer-left",
+            "an open body of water (sea or lake) filling the right middle distance",
+            "rocky cliffs / dark headland along the right edge behind the water",
+            "heavy broken cloud across the night sky"
+          ],
+          "lightSources": [
+            "the moon, high in the sky at upper-right — the dominant light",
+            "a long specular moon-path on the water running toward the lower-left",
+            "a bright starburst flare at the point where the VIEWER-LEFT sword tip meets the pavement",
+            "a softer pool of brightness at the point where the VIEWER-RIGHT sword tip meets the pavement (a glow, but no distinct star-flare)",
+            "two broad lit bands of pavement running down-left and down-right from beneath the figure, with a dark wedge of shadow between them directly below her"
+          ],
+          "moonPhase": "crescent",
+          "spatialRelations": [
+            "the moon is at the upper-right, well above and to the right of the figure's head",
+            "the doorway and steps are behind the figure on the viewer-left",
+            "the water and cliffs are behind the figure on the viewer-right",
+            "the viewer-left sword's point sits on the pavement to the lower-left of her skirt; the viewer-right sword's point sits on the pavement to the lower-right",
+            "the sun/star rosette is below and slightly left of the left sword tip; the crescent emblem is below and slightly right of the right sword tip",
+            "the figure's own shadow falls toward the viewer, straight down the dark central wedge of pavement between the two lit bands"
+          ],
+          "foreground": [
+            "cracked pavement with the two carved emblems",
+            "the two sword blades and their points",
+            "the dark central shadow wedge cast toward the viewer"
+          ],
+          "background": [
+            "doorway with rose-tracery window and steps (viewer-left)",
+            "moonlit water with a distant tower silhouette (viewer-right)",
+            "rocky cliff mass at the right edge",
+            "clouded night sky with the moon at upper-right"
+          ]
+        },
+        "uncertainObservations": [
+          "The moon's lit fraction is ambiguous: the illuminated area is a thick crescent on the viewer-RIGHT limb and could also be read as just under half (first-quarter). The unlit remainder of the disc is faintly visible, so the full circle is outlined.",
+          "Whether the dark band across the forehead is a tied cloth blindfold pushed up onto the brow, a headband, or simply a hank of her own hair cannot be resolved at this resolution. It does not cover the eyes.",
+          "I cannot confirm whether her eyes are fully closed or narrowly open and cast down.",
+          "The viewer-left sword's hilt is unoccupied in every enlargement I made, but the hilt area is dark and partly overlapped by her skirt and hair, so a concealed hand cannot be completely ruled out.",
+          "The number of steps in front of the doorway is not countable.",
+          "The right-hand sword tip's glow may be a reflection of the moonlit pavement rather than an emitted flare."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

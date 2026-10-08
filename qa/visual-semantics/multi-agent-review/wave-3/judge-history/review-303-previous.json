@@ -1,0 +1,13 @@
+{
+  "sourceFile": "qa/visual-semantics/multi-agent-review/wave-3/judge/judge-a.json",
+  "decisions": [
+    {
+      "reviewId": "review-303",
+      "decision": "AUTO_PASS",
+      "confidence": "high",
+      "independentFinding": "I counted the swords myself at 4x brightened zoom, in two separate crops. HELD: exactly THREE swords in the lowered right hand - three distinct ring-shaped decorated pommels, three distinct gold crossguards at three staggered heights, and three separate blades fanning slightly apart as they descend, each with its own fuller and its own edge highlight. The count is unambiguous at zoom; it only looks like an unresolvable bundle at full-frame scale. GROUND: exactly TWO swords lying flat on the engraved pavement, roughly parallel, hilts to the upper right, points to the lower left, with a clear gap between them - not crossed. Five swords total. I also zoomed the two distant figures: both walk away with their backs to the viewer, hoods down on their shoulders, bare dark-haired heads, and no weapon resolvable in either one's hands.",
+      "reason": "The only substantive objection is reviewer-a's, that the held count cannot be resolved and is 2 or 3. My own zoom resolves it cleanly as 3, which is what the existing keyObjects entry already says, so the existing text is correct as written and needs no change. Reviewer-c reached 3 independently and voted pass. The reveal's self-reported uncertainty 'exact number of swords held, which may be three or four due to overlap' is over-cautious in the other direction - it is three, not four - but an over-hedged uncertainty note is not an error in the description itself, so I am not patching it. I am explicitly NOT marking uncertain: MARK_UNCERTAIN exists for facts I cannot verify, and I verified this one. PROCESS FLAG, not a card finding: reviewer-f's submission in this packet is corrupt and must not be counted. Every field is the literal placeholder '...', and its blindObservation describes 'three cups held aloft' by a figure, which belongs to a different card entirely and contradicts all three of us on a card whose foreground object is swords. Reviewer-f's vote is what made this packet's tally read uncertain:2 vs pass:1; discounting it, the real split is 1 uncertain vs 1 pass. I treated this packet as a two-reviewer packet (reviewer-a and reviewer-c) and recommend reviewer-f's wave-3 output be re-run and audited.",
+      "overturnedReviewer": true
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "reviewId": "review-113",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-113.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "low reviewer confidence"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-113.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects / scene",
+          "existing": "a gibbous moon in the upper right sky",
+          "observed": "a crescent moon in the upper right sky",
+          "evidence": "The lit area of the disc is a band along the right and lower-right rim, and its inner terminator is concave toward that lit limb — the signature of a crescent. The shadowed portion covers clearly more than half the disc (the unlit remainder is faintly visible as a pale circle). A gibbous phase would show the lit region covering more than half with a convex terminator; that is not what is painted.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "the staff the woman leans on, hung with a small crescent pendant and a ring",
+          "observed": "the staff she leans on carries wrapped vine, leaves and fine beaded/chain strands; no pendant or ring is resolvable on it",
+          "evidence": "At the staff's upper section I can resolve the vine wrap, small pale flowers and hanging bead/chain strands, but no discrete pendant or ring shape. The asserted objects are not something the pixels support at this resolution — the packet's own uncertainty list also hedges this item.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "beneath a gibbous moon",
+            "with": "beneath a crescent moon"
+          },
+          {
+            "find": "a gibbous moon in the upper right sky",
+            "with": "a crescent moon in the upper right sky"
+          },
+          {
+            "find": "the staff the woman leans on, hung with a small crescent pendant and a ring",
+            "with": "the staff the woman leans on, wrapped with vine and small flowers and hung with fine beaded strands"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-113",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, standing, occupying the full height of the middle band",
+              "posture": "standing upright, body facing right, both hands stacked on the top of one upright staff in front of her, head tilted forward and resting close to her hands",
+              "gaze": "downward and to the right; eyes lowered, face in three-quarter profile",
+              "heldObjects": [
+                "the upright staff directly in front of her, gripped with both hands near its top"
+              ],
+              "appearance": "long wavy pale blonde/ash hair; a small pale flower ornament in the hair; a sheer white/pale layered gown with a translucent overlay; pale lavender and grey ribbons trailing from her waist to the left; fine beaded or chain strands hanging down the front of the gown"
+            }
+          ],
+          "objects": [
+            {
+              "type": "tall upright staff/pole wrapped with vine, leaves and small flowers",
+              "count": 7,
+              "countConfidence": "medium",
+              "where": "planted vertically in the ground and spanning the full height of the frame — three to the figure's left (the leftmost near the frame edge), one directly in front of her (the one she leans on), and three to her right receding toward the water"
+            },
+            {
+              "type": "moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right, a large crescent with its lit edge along the lower-right side; the unlit remainder of the disc is faintly visible as a pale circle"
+            },
+            {
+              "type": "ribbon / trailing streamer",
+              "count": null,
+              "countConfidence": "low",
+              "where": "pale lavender, blue and grey ribbons stream from the staves and from the figure's waist toward the left; they cross and overlap and cannot be counted"
+            },
+            {
+              "type": "large pale flower blossom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower left foreground — a cluster of wide pale white-lavender blooms among leaves; several overlap"
+            },
+            {
+              "type": "body of water (lake/inlet)",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right middle distance, a pale reflective surface between low hills"
+            }
+          ],
+          "environment": [
+            "overall very pale, high-key watercolor wash in white, lavender and pale blue",
+            "soft clouds across the upper half",
+            "low misty hills or tree-covered slopes on the right and far side of the water",
+            "low shrubs and grass at the base of the staves",
+            "a pale scalloped painted border framing the image on all sides"
+          ],
+          "lightSources": [
+            "the crescent moon at upper right; otherwise a diffuse overall glow with no hard shadows"
+          ],
+          "moonPhase": "crescent — the bright lit portion is a thick crescent along the lower-right rim, with the rest of the disc showing faintly (earthshine-like); it reads clearly as a crescent rather than a full disc",
+          "spatialRelations": [
+            "the figure stands among the staves, with staves both in front of her (the one she holds) and behind her on both sides",
+            "the staff she leans on is between her and the viewer; her hands rest on its top, level with her chin",
+            "the moon is behind and above her to the upper right, beyond the staves",
+            "the water lies to her right at roughly waist height in the picture plane, behind the right-hand staves",
+            "the flower cluster is nearest the viewer at the lower left, in front of her gown's hem"
+          ],
+          "foreground": [
+            "the staff she leans on",
+            "pale flower cluster lower left",
+            "trailing ribbons"
+          ],
+          "background": [
+            "crescent moon",
+            "clouds",
+            "misty hills",
+            "lake surface"
+          ]
+        },
+        "uncertainObservations": [
+          "the staff count is medium confidence — the poles are pale, thin and partly dissolve into the misty background, so one additional faint pole (particularly at the right, near the water) or a double-counted overlap cannot be ruled out; the leftmost pole is close to the frame edge",
+          "the number of ribbons and of blossoms in the lower-left cluster cannot be resolved",
+          "whether the figure's eyes are fully closed or only lowered is ambiguous",
+          "whether the hair ornament is a flower, a comb, or a ribbon is not resolvable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects / scene",
+          "existing": "a gibbous moon in the upper right sky",
+          "observed": "a crescent moon in the upper right sky",
+          "evidence": "The lit portion is a clear crescent arcing along the right/lower-right rim of the disc; the remaining majority of the disc is a pale unlit grey circle (earthshine). Well under half the disc is bright, so it cannot be gibbous.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "beneath a gibbous moon",
+            "with": "beneath a crescent moon"
+          },
+          {
+            "find": "a gibbous moon in the upper right sky",
+            "with": "a crescent moon in the upper right sky"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-113",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center, occupying the middle third of the frame vertically",
+              "posture": "standing upright, leaning forward and resting both forearms/hands on the top of a tall vertical staff planted in the ground",
+              "gaze": "downward and slightly to the right, eyes lowered, head tilted forward",
+              "heldObjects": [
+                "a tall vertical staff/pole, gripped with both hands near its top"
+              ],
+              "details": "long wavy pale-blonde hair, a small pale ornament or ribbon in the hair above the temple, long pale translucent layered gown, gauzy trailing veil or ribbon streaming to the left, chain-like strands and small blossoms threaded through the garment at the waist and hip"
+            }
+          ],
+          "objects": [
+            {
+              "type": "tall vertical staff/pole",
+              "count": null,
+              "countConfidence": "low",
+              "where": "spread across the whole frame — see uncertainObservations for the individual positions I could resolve"
+            },
+            {
+              "type": "pale flower blossom (large, open, chrysanthemum-like)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower-left corner among foliage; several overlapping"
+            },
+            {
+              "type": "crescent moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right of the sky"
+            },
+            {
+              "type": "trailing ribbon / gauze streamer",
+              "count": null,
+              "countConfidence": "low",
+              "where": "blowing leftward from the figure and from several of the poles"
+            }
+          ],
+          "environment": [
+            "pale misty watercolor landscape",
+            "a body of water (lake or inlet) on the right middle ground with light reflecting on it",
+            "low forested hills / treeline along the far right horizon",
+            "low shrubs and grass at the figure's feet",
+            "pale clouded sky",
+            "thin decorative double-line border inside the frame"
+          ],
+          "lightSources": [
+            "the crescent moon at upper right",
+            "broad diffuse pale light across the whole scene, no hard shadows"
+          ],
+          "moonPhase": "crescent — a bright crescent lit along the lower-left edge, with the remainder of the disc faintly visible as a dim circle",
+          "spatialRelations": [
+            "the poles stand in an irregular scattered arrangement, some in front of the figure and some behind her, none in a neat row",
+            "the pole the figure leans on runs from her hands down to the ground just right of her skirt",
+            "the water and distant hills are visible in the gaps between the right-hand poles",
+            "flowers cluster at the lower-left, below and left of the figure's skirt"
+          ],
+          "foreground": [
+            "pale open blossoms and foliage at lower left",
+            "the figure's trailing skirt and veil",
+            "grassy ground"
+          ],
+          "background": [
+            "misty lake",
+            "forested hills",
+            "clouded sky with crescent moon"
+          ]
+        },
+        "uncertainObservations": [
+          "Pole count is NOT reliable and I am recording it as null. Individually resolvable vertical shafts, left to right: (a) one at the extreme left edge; (b) one left-of-center heavily wrapped with blossoms and a ribbon; (c) a thinner one just behind the figure's hair; (d) an upper segment behind/above her head; (e) the one she leans on, running from her hands to the ground; (f) one immediately to her right; (g) one further right; (h) one near the right margin. That reads as six to eight. Items (d) and (e) may be a single continuous pole broken visually by her hands and hair, and items (a) and (c) are faint enough in the mist that either could be a painted tree trunk rather than a staff. I am not confident enough to commit to a number.",
+          "Several poles are cut off by the top edge of the artwork, so their full extent is unknown.",
+          "Whether the pale strands around her waist are chain, beads or plant stems cannot be determined.",
+          "The number of blossoms at lower left cannot be resolved; they overlap heavily."
+        ],
+        "reviewConfidence": "medium-low",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

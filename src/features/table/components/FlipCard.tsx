@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { designTransition } from '@/design/motion'
 import { useI18n } from '@/i18n'
 import { motion, useReducedMotion } from 'framer-motion'
 import { CardFrame } from '@/components/card/CardFrame'
@@ -9,9 +10,6 @@ import { capturePointer } from './pointer'
 import type { Orientation, TarotCard } from '@/types/tarot'
 import type { DeckId } from '@/decks/ids'
 
-const FLIP_MS = 520
-/** 翻到一半才切换牌面 —— 提前切换会在动画中泄露牌面（AC-07） */
-const SWAP_MS = 260
 const SWIPE_UP = 32
 
 interface FlipCardProps {
@@ -64,8 +62,13 @@ export function FlipCard({
   const { t } = useI18n()
   const size: CardSize = sizeProp ?? (width ? sizeForWidth(width) : 'md')
   const reduceMotion = useReducedMotion()
+  const flipTransition = useMemo(() => {
+    const transition = designTransition('flip')
+    return reduceMotion ? { ...transition, duration: 0 } : transition
+  }, [reduceMotion])
+  const FLIP_MS = flipTransition.duration * 1000
+  const SWAP_MS = FLIP_MS / 2
   const [showFace, setShowFace] = useState(revealed)
-  const [flipping, setFlipping] = useState(false)
   const start = useRef<{ x: number; y: number; t: number } | null>(null)
 
   useEffect(() => {
@@ -74,14 +77,11 @@ export function FlipCard({
       return
     }
     if (showFace) return
-    setFlipping(true)
     const swap = window.setTimeout(() => setShowFace(true), reduceMotion ? 0 : SWAP_MS)
-    const done = window.setTimeout(() => setFlipping(false), reduceMotion ? 0 : FLIP_MS)
     return () => {
       window.clearTimeout(swap)
-      window.clearTimeout(done)
     }
-  }, [revealed, showFace, reduceMotion])
+  }, [revealed, showFace, reduceMotion, SWAP_MS])
 
   const canReveal = !revealed && !!onReveal
 
@@ -122,7 +122,7 @@ export function FlipCard({
   }
 
   return (
-    // 未翻开的牌轻微上下浮动，告诉用户「可以翻」。idleDelay 让各张牌错开，
+    // 未翻开的牌轻微明暗呼吸，告诉用户「可以翻」。idleDelay 让各张牌错开，
     // 避免整齐划一显得像在播放动画而不是在等你动手。
     <motion.div
       onPointerDown={handleDown}
@@ -136,23 +136,23 @@ export function FlipCard({
       /* 已翻开的牌退出 Tab 序列 —— 它不再是一个可操作的控件，
          留在序列里只会让键盘用户多按几次 Tab 才走完牌阵 */
       tabIndex={canReveal ? 0 : undefined}
-      animate={canReveal && !reduceMotion ? { y: [0, -2, 0] } : { y: 0 }}
+      animate={canReveal && !reduceMotion ? { opacity: [0.94, 1, 0.94] } : { opacity: 1 }}
       transition={
         canReveal && !reduceMotion
-          ? { duration: 3.2, repeat: Infinity, delay: idleDelay, ease: 'easeInOut' }
-          : { duration: 0.2 }
+          ? { ...designTransition('card-idle'), repeat: Infinity, delay: idleDelay }
+          : designTransition('quick')
       }
     >
       <motion.div
         style={{ transformStyle: 'preserve-3d' }}
         animate={{
           rotateY: revealed ? 180 : 0,
-          scale: flipping ? 1.08 : 1,
+          scale: 1,
         }}
         transition={
           reduceMotion
             ? { duration: 0 }
-            : { duration: FLIP_MS / 1000, ease: [0.32, 0.72, 0, 1] }
+            : flipTransition
         }
       >
         <div style={{ transform: showFace ? 'rotateY(180deg)' : undefined }}>

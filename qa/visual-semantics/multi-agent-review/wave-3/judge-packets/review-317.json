@@ -1,0 +1,365 @@
+{
+  "reviewId": "review-317",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-317.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-317.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+          "observed": "one cloaked figure STANDS in the rear of the boat working a long pole; only the nearer figure is seated",
+          "evidence": "The rear figure's full upright body and cloak are visible well above the gunwale with both hands high on the pole; the text contradicts its own later phrase 'the standing figure'.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the boat occupies the lower centre, its bow toward the viewer",
+          "observed": "the boat is seen from astern; its bow points away from the viewer, toward the lit horizon",
+          "evidence": "The broad rounded transom is nearest the viewer and the hull narrows at the far end; both figures face away toward the horizon glow, which is the direction of travel.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+            "with": "One cloaked figure stands poling a wooden boat across dark water while a second sits before them"
+          },
+          {
+            "find": "the boat occupies the lower centre, its bow toward the viewer",
+            "with": "the boat occupies the lower centre, seen from astern, its bow pointing away toward the horizon"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-317",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "center-left, standing in the rear half of the boat",
+              "posture": "standing, seen from behind, both hands on a long pole/oar that angles down to the right into the water; long hooded cloak",
+              "gaze": "forward/away from viewer, toward the lit horizon",
+              "heldObjects": [
+                "a long pole or oar"
+              ]
+            },
+            {
+              "position": "center-low, seated in the middle of the boat, nearer the viewer",
+              "posture": "seated, seen from behind, shoulders hunched, head bowed slightly, wrapped in a blue-purple hooded cloak",
+              "gaze": "away from viewer, forward (face not visible)",
+              "heldObjects": [
+                "none visible; arms are inside the cloak"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword/blade",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "left side of the boat, standing along the inside of the port gunwale",
+              "orientation": "hilts UP, points DOWN — each blade descends into the boat's interior; all vertical and parallel",
+              "arrangement": "an evenly spaced row of 3 along the left rail"
+            },
+            {
+              "type": "sword/blade",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "right side of the boat, standing along the inside of the starboard gunwale",
+              "orientation": "hilts UP, points DOWN, vertical and parallel",
+              "arrangement": "an evenly spaced row of 3 along the right rail"
+            },
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower center, filling the bottom third of the frame, viewed from behind/above the stern",
+              "orientation": "prow pointing away from the viewer toward the horizon",
+              "arrangement": "single wooden hull with visible planking and internal thwarts"
+            },
+            {
+              "type": "oar/pole",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "held by the standing figure, running from upper left down to the water at right of the boat",
+              "orientation": "diagonal, blade end submerged",
+              "arrangement": "single"
+            },
+            {
+              "type": "moon/planet body in the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "one large cratered pale sphere upper center-right; one bluish sphere at the left edge; one partial sphere at the upper right corner cut by the frame; one reddish spiral/nebula form at the upper left",
+              "orientation": "n/a",
+              "arrangement": "scattered across the night sky at different sizes"
+            },
+            {
+              "type": "domed pavilion on columns",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right background, on the far shore",
+              "orientation": "upright",
+              "arrangement": "single, with its reflection in the water below it"
+            },
+            {
+              "type": "column/pillar on the far shore",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right background, along the shoreline beside the pavilion",
+              "orientation": "upright",
+              "arrangement": "a short row of several, partly hidden by trees; not reliably countable"
+            },
+            {
+              "type": "tree on the far shore",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right background beyond the pavilion",
+              "orientation": "upright",
+              "arrangement": "a small group, silhouetted"
+            }
+          ],
+          "environment": [
+            "night",
+            "very calm, near-mirror water covering the lower half of the scene",
+            "a dense starfield and a broad Milky Way band running diagonally from upper right to lower left",
+            "fine geometric constellation lines forming web/wheel patterns across the upper sky",
+            "low mountains on the left horizon",
+            "a warm golden glow low on the horizon at center-right with a bright vertical reflection track on the water",
+            "a thin decorative border line along the left and right edges of the picture"
+          ],
+          "lightSources": [
+            "the golden horizon glow at center-right (the single strongest light)",
+            "starlight and the pale sphere in the upper sky",
+            "the water reflects both"
+          ],
+          "moonPhase": "uncertain",
+          "spatialRelations": [
+            "the standing figure is behind and to the left of the seated figure; the seated figure is closest to the viewer",
+            "the upright blades line both gunwales, forming two parallel walls with the two figures between them; there is an open gap at the stern (nearest the viewer) and at the bow — the blades do not enclose the figures on all sides",
+            "the boat travels toward the lit horizon; the shore with the pavilion lies off to the right",
+            "the horizon line sits at roughly half the picture height, separating the star-filled sky from the reflecting water"
+          ],
+          "foreground": [
+            "the boat's stern, planking, thwarts, the seated cloaked figure"
+          ],
+          "background": [
+            "star sky with constellation lines and celestial bodies",
+            "mountain horizon left",
+            "lit horizon center-right",
+            "shore with domed pavilion right"
+          ]
+        },
+        "uncertainObservations": [
+          "the total blade count is my main uncertainty: I resolved 3 distinct hilts on the left rail and 3 on the right, but the standing figure's cloak overlaps the rails and one or more additional blades could be hidden behind it. Treat 6 as a floor, not a confirmed total.",
+          "the phase and identity of the large pale sphere in the upper sky cannot be determined — it reads as a full or near-full disc but is overlaid with the constellation web",
+          "whether the horizon glow is a sunset or a sunrise is not determinable",
+          "the reddish spiral form at the upper left could be a galaxy, a nebula, or a ringed planet",
+          "the seated figure's hands and any held object are entirely inside the cloak"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the boat occupies the lower centre, its bow toward the viewer",
+          "observed": "The boat is seen from ASTERN — the stern, with its carved decorative transom panel, faces the viewer; the bow points away toward the lit horizon.",
+          "evidence": "The near end is the wide, rounded end carrying a carved panel and the boat's interior recedes away from it, narrowing to a point at the far end; both figures face away from the viewer toward that far end and the horizon glow.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+          "observed": "Only one figure is seated; the other is standing upright, working the oar/pole with both hands.",
+          "evidence": "The rear figure's full torso, shoulders and head rise well above the seated figure's, with the cloak hanging in vertical folds to the boat's floor — the model's own keyObjects line already says 'held by the standing figure'.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+            "with": "Two cloaked figures travel in a wooden rowboat on dark water, one seated and one standing at the oar"
+          },
+          {
+            "find": "the boat occupies the lower centre, its bow toward the viewer",
+            "with": "the boat occupies the lower centre, seen from astern, its bow pointing away toward the horizon"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-317",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "center, standing in the middle of the boat, the further of the two from the viewer",
+              "posture": "standing upright, back to the viewer, both hands on a long pole/oar that angles down and to the right into the water",
+              "gaze": "away from the viewer, toward the lit horizon ahead",
+              "heldObjects": [
+                "a long pole or single oar, gripped with both hands, entering the water off the boat's right side"
+              ],
+              "clothing": "a dark hooded cloak/mantle over the shoulders; dark curly hair visible above the collar, head uncovered"
+            },
+            {
+              "position": "center, seated lower in the boat, nearer to the viewer",
+              "posture": "seated, back to the viewer, shoulders rounded, head slightly bowed",
+              "gaze": "away from the viewer, toward the horizon",
+              "heldObjects": [
+                "nothing visible; the hands are hidden inside the cloak"
+              ],
+              "clothing": "a large patterned blue cloak with the head covered by its hood/veil"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade standing in the boat, left side",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "along the boat's left gunwale/interior, in a row running from nearest to furthest",
+              "orientation": "all upright, hilts and pommels UP, blades descending POINT-DOWN into the boat's floor/side",
+              "arrangement": "a row of three, evenly spaced, roughly parallel and vertical"
+            },
+            {
+              "type": "blade standing in the boat, right side",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "along the boat's right gunwale/interior",
+              "orientation": "all upright, hilts and pommels UP, blades point-DOWN into the boat",
+              "arrangement": "a row of three, evenly spaced, mirroring the left group"
+            },
+            {
+              "type": "blade (total in frame)",
+              "count": 6,
+              "countConfidence": "medium",
+              "where": "three on the left of the boat, three on the right",
+              "orientation": "all upright with hilts up and points driven down into the boat",
+              "arrangement": "TWO SEPARATE ROWS flanking the boat's centre — NOT a ring and NOT a single row; there is a clear open gap in the middle of the boat where the two figures sit, and a gap at the stern in the foreground"
+            },
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower center, seen from astern",
+              "orientation": "prow pointing away from the viewer toward the horizon",
+              "arrangement": "single wooden rowboat with a carved/decorated stern panel facing the viewer and internal thwarts"
+            },
+            {
+              "type": "pole / oar",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "held by the standing figure, angling from upper-left down to lower-right into the water",
+              "orientation": "diagonal, blade end submerged on the boat's right side",
+              "arrangement": "single; no matching second oar visible on the left"
+            },
+            {
+              "type": "celestial sphere (planet/moon-like body)",
+              "count": 3,
+              "countConfidence": "low",
+              "where": "one upper right near the frame edge, one large in the upper center-right, one at the left edge in the mid-upper sky",
+              "orientation": "all shown as full round discs with surface mottling",
+              "arrangement": "scattered across the sky, not aligned"
+            },
+            {
+              "type": "spiral galaxy / nebula",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "upper left corner",
+              "orientation": "face-on spiral",
+              "arrangement": "single"
+            },
+            {
+              "type": "constellation line-work",
+              "count": null,
+              "countConfidence": "low",
+              "where": "across the upper half of the sky, densest in the upper right",
+              "orientation": "a web of thin straight lines connecting stars, plus concentric arcs",
+              "arrangement": "an overlapping geometric web; individual figures cannot be separated"
+            },
+            {
+              "type": "domed pavilion / colonnaded rotunda",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right shore, middle distance",
+              "orientation": "facing the water",
+              "arrangement": "single circular structure with a dome on columns"
+            },
+            {
+              "type": "shoreline column/post",
+              "count": null,
+              "countConfidence": "low",
+              "where": "along the right shore, leading toward the pavilion",
+              "orientation": "vertical",
+              "arrangement": "a line of several small uprights receding along the bank; too small and too dim to count"
+            },
+            {
+              "type": "palm-like tree",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right shore, behind and beside the pavilion",
+              "orientation": "upright, fronds spreading",
+              "arrangement": "a small grove of several; overlapping silhouettes"
+            }
+          ],
+          "environment": [
+            "calm open water filling the lower half, with fine ripple detail and reflected starlight",
+            "a dense starfield with a bright Milky Way band running diagonally from upper left to center right",
+            "low mountains on the far left horizon",
+            "a wooded/columned shore on the right"
+          ],
+          "lightSources": [
+            "a warm golden glow low on the horizon at center-right, throwing a bright golden column of reflection straight down the water toward the boat",
+            "widespread starlight",
+            "the celestial spheres are lit but are not obvious light sources"
+          ],
+          "moonPhase": "uncertain — several round bodies are visible in the sky, all rendered as full discs, but none reads unambiguously as a moon and none shows a crescent or terminator",
+          "spatialRelations": [
+            "the standing figure is directly behind the seated figure; both face away from the viewer toward the horizon glow",
+            "the two rows of blades bracket both figures, three to their left and three to their right, with the boat's centre aisle open between them",
+            "the golden reflection path on the water runs from the horizon straight toward the boat's prow",
+            "the pavilion and shore are off the boat's right side, the mountains off its left",
+            "the Milky Way band passes diagonally behind the standing figure's head"
+          ],
+          "foreground": [
+            "the boat's stern and carved stern panel",
+            "dark rippled water in the bottom corners"
+          ],
+          "background": [
+            "starfield with constellation lines",
+            "celestial spheres",
+            "galaxy",
+            "golden horizon glow",
+            "mountains at left",
+            "domed pavilion and trees at right"
+          ]
+        },
+        "uncertainObservations": [
+          "the blade count is the least certain observation in this image: I resolved three hilts on the left and three on the right (six total), but the right-hand group is partly occluded by the seated figure's shoulder and sits against bright water reflections — a fourth blade on either side cannot be fully ruled out",
+          "neither figure's face is visible; both are seen from behind, so expression, age and identity are unknown",
+          "whether the blades are driven through the boat's hull, seated in sockets, or merely leaning is not determinable",
+          "the number of celestial spheres is uncertain; some bright patches in the sky may be nebulae rather than discs",
+          "whether the golden horizon glow is a setting sun, a rising sun, or a distant fire cannot be determined — no disc is visible within it",
+          "whether the standing figure holds one oar or a punting pole is ambiguous; no second oar is visible",
+          "the number of shoreline columns and trees on the right bank cannot be counted"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

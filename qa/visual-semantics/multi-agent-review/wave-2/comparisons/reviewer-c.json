@@ -1,0 +1,138 @@
+[
+ {
+  "reviewId": "review-216",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "small white birds in flight",
+    "observed": "one small pale bird in flight was individually resolvable; a plural count is not supportable",
+    "evidence": "Only a single bird shape can be resolved, in the upper-left among the flowering branches. Nothing else in the frame resolves as a second bird; the remaining pale marks read as petals/fragments. The existing text itself flags the bird count as uncertain, yet the keyObjects line asserts plural.",
+    "confidence": "medium"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the moon disc sits behind and above the figure's head, upper right of centre",
+    "observed": "the moon is a thin crescent, not a full disc; its position (behind and above the head, upper right) is correct",
+    "evidence": "The lunar body in the upper right is a clearly crescent-shaped sliver with the remainder of the circle unlit and lost in cloud. 'Disc' implies a round full moon that is not what is painted. Position and relation to the figure's head are accurate.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "small white birds in flight",
+     "with": "at least one small white bird in flight"
+    },
+    {
+     "find": "the moon disc sits behind and above the figure's head, upper right of centre",
+     "with": "a crescent moon sits behind and above the figure's head, upper right of centre"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-204",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "rack of upright swords mounted across the boat's bow",
+    "observed": "the rack of upright blades is mounted amidships, across the middle of the hull, not at the bow",
+    "evidence": "The boat runs stern-left to bow-right across the frame. The row of upright hilted objects sits over the middle of the hull, directly in front of the standing figure, with a clear stretch of empty hull between the rack and the bow — the lantern and rope coil occupy that bow section, well to the right of the last blade.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the figure stands behind the sword rack, which occupies the boat's forward half",
+    "observed": "the figure standing behind the rack is correct, but the rack occupies the middle of the boat, not its forward half",
+    "evidence": "Same arrangement: the rack straddles the hull's midpoint. The forward (bow) half of the boat is open and empty apart from the hanging lantern and rope at the prow. 'Forward half' places the blades a full boat-quarter further right than they are painted.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "a rack of upright swords is mounted in the boat's bow",
+    "observed": "mounted amidships, in the middle of the hull",
+    "evidence": "Same as above — the scene line repeats the bow placement.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "rack of upright swords mounted across the boat's bow",
+     "with": "rack of upright swords mounted across the middle of the boat"
+    },
+    {
+     "find": "the figure stands behind the sword rack, which occupies the boat's forward half",
+     "with": "the figure stands behind the sword rack, which occupies the middle of the boat, with open hull between it and the bow"
+    },
+    {
+     "find": "a rack of upright swords is mounted in the boat's bow",
+     "with": "a rack of upright swords is mounted amidships"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-208",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-203",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "dark vaulted chamber",
+    "observed": "a dark stone chamber; no ceiling or vaulting is visible anywhere in the frame",
+    "evidence": "The frame shows a flat wall covered in star-chart circles, a polished floor, and an arched window at the left. The view is cut off above the hanging blades with no springing, rib, or curved ceiling surface in view. 'Vaulted' asserts architecture the image does not show. The arch shape belongs to the window, not to a ceiling.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "dark vaulted chamber",
+     "with": "dark stone chamber"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-215",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "small leafy sprig growing along the sword blade near the hilt",
+    "observed": "the leafy growth is wound around the middle and upper portion of the blade, well above the hilt and closer to the tip than to the crossguard",
+    "evidence": "The crossguard and wrapped grip sit low, level with the figure's raised fist. The blade rises from there; the leaves cluster from roughly a third of the way up the blade to about two-thirds of the way toward the tip. There is a long bare stretch of blade between the crossguard and the lowest leaf, so 'near the hilt' inverts where the foliage actually sits.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "small leafy sprig growing along the sword blade near the hilt",
+     "with": "leafy sprig growing along the middle and upper part of the sword blade, well above the hilt"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-214",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-202",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "reviewId": "review-303",
+    "visibleFacts": {
+      "figureCount": 3,
+      "figures": [
+        {
+          "position": "viewer-left of centre, foreground; occupies the full height of the left-centre of the card",
+          "posture": "standing upright on a wet stone pavement, weight even, body seen from behind in a roughly three-quarter back view, torso turned slightly toward viewer-right",
+          "gaze": "head seen in profile turned toward viewer-right and clearly tilted downward; eyes directed down/forward, not up at the sky",
+          "heldObjects": [
+            "three long swords gripped together in one hand (the arm/hand visible on the viewer-right side of the body), at about hip/waist height, blades hanging straight DOWN with points toward the pavement; three separate gold cross-guards and three pommels are distinguishable, and three pale blades run down past the figure's legs"
+          ],
+          "clothing": "long hooded cloak/mantle in very dark blue-black, densely speckled with small gold dots and gold embroidered edging; long coat or robe beneath reaching below the knee; dark tall boots; dark wavy/curly shoulder-length hair; no crown, helmet or other headdress visible (hood is down on the shoulders)"
+        },
+        {
+          "position": "middle distance, viewer-right, standing on a lower stone terrace near the water; the left one of the distant pair",
+          "posture": "standing/striding away from the viewer, back fully to the camera, body upright",
+          "gaze": "not visible — head seen from behind, facing away toward the horizon",
+          "heldObjects": [],
+          "clothing": "long dark hooded coat with a shoulder cape/mantle that flares out to the viewer-left, belt at the waist, dark boots, short dark hair"
+        },
+        {
+          "position": "middle distance, viewer-right, immediately to the viewer-right of the other distant figure",
+          "posture": "standing/striding away from the viewer, back fully to the camera, upright",
+          "gaze": "not visible — head seen from behind, facing away toward the horizon",
+          "heldObjects": [],
+          "clothing": "long dark hooded coat with shoulder cape flaring to the viewer-right, belt, dark boots, short dark hair"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 3,
+          "countConfidence": "high",
+          "where": "in the foreground figure's hand, hanging in front of/beside the figure's lower body, centre-left of the card",
+          "orientation": "vertical, hilts up at hip height and points down toward the pavement",
+          "arrangement": "gathered in one fist as a tight bundle, the three blades splaying very slightly apart as they descend"
+        },
+        {
+          "type": "sword",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "lying flat on the pavement in the lower-right quadrant, in front of and to the viewer-right of the standing figure",
+          "orientation": "horizontal, lying flat on the ground; both blades angled down-and-left toward the lower-left corner, hilts toward the upper-right",
+          "arrangement": "side by side and roughly parallel, slightly overlapping near the hilts"
+        },
+        {
+          "type": "circular engraved diagram",
+          "count": null,
+          "countConfidence": "low",
+          "where": "incised and glowing gold on the dark wet pavement under and around the standing figure, filling the lower third of the card",
+          "orientation": "flat, lying in the plane of the ground",
+          "arrangement": "multiple concentric rings with radiating spokes and rows of small gold glyphs/numerals along the outer band; the exact number of rings cannot be counted"
+        },
+        {
+          "type": "armillary sphere / ringed astronomical instrument",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "viewer-left edge, mid-height, hanging among the columns of the colonnade",
+          "orientation": "tilted rings, axis slanted",
+          "arrangement": "single object suspended"
+        },
+        {
+          "type": "celestial geometric diagram (circles, grid lines, radiating spokes drawn over the sky)",
+          "count": null,
+          "countConfidence": "low",
+          "where": "centre and centre-right of the sky, a large set of overlapping gold circles with a bright star at the hub",
+          "orientation": "flat overlay across the sky, concentric about a point in the mid-sky",
+          "arrangement": "nested circles plus straight chord/spoke lines; count not determinable"
+        },
+        {
+          "type": "constellation line (gold lines joining stars)",
+          "count": null,
+          "countConfidence": "low",
+          "where": "across the upper half of the sky, several separate joined groups",
+          "orientation": "n/a",
+          "arrangement": "scattered connected figures; too many and too faint to count"
+        },
+        {
+          "type": "lantern / small flame",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "lower-left, at the base of the colonnade behind the figure's cloak",
+          "orientation": "n/a",
+          "arrangement": "single warm orange point of fire"
+        }
+      ],
+      "environment": [
+        "a broad open terrace or plaza of dark, wet, reflective stone paving",
+        "a large glowing gold circular/zodiacal engraving set into that paving, which the standing figure stands on",
+        "a domed rotunda with a colonnade of tall fluted columns at the viewer-left edge",
+        "a flight of broad stone steps descending from the terrace toward the water on the viewer-right",
+        "a calm sea or wide water stretching to the horizon",
+        "a low range of distant mountains along the horizon",
+        "a decorative dark card border with small gold tick marks running down the left and right edges"
+      ],
+      "lightSources": [
+        "a low sun sitting on the water at the horizon, centre-right, throwing a bright vertical glitter path across the sea toward the viewer",
+        "the moon in the upper-right sky",
+        "dense starfield and a bright multi-pointed star in the upper-right quadrant",
+        "a luminous spiral galaxy in the upper-left sky",
+        "a small warm orange lantern/brazier flame at the lower-left behind the figure",
+        "gold self-luminous glow from the engraved circles on the pavement"
+      ],
+      "moonPhase": "full",
+      "spatialRelations": [
+        "the standing cloaked figure is on the viewer-left, the two walking figures are far behind him on the viewer-right",
+        "the three held swords hang vertically in front of the standing figure's legs, with their points stopping just above the pavement",
+        "the two ground swords lie on the pavement to the viewer-right of and in front of the standing figure's feet, between him and the steps",
+        "the standing figure stands at the centre of the gold circular ground engraving",
+        "the colonnade and dome are behind and to the viewer-left of the standing figure",
+        "the two walking figures are above the ground swords in the frame and below the horizon line's sun glow, on a lower terrace reached by the descending steps",
+        "the sun on the horizon sits between and slightly to the viewer-left of the two walking figures",
+        "the moon is in the upper-right of the sky, well above and to the viewer-right of the walking figures",
+        "the spiral galaxy is in the upper-left, roughly above the standing figure's head"
+      ],
+      "foreground": [
+        "the wet dark pavement with its gold engraved concentric rings and glyph band",
+        "the two swords lying flat on that pavement",
+        "the standing figure's boots, lower robe and the lower halves of the three hanging blades",
+        "reflections of light smeared across the wet stone"
+      ],
+      "background": [
+        "the night sky with a spiral galaxy, nebulae, dense stars, gold constellation lines and a large circular celestial diagram",
+        "the moon at upper right",
+        "a band of pink-and-gold lit cloud above the horizon",
+        "the sunlit sea and the sun sitting on the waterline",
+        "distant mountains",
+        "the domed rotunda and colonnade at the far viewer-left"
+      ]
+    },
+    "uncertainObservations": [
+      "Which hand holds the three swords cannot be settled: the body is seen from behind in a three-quarter turn, so the visible arm on the viewer-right side could be either the figure's left or right arm. Only the forearm and fist are visible; the other arm is hidden under the cloak.",
+      "The moon's phase is ambiguous. The entire disc is visible with surface markings across its whole face and no hard terminator, which reads as full, but it is rendered dim and slightly translucent against the stars, so a nearly-full gibbous cannot be excluded.",
+      "Whether the standing figure is looking at the two distant walking figures, at the ground swords, or simply downward at the pavement cannot be determined; the head is in profile, tilted down, with the eye barely resolvable.",
+      "There is a small bright disc with a faint circular halo high in the sky near the top centre-right. I could not tell whether it is a second small moon/planet or just a bright star with a lens-halo; it reads more like a haloed star.",
+      "Whether the low sun at the horizon is setting or rising is not determinable from the image.",
+      "The two distant figures appear unarmed, but their hands and any belt-hung weapons are too small and too dark to confirm; I cannot rule out something carried at their sides.",
+      "The number of concentric rings in both the pavement engraving and the sky diagram is not countable, nor are the glyphs along the pavement's outer band legible.",
+      "Whether the standing figure's three blades splay apart or merely overlap in perspective is hard to judge; three guards and three pommels are nevertheless clearly separate.",
+      "Whether the dark object on the lower terrace to the viewer-left of the walking figures is a bollard, a lamp post or a third small figure could not be resolved; it is small and silhouetted, and I did not count it as a figure."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-f"
+  }
+]

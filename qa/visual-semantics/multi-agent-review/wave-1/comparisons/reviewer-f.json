@@ -1,0 +1,29 @@
+[
+ {
+  "reviewId": "review-109",
+  "verdict": "pass",
+  "reviewer": "reviewer-f"
+ },
+ {
+  "reviewId": "review-110",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the central figure stands nearest the viewer, the others arranged in a loose ring around her",
+    "observed": "The other four are not arranged in a ring around the central figure. My blind notes record the five as a loose cluster across the middle band of the frame — two on the viewer-left, one pushed forward at centre, two on the viewer-right — i.e. a shallow arc that opens toward the viewer, with the central figure standing in front of it rather than enclosed by it. No figure stands in front of her or directly behind her.",
+    "evidence": "My blind observation states verbatim: 'the five figures form a loose cluster across the middle band of the frame, not a straight line: two on the left, one pushed forward at centre, two on the right', and separately 'the centre figure stands nearest the viewer and lowest; the second and fourth figures are set furthest back and sit highest in the frame'. The depth ordering therefore runs front-to-back from the centre figure to the flanking pair, which is a flanking arc, not a surrounding ring.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the central figure stands nearest the viewer, the others arranged in a loose ring around her",
+     "with": "the central figure stands nearest the viewer and furthest forward, the other four spread in a shallow arc behind her, two on her viewer-left and two on her viewer-right"
+    }
+   ]
+  },
+  "reviewer": "reviewer-f"
+ }
+]

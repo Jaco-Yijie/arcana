@@ -1,0 +1,367 @@
+{
+  "reviewId": "review-508",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-508.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: uncertain vs pass",
+    "low reviewer confidence"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "uncertain": 1,
+    "pass": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-508.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "a serpent coiled around the trunk of the left tree",
+          "observed": "I recorded a coiling form spiralling up the left tree's trunk but could not confirm it is a serpent; it could equally be a vine, a rope, or a broken branch.",
+          "evidence": "Mid-left of frame, on the trunk of the fruiting tree. The image is near-monochrome black and the form is read only from faint edge highlights — no head, eye, or scale pattern is resolvable.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-508",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "viewer-left of center",
+              "posture": "standing upright, body in profile facing viewer-right toward the other figure, feet planted on a stone path",
+              "gaze": "head bowed and turned toward viewer-right, looking down at the joined hands",
+              "heldObjects": [
+                "both hands extended forward at waist-to-chest height, clasping the other figure's hands; a pale ragged cord or ribbon hangs down from the joined hands"
+              ],
+              "clothing": "dark tattered long-sleeved coat or jacket with frayed hanging strips, dark trousers, heavy laced boots; short tousled hair; rendered as a near-silhouette"
+            },
+            {
+              "position": "viewer-right of center",
+              "posture": "standing upright, body in profile facing viewer-left toward the other figure, floor-length skirt hiding the feet",
+              "gaze": "head bowed and turned toward viewer-left, looking down at the joined hands; a faint profile of the face is visible",
+              "heldObjects": [
+                "both hands extended forward at waist-to-chest height, clasped with the other figure's hands, same pale cord hanging between them"
+              ],
+              "clothing": "dark full-length gown with ragged, shredded hem and sleeve edges, hair gathered up in a bun or knot; rendered as a near-silhouette"
+            }
+          ],
+          "objects": [
+            {
+              "type": "tree",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one at the left edge behind the left figure, one at the right edge behind the right figure",
+              "orientation": "upright, bare twisting branches spreading inward over the figures",
+              "arrangement": "one flanking each side, roughly mirrored"
+            },
+            {
+              "type": "round fruit on tree",
+              "count": null,
+              "countConfidence": "low",
+              "where": "hanging in the left-hand tree's branches",
+              "orientation": "pendant, hanging down",
+              "arrangement": "scattered through the branches"
+            },
+            {
+              "type": "serpent / coiling form",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "around the trunk of the left-hand tree, mid-left of frame",
+              "orientation": "spiralling up the trunk",
+              "arrangement": "single coil"
+            },
+            {
+              "type": "hedge",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "lower-left and lower-right, lining both sides of the path",
+              "orientation": "horizontal low mass running toward the viewer",
+              "arrangement": "one per side, converging toward the figures"
+            },
+            {
+              "type": "cast shadow",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "across the paving in the lower third, running from the figures' feet toward the bottom of the frame",
+              "orientation": "pointing toward the viewer, slightly splayed apart",
+              "arrangement": "one per figure, side by side"
+            }
+          ],
+          "environment": [
+            "a cobbled or flagstone path running from the bottom edge up between the two figures",
+            "clipped hedges or garden walls flanking the path on both sides",
+            "a jagged mountain peak on the horizon directly between the two figures",
+            "very dark overall tonality; nearly monochrome brown-black",
+            "a thin printed rule line along the left edge of the image"
+          ],
+          "lightSources": [
+            "a bright radiating burst in the upper-center sky, forming a wide inverted-V or chevron of light with rays streaming downward and outward",
+            "a secondary pale glow on the horizon behind the mountain, silhouetting the figures"
+          ],
+          "moonPhase": "not visible — no moon in the frame; the overhead light is a rayed burst, not a disc",
+          "spatialRelations": [
+            "the light burst is directly above and between the two figures",
+            "the mountain peak sits on the horizon between the two figures, below the light burst",
+            "the fruiting tree is behind the left figure, the bare branching tree behind the right figure",
+            "the path runs from between the figures toward the viewer at the bottom of the frame",
+            "both shadows fall toward the viewer, away from the horizon glow"
+          ],
+          "foreground": [
+            "the cobbled path surface",
+            "the two cast shadows",
+            "the inner edges of both hedges"
+          ],
+          "background": [
+            "mountain peak and pale horizon glow",
+            "the two flanking trees",
+            "the rayed light burst in the upper sky"
+          ]
+        },
+        "uncertainObservations": [
+          "The image is extremely dark; most detail is read from silhouette edges only, so clothing and facial details are low-confidence.",
+          "I cannot confirm the coiling form on the left tree is a serpent — it could be a vine, a rope, or a broken branch.",
+          "Cannot count the fruit in the left tree.",
+          "Cannot tell what the pale ragged strands hanging from the joined hands are — cord, ribbon, cloth, or torn sleeve.",
+          "The upper light burst has a wing-like or chevron shape, but I cannot tell whether any figure or form is inside it; it may be pure light.",
+          "Cannot tell whether the dark masses flanking the path are hedges, walls, or embankments."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-508",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "center 偏 viewer-left",
+              "posture": "站立，侧面朝 viewer-right，面对另一人；头微微低下看向两人交握的手",
+              "gaze": "低头朝 viewer-right 下方，看着两人相握的手；五官基本是剪影，看不清眼睛",
+              "heldObjects": [
+                "双手在腰腹高度向 viewer-right 伸出，与对面那人的手交握；交握处垂下若干条长长的布条／缎带"
+              ],
+              "clothing": "蓬乱短发；长及小腿的破旧长外衣／上衣，衣缘撕成一条条垂挂的布条；长裤；脚穿短靴"
+            },
+            {
+              "position": "center 偏 viewer-right",
+              "posture": "站立，侧面朝 viewer-left，面对另一人；头低垂看向两人交握的手",
+              "gaze": "低头朝 viewer-left 下方，看着相握的手；侧脸轮廓可辨但细节淹没在暗部",
+              "heldObjects": [
+                "双手在腰腹高度向 viewer-left 伸出，与对面那人的手交握"
+              ],
+              "clothing": "头发在脑后盘成发髻、有碎发垂下；长及地面的破旧长裙，裙摆与袖口撕成条状垂挂"
+            }
+          ],
+          "objects": [
+            {
+              "type": "tree",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "两人身后左右各一棵：一棵在画面 viewer-left，一棵在画面 viewer-right",
+              "orientation": "竖直，枝条向上向外张开，均为落叶后的枯枝状",
+              "arrangement": "左右对称各一棵"
+            },
+            {
+              "type": "fruit",
+              "count": null,
+              "countConfidence": "low",
+              "where": "挂在 viewer-left 那棵树的枝条上",
+              "orientation": "圆形果实垂挂",
+              "arrangement": "散布在整棵树的枝头，约十余枚"
+            },
+            {
+              "type": "snake",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "盘绕在 viewer-left 那棵树的树干上",
+              "orientation": "身体呈螺旋状沿树干向上盘绕",
+              "arrangement": "单条"
+            },
+            {
+              "type": "hedge",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "画面左右两侧，沿着中央小路的两边",
+              "orientation": "水平延伸，顶面修剪齐整，向画面深处收窄",
+              "arrangement": "左右各一道，夹出中间的路"
+            },
+            {
+              "type": "ribbon",
+              "count": null,
+              "countConfidence": "low",
+              "where": "两人交握的双手之间向下垂落",
+              "orientation": "竖直下垂，末端散开",
+              "arrangement": "若干条并排垂下"
+            },
+            {
+              "type": "mountain",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "画面正中远景，正好在两人中间的空隙里",
+              "orientation": "锥形尖峰，峰顶朝上",
+              "arrangement": "一座主峰，两侧还有低矮的山脊"
+            }
+          ],
+          "environment": [
+            "一条铺着不规则石板的小路，从画面下缘向正中远方延伸",
+            "小路两侧是修剪过的灌木墙／树篱",
+            "整幅画是深棕黑单色调，大部分区域处在剪影状态",
+            "地面反射着来自背后的光，石板被照出明暗格纹",
+            "两人脚下向观者方向投出两道极长的影子"
+          ],
+          "lightSources": [
+            "画面正上方中央的 V 形／双翼形强光（在两人头顶之间的天空中，是画面唯一光源，从背后把两人照成剪影）"
+          ],
+          "moonPhase": "not visible — 天空被 V 形强光与暗部占据，没有月亮",
+          "spatialRelations": [
+            "V 形强光在两人头顶正上方的中央位置",
+            "带果实与蛇的树在 viewer-left 那个人物的后方",
+            "另一棵枯树在 viewer-right 那个人物的后方",
+            "远山的尖峰正好出现在两人之间的缝隙里，位置低于 V 形光",
+            "两人的影子朝画面下缘（观者方向）延伸，说明光来自他们身后",
+            "两人交握的手位于画面正中、腰腹高度"
+          ],
+          "foreground": [
+            "石板路面与两道长影",
+            "两侧树篱的近端"
+          ],
+          "background": [
+            "V 形强光与暗色天空",
+            "远处的锥形山峰与山脊",
+            "左右两棵枯树"
+          ]
+        },
+        "uncertainObservations": [
+          "画面极暗、几乎全是剪影，大量细节只能靠提亮后勉强辨认，整体可读性低",
+          "两人的面部五官基本看不见，只能看出头部轮廓与低头朝向",
+          "viewer-left 树上的果实数量数不清，大约十余枚，无法给出确切数字",
+          "盘在树干上的那条带鳞纹的螺旋物判断为蛇，但也可能是藤蔓，不能完全确定",
+          "viewer-right 那棵树上没有看到果实，也没有看到火焰或其他附着物，但暗部可能藏了东西",
+          "两人交握处垂下的条状物判断为布条／缎带，是否是绑手的绳索看不出",
+          "V 形光里是否含有人形／面孔／翅膀细节，提亮后仍然看不出，只能看到两道向上斜张的光带和中央下落的光柱",
+          "两人的衣物材质与颜色因为处在剪影中无法判断，只能看出边缘撕裂成条"
+        ],
+        "reviewConfidence": "low",
+        "reviewer": "reviewer-e"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-508",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left of centre, standing on a paved path; silhouetted against the bright sky",
+              "posture": "standing upright in near-full profile, facing to the VIEWER-RIGHT toward the other figure; both arms reach forward and down to meet the other figure's hands at waist height",
+              "gaze": "head bowed, face in left profile looking DOWN at the joined hands; not turned over the shoulder and not looking at the viewer",
+              "heldObjects": [
+                "both hands extended forward, clasped with the other figure's hands at the centre of the frame; ribbon-like tattered strips hang straight down from where the hands meet",
+                "no weapon, cup or other object"
+              ],
+              "clothing": "dark long jacket or coat over trousers, with long shredded ribbon-like strips hanging from the sleeves, hem and shoulders; laced ankle boots; short tousled hair; rendered as a near-black silhouette"
+            },
+            {
+              "position": "right of centre, mirroring the first figure across the central axis",
+              "posture": "standing upright in near-full profile, facing to the VIEWER-LEFT toward the first figure; both arms reach forward and down to the joined hands",
+              "gaze": "head bowed, face in right profile looking DOWN at the joined hands",
+              "heldObjects": [
+                "both hands extended forward and clasped with the first figure's hands at waist height",
+                "no other object"
+              ],
+              "clothing": "long dark floor-length dress with fitted bodice and shredded strips trailing from the sleeves and skirt; hair gathered up into a loose knot/bun with loose strands escaping; also a near-black silhouette"
+            }
+          ],
+          "objects": [
+            {
+              "type": "bare tree",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one at the left edge, one at the right edge, framing the pair",
+              "orientation": "upright, trunks rising from the ground into the upper corners",
+              "arrangement": "one per side, symmetrically placed"
+            },
+            {
+              "type": "round fruit on the left tree",
+              "count": null,
+              "countConfidence": "low",
+              "where": "hanging from the leafless branches of the LEFT tree only",
+              "orientation": "hanging",
+              "arrangement": "scattered singly across the branches; I count on the order of a dozen dark globes but they overlap the dark background and I will not commit to a number. The RIGHT tree carries no fruit"
+            },
+            {
+              "type": "serpent",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "coiled around the trunk of the LEFT tree, in the lower half of that trunk",
+              "orientation": "spiralling upward around the trunk, head toward the upper right",
+              "arrangement": "single snake, roughly three coils"
+            },
+            {
+              "type": "mountain peak",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "centre background, directly between the two figures, below the light burst",
+              "orientation": "a pointed conical peak",
+              "arrangement": "one dominant peak with lower ridges fading away on both sides"
+            }
+          ],
+          "environment": [
+            "a cracked, cobbled or flagged path running from the bottom edge up between the figures into the distance",
+            "low dark hedge-like masses along both sides of the path in the foreground",
+            "a dark hillside/ridge landscape behind the figures",
+            "a very dark, heavily textured night or dusk sky",
+            "a thin printed rule border down the left and right edges"
+          ],
+          "lightSources": [
+            "a single bright V- / chevron-shaped burst of light high in the sky on the central axis, its apex pointing DOWN and its two arms opening upward to the left and right, with a short tail of light trailing down below the apex",
+            "a broad pale glow behind and between the two figures at the horizon, which is what silhouettes them",
+            "no lamp, candle, moon or sun disc is drawn"
+          ],
+          "moonPhase": "not visible — no moon is drawn; the only light in the sky is the V-shaped burst",
+          "spatialRelations": [
+            "the two figures face each other across the central axis, the man on the viewer-left and the woman on the viewer-right",
+            "the light burst hangs in the sky directly ABOVE and BETWEEN their two heads",
+            "the mountain peak sits between them at chest height, further away",
+            "the fruited tree with the serpent is behind the LEFT figure; the bare, fruitless tree is behind the RIGHT figure",
+            "both figures' shadows are cast FORWARD toward the viewer, down the path to the bottom of the frame, splaying slightly apart — the left figure's toward the lower-left, the right figure's toward the lower-right — consistent with the light coming from behind them on the central axis"
+          ],
+          "foreground": [
+            "the cracked paved path and the two long cast shadows",
+            "the dark hedge masses at the lower left and lower right"
+          ],
+          "background": [
+            "the two framing trees",
+            "the central mountain peak",
+            "the glowing horizon and the V-shaped burst in the night sky"
+          ]
+        },
+        "uncertainObservations": [
+          "Both figures are almost pure silhouette; faces, hands and clothing detail are only readable after heavy brightening, and fine detail may be invention of the contrast stretch.",
+          "I cannot tell whether anything is actually held between the joined hands or whether the hanging strips are just the ragged ends of their sleeves.",
+          "The number of fruits on the left tree is not countable against the dark sky.",
+          "Whether the pale band at the horizon between the figures is water, mist or lit ground is not determinable.",
+          "The sexes I assign (left read as male by trousers/boots, right as female by dress/updo) are inferred from clothing silhouette only.",
+          "I could not find any winged figure, angel or face inside the light burst; it reads to me as an abstract chevron of light, but the texture is noisy enough that I may be missing a shape."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

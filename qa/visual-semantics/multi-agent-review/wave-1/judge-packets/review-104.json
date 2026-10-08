@@ -1,0 +1,225 @@
+{
+  "reviewId": "review-104",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-104.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "low reviewer confidence"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-104.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "six upright swords set along the boat's rim",
+          "observed": "two clusters of upright blades inside the boat — about 4 hilts resolvable along the left side, about 3 along the right; at least 6, most likely 7, but the exact number is not establishable",
+          "evidence": "Re-checked the image at full size. The scene is near-black and the blades are dark-on-dark and overlapping. I could point individually at 4 pommels in the left cluster and 3 in the right, which already exceeds six, but I cannot confirm a total. This is a count the pixels do not support either way, not a confirmed different number.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "six upright swords set along the boat's rim",
+            "with": "at least six upright swords set along the boat's rim, exact count not resolvable in the darkness"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-104",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left-of-center, standing in the stern/left side of the boat",
+              "posture": "standing upright, tall, long ragged dark coat, both hands gripping a long pole that runs diagonally down into the water",
+              "gaze": "facing away from the viewer, down the river toward the bright horizon",
+              "heldObjects": [
+                "long straight pole / punt-pole"
+              ]
+            },
+            {
+              "position": "center of the boat, just right of and in front of the standing figure",
+              "posture": "seated, hunched, fully covered by a hooded cloak; head bowed, face not visible",
+              "gaze": "not determinable — face hidden inside the hood",
+              "heldObjects": []
+            }
+          ],
+          "objects": [
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center-bottom, seen from behind, moving away; textured/woven or planked hull"
+            },
+            {
+              "type": "upright sword planted in the boat",
+              "count": null,
+              "countConfidence": "low",
+              "where": "two clusters standing vertically inside the boat — one cluster along the left gunwale (about 4 hilts resolvable), one cluster along the right gunwale (about 3 hilts resolvable); at least 6, most likely 7, but the blades are dark-on-dark and overlap"
+            },
+            {
+              "type": "pole",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held by the standing figure, angled down-left into the water"
+            }
+          ],
+          "environment": [
+            "broad calm river or estuary",
+            "steep dark cliffs or jagged spires on both banks",
+            "a bright pale cloud break on the horizon at center-right with its light reflected in a long streak on the water",
+            "overall near-monochrome dark grey/black palette",
+            "a thin ragged light-coloured border strip visible at the left and right edges of the artwork"
+          ],
+          "lightSources": [
+            "pale luminous cloud/sky opening at the center-right horizon, and its reflection on the water"
+          ],
+          "moonPhase": "not visible — no discrete moon disc is resolvable; the light comes from a diffuse bright patch of sky",
+          "spatialRelations": [
+            "the standing figure is behind and to the left of the seated hooded figure",
+            "the swords are planted between the two figures and the near end of the boat, forming a low picket on both sides",
+            "the boat is heading away from the viewer toward the lit horizon",
+            "the jagged formations on the right bank are larger and closer than those on the left"
+          ],
+          "foreground": [
+            "dark water surface",
+            "the near end/stern of the boat with its sword picket"
+          ],
+          "background": [
+            "cliff or spire formations flanking the river",
+            "lit horizon gap"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of swords cannot be resolved reliably — the image is very dark and the blades overlap; reported as a range, not a count",
+          "whether the tall shapes on both banks are natural rock formations, ruins, or built towers is not determinable",
+          "the hull texture may be woven reeds, planks, or scales — not determinable",
+          "whether the standing figure is punting or simply resting on the pole cannot be told"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "six upright swords set along the boat's rim",
+          "observed": "several upright blades in two clusters inside the hull; I can point at seven candidate blades (four to the left of the standing figure, three to the right of the hooded figure) but could not establish a firm count",
+          "evidence": "The scene is extremely low-key. Four pale vertical shafts with crossguard-like tops are visible on the left and three on the right, but the outermost of each cluster overlaps the standing figure's ragged coat and the hull edge, so six and seven are both live readings. My blind pass recorded this count as not establishable, so this is flagged as unsupported rather than as a confirmed different number.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "six upright swords set along the boat's rim",
+            "with": "several upright swords (six or seven resolvable) set along the boat's rim"
+          },
+          {
+            "find": "exact number of swords resolvable at the boat's far rim",
+            "with": "exact number of swords; six or seven are resolvable across the two clusters and the outermost overlap the figures and hull edge"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-104",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left of center, standing in the boat, seen from behind",
+              "posture": "standing upright, both hands gripping a long pole that angles down and to the left into the water",
+              "gaze": "not visible; the figure faces away from the viewer, toward the far end of the waterway",
+              "heldObjects": [
+                "a long straight pole / punt pole"
+              ],
+              "otherDetails": [
+                "dark ragged coat or cloak with a torn lower hem",
+                "dark hair, back of the head only"
+              ]
+            },
+            {
+              "position": "center of the boat, just right of the standing figure, seen from behind",
+              "posture": "seated or kneeling low, hunched, wrapped in a hooded cloak",
+              "gaze": "not visible; hooded head faces away from the viewer",
+              "heldObjects": [
+                "none visible"
+              ],
+              "otherDetails": [
+                "the cloak covers the entire body; no hands, face or feet are visible"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword standing upright, blade driven into the floor of the boat",
+              "count": null,
+              "countConfidence": "low",
+              "where": "two clusters inside the boat: a left cluster of three or four pale vertical blades just left of the standing figure, and a right cluster of three pale vertical blades with visible crossguards to the right of the hooded figure"
+            },
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center-bottom, seen from behind and slightly above; plank-built hull with a raised gunwale"
+            },
+            {
+              "type": "long pole",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held by the standing figure, running from his hands down-left past the boat's side into the water"
+            }
+          ],
+          "environment": [
+            "a broad dark waterway filling the lower two thirds, its surface nearly still with a long bright reflection running toward the viewer",
+            "steep dark banks on both sides topped with tall jagged spires / ruined vertical forms, silhouetted",
+            "heavy dark cloud across the upper half with a single bright break near the horizon at center-right",
+            "the far end of the waterway recedes into a pale haze at the horizon",
+            "a narrow lighter painted margin along the left and right edges of the artwork",
+            "the whole image is near-monochrome, dark brown-grey, very low key"
+          ],
+          "lightSources": [
+            "a bright gap in the cloud just above the horizon, right of center — the light source itself (no disc visible)",
+            "the specular reflection path that light casts down the center of the water toward the boat"
+          ],
+          "moonPhase": "not determinable — no moon disc is visible; only a glowing break in the clouds",
+          "spatialRelations": [
+            "the standing figure is behind and to the left of the seated hooded figure; both face away, down the waterway toward the light",
+            "the upright blades are grouped on both sides of the two figures inside the hull",
+            "the boat's bow points away from the viewer, toward the bright horizon",
+            "the bright reflection on the water passes directly behind the boat and continues toward the lower right"
+          ],
+          "foreground": [
+            "the stern of the boat and its plank hull",
+            "the upright blades",
+            "dark water immediately around the boat"
+          ],
+          "background": [
+            "jagged spired banks on both sides",
+            "cloud break and glowing horizon",
+            "hazy receding waterway"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of upright blades cannot be given reliably: at least six are individually resolvable (three or four on the left, three on the right), but the scene is extremely dark and the leftmost/rightmost of each cluster overlap the standing figure's coat and the hull edge, so the true count is most likely six or seven and I will not commit to one",
+          "neither figure's face, hands (beyond the pole grip) or expression is visible at all",
+          "whether the hooded figure is seated, kneeling or slumped cannot be resolved",
+          "whether the jagged vertical forms on the banks are rock spires, ruined towers or dead trees cannot be determined",
+          "it is unclear whether the boat is moving; no wake is clearly visible"
+        ],
+        "reviewConfidence": "low-medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

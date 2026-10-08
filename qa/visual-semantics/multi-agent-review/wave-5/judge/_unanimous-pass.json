@@ -1,0 +1,14 @@
+[
+  {
+    "reviewId": "review-502",
+    "decision": "AUTO_PASS",
+    "confidence": "high",
+    "reason": "Existing independent reviewers unanimously pass; no disputed Judge required."
+  },
+  {
+    "reviewId": "review-513",
+    "decision": "AUTO_PASS",
+    "confidence": "high",
+    "reason": "Existing independent reviewers unanimously pass; no disputed Judge required."
+  }
+]

@@ -1,0 +1,240 @@
+{
+  "reviewId": "review-206",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-206.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: corrected vs pass"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 1,
+    "pass": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-206.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the two outer swords lean inward at angles, flanking the central blade",
+          "observed": "the two outer swords lean outward, their hilts splaying away from the central blade",
+          "evidence": "The left sword's pommel sits well to the left of the point where its blade enters the bundle, and the right sword's pommel sits well to the right of its own entry point; both tops therefore tilt away from the vertical centre sword, forming a splayed fan rather than converging on it.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the two outer swords lean inward at angles, flanking the central blade",
+            "with": "the two outer swords lean outward at angles, splaying away from the central blade"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-206",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, upper-middle",
+              "posture": "kneeling or crouching low over a large bundle on the pavement, head bowed sharply forward, shoulders hunched",
+              "gaze": "downward at the bundle; the face is in shadow behind hanging hair",
+              "heldObjects": [
+                "the right hand closes over the grip/pommel of the large central upright sword",
+                "the left hand is planted flat on the bundle to the right, open, holding nothing"
+              ],
+              "appearance": "long lank dark hair falling over the face, a ragged tattered dark cloak with torn hanging strips at the sleeve"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "all three stand point-down in the bundle: (1) center, the largest, vertical, its cruciform hilt gripped by the figure's hand; (2) left, smaller, blade leaning slightly left; (3) right, smaller, blade leaning slightly right"
+            },
+            {
+              "type": "bundle/sack",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center foreground, a large lumpy corded sack or rolled pack lying on the paving, the figure leaning over it"
+            },
+            {
+              "type": "tower/castle",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right background on the skyline, a dark cluster of pointed towers; individual spires overlap and cannot be counted"
+            },
+            {
+              "type": "bare tree",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper left, a leafless tree with twisted branches at the edge of the frame"
+            },
+            {
+              "type": "bird",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a scatter of small dark specks in the sky above and around the distant towers"
+            },
+            {
+              "type": "road/path",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "a wide stone-paved way running from the foreground back into the right middle distance toward the towers"
+            },
+            {
+              "type": "break in the clouds",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right, a bright ragged opening in the cloud with light spilling out"
+            }
+          ],
+          "environment": [
+            "night or heavy overcast",
+            "large flat paving slabs covering the foreground and receding as a road",
+            "banked dark clouds filling the sky",
+            "a bare dead tree at the upper left",
+            "distant towers on the right horizon",
+            "low dark ground/embankment at the left"
+          ],
+          "lightSources": [
+            "a single bright break in the clouds at the upper right, backlighting the cloud edges and glinting on the wet paving; no lamp, fire or visible disc"
+          ],
+          "moonPhase": "cannot be determined — a bright glow shows through the clouds at the upper right but no disc edge is visible",
+          "spatialRelations": [
+            "the figure and bundle sit at the near end of the paved road; the road leads away to the right toward the distant towers",
+            "the three swords rise from the bundle directly in front of the bowed head, the central one dividing the figure's face from the viewer",
+            "the light source is behind the figure and to the right, so the figure reads as a silhouette",
+            "the bare tree at the upper left and the towers at the right sit at opposite edges of the horizon"
+          ],
+          "foreground": [
+            "paving slabs",
+            "the bundle",
+            "the kneeling figure",
+            "the three swords"
+          ],
+          "background": [
+            "distant towers",
+            "birds",
+            "clouds",
+            "cloud-break light",
+            "bare tree"
+          ],
+          "notableTension": [
+            "the figure is stopped and bowed at the start of a road that runs away toward the only structures in the scene"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of towers/spires in the distant silhouette cannot be resolved",
+          "the specks near the towers read as birds but are too small to confirm",
+          "whether the figure is kneeling on both knees or crouching on one cannot be determined",
+          "the contents of the bundle are not visible",
+          "the figure's face and expression are not visible",
+          "whether the right hand is pulling a sword out or pressing it in cannot be determined from the single frame"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-206",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, kneeling / crouching on a cobbled road",
+              "posture": "kneeling and hunched forward over a large bundle, head bowed with long dark hair falling across the face; one hand (viewer's left) grips a vertical sword hilt with both a fist-over-pommel hold, the other hand (viewer's right) is splayed flat on top of the bundle",
+              "gaze": "downward, face obscured by hair",
+              "heldObjects": [
+                "the hilt of the large upright sword"
+              ],
+              "clothing": "ragged dark robes with torn, hanging sleeve edges"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "counted individually: (1) a large sword standing vertically at center, gripped by the figure, its blade driven down into the bundle; (2) a smaller sword at left, tilted, its blade entering the left end of the bundle; (3) a smaller sword at right, tilted, its blade entering the right end of the bundle"
+            },
+            {
+              "type": "large sack / bundle",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "foreground center, a bulging wrapped mass lying on the cobbles beneath the figure"
+            },
+            {
+              "type": "bare dead tree",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper left, leafless branching silhouette on a rise"
+            },
+            {
+              "type": "distant spired structure",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right middle distance on the horizon, a cluster of dark towers/spires"
+            },
+            {
+              "type": "bird",
+              "count": null,
+              "countConfidence": "low",
+              "where": "small dark specks in the sky near the distant spires; too small to count"
+            },
+            {
+              "type": "road",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "a cobbled way running from the foreground back and to the right toward the distant structure"
+            }
+          ],
+          "environment": [
+            "night or heavily overcast",
+            "cobblestone road",
+            "barren dark landscape",
+            "heavy layered storm clouds"
+          ],
+          "lightSources": [
+            "a bright break in the clouds upper right, with rays angling down-left across the sky"
+          ],
+          "moonPhase": "uncertain",
+          "spatialRelations": [
+            "all three swords converge on the same bundle directly in front of and beneath the kneeling figure",
+            "the figure's body is between the viewer and the receding road",
+            "the bright cloud break is behind and above the figure's right shoulder (viewer's right)",
+            "the dead tree is behind the figure on the opposite side from the distant spires"
+          ],
+          "foreground": [
+            "cobblestones",
+            "the bundle with the swords in it",
+            "the kneeling figure"
+          ],
+          "background": [
+            "stormy sky with a luminous gap",
+            "dead tree at left",
+            "distant towers at right",
+            "receding road"
+          ]
+        },
+        "uncertainObservations": [
+          "the sword count is given as 3 from individually resolved blades, but the figure's body and robes cover part of the bundle, so additional blades could be hidden behind him — the count is a floor, not a certainty",
+          "the bright patch in the clouds is a light source of indeterminate kind; no disc edge is visible, so no phase can be stated",
+          "the dark specks near the horizon may be birds or may be artifacts of the sky texture",
+          "what the large bundle contains is not visible",
+          "the figure's face is fully covered by hair"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

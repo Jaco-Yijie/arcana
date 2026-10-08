@@ -1,0 +1,350 @@
+{
+  "reviewId": "review-505",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-505.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: corrected vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-505.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "three golden chalices held aloft and touching",
+          "observed": "Two goblets, not three. I resolved exactly two bowls, two stems and two feet at the apex, leaning together rim to rim. Four raised forearms converge on them — two hands on the viewer-left goblet and two hands on the viewer-right goblet.",
+          "evidence": "The apex of the figure group, above all three heads. Enlarged, the silhouette shows one taller/nearer goblet on the viewer-left and one slightly lower goblet on the viewer-right, with four distinct wrists (bangled) gripping them. There is no third bowl, stem or foot anywhere in that cluster, and no occluding mass that could hide one.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "raising three golden chalices together beneath a vast nebula sky",
+          "observed": "The three women raise two goblets between them, four arms meeting at the apex.",
+          "evidence": "Same apex cluster: three dancers, four raised arms, two goblet bowls.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the three chalices meet at the centre of the upper third, directly beneath the brightest star",
+          "observed": "Two goblets meet at the centre of the upper third, tilted toward each other and touching rim to rim.",
+          "evidence": "Apex cluster above the centre figure's head.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "small crescent moon at upper left",
+          "observed": "I recorded several small faint discs scattered in the starfield (upper-left edge, small one right of centre near the top, a faint one at mid-left) but logged countConfidence low, and recorded moonPhase as 'not visible' because none of them reads unambiguously as a phased moon against the nebula.",
+          "evidence": "Upper-left sky: a pale disc is present, but at this size and against the nebula I could not resolve a terminator, so I cannot confirm 'crescent'. Flagging only that the phase is asserted beyond what I could see — not that the disc is absent.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "three golden chalices held aloft and touching",
+            "with": "two golden chalices held aloft and touching, each gripped by two hands (four raised arms converge on them)"
+          },
+          {
+            "find": "raising three golden chalices together",
+            "with": "raising two golden chalices together between them"
+          },
+          {
+            "find": "the three chalices meet at the centre of the upper third",
+            "with": "the two chalices meet at the centre of the upper third"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-505",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "viewer-left of the group, standing/stepping on the reflective terrace",
+              "posture": "standing with weight on one leg, body arched and turned toward the viewer-right, mid-dance step, one arm raised high toward the centre",
+              "gaze": "head thrown back and tilted up, face in profile looking up toward the raised cups",
+              "heldObjects": [
+                "the raised arm (her viewer-right arm) reaches up and inward; the hand is at the centre-top of the group, closed around the stem/bowl of the viewer-left goblet, well above head height"
+              ],
+              "clothing": "long teal-blue gown with wide flowing sleeves and gold embroidery at the hem and cuffs; long dark wavy hair loose; multiple bangles on the raised wrist; barefoot"
+            },
+            {
+              "position": "centre of the group, standing/stepping forward toward the viewer",
+              "posture": "standing upright, slightly turned to the viewer-left, mid-step with the skirt swinging, both arms raised above the head",
+              "gaze": "head tilted back and up, eyes closed or nearly closed, face toward the sky",
+              "heldObjects": [
+                "both arms raised overhead; the hands are up among the other two figures' hands at the apex, each in contact with one of the two goblets"
+              ],
+              "clothing": "deep violet-purple gown with gold trim at the waist and cuffs, a jewelled necklace at the throat; long dark wavy hair loose; bangles on both wrists; barefoot"
+            },
+            {
+              "position": "viewer-right of the group, standing/stepping on the reflective terrace",
+              "posture": "standing with the body arched and turned toward the viewer-left, mid-dance step, one arm raised high toward the centre",
+              "gaze": "head tilted back and to the viewer-left, face in profile looking up toward the raised cups",
+              "heldObjects": [
+                "the raised arm (her viewer-left arm) reaches up and inward; the hand is at the centre-top of the group, closed around the viewer-right goblet, well above head height"
+              ],
+              "clothing": "deep red-crimson gown with gold embroidery, wide sleeves and a gold-trimmed waistband; long light/auburn wavy hair loose; bangles on the raised wrist; barefoot"
+            }
+          ],
+          "objects": [
+            {
+              "type": "cup / goblet",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "at the very top centre of the figure group, raised above all three heads",
+              "orientation": "both upright on tall stems with round feet, bowls up, tilted slightly toward each other and touching rim to rim",
+              "arrangement": "two, side by side and leaning together; the viewer-left one sits slightly higher and larger in view than the viewer-right one"
+            },
+            {
+              "type": "raised arm converging at the cups",
+              "count": 4,
+              "countConfidence": "high",
+              "where": "the upper centre of the image, rising from the three figures",
+              "orientation": "all angled up and inward toward the two cups",
+              "arrangement": "four forearms meet at the apex — two hands on the viewer-left cup and two hands on the viewer-right cup"
+            },
+            {
+              "type": "grape cluster",
+              "count": null,
+              "countConfidence": "low",
+              "where": "across the bottom edge of the image, heaped in the immediate foreground",
+              "orientation": "hanging/heaped",
+              "arrangement": "several overlapping clusters of dark purple grapes; too overlapped to count"
+            },
+            {
+              "type": "pomegranate / round fruit",
+              "count": null,
+              "countConfidence": "low",
+              "where": "bottom-left corner, among the grapes",
+              "orientation": "resting on the surface",
+              "arrangement": "a small heap; the pieces overlap and I cannot separate them reliably"
+            },
+            {
+              "type": "domed pavilion / rotunda",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "viewer-right edge, mid-height, behind the right figure",
+              "orientation": "upright, columned drum with a ribbed dome and a finial",
+              "arrangement": "single"
+            },
+            {
+              "type": "hanging lantern",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "viewer-right, suspended at the edge of the pavilion",
+              "orientation": "upright, hanging",
+              "arrangement": "single, warm-lit"
+            },
+            {
+              "type": "planet / moon disc in the sky",
+              "count": 3,
+              "countConfidence": "low",
+              "where": "scattered in the starfield: one at the upper-left edge, one small one right of centre near the top, one faint at mid-left",
+              "orientation": "flat discs",
+              "arrangement": "scattered, varying size; several are so faint against the nebula that I may be over- or under-counting"
+            }
+          ],
+          "environment": [
+            "night sky filling the upper two thirds, dense with stars and a bright blue-violet nebula band running diagonally",
+            "a web of fine gold constellation lines, dotted arcs and concentric circles overlaid across the whole sky",
+            "a wet, mirror-like paved terrace the three figures stand on, reflecting them and the lights",
+            "a band of warm golden light along the horizon behind the figures, as of a sunset or distant lit city",
+            "a balustrade running across the mid-ground behind the figures",
+            "palm-like trees and small columns at the viewer-left mid-ground",
+            "a domed columned pavilion at the viewer-right",
+            "heaped fruit along the bottom edge",
+            "a thin ruled border with fine ornament around the image"
+          ],
+          "lightSources": [
+            "the warm golden glow along the horizon behind the figures",
+            "the nebula and massed stars overhead",
+            "a small warm hanging lantern at the viewer-right by the pavilion",
+            "glints on the two raised goblets"
+          ],
+          "moonPhase": "not visible — no moon is clearly identifiable; several small faint discs appear in the starfield but none reads unambiguously as a phased moon",
+          "spatialRelations": [
+            "the two goblets are above and between all three figures, at the apex where the four raised arms meet",
+            "the centre figure stands between and slightly forward of the other two",
+            "the horizon glow and balustrade run behind all three figures",
+            "the domed pavilion is to the viewer-right of and behind the right-hand figure",
+            "the trees and columns are to the viewer-left of and behind the left-hand figure",
+            "the heaped fruit is in front of and below all three figures, at the bottom edge",
+            "the figures' reflections extend downward beneath their feet on the wet paving"
+          ],
+          "foreground": [
+            "heaped grapes and round fruit along the bottom edge",
+            "wet reflective paving with the figures' reflections"
+          ],
+          "background": [
+            "starfield, nebula band and overlaid gold constellation geometry",
+            "glowing horizon",
+            "balustrade, trees and domed pavilion"
+          ]
+        },
+        "uncertainObservations": [
+          "Cup count: I can resolve only TWO goblet bowls at the apex, yet FOUR raised hands converge on them — two hands per cup. I examined this region enlarged to be sure. If a third cup is present it is completely hidden behind the other two, but I see no third bowl, stem or foot, so I am recording 2.",
+          "I cannot reliably count the small discs in the sky; some may be planets, some may be bright nebula knots. Recorded as count null-equivalent with low confidence.",
+          "I cannot tell whether the round fruit at the bottom-left are pomegranates, figs or apples.",
+          "The warm band at the horizon could be a sunset, a distant lit city, or both; not resolvable.",
+          "The centre figure's eyes read as closed but the face is small; this is not certain.",
+          "Whether the three figures are joined hand-to-hand as well as at the cups is unclear — the forearms overlap at the apex.",
+          "I cannot count the constellation lines or arcs in the sky."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "three golden chalices held aloft and touching",
+          "observed": "I could resolve only two goblets at the convergence point, meeting rim to rim. The centre figure's hands reach the same point but I could not confirm a cup in them; a third cup, if present, is directly behind the other two and not separable.",
+          "evidence": "At the top centre of the group two bowls overlap rim to rim above the centre figure's raised hands; no third bowl silhouette is distinguishable against the nebula behind them.",
+          "confidence": "low"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "small crescent moon at upper left",
+          "observed": "I logged several small pale spheres scattered in the upper sky, including one at the top left edge, but none of them showed a terminator crisp enough for me to call a phase. I recorded moonPhase as not determinable rather than crescent.",
+          "evidence": "The pale disc near the top left is partly cropped by the frame edge and reads as a flat low-contrast disc against the star field; its lit/unlit boundary is not resolvable at this size.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-505",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "viewer-left",
+              "posture": "standing / mid-step with the near leg lifted, body turned toward viewer-right, torso arched back, both arms raised overhead; barefoot",
+              "gaze": "head tilted back and up, face toward the raised hands",
+              "heldObjects": [
+                "a footed goblet raised in the upper hand, held overhead at full arm's reach, bowl upward, tilted toward the center of the group"
+              ],
+              "clothing": "long teal-blue gown with wide flowing sleeves and gold embroidery at the hem and cuffs, gold belt; very long dark wavy hair"
+            },
+            {
+              "position": "center",
+              "posture": "standing / mid-step facing the viewer, head tipped back, both arms raised straight overhead; barefoot",
+              "gaze": "head tipped back, face lifted upward, eyes appear closed",
+              "heldObjects": [
+                "both hands raised overhead toward the point where the goblets meet; whether a goblet is in her grip is not resolvable"
+              ],
+              "clothing": "long deep-purple/plum gown with a plunging neckline, sheer layered skirt, jewelled waist band and necklace; long dark wavy hair"
+            },
+            {
+              "position": "viewer-right",
+              "posture": "standing / mid-step with the near foot lifted, body turned toward viewer-left, both arms raised overhead; barefoot",
+              "gaze": "head tilted up and toward viewer-left, face toward the raised hands",
+              "heldObjects": [
+                "a footed goblet raised in the upper hand, held overhead at full arm's reach, bowl upward, tilted toward the center of the group"
+              ],
+              "clothing": "long crimson-red gown with sheer flaring sleeves and gold ornament at the waist; long light auburn wavy hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "goblet / cup",
+              "count": 2,
+              "countConfidence": "low",
+              "where": "overhead at the top center of the group of figures, where all the raised arms converge",
+              "orientation": "upright, bowls up, stems down, each tilted slightly inward toward the other",
+              "arrangement": "two bowls meeting rim to rim at a single point; a third cup, if present, would be hidden directly behind them"
+            },
+            {
+              "type": "fruit (grapes, pomegranates, round stone fruit)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "across the bottom edge of the frame, nearest the viewer, piled at viewer-left and spilling toward center",
+              "orientation": "lying loose on the ground plane",
+              "arrangement": "a heaped scatter; individual fruits overlap and run out of frame, not countable"
+            },
+            {
+              "type": "domed pavilion / rotunda",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "viewer-right middle ground, partly out of frame at the right edge",
+              "orientation": "vertical, columns facing the viewer",
+              "arrangement": "single circular colonnaded structure with a ribbed dome"
+            },
+            {
+              "type": "hanging lantern",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "inside the pavilion at viewer-right, hanging between the columns",
+              "orientation": "hanging vertically",
+              "arrangement": "single lit lantern"
+            },
+            {
+              "type": "small pale sphere in the sky (planet or moon)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered in the upper sky — one at the top left edge, one upper right of center, one at the left edge below it, one lower at the left edge",
+              "orientation": "flat discs against the sky",
+              "arrangement": "scattered, non-symmetric; several are cropped by the frame edge so I cannot be sure of the total"
+            }
+          ],
+          "environment": [
+            "a wide star-dense night sky with a bright nebula / Milky Way band running down from the top center",
+            "a fine gold geometric overlay of concentric circles, radial lines and constellation-style linked dots across the whole sky",
+            "a band of warm golden light along the horizon behind the figures",
+            "a polished wet stone terrace that mirrors the figures and the sky",
+            "a low balustrade or parapet running across the middle distance",
+            "trees and slender columns at viewer-left middle ground",
+            "a decorative border frame line running around the inside edge of the image"
+          ],
+          "lightSources": [
+            "the lit lantern in the pavilion at viewer-right",
+            "the golden horizon glow behind the figures",
+            "a small burst of light directly beneath the meeting goblets",
+            "the general starfield and nebula glow"
+          ],
+          "moonPhase": "not visible — no clearly identifiable moon; several small pale spheres hang in the sky and read as planets, their lit/unlit boundaries too faint to call a phase",
+          "spatialRelations": [
+            "the three figures stand in a line across the center of the frame, left / center / right",
+            "all three raise their arms to converge on a single point above the center figure's head",
+            "the goblets are above and slightly behind the center figure's raised hands",
+            "the pavilion is behind and to the viewer-right of the right-hand figure",
+            "the trees and columns are behind and to the viewer-left of the left-hand figure",
+            "the horizon glow runs behind all three figures at about hip height",
+            "the heaped fruit lies in front of and below all three figures, nearest the viewer",
+            "the figures' reflections extend downward into the wet terrace toward the viewer"
+          ],
+          "foreground": [
+            "heaped grapes, pomegranates and round fruit along the bottom edge",
+            "the wet reflective paving and the figures' reflections"
+          ],
+          "background": [
+            "star field, nebula band and the gold geometric sky overlay",
+            "golden horizon glow",
+            "the domed pavilion at viewer-right and the trees/columns at viewer-left",
+            "the pale spheres in the sky"
+          ]
+        },
+        "uncertainObservations": [
+          "Cup count is the weakest point of this read. I can resolve two goblets meeting rim to rim at the top. The center figure's raised hands reach the same point and could be holding a third goblet hidden directly behind the other two, or could be empty. I will not guess; count is recorded as 2 with low confidence.",
+          "I cannot count the fruit in the foreground; it is a continuous overlapping heap that runs out of frame.",
+          "The small pale spheres in the sky: I can see at least three and possibly four, but several are cut by the frame edge and some may be bokeh/nebula knots rather than bodies. No reliable count.",
+          "Whether the center figure's eyes are closed or merely in deep shadow under her tipped-back head is not resolvable.",
+          "The structure at viewer-left is read as trees plus slender columns, but it is dark and could be entirely architecture or entirely vegetation.",
+          "The warm band at the horizon could be a sunset, a distant city, or firelight; I only record that it is a warm glow."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

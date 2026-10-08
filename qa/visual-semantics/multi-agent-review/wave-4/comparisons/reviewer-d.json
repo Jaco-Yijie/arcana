@@ -1,0 +1,128 @@
+[
+ {
+  "reviewId": "review-401",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "deckSpecificMotifs",
+    "existing": "silver linework on a deep blue-lavender night ground",
+    "observed": "pale silver-lavender linework on a light, near-white ground",
+    "evidence": "The card is overwhelmingly pale: white-to-pale-blue sky with white clouds, white stone, white gown. There is no deep blue or night-dark ground anywhere in the frame.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "sits on a stone ledge before a moonlit sea",
+    "observed": "sits on a stone ledge before a brightly lit sea under broad daylight-style illumination, with a thin crescent moon also present in the upper-right sky",
+    "evidence": "Overall illumination is bright diffuse daylight on pale blue sky and white clouds; the crescent moon is a small element in that daylit sky, not the scene's light source.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "silver linework on a deep blue-lavender night ground",
+     "with": "pale silver-lavender linework on a light, near-white ground"
+    },
+    {
+     "find": "sits on a stone ledge before a moonlit sea",
+     "with": "sits on a stone ledge before a bright, pale-lit sea under daylight-like illumination, a thin crescent moon in the sky"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-413",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "fish-like form rising above the cup",
+    "observed": "a faint pale wisp rising from the cup's mouth; its form could not be resolved as a fish, a flame or vapour",
+    "evidence": "At this brightness the shape above the cup reads only as a small pale plume with scattered bright specks. I recorded it as unresolvable rather than fish-shaped; the existing text asserts a specific identity where I recorded none.",
+    "confidence": "medium"
+   }
+  ],
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-405",
+  "verdict": "pass",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-407",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "seven arched wall niches",
+    "observed": "seven niches are individually resolvable, but the lower row's spacing breaks exactly where the figure's head and torso stand, so an eighth niche may be occluded",
+    "evidence": "Upper row niches are evenly spaced; the lower row jumps from the far-left niche straight to the centre one, a gap about twice the other spacing, and the figure's body fills that position. I cannot confirm or rule out a cup behind him, so the asserted total of seven is not verifiable.",
+    "confidence": "medium"
+   }
+  ],
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-409",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the figure stands above the stakes, which point upward toward the platform",
+    "observed": "the stakes point upward and outward, away from the platform, splayed radially around its base",
+    "evidence": "Each stake is bedded in the ground at its lower end nearest the platform and leans away from it, tips rising toward the frame edges and the viewer. They fan outward like a palisade; none leans inward toward the platform.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the figure stands above the stakes, which point upward toward the platform",
+     "with": "the figure stands above the stakes, which point upward and outward, splayed away from the platform around its base"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-411",
+  "verdict": "pass",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-417",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "walks forward along a wet stone path between two rows of upright swords, lifting a pale cloth from her eyes, toward a small domed lit building under a star-filled sky",
+    "observed": "she walks forward toward the viewer, with her back to the domed building, which stands behind her",
+    "evidence": "The figure faces the viewer and the near swords are the largest in the frame while the dome is small and distant; she is walking out of the avenue toward the camera, not toward the building. The scene line's own later relation ('sits behind her') contradicts 'toward'.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the domed building sits behind her, centred on the path's vanishing point",
+    "observed": "the domed building sits behind her and noticeably right of centre, on a rise beside the water, not on the path's centre line",
+    "evidence": "The dome is offset to the right of the figure with its lit reflection in the water below it; the central gap between the sword ranks does not converge on it.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "walks forward along a wet stone path between two rows of upright swords, lifting a pale cloth from her eyes, toward a small domed lit building under a star-filled sky",
+     "with": "walks forward toward the viewer along a wet path between two rows of upright swords, lifting a pale cloth from her eyes, a small domed lit building behind her under a star-filled sky"
+    },
+    {
+     "find": "the domed building sits behind her, centred on the path's vanishing point",
+     "with": "the domed building sits behind her and to the right of the path, its lit opening reflected in the water"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ }
+]

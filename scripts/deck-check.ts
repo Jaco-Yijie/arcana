@@ -17,14 +17,25 @@ import { createHash } from 'node:crypto'
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
 import type { DeckDefinition } from '../src/decks/types.ts'
-import { ALL_DECK_IDS, DEFAULT_DECK_ID, LEGACY_DECK_ALIASES, resolveDeckId } from '../src/decks/ids.ts'
-import { artworkDecks, decks, legacyDecks } from '../src/decks/registry.ts'
+import type { DeckId } from '../src/decks/ids.ts'
+import {
+  ALL_DECK_IDS,
+  DEFAULT_DECK_ID,
+  LEGACY_DECK_ALIASES,
+  PRODUCTION_DECK_IDS,
+  isProductionDeck,
+  resolveDeckId,
+  resolveProductionDeckId,
+} from '../src/decks/ids.ts'
+import { artworkDecks, deckById, decks, legacyDecks, productionDecks } from '../src/decks/registry.ts'
+import { getDeckVisualSemantics } from '../src/data/deckVisualSemantics/index.ts'
 import { atmospheres, getAtmosphere } from '../src/atmosphere/registry.ts'
 import {
   EXPECTED_FULL_COVERAGE,
   LEGACY_ART_PACK,
   MAJOR_ARCANA_IDS,
   PREVIEW_CARD_IDS,
+  artworkCardCount,
   deriveCoverage,
   getManifest,
 } from '../src/decks/artwork/manifests.ts'
@@ -871,20 +882,44 @@ function checkPromptIsolation(): void {
     check(`Prompt 里没有氛围 id「${a.atmosphereId}」`, !prompt.includes(a.atmosphereId))
   }
 
-  /* 换牌组重建上下文，Prompt 必须逐字节相同 —— 这是最直接的证明。
-     V2.4 只比了 2 套，这里扩到全部 10 套两两比对。 */
+  /* 换牌组重建上下文，Prompt 的**非视觉部分**必须逐字节相同。
+     V2.4 只比了 2 套，这里扩到全部 10 套两两比对。
+
+     【这条断言在 Visual Semantic Layer V1 被升级过，原文与理由都留在这里】
+     原文断言的是「换任意牌组后 Prompt 逐字节相同」，背后的不变量是
+     「deckId 只记录，不参与任何判断」。那条不变量当时是对的，
+     但它同时锁死了一件我们其实需要的事：同一张牌在五副真实原画下，
+     模型拿到的输入完全一样 —— 用户看着五幅不同的画，AI 看到的是同一张牌。
+
+     现在把它拆成两条，**canonical 那条一个字都没有放松**：
+       · 牌的身份与牌义（牌名、cardId、朝向、牌位、baseMeaning、domainMeaning、
+         keywords、symbols、统计）换牌组后仍然逐字节相同 —— 由下面的
+         stripVisual 比对与 I 组「语义部分逐字节相同」共同守住；
+       · 只有来自真实原画的预生成视觉证据允许不同。
+
+     deckId 本身仍然不进 Prompt（上面几条断言照旧），它只是查表的钥匙。 */
+  /* 连同行首换行一起删掉 —— 只删内容会留下空行，
+     而没有视觉数据的牌组那里本来就没有空行，两边仍然对不上 */
+  const VISUAL_LINE = /\n(?:- 这副牌组把这张牌画成|- How this deck paints this card|  · )[^\n]*/g
+  const stripVisual = (text: string) => text.replace(VISUAL_LINE, '')
+
   let allIdentical = true
   const offenders: string[] = []
+  let anyVisualDiff = false
+  const baseline = stripVisual(prompt)
   for (const d of decks) {
     const other = buildMessages(rebuildContext({ ...request, deckId: d.deckId }))
       .map((m) => m.content)
       .join('\n')
-    if (other !== prompt) {
+    if (stripVisual(other) !== baseline) {
       allIdentical = false
       offenders.push(d.deckId)
     }
+    if (other !== prompt) anyVisualDiff = true
   }
-  check('换任意牌组后 Prompt 逐字节相同', allIdentical, offenders.join(', ') || '10 套全同')
+  check('换任意牌组后 Prompt 的非视觉部分逐字节相同', allIdentical, offenders.join(', ') || '10 套全同')
+  /* 反向断言：上面那条不能因为「视觉证据压根没接进来」而空过 */
+  check('视觉证据确实会因牌组而不同（上一条不是空断言）', anyVisualDiff)
 
   const noDeck = buildMessages(rebuildContext({ ...request, deckId: undefined }))
     .map((m) => m.content)
@@ -1117,6 +1152,136 @@ function checkDomainMeaning(): void {
  *
  * 所以这一组守的不是代码，是那句话本身。
  * ══════════════════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════════════════════
+ * P. 正式对外的五套牌组
+ *
+ * 这一组守的是一个产品承诺：**用户能选到的每一副牌都是完整的**——
+ * 78 张真实原画、78 条视觉语义、能抽、能解读。
+ * 以及它的反面：**任何一副已经完整的牌组都不许被忘在门外**。
+ * ══════════════════════════════════════════════════════════ */
+
+const PRODUCTION_EXPECTED = [
+  'legacy-moonlight',
+  'legacy-classic',
+  'legacy-forest',
+  'legacy-celestial',
+  'legacy-shadow',
+]
+
+/** 一副牌组是否真的具备对外开放的全部条件 */
+function isFullyReady(deckId: DeckId): { ready: boolean; artwork: number; visual: number } {
+  const artwork = artworkCardCount(deckId)
+  const visual = allCards.filter((c) => getDeckVisualSemantics(deckId, c.id) !== null).length
+  const manifest = getManifest(deckId)
+  const ready =
+    artwork === EXPECTED_FULL_COVERAGE &&
+    visual === EXPECTED_FULL_COVERAGE &&
+    manifest != null &&
+    manifest.devFixture !== true &&
+    isDeckPlayable(deckId)
+  return { ready, artwork, visual }
+}
+
+function checkProductionDecks(): void {
+  section('P. 正式对外的五套牌组')
+
+  check(
+    'PRODUCTION_DECK_IDS 恰好是约定的五套',
+    PRODUCTION_DECK_IDS.length === 5 &&
+      PRODUCTION_EXPECTED.every((id) => (PRODUCTION_DECK_IDS as readonly string[]).includes(id)),
+    PRODUCTION_DECK_IDS.join(', '),
+  )
+
+  check('默认牌组在正式清单里', isProductionDeck(DEFAULT_DECK_ID), DEFAULT_DECK_ID)
+
+  check(
+    'productionDecks 与 PRODUCTION_DECK_IDS 同序同长',
+    productionDecks.length === PRODUCTION_DECK_IDS.length &&
+      productionDecks.every((d, i) => d.deckId === PRODUCTION_DECK_IDS[i]),
+  )
+
+  /* 每一套都必须真的齐备 —— 清单不是一句宣言，是一个可验证的断言 */
+  for (const deckId of PRODUCTION_DECK_IDS) {
+    const { ready, artwork, visual } = isFullyReady(deckId)
+    check(
+      `${deckId} 具备全部开放条件`,
+      ready && deckById[deckId] !== undefined,
+      `原画 ${artwork}/78 · 视觉语义 ${visual}/78 · 可抽牌 ${isDeckPlayable(deckId)}`,
+    )
+  }
+
+  /* ★ 反向断言：这条才是「记得回来改那一行」的替代品 ★
+     任何一副已经画完 78 张、跑完 78 条视觉语义、可以抽牌的牌组，
+     如果不在正式清单里，就说明有人做完了资产却忘了对外开放。
+     这里刻意判失败而不是警告 —— 警告会被忽略，而这正是上一版出问题的方式。 */
+  const readyButHidden = ALL_DECK_IDS.filter(
+    (id) => !isProductionDeck(id) && isFullyReady(id).ready,
+  )
+  check(
+    '没有「已经齐备却仍被隐藏」的牌组',
+    readyButHidden.length === 0,
+    readyButHidden.length > 0
+      ? `${readyButHidden.join(', ')} 已经 78/78 + 视觉语义齐全 —— 请加进 PRODUCTION_DECK_IDS`
+      : '未完成的牌组都还没齐备，隐藏是对的',
+  )
+
+  /* 未完成的牌组必须确实不齐备，否则上一条就是空断言 */
+  const hidden = ALL_DECK_IDS.filter((id) => !isProductionDeck(id))
+  check('未开放的五套确实尚未齐备（上一条不是空断言）', hidden.length === 5 && hidden.every((id) => !isFullyReady(id).ready), hidden.join(', '))
+
+  /* 视觉语义能查到 —— 正式化不能碰坏 deckId + cardId 的查表 */
+  const visualMisses: string[] = []
+  for (const deckId of PRODUCTION_DECK_IDS) {
+    for (const card of allCards) {
+      if (getDeckVisualSemantics(deckId, card.id) === null) visualMisses.push(`${deckId}/${card.id}`)
+    }
+  }
+  check(
+    '五套 × 78 张视觉语义全部可查',
+    visualMisses.length === 0,
+    visualMisses.length === 0 ? `${PRODUCTION_DECK_IDS.length * 78} 条全部命中` : visualMisses.slice(0, 5).join(', '),
+  )
+
+  /* ── 历史兼容：生产过滤只作用于「新建选择」，绝不作用于历史解析 ── */
+  for (const hiddenId of ['ethereal', 'elysian', 'opaline', 'wonderland', 'classic'] as const) {
+    check(
+      `历史记录里的 ${hiddenId} 仍被原样解析（不被偷偷改写）`,
+      resolveDeckId(hiddenId, 2) === hiddenId && deckById[hiddenId] !== undefined,
+    )
+  }
+  check(
+    '新建解读时未开放的牌组回落到默认牌组',
+    (['ethereal', 'elysian', 'opaline', 'wonderland', 'classic'] as const).every(
+      (id) => resolveProductionDeckId(id, 2) === DEFAULT_DECK_ID,
+    ),
+  )
+  check(
+    '正式牌组不会被生产过滤改写',
+    PRODUCTION_DECK_IDS.every((id) => resolveProductionDeckId(id, 2) === id),
+  )
+  check(
+    'v1 别名迁移后仍落在正式牌组里',
+    Object.values(LEGACY_DECK_ALIASES).every((id) => isProductionDeck(id)),
+  )
+
+  /* ── 用户可见文案里不许出现 legacy ── */
+  const zh = JSON.parse(readFileSync(resolve(REPO_ROOT, 'src/i18n/locales/zh-CN.json'), 'utf8')) as Record<string, unknown>
+  const en = JSON.parse(readFileSync(resolve(REPO_ROOT, 'src/i18n/locales/en-US.json'), 'utf8')) as Record<string, unknown>
+  const visibleStrings = (o: unknown): string[] =>
+    typeof o === 'string' ? [o] : typeof o === 'object' && o !== null ? Object.values(o).flatMap(visibleStrings) : []
+  const offenders = [...visibleStrings(zh), ...visibleStrings(en)].filter((v) =>
+    /legacy/i.test(v) || /legacy-(moonlight|classic|forest|celestial|shadow)/.test(v),
+  )
+  check('用户可见文案里没有「legacy」，也没有内部 deckId', offenders.length === 0, offenders.slice(0, 3).join(' | ') || '干净')
+
+  /* 五套都得有中英显示名，且两种语言各不相同（防止漏翻成同一个 key） */
+  for (const deckId of PRODUCTION_DECK_IDS) {
+    const zhName = ((zh as { decks?: { name?: Record<string, string> } }).decks?.name ?? {})[deckId]
+    const enName = ((en as { decks?: { name?: Record<string, string> } }).decks?.name ?? {})[deckId]
+    check(`${deckId} 中英显示名都存在且不含 legacy`, Boolean(zhName && enName) && !/legacy/i.test(`${zhName}${enName}`), `${zhName} / ${enName}`)
+  }
+}
 
 function checkDeckVisualDifference(): void {
   section('G. 牌组视觉差异（程序化过渡期）')
@@ -1636,6 +1801,7 @@ checkMigration()
 checkPromptIsolation()
 checkSemanticInvariance()
 checkDomainMeaning()
+checkProductionDecks()
 checkDeckVisualDifference()
 checkAtmosphereDifference()
 checkDeckSigil()

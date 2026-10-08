@@ -1,0 +1,326 @@
+{
+  "reviewId": "review-007",
+  "blindImage": "qa/visual-semantics/blind-review/review-007.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/pilot/reveal/review-007.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "small lanterns hanging on the posts",
+          "observed": "three lit lanterns standing on the platform floor (lower left, beside the central spread, lower right); the lights that are actually suspended hang from the garland, and the posts carry wound point-lights rather than lanterns",
+          "evidence": "Each of the three lantern bodies sits at platform level with a visible base and its own reflection on the inlaid floor; none is attached to or suspended from a post.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "small lanterns hanging on the posts",
+            "with": "small lanterns standing on the platform, with strings of small lights wound around the posts and garland"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-007",
+        "visibleFacts": {
+          "figureCount": 4,
+          "figures": [
+            {
+              "position": "left-of-center, foreground",
+              "posture": "standing, seen from behind, weight shifted as if just arrived",
+              "gaze": "away from viewer, toward the right/inward",
+              "heldObjects": [],
+              "notes": "dark curly hair, long dark cloak, a pack or satchel slung on the back, boots"
+            },
+            {
+              "position": "center-left, foreground",
+              "posture": "standing, seen from behind",
+              "gaze": "away from viewer, toward the right",
+              "heldObjects": [],
+              "notes": "long veil or hooded robe covering the head and back; one arm extended forward/outward toward the figures on the right"
+            },
+            {
+              "position": "center-right",
+              "posture": "standing, facing left toward the two back-turned figures",
+              "gaze": "toward the left-hand figures",
+              "heldObjects": [
+                "one hand raised/reaching toward the extended hand of the veiled figure"
+              ],
+              "notes": "patterned gown, small circlet or tiara catching light on the head"
+            },
+            {
+              "position": "right",
+              "posture": "standing, facing left",
+              "gaze": "toward the left-hand figures",
+              "heldObjects": [
+                "a flat tray or platter carried in both hands, loaded with small rounded items"
+              ],
+              "notes": "long coat, shorter hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "column / wrapped post supporting a canopy",
+              "count": 4,
+              "countConfidence": "medium",
+              "where": "two at left (x~120 and x~235) and two at right (x~405 and x~455) framing the platform; each wrapped in foliage, flowers and small lights, topped with a floral cluster"
+            },
+            {
+              "type": "hanging lantern / standing lamp with a lit flame",
+              "count": null,
+              "countConfidence": "low",
+              "where": "one at lower left near the left column, one on the platform near the central spread, one at lower right by the right column; at least 3 resolvable"
+            },
+            {
+              "type": "moon or planetary body in the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a large grey cratered sphere upper left; a large ringed body upper right; a small sphere at the right edge below the ringed one; at least one further faint orb mid-frame right of center"
+            },
+            {
+              "type": "garland / swag strung between the columns",
+              "count": null,
+              "countConfidence": "low",
+              "where": "draped in loops across the top of the frame between the column tops, with ribbons trailing"
+            },
+            {
+              "type": "tree",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "left edge, mid-height, dark silhouetted branches"
+            }
+          ],
+          "environment": [
+            "circular raised stone platform inscribed with concentric geometric/compass-like lines",
+            "a rug or cloth laid on the platform",
+            "a low spread of food and vessels at platform center",
+            "still dark water surrounding and behind the platform, with reflections",
+            "distant shoreline with small warm lights on both left and right",
+            "low mountains on the horizon",
+            "night sky filled with stars, constellation lines and a violet nebula band"
+          ],
+          "lightSources": [
+            "lantern flames on and around the platform",
+            "small point-lights wound through the columns and garland",
+            "a bright star high in the center of the sky",
+            "distant shoreline lights"
+          ],
+          "moonPhase": "uncertain",
+          "spatialRelations": [
+            "the two back-turned figures at left face the two forward-facing figures at right across the center of the platform",
+            "the veiled figure's outstretched hand nearly meets the hand of the circlet-wearing figure, the closest point of contact in the frame",
+            "the four columns form an open canopy over all four figures",
+            "the platform sits on water; the sky and lights are mirrored in the water below the frame's lower third"
+          ],
+          "foreground": [
+            "the four figures",
+            "the inscribed platform and rug",
+            "the low spread of food",
+            "lanterns",
+            "reflective water at the very bottom"
+          ],
+          "background": [
+            "lake, distant lit shorelines, mountains",
+            "star field, constellation lines, nebula",
+            "multiple celestial bodies"
+          ]
+        },
+        "uncertainObservations": [
+          "number of celestial bodies cannot be fixed; several faint orbs blend into the nebula",
+          "phase of the large grey upper-left sphere is not determinable with confidence (appears close to fully lit but its edge fades into the sky)",
+          "lantern count is unreliable: some glows may be lights on the columns rather than separate lanterns",
+          "the exact contents of the carried tray (rounded pale items) cannot be identified",
+          "whether the two right-hand columns are a separate pair or the rear legs of the same structure is ambiguous"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "small lanterns hanging on the posts",
+          "observed": "lit lanterns standing on the platform floor, not hanging from the posts",
+          "evidence": "Three lanterns are individually resolvable and all sit at ground level on the stone platform: one at the lower left beside the near post's base, one at the centre beside the food spread, and one at the right on the platform near the right post's base. Each throws light downward onto the platform and casts a reflection in the wet surface beneath it. Nothing is suspended from any post; the small glows higher up are points of light within the strung garland, not lanterns on the posts.",
+          "confidence": "high"
+        },
+        {
+          "field": "deckSpecificMotifs",
+          "existing": "ringed planet with orbiting spheres",
+          "observed": "a large ringed orb at the upper right plus at least three other separate rounded bodies elsewhere in the sky (a grey cratered disc at upper left, a small disc near the right edge, a faint disc at mid-right)",
+          "evidence": "The other spheres are scattered across opposite corners of the sky rather than arranged around the ringed orb; no orbital relationship between them is visible, and the total number of bodies cannot be fixed because several faint discs may be nebula texture.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "small lanterns hanging on the posts",
+            "with": "lit lanterns standing on the platform floor"
+          },
+          {
+            "find": "exact number of small lanterns hanging on the posts",
+            "with": "exact number of lanterns standing on the platform"
+          },
+          {
+            "find": "ringed planet with orbiting spheres",
+            "with": "ringed planet and several separate spheres across the sky"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-007",
+        "visibleFacts": {
+          "figureCount": 4,
+          "figures": [
+            {
+              "position": "left, nearest the viewer",
+              "posture": "standing / stepping forward with the back to the viewer",
+              "gaze": "away from the viewer, toward the right-hand pair",
+              "appearance": "short curly hair, long dark travelling cloak, boots, a pack or bundle carried on the back",
+              "heldObjects": [
+                "a carried pack/satchel on the back; hands not clearly visible"
+              ]
+            },
+            {
+              "position": "left of center, beside the first figure",
+              "posture": "standing with the back to the viewer, one arm raised and extended forward to the right",
+              "gaze": "away from the viewer, toward the right-hand pair",
+              "appearance": "long hooded robe or veil, pale patterned full-length gown",
+              "heldObjects": [
+                "right hand open and extended forward, apparently empty or reaching toward something small and glowing"
+              ]
+            },
+            {
+              "position": "right of center",
+              "posture": "standing, facing left toward the approaching pair",
+              "gaze": "toward the two back-turned figures",
+              "appearance": "long embroidered gown, long hair, a small crown or tiara on the head",
+              "heldObjects": [
+                "hands forward near the platter, possibly steadying it"
+              ]
+            },
+            {
+              "position": "right, outermost of the pair",
+              "posture": "standing, facing left toward the approaching pair",
+              "gaze": "toward the two back-turned figures",
+              "appearance": "dark jacket/doublet with a high collar, short hair",
+              "heldObjects": [
+                "a flat tray or platter held at waist height, carrying small rounded items (fruit or similar)"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "pillar/post wrapped in vines and garlands",
+              "count": 4,
+              "countConfidence": "medium",
+              "where": "two at the left and two at the right, framing the platform and supporting the hanging garland"
+            },
+            {
+              "type": "hanging garland/swag of leaves and flowers with ribbons",
+              "count": null,
+              "countConfidence": "low",
+              "where": "strung between the pillar tops across the upper third; the swags overlap and merge so individual spans cannot be separated"
+            },
+            {
+              "type": "lit lantern",
+              "count": null,
+              "countConfidence": "low",
+              "where": "on the platform floor: one at lower left, one near the center beside the food, one at the right edge of the platform; more small glows may be lanterns or reflections"
+            },
+            {
+              "type": "large celestial sphere in the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a grey cratered disc at upper left; a large ringed orb at upper right; at least two smaller faint discs near the right edge and mid-right"
+            },
+            {
+              "type": "bright star with visible rays",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper center, below the apex of the arched constellation lines"
+            },
+            {
+              "type": "platter/bowl of food on the ground",
+              "count": null,
+              "countConfidence": "low",
+              "where": "center of the platform, a low spread of dishes and rounded fruit on and beside a patterned rug"
+            },
+            {
+              "type": "patterned rug/carpet",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "center of the platform beneath the food"
+            },
+            {
+              "type": "tree",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "left edge, foliage overhanging into the frame"
+            }
+          ],
+          "environment": [
+            "circular stone platform inscribed with a geometric/circular pattern",
+            "wet reflective surface in the lower third mirroring the figures and lights",
+            "a body of water behind the platform on both left and right",
+            "distant shoreline with small warm lights at left and right (a settlement)",
+            "low mountains on the horizon",
+            "dense star field and nebula clouds filling the sky",
+            "fine golden constellation lines and circular diagrams drawn across the sky",
+            "painted dark border frame around the scene"
+          ],
+          "lightSources": [
+            "lanterns on the platform floor",
+            "the star field and nebula glow in the sky",
+            "distant shoreline lights on both sides",
+            "small sparkles along the garlands and pillars"
+          ],
+          "moonPhase": "uncertain — the grey disc at upper left appears close to fully lit but its terminator is not clearly resolvable; the large orb at upper right has a visible ring and is a different kind of body",
+          "spatialRelations": [
+            "two back-turned figures at the left approach two forward-facing figures at the right across the platform",
+            "the food and rug lie on the ground between the two pairs",
+            "the garland-hung pillars frame all four figures, two pillars behind each pair",
+            "the water and distant shore lie behind the platform and below the horizon line",
+            "the reflections of the figures and lanterns extend toward the bottom edge"
+          ],
+          "foreground": [
+            "reflective wet platform surface with reflections",
+            "lanterns",
+            "the four figures",
+            "the rug and food"
+          ],
+          "background": [
+            "water",
+            "distant lit shoreline",
+            "mountains",
+            "star field with constellation lines and multiple celestial bodies"
+          ]
+        },
+        "uncertainObservations": [
+          "The number of celestial spheres cannot be stated: at least four rounded bodies are visible (upper left, upper right large ringed one, one near the right edge, one faint at mid-right), but several fainter discs may be nebula texture rather than bodies.",
+          "The lantern count cannot be fixed; three are clearly individually resolvable on the platform but additional warm points may be lanterns, candles or reflections.",
+          "What the second figure's extended hand holds or reaches for is ambiguous — there is a small glow between her hand and the third figure.",
+          "The head ornament on the third figure reads as a small crown or tiara but could be a flower wreath.",
+          "The items on the carried tray are small and rounded; identifying them as fruit is at the edge of resolution.",
+          "Whether the figures are stationary or mid-stride is not determinable."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

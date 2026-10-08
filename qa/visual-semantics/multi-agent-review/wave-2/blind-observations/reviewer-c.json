@@ -1,0 +1,639 @@
+[
+ {
+  "reviewId": "review-216",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, upper-middle of frame",
+     "posture": "standing / leaning forward, upper body inclined to the right, long pale gown, very long pale hair blowing left",
+     "gaze": "eyes closed or nearly closed, face angled downward toward the blade in her hands",
+     "heldObjects": [
+      "a single large sword, gripped with both hands around the hilt, blade vertical and point-down"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held vertically point-down, center of frame; blade descends until its tip rests on/near the stone ledge"
+    },
+    {
+     "type": "crown",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "resting on the stone ledge at center-right, at roughly mid-height of the sword blade; the blade passes down in front of / through it"
+    },
+    {
+     "type": "bird",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "small pale bird in flight, upper-left, among the flowering branches"
+    },
+    {
+     "type": "flowering branch",
+     "count": null,
+     "countConfidence": "low",
+     "where": "trailing down the entire left edge and lower-left corner, small pale five-petal blossoms"
+    }
+   ],
+   "environment": [
+    "stone ledge / parapet platform",
+    "pale blue-white sky with thick clouds",
+    "body of water with a far shoreline and low hills at right, below the ledge",
+    "mist rising from below the platform",
+    "faint pale architecture (columns/arch) behind the figure at left"
+   ],
+   "lightSources": [
+    "diffuse bright sky; brightest area around the moon at upper right",
+    "the sword blade itself reads as a bright white vertical highlight"
+   ],
+   "moonPhase": "crescent, thin, upper right of frame",
+   "spatialRelations": [
+    "the figure occupies the upper-left half; the sword she holds runs down the vertical center",
+    "the crown sits on the ledge to her lower right, level with the middle of the blade",
+    "water and distant shore fill the right-middle background, behind and below the ledge",
+    "flowering branches frame the left edge from top to bottom"
+   ],
+   "foreground": [
+    "stone ledge with carved/weathered blocks",
+    "flowering branches lower-left",
+    "mist"
+   ],
+   "background": [
+    "clouded sky",
+    "crescent moon",
+    "water and low distant shoreline"
+   ]
+  },
+  "uncertainObservations": [
+   "moon shape reads as a crescent but the cloud overlap makes the exact phase/orientation unreliable",
+   "cannot confirm whether the figure's eyes are fully closed or lowered",
+   "only one bird could be individually resolved; faint marks nearby may or may not be additional birds",
+   "the pale vertical shapes behind the figure at left may be architecture or may be cloud/light — not resolvable",
+   "whether the sword tip actually touches the ledge or stops short is obscured by mist"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-204",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left-of-center, standing in the stern-left area of a boat",
+     "posture": "standing upright, seen entirely from behind, both hands gripping a long pole angled down to the right into the water",
+     "gaze": "away from viewer, head turned slightly right, looking downstream/ahead",
+     "heldObjects": [
+      "a long straight punting pole/oar, angled from upper-left down to lower-right where it enters the water"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "boat",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center of frame, floating on calm water, bow pointing right"
+    },
+    {
+     "type": "upright blade-like objects standing in a row inside the boat",
+     "count": null,
+     "countConfidence": "low",
+     "where": "planted vertically in a row along the middle of the boat's hull, in front of the standing figure; each has a small knobbed pommel and a crossguard-like top"
+    },
+    {
+     "type": "lantern",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "small hanging lantern at the boat's right/bow end, near a coil of rope"
+    },
+    {
+     "type": "mushroom",
+     "count": null,
+     "countConfidence": "low",
+     "where": "cluster on the mossy bank in the lower-left corner; at least three caps resolvable"
+    },
+    {
+     "type": "tree trunk framing the frame edge",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "one vertical trunk hard against the left edge, one against the right edge"
+    }
+   ],
+   "environment": [
+    "still river / broad forest stream",
+    "dense green deciduous woodland on both banks",
+    "grassy bank and a light-colored path on the right shore",
+    "ferns, moss, white daisy-like flowers and mushrooms along the near bank in the foreground"
+   ],
+   "lightSources": [
+    "bright hazy daylight breaking through the trees at upper-center-right; visible slanted sunbeams / light shafts falling toward the water"
+   ],
+   "moonPhase": "not present",
+   "spatialRelations": [
+    "the boat sits across the middle of the frame with its bow to the right; the figure stands at the left end of it, behind the row of upright objects",
+    "the row of upright objects stands between the viewer and the figure's torso",
+    "the pole crosses the boat diagonally and its tip enters the water at lower-right, producing small ripples",
+    "sunbeams come from upper right and fall onto the water surface behind the boat",
+    "foreground bank vegetation is sharply detailed and frames the bottom edge"
+   ],
+   "foreground": [
+    "mossy near bank with ferns, mushrooms, white flowers, a rotting stump at lower right"
+   ],
+   "background": [
+    "sunlit forest interior, tall slender trunks, a clearing where the light comes through",
+    "reflections of the trees on the water"
+   ]
+  },
+  "uncertainObservations": [
+   "the upright objects in the boat overlap one another; I can individually resolve six pommel tops, but the row is dense enough that additional ones could be hidden behind those — count deliberately left null",
+   "whether those upright objects are blades, staves or posts is not determinable — only that they are slim, vertical, hilt-topped and planted in the hull",
+   "the small object at the bow reads as a lantern but could be a hanging bell or float",
+   "mushroom caps in the lower-left overlap the ferns; a precise count is not possible",
+   "the figure's face is never visible, so expression and exact gaze direction are unknown"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-208",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left-of-center, filling the left half of the frame",
+     "posture": "kneeling / crouched low, body in profile facing right, long heavy embroidered gown and cloak pooling on the ground behind her",
+     "gaze": "downward and to the right, toward the ground where her lower hand reaches",
+     "heldObjects": [
+      "raised/forward hand: holds up a round flat disc engraved with a five-pointed star inside a circle",
+      "lower hand: empty, fingers extended toward a small plant sprouting from the soil"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "round disc engraved with a five-pointed star",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held up at chest height in front of the open door, center-right of frame"
+    },
+    {
+     "type": "crown",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "on the figure's head, tall and spiked/ornate"
+    },
+    {
+     "type": "rabbit",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower right, sitting upright on the ground, facing left toward the figure, ears erect"
+    },
+    {
+     "type": "door",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "arched wooden door set in a stone wall at center-right, standing open toward the viewer/right, with visible iron hinges and a handle"
+    },
+    {
+     "type": "staircase",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "stone steps ascending in the upper-left background, disappearing into darkness"
+    },
+    {
+     "type": "urn / planter with trailing plants",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "atop the stone structure at upper right, above the door"
+    },
+    {
+     "type": "seedling / small sprouting plant",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "on the ground at lower center, directly beneath the figure's reaching hand"
+    },
+    {
+     "type": "tall flowering stems",
+     "count": null,
+     "countConfidence": "low",
+     "where": "along the left edge, several upright stalks with pale open blooms"
+    }
+   ],
+   "environment": [
+    "stone wall with an arched doorway",
+    "stone staircase",
+    "dark earth / garden floor with scattered leaf litter",
+    "climbing vines on the stonework",
+    "flowering plants at the left edge and above the door"
+   ],
+   "lightSources": [
+    "no explicit lamp or sun visible; the brightest points are the engraved disc, the figure's face and hands, and the pale flowers — the scene is otherwise near-black"
+   ],
+   "moonPhase": "not present / not visible",
+   "spatialRelations": [
+    "the figure kneels in the left-center, angled toward the door at right",
+    "the disc is held between the figure and the open doorway, roughly at the door's mid-height",
+    "the rabbit sits on the ground to the right of her reaching hand, separated from her by the sprout",
+    "the staircase in the upper left recedes away from the viewer, behind the figure's back",
+    "the planter sits on top of the wall, directly above the arched door"
+   ],
+   "foreground": [
+    "dark soil, leaf litter, the sprout, the rabbit, the hem of the gown"
+   ],
+   "background": [
+    "stone stairs, dark wall, foliage silhouettes"
+   ]
+  },
+  "uncertainObservations": [
+   "the image is extremely dark overall; large portions of the background are effectively black and may contain unresolved objects",
+   "whether the door opens onto an interior space or a recess cannot be seen — the opening is solid black",
+   "the object on the ground beneath her hand reads as a small plant with roots/stem, but its exact form is hard to resolve against the dark soil",
+   "the number of flowering stalks at the left edge cannot be counted; they merge into darkness",
+   "I cannot tell whether the staircase has a railing or where it terminates"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-203",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, lying horizontally across the middle of the frame",
+     "posture": "lying supine on a raised stone bier/bed, head at left on a dark pillow, body covered from chest down by a heavy dark-blue cover, hands folded on the chest",
+     "gaze": "eyes closed, face turned slightly up and toward the viewer",
+     "heldObjects": []
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword mounted point-down on the wall",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "hanging on the wall above the reclining figure, evenly spaced left to right, all three vertical with hilts up and points down"
+    },
+    {
+     "type": "sword rendered horizontally on the front panel of the bier",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "inlaid/carved along the front face of the stone bier in the lower-center of the frame, hilt at left, blade pointing right"
+    },
+    {
+     "type": "arched window",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left, tall pointed arch filled with a nebula/starfield"
+    },
+    {
+     "type": "planetary sphere visible through the window",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one in the upper part of the window, one lower in the window near the treeline"
+    },
+    {
+     "type": "armillary sphere on a tripod stand",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower left, standing on the floor beside the head of the bier"
+    },
+    {
+     "type": "lantern",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right side, on the ledge beyond the foot of the bier; contains a small warm flame"
+    },
+    {
+     "type": "circular star-map inlay",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "set into the polished floor in the foreground, lower center"
+    },
+    {
+     "type": "conifer tree silhouettes",
+     "count": null,
+     "countConfidence": "low",
+     "where": "small dark evergreen shapes along the bottom of the window opening"
+    }
+   ],
+   "environment": [
+    "dark stone chamber",
+    "walls covered in faint constellation lines, circular zodiac-style diagrams and scattered stars",
+    "polished reflective dark floor",
+    "raised stone bier/sarcophagus-like platform with carved panels"
+   ],
+   "lightSources": [
+    "the lantern flame at right (the only warm light)",
+    "cool glow from the nebula/starfield through the arched window at left",
+    "faint self-luminous stars on the walls and floor"
+   ],
+   "moonPhase": "no moon identifiable",
+   "spatialRelations": [
+    "the three wall swords hang in a row directly above the reclining figure's body",
+    "the reclining figure's head is at the left, near the window; the feet are to the right, near the lantern",
+    "the armillary sphere stands on the floor at the far left, in front of and below the window",
+    "the horizontal sword motif on the bier's front panel is directly below the figure",
+    "the circular floor inlay occupies the foreground, nearer the viewer than the bier"
+   ],
+   "foreground": [
+    "polished floor with the circular star-map inlay"
+   ],
+   "background": [
+    "star-diagrammed wall",
+    "the nebula-filled arched window"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of spherical bodies in the window is uncertain — two round shapes are resolvable but the nebula texture makes additional faint ones possible",
+   "whether the horizontal sword on the bier's front panel is a real sword laid in a recess or a carved/inlaid relief cannot be determined",
+   "the figure's sex, and whether the eyes are closed in sleep or simply shadowed, are not determinable",
+   "the wall is covered in faint circular diagrams whose number and content I cannot resolve",
+   "cannot tell whether the wall swords are suspended, mounted on brackets, or embedded in the stone"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-215",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, full body, mid-frame",
+     "posture": "standing mid-stride on a slope, legs apart, weight on the left leg, torso twisted; the right arm is raised high, the left arm lowered and braced on a thick vine",
+     "gaze": "head tilted up and to the right, looking toward the raised blade",
+     "heldObjects": [
+      "a sword held aloft in the raised hand, blade vertical, with leafy vines/creepers wound around the blade",
+      "the lowered hand rests on / grips a thick woody vine"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "raised vertically above the figure's head, center-right of frame, foliage entwined around the blade"
+    },
+    {
+     "type": "dark bird perched on a branch",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left, in silhouette on a short horizontal branch"
+    },
+    {
+     "type": "mushroom",
+     "count": null,
+     "countConfidence": "low",
+     "where": "a cluster of pale broad-capped mushrooms in the lower-left corner, plus two smaller caps a little higher on the left slope"
+    },
+    {
+     "type": "thick twisting vine / bramble mass",
+     "count": null,
+     "countConfidence": "low",
+     "where": "large braided ropes of vine sweeping across the left foreground and the entire right side"
+    },
+    {
+     "type": "white daisy-like flowers",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered along the lower-right and lower-center undergrowth"
+    }
+   ],
+   "environment": [
+    "dense forest of tall slender trunks",
+    "a narrow footpath/track winding away from the viewer up into the trees at center",
+    "heavy undergrowth: ferns, ivy, moss, brambles",
+    "an ornamental leaf-and-acorn border visible at the top corners and the right edge of the picture area"
+   ],
+   "lightSources": [
+    "bright hazy light from the upper center, behind the trees, back-lighting the canopy and the raised blade"
+   ],
+   "moonPhase": "not present",
+   "spatialRelations": [
+    "the figure stands to the left of the path, with the path running from the lower-center up and away behind them",
+    "the raised sword crosses in front of the brightest part of the sky",
+    "the perched bird is high above and to the left of the figure, looking down/right toward them",
+    "massive vines curve inward from both the left and right edges, enclosing the figure",
+    "mushrooms and flowers occupy the nearest foreground along the bottom edge"
+   ],
+   "foreground": [
+    "vine ropes, ferns, mushrooms, flowering undergrowth"
+   ],
+   "background": [
+    "sunlit forest depth, receding trunks, the path vanishing into haze"
+   ]
+  },
+  "uncertainObservations": [
+   "mushroom caps overlap heavily in the lower-left; no reliable count possible",
+   "whether the foliage on the blade is growing from it or merely draped over it is not determinable",
+   "the bird's species/type is not determinable — only that it is small, dark and perched",
+   "I cannot tell whether the figure wears a hood up or a cowl down around the shoulders",
+   "the path's far end dissolves into light; whether anything stands at its end is not resolvable"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-214",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "dead center, frontal, symmetrical",
+     "posture": "seated upright on a low stone bench/ledge, knees together and facing the viewer, heavy layered robes spreading to both sides and pooling on the ground",
+     "gaze": "blocked — a blindfold band is tied across the eyes; the head faces straight forward at the viewer",
+     "heldObjects": [
+      "one sword in each hand, held out from the body and crossed in an X in front of the chest"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "one held in each hand; the left-hand blade rises to the upper right, the right-hand blade rises to the upper left; they cross just above the figure's chest and both tips exit the frame at the upper corners"
+    },
+    {
+     "type": "blindfold",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "band tied across the figure's eyes, with loose ends trailing down the left side of the head"
+    },
+    {
+     "type": "crescent moon",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper center, above and behind the figure's head"
+    },
+    {
+     "type": "armillary sphere on a pedestal",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower left corner, standing on the paved platform"
+    },
+    {
+     "type": "lantern",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower right, on the ground beside the bench, containing a small warm flame"
+    },
+    {
+     "type": "stone bench / seat",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "beneath the figure, running horizontally across the lower-middle of the frame"
+    },
+    {
+     "type": "distant rocky outcrop with small buildings",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "left horizon, across the water"
+    },
+    {
+     "type": "distant rocky island",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right horizon, across the water"
+    }
+   ],
+   "environment": [
+    "night sky dense with stars, overlaid with fine constellation lines and concentric circular/zodiac diagrams",
+    "a broad calm body of water across the middle of the frame, with a light reflection trail on its surface",
+    "a paved stone platform in the foreground with an inlaid circular motif at the lower-right corner"
+   ],
+   "lightSources": [
+    "the crescent moon, upper center",
+    "the lantern flame at lower right",
+    "moonlight reflected in a bright vertical streak on the water"
+   ],
+   "moonPhase": "crescent — the lit sliver curves along the left and lower-left of the disc, with the dark limb faintly visible",
+   "spatialRelations": [
+    "the composition is bilaterally symmetrical around the seated figure",
+    "the crescent moon sits directly above the figure's head, framed by the X of the crossed blades",
+    "the water's horizon line passes behind the figure at about shoulder/chest height",
+    "the armillary sphere and the lantern sit at opposite lower corners, balancing each other",
+    "the two blades cross at the figure's sternum and their tips run out of the top-left and top-right corners"
+   ],
+   "foreground": [
+    "paved stone platform",
+    "the figure's spread robes",
+    "armillary sphere (left), lantern (right)"
+   ],
+   "background": [
+    "starfield with constellation geometry",
+    "crescent moon",
+    "sea with distant headlands"
+   ]
+  },
+  "uncertainObservations": [
+   "the exact orientation of the crescent's horns is partly obscured by the star haze over the disc",
+   "the small shapes on the left headland read as buildings/towers but are too small to resolve individually or count",
+   "whether the figure sits on a bench, a low wall, or a throne back-less seat is ambiguous — only the seat surface and front edge are visible",
+   "faint symbols/constellation figures are scattered over the sky; I cannot enumerate them",
+   "whether the figure's robe includes a hood is not determinable"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-202",
+  "visibleFacts": {
+   "figureCount": null,
+   "figures": [
+    {
+     "position": "left-of-center, lower-middle of frame",
+     "posture": "standing/walking away from the viewer, seen entirely from behind, barefoot, mid-stride up a rising cobbled path; ragged layered clothing with a torn hem, a satchel/pouch slung across the back",
+     "gaze": "away from the viewer, up the path (face not visible)",
+     "heldObjects": [
+      "a tall staff raised in the right hand, topped with a ring-shaped wreath/garland; a pale cloth ribbon is tied below the wreath and hangs loose"
+     ]
+    },
+    {
+     "position": "upper left",
+     "posture": "only a bare forearm and hand are visible, emerging from a dark doorway/window opening at the left edge; no head, torso or legs visible in frame",
+     "gaze": "not determinable — no face in frame",
+     "heldObjects": [
+      "the hand reaches to and appears to grip the upper part of the staff, at or just below the wreath"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "staff topped with a ring-shaped wreath",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held upright by the walking figure, running from their raised hand up to the upper-left quadrant"
+    },
+    {
+     "type": "tall bare pole/stave planted in a square stone planter box",
+     "count": 4,
+     "countConfidence": "medium",
+     "where": "a receding row along the right side of the path; the nearest and tallest is at the right edge in the largest box, the others step back and get shorter toward the upper center"
+    },
+    {
+     "type": "fortified wall with crenellations",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper right / upper center background, on the crest of the hill"
+    },
+    {
+     "type": "arched gateway/doorway",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "in the fortified wall at upper center, faintly lit from within — the path leads up to it"
+    },
+    {
+     "type": "doorway/window opening at the left edge",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper left, a dark rectangular frame from which the disembodied arm emerges"
+    },
+    {
+     "type": "cast shadow",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "a long dark shadow of the walking figure thrown down and to the right across the cobbles in the foreground"
+    }
+   ],
+   "environment": [
+    "night, near-monochrome dark brown/black tonality",
+    "a cobbled path winding uphill from the foreground to the distant gateway",
+    "rough dark ground and low vegetation flanking the path"
+   ],
+   "lightSources": [
+    "no lamp or moon visible in frame; the faint glow inside the distant arched gateway is the only luminous area, yet the figure's shadow falls forward toward the viewer, implying an unseen light behind and above them"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the walking figure is in the lower-left, the path rises diagonally from lower-center to upper-center",
+    "the row of boxed poles lines the right side of the path, receding toward the wall",
+    "the arm at the upper left and the walking figure's raised hand both contact the same staff, at different heights",
+    "the lit gateway sits at the far end of the path, at the composition's vanishing point",
+    "the figure's shadow points toward the lower-right foreground, i.e. opposite the distant gateway"
+   ],
+   "foreground": [
+    "cobbled path stones, the figure's bare feet and shadow, the nearest planter box at right"
+   ],
+   "background": [
+    "hillside, crenellated wall, the faintly lit arched opening"
+   ]
+  },
+  "uncertainObservations": [
+   "figure count left null deliberately: one complete figure is visible, plus a second bare arm/hand whose body is not in frame — I cannot tell whether it belongs to a second person or is an isolated/disembodied limb",
+   "the poles on the right recede into near-total darkness; four are individually resolvable in their boxes but additional ones could be lost in the black — count is not fully reliable",
+   "whether the ring on top of the staff is a woven wreath, a metal hoop or a garland cannot be determined at this resolution",
+   "the light direction is internally inconsistent: the only visible light is up the path ahead, yet the shadow falls toward the viewer — flagged as visually odd rather than resolved",
+   "the object slung on the walking figure's back reads as a satchel or waterskin but its form is not clear",
+   "the dark frame at the upper left could be a doorway, a window, or a gap in a wall — not determinable"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ }
+]

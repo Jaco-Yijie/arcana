@@ -1,0 +1,26 @@
+[
+  {
+    "reviewId": "review-303",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "Image-first: foreground figure holds point-down sword bundle; two swords lie on pavement; two distant figures face away. Cannot trace independent held hilt/guard/blade assemblies to verify exactly three. Border rules and side ticks visible, compass rosettes not resolved.",
+    "reason": "Previous AUTO_PASS alleged reviewer-f placeholders/three cups, contradicted by current valid sword-scene evidence. Border correction has only one explicit reporter. Held count unresolved: a null, c three with two-or-four caveat, f confident three, Judge cannot verify. Filter repeated scene count and named object/motif claims; retain ground swords and other reliable evidence.",
+    "uncertainFields": [
+      "scene"
+    ],
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "three swords held point-down in one hand"
+      },
+      {
+        "field": "keyObjects",
+        "item": "gold-framed border with corner compass rosettes"
+      },
+      {
+        "field": "deckSpecificMotifs",
+        "item": "ornamental gold border with compass rosettes"
+      }
+    ]
+  }
+]

@@ -1,0 +1,865 @@
+[
+ {
+  "reviewId": "review-301",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left of center, foreground",
+     "posture": "seated on a large high-backed throne, leaning forward, torso hunched, head bowed low",
+     "gaze": "downward / hidden in shadow beneath a hood or dark hair; eyes not resolvable",
+     "heldObjects": [
+      "a tall upright staff/rod with a round spherical finial at its top, gripped in the raised right hand (viewer's right), shaft running vertically down to the pavement",
+      "left hand (viewer's left) laid flat on the top end of an upright rectangular stone slab/marker standing in the foreground"
+     ],
+     "clothing": "heavy dark layered robe with visible embroidered trim down the chest; a dark red/maroon cloth spills down the left side near the throne base"
+    }
+   ],
+   "objects": [
+    {
+     "type": "staff / rod with orb finial",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center-left, gripped in the figure's raised hand, base on the ground",
+     "orientation": "vertical, orb end up, butt end down on the pavement",
+     "arrangement": "single, held upright beside the seated figure"
+    },
+    {
+     "type": "upright rectangular stone slab / marker",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "foreground, directly in front of and below the figure",
+     "orientation": "standing vertically, flat top",
+     "arrangement": "single, isolated on the paving"
+    },
+    {
+     "type": "throne",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "left side, the figure is seated in it",
+     "orientation": "facing slightly right toward the viewer",
+     "arrangement": "single; tall carved back panel bearing a circular medallion with a horned ram's head in relief; the front of the arm/base ends in a second carved ram's head"
+    },
+    {
+     "type": "carved ram's head motif",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one inside the round medallion on the throne back, one on the throne's front arm/base block",
+     "orientation": "facing forward/left",
+     "arrangement": "one high on the backrest, one low at the arm terminus"
+    },
+    {
+     "type": "castle / fortress with towers",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "top right, on a mountain summit in the far background",
+     "orientation": "silhouetted against a faintly lit sky",
+     "arrangement": "single walled complex; at least two or three distinct tower forms rise from it"
+    },
+    {
+     "type": "stairway / winding path",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right and center, running from the foreground pavement back and up the mountain to the castle",
+     "orientation": "receding away from the viewer, climbing right then left",
+     "arrangement": "a single continuous road with a flight of steps visible in the middle distance"
+    }
+   ],
+   "environment": [
+    "cracked flagstone pavement in the foreground",
+    "dark rocky mountainside",
+    "heavy overcast night sky",
+    "no vegetation resolvable"
+   ],
+   "lightSources": [
+    "a faint diffuse pale glow in the sky immediately behind and above the hilltop castle; no disc or point source visible"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the throne and seated figure occupy the left half; the road to the castle occupies the right half and runs diagonally from lower-center to upper-right",
+    "the upright stone slab stands between the figure and the viewer, lower than the figure's seat",
+    "a long dark shadow is cast from the figure and throne rightward/forward across the pavement toward the lower right",
+    "the castle sits at the far end and top of the same road that begins at the figure's feet"
+   ],
+   "foreground": [
+    "cracked stone paving",
+    "upright stone slab with the figure's hand on it",
+    "base of the throne",
+    "long cast shadow"
+   ],
+   "background": [
+    "mountain",
+    "hilltop castle with towers",
+    "clouded sky with a pale patch of light"
+   ]
+  },
+  "uncertainObservations": [
+   "the figure's face is almost entirely in shadow; expression and whether the head is hooded cannot be determined",
+   "whether the figure wears a crown or headpiece is not resolvable in the darkness",
+   "the exact number of towers on the distant castle cannot be resolved; at least two",
+   "whether the tall rod is planted in the ground or merely held just above it is ambiguous",
+   "the surface of the upright stone slab appears to carry faint carving, but the markings are illegible"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-313",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, standing behind a stone table/slab",
+     "posture": "standing upright, facing the viewer, right arm (viewer's left) extended forward and angled downward, left arm (viewer's right) raised and reaching sideways",
+     "gaze": "toward the viewer / slightly downward; the face is deep in shadow under the crown and cannot be read",
+     "heldObjects": [
+      "a pale luminous blade held point-DOWN in the extended right hand, its tip resting on or driven into an open book lying on the slab",
+      "the left hand grips a vertical bar of the open iron gate at the right"
+     ],
+     "clothing": "heavy dark cloak/mantle over a robe; an ornate vertical band down the chest with a cross-shaped or cruciform ornament at its center",
+     "headwear": "a tall spiked/pointed crown"
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center, angled down-left from the figure's hand onto the open book",
+     "orientation": "point-DOWN, tip touching/entering the book; hilt and crossguard uppermost near the hand",
+     "arrangement": "single blade, the only one in the frame"
+    },
+    {
+     "type": "open book",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center, lying flat on the top of the stone slab",
+     "orientation": "spread open, pages facing up, spine toward the viewer",
+     "arrangement": "single, pale pages catching the strongest light in the frame"
+    },
+    {
+     "type": "stone table / altar block / sarcophagus",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "foreground center, spanning most of the lower half",
+     "orientation": "front face toward the viewer, flat top surface",
+     "arrangement": "single; a butterfly or moth is carved in relief on the centre of its front face"
+    },
+    {
+     "type": "carved butterfly/moth relief",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "front face of the stone block, centered",
+     "orientation": "wings spread, head up",
+     "arrangement": "single relief panel"
+    },
+    {
+     "type": "wrought-iron gate leaf",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right side, standing open, swung toward the viewer",
+     "orientation": "vertical bars topped with spear-point finials pointing UP",
+     "arrangement": "one leaf clearly visible and open; a matching second leaf is not resolvable"
+    },
+    {
+     "type": "distant spires / gothic towers",
+     "count": null,
+     "countConfidence": "low",
+     "where": "middle distance beyond the gate, right of center",
+     "orientation": "vertical, silhouetted",
+     "arrangement": "a clustered group of pointed spires; individual towers overlap and cannot be separated"
+    },
+    {
+     "type": "stone steps / descending rubble path",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "beyond the gate, lower right, leading away from the gateway",
+     "orientation": "descending away from the viewer",
+     "arrangement": "single broken flight"
+    }
+   ],
+   "environment": [
+    "dark stone interior on the left (wall and a pier/column in deep shadow)",
+    "an open gateway on the right revealing an outdoor night landscape",
+    "cobbled floor in the lower right",
+    "cloud-dappled night sky"
+   ],
+   "lightSources": [
+    "a diffuse pale glow behind the mottled clouds in the upper right, silhouetting the spires; the blade and the open book are themselves noticeably brighter than everything around them"
+   ],
+   "moonPhase": "uncertain — a bright patch of sky shows through the clouds but no clean lunar disc or crescent edge is resolvable",
+   "spatialRelations": [
+    "the figure stands centered behind the slab, the slab between the figure and the viewer",
+    "the blade descends from the figure's hand to the book, linking hand, blade and book on one diagonal",
+    "the open gate is immediately to the figure's left (viewer's right), and the figure's hand is on it",
+    "interior darkness fills the left half, the outdoor view fills the right half; the figure straddles the boundary"
+   ],
+   "foreground": [
+    "stone slab with the open book",
+    "butterfly relief",
+    "cobbles at lower right"
+   ],
+   "background": [
+    "open iron gate",
+    "night sky with dappled cloud",
+    "distant spires",
+    "broken steps"
+   ]
+  },
+  "uncertainObservations": [
+   "the figure's face is unreadable; whether there is a face, a skull, or empty shadow under the crown cannot be determined",
+   "the exact count of points on the crown is not resolvable",
+   "whether the blade's tip actually pierces the book or only rests on it is ambiguous",
+   "the number of distant spires cannot be counted",
+   "whether a second gate leaf exists off-frame to the right is undetermined",
+   "the source of the pale glow behind the clouds cannot be identified"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-305",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, lying across the lower-middle of the frame, head to the left",
+     "posture": "lying on her side on a stone bier/couch, body extended to the right, head resting on a pillow, both arms folded forward with the hands resting one near the chest and one near the waist",
+     "gaze": "eyes closed",
+     "heldObjects": [
+      "nothing in the hands"
+     ],
+     "clothing": "a long pale gown with a sheer overlayer trailing off the bier; a sheer veil or netting drapes over the lower body",
+     "headwear": "a circlet of small pale leaves/flowers in the hair"
+    }
+   ],
+   "objects": [
+    {
+     "type": "suspended blade (upper register)",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "upper third, hanging in front of/within the arched window opening — one at left, one at center, one at right",
+     "orientation": "all three point-DOWN: pommel and crossguard uppermost, blade tapering downward toward the water/steps below",
+     "arrangement": "a row of three, evenly spaced, roughly parallel and vertical, spanning the window; the centre one hangs slightly lower than the outer two; no ring, no crossing"
+    },
+    {
+     "type": "horizontal blade (foreground)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lying flat on the ledge/front face of the bier, directly below the reclining figure",
+     "orientation": "horizontal, hilt and pommel at the LEFT, tip pointing RIGHT; lying flat, not held",
+     "arrangement": "single, parallel to the bier's edge"
+    },
+    {
+     "type": "blade (total in frame)",
+     "count": 4,
+     "countConfidence": "medium",
+     "where": "three suspended above, one lying in the foreground",
+     "orientation": "mixed — three point-down vertical, one horizontal",
+     "arrangement": "three in a row behind the figure, one across the bier in front of her"
+    },
+    {
+     "type": "gothic arched window",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper center, behind the figure",
+     "orientation": "pointed arch, with circular tracery/quatrefoil in the head",
+     "arrangement": "single large opening framed by columns at either side"
+    },
+    {
+     "type": "stone bier / couch",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower half, running left to right across the frame",
+     "orientation": "front face toward the viewer",
+     "arrangement": "single"
+    },
+    {
+     "type": "pillow / cushion",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "left, under the figure's head",
+     "orientation": "flat",
+     "arrangement": "single, with a tassel at its left corner"
+    },
+    {
+     "type": "flowering vine with pale blossoms",
+     "count": null,
+     "countConfidence": "low",
+     "where": "framing both the left and right edges, climbing the columns and spilling into the lower corners",
+     "orientation": "trailing downward and inward",
+     "arrangement": "two dense masses, left and right, plus scattered loose petals in the air"
+    },
+    {
+     "type": "steps descending to water",
+     "count": null,
+     "countConfidence": "low",
+     "where": "middle distance through the window, below the moon",
+     "orientation": "descending away from the viewer toward the water",
+     "arrangement": "a single broad flight; individual treads are too soft to count"
+    }
+   ],
+   "environment": [
+    "pale blue/white watercolour palette throughout",
+    "an interior or loggia opening onto water",
+    "a still body of water in the middle distance with a bright vertical reflection",
+    "low hills on the far shore",
+    "flowering vines and scattered petals"
+   ],
+   "lightSources": [
+    "a bright round disc high in the window opening, upper center-right, casting a vertical light-path down the water"
+   ],
+   "moonPhase": "appears full/round — a complete bright disc with no visible terminator, though the surrounding glow is diffuse",
+   "spatialRelations": [
+    "the three point-down blades hang directly behind and above the reclining figure, their tips ending well above her body — they do not touch her",
+    "the single horizontal blade lies below her, on the front of the bier, separating her from the viewer",
+    "the moon sits above and slightly right of the centre blade",
+    "the water and its reflected light-path run directly beneath the centre blade",
+    "vines enclose the scene on both left and right like a frame"
+   ],
+   "foreground": [
+    "the stone bier",
+    "the horizontal blade",
+    "trailing ribbon/sash falling from the bier",
+    "white blossoms in the lower corners"
+   ],
+   "background": [
+    "arched window with tracery",
+    "moon",
+    "water with reflection",
+    "steps",
+    "distant hills",
+    "columns wrapped in flowering vine"
+   ]
+  },
+  "uncertainObservations": [
+   "whether the bright disc is fully full or very slightly gibbous cannot be determined — its lower edge is washed out by glow and window tracery",
+   "the three upper blades appear to hang unsupported; no hand, cord or fixture holding them is visible",
+   "whether a needle, thread or small object lies in the figure's hands cannot be resolved — the hands appear empty",
+   "the number of steps and the number of distinct blossoms cannot be counted",
+   "whether the foreground horizontal blade rests on the bier's top ledge or is inset into its face is ambiguous"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-307",
+  "visibleFacts": {
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "left of center",
+     "posture": "standing, barefoot, body turned to face right (toward the other figure), both arms raised straight overhead",
+     "gaze": "upward toward the joined hands at the top center",
+     "heldObjects": [
+      "both hands raised to the center where they meet the other figure's hands, gripping a knotted/draped garland-cloth"
+     ],
+     "clothing": "long dark robe reaching the ankles; bare feet visible on the flagstones"
+    },
+    {
+     "position": "right of center",
+     "posture": "standing, barefoot, body turned to face left (toward the other figure), both arms raised overhead",
+     "gaze": "upward toward the joined hands",
+     "heldObjects": [
+      "both hands raised to meet the other figure's hands at the knot"
+     ],
+     "clothing": "long dark robe to the ankles; long dark hair falling past the shoulders; bare feet visible"
+    }
+   ],
+   "objects": [
+    {
+     "type": "tall upright post/pillar wrapped in foliage",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one at the far left, one at the far right, each running from the paving up past the top edge of the frame",
+     "orientation": "vertical",
+     "arrangement": "flanking pair, one at each side; the space between them is open, with the two figures standing inside it"
+    },
+    {
+     "type": "garland / leafy swag",
+     "count": null,
+     "countConfidence": "low",
+     "where": "spanning between the two posts across the top, plus long strands hanging down the inner face of each post",
+     "orientation": "draping downward in catenary curves from the posts toward a gathered knot at the top center",
+     "arrangement": "two swags meeting at a central knot directly above the figures' hands, with loose tails hanging down from that knot"
+    },
+    {
+     "type": "knotted cloth/tie at the center",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "top center, directly above and between the two figures' raised hands",
+     "orientation": "hanging downward, tails trailing",
+     "arrangement": "single knot where the two garland swags meet"
+    },
+    {
+     "type": "hanging cloth / banner on a line",
+     "count": null,
+     "countConfidence": "low",
+     "where": "strung along the walls on both the left and the right of the courtyard, mid-height",
+     "orientation": "hanging vertically from horizontal lines",
+     "arrangement": "several pale cloths on the left wall and several on the right wall; they overlap and recede into darkness, so no reliable count"
+    },
+    {
+     "type": "building with an arched doorway",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "center background, at the far end of the paved path",
+     "orientation": "facing the viewer",
+     "arrangement": "single structure; a tall arched opening at its base, crenellated/stepped roofline above"
+    },
+    {
+     "type": "paved path / courtyard",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "running from the foreground straight back to the building",
+     "orientation": "receding away from the viewer",
+     "arrangement": "single central path of flagstones"
+    }
+   ],
+   "environment": [
+    "stone courtyard paved with irregular flagstones",
+    "high stone walls on both sides, the right one carrying crenellations",
+    "washing-lines or banner-lines strung along both walls",
+    "dark, near-monochrome brown/black palette",
+    "no sky detail resolvable above the posts"
+   ],
+   "lightSources": [
+    "a diffuse glow from behind and above the central building; long shadows of both figures and both posts are thrown forward toward the lower edge of the frame, so the light is behind the scene"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the two figures stand facing each other, mirrored, with a clear gap of about a body's width between their torsos; only their raised hands meet, at the top",
+    "the knot of the garland hangs directly between and above their joined hands",
+    "the two posts flank the pair symmetrically, one outside each figure",
+    "the central path runs between the figures' feet back to the arched doorway",
+    "three long shadows (two figures, and the posts) fan toward the viewer across the paving"
+   ],
+   "foreground": [
+    "flagstone paving",
+    "the figures' bare feet",
+    "long cast shadows"
+   ],
+   "background": [
+    "central building with arched door",
+    "side walls with hanging cloths",
+    "crenellated wall top at the right"
+   ]
+  },
+  "uncertainObservations": [
+   "whether additional posts stand behind the two visible ones (a four-post canopy) cannot be determined — the inner hanging strands could be either extra posts or trailing vine, and the area is too dark to separate them",
+   "the number of hanging cloths on each wall cannot be counted",
+   "neither figure's facial features are resolvable; expressions are unknown",
+   "whether the figures' hands are actually clasping each other or each holding a separate end of the garland is ambiguous",
+   "whether the object in their hands is a floral garland, a rope, or a folded cloth cannot be settled",
+   "the source of the background glow cannot be identified"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-309",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "upper left to center, behind a large square frame",
+     "posture": "kneeling or crouching low, torso leaning forward over the frame, shoulders rounded",
+     "gaze": "downward at the fabric in front of her; eyes lowered, mouth closed, brow slightly drawn",
+     "heldObjects": [
+      "both hands rest on the upper edge of the stretched fabric; the fingers of both hands are positioned as if stitching — a fine thread or needle may be pinched between them but is at the limit of resolution"
+     ],
+     "clothing": "a green hooded robe/mantle over a pale undergarment with wide, lace-edged sleeves; damp curly dark hair gathered up with loose strands falling over the face"
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "all three converge on a large red heart-shaped patch stitched to the fabric panel",
+     "orientation": "MIXED and specific — the CENTER blade is vertical with pommel and crossguard UP at the top of the heart and its blade running straight DOWN through the heart's midline; the LEFT blade is diagonal with its pommel/grip low and outward at the lower left and its point directed INWARD and UPWARD into the heart; the RIGHT blade is diagonal with its pommel/grip low and outward at the lower right and its point directed INWARD and UPWARD into the heart",
+     "arrangement": "one vertical down the centre, flanked by two symmetric diagonals rising inward from below — a converging fan, not a row and not a ring; all three meet inside the red heart"
+    },
+    {
+     "type": "red heart-shaped applique/patch",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center of the stretched fabric panel",
+     "orientation": "point of the heart downward, lobes upward",
+     "arrangement": "single, sewn onto the panel with visible stitch lines along its edges and down its middle"
+    },
+    {
+     "type": "embroidery/tapestry frame with stretched fabric",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center foreground, occupying most of the lower half",
+     "orientation": "upright, flat face toward the viewer",
+     "arrangement": "single square wooden frame holding coarse woven cloth"
+    },
+    {
+     "type": "wicker basket",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right side, mid-height, beside the frame",
+     "orientation": "upright, open top",
+     "arrangement": "single; filled with skeins of wool/yarn"
+    },
+    {
+     "type": "ceramic jug / pot",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower left, at the base of the frame",
+     "orientation": "upright",
+     "arrangement": "a small cluster of two or three vessels plus a shallow bowl, overlapping and partly hidden by foliage"
+    },
+    {
+     "type": "spool of red thread",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "lower left, among the pots",
+     "orientation": "upright",
+     "arrangement": "single spool wound with dark red thread"
+    },
+    {
+     "type": "mushroom",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower left corner, on the ground",
+     "orientation": "caps facing up/outward",
+     "arrangement": "a small cluster of two or three overlapping caps"
+    },
+    {
+     "type": "wooden box/chest",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "lower right, partly behind ferns",
+     "orientation": "upright, lid closed",
+     "arrangement": "single"
+    },
+    {
+     "type": "red cloth pile",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right of the frame, draped over the box/ground",
+     "orientation": "heaped",
+     "arrangement": "single mass of the same red as the heart patch"
+    }
+   ],
+   "environment": [
+    "a wet forest clearing",
+    "steady diagonal rain streaking across the whole frame",
+    "heavy grey overcast sky with broken clouds",
+    "tall tree trunks left and right, leafy branches overhanging from the upper right",
+    "a river or stream winding through a wooded valley in the middle distance at right",
+    "ferns, grass, small white daisies and mushrooms in the foreground",
+    "a decorative painted border with botanical scrollwork frames the whole image"
+   ],
+   "lightSources": [
+    "flat, diffuse daylight from the overcast sky; no sun disc, no lamp, no directional highlight"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the figure is behind the frame, the frame between her and the viewer; her hands come over its top edge",
+    "the three blades all point into the single red heart at the panel's centre",
+    "the basket of wool sits to the right of the frame at roughly the same depth",
+    "the pots and thread sit to the left of the frame, lower",
+    "the river valley is visible over the figure's right shoulder (viewer's right), behind the tree line",
+    "rain falls across everything, including the figure and the panel"
+   ],
+   "foreground": [
+    "ferns",
+    "mushrooms",
+    "daisies",
+    "wet ground",
+    "the lower edge of the embroidery frame"
+   ],
+   "background": [
+    "forest",
+    "overcast sky",
+    "river valley",
+    "distant tree-covered slopes"
+   ]
+  },
+  "uncertainObservations": [
+   "whether a needle and thread are actually held between the figure's fingers cannot be confirmed at this resolution",
+   "the number of small vessels at the lower left cannot be resolved — they overlap and are partly covered by foliage",
+   "the number of mushroom caps in the lower-left cluster cannot be resolved",
+   "whether the blades are physical objects standing in front of the panel or are themselves embroidered/appliqued onto it is ambiguous — they cast no clear shadow on the cloth",
+   "the contents of the wicker basket read as wool skeins but could be something else"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-311",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left of center, foreground, seen from BEHIND",
+     "posture": "standing, back to the viewer, right arm raised high and extended forward to grip the blade's grip at about head height",
+     "gaze": "away from the viewer, toward the blade and the stone block; face not visible at all",
+     "heldObjects": [
+      "the grip of a large luminous blade"
+     ],
+     "clothing": "a long dark cloak or mantle falling from the shoulders to the floor, gathered in heavy vertical folds; short dark hair visible above the collar"
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center of the frame, running from the figure's raised hand down into the stone block",
+     "orientation": "point-DOWN and vertical — the tip is driven into the top of the stone block; the crossguard sits above the hand, with a long straight upper quillon/rain-guard and a small finial at the very top",
+     "arrangement": "single, standing alone and perfectly vertical; it is the brightest object in the frame"
+    },
+    {
+     "type": "stone block / altar",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center foreground, the blade's tip enters its top surface",
+     "orientation": "front face toward the viewer, flat top",
+     "arrangement": "single; a carved circular rosette/disc with radiating spokes is incised into the top surface around the blade, and a large vertical crack splits the front face directly below the blade"
+    },
+    {
+     "type": "bare branching structure (tree-like twigs)",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "immediately behind the blade at crossguard height, spreading symmetrically to the left and right",
+     "orientation": "branches radiating outward and upward from behind the blade's midpoint",
+     "arrangement": "a single pale branching mass, wider than tall, forming a canopy/halo behind the blade; the blade's shaft runs vertically through its centre"
+    },
+    {
+     "type": "arched stone doorway",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right side, middle distance",
+     "orientation": "pointed/round arch facing left toward the chamber's interior",
+     "arrangement": "single dark opening set into the right wall"
+    },
+    {
+     "type": "stair",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "right side, running diagonally up alongside and below the archway",
+     "orientation": "ascending from the lower right toward the archway",
+     "arrangement": "single flight; individual treads are partly lost in shadow"
+    },
+    {
+     "type": "large leaning stone slab / monolith",
+     "count": null,
+     "countConfidence": "low",
+     "where": "left side, middle distance, and again at the far right edge",
+     "orientation": "tilted, leaning inward",
+     "arrangement": "at least two on the left and one at the right edge, but they merge into the dark wall and cannot be separated reliably"
+    },
+    {
+     "type": "small dark specks",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered in the air immediately around the blade and the branch mass",
+     "orientation": "indeterminate",
+     "arrangement": "loose scatter; could be falling debris, leaves, or distant birds"
+    }
+   ],
+   "environment": [
+    "the interior of a large dark stone chamber",
+    "a ribbed/fan vault radiating outward overhead from a point above the blade",
+    "cobbled or flagstone floor",
+    "near-monochrome black and warm-grey palette"
+   ],
+   "lightSources": [
+    "a shaft of pale light descending from the apex of the vault directly onto the blade; the blade itself glows white along its whole length; no sun, no moon, no flame"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the figure stands to the left of the blade and reaches rightward/upward to it; the blade is centred in the frame, the figure is not",
+    "the blade runs vertically from the vault's light shaft, through the pale branching mass, past the figure's hand, and down into the stone block",
+    "the crack in the stone block is directly in line with the blade's tip",
+    "a long shadow of the figure extends from the base of the cloak toward the lower edge of the frame",
+    "the vault's ribs converge on a point directly above the blade's hilt"
+   ],
+   "foreground": [
+    "cobbled floor",
+    "the figure's cloak and cast shadow",
+    "the cracked stone block"
+   ],
+   "background": [
+    "vaulted ceiling",
+    "arched doorway at right",
+    "stair",
+    "leaning slabs at left",
+    "light shaft from above"
+   ]
+  },
+  "uncertainObservations": [
+   "the figure's face, sex, age and expression are entirely unknown — the figure is seen only from behind",
+   "whether the pale branching mass is a real tree, dead branches, cracks in the air, or an emanation from the blade cannot be determined",
+   "the small dark specks around the blade cannot be identified (debris vs. birds vs. leaves)",
+   "the number of leaning slabs on the left cannot be counted",
+   "whether the carved circle on the block's top is a rosette, a clock face or an inscribed ring is not legible",
+   "whether the stair at the right ascends or descends relative to the chamber floor is ambiguous"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-317",
+  "visibleFacts": {
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "center, standing in the middle of the boat, the further of the two from the viewer",
+     "posture": "standing upright, back to the viewer, both hands on a long pole/oar that angles down and to the right into the water",
+     "gaze": "away from the viewer, toward the lit horizon ahead",
+     "heldObjects": [
+      "a long pole or single oar, gripped with both hands, entering the water off the boat's right side"
+     ],
+     "clothing": "a dark hooded cloak/mantle over the shoulders; dark curly hair visible above the collar, head uncovered"
+    },
+    {
+     "position": "center, seated lower in the boat, nearer to the viewer",
+     "posture": "seated, back to the viewer, shoulders rounded, head slightly bowed",
+     "gaze": "away from the viewer, toward the horizon",
+     "heldObjects": [
+      "nothing visible; the hands are hidden inside the cloak"
+     ],
+     "clothing": "a large patterned blue cloak with the head covered by its hood/veil"
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade standing in the boat, left side",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "along the boat's left gunwale/interior, in a row running from nearest to furthest",
+     "orientation": "all upright, hilts and pommels UP, blades descending POINT-DOWN into the boat's floor/side",
+     "arrangement": "a row of three, evenly spaced, roughly parallel and vertical"
+    },
+    {
+     "type": "blade standing in the boat, right side",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "along the boat's right gunwale/interior",
+     "orientation": "all upright, hilts and pommels UP, blades point-DOWN into the boat",
+     "arrangement": "a row of three, evenly spaced, mirroring the left group"
+    },
+    {
+     "type": "blade (total in frame)",
+     "count": 6,
+     "countConfidence": "medium",
+     "where": "three on the left of the boat, three on the right",
+     "orientation": "all upright with hilts up and points driven down into the boat",
+     "arrangement": "TWO SEPARATE ROWS flanking the boat's centre — NOT a ring and NOT a single row; there is a clear open gap in the middle of the boat where the two figures sit, and a gap at the stern in the foreground"
+    },
+    {
+     "type": "boat",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower center, seen from astern",
+     "orientation": "prow pointing away from the viewer toward the horizon",
+     "arrangement": "single wooden rowboat with a carved/decorated stern panel facing the viewer and internal thwarts"
+    },
+    {
+     "type": "pole / oar",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "held by the standing figure, angling from upper-left down to lower-right into the water",
+     "orientation": "diagonal, blade end submerged on the boat's right side",
+     "arrangement": "single; no matching second oar visible on the left"
+    },
+    {
+     "type": "celestial sphere (planet/moon-like body)",
+     "count": 3,
+     "countConfidence": "low",
+     "where": "one upper right near the frame edge, one large in the upper center-right, one at the left edge in the mid-upper sky",
+     "orientation": "all shown as full round discs with surface mottling",
+     "arrangement": "scattered across the sky, not aligned"
+    },
+    {
+     "type": "spiral galaxy / nebula",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "upper left corner",
+     "orientation": "face-on spiral",
+     "arrangement": "single"
+    },
+    {
+     "type": "constellation line-work",
+     "count": null,
+     "countConfidence": "low",
+     "where": "across the upper half of the sky, densest in the upper right",
+     "orientation": "a web of thin straight lines connecting stars, plus concentric arcs",
+     "arrangement": "an overlapping geometric web; individual figures cannot be separated"
+    },
+    {
+     "type": "domed pavilion / colonnaded rotunda",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right shore, middle distance",
+     "orientation": "facing the water",
+     "arrangement": "single circular structure with a dome on columns"
+    },
+    {
+     "type": "shoreline column/post",
+     "count": null,
+     "countConfidence": "low",
+     "where": "along the right shore, leading toward the pavilion",
+     "orientation": "vertical",
+     "arrangement": "a line of several small uprights receding along the bank; too small and too dim to count"
+    },
+    {
+     "type": "palm-like tree",
+     "count": null,
+     "countConfidence": "low",
+     "where": "right shore, behind and beside the pavilion",
+     "orientation": "upright, fronds spreading",
+     "arrangement": "a small grove of several; overlapping silhouettes"
+    }
+   ],
+   "environment": [
+    "calm open water filling the lower half, with fine ripple detail and reflected starlight",
+    "a dense starfield with a bright Milky Way band running diagonally from upper left to center right",
+    "low mountains on the far left horizon",
+    "a wooded/columned shore on the right"
+   ],
+   "lightSources": [
+    "a warm golden glow low on the horizon at center-right, throwing a bright golden column of reflection straight down the water toward the boat",
+    "widespread starlight",
+    "the celestial spheres are lit but are not obvious light sources"
+   ],
+   "moonPhase": "uncertain — several round bodies are visible in the sky, all rendered as full discs, but none reads unambiguously as a moon and none shows a crescent or terminator",
+   "spatialRelations": [
+    "the standing figure is directly behind the seated figure; both face away from the viewer toward the horizon glow",
+    "the two rows of blades bracket both figures, three to their left and three to their right, with the boat's centre aisle open between them",
+    "the golden reflection path on the water runs from the horizon straight toward the boat's prow",
+    "the pavilion and shore are off the boat's right side, the mountains off its left",
+    "the Milky Way band passes diagonally behind the standing figure's head"
+   ],
+   "foreground": [
+    "the boat's stern and carved stern panel",
+    "dark rippled water in the bottom corners"
+   ],
+   "background": [
+    "starfield with constellation lines",
+    "celestial spheres",
+    "galaxy",
+    "golden horizon glow",
+    "mountains at left",
+    "domed pavilion and trees at right"
+   ]
+  },
+  "uncertainObservations": [
+   "the blade count is the least certain observation in this image: I resolved three hilts on the left and three on the right (six total), but the right-hand group is partly occluded by the seated figure's shoulder and sits against bright water reflections — a fourth blade on either side cannot be fully ruled out",
+   "neither figure's face is visible; both are seen from behind, so expression, age and identity are unknown",
+   "whether the blades are driven through the boat's hull, seated in sockets, or merely leaning is not determinable",
+   "the number of celestial spheres is uncertain; some bright patches in the sky may be nebulae rather than discs",
+   "whether the golden horizon glow is a setting sun, a rising sun, or a distant fire cannot be determined — no disc is visible within it",
+   "whether the standing figure holds one oar or a punting pole is ambiguous; no second oar is visible",
+   "the number of shoreline columns and trees on the right bank cannot be counted"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-d"
+ }
+]

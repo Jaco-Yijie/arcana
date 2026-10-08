@@ -1,0 +1,790 @@
+[
+  {
+    "reviewId": "review-501",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center, slightly below middle of the frame",
+          "posture": "seated/kneeling low on the paving, torso upright, body squarely frontal toward the viewer, skirt spread out around her on the ground",
+          "gaze": "head tilted slightly down and toward viewer-left; eyes appear open and cast downward, not meeting the viewer",
+          "heldObjects": [
+            "a long straight sword in her viewer-left hand (her right), held low at hip height, blade angled down and out to viewer-left, point resting on / near the ground, a small bright spark of light at the point",
+            "a long straight sword in her viewer-right hand (her left), held low at hip height, blade angled down and out to viewer-right, point resting on / near the ground"
+          ],
+          "clothing": "dark long-sleeved floor-length gown with a wide scooped neckline that bares one shoulder, heavy draped skirt, a dark shawl or drape over the arms; long dark hair, and a dark band or wrap around the head/forehead"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "one in each of the figure's hands, blades reaching down to the paving on both sides of her",
+          "orientation": "both blades angled downward, points toward the ground, hilts up at the figure's hips",
+          "arrangement": "a symmetric outward V / splayed pair, mirrored left and right"
+        },
+        {
+          "type": "ground medallion / carved paving roundel",
+          "count": 2,
+          "countConfidence": "medium",
+          "where": "in the foreground paving below the figure, one toward viewer-left and one toward viewer-right",
+          "orientation": "flat, set into the horizontal ground plane",
+          "arrangement": "two separate circular carvings, one on each side of the lower frame; the left one has radiating spokes/rays, the right one a hooked crescent-like curve",
+          "note": null
+        },
+        {
+          "type": "door",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper viewer-left, at the top of a short flight of stone steps",
+          "orientation": "vertical, facing roughly toward the viewer-right",
+          "arrangement": "single tall plank door in a stone surround, with a round tracery window set in the wall above it"
+        },
+        {
+          "type": "stone step",
+          "count": null,
+          "countConfidence": "low",
+          "where": "below the door at viewer-left, descending toward the paving",
+          "orientation": "horizontal treads stacked vertically",
+          "arrangement": "a short straight flight; individual treads blur into shadow"
+        }
+      ],
+      "environment": [
+        "cracked flagstone / crazed stone paving covering the whole foreground",
+        "a stone wall with a plank door and an arched tracery window at upper viewer-left",
+        "a short stone stair descending from that door",
+        "climbing vines or dead creeper over the wall and door frame",
+        "a broad flat body of water filling the right middle ground",
+        "a low dark shoreline or ruined structures on the far side of the water at viewer-right",
+        "heavy broken cloud across the upper sky"
+      ],
+      "lightSources": [
+        "a large moon in the upper viewer-right sky, the dominant light",
+        "a glint/spark at the point of the viewer-left sword",
+        "a long specular moon-track on the water at viewer-right"
+      ],
+      "moonPhase": "gibbous",
+      "spatialRelations": [
+        "the figure is at the convergence of two pale light-paths that run out to the lower-left and lower-right corners",
+        "the door and stair are behind and to the viewer-left of the figure",
+        "the water and the moon are behind and to the viewer-right of the figure",
+        "the moon sits above and to the right of the figure's head",
+        "the two carved roundels lie in front of (nearer the viewer than) the figure, one under each sword point",
+        "the moonlight track on the water runs toward the lower-left, pointing back toward the figure"
+      ],
+      "foreground": [
+        "cracked paving stones",
+        "the two carved circular roundels",
+        "the lower halves of both sword blades and their points"
+      ],
+      "background": [
+        "moon and clouded night sky",
+        "water with moon reflection",
+        "distant dark shoreline silhouettes",
+        "the walled doorway and stair at viewer-left"
+      ]
+    },
+    "uncertainObservations": [
+      "The moon's terminator is soft; the lit portion clearly covers more than half the disc so I read it as gibbous, but the shadowed left limb is faint enough that a crescent reading cannot be fully excluded.",
+      "The dark band across the figure's forehead could be a headband, a woven circlet, or hair falling across the brow; I cannot tell whether her eyes are covered. They read as uncovered.",
+      "Whether the sword points actually touch the ground or hover just above it is not resolvable.",
+      "The carvings on the two foreground roundels are eroded; I can see a radial/rayed pattern on the left and a hooked curve on the right but cannot make out finer detail.",
+      "The dark shapes on the far shore at viewer-right could be ruined buildings, rocks, or distant trees.",
+      "Whether the figure is kneeling or sitting cross-legged is hidden by the spread of the skirt."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-513",
+    "visibleFacts": {
+      "figureCount": 3,
+      "figures": [
+        {
+          "position": "viewer-left, standing in front of the left wall of pentacle niches",
+          "posture": "standing, body in near-profile turned toward viewer-right, slightly stooped, weight settled",
+          "gaze": "head turned toward viewer-right, looking at the central figure's hand",
+          "heldObjects": [
+            "a small pale object held out in the right hand at about waist/chest height, extended horizontally toward the central figure; it reads as a small key- or pendant-shaped item"
+          ],
+          "clothing": "long heavy hooded robe to the floor with a patterned border; very long white beard and long white hair"
+        },
+        {
+          "position": "center of the frame, directly in the mouth of the archway",
+          "posture": "standing upright, body in profile turned toward viewer-left",
+          "gaze": "head turned toward viewer-left, toward the bearded figure",
+          "heldObjects": [
+            "right hand extended forward at waist height toward the bearded figure, meeting/receiving the small pale object",
+            "left hand reaching back and down to viewer-right, clasped with the right-hand figure's hand"
+          ],
+          "clothing": "dark long coat or robe to the ankles, fitted at the waist; dark shoulder-length hair"
+        },
+        {
+          "position": "viewer-right of center, standing in front of the right wall of pentacle niches",
+          "posture": "standing upright, body angled toward viewer-left, facing the central figure",
+          "gaze": "head turned toward viewer-left, toward the central figure",
+          "heldObjects": [
+            "one hand raised to about chest height and clasped with the central figure's left hand"
+          ],
+          "clothing": "long full-length gown falling to the floor, long hair"
+        }
+      ],
+      "objects": [
+        {
+          "type": "pentacle disc in a wall niche",
+          "count": 6,
+          "countConfidence": "high",
+          "where": "set into the two stone side walls flanking the archway, three on the viewer-left wall and three on the viewer-right wall",
+          "orientation": "vertical, face-on to the viewer, each inside an arched recess",
+          "arrangement": "two vertical columns of three, mirrored left and right"
+        },
+        {
+          "type": "pentacle carved into a floor slab",
+          "count": 4,
+          "countConfidence": "medium",
+          "where": "in the paved foreground in front of the figures",
+          "orientation": "flat, lying in the horizontal ground plane",
+          "arrangement": "scattered across separate raised slabs, roughly two nearer slabs and two farther slabs, left and right of the center line"
+        },
+        {
+          "type": "dog",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "lower viewer-left, on the paving beside the bearded figure",
+          "orientation": "seated upright, body turned toward viewer-right, head up",
+          "arrangement": "single animal"
+        },
+        {
+          "type": "archway",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "center, framing the view through to the background",
+          "orientation": "vertical, opening toward the viewer",
+          "arrangement": "single large round-headed arch with heavy carved voussoirs"
+        },
+        {
+          "type": "stone stair",
+          "count": null,
+          "countConfidence": "low",
+          "where": "centered inside the archway, running away from the viewer and downward/upward into the background",
+          "orientation": "horizontal treads receding",
+          "arrangement": "a single narrow straight flight; individual treads are not countable in the gloom"
+        }
+      ],
+      "environment": [
+        "a heavy stone gatehouse or portal interior with deeply carved, weathered masonry",
+        "two flanking walls each with three arched niches",
+        "paved floor of large irregular slabs, several raised like low plinths",
+        "a narrow stair running away through the archway",
+        "a dense cluster of tall towers / a walled city visible through the arch",
+        "a few small warm lights in the distant tower windows",
+        "mist or rain haze over the distant city"
+      ],
+      "lightSources": [
+        "a cool diffuse light falling from above and slightly behind, pooling on the paving between the figures",
+        "scattered small warm window lights in the distant towers"
+      ],
+      "moonPhase": "not visible — there is no moon anywhere in frame; the sky is obscured by the gatehouse and by the towers beyond the arch",
+      "spatialRelations": [
+        "the bearded figure stands at viewer-left, the central figure in the arch mouth, the gowned figure at viewer-right; all three are in one shallow line across the frame",
+        "the exchanged object is between the bearded figure and the central figure, at the midpoint of the frame's left half",
+        "the central and right-hand figures' hands are joined at the right of the central figure",
+        "the dog sits lower and further forward than the bearded figure, at his left and nearer the viewer",
+        "the six wall pentacles are behind and above the figures, three on each side",
+        "the floor pentacles are in front of (nearer the viewer than) all three figures",
+        "the distant city is framed inside and beyond the arch, directly behind the central figure",
+        "all three figures cast long shadows toward the viewer"
+      ],
+      "foreground": [
+        "raised paving slabs carrying the carved floor pentacles",
+        "the seated dog at lower viewer-left",
+        "the figures' cast shadows running toward the bottom of the frame"
+      ],
+      "background": [
+        "the distant towered city seen through the arch",
+        "the stair receding through the arch",
+        "the niche walls with their pentacle discs"
+      ]
+    },
+    "uncertainObservations": [
+      "The small pale object being passed between the bearded figure and the central figure is roughly key-shaped, but at this size and contrast I cannot confirm what it is.",
+      "The floor pentacle count of 4 is my best read; the paving is dark and a fifth carving on a slab further back or at the frame edge could be lost in shadow. The six wall discs I am confident about.",
+      "I cannot tell whether the right-hand figure is holding anything in her other hand; it is lost against her gown.",
+      "The animal at lower-left reads as a dog from its sitting posture, muzzle and feathered tail, but the breed and even the species are not certain.",
+      "Whether the stair inside the arch descends away from the viewer or climbs is ambiguous.",
+      "Facial features of the central and right-hand figures are in silhouette and unreadable; I am inferring nothing about their expressions."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-505",
+    "visibleFacts": {
+      "figureCount": 3,
+      "figures": [
+        {
+          "position": "viewer-left",
+          "posture": "standing / mid-step with the near leg lifted, body turned toward viewer-right, torso arched back, both arms raised overhead; barefoot",
+          "gaze": "head tilted back and up, face toward the raised hands",
+          "heldObjects": [
+            "a footed goblet raised in the upper hand, held overhead at full arm's reach, bowl upward, tilted toward the center of the group"
+          ],
+          "clothing": "long teal-blue gown with wide flowing sleeves and gold embroidery at the hem and cuffs, gold belt; very long dark wavy hair"
+        },
+        {
+          "position": "center",
+          "posture": "standing / mid-step facing the viewer, head tipped back, both arms raised straight overhead; barefoot",
+          "gaze": "head tipped back, face lifted upward, eyes appear closed",
+          "heldObjects": [
+            "both hands raised overhead toward the point where the goblets meet; whether a goblet is in her grip is not resolvable"
+          ],
+          "clothing": "long deep-purple/plum gown with a plunging neckline, sheer layered skirt, jewelled waist band and necklace; long dark wavy hair"
+        },
+        {
+          "position": "viewer-right",
+          "posture": "standing / mid-step with the near foot lifted, body turned toward viewer-left, both arms raised overhead; barefoot",
+          "gaze": "head tilted up and toward viewer-left, face toward the raised hands",
+          "heldObjects": [
+            "a footed goblet raised in the upper hand, held overhead at full arm's reach, bowl upward, tilted toward the center of the group"
+          ],
+          "clothing": "long crimson-red gown with sheer flaring sleeves and gold ornament at the waist; long light auburn wavy hair"
+        }
+      ],
+      "objects": [
+        {
+          "type": "goblet / cup",
+          "count": 2,
+          "countConfidence": "low",
+          "where": "overhead at the top center of the group of figures, where all the raised arms converge",
+          "orientation": "upright, bowls up, stems down, each tilted slightly inward toward the other",
+          "arrangement": "two bowls meeting rim to rim at a single point; a third cup, if present, would be hidden directly behind them"
+        },
+        {
+          "type": "fruit (grapes, pomegranates, round stone fruit)",
+          "count": null,
+          "countConfidence": "low",
+          "where": "across the bottom edge of the frame, nearest the viewer, piled at viewer-left and spilling toward center",
+          "orientation": "lying loose on the ground plane",
+          "arrangement": "a heaped scatter; individual fruits overlap and run out of frame, not countable"
+        },
+        {
+          "type": "domed pavilion / rotunda",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "viewer-right middle ground, partly out of frame at the right edge",
+          "orientation": "vertical, columns facing the viewer",
+          "arrangement": "single circular colonnaded structure with a ribbed dome"
+        },
+        {
+          "type": "hanging lantern",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "inside the pavilion at viewer-right, hanging between the columns",
+          "orientation": "hanging vertically",
+          "arrangement": "single lit lantern"
+        },
+        {
+          "type": "small pale sphere in the sky (planet or moon)",
+          "count": null,
+          "countConfidence": "low",
+          "where": "scattered in the upper sky — one at the top left edge, one upper right of center, one at the left edge below it, one lower at the left edge",
+          "orientation": "flat discs against the sky",
+          "arrangement": "scattered, non-symmetric; several are cropped by the frame edge so I cannot be sure of the total"
+        }
+      ],
+      "environment": [
+        "a wide star-dense night sky with a bright nebula / Milky Way band running down from the top center",
+        "a fine gold geometric overlay of concentric circles, radial lines and constellation-style linked dots across the whole sky",
+        "a band of warm golden light along the horizon behind the figures",
+        "a polished wet stone terrace that mirrors the figures and the sky",
+        "a low balustrade or parapet running across the middle distance",
+        "trees and slender columns at viewer-left middle ground",
+        "a decorative border frame line running around the inside edge of the image"
+      ],
+      "lightSources": [
+        "the lit lantern in the pavilion at viewer-right",
+        "the golden horizon glow behind the figures",
+        "a small burst of light directly beneath the meeting goblets",
+        "the general starfield and nebula glow"
+      ],
+      "moonPhase": "not visible — no clearly identifiable moon; several small pale spheres hang in the sky and read as planets, their lit/unlit boundaries too faint to call a phase",
+      "spatialRelations": [
+        "the three figures stand in a line across the center of the frame, left / center / right",
+        "all three raise their arms to converge on a single point above the center figure's head",
+        "the goblets are above and slightly behind the center figure's raised hands",
+        "the pavilion is behind and to the viewer-right of the right-hand figure",
+        "the trees and columns are behind and to the viewer-left of the left-hand figure",
+        "the horizon glow runs behind all three figures at about hip height",
+        "the heaped fruit lies in front of and below all three figures, nearest the viewer",
+        "the figures' reflections extend downward into the wet terrace toward the viewer"
+      ],
+      "foreground": [
+        "heaped grapes, pomegranates and round fruit along the bottom edge",
+        "the wet reflective paving and the figures' reflections"
+      ],
+      "background": [
+        "star field, nebula band and the gold geometric sky overlay",
+        "golden horizon glow",
+        "the domed pavilion at viewer-right and the trees/columns at viewer-left",
+        "the pale spheres in the sky"
+      ]
+    },
+    "uncertainObservations": [
+      "Cup count is the weakest point of this read. I can resolve two goblets meeting rim to rim at the top. The center figure's raised hands reach the same point and could be holding a third goblet hidden directly behind the other two, or could be empty. I will not guess; count is recorded as 2 with low confidence.",
+      "I cannot count the fruit in the foreground; it is a continuous overlapping heap that runs out of frame.",
+      "The small pale spheres in the sky: I can see at least three and possibly four, but several are cut by the frame edge and some may be bokeh/nebula knots rather than bodies. No reliable count.",
+      "Whether the center figure's eyes are closed or merely in deep shadow under her tipped-back head is not resolvable.",
+      "The structure at viewer-left is read as trees plus slender columns, but it is dark and could be entirely architecture or entirely vegetation.",
+      "The warm band at the horizon could be a sunset, a distant city, or firelight; I only record that it is a warm glow."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-507",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "viewer-left of center, standing on a stone stair",
+          "posture": "standing, braced and leaning hard forward to the viewer-right, one leg forward with the knee bent on the upper step and the rear leg extended straight back down the stair, torso pitched forward, both arms extended ahead at chest height",
+          "gaze": "head in profile turned toward viewer-right, looking up at the hub of the wheel",
+          "heldObjects": [
+            "both hands pressed/gripping on the central hub of the large wheel at about chest-to-shoulder height, arms straight out in front, pushing toward viewer-right"
+          ],
+          "clothing": "a long ragged coat or cloak whose hem is shredded into long trailing strips that stream back and down to the viewer-left; close-fitting trousers and soft boots or wrapped feet; short-to-medium dark hair"
+        }
+      ],
+      "objects": [
+        {
+          "type": "wheel",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "dominating the viewer-right two thirds of the frame, standing on edge",
+          "orientation": "vertical, its plane facing the viewer, hub at about the figure's shoulder height",
+          "arrangement": "a single enormous spoked wheel with a heavy segmented outer rim and a thick inner ring"
+        },
+        {
+          "type": "wheel spoke",
+          "count": null,
+          "countConfidence": "low",
+          "where": "radiating from the hub out to the rim",
+          "orientation": "radial, in the wheel's vertical plane",
+          "arrangement": "evenly spaced radial bars; the upper and right spokes are visible but the left and lower-left ones are hidden behind the figure and lost in shadow, so I cannot count them"
+        },
+        {
+          "type": "carved relief panel set on the wheel",
+          "count": 3,
+          "countConfidence": "medium",
+          "where": "one on the upper vertical spoke above the hub, one on the spoke to the viewer-right of the hub, one on the lower-right spoke below the hub",
+          "orientation": "flat plaques lying along the spokes, following the radial direction",
+          "arrangement": "spaced around the hub, roughly at the top, the right, and the lower right"
+        },
+        {
+          "type": "stone step",
+          "count": null,
+          "countConfidence": "low",
+          "where": "running up from the lower-left corner to the platform the figure stands on",
+          "orientation": "horizontal treads rising toward viewer-right",
+          "arrangement": "a straight flight; the lower treads dissolve into darkness and are not countable"
+        },
+        {
+          "type": "arched window",
+          "count": null,
+          "countConfidence": "low",
+          "where": "in the wall at viewer-left, behind and above the figure",
+          "orientation": "vertical, in the left wall",
+          "arrangement": "at least one tall arched opening, possibly a row of them; the wall is very dark"
+        }
+      ],
+      "environment": [
+        "a large dark stone interior, like a hall or tower chamber",
+        "a vaulted or ribbed ceiling structure at the top of the frame",
+        "a tall arched opening in the left wall",
+        "a stone staircase climbing from the lower-left",
+        "a flagged / checkered floor visible at the bottom left",
+        "a second, larger dark circular form behind the wheel at viewer-right, partly hidden by it",
+        "heavy soot-dark atmosphere, everything rendered in near-monochrome brown-black"
+      ],
+      "lightSources": [
+        "a weak diffuse light entering from the upper viewer-left, grazing the figure's back and the top of the wheel; no light-emitting object is visible in frame"
+      ],
+      "moonPhase": "not visible — the scene is an enclosed interior with no sky in frame",
+      "spatialRelations": [
+        "the figure is at viewer-left of the wheel and reaching to viewer-right toward its hub",
+        "the wheel's hub is directly in front of and slightly above the figure's hands",
+        "the stair runs from the lower-left corner up to the platform under the figure's forward foot",
+        "the figure's tattered hem trails back to the viewer-left, away from the wheel",
+        "the relief panel with the serpentine carving is at the top of the wheel, directly above the hub",
+        "the arched window is behind the figure at upper viewer-left",
+        "the second large dark circle lies behind the wheel toward the right edge"
+      ],
+      "foreground": [
+        "the lower stair treads and the flagged floor at lower viewer-left",
+        "the trailing shredded hem of the figure's coat"
+      ],
+      "background": [
+        "the vaulted ceiling and left-wall arches",
+        "the second large dark circular form behind the wheel",
+        "the deep unlit space at the right edge"
+      ]
+    },
+    "uncertainObservations": [
+      "I cannot count the wheel's spokes. The visible upper-right arc is evenly divided and the spacing suggests a regular division, but the left half is behind the figure and in shadow, so any total would be a guess.",
+      "The carving on the panel at the top of the wheel is a long curved S-shaped form; it reads as a serpent but I cannot confirm a head or scales.",
+      "The relief on the spoke to the viewer-right of the hub shows a quadruped with a long muzzle and upright ears in profile; I can see the silhouette but not enough detail to identify the animal.",
+      "The relief on the lower-right spoke is too eroded/dark for me to make out what it depicts.",
+      "The large dark circular form behind the wheel could be a second wheel, a gear, or an architectural oculus.",
+      "Whether the figure is pushing the wheel or holding onto it to stop it is not determinable from the pose alone; I only record that the arms are extended and the body is braced.",
+      "The figure's footwear is indistinct — boots, wraps, or bare feet are all possible."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-509",
+    "visibleFacts": {
+      "figureCount": 5,
+      "figures": [
+        {
+          "position": "upper viewer-left, standing just outside the ring",
+          "posture": "standing with legs apart in a braced wide stance, body angled toward the viewer-right and down toward the ring center",
+          "gaze": "head turned down and toward viewer-right, toward the center of the ring",
+          "heldObjects": [
+            "a long slender staff gripped in both hands at about waist height, angled down and to the viewer-right, its far tip resting at a glowing point on the ring"
+          ],
+          "clothing": "dark fitted tunic and trousers with a belt, a short cape or mantle at the shoulders; dark hair"
+        },
+        {
+          "position": "upper viewer-right, standing just outside the ring, mirroring the upper-left figure",
+          "posture": "standing with legs apart, body angled toward the viewer-left and down toward the ring center",
+          "gaze": "head turned down and toward viewer-left, toward the center of the ring",
+          "heldObjects": [
+            "a long slender staff gripped in both hands at about waist height, angled down and to the viewer-left, its far tip resting at a glowing point on the ring"
+          ],
+          "clothing": "dark long coat or robe over trousers, belted; dark hair"
+        },
+        {
+          "position": "mid viewer-left, at the left edge, nearer the viewer than the upper-left figure",
+          "posture": "standing in a deep braced stance, body angled toward viewer-right, leaning in toward the ring",
+          "gaze": "head turned toward viewer-right, down toward the ring",
+          "heldObjects": [
+            "a long slender staff held in both hands roughly horizontally, extending to the viewer-right, its far tip at a glowing point on the ring"
+          ],
+          "clothing": "dark tunic with a long cloak flaring back to the viewer-left; dark hair"
+        },
+        {
+          "position": "mid viewer-right, at the right edge, nearer the viewer than the upper-right figure",
+          "posture": "standing in a braced stance, body angled toward viewer-left, leaning in toward the ring",
+          "gaze": "head turned toward viewer-left, down toward the ring",
+          "heldObjects": [
+            "a long slender staff held in both hands roughly horizontally, extending to the viewer-left, its far tip at a glowing point on the ring"
+          ],
+          "clothing": "long flowing robe or gown with a cloak catching the light, long hair"
+        },
+        {
+          "position": "bottom center, closest to the viewer, seen from behind",
+          "posture": "standing in a wide braced lunge, back to the viewer, torso turned slightly to viewer-right",
+          "gaze": "head turned away from the viewer, facing up/forward into the ring",
+          "heldObjects": [
+            "a long slender staff held out to the viewer-right at about waist height, its far tip at a glowing point on the ring"
+          ],
+          "clothing": "dark layered coat with chain or cord detail across the chest, high boots; dark hair"
+        }
+      ],
+      "objects": [
+        {
+          "type": "staff / wand",
+          "count": 5,
+          "countConfidence": "medium",
+          "where": "one in the hands of each figure, all reaching inward over the inscribed ground circle",
+          "orientation": "all roughly horizontal or angled slightly downward, far tips pointing inward toward the ring",
+          "arrangement": "radiating inward from five points around the circle, like spokes converging on the center"
+        },
+        {
+          "type": "glowing point of light on the ground circle",
+          "count": 5,
+          "countConfidence": "low",
+          "where": "four spaced around the inner ring where the staff tips land, plus one brighter point at the exact center of the circle",
+          "orientation": "flat, lying on the ground plane",
+          "arrangement": "four in a rough quadrilateral around the hub plus one at the hub; I cannot be certain the hub glow is a staff tip rather than the pattern's own center"
+        },
+        {
+          "type": "inscribed ground circle",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "filling the center and lower half of the frame, seen in steep perspective",
+          "orientation": "flat in the horizontal ground plane",
+          "arrangement": "a single large disc of concentric rings crossed by fine radial lines, like a web or compass rose"
+        },
+        {
+          "type": "domed pavilion / rotunda",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper viewer-left, on a rise behind the figures",
+          "orientation": "vertical, columns facing the viewer",
+          "arrangement": "single colonnaded structure with a ribbed dome; a large circular wheel-like form is visible inside it"
+        },
+        {
+          "type": "stone column topped with a sphere",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper viewer-right, on a rise behind the figures",
+          "orientation": "vertical",
+          "arrangement": "single free-standing column with a ball or orb on its capital"
+        },
+        {
+          "type": "large pale sphere in the sky",
+          "count": 2,
+          "countConfidence": "medium",
+          "where": "one large one at the upper right of the sky, one smaller at the left edge about a third down",
+          "orientation": "flat discs against the sky",
+          "arrangement": "two separate bodies, no symmetry"
+        },
+        {
+          "type": "cross- or sword-shaped marker standing in the ground",
+          "count": 1,
+          "countConfidence": "low",
+          "where": "lower viewer-left, outside the ring, among the rubble",
+          "orientation": "vertical, planted in the ground",
+          "arrangement": "single upright with a short crossbar"
+        }
+      ],
+      "environment": [
+        "a wide star-dense night sky with a nebula / Milky Way band sweeping from upper-left to center",
+        "a fine gold geometric overlay of concentric arcs, radial lines and constellation-style linked dots across the sky",
+        "a bright single star high at the top center",
+        "a stone plateau inscribed with the great circle, its edges broken into rubble",
+        "a domed pavilion on a rise at viewer-left and a sphere-topped column on a rise at viewer-right",
+        "ruined walls and standing stones in the middle distance",
+        "dark conifer trees along the middle distance on both sides",
+        "a body of water on the far horizon at center with a warm golden glow across it",
+        "low mountains behind the water",
+        "a thin decorative border line running around the inside edge of the image"
+      ],
+      "lightSources": [
+        "the glowing staff tips and the glowing hub on the ground circle",
+        "a warm golden glow at the center horizon over the water",
+        "the bright star at the top center",
+        "the overall starfield and nebula glow"
+      ],
+      "moonPhase": "not visible — no clearly identifiable moon; two large pale spheres hang in the sky and read as planets, with no crisp terminator I can call a phase",
+      "spatialRelations": [
+        "the five figures stand around the perimeter of the inscribed ground circle, two in the upper half, two at the mid left and right edges, one at the bottom center nearest the viewer",
+        "every staff points inward from its figure toward the circle's hub",
+        "the glowing hub is at the geometric center of the circle and of the frame's lower half",
+        "the domed pavilion is behind and to the viewer-left of the upper-left figure",
+        "the sphere-topped column is behind and to the viewer-right of the upper-right figure",
+        "the water and its golden glow sit on the horizon directly behind the circle's center",
+        "the bright star is directly above the circle's center, near the top edge",
+        "the large pale sphere is in the sky above and to the viewer-right of the upper-right figure",
+        "rubble and the small upright marker lie outside the circle at the lower viewer-left"
+      ],
+      "foreground": [
+        "the bottom-center figure seen from behind",
+        "broken rock and rubble along the bottom corners",
+        "the small upright cross/sword marker at lower viewer-left",
+        "the near arc of the inscribed ground circle"
+      ],
+      "background": [
+        "the night sky, nebula, geometric overlay and bright star",
+        "the two pale spheres",
+        "the domed pavilion, the sphere-topped column, ruins and conifers",
+        "the glowing horizon water and the mountains behind it"
+      ]
+    },
+    "uncertainObservations": [
+      "The glowing points: I can resolve four around the inner ring plus one brighter glow at the exact center. Whether the center glow is a fifth staff tip or simply the hub of the inscribed pattern is not determinable, so the staff-tip-to-glow mapping is uncertain even though I am reasonably confident there are five figures and five staffs.",
+      "The bottom-center figure's staff runs to the viewer-right and its tip overlaps the lower-right glow; I cannot fully separate it from the mid-right figure's staff where they cross.",
+      "The exact shape of the staff tips (plain, budded, bladed) is lost in the glare of the glow.",
+      "The two pale spheres in the sky could be planets or moons; I cannot resolve a phase on either and will not name one.",
+      "The circular form inside the pavilion at upper-left reads as a large spoked wheel but is small and dark.",
+      "The upright at lower viewer-left could be a cross, a grave marker, or a sword planted point-down; the crossbar is visible but the lower end is buried.",
+      "I cannot read any facial features on any of the five figures; all are backlit or in shadow.",
+      "Figure genders are not determinable and I have not assigned any."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-511",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center, standing in the opening of a stone doorway",
+          "posture": "standing, walking forward toward the viewer, one foot advanced; head bowed, shoulders hunched, body frontal to the viewer; barefoot",
+          "gaze": "head bowed sharply downward, face angled toward the ground; eyes not visible",
+          "heldObjects": [
+            "a long staff held with both hands across the body, the lower end down near the figure's left foot at the viewer-left and the upper end rising to the viewer-right past the shoulder, carried diagonally like a pole over the shoulder"
+          ],
+          "clothing": "a ragged sleeveless tunic or cloak of torn strips reaching to mid-calf, belted or tied at the waist; a wrapping or band around the head"
+        }
+      ],
+      "objects": [
+        {
+          "type": "upright staff planted in a stone block",
+          "count": 8,
+          "countConfidence": "medium",
+          "where": "in a row across the middle ground, four to the viewer-left of the doorway and four to the viewer-right",
+          "orientation": "all vertical, standing straight up, lower ends socketed into low stone blocks on the ground",
+          "arrangement": "an evenly spaced row / palisade flanking the doorway on both sides, like a fence line"
+        },
+        {
+          "type": "low stone block / plinth",
+          "count": 8,
+          "countConfidence": "medium",
+          "where": "along the middle ground on both sides of the doorway, one at the base of each upright staff",
+          "orientation": "flat-topped, sitting on the ground",
+          "arrangement": "a matching evenly spaced row, four per side"
+        },
+        {
+          "type": "stone doorway / gate",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "center of the frame, the figure framed inside it",
+          "orientation": "vertical, opening toward the viewer",
+          "arrangement": "a single squared post-and-lintel opening with a heavy projecting capstone"
+        },
+        {
+          "type": "distant tower",
+          "count": 1,
+          "countConfidence": "low",
+          "where": "seen through the doorway behind the figure, at viewer-right of the figure's waist",
+          "orientation": "vertical",
+          "arrangement": "a single slender spire silhouette; other shapes beside it may be more buildings"
+        }
+      ],
+      "environment": [
+        "a cobbled path running away from the viewer through the doorway",
+        "a stone gate or doorway with a heavy lintel at the center",
+        "a long low wall or ground line carrying the staff blocks on both sides",
+        "a pale luminous open space beyond the doorway, like sky or mist",
+        "a distant settlement silhouette far through the gate",
+        "a very dark, almost black upper half of the frame",
+        "cracked ragged edges along the left and right borders of the image"
+      ],
+      "lightSources": [
+        "a broad pale glow behind the doorway, filling the opening and silhouetting the figure; no light-emitting object is visible, the source is beyond the gate"
+      ],
+      "moonPhase": "not visible — no moon anywhere in frame; the sky beyond the gate is an undifferentiated pale glow and the upper sky is solid black",
+      "spatialRelations": [
+        "the figure is centered inside the doorway, with the doorway's jambs on both sides of him",
+        "the eight upright staves flank the doorway symmetrically, four at viewer-left and four at viewer-right, all behind the plane of the doorway's front edge",
+        "the staff the figure carries crosses his body from lower-left to upper-right and its top end rises above and outside the doorway's right jamb",
+        "the pale glow is behind the figure, so he is backlit",
+        "the cobbled path runs from the bottom of the frame, through the doorway, away toward the distant tower",
+        "a long dark shadow extends from the figure's feet toward the viewer, filling the bottom center of the frame",
+        "the distant tower is far behind the figure, visible past his viewer-right side"
+      ],
+      "foreground": [
+        "cobbled paving at the bottom of the frame",
+        "the figure's long cast shadow running toward the viewer",
+        "the figure's bare feet"
+      ],
+      "background": [
+        "the pale glowing sky beyond the gate",
+        "the distant tower and settlement silhouette",
+        "the rows of upright staves and their blocks",
+        "solid black upper sky"
+      ]
+    },
+    "uncertainObservations": [
+      "Staff count: I read four uprights on each side of the doorway for eight planted, plus the one the figure carries. The outermost uprights on both sides sit close to the frame edge and in near-black, so a ninth or tenth planted upright just out of frame cannot be ruled out. Confidence is medium, not high.",
+      "The wrapping around the figure's head could be a bandage, a headband, or a crown of twisted material; I cannot tell which, and I cannot see whether it covers the eyes.",
+      "Whether the uprights are raw tree branches or shaped poles is unclear; their outlines are knotted and irregular.",
+      "The shape at the base of each upright reads as a low squared stone block but could be a stepped pedestal or a bundle of material.",
+      "I cannot tell whether the figure's lower end of the carried staff touches the ground.",
+      "The silhouettes seen through the gate are too small and low-contrast to confirm as buildings; one slender vertical reads as a tower.",
+      "The figure's garment: I cannot distinguish whether the tattered strips are a cloak worn over a tunic or a single shredded garment."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-517",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center of the frame, slightly below the middle, striding across the foreground",
+          "posture": "striding / creeping forward toward the viewer-left in near profile, knees bent, weight low, torso leaning forward, both arms wrapped around a bundle clutched against the chest; barefoot",
+          "gaze": "head turned toward viewer-right and tipped down, looking back over the shoulder and down behind himself",
+          "heldObjects": [
+            "a bundle of sword hilts clutched against the chest with both arms, the blades angled down and back toward the viewer-left, hilts up at chest height"
+          ],
+          "clothing": "a ragged cloak or mantle shredded into long trailing strips that stream out behind to the viewer-left, worn over a dark tunic and loose trousers cut off at the calf; shaggy dark hair; bare feet"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword carried in the figure's arms",
+          "count": 3,
+          "countConfidence": "low",
+          "where": "bundled against the figure's chest at the center of the frame",
+          "orientation": "hilts up at chest height, blades sloping down and back toward the viewer-left",
+          "arrangement": "a loose bunch gripped together; the hilts overlap so I cannot separate them cleanly"
+        },
+        {
+          "type": "sword planted upright in the ground",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "one at viewer-left beside the left pyramid structure, one at viewer-right beside the right pyramid structure",
+          "orientation": "both vertical, blades driven point-down into the ground, hilts and crossguards up",
+          "arrangement": "one standing alone on each side of the frame, symmetrically placed"
+        },
+        {
+          "type": "pyramid-shaped structure with a dark doorway",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "one in the middle ground at viewer-left, one in the middle ground at viewer-right",
+          "orientation": "vertical, doorways facing the viewer",
+          "arrangement": "two separate steep-sided triangular structures, one on each side of the scene, with the paved ground running between them"
+        }
+      ],
+      "environment": [
+        "a cobbled / flagged paved ground covering the whole lower frame and curving away between the two structures",
+        "two steep pyramid or tent-shaped stone structures, each with a small dark doorway",
+        "a large flat dark wall or void filling the upper half of the frame",
+        "a soft pale wash of light on that back wall at upper viewer-left",
+        "cracked ragged edges along the left and right borders of the image"
+      ],
+      "lightSources": [
+        "a diffuse pale glow on the back wall at upper viewer-left; no lamp, flame or celestial body is visible, the source is out of frame",
+        "a secondary pale sheen on the paving to the viewer-right of the figure"
+      ],
+      "moonPhase": "not visible — no moon in frame; the upper half of the image is an unbroken dark surface with only a soft wall glow",
+      "spatialRelations": [
+        "the figure is in front of (nearer the viewer than) both pyramid structures, crossing the paved ground between them",
+        "the figure moves toward viewer-left while his head is turned back toward viewer-right",
+        "the two planted swords are behind the figure, one at the far viewer-left and one at the far viewer-right, roughly level with each other",
+        "the carried sword bundle is at the figure's chest, its blades trailing down and back to the viewer-left",
+        "the pale wall glow is above and behind the left pyramid",
+        "the figure's shadow falls down and to the viewer-left across the paving",
+        "the paved path recedes between the two pyramids toward the dark background"
+      ],
+      "foreground": [
+        "the cobbled paving and the figure's bare feet and shadow",
+        "the trailing shredded strips of the figure's cloak at viewer-left",
+        "the figure himself"
+      ],
+      "background": [
+        "the two pyramid structures with their dark doorways",
+        "the two planted swords",
+        "the dark upper wall and its pale glow"
+      ]
+    },
+    "uncertainObservations": [
+      "The number of swords in the figure's arms is my least certain reading. The hilts overlap and sit against a dark cloak; I can distinguish what look like three pommel/crossguard groups, but two or four is possible. Recorded as 3 with low confidence rather than guessed higher.",
+      "I cannot confirm that the carried objects are swords rather than staffs or spears; I can see crossguard-like forms at the top and tapering blades below, which is why I call them swords, but the blades fade into shadow.",
+      "The two planted uprights at left and right are clearly blade-shaped with crossguards, but I cannot see their points entering the ground on the left one.",
+      "The two structures read as stone pyramids, but they could equally be steep tents or roofed shelters; the surface texture is ambiguous.",
+      "The figure's head is turned back and down but I cannot read any facial features or confirm the direction of the eyes.",
+      "Whether there is anything inside the two dark doorways is not resolvable.",
+      "The pale glow on the back wall has no visible source; I cannot tell if it is moonlight, a fire out of frame, or a window."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-d"
+  }
+]

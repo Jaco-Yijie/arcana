@@ -1,0 +1,245 @@
+{
+  "reviewId": "review-511",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-511.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-511.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "visualTensions",
+          "existing": "the figure's forward stance against the shadow trailing behind him",
+          "observed": "盲观察记录：人物是直立、略含胸、重心稳定地站在门洞里，身体正面朝向观者，没有前冲/迈步的姿态；唯一光源在他背后的门洞，影子是从脚下向观者方向（画面正下方偏左）投出的，也就是在他身前，不在身后",
+          "evidence": "门洞亮雾形成逆光剪影，长影自人物双脚向画面前景延伸；该揭示包自己的 spatialRelations 也写的是 shadow stretches forward toward the viewer，与这条自相矛盾",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the figure's forward stance against the shadow trailing behind him",
+            "with": "the figure's still, slightly hunched stance against the long shadow thrown forward toward the viewer"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-511",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "画面正中偏左，站在一道石砌门洞里",
+              "posture": "直立，略含胸，重心稳定；身体正面朝向观者",
+              "gaze": "低头，面部朝下，看不见眼睛；视线朝向身前地面",
+              "heldObjects": [
+                "一根长杆：下端在身体 viewer-left 的腰胯高度，杆身斜穿胸前，上端伸到 viewer-right 的头顶上方",
+                "靠下的那只手（viewer-left）在腰腹高度握住杆身",
+                "靠上的那只手（viewer-right）举到额头高度，既扶着杆也贴着头"
+              ],
+              "clothing": "破烂的长衣/罩衫，下摆撕成条状；额头上缠着一条浅色布带；赤脚"
+            }
+          ],
+          "objects": [
+            {
+              "type": "staff",
+              "count": 8,
+              "countConfidence": "high",
+              "where": "门洞两侧的矮石墙上，viewer-left 4 根、viewer-right 4 根",
+              "orientation": "竖直插立，粗端在下、细端在上，顶端自由",
+              "arrangement": "左右各一排，等距并列"
+            },
+            {
+              "type": "staff",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "人物身前，被双手握持",
+              "orientation": "斜向，自 viewer-left 下方斜指 viewer-right 上方",
+              "arrangement": "单根"
+            },
+            {
+              "type": "stone pedestal block",
+              "count": 8,
+              "countConfidence": "high",
+              "where": "矮墙顶部，每根竖立的长杆下方各一个",
+              "orientation": "方块状，水平放置",
+              "arrangement": "左右各 4 个，一排"
+            },
+            {
+              "type": "gateway",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面正中，人物所在处",
+              "orientation": "竖直门框，开口正对观者",
+              "arrangement": "单座，带厚重的过梁"
+            }
+          ],
+          "environment": [
+            "夜间/昏暗的户外，近乎单色的深褐黑调",
+            "一道低矮的石砌墙横贯画面左右，墙顶立着成排长杆",
+            "墙中央开一处带厚过梁的石门洞",
+            "门洞后方是一片发亮的雾霭天空，远处可见一座尖塔/城镇剪影",
+            "门洞内外是鹅卵石/碎石铺的小路，从远处穿过门洞延伸到画面前景",
+            "画面上方是浓重的暗云/暗幕",
+            "画面左右边缘有细直的浅色边框线"
+          ],
+          "lightSources": [
+            "门洞后方（人物背后）的大片白亮雾光，是画面唯一光源，形成逆光剪影"
+          ],
+          "moonPhase": "not visible — 天空被云雾与暗部覆盖，没有可辨认的月亮",
+          "spatialRelations": [
+            "人物站在门洞的开口中央，身体压在亮光之前形成剪影",
+            "成排长杆分列在人物的 viewer-left 与 viewer-right 两侧，并在矮墙顶上",
+            "人物手持的那根杆横在身体正前方，与两侧竖立的杆呈明显斜角对比",
+            "人物的长影从脚下向观者方向（画面正下方偏左）投射",
+            "远处尖塔在人物的 viewer-right 一侧、门洞亮光之中",
+            "鹅卵石路从门洞内延伸到前景"
+          ],
+          "foreground": [
+            "鹅卵石路面",
+            "人物投向观者的长影",
+            "矮墙的近侧暗面"
+          ],
+          "background": [
+            "门洞后的亮雾天空",
+            "远处尖塔/城镇剪影",
+            "画面上方的暗云"
+          ]
+        },
+        "uncertainObservations": [
+          "额头上的浅色布带是绷带还是发带，分辨不出",
+          "人物的面部完全处在逆光暗部，五官、表情、年龄都看不见",
+          "衣物下摆的条状物是撕裂的布条还是绑带，看不清",
+          "远处亮光中的那个竖直剪影像塔或尖顶建筑，但细节分辨不出，也可能只是一棵树",
+          "矮墙在画面左右两端是否还延伸出更多石台/长杆（被边框和暗部截断），无法确认；我只统计了画面内清晰可见的 8 根",
+          "画面上方大片暗区是云、是室内穹顶还是单纯的暗底，分辨不出"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "visualTensions",
+          "existing": "the figure's forward stance against the shadow trailing behind him",
+          "observed": "The shadow is not behind the figure. It is thrown forward, toward the viewer, across the near paving, because the only light in the scene is the pale glow beyond the doorway behind him. The same reveal's spatialRelations entry already states this correctly, so the visualTensions line contradicts it.",
+          "evidence": "A long dark shadow runs from the figure's feet down the centre of the frame to the bottom edge, filling the near foreground; the figure is a silhouette against the lit doorway, confirming the light is behind him and the cast shadow must fall toward the viewer.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the figure's forward stance against the shadow trailing behind him",
+            "with": "the figure's forward stance against the long shadow thrown ahead of him toward the viewer"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-511",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, standing in the opening of a stone doorway",
+              "posture": "standing, walking forward toward the viewer, one foot advanced; head bowed, shoulders hunched, body frontal to the viewer; barefoot",
+              "gaze": "head bowed sharply downward, face angled toward the ground; eyes not visible",
+              "heldObjects": [
+                "a long staff held with both hands across the body, the lower end down near the figure's left foot at the viewer-left and the upper end rising to the viewer-right past the shoulder, carried diagonally like a pole over the shoulder"
+              ],
+              "clothing": "a ragged sleeveless tunic or cloak of torn strips reaching to mid-calf, belted or tied at the waist; a wrapping or band around the head"
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright staff planted in a stone block",
+              "count": 8,
+              "countConfidence": "medium",
+              "where": "in a row across the middle ground, four to the viewer-left of the doorway and four to the viewer-right",
+              "orientation": "all vertical, standing straight up, lower ends socketed into low stone blocks on the ground",
+              "arrangement": "an evenly spaced row / palisade flanking the doorway on both sides, like a fence line"
+            },
+            {
+              "type": "low stone block / plinth",
+              "count": 8,
+              "countConfidence": "medium",
+              "where": "along the middle ground on both sides of the doorway, one at the base of each upright staff",
+              "orientation": "flat-topped, sitting on the ground",
+              "arrangement": "a matching evenly spaced row, four per side"
+            },
+            {
+              "type": "stone doorway / gate",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of the frame, the figure framed inside it",
+              "orientation": "vertical, opening toward the viewer",
+              "arrangement": "a single squared post-and-lintel opening with a heavy projecting capstone"
+            },
+            {
+              "type": "distant tower",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "seen through the doorway behind the figure, at viewer-right of the figure's waist",
+              "orientation": "vertical",
+              "arrangement": "a single slender spire silhouette; other shapes beside it may be more buildings"
+            }
+          ],
+          "environment": [
+            "a cobbled path running away from the viewer through the doorway",
+            "a stone gate or doorway with a heavy lintel at the center",
+            "a long low wall or ground line carrying the staff blocks on both sides",
+            "a pale luminous open space beyond the doorway, like sky or mist",
+            "a distant settlement silhouette far through the gate",
+            "a very dark, almost black upper half of the frame",
+            "cracked ragged edges along the left and right borders of the image"
+          ],
+          "lightSources": [
+            "a broad pale glow behind the doorway, filling the opening and silhouetting the figure; no light-emitting object is visible, the source is beyond the gate"
+          ],
+          "moonPhase": "not visible — no moon anywhere in frame; the sky beyond the gate is an undifferentiated pale glow and the upper sky is solid black",
+          "spatialRelations": [
+            "the figure is centered inside the doorway, with the doorway's jambs on both sides of him",
+            "the eight upright staves flank the doorway symmetrically, four at viewer-left and four at viewer-right, all behind the plane of the doorway's front edge",
+            "the staff the figure carries crosses his body from lower-left to upper-right and its top end rises above and outside the doorway's right jamb",
+            "the pale glow is behind the figure, so he is backlit",
+            "the cobbled path runs from the bottom of the frame, through the doorway, away toward the distant tower",
+            "a long dark shadow extends from the figure's feet toward the viewer, filling the bottom center of the frame",
+            "the distant tower is far behind the figure, visible past his viewer-right side"
+          ],
+          "foreground": [
+            "cobbled paving at the bottom of the frame",
+            "the figure's long cast shadow running toward the viewer",
+            "the figure's bare feet"
+          ],
+          "background": [
+            "the pale glowing sky beyond the gate",
+            "the distant tower and settlement silhouette",
+            "the rows of upright staves and their blocks",
+            "solid black upper sky"
+          ]
+        },
+        "uncertainObservations": [
+          "Staff count: I read four uprights on each side of the doorway for eight planted, plus the one the figure carries. The outermost uprights on both sides sit close to the frame edge and in near-black, so a ninth or tenth planted upright just out of frame cannot be ruled out. Confidence is medium, not high.",
+          "The wrapping around the figure's head could be a bandage, a headband, or a crown of twisted material; I cannot tell which, and I cannot see whether it covers the eyes.",
+          "Whether the uprights are raw tree branches or shaped poles is unclear; their outlines are knotted and irregular.",
+          "The shape at the base of each upright reads as a low squared stone block but could be a stepped pedestal or a bundle of material.",
+          "I cannot tell whether the figure's lower end of the carried staff touches the ground.",
+          "The silhouettes seen through the gate are too small and low-contrast to confirm as buildings; one slender vertical reads as a tower.",
+          "The figure's garment: I cannot distinguish whether the tattered strips are a cloak worn over a tunic or a single shredded garment."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

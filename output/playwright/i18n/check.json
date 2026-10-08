@@ -1,0 +1,110 @@
+{
+  "results": [
+    {
+      "page": "home-en",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "page": "home-en",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "home-en",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "page": "home-en",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "/decks",
+      "language": "en",
+      "singleLanguage": true
+    },
+    {
+      "page": "/journal",
+      "language": "en",
+      "singleLanguage": true
+    },
+    {
+      "page": "/settings",
+      "language": "en",
+      "singleLanguage": true
+    },
+    {
+      "page": "/question",
+      "language": "en",
+      "singleLanguage": true
+    },
+    {
+      "page": "/reading",
+      "singleLanguage": true
+    },
+    {
+      "page": "/journal",
+      "singleLanguage": true
+    },
+    {
+      "page": "/journal/v3-visual-fixture",
+      "singleLanguage": true
+    },
+    {
+      "page": "/share/v3-visual-fixture",
+      "singleLanguage": true
+    },
+    {
+      "page": "reading-en",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "page": "reading-en",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "reading-en",
+      "width": 430,
+      "overflow": false
+    },
+    {
+      "page": "reading-en",
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "translations": 5,
+  "fontRequests": [
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/lxgw-wenkai-light-subset.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cinzel-latin.woff2",
+    "http://127.0.0.1:8788/fonts/cormorant-garamond-latin.woff2",
+    "http://127.0.0.1:8788/fonts/lxgw-wenkai-light-subset.woff2"
+  ]
+}

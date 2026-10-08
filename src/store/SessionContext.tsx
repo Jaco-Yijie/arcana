@@ -38,6 +38,7 @@ import { StorageKeys, readJSON, remove, writeJSON } from '@/utils/storage'
 import { upsertEntry } from '@/store/journalStore'
 import { createId } from '@/utils/id'
 import { useDeck } from '@/hooks/useDeck'
+import { useAuth } from '@/store/AuthContext'
 import { DECK_SCHEMA_VERSION } from '@/decks/ids'
 
 export interface StartSessionInput {
@@ -108,6 +109,7 @@ function persist(session: TarotSession | null) {
 }
 
 export function SessionProvider({ children }: { children: ReactNode }) {
+  const { user } = useAuth()
   // 当前选中的牌组。SessionProvider 嵌在 DeckProvider 里面，所以这里读得到。
   // 【它只被记录，不参与任何决策】牌序与正逆位由 buildHiddenDeck(seed, …) 决定，
   // 那个调用的参数里根本没有 deckId —— 换牌组不可能改变你抽到什么。
@@ -137,6 +139,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     const seed = createSeed()
     const now = Date.now()
     const next: TarotSession = {
+      userId: user?.id ?? null,
       id: createId('ses'),
       createdAt: now,
       updatedAt: now,
@@ -174,7 +177,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     sessionRef.current = next
     setSession(next)
     return next
-  }, [deckId])
+  }, [deckId, user?.id])
 
   const discardSession = useCallback(() => {
     persist(null)
@@ -330,6 +333,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
         ...prev,
         reading,
         structuredReading: structuredReading ?? null,
+        completedAt: prev.completedAt ?? Date.now(),
         stage: 'reading',
         status: 'completed',
       })),
@@ -368,12 +372,13 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     return finished.id
   }, [])
 
-  const hasUnfinished = session !== null && session.status === 'in-progress'
-  const shuffleCount = session?.entropy.shuffleCount ?? 0
+  const visibleSession = !session?.userId || session.userId === user?.id ? session : null
+  const hasUnfinished = visibleSession !== null && visibleSession.status === 'in-progress'
+  const shuffleCount = visibleSession?.entropy.shuffleCount ?? 0
 
   const value = useMemo<SessionContextValue>(
     () => ({
-      session,
+      session: visibleSession,
       hasUnfinished,
       shuffleCount,
       startSession,
@@ -394,7 +399,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       completeSession,
     }),
     [
-      session,
+      visibleSession,
       hasUnfinished,
       shuffleCount,
       startSession,

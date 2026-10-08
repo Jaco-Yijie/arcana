@@ -1,5 +1,10 @@
+import { useSession } from '@/hooks/useSession'
+import { resolveDeckId } from '@/decks/ids'
 import { Suspense, lazy } from 'react'
-import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { AuthProvider } from '@/store/AuthContext'
+import { ReadingSyncProvider } from '@/features/auth/ReadingSync'
+import { BrowserRouter, HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { AdminRoute } from '@/features/admin/AdminRoute'
 import { I18nProvider } from '@/i18n'
 import { SettingsProvider } from '@/store/SettingsContext'
 import { SessionProvider } from '@/store/SessionContext'
@@ -22,6 +27,7 @@ import { DeckAtmosphere } from '@/atmosphere/DeckAtmosphere'
 /* ── 主流程：eager ── */
 import HomePage from '@/pages/HomePage'
 import QuestionPage from '@/pages/QuestionPage'
+import ContextIntakePage from '@/pages/ContextIntakePage'
 import SpreadPage from '@/pages/SpreadPage'
 import FocusPage from '@/pages/FocusPage'
 import ShufflePage from '@/pages/ShufflePage'
@@ -38,6 +44,8 @@ const SharePage = lazy(() => import('@/pages/SharePage'))
 const TarotIntroductionPage = lazy(() => import('@/pages/TarotIntroductionPage'))
 const OnboardingPage = lazy(() => import('@/pages/OnboardingPage'))
 const SettingsPage = lazy(() => import('@/pages/SettingsPage'))
+const AuthPage = lazy(() => import('@/pages/AuthPage'))
+const AdminPage = lazy(() => import('@/pages/AdminPage'))
 
 /**
  * DEV-ONLY · Benchmark Style Anchor 评审台（Phase C1B-1 §15）
@@ -75,25 +83,38 @@ function RouteFallback() {
  */
 const Router = import.meta.env.VITE_DEPLOY_TARGET === 'streamlit' ? HashRouter : BrowserRouter
 
+function RouteAtmosphere() {
+  const { pathname } = useLocation()
+  const { session } = useSession()
+  const readingDeck = pathname === '/reading' && session ? resolveDeckId(session.deckId, session.deckSchema) : undefined
+  return pathname === '/admin' || pathname === '/' ? null : <DeckAtmosphere deckId={readingDeck} dimmed={pathname === '/reading'} />
+}
+
 export default function App() {
   return (
     <I18nProvider>
+      <AuthProvider>
       <SettingsProvider>
         <DeckProvider>
           <SessionProvider>
+            <ReadingSyncProvider>
             {/* 会话冻结后，把牌组主题锁在那一副上（见组件注释） */}
             <DeckThemeSync />
             <Router>
-              <DeckAtmosphere />
+              <RouteAtmosphere />
               <Suspense fallback={<RouteFallback />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/register" element={<AuthPage />} />
+                <Route path="/login" element={<AuthPage />} />
+                <Route path="/admin" element={<AdminRoute><AdminPage /></AdminRoute>} />
                 {/* 牌组选择是正式流程的一步（首页「带着问题来」→ 这里 → 问题页）。
                     V2.4 曾经有两个互相矛盾的牌组页：/deck 写着「当前唯一牌组」，
                     /decks 写着五套。现在收敛成一个，旧路径重定向保住书签。 */}
                 <Route path="/decks" element={<DeckLibraryPage />} />
                 <Route path="/deck" element={<Navigate to="/decks" replace />} />
                 <Route path="/question" element={<QuestionPage />} />
+                <Route path="/context" element={<ContextIntakePage />} />
                 <Route path="/spread" element={<SpreadPage />} />
                 <Route path="/focus" element={<FocusPage />} />
                 <Route path="/table/shuffle" element={<ShufflePage />} />
@@ -121,9 +142,11 @@ export default function App() {
               </Routes>
               </Suspense>
             </Router>
+            </ReadingSyncProvider>
           </SessionProvider>
         </DeckProvider>
       </SettingsProvider>
+      </AuthProvider>
     </I18nProvider>
   )
 }

@@ -1,0 +1,94 @@
+[
+  {
+    "reviewId": "review-512",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "人物迈步且头脸朝左；剑束斜跨胸腹，刃面并排朝左下、剑柄朝右上。护手横越刃面，无清晰剑刃相交。左下另两剑，左帐篷右城堡。",
+    "reason": "reviewer-f指出blades crossing错误，b/e冻结观察并排扇形独立支持，Judge确认同向刃面。仅修局部几何。拒绝e的头朝右替换；不补遮挡剑束数量。",
+    "overturnedReviewer": true,
+    "overturnedReviewerNames": [
+      "reviewer-b",
+      "reviewer-e"
+    ],
+    "patch": {
+      "replace": [
+        {
+          "find": "bundle of swords held against the chest, blades crossing and hilts fanning upward",
+          "with": "bundle of swords held against the chest, blades parallel in a single sheaf and hilts fanning upward"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-514",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "长衣人物伸空手，鸟在手右上张翼；上墙五枚下墙四枚圆星徽，左阶梯。左下容器状弧线暗部遮挡，无法确认盆栽。",
+    "reason": "两名Reviewer明确盆器在右侧，左侧只确认阶梯植物模糊装饰；Judge不能确认左下盆栽。不以未辨出推断不存在，过滤争议对象。",
+    "overturnedReviewer": false,
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "a potted plant at the lower left"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-515",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "棱面心由三剑穿入；人物坐看纸，桌另纸状物及暗小物，金属环仪和灯。左两浅圆盘类别/月相不稳。",
+    "reason": "f补two crescent moons无双人明确确认，Judge不确认，拒绝插入。a存疑红印，f声称蜡印，c无法辨认，Judge无法确认seal，过滤组合对象。",
+    "overturnedReviewer": true,
+    "overturnedReviewerNames": [
+      "reviewer-c",
+      "reviewer-f"
+    ],
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "stone table with a second paper and a small red seal"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-516",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "high",
+    "independentFinding": "浅衣长发人物俯卧，近手伸右下，背部剑群扇形；柄周细线混织物雾气，不能分辨链节连接。左上新月，右背景暖光水面。",
+    "reason": "两名Reviewer不能佐证细链，Judge不能辨链节路径。不猜物件，过滤thin chains保留剑群姿态。",
+    "overturnedReviewer": false,
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "thin chains draped between the sword hilts"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-517",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "high",
+    "independentFinding": "人物向右迈步，头暗色背侧轮廓，眼睛/回望不可靠；两尖顶建筑之间，二维无法定远近。左右独立竖剑，怀抱剑数暗部重叠不明。",
+    "reason": "b/f反对明确回头，d行进方向与图像/b/f不符。Judge面部不足不补eyes lowered；建筑远近无两人一致，不强改。过滤回望与距离条目。",
+    "overturnedReviewer": true,
+    "overturnedReviewerNames": [
+      "reviewer-b",
+      "reviewer-d"
+    ],
+    "uncertainItems": [
+      {
+        "field": "visualTensions",
+        "item": "the figure's body moves away while its head turns back"
+      },
+      {
+        "field": "emphasizedAspects",
+        "item": "a backward glance that keeps watch on what is left behind"
+      },
+      {
+        "field": "spatialRelations",
+        "item": "the figure stands between the two pyramid structures, closer to the right one"
+      }
+    ]
+  }
+]

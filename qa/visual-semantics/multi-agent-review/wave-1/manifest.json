@@ -1,0 +1,522 @@
+{
+  "version": 1,
+  "run": "wave-1",
+  "wave": 1,
+  "mode": "rest",
+  "generatedAt": "2026-09-30T06:03:53.244Z",
+  "note": "Coordinator-only。绝不提供给第一阶段 Reviewer —— 它把 reviewId 直接映回 cardId。",
+  "mask": {
+    "top": [
+      0,
+      75
+    ],
+    "bottom": [
+      848,
+      933
+    ],
+    "rgb": {
+      "r": 118,
+      "g": 118,
+      "b": 118
+    },
+    "cropped": false,
+    "resized": false,
+    "recolored": false
+  },
+  "counts": {
+    "total": 17,
+    "highRisk": 17,
+    "byDeck": {
+      "legacy-forest": 1,
+      "legacy-celestial": 4,
+      "legacy-classic": 3,
+      "legacy-shadow": 4,
+      "legacy-moonlight": 5
+    },
+    "byConfidence": {
+      "high": 9,
+      "medium": 8
+    }
+  },
+  "assignments": {
+    "reviewer-a": [
+      "review-103",
+      "review-115",
+      "review-114",
+      "review-102",
+      "review-101",
+      "review-113",
+      "review-105"
+    ],
+    "reviewer-b": [
+      "review-107",
+      "review-109",
+      "review-111",
+      "review-117",
+      "review-112",
+      "review-110",
+      "review-106"
+    ],
+    "reviewer-c": [
+      "review-116",
+      "review-104",
+      "review-108",
+      "review-103",
+      "review-115",
+      "review-114",
+      "review-102"
+    ],
+    "reviewer-d": [
+      "review-101",
+      "review-113",
+      "review-105",
+      "review-107",
+      "review-109",
+      "review-111",
+      "review-117"
+    ],
+    "reviewer-e": [
+      "review-112",
+      "review-110",
+      "review-106",
+      "review-116",
+      "review-104",
+      "review-108"
+    ]
+  },
+  "rows": [
+    {
+      "reviewId": "review-101",
+      "deckId": "legacy-forest",
+      "cardId": "swords-04",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-101.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-forest__swords-04.png",
+      "sourceAsset": "public/assets/decks/legacy-forest/cards/swords-04.webp",
+      "assetHash": "c97101556363dbfebd1f7459dabdf5d90db8b292b91e4fc494e66fc5f61d39c3",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the hanging ornaments are purely decorative or carry symbolic intent",
+        "exact number of mushrooms in the lower-left cluster"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-04)",
+        "risk-objects(sun,sword,cup,water)",
+        "uncertain-details(2)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 32
+    },
+    {
+      "reviewId": "review-102",
+      "deckId": "legacy-celestial",
+      "cardId": "swords-10",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-102.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-celestial__swords-10.png",
+      "sourceAsset": "public/assets/decks/legacy-celestial/cards/swords-10.webp",
+      "assetHash": "b4ebb3b29b7ee7b540a5e117d8d34fe75e1263fed7834dd95eeb63b87f3f4a7c",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "exact count of swords is ten but some blades overlap the platform edge in shadow",
+        "the two pale spheres at upper left may be moons or planets, phase not clearly resolvable",
+        "small engraved symbols on the platform are too faint to identify"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-10)",
+        "risk-objects(wing,sword,water)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 15
+    },
+    {
+      "reviewId": "review-103",
+      "deckId": "legacy-classic",
+      "cardId": "swords-03",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-103.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-classic__swords-03.png",
+      "sourceAsset": "public/assets/decks/legacy-classic/cards/swords-03.webp",
+      "assetHash": "856db2832fe97a656181536c09ec6aeee484eddbe7b264ff1b9bf1dc8406ef77",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the pale shape behind the tree is a wall or a ruined structure",
+        "the exact number of small yellow flowers at the lower left"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-03)",
+        "risk-objects(sword,sea)",
+        "uncertain-details(2)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 21
+    },
+    {
+      "reviewId": "review-104",
+      "deckId": "legacy-shadow",
+      "cardId": "swords-06",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-104.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__swords-06.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/swords-06.webp",
+      "assetHash": "dabce4daca29b575cfe3f7ab74d4d871c4414ea3eaf9bf4961385f9149984034",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the seated figure's hands are visible beneath the cloak",
+        "whether the far shore silhouettes are buildings or rock spires",
+        "exact number of swords resolvable at the boat's far rim"
+      ],
+      "figureCount": 2,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-06)",
+        "multi-figure(2)",
+        "risk-objects(sword,cup,water,sea)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 84
+    },
+    {
+      "reviewId": "review-105",
+      "deckId": "legacy-shadow",
+      "cardId": "major-15",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-105.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__major-15.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/major-15.webp",
+      "assetHash": "33ce591d39ea97edecfcbfd8cd2b06f3dd65b69c226dae91d21fc7ab05b626ee",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "whether the left figure's overhead object is a ring, hoop or shallow vessel",
+        "whether the shadow on the wall is a cast silhouette or a painted shape",
+        "exact number of chain links and whether the chains attach at the neck or the hands"
+      ],
+      "figureCount": 2,
+      "highRisk": true,
+      "riskReasons": [
+        "multi-figure(2)",
+        "risk-objects(door)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 71
+    },
+    {
+      "reviewId": "review-106",
+      "deckId": "legacy-celestial",
+      "cardId": "swords-09",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-106.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-celestial__swords-09.png",
+      "sourceAsset": "public/assets/decks/legacy-celestial/cards/swords-09.webp",
+      "assetHash": "dec36e7bb1a90817b2cd254a158ea507d5b3efedda66811b2799e00c2dfb317f",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the small round shapes inside the niches are moons or decorative discs",
+        "exact number of loose papers and closed books on the desk",
+        "whether the horizon structures are buildings or trees"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-09)",
+        "risk-objects(moon,wing,sword,cup,sea)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 14
+    },
+    {
+      "reviewId": "review-107",
+      "deckId": "legacy-shadow",
+      "cardId": "wands-08",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-107.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__wands-08.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/wands-08.webp",
+      "assetHash": "cfd050db3083638047547ec3519cb17cec49cd1507c3d8c2440de891ac205ddc",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact count of the streaking shafts (appears to be eight, some partially cropped or fading)",
+        "whether the faint violet tint is in the artwork or the display",
+        "whether the figure is male or female",
+        "whether the light source is a lamp, fire, or opening beyond the gate"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(wands-08)",
+        "risk-objects(wand,gate,path,tower,water,river)",
+        "confidence(medium)",
+        "uncertain-details(4)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 94
+    },
+    {
+      "reviewId": "review-108",
+      "deckId": "legacy-classic",
+      "cardId": "swords-09",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-108.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-classic__swords-09.png",
+      "sourceAsset": "public/assets/decks/legacy-classic/cards/swords-09.webp",
+      "assetHash": "7611e7778d9fc7d67ca5f17e7d3550dba3bb9ca7b56e76355c564e7ec953f113",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the moon is a crescent or partly obscured by cloud",
+        "the exact number of books in the nightstand stack"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-09)",
+        "risk-objects(moon,wing,sword,cup,sea)",
+        "uncertain-details(2)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 27
+    },
+    {
+      "reviewId": "review-109",
+      "deckId": "legacy-moonlight",
+      "cardId": "pentacles-08",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-109.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__pentacles-08.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/pentacles-08.webp",
+      "assetHash": "87ac0150e0fa108e6e70d9c3959f572ee9c8e4ad3e102dde94f5f631d8150130",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of engraved discs visible on the bench",
+        "whether the tool cup holds chisels or other implements",
+        "whether the pale shapes in the water are reflections or mist"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(pentacles-08)",
+        "risk-objects(moon,cup,tower,water)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 45
+    },
+    {
+      "reviewId": "review-110",
+      "deckId": "legacy-moonlight",
+      "cardId": "wands-05",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-110.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__wands-05.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/wands-05.webp",
+      "assetHash": "70bc5856722d44b7976821d086e1a0bdd67bad358ea4625780fa4982bade49c9",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of poles, several overlap and fade into mist",
+        "whether a fifth figure is partly hidden behind the central one",
+        "whether the pale disc is a crescent moon or a partly veiled full moon"
+      ],
+      "figureCount": 4,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(wands-05)",
+        "multi-figure(4)",
+        "risk-objects(moon,crown,cup,water)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 58
+    },
+    {
+      "reviewId": "review-111",
+      "deckId": "legacy-celestial",
+      "cardId": "major-15",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-111.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-celestial__major-15.png",
+      "sourceAsset": "public/assets/decks/legacy-celestial/cards/major-15.webp",
+      "assetHash": "6644f94d8f09c1623d4eb0d0578e220bdef2abfa5be6f07858884647fc25075a",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "whether the left figure's chain is attached to the plinth or only to the figure",
+        "exact number of small spheres on the floor",
+        "whether the pale disc at upper right is a moon or a planet",
+        "the identity of the small reddish disc in the sky"
+      ],
+      "figureCount": 2,
+      "highRisk": true,
+      "riskReasons": [
+        "multi-figure(2)",
+        "risk-objects(moon)",
+        "confidence(medium)",
+        "uncertain-details(4)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 4
+    },
+    {
+      "reviewId": "review-112",
+      "deckId": "legacy-moonlight",
+      "cardId": "cups-09",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-112.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__cups-09.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/cups-09.webp",
+      "assetHash": "3e5e495810049c4a1d3c87d4aa04452a3c7c60a68eed3ff799d01630037cf7a9",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of goblets visible",
+        "whether the pale shapes in the sky are birds or clouds",
+        "the precise contents of the goblets"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(cups-09)",
+        "risk-objects(moon,path,sea)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 41
+    },
+    {
+      "reviewId": "review-113",
+      "deckId": "legacy-moonlight",
+      "cardId": "wands-09",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-113.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__wands-09.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/wands-09.webp",
+      "assetHash": "6002695f93c58327ce4277eedc90ab9def4fb880ba16795dc3288a38d412d1ac",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "exact number of staffs visible, as several overlap and fade into mist",
+        "whether the small pendant on the leaned staff is a crescent or a ring",
+        "whether faint shapes in the lower right mist are birds or foliage"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(wands-09)",
+        "risk-objects(moon,wing,staff,water)",
+        "confidence(medium)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 60
+    },
+    {
+      "reviewId": "review-114",
+      "deckId": "legacy-shadow",
+      "cardId": "swords-08",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-114.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-shadow__swords-08.png",
+      "sourceAsset": "public/assets/decks/legacy-shadow/cards/swords-08.webp",
+      "assetHash": "6bca117cd8d2a91be821bce2492b43e9a4619528cc41385d82dcd4b587e8d1be",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the band across the face is a blindfold or a head covering",
+        "exact count of swords, as the outermost ones are partly lost in shadow"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-08)",
+        "risk-objects(sword,water)",
+        "uncertain-details(2)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 86
+    },
+    {
+      "reviewId": "review-115",
+      "deckId": "legacy-moonlight",
+      "cardId": "major-15",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-115.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-moonlight__major-15.png",
+      "sourceAsset": "public/assets/decks/legacy-moonlight/cards/major-15.webp",
+      "assetHash": "395ee1c770ca0739e7c5542a412c98e134b2dcb64135c2152b006b6496ef4aff",
+      "modelConfidence": "medium",
+      "uncertainDetails": [
+        "whether the padlock is attached to the chains or merely resting on the plinth",
+        "the exact number of chains crossing the figure's back",
+        "whether the fallen horn-shaped object is a horn or a separate vessel",
+        "the identity of the small pale shapes drifting in the sky"
+      ],
+      "figureCount": 1,
+      "highRisk": true,
+      "riskReasons": [
+        "risk-objects(moon,water)",
+        "confidence(medium)",
+        "uncertain-details(4)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 43
+    },
+    {
+      "reviewId": "review-116",
+      "deckId": "legacy-celestial",
+      "cardId": "cups-04",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-116.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-celestial__cups-04.png",
+      "sourceAsset": "public/assets/decks/legacy-celestial/cards/cups-04.webp",
+      "assetHash": "f5406d02dba5bfaa55cf40a8ea3ea70fd4721955f3cf1618d950ce8e254499d2",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the small pale disc at upper right is a crescent moon or a partially lit sphere",
+        "exact number of books in the left-hand stack",
+        "whether the leaning circular object at left is an astrolabe or a chart disc"
+      ],
+      "figureCount": 2,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(cups-04)",
+        "multi-figure(2)",
+        "risk-objects(moon,cup,chalice,water,sea)",
+        "uncertain-details(3)",
+        "occlusion-or-count-doubt"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 2
+    },
+    {
+      "reviewId": "review-117",
+      "deckId": "legacy-classic",
+      "cardId": "swords-05",
+      "blindImage": "qa/visual-semantics/blind-review/wave-1/review-117.png",
+      "sourcePng": "qa/visual-semantics/png/legacy-classic__swords-05.png",
+      "sourceAsset": "public/assets/decks/legacy-classic/cards/swords-05.webp",
+      "assetHash": "5b3fd3a888e8148588afc8402dd28290b30efacbfa3628b9bd7e97bd58aa30de",
+      "modelConfidence": "high",
+      "uncertainDetails": [
+        "whether the two swords on the ground are crossed or simply overlapping",
+        "whether the small pouch at the man's belt is a separate object or part of the belt"
+      ],
+      "figureCount": 3,
+      "highRisk": true,
+      "riskReasons": [
+        "pip-card(swords-05)",
+        "multi-figure(3)",
+        "risk-objects(wing,sword,cup,path,water)",
+        "uncertain-details(2)"
+      ],
+      "isControl": false,
+      "spotCheckIndex": 23
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "command": "npm run visual:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/visual-check.log"
+  },
+  {
+    "command": "npm run visual:qa",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/visual-qa.log"
+  },
+  {
+    "command": "npm run deck:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/deck-check.log"
+  },
+  {
+    "command": "npm run reading:prompt",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/reading-prompt.log"
+  },
+  {
+    "command": "npm run reading:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/reading-check.log"
+  },
+  {
+    "command": "npm run intake:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/intake-check.log"
+  },
+  {
+    "command": "npm run performance:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/performance-check.log"
+  },
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/typecheck.log"
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/build.log"
+  },
+  {
+    "command": "npm run build:streamlit",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/build-streamlit.log"
+  },
+  {
+    "command": "npm run design:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/design-check.log"
+  },
+  {
+    "command": "npm run layout:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/layout-check.log"
+  },
+  {
+    "command": "npm run artwork:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/artwork-check.log"
+  },
+  {
+    "command": "npm run cinematic:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/cinematic-check.log"
+  },
+  {
+    "command": "npm run i18n:check",
+    "exitCode": 0,
+    "log": "qa/visual-semantics/multi-agent-review/validation/i18n-check.log"
+  }
+]

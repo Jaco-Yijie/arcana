@@ -1,0 +1,218 @@
+{
+  "reviewId": "review-215",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-215.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs corrected"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "pass": 1,
+    "corrected": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-215.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-215",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, standing on a slope of tangled vines",
+              "posture": "standing, striding/braced — left leg forward and bent, right leg extended back onto a lower vine; torso twisted toward the viewer's right",
+              "gaze": "upward and to the right, toward the raised blade",
+              "heldObjects": [
+                "a sword, gripped in the raised right hand, blade angled up and to the right"
+              ],
+              "notes": "curly dark hair; wears a layered green-brown hooded tunic with a belt and pouches, rolled sleeves, and tall boots; the left hand is lowered and resting on/gripping a vine"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "raised aloft in the figure's right hand, upper center-right; leafy sprigs appear entwined near the blade"
+            },
+            {
+              "type": "bird",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left, a black bird perched in profile on a horizontal vine/branch, facing right"
+            },
+            {
+              "type": "mushroom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower left corner; a cluster of pale capped mushrooms — at least four caps are distinguishable but overlapping and partly cut off by the frame edge"
+            },
+            {
+              "type": "white flower",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower right and lower center; several small white star-shaped blooms scattered among foliage, too many and too overlapping to count"
+            },
+            {
+              "type": "path",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "a narrow earthen track running from the lower center up into the misty forest behind the figure"
+            },
+            {
+              "type": "tree trunk",
+              "count": null,
+              "countConfidence": "low",
+              "where": "background forest; numerous vertical trunks fading into haze, not individually separable"
+            },
+            {
+              "type": "decorative border frame",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "a pale carved botanical border running around all four edges of the artwork"
+            }
+          ],
+          "environment": [
+            "dense green forest with hanging ivy and thick braided vines",
+            "sunlight streaming down through the canopy from upper center",
+            "ferns, moss and leaf litter on the ground",
+            "misty depth behind the figure"
+          ],
+          "lightSources": [
+            "bright diffuse sunlight breaking through the canopy at upper center, creating visible light shafts"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the raised sword points up toward the brightest part of the canopy",
+            "the perched bird is diagonally up-left from the figure's head, roughly level with the sword hilt",
+            "the path recedes between the figure and the right-hand mass of vines",
+            "heavy vine coils frame the figure on both left and right"
+          ],
+          "foreground": [
+            "mushroom cluster lower left",
+            "broad leaves, ferns and white flowers along the bottom edge",
+            "thick vine ropes"
+          ],
+          "background": [
+            "hazy sunlit forest of vertical trunks",
+            "the ascending path"
+          ]
+        },
+        "uncertainObservations": [
+          "exact mushroom count in the lower-left cluster cannot be resolved — caps overlap and the frame cuts through them",
+          "the number of white flowers is not countable",
+          "whether the green sprigs near the blade are attached to the sword or are background foliage passing in front of it cannot be determined",
+          "the bird's species is not determinable; only a dark silhouette with a pointed beak is visible"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "small leafy sprig growing along the sword blade near the hilt",
+          "observed": "the leafy growth is wound around the middle and upper portion of the blade, well above the hilt and closer to the tip than to the crossguard",
+          "evidence": "The crossguard and wrapped grip sit low, level with the figure's raised fist. The blade rises from there; the leaves cluster from roughly a third of the way up the blade to about two-thirds of the way toward the tip. There is a long bare stretch of blade between the crossguard and the lowest leaf, so 'near the hilt' inverts where the foliage actually sits.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "small leafy sprig growing along the sword blade near the hilt",
+            "with": "leafy sprig growing along the middle and upper part of the sword blade, well above the hilt"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-215",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, full body, mid-frame",
+              "posture": "standing mid-stride on a slope, legs apart, weight on the left leg, torso twisted; the right arm is raised high, the left arm lowered and braced on a thick vine",
+              "gaze": "head tilted up and to the right, looking toward the raised blade",
+              "heldObjects": [
+                "a sword held aloft in the raised hand, blade vertical, with leafy vines/creepers wound around the blade",
+                "the lowered hand rests on / grips a thick woody vine"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "raised vertically above the figure's head, center-right of frame, foliage entwined around the blade"
+            },
+            {
+              "type": "dark bird perched on a branch",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left, in silhouette on a short horizontal branch"
+            },
+            {
+              "type": "mushroom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a cluster of pale broad-capped mushrooms in the lower-left corner, plus two smaller caps a little higher on the left slope"
+            },
+            {
+              "type": "thick twisting vine / bramble mass",
+              "count": null,
+              "countConfidence": "low",
+              "where": "large braided ropes of vine sweeping across the left foreground and the entire right side"
+            },
+            {
+              "type": "white daisy-like flowers",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered along the lower-right and lower-center undergrowth"
+            }
+          ],
+          "environment": [
+            "dense forest of tall slender trunks",
+            "a narrow footpath/track winding away from the viewer up into the trees at center",
+            "heavy undergrowth: ferns, ivy, moss, brambles",
+            "an ornamental leaf-and-acorn border visible at the top corners and the right edge of the picture area"
+          ],
+          "lightSources": [
+            "bright hazy light from the upper center, behind the trees, back-lighting the canopy and the raised blade"
+          ],
+          "moonPhase": "not present",
+          "spatialRelations": [
+            "the figure stands to the left of the path, with the path running from the lower-center up and away behind them",
+            "the raised sword crosses in front of the brightest part of the sky",
+            "the perched bird is high above and to the left of the figure, looking down/right toward them",
+            "massive vines curve inward from both the left and right edges, enclosing the figure",
+            "mushrooms and flowers occupy the nearest foreground along the bottom edge"
+          ],
+          "foreground": [
+            "vine ropes, ferns, mushrooms, flowering undergrowth"
+          ],
+          "background": [
+            "sunlit forest depth, receding trunks, the path vanishing into haze"
+          ]
+        },
+        "uncertainObservations": [
+          "mushroom caps overlap heavily in the lower-left; no reliable count possible",
+          "whether the foliage on the blade is growing from it or merely draped over it is not determinable",
+          "the bird's species/type is not determinable — only that it is small, dark and perched",
+          "I cannot tell whether the figure wears a hood up or a cowl down around the shoulders",
+          "the path's far end dissolves into light; whether anything stands at its end is not resolvable"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

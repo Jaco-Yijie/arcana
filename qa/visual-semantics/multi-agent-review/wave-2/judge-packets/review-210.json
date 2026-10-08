@@ -1,0 +1,309 @@
+{
+  "reviewId": "review-210",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-210.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-210.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+          "observed": "the figure is seated on the stone block, bent sharply forward at the waist, not kneeling beside it",
+          "evidence": "The hips rest on the block's top surface and the red underskirt drapes over its right edge; the knees are bent in front with the arms reaching down between them. The packet's own spatialRelations line already says she 'sits', contradicting the scene line.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "stone block or ledge she kneels beside",
+          "observed": "stone block or ledge she sits on",
+          "evidence": "Same observation: the block is under her, supporting her weight, not adjacent to her.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+            "with": "A crowned woman sits on a stone block in a dark overgrown garden"
+          },
+          {
+            "find": "stone block or ledge she kneels beside",
+            "with": "stone block or ledge she sits on"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-210",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, slightly right",
+              "posture": "seated on a low stone block/bench, bent sharply forward at the waist, both arms reaching down between the knees toward the soil",
+              "gaze": "downward, at the ground directly in front of the hands",
+              "heldObjects": [
+                "both hands cup and press around a small green seedling in the earth"
+              ],
+              "appearance": "a tall spiked/pointed crown on the head, dark long-sleeved gown with a red underskirt showing beneath, long dark hair; face in deep shadow"
+            }
+          ],
+          "objects": [
+            {
+              "type": "crown",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the seated figure's head, many-pointed and spiked"
+            },
+            {
+              "type": "seedling/small plant",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "in the bare dark soil directly beneath the figure's cupped hands, center-bottom"
+            },
+            {
+              "type": "round shield/disc",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower right, a large circular disc propped upright against the stonework, bearing an incised symbol of a circle with a cross beneath it"
+            },
+            {
+              "type": "doorway",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left of center, middle ground, a small arched opening set in the dark wall, filled with pale light"
+            },
+            {
+              "type": "fountain/waterfall",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right middle ground, water falling in a sheet from a raised stone basin into a lower pool"
+            },
+            {
+              "type": "stone column",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper right, a short fluted pillar or plinth above the fountain"
+            },
+            {
+              "type": "wall/fortification",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "filling the upper left and center, a tall dark ivy-covered stone wall with a crenellated or ruined top"
+            },
+            {
+              "type": "wheat/grain stalk",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a stand of pale bearded grain filling the entire left foreground; individual stalks overlap and cannot be counted"
+            },
+            {
+              "type": "stone step",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a short flight leading up from the middle ground to the lit doorway; the number of treads is not resolvable in the dark"
+            }
+          ],
+          "environment": [
+            "deep night or near-total darkness over the whole scene",
+            "ivy climbing the stone wall",
+            "a bare patch of turned dark soil in front of the seated figure",
+            "a stand of grain at the left",
+            "running water at the right",
+            "a faint lighter patch of sky at the upper left beyond the wall"
+          ],
+          "lightSources": [
+            "pale light from inside the arched doorway",
+            "a faint cool glow on the grain heads and on the falling water; no moon or lamp visible"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the lit doorway is behind and to the left of the figure, at the top of a path/steps; the figure faces away from it, down toward the soil",
+            "the round shield leans against the stone at the figure's right side, lower than the seat",
+            "the grain at the left and the bare soil at the center are adjacent — growth on one side, turned empty earth on the other",
+            "the falling water is on the opposite side of the figure from the grain"
+          ],
+          "foreground": [
+            "grain stalks",
+            "turned soil and the seedling",
+            "the round shield"
+          ],
+          "background": [
+            "ivy-covered wall",
+            "lit arched doorway",
+            "fountain",
+            "night sky"
+          ],
+          "notableTension": [
+            "the only lit opening in the scene is behind the figure and unregarded"
+          ]
+        },
+        "uncertainObservations": [
+          "the image is extremely dark; many mid-ground details are at the edge of legibility",
+          "the symbol on the round disc reads as a circle above a cross, but the incision is worn and the reading is not certain",
+          "whether the figure is seated on a bench, a block or a ruin fragment cannot be determined",
+          "the figure's facial features and expression are not visible",
+          "whether the falling water is a built fountain or water spilling over broken masonry is unclear",
+          "the figure's gender is not determinable from the visible detail"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+          "observed": "she is seated on the low stone block, leaning far forward, not kneeling beside it",
+          "evidence": "Her hip rests on top of the stone with the reddish underskirt draping over its front face, and her crowned head sits roughly the height of a seated figure above the soil — too high for a kneel. The packet's own spatialRelations line already says 'the woman sits in the lower centre', contradicting its scene line.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "carved disc bearing a circle-and-cross symbol, lower right",
+          "observed": "a large shield-shaped plate leaning upright against the stone; its outline is elongated with a tapering lower end, not circular, and no break is visible",
+          "evidence": "The silhouette is an elongated tilted form, not a round disc, and nothing in it reads as a fracture — 'broken' and 'disc' both assert more than the pixels support (it could also be a round plate seen obliquely, which is exactly why the shape should not be asserted).",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+            "with": "A crowned woman sits on a low stone block in a dark overgrown garden"
+          },
+          {
+            "find": "stone block or ledge she kneels beside",
+            "with": "low stone block or ledge she sits on"
+          },
+          {
+            "find": "carved disc bearing a circle-and-cross symbol, lower right",
+            "with": "shield-shaped plate bearing a circle-and-cross symbol, leaning upright at lower right"
+          },
+          {
+            "find": "engraved circle-and-cross symbol on a broken stone disc",
+            "with": "engraved circle-and-cross symbol on a leaning shield-shaped stone plate"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-210",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-right, seated low on a stone block or bench",
+              "posture": "seated, leaning far forward, head bowed, knees bent, both arms extended down between the knees with both hands cupped around a small plant in the soil",
+              "gaze": "downward at the plant in front of her hands",
+              "heldObjects": [
+                "a small seedling / young plant, cradled rather than gripped"
+              ],
+              "clothing": "long dark patterned gown with a reddish under-layer spilling out at the right hip and pooling on the ground",
+              "headwear": "tall open crown with many upright spikes or points"
+            }
+          ],
+          "objects": [
+            {
+              "type": "crown",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the seated figure's head, tall and many-pointed"
+            },
+            {
+              "type": "seedling / small plant",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "in the dark soil directly beneath the figure's cupped hands, a few small leaves on a thin stem"
+            },
+            {
+              "type": "shield",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower right, a large rounded shield propped upright against the stone, engraved with a circle-over-cross symbol"
+            },
+            {
+              "type": "fountain with falling water",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right middle ground, a stone basin with a pale sheet of water spilling from it"
+            },
+            {
+              "type": "stone column / pillar",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper right, a fluted column with a capital standing above and behind the fountain"
+            },
+            {
+              "type": "arched doorway",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left middle ground, a small pointed-arch opening set in stonework, glowing pale from within"
+            },
+            {
+              "type": "stone step / path",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a short flight of pale steps leading from the doorway down toward the figure; individual steps blur together"
+            },
+            {
+              "type": "wheat or grain stalk",
+              "count": null,
+              "countConfidence": "low",
+              "where": "left edge and lower-left foreground, a dense stand of heavy-headed grain stalks; many individual heads but too overlapping to count"
+            }
+          ],
+          "environment": [
+            "night",
+            "tall ivy-covered stone wall or fortification filling the background",
+            "dark soil / garden ground",
+            "grain field at left",
+            "stone fountain and column at right"
+          ],
+          "lightSources": [
+            "pale glow from inside the arched doorway at left",
+            "faint lighter patch of sky at upper left above the wall",
+            "the falling water and the grain heads catch pale light from an unclear direction"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure sits with her back to the fountain and her left side toward the doorway",
+            "the shield leans against the stone block to the lower right of the figure, below the fountain",
+            "the doorway with its steps sits behind and to the left of the figure, at the base of the tall wall",
+            "the grain occupies the near-left foreground, closer to the viewer than the figure"
+          ],
+          "foreground": [
+            "grain stalks",
+            "dark soil",
+            "the shield",
+            "the figure's trailing skirt"
+          ],
+          "background": [
+            "ivy-clad stone wall / castle mass",
+            "dark night sky",
+            "silhouetted trees at far left"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of grain stalks cannot be counted; they overlap heavily",
+          "the small plant under the hands may be one seedling or a small clump — the leaf count is not resolvable",
+          "what the figure's hands are doing to the plant (planting, touching, pulling) is not determinable",
+          "the shape behind the fountain reads as a column but may be a broken pedestal",
+          "the figure's face is in deep shadow; expression not readable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

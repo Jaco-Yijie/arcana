@@ -1,0 +1,101 @@
+[
+  {
+    "reviewId": "review-501",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "一只手抬至头侧，另一只手靠近右剑柄，两剑向两侧下方展开；左剑是否插入地面不清。月亮右侧亮区明显，但纹理与暗部使精确月相无法稳判。",
+    "reason": "reviewer-d 的双手持剑读法与可见抬手及 reviewer-a/f 独立观察冲突；拒绝其改姿势建议。reviewer-f 的 crescent 与 a/d 的 gibbous 分歧，自身观察不足以确认精确月相，且不满足两名 Reviewer 一致自动修正门槛。丢弃争议月相条目和含不可靠 planted 细节的 scene；其他可靠字段保留。",
+    "overturnedReviewer": true,
+    "overturnedReviewerNames": [
+      "reviewer-d",
+      "reviewer-f"
+    ],
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "large gibbous moon"
+      }
+    ],
+    "uncertainFields": [
+      "scene"
+    ]
+  },
+  {
+    "reviewId": "review-503",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "high",
+    "independentFinding": "一人仰卧石台，胸前双手叠合；墙上三把竖直向下剑，石台前沿一把横剑。左侧尖拱窗可见；画面顶部是墙面，未显示可辨认的拱顶或天花。",
+    "reason": "reviewer-c 对 vaulted 的质疑得到自身图像观察确认；a/f 的 pass 不足以证实画外屋顶。不能把尖拱窗等同拱顶，也不满足两名 Reviewer 明确一致的自动修正门槛。scene 含不可核实 vaulted，标为不确定，其他对象与空间关系保留。",
+    "overturnedReviewer": true,
+    "overturnedReviewerNames": [
+      "reviewer-a",
+      "reviewer-f"
+    ],
+    "uncertainFields": [
+      "scene"
+    ]
+  },
+  {
+    "reviewId": "review-504",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "站立人物高举一把竖直向上的剑，剑身穿过枝叶环；左后方斗篷飘动，右侧有开箱、书本及重叠飞页。腰侧挂件细节无法确认其内是否装剑；纸页间未能分辨独立小环。",
+    "reason": "reviewer-f 的第二把剑主张与其自身不确定项及 reviewer-c/e 的鞘/佩具歧义冲突，不能从鞘推定内部有剑，不满足自动修正门槛。reviewer-e 点名的纸页间小环在密集重叠图像中无法独立确认，按条目移除该对象，保留高举剑及其他可靠事实。",
+    "overturnedReviewer": true,
+    "overturnedReviewerNames": [
+      "reviewer-c",
+      "reviewer-f"
+    ],
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "small ring or circlet among the falling papers"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-505",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "high",
+    "independentFinding": "三名人物举臂聚拢杯群，能辨认两个杯轮廓但重叠遮挡使总杯数无法确定。天空左上有部分被遮的浅色圆盘，精确月相难辨。",
+    "reason": "两名 Reviewer 都只辨出两个杯，但 reviewer-d 明确不能排除第三杯被遮，a 亦在不确定项承认可能完全遮挡；自身观察同样不能确认准确总数。因此拒绝强改为二杯，将所有现有三杯数量断言降级，并移除无法确认的新月对象条目。",
+    "overturnedReviewer": true,
+    "overturnedReviewerNames": [
+      "reviewer-a"
+    ],
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "three golden chalices held aloft and touching"
+      },
+      {
+        "field": "keyObjects",
+        "item": "small crescent moon at upper left"
+      },
+      {
+        "field": "spatialRelations",
+        "item": "the three chalices meet at the centre of the upper third, directly beneath the brightest star"
+      }
+    ],
+    "uncertainFields": [
+      "scene"
+    ]
+  },
+  {
+    "reviewId": "review-506",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "high",
+    "independentFinding": "坐床人物双手掩脸，左墙横剑由上而下排列，能分辨八把可见剑，顶部遮蔽/截断使总数无法确认。右下竖件呈床角装饰柱，右上近圆月亮及窗外水面可见。",
+    "reason": "reviewer-b/e 的八把可见剑相互印证，但两者均承认顶部可能存在被截断或遮住的剑；自身观察也不能排除。因此不满足明确总数自动修正门槛，拒绝 nine→eight 的精确替换，只移除九把计数条目，保留 scene 中无计数的剑列及空间关系。",
+    "overturnedReviewer": true,
+    "overturnedReviewerNames": [
+      "reviewer-b"
+    ],
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "nine swords mounted horizontally on the wall"
+      }
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "locale": "zh-CN",
+    "width": 375,
+    "menu": true,
+    "chapters": 4,
+    "overflow": false,
+    "cta": "decks"
+  },
+  {
+    "locale": "zh-CN",
+    "width": 390,
+    "menu": true,
+    "chapters": 4,
+    "overflow": false,
+    "cta": "decks"
+  },
+  {
+    "locale": "zh-CN",
+    "width": 430,
+    "menu": true,
+    "chapters": 4,
+    "overflow": false,
+    "cta": "decks"
+  },
+  {
+    "locale": "zh-CN",
+    "width": 1440,
+    "menu": true,
+    "chapters": 4,
+    "overflow": false,
+    "cta": "decks"
+  },
+  {
+    "locale": "en-US",
+    "width": 375,
+    "menu": true,
+    "chapters": 4,
+    "overflow": false,
+    "cta": "decks"
+  },
+  {
+    "locale": "en-US",
+    "width": 390,
+    "menu": true,
+    "chapters": 4,
+    "overflow": false,
+    "cta": "decks"
+  },
+  {
+    "locale": "en-US",
+    "width": 430,
+    "menu": true,
+    "chapters": 4,
+    "overflow": false,
+    "cta": "decks"
+  },
+  {
+    "locale": "en-US",
+    "width": 1440,
+    "menu": true,
+    "chapters": 4,
+    "overflow": false,
+    "cta": "decks"
+  },
+  {
+    "freshUser": "guide",
+    "languageSwitch": "complete"
+  },
+  {
+    "existingSession": "unchanged"
+  }
+]

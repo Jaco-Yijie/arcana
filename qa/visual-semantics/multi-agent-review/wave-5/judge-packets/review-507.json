@@ -1,0 +1,363 @@
+{
+  "reviewId": "review-507",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-507.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs corrected"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 1,
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-507.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-507",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "viewer-left，约占画面左三分之一，位于一段石阶上",
+              "posture": "站立前倾、弓步攀登状；右腿（viewer-right 那条）屈膝踏在高一级台阶上，左腿后蹬伸直；上身前倾朝向 viewer-right",
+              "gaze": "头部侧面朝向 viewer-right，面向巨轮的轮毂，视线略向上",
+              "heldObjects": [
+                "双臂同时向前上方（viewer-right、略高于肩）伸出，双手握在巨轮中心轮毂侧面的一个凸起/把手上，像在推"
+              ],
+              "clothing": "长款破烂外袍/斗篷，下摆撕裂成许多长条向 viewer-left 后方飘散；紧身裤腿；短发凌乱"
+            }
+          ],
+          "objects": [
+            {
+              "type": "wheel",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面右侧及中部，巨大，占据画面约三分之二，顶部被画面上缘截断",
+              "orientation": "轮面正对观者，轴心水平、轮盘竖直",
+              "arrangement": "单个巨轮；其右后方还能看到至少一道同心的环形结构"
+            },
+            {
+              "type": "spoke",
+              "count": 8,
+              "countConfidence": "medium",
+              "where": "从巨轮中心轮毂向外辐射",
+              "orientation": "放射状；其中一根近乎竖直向上，两根向 viewer-right 呈楔形宽板",
+              "arrangement": "环绕轮毂等分排列；左下方若干根被人物遮住"
+            },
+            {
+              "type": "carved relief panel",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "嵌在巨轮的辐条/楔形板上：一块在正上方竖直辐条上，一块在 viewer-right 偏上的楔形板上，一块在 viewer-right 偏下的楔形板上",
+              "orientation": "随辐条方向，竖直/斜向",
+              "arrangement": "分散在轮面不同扇区"
+            },
+            {
+              "type": "stone step",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面左下，人物脚下，向 viewer-left 下方延伸",
+              "orientation": "水平台面，逐级下降",
+              "arrangement": "一道阶梯"
+            }
+          ],
+          "environment": [
+            "幽暗的大型石砌室内空间，高大拱券",
+            "viewer-left 背景有数个尖拱窗/拱廊，窗格隐约可见",
+            "画面左上角有一处带格栅的穹顶或天窗结构",
+            "左下角是方格石板地面",
+            "人物脚下为一段石阶与一块凸出的石台",
+            "巨轮右后方另有一圈巨大的同心环状构件",
+            "整幅画面为近乎单色的深褐黑调，颗粒/刮痕质感明显"
+          ],
+          "lightSources": [
+            "左上方穹顶/天窗透入的微弱冷光",
+            "viewer-left 拱窗透入的极弱光",
+            "巨轮边缘与辐条上的高光（来源未直接可见）"
+          ],
+          "moonPhase": "not visible — 室内场景，画面中没有天空或月亮",
+          "spatialRelations": [
+            "人物在巨轮的 viewer-left 一侧",
+            "人物双手所在位置与巨轮轮毂重合",
+            "石阶在人物脚下并向 viewer-left 下方延伸",
+            "拱窗与穹顶在人物的上方及后方（viewer-left）",
+            "方格地面在石阶的 viewer-left 下方",
+            "第二道环形构件在主轮的右后方"
+          ],
+          "foreground": [
+            "左下角方格石板地面",
+            "石阶与石台"
+          ],
+          "background": [
+            "拱券与拱窗构成的室内立面",
+            "左上方带格栅的穹顶/天窗",
+            "右后方的同心环形结构"
+          ]
+        },
+        "uncertainObservations": [
+          "辐条数目：中心左下若干根被人物身体挡住，我只能确认上方与右侧的 6 根左右，推到 8 根是基于可见夹角推算，不敢写死",
+          "正上方竖直辐条上的浮雕是一条弯曲的 S 形/蛇形细长物，但首尾细节看不清，无法确定是动物还是纯装饰纹样",
+          "viewer-right 偏上楔形板上的浮雕像一个直立的、头部细长突出的四足/人形生物侧影，具体是什么分辨不出",
+          "viewer-right 偏下楔形板上的浮雕像一个带翼的趴伏生物，但轮廓被暗部吞掉，看不清",
+          "人物是左手在上还是右手在上分辨不出，只能确认两只手都搭在轮毂上",
+          "轮毂中心是否有可转动的曲柄/把手，还是人物直接推轮面，看不清",
+          "画面顶部巨轮被截断，轮的完整直径不可知"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "carved relief panels on the wheel's rim segments",
+          "observed": "The carved relief panels sit on the wheel's spokes, in the field between the hub and the rim, not on the outer rim segments. I logged one on the upright spoke directly above the hub (a long S-curved serpentine form), one on the spoke to the viewer-right of the hub (a quadruped in profile), and one on the lower-right spoke.",
+          "evidence": "The outer rim is a separate heavy blocky band with no carving visible on it; each plaque lies along the length of a radial bar running inward to the hub, following the radial direction, and the topmost one clearly starts just above the hub and stops short of the rim.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "carved relief panels on the wheel's rim segments",
+            "with": "carved relief panels set along the wheel's spokes, between the hub and the rim"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-507",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "viewer-left of center, standing on a stone stair",
+              "posture": "standing, braced and leaning hard forward to the viewer-right, one leg forward with the knee bent on the upper step and the rear leg extended straight back down the stair, torso pitched forward, both arms extended ahead at chest height",
+              "gaze": "head in profile turned toward viewer-right, looking up at the hub of the wheel",
+              "heldObjects": [
+                "both hands pressed/gripping on the central hub of the large wheel at about chest-to-shoulder height, arms straight out in front, pushing toward viewer-right"
+              ],
+              "clothing": "a long ragged coat or cloak whose hem is shredded into long trailing strips that stream back and down to the viewer-left; close-fitting trousers and soft boots or wrapped feet; short-to-medium dark hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "wheel",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "dominating the viewer-right two thirds of the frame, standing on edge",
+              "orientation": "vertical, its plane facing the viewer, hub at about the figure's shoulder height",
+              "arrangement": "a single enormous spoked wheel with a heavy segmented outer rim and a thick inner ring"
+            },
+            {
+              "type": "wheel spoke",
+              "count": null,
+              "countConfidence": "low",
+              "where": "radiating from the hub out to the rim",
+              "orientation": "radial, in the wheel's vertical plane",
+              "arrangement": "evenly spaced radial bars; the upper and right spokes are visible but the left and lower-left ones are hidden behind the figure and lost in shadow, so I cannot count them"
+            },
+            {
+              "type": "carved relief panel set on the wheel",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "one on the upper vertical spoke above the hub, one on the spoke to the viewer-right of the hub, one on the lower-right spoke below the hub",
+              "orientation": "flat plaques lying along the spokes, following the radial direction",
+              "arrangement": "spaced around the hub, roughly at the top, the right, and the lower right"
+            },
+            {
+              "type": "stone step",
+              "count": null,
+              "countConfidence": "low",
+              "where": "running up from the lower-left corner to the platform the figure stands on",
+              "orientation": "horizontal treads rising toward viewer-right",
+              "arrangement": "a straight flight; the lower treads dissolve into darkness and are not countable"
+            },
+            {
+              "type": "arched window",
+              "count": null,
+              "countConfidence": "low",
+              "where": "in the wall at viewer-left, behind and above the figure",
+              "orientation": "vertical, in the left wall",
+              "arrangement": "at least one tall arched opening, possibly a row of them; the wall is very dark"
+            }
+          ],
+          "environment": [
+            "a large dark stone interior, like a hall or tower chamber",
+            "a vaulted or ribbed ceiling structure at the top of the frame",
+            "a tall arched opening in the left wall",
+            "a stone staircase climbing from the lower-left",
+            "a flagged / checkered floor visible at the bottom left",
+            "a second, larger dark circular form behind the wheel at viewer-right, partly hidden by it",
+            "heavy soot-dark atmosphere, everything rendered in near-monochrome brown-black"
+          ],
+          "lightSources": [
+            "a weak diffuse light entering from the upper viewer-left, grazing the figure's back and the top of the wheel; no light-emitting object is visible in frame"
+          ],
+          "moonPhase": "not visible — the scene is an enclosed interior with no sky in frame",
+          "spatialRelations": [
+            "the figure is at viewer-left of the wheel and reaching to viewer-right toward its hub",
+            "the wheel's hub is directly in front of and slightly above the figure's hands",
+            "the stair runs from the lower-left corner up to the platform under the figure's forward foot",
+            "the figure's tattered hem trails back to the viewer-left, away from the wheel",
+            "the relief panel with the serpentine carving is at the top of the wheel, directly above the hub",
+            "the arched window is behind the figure at upper viewer-left",
+            "the second large dark circle lies behind the wheel toward the right edge"
+          ],
+          "foreground": [
+            "the lower stair treads and the flagged floor at lower viewer-left",
+            "the trailing shredded hem of the figure's coat"
+          ],
+          "background": [
+            "the vaulted ceiling and left-wall arches",
+            "the second large dark circular form behind the wheel",
+            "the deep unlit space at the right edge"
+          ]
+        },
+        "uncertainObservations": [
+          "I cannot count the wheel's spokes. The visible upper-right arc is evenly divided and the spacing suggests a regular division, but the left half is behind the figure and in shadow, so any total would be a guess.",
+          "The carving on the panel at the top of the wheel is a long curved S-shaped form; it reads as a serpent but I cannot confirm a head or scales.",
+          "The relief on the spoke to the viewer-right of the hub shows a quadruped with a long muzzle and upright ears in profile; I can see the silhouette but not enough detail to identify the animal.",
+          "The relief on the lower-right spoke is too eroded/dark for me to make out what it depicts.",
+          "The large dark circular form behind the wheel could be a second wheel, a gear, or an architectural oculus.",
+          "Whether the figure is pushing the wheel or holding onto it to stop it is not determinable from the pose alone; I only record that the arms are extended and the body is braced.",
+          "The figure's footwear is indistinct — boots, wraps, or bare feet are all possible."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "carved relief panels on the wheel's rim segments",
+          "observed": "The carved creature reliefs sit on the wheel's SPOKES, not on its rim segments. Three broad wedge-shaped spoke panels between the hub and the rim carry the reliefs: a coiling S-shaped serpent on the panel at about 1 o'clock, a long-muzzled jackal- or dog-headed beast on the panel at about 3 o'clock, and a winged four-legged creature on the panel at about 5 o'clock. The outer rim itself is a plain double band of masonry blocks with no figurative carving.",
+          "evidence": "Hub and spoke area, roughly x=200-520 / y=250-560 in the 560x933 image. Enlarged 3x and brightened, the jackal relief is plainly bounded by the wedge-shaped spoke panel that springs from the hub and stops short of the rim; the rim band beyond it shows only block jointing.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "carved relief panels on the wheel's rim segments",
+            "with": "carved relief panels set into the wheel's broad spokes, between the hub and the rim"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-507",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of centre, in the middle band of the frame, standing on a flight of stone steps",
+              "posture": "mid-stride climbing: lunging up and forward to the viewer-right, rear (viewer-left) leg trailing down the steps, front leg planted on a higher tread, torso pitched forward, both arms extended toward the wheel's hub — the stance of someone shoving or climbing onto the wheel",
+              "gaze": "seen from BEHIND and slightly left; the back of the head is toward the viewer and the face is turned away toward the wheel at the viewer-right. No face is visible and the head is NOT turned back over the shoulder",
+              "heldObjects": [
+                "upper arm (viewer-right of the two): hand closed around the projecting axle/hub boss at the centre of the wheel, at about head height",
+                "lower arm: hand open and pressed flat against the hub plate just below the first hand",
+                "no tool, weapon or lantern is carried"
+              ],
+              "clothing": "a long dark coat or cloak with a deeply shredded, ribbon-like hem that streams out and down to the viewer-left; dark close-fitting trousers and soft shoes; dark shortish hair; bare head"
+            }
+          ],
+          "objects": [
+            {
+              "type": "wheel",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "dominating the right two-thirds of the frame, standing vertically from near the floor to the top of the picture",
+              "orientation": "upright, face-on to the viewer, axle pointing out of the picture toward the viewer-left",
+              "arrangement": "one enormous wheel built of stone/masonry blocks: a decorated central hub boss, radiating spokes, and a double concentric outer rim"
+            },
+            {
+              "type": "wheel spoke",
+              "count": null,
+              "countConfidence": "low",
+              "where": "radiating from the hub in the right half of the frame",
+              "orientation": "radial",
+              "arrangement": "evenly spaced around the hub; several are narrow bars and at least three are broad wedge-shaped relief panels. The lower-left sector is hidden behind the figure and behind deep shadow, so I cannot count them — roughly eight to ten are discernible but I will not commit to a number"
+            },
+            {
+              "type": "carved relief creature on a spoke panel",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "on the broad spoke panels: one at about the 1 o'clock position, one at about 3 o'clock to the right of the hub, one at about 5 o'clock below the hub",
+              "orientation": "each creature in side profile facing the viewer-left (inward/toward the hub)",
+              "arrangement": "one creature per broad panel: the upper panel bears a coiling S-shaped serpent; the right-hand panel a standing long-muzzled jackal- or dog-headed beast; the lower panel a winged four-legged creature. A fourth panel may exist in the hidden lower-left sector"
+            },
+            {
+              "type": "stone step",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower-left, a flight climbing from the lower-left corner up and to the right toward the wheel",
+              "orientation": "horizontal treads receding up to the right",
+              "arrangement": "a straight flight; the lower treads merge into darkness so the total is not countable"
+            },
+            {
+              "type": "arched window / lattice skylight",
+              "count": null,
+              "countConfidence": "low",
+              "where": "upper-left and far left — a glazed lattice panel at the top-left above the wheel and tall dark arched openings down the left wall",
+              "orientation": "upright arches; the top-left lattice is set into the vault",
+              "arrangement": "a row along the left wall, mostly swallowed by shadow"
+            }
+          ],
+          "environment": [
+            "a cavernous stone interior: ribbed arches, piers and a vaulted ceiling",
+            "flagstone floor at the lower-left",
+            "a squat stone pedestal or plinth supporting the top of the step flight, directly beneath the figure's leading foot",
+            "heavy soot-dark grain and speckle over the whole image",
+            "a thin ragged printed border along the left and right edges"
+          ],
+          "lightSources": [
+            "a glazed lattice window/skylight at the TOP-LEFT, the brightest patch in the frame",
+            "a diffuse glow close around the wheel's hub where the figure's hands are",
+            "the figure is rim-lit along his upper-left contour — shoulder, back of the head and the trailing cloak edges catch the light",
+            "the step treads are lit on their top surfaces"
+          ],
+          "moonPhase": "not visible — an enclosed interior, no sky or moon in frame",
+          "spatialRelations": [
+            "the wheel stands to the viewer-RIGHT of the figure; he faces it and reaches right",
+            "the hub is at roughly the figure's head height, slightly above",
+            "the steps ascend from the lower-left corner up toward the wheel at the right",
+            "a very large dark concentric ring-shadow of the wheel is thrown onto the wall BEHIND and to the viewer-RIGHT of the wheel, offset right — i.e. the light comes from the viewer-left",
+            "the serpent panel is above the hub, the jackal panel is level with and right of the hub, the winged creature is below the hub",
+            "the lattice skylight is up and to the left, above the top-left arc of the wheel's rim"
+          ],
+          "foreground": [
+            "the stone steps and plinth at the lower-left",
+            "the figure's trailing shredded hem",
+            "dark flagstones at the bottom edge"
+          ],
+          "background": [
+            "vaulted stone hall with arches and piers on the left",
+            "the lattice skylight at the top-left",
+            "the oversized ring-shadow of the wheel on the right-hand wall"
+          ]
+        },
+        "uncertainObservations": [
+          "The image is extremely dark and heavily grained; I brightened it several times and many areas still resolve to nothing. Several of my readings here are low-confidence.",
+          "The spoke count is not determinable — the lower-left sector of the wheel is occluded by the figure and by shadow.",
+          "The lower spoke creature reads as winged and four-legged; whether it is a griffin, a sphinx or a winged bull I cannot tell.",
+          "I cannot tell whether the figure is pushing the wheel to turn it or climbing onto it; both readings fit the pose.",
+          "Whether the big dark concentric arcs on the right are the wheel's cast shadow or a second wheel set further back is ambiguous; I lean to a cast shadow because the arcs track the rim's curvature.",
+          "The figure's face is never visible, so nothing can be said about expression, age or sex.",
+          "I could not find a clearly drawn cast shadow of the FIGURE himself to corroborate the light direction."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

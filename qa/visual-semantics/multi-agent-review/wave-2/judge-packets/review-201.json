@@ -1,0 +1,294 @@
+{
+  "reviewId": "review-201",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-201.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-201.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "two ornate swords stand point-upward among flowers below her",
+          "observed": "both blades are driven point-DOWNWARD into the ground — pommel and crossguard at the top, blade tapering downward and disappearing into the pale foliage at the bottom of the frame",
+          "evidence": "On the centre blade I can resolve, top to bottom: a round pommel, then a wide ornate crossguard, then the blade descending and narrowing until it is lost in the blossoms near the bottom edge. The right-hand blade shows the identical sequence, its pommel and crossguard set lower in the frame than the centre one. Neither shows a hilt at the bottom. The orientation is inverted from what the text asserts.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the two swords rise from the lower right, crossing the lower half of her gown",
+          "observed": "the blades descend rather than rise, and they are not both at the lower right — one stands at roughly the horizontal centre of the frame (this is the one that overlaps the lower half of her gown), the other stands well to its right",
+          "evidence": "Same hilt-above-blade evidence as above. Positionally, the nearer blade's crossguard sits at about the middle of the frame width, directly in front of her skirt; only the second blade is in the right-hand third. The pair does not originate from a single lower-right point.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "folded letter or paper held in both hands",
+          "observed": "her two hands are raised and clasped together in front of her chest; I could not resolve any held object",
+          "evidence": "The palette in this region is near-white-on-white and the fingers read as interlaced. There may be a pale shape between them, but it is not separable from the gown and the sheer drape passing in front. The text asserts a specific object the pixels do not support — and the model's own uncertainty list concedes it may be a letter, a card, or folded cloth, yet the scene line states it as fact.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "rain streaks across the sky",
+          "observed": "I recorded clouds and a fine pale speckling/grain over the whole image, but no directional rain streaks",
+          "evidence": "The entire painting carries the same soft high-key granular texture, in the sky, on the gown and over the foreground blossoms alike. Because it is uniform across every surface rather than falling in one direction across the sky, I cannot confirm it as rain. This is an assertion the image does not clearly support.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two ornate swords stand point-upward among flowers below her",
+            "with": "two ornate swords stand driven point-downward among flowers below her"
+          },
+          {
+            "find": "the two swords rise from the lower right, crossing the lower half of her gown",
+            "with": "the two swords are driven point-downward into the ground, the nearer one at the centre of the frame crossing the lower half of her gown and the second further to the right"
+          },
+          {
+            "find": "holding a folded letter",
+            "with": "her hands clasped together at her chest"
+          },
+          {
+            "find": "folded letter or paper held in both hands",
+            "with": "both hands raised and clasped together at the chest; any held object is not resolvable"
+          },
+          {
+            "find": "stands in soft rain beside a moonlit balustrade",
+            "with": "stands beside a moonlit balustrade"
+          },
+          {
+            "find": "rain streaks across the sky",
+            "with": "fine pale speckling and drifting cloud across the sky"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-201",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left half of the frame, filling the full height",
+              "posture": "standing, shown in three-quarter/profile view facing the viewer's right; head inclined downward",
+              "gaze": "downward and to the right; eyes appear closed or nearly closed",
+              "heldObjects": [],
+              "notes": "both hands raised and clasped together in front of the chest; very pale silver-white curly hair gathered up with floral ornaments; wearing a pale translucent layered gown with a wide veil-like cape or sheer wings of fabric spreading behind the shoulders"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "two blades planted point-down into the ground, pommels up — one at center of frame just in front of the figure's skirt, one further right and slightly lower in the frame; each hilt and crossguard is individually visible"
+            },
+            {
+              "type": "crescent moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right, among pale clouds"
+            },
+            {
+              "type": "stone balustrade / railing",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "middle right, running along the edge of a terrace above the water"
+            },
+            {
+              "type": "urn or planter with foliage",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right edge, on top of the terrace wall"
+            },
+            {
+              "type": "white flower",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered across the lower left and lower right foreground; pale roses/blooms blending into the near-white palette, not individually countable"
+            },
+            {
+              "type": "body of water",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "middle right background, with a bright horizontal shimmer of reflected light"
+            }
+          ],
+          "environment": [
+            "overall extremely pale, high-key white / lavender palette, like a washed watercolour",
+            "clouded sky occupying the upper right",
+            "a terrace or garden ledge overlooking water",
+            "pale flowering foliage along the bottom edge"
+          ],
+          "lightSources": [
+            "the crescent moon upper right",
+            "diffuse bright sky light; a glinting reflection line on the water"
+          ],
+          "moonPhase": "crescent — lit limb on the right/lower-right, with the remainder of the disc faintly suggested",
+          "spatialRelations": [
+            "the figure stands at left with the two planted swords to her right, between her and the water",
+            "the nearer sword's blade disappears into the pale foliage at the bottom of the frame",
+            "the crescent moon is high above and to the right of the bowed head",
+            "the water and balustrade recede behind the swords"
+          ],
+          "foreground": [
+            "pale blooms and foliage across the bottom",
+            "the two planted sword hilts"
+          ],
+          "background": [
+            "clouded sky with crescent moon",
+            "water with light reflection",
+            "terrace balustrade and urn"
+          ]
+        },
+        "uncertainObservations": [
+          "the sword count is medium confidence only: the palette is nearly white-on-white and the figure's wide sheer cape passes in front of the area to her right, so an additional blade concealed behind the drapery could not be ruled out. I resolved exactly two hilts",
+          "whether the pale structures behind the shoulders are a fabric cape, a veil, or wings cannot be determined — they read as translucent layered material",
+          "the figure's eyes may be closed or simply downcast; not resolvable",
+          "the exact moon phase reading is low-contrast against the bright cloud and could be slightly fuller than a thin crescent",
+          "the number of white blooms is not countable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "two ornate swords stand point-upward among flowers below her",
+          "observed": "both blades are planted point-DOWN — each has its round pommel at the top, the decorated grip below it, then a wide ornate crossguard, and the blade tapers downward from there",
+          "evidence": "Center blade: pommel at roughly mid-frame height, crossguard just beneath it, blade narrowing down-left past her skirt toward the lower left. Right blade: same stack — knob, grip, crossguard on top, blade tapering down toward the bottom edge. Neither has a point at its upper end.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the two swords rise from the lower right, crossing the lower half of her gown",
+          "observed": "the two swords descend from their hilts at mid-height down toward the lower left / lower edge; they are driven downward, not rising",
+          "evidence": "Same hilt-above-blade stack on both weapons; the widest part of each shaft is at the top and it narrows going down.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "folded letter or paper held in both hands",
+          "observed": "both hands are drawn up and clasped loosely in front of the chest with the fingers curled; no distinct folded object is resolvable in them",
+          "evidence": "At this very low contrast the pale shape near her chest reads as gown collar / sleeve fabric, not as a separate held sheet. The model itself flags this as uncertain.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "rain streaks across the sky",
+          "observed": "the sky is heavy pale cloud with a fine overall speckle; no distinct directional rain streaks are resolvable, and the water surface shows no rain disturbance",
+          "evidence": "The speckling is uniform across sky, figure and foreground alike rather than falling in one direction, so 'soft rain' is not supportable from the pixels.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two ornate swords stand point-upward among flowers below her",
+            "with": "two ornate swords stand point-downward, driven into the ground among flowers below her"
+          },
+          {
+            "find": "the two swords rise from the lower right, crossing the lower half of her gown",
+            "with": "the two swords are planted point-down at the lower right, their blades descending across the lower half of her gown"
+          },
+          {
+            "find": "folded letter or paper held in both hands",
+            "with": "both hands clasped loosely at the chest, no object clearly visible in them"
+          },
+          {
+            "find": "rain streaks across the sky",
+            "with": "fine pale speckling and drifting mist across the sky"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-201",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left half of frame, occupying roughly the left two-thirds, cropped at the bottom edge",
+              "posture": "standing / upright, shown from mid-thigh up, body in three-quarter profile facing right",
+              "gaze": "eyes closed or heavily lowered, head bowed and tilted down toward her own hands",
+              "heldObjects": [
+                "nothing clearly in the hands; both hands are drawn up and clasped loosely in front of the chest, fingers curled"
+              ],
+              "appearance": "pale silver-white curly hair gathered up with small pale flowers, long translucent layered white-lavender gown with veil-like sleeves, red-tinted lips, no crown, no blindfold, no halo, no wings (though the translucent pale shapes behind her shoulders are feathery and wing-like in outline)"
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright blade / sword",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one blade with an ornate cross-guard and pommel stands at center-right of the figure (hilt at roughly mid-height of the frame), its blade descending diagonally down-left past her skirt toward the lower-left; a second, similar blade stands further right and lower, its hilt just right of the figure's skirt, blade descending toward the bottom edge. Both appear planted point-down."
+            },
+            {
+              "type": "stone urn / planter on a pedestal",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right edge, mid-height, with pale foliage spilling out of it"
+            },
+            {
+              "type": "pale rose-like flower",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered through the lower-left and lower-right foreground, washed out and overlapping"
+            }
+          ],
+          "environment": [
+            "overcast sky with heavy pale cloud banks",
+            "a body of still water with a light-streak reflection in the middle distance",
+            "a low stone balustrade / railing and stepped stone terrace on the right",
+            "misty pale foliage and flowers in the foreground",
+            "a thin drawn border frame inset from the image edges"
+          ],
+          "lightSources": [
+            "a crescent moon in the upper right, bright-limbed, with a faintly visible darker disc",
+            "diffuse light from the cloudy sky; a bright specular streak on the water"
+          ],
+          "moonPhase": "crescent, lit on the right/outer edge",
+          "spatialRelations": [
+            "the figure stands in front of and to the left of both blades",
+            "the nearer blade's hilt sits at about the height of her hip/waist and partially overlaps her gown",
+            "the crescent moon sits diagonally above and behind her bowed head",
+            "the water and balustrade are behind her at roughly waist height in the frame"
+          ],
+          "foreground": [
+            "the figure's gown and veil",
+            "the two blade hilts and shafts",
+            "pale flowers and sprays of foliage along the bottom"
+          ],
+          "background": [
+            "clouded sky",
+            "crescent moon",
+            "water",
+            "stone terrace and balustrade",
+            "urn with foliage"
+          ],
+          "palette": "almost monochrome pale lavender-white; very low contrast overall"
+        },
+        "uncertainObservations": [
+          "The scene is extremely low-contrast and misty; I can individually resolve exactly two blades, but additional faint vertical shapes in the washed-out right background could conceivably be more blades. I am not counting them.",
+          "Whether the hands hold a small object (a stem, a hilt) is not resolvable; they read as empty and clasped.",
+          "The translucent feathered shapes behind the shoulders could be wings or could be the veil/sleeve fabric; I cannot tell.",
+          "The moon's exact phase width is readable as a crescent, but a faint full disc outline is also suggested."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

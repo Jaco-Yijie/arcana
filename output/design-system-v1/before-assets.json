@@ -1,0 +1,70 @@
+{
+  "entry": [
+    {
+      "path": "/assets/index-I1l0l-9C.js",
+      "bytes": 45
+    },
+    {
+      "path": "/assets/rolldown-runtime-B0Z9INg1.js",
+      "bytes": 901
+    },
+    {
+      "path": "/assets/vendor-react-ChfBSDHL.js",
+      "bytes": 189573
+    },
+    {
+      "path": "/assets/client-D8JP0Bu9.js",
+      "bytes": 756
+    },
+    {
+      "path": "/assets/localized-C2uP6Jf_.js",
+      "bytes": 25637
+    },
+    {
+      "path": "/assets/LanguageSwitcher-COpePBhB.js",
+      "bytes": 5313
+    },
+    {
+      "path": "/assets/vendor-router-D8RYwU3Z.js",
+      "bytes": 38216
+    },
+    {
+      "path": "/assets/storage-B-UT1Pch.js",
+      "bytes": 717
+    },
+    {
+      "path": "/assets/ids-Bz1K3Onz.js",
+      "bytes": 629
+    },
+    {
+      "path": "/assets/is-prop-valid_framer-motion-DaI4EYS0.js",
+      "bytes": 224
+    },
+    {
+      "path": "/assets/vendor-motion-AR70rnU2.js",
+      "bytes": 139570
+    },
+    {
+      "path": "/assets/arcana-CkWqzti0.js",
+      "bytes": 327937
+    },
+    {
+      "path": "/assets/arcana-EtIpa3Zc.css",
+      "bytes": 70659
+    }
+  ],
+  "fonts": [
+    {
+      "name": "cinzel-latin.woff2",
+      "bytes": 14192
+    },
+    {
+      "name": "cormorant-garamond-latin.woff2",
+      "bytes": 37776
+    },
+    {
+      "name": "lxgw-wenkai-light-subset.woff2",
+      "bytes": 69812
+    }
+  ]
+}

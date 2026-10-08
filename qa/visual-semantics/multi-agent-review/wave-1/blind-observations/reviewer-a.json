@@ -1,0 +1,686 @@
+[
+ {
+  "reviewId": "review-103",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left of center, occupying the middle-left of the frame",
+     "posture": "seated on a low carved stone ledge/bench, torso hunched forward, knees to the right",
+     "gaze": "not visible — right hand covers the eyes and upper face; head bowed",
+     "heldObjects": [],
+     "appearance": "long wavy brown hair; pale cream/ivory long-sleeved gown with embroidered trim; deep red-brown cloak draped over left shoulder and falling behind; left hand rests limply on the lap"
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade (sword)",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "foreground lower center — one angled from the upper left down to the right, one vertical in the center, one angled from the upper right down to the left; all three converge into a single large red heart"
+    },
+    {
+     "type": "heart (large red anatomical-stylized heart)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "ground level, lower center, pierced by the three blades; a visible vertical crack/split runs down its front"
+    },
+    {
+     "type": "bare tree",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left, leafless branches against the sky"
+    },
+    {
+     "type": "ruined stone building / tower on a cliff",
+     "count": null,
+     "countConfidence": "low",
+     "where": "middle distance right, on a headland above the water — a cluster of broken walls with at least one tall standing tower; individual structures are not separable"
+    }
+   ],
+   "environment": [
+    "heavy diagonal rainfall across the whole frame",
+    "dark grey storm clouds with lighter breaks",
+    "wet muddy ground with standing puddles reflecting light, lower right",
+    "a body of water / sea with a shoreline running to the right edge",
+    "distant hills or mountains on the horizon right",
+    "carved stone ledge and low stone wall behind and beneath the figure",
+    "scrubby grass and low plants at lower left",
+    "painted decorative border: cream/parchment panel with thin dark rules and a small leaf motif in each visible corner"
+   ],
+   "lightSources": [
+    "diffuse pale light breaking through the clouds on the right horizon; no sun disc or moon visible"
+   ],
+   "moonPhase": "not visible",
+   "spatialRelations": [
+    "the seated figure is behind and to the left of the pierced heart; she does not touch it and her covered face is turned away from it",
+    "the three blades all enter the same heart from different angles",
+    "the ruined structure sits across the water to the figure's right, far smaller than her in scale",
+    "rain falls across figure, heart and background alike"
+   ],
+   "foreground": [
+    "pierced red heart",
+    "three blades",
+    "wet ground and puddles",
+    "hem of the cream gown"
+   ],
+   "background": [
+    "storm sky",
+    "bare tree",
+    "cliff with ruined structure",
+    "water and distant hills"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of separate ruined walls/towers on the cliff cannot be resolved",
+   "whether the figure's eyes are open or closed cannot be seen (hand covers them)",
+   "the object under the figure could be a bench, a tomb-like block, or a wall section — its full shape is hidden by her gown"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-115",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, filling most of the frame's upper and middle height",
+     "posture": "seated on the rim/top of a round stone structure, body in three-quarter rear view, back bare and turned to the viewer, legs folded to the left",
+     "gaze": "head lowered and turned to her left; eyes appear closed or nearly closed, face in profile looking down toward her own extended right hand",
+     "heldObjects": [],
+     "appearance": "very long pale silver-lavender wavy hair; two large ridged curved horns rising from the head; a floral/beaded ornament in the hair; pale translucent gauzy gown leaving the back and shoulders bare; chains and fine beaded strands draped over the back, upper arm and wrist; right arm extended downward and forward, fingers open and hanging loose, not gripping anything"
+    }
+   ],
+   "objects": [
+    {
+     "type": "horn (on the figure's head)",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "one curving up and back on each side of the head"
+    },
+    {
+     "type": "round stone structure (drum/well/pedestal with a banded rim)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center-bottom, the figure sits on its top; its base meets water"
+    },
+    {
+     "type": "padlock",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "resting on the flat top of the stone structure, just left of the figure's hip; a small pale metal object with a shackle"
+    },
+    {
+     "type": "chain",
+     "count": null,
+     "countConfidence": "low",
+     "where": "multiple chain runs — over the figure's back and arm, hanging down the front of the stone structure, and trailing into the water to the right; the strands overlap and merge so separate chains cannot be counted"
+    },
+    {
+     "type": "fallen staff/rod-like object",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "lower center-right, lying at an angle half-submerged in the water; it has a wider ornamented head at its upper-right end"
+    },
+    {
+     "type": "flame",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "lower left, a small warm orange-pink flame — the only warm-colored element in the frame; what it burns on is obscured by mist and foliage"
+    },
+    {
+     "type": "moon",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right, a large pale disc"
+    },
+    {
+     "type": "flower blossom",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered pale lavender/pink blossoms on climbing vines down the left edge and a few at mid-right; too many and too faint to count"
+    },
+    {
+     "type": "stone balustrade with turned balusters",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "background left, receding into mist"
+    }
+   ],
+   "environment": [
+    "overall pale lavender-white watercolor haze",
+    "still water surface at the bottom with reflections and small ripples",
+    "mist obscuring the middle distance",
+    "climbing flowering vines along the left border",
+    "faint tree or shrub shapes in the background right",
+    "soft scalloped painted border around the image"
+   ],
+   "lightSources": [
+    "the large pale moon at upper right",
+    "a small warm flame at lower left"
+   ],
+   "moonPhase": "full or near-full — the disc reads as a complete round circle with no visible terminator, though its right side fades into haze",
+   "spatialRelations": [
+    "the figure sits above the water on the round stone structure; chains run from her body down the structure and into the water",
+    "the padlock lies on the stone beside her, not attached to her hands",
+    "her open right hand reaches down and to the right, toward the water and the chains, but grasps nothing",
+    "the moon is behind and above her to the right; the flame is below and to the left, on the opposite side of the frame",
+    "the fallen rod-like object lies in the water below and to the right of her, unattended"
+   ],
+   "foreground": [
+    "water surface",
+    "fallen rod-like object",
+    "flame at lower left",
+    "flowering vines at the left edge"
+   ],
+   "background": [
+    "moon",
+    "mist",
+    "balustrade",
+    "faint foliage"
+   ]
+  },
+  "uncertainObservations": [
+   "the exact moon phase cannot be confirmed — the disc's right edge dissolves into haze",
+   "the number of separate chains is not determinable; they overlap heavily",
+   "whether the padlock is open or closed cannot be resolved at this size",
+   "the fallen object at lower right could be a torch, a mace-like rod, or a rolled bundle; its head is ornamented but indistinct",
+   "what the lower-left flame is attached to (a torch, a candle, a floating light) is hidden by mist and leaves",
+   "whether the figure's eyes are closed or only lowered is ambiguous"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-114",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, slightly left of the vertical midline, standing at the near end of a paved path",
+     "posture": "standing / mid-stride, barefoot, body turned mostly away from the viewer with the head in near profile to the right; both arms raised to head height",
+     "gaze": "cannot be determined — a light-colored band or cloth is wrapped across the eyes, and the hands are at that band",
+     "heldObjects": [
+      "a pale cloth band at the eyes, held by both raised hands — either being tied on or pulled off"
+     ],
+     "appearance": "long dark hair; a long dark ragged layered robe or shawl with a frayed, shredded hem reaching mid-calf; bare feet and ankles visible below"
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade (sword) planted point-down in the ground, left group",
+     "count": 4,
+     "countConfidence": "medium",
+     "where": "left third of the frame, standing upright in a receding row; hilts at roughly even spacing, the leftmost near the frame edge"
+    },
+    {
+     "type": "blade (sword) planted point-down in the ground, right group",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "right third of the frame, standing upright in a receding row"
+    },
+    {
+     "type": "blade (sword), total visible",
+     "count": 7,
+     "countConfidence": "medium",
+     "where": "flanking the central path, four on the left and three on the right"
+    },
+    {
+     "type": "cast shadow from the blades",
+     "count": null,
+     "countConfidence": "low",
+     "where": "long shadows stretching from each blade toward the bottom of the frame; they overlap and cannot be individually matched to blades"
+    }
+   ],
+   "environment": [
+    "a narrow corridor formed by tall dark rough walls or rock faces on both sides",
+    "a wet cobbled/flagstone path running from the bottom of the frame into the distance, reflecting light",
+    "dark overcast sky visible in a narrow slot between the walls at the top",
+    "heavy overall darkness — most of the frame is near-black",
+    "a thin painted rule border at the left and right edges"
+   ],
+   "lightSources": [
+    "a single pale glow low in the center background, at the far end of the corridor, silhouetting the figure and casting the blade shadows forward toward the viewer"
+   ],
+   "moonPhase": "uncertain — the background glow may be a moon behind cloud, but no disc edge is resolvable",
+   "spatialRelations": [
+    "the figure stands on the path between the two rows of blades, closer to the viewer than the light source",
+    "the blades are planted in the ground on both sides of the path, not held by anyone and not touching the figure",
+    "all blade shadows point toward the bottom of the frame, away from the background glow",
+    "the figure's raised hands are at the blindfold band, not at any blade"
+   ],
+   "foreground": [
+    "wet reflective paving",
+    "long converging shadows",
+    "the nearest blades on each side"
+   ],
+   "background": [
+    "pale glow at the corridor's end",
+    "dark walls",
+    "narrow strip of sky"
+   ]
+  },
+  "uncertainObservations": [
+   "blade counts are medium confidence — the scene is very dark, blades recede into shadow, and a further blade hidden beyond the last visible one on either side cannot be ruled out; the leftmost blade sits near the frame edge",
+   "whether the figure is tying the blindfold on or removing it cannot be determined",
+   "the light source at the corridor's end cannot be identified as a moon, an opening, or a distant fire",
+   "the side walls could be masonry, cliff, or dense hedge — the texture is not resolvable in the dark"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-102",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of the frame, standing on a paved terrace in the middle distance",
+     "posture": "standing, back fully turned to the viewer, feet apart, arms at sides",
+     "gaze": "away from the viewer, toward the bright horizon on the distant water",
+     "heldObjects": [],
+     "appearance": "a long dark blue-black cloak with a ragged, tattered lower hem; dark hair; the figure is small in the frame relative to the foreground objects"
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade (sword) standing upright, left group",
+     "count": 5,
+     "countConfidence": "medium",
+     "where": "left half of the round foreground dais, blades set point-down into the stone in a curving row, hilts and pommels catching light"
+    },
+    {
+     "type": "blade (sword) standing upright, right group",
+     "count": 5,
+     "countConfidence": "medium",
+     "where": "right half of the round foreground dais, mirroring the left row"
+    },
+    {
+     "type": "blade (sword), total visible",
+     "count": 10,
+     "countConfidence": "medium",
+     "where": "arranged in two symmetrical arcs on the circular foreground dais, with a gap in the middle where the draped cloth lies"
+    },
+    {
+     "type": "circular stone dais with engraved/inlaid markings",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "entire foreground bottom third; gold-inlaid circular bands and small symbols are visible around its rim"
+    },
+    {
+     "type": "draped cloth / spread mantle",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lying flat across the center of the dais between the two blade rows; dark blue with gold star-map-like markings, its folds spilling toward the lower left"
+    },
+    {
+     "type": "moon or planetary body",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "upper left — one larger pale grey sphere near the top-left corner, and one smaller crescent-lit sphere below it"
+    },
+    {
+     "type": "domed structure on columns (rotunda/gazebo)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "left edge, middle distance, standing on the terrace"
+    },
+    {
+     "type": "standing column / pillar ruin",
+     "count": null,
+     "countConfidence": "low",
+     "where": "right edge — a group of tall columns and a fragment of arched ruin; they overlap and the frame cuts them, so individual columns cannot be counted"
+    },
+    {
+     "type": "armillary-sphere-like ring instrument on a pedestal",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "left-center middle distance, between the rotunda and the figure"
+    },
+    {
+     "type": "tall narrow conifer tree",
+     "count": null,
+     "countConfidence": "low",
+     "where": "right middle distance beside the ruins; several, too clustered to count"
+    }
+   ],
+   "environment": [
+    "deep starry night sky covering the upper half, with a bright dense band of stars (galaxy) running from upper right toward center",
+    "faint thin geometric constellation lines and concentric arcs drawn across the sky",
+    "a bright warm orange-gold band of light at the horizon over water, directly behind the figure",
+    "a broad body of still water reflecting the horizon glow",
+    "a mountain range along the horizon on both sides of the water",
+    "wet-looking flagstone terrace between the dais and the shore",
+    "an ornate thin painted border with corner tick marks around the whole image"
+   ],
+   "lightSources": [
+    "a concentrated warm glow at the horizon directly behind the figure (sun at or below the horizon — the disc itself is not clearly separable)",
+    "starlight across the sky",
+    "two pale spheres at upper left"
+   ],
+   "moonPhase": "the smaller upper-left sphere shows a clear crescent of light along its lower-left edge; the larger sphere above it reads as a full or nearly full grey disc — but both are partly overlapped by cloud and the border",
+   "spatialRelations": [
+    "the two rows of blades stand between the viewer and the figure, on the near dais; the figure is well beyond them",
+    "the draped cloth lies on the ground between the two blade rows, in the gap at the dais center",
+    "the figure stands on the horizon line, centered on the bright glow, with the water and mountains beyond",
+    "the rotunda is at the far left and the columned ruins at the far right, framing the central figure",
+    "the sky's constellation arcs converge above the figure's head"
+   ],
+   "foreground": [
+    "circular engraved dais",
+    "two rows of upright blades",
+    "draped star-marked cloth"
+   ],
+   "background": [
+    "starry sky with galaxy band",
+    "two spheres upper left",
+    "horizon glow over water",
+    "mountains",
+    "rotunda left",
+    "column ruins and conifers right"
+   ]
+  },
+  "uncertainObservations": [
+   "blade counts per side are medium confidence — the hilts in each row are closely spaced and partly overlap in perspective; a blade fully hidden behind another cannot be ruled out",
+   "the number of standing columns in the right-hand ruin cannot be determined (overlap plus frame cut)",
+   "whether the horizon glow contains a visible sun disc is ambiguous",
+   "the exact phase of the larger upper-left sphere is not determinable; cloud crosses it",
+   "the ring instrument at left-center is too small to confirm its structure"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-101",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, lying horizontally across the middle band of the frame with the head at the left",
+     "posture": "lying on the back / reclining on bedding, eyes closed, face relaxed and turned slightly toward the viewer; both hands folded together and resting on the lower chest/abdomen; legs extended to the right",
+     "gaze": "eyes closed",
+     "heldObjects": [],
+     "appearance": "dark curly hair; a pale green-grey long-sleeved tunic with a laced front; a leather belt with a buckle at the waist; olive-green trousers; a rolled cloak or pack under the head as a pillow; blankets beneath the body"
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade (sword) mounted vertically on the wooden wall",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "upper center, on the timber wall directly above the reclining figure — three blades hung point-down, evenly spaced, each with an ornate cross-shaped gold-toned hilt and pommel"
+    },
+    {
+     "type": "blade (sword) lying horizontally, sheathed",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "foreground, lying flat on the moss across the lower-middle of the frame, hilt at the left and a metal chape at the right end of the scabbard; it is below and in front of the sleeping figure, not touching him"
+    },
+    {
+     "type": "mushroom (pale-capped)",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower left corner — a cluster of tall pale mushrooms of varying heights; caps overlap so individual stems cannot all be separated (roughly four to six visible)"
+    },
+    {
+     "type": "hanging pendant / talisman on a cord",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right side of the wooden wall, hanging from a beam beside the mounted blades; a pale teardrop-shaped object"
+    },
+    {
+     "type": "small hanging bundle or pouch",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "right of the mounted blades on the wall, above the pendant; shape indistinct"
+    },
+    {
+     "type": "stream / running water",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "bottom center, a narrow watercourse over stones running left to right across the lower edge"
+    }
+   ],
+   "environment": [
+    "dense green forest with tall trunks receding at the right",
+    "shafts of sunlight slanting down from the upper right through the canopy",
+    "a timber wall or shrine-like wooden structure behind the figure, its planks weathered and topped by an arched beam",
+    "heavy moss, ferns and ivy growing over the wall, the ground and the bedding",
+    "ferns filling the right-middle and lower foreground",
+    "an ornate painted vine-and-scroll border along the left and right edges with decorative corner flourishes"
+   ],
+   "lightSources": [
+    "sunlight breaking through the forest canopy at the upper right, falling in visible beams"
+   ],
+   "moonPhase": "not visible",
+   "spatialRelations": [
+    "the three wall-mounted blades hang directly above the reclining figure's head and torso, points down toward him but not touching him",
+    "the single sheathed blade lies horizontally on the ground in front of (nearer the viewer than) the sleeping figure, parallel to his body",
+    "the stream runs across the frame below the lying blade, at the very bottom",
+    "the mushrooms sit in the lower-left corner, nearest the viewer",
+    "the light comes from the right and the figure's head is at the shadowed left"
+   ],
+   "foreground": [
+    "sheathed blade lying on the moss",
+    "mushroom cluster lower left",
+    "ferns",
+    "stream at the bottom edge"
+   ],
+   "background": [
+    "sunlit forest with tall trunks",
+    "mossy timber wall",
+    "hanging pendant and bundle"
+   ]
+  },
+  "uncertainObservations": [
+   "the exact number of mushrooms in the lower-left cluster cannot be resolved — caps overlap",
+   "whether the horizontal foreground object is a sheathed blade or a staff/scabbard alone cannot be fully confirmed, though a hilt and pommel are visible at its left end",
+   "the small hanging object above the pendant on the right wall is too indistinct to identify",
+   "whether the figure is asleep or unconscious is not determinable — only that the eyes are closed and the body is at rest"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-113",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, standing, occupying the full height of the middle band",
+     "posture": "standing upright, body facing right, both hands stacked on the top of one upright staff in front of her, head tilted forward and resting close to her hands",
+     "gaze": "downward and to the right; eyes lowered, face in three-quarter profile",
+     "heldObjects": [
+      "the upright staff directly in front of her, gripped with both hands near its top"
+     ],
+     "appearance": "long wavy pale blonde/ash hair; a small pale flower ornament in the hair; a sheer white/pale layered gown with a translucent overlay; pale lavender and grey ribbons trailing from her waist to the left; fine beaded or chain strands hanging down the front of the gown"
+    }
+   ],
+   "objects": [
+    {
+     "type": "tall upright staff/pole wrapped with vine, leaves and small flowers",
+     "count": 7,
+     "countConfidence": "medium",
+     "where": "planted vertically in the ground and spanning the full height of the frame — three to the figure's left (the leftmost near the frame edge), one directly in front of her (the one she leans on), and three to her right receding toward the water"
+    },
+    {
+     "type": "moon",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right, a large crescent with its lit edge along the lower-right side; the unlit remainder of the disc is faintly visible as a pale circle"
+    },
+    {
+     "type": "ribbon / trailing streamer",
+     "count": null,
+     "countConfidence": "low",
+     "where": "pale lavender, blue and grey ribbons stream from the staves and from the figure's waist toward the left; they cross and overlap and cannot be counted"
+    },
+    {
+     "type": "large pale flower blossom",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower left foreground — a cluster of wide pale white-lavender blooms among leaves; several overlap"
+    },
+    {
+     "type": "body of water (lake/inlet)",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right middle distance, a pale reflective surface between low hills"
+    }
+   ],
+   "environment": [
+    "overall very pale, high-key watercolor wash in white, lavender and pale blue",
+    "soft clouds across the upper half",
+    "low misty hills or tree-covered slopes on the right and far side of the water",
+    "low shrubs and grass at the base of the staves",
+    "a pale scalloped painted border framing the image on all sides"
+   ],
+   "lightSources": [
+    "the crescent moon at upper right; otherwise a diffuse overall glow with no hard shadows"
+   ],
+   "moonPhase": "crescent — the bright lit portion is a thick crescent along the lower-right rim, with the rest of the disc showing faintly (earthshine-like); it reads clearly as a crescent rather than a full disc",
+   "spatialRelations": [
+    "the figure stands among the staves, with staves both in front of her (the one she holds) and behind her on both sides",
+    "the staff she leans on is between her and the viewer; her hands rest on its top, level with her chin",
+    "the moon is behind and above her to the upper right, beyond the staves",
+    "the water lies to her right at roughly waist height in the picture plane, behind the right-hand staves",
+    "the flower cluster is nearest the viewer at the lower left, in front of her gown's hem"
+   ],
+   "foreground": [
+    "the staff she leans on",
+    "pale flower cluster lower left",
+    "trailing ribbons"
+   ],
+   "background": [
+    "crescent moon",
+    "clouds",
+    "misty hills",
+    "lake surface"
+   ]
+  },
+  "uncertainObservations": [
+   "the staff count is medium confidence — the poles are pale, thin and partly dissolve into the misty background, so one additional faint pole (particularly at the right, near the water) or a double-counted overlap cannot be ruled out; the leftmost pole is close to the frame edge",
+   "the number of ribbons and of blossoms in the lower-left cluster cannot be resolved",
+   "whether the figure's eyes are fully closed or only lowered is ambiguous",
+   "whether the hair ornament is a flower, a comb, or a ribbon is not resolvable"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-105",
+  "visibleFacts": {
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "left of center",
+     "posture": "standing, barefoot, facing the viewer but with the head tipped back/down under the object; both arms raised straight above the head",
+     "gaze": "not determinable — the face is in deep shadow and partly behind the raised object",
+     "heldObjects": [
+      "a ring- or hoop-shaped object held aloft in both hands above the head"
+     ],
+     "appearance": "dark ragged garment with a torn, shredded hem ending around the knee; bare lower legs and feet; a chain running from the neck/shoulder area"
+    },
+    {
+     "position": "right of center",
+     "posture": "standing, barefoot, body facing the viewer, head bowed low; both hands raised together in front of the face/chest",
+     "gaze": "downward — the face is obscured by hanging hair and shadow",
+     "heldObjects": [
+      "nothing clearly identifiable; the hands are clasped or pressed together in front of the face"
+     ],
+     "appearance": "long dark hair falling over the face; a long dark ragged robe reaching the ankles; bare feet; a chain running from the neck/chest area"
+    }
+   ],
+   "objects": [
+    {
+     "type": "human figure",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "one left of the central block, one right of it"
+    },
+    {
+     "type": "ring / hoop / open circular object",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "held above the left figure's head in both hands; it reads as a flat open circle or band seen at a slight angle"
+    },
+    {
+     "type": "chain",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one chain runs from the left figure down and to the right, to the top of the central block; a second runs from the right figure down and to the left, to the same block — one per figure"
+    },
+    {
+     "type": "rectangular stone block / pedestal",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "dead center of the lower half, between the two figures; its top is a flat slab and its front face carries an incised star-shaped emblem"
+    },
+    {
+     "type": "incised star-shaped emblem",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "carved or scratched into the front face of the central stone block"
+    },
+    {
+     "type": "arched doorway / recessed arch",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "lower left, set into the stone wall behind the left figure; dark and closed or empty"
+    },
+    {
+     "type": "large dark silhouette on the back wall",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "upper center, a looming branching dark shape spanning most of the upper background — reads as a bare tree trunk with two upward limbs, or as a stain/shadow on the wall; its nature is not resolvable"
+    },
+    {
+     "type": "metal ring / fitting on the block's side",
+     "count": 1,
+     "countConfidence": "low",
+     "where": "right face of the central block, near where the right figure's chain approaches"
+    }
+   ],
+   "environment": [
+    "a dark stone interior or walled enclosure",
+    "rough masonry wall on the left with visible courses of stone",
+    "a cobbled/flagstone floor with a lighter paved strip running from the block toward the bottom of the frame",
+    "overall extremely low-key: most of the frame is near-black with only rim-light picking out edges",
+    "a thin painted rule border at the left and right edges"
+   ],
+   "lightSources": [
+    "a single unseen light source from above and slightly in front, rim-lighting the tops of both figures' shoulders and arms, the top slab of the block, and the paved strip on the floor; the source itself is not in frame"
+   ],
+   "moonPhase": "not visible",
+   "spatialRelations": [
+    "the two figures stand on opposite sides of the central stone block, both facing roughly toward the viewer rather than toward each other",
+    "a chain runs from each figure to the top of the block, so both are linked to the same central object but not directly to one another",
+    "the left figure's raised object is the highest lit element in the frame; the right figure's head is the lowest-held",
+    "the arched doorway is behind and to the left of the left figure, at floor level",
+    "the large dark silhouette rises behind and between both figures on the back wall",
+    "neither figure touches the other; neither touches the block with their hands"
+   ],
+   "foreground": [
+    "paved floor strip",
+    "lower hems and bare feet of both figures"
+   ],
+   "background": [
+    "stone wall",
+    "arched doorway",
+    "large indistinct dark silhouette"
+   ]
+  },
+  "uncertainObservations": [
+   "the object held above the left figure's head cannot be identified with confidence — it reads as an open ring, hoop, circlet or thin disc; no interior detail is visible",
+   "whether the central block's front emblem is a five-pointed or six-pointed star is not resolvable at this brightness",
+   "the large dark shape on the back wall may be a tree, a pair of horns, a crack, or a cast shadow — it cannot be identified",
+   "what the right figure holds (if anything) between the clasped hands is not visible",
+   "whether the chains are attached to collars, wrists or the garments cannot be seen; the attachment points are in shadow",
+   "whether the arched opening at lower left is a door, a window or a niche cannot be determined",
+   "both figures' facial features and expressions are entirely lost to shadow"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ }
+]

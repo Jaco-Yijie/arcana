@@ -1,0 +1,262 @@
+[
+ {
+  "reviewId": "review-109",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left of center, upper-middle of frame, behind/above a long wooden bench",
+     "posture": "leaning forward over the bench, torso bent, both arms raised in front of chest; lower body is hidden behind the bench so standing vs seated vs kneeling cannot be determined",
+     "gaze": "eyes lowered, directed downward toward the disc-shaped object under her tool",
+     "heldObjects": [
+      "a mallet/hammer with a dark shaft and pale metal head, gripped in the raised hand on the viewer's left, head angled upward",
+      "a slender dark rod/chisel-like tool gripped in the other hand, tip pointing down onto a round disc on the bench"
+     ],
+     "otherDetails": [
+      "long wavy pale hair falling past the shoulders",
+      "small pale flowers and beaded strands woven into the hair",
+      "pale layered translucent robe with fine lace/net texture and a beaded collar",
+      "no crown, no halo, no wings, no blindfold visible"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "round flat disc with engraved concentric/radial patterning",
+     "count": 5,
+     "countConfidence": "medium",
+     "where": "along the front/lower plank of the bench, left-of-center to center; individually resolvable at roughly evenly spaced intervals from the left edge of the bench toward the middle",
+     "orientation": "lying flat / tilted slightly toward the viewer, faces showing",
+     "arrangement": "a single left-to-right row, edges nearly touching, no gaps between them; the row stops before the bench's right end"
+    },
+    {
+     "type": "round flat disc with engraved patterning",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "on the upper/rear surface of the bench: one directly beneath the tip of the held rod at center, one further right near the metal vessel",
+     "orientation": "propped up / tilted at an angle rather than flat, faces turned toward the viewer",
+     "arrangement": "two separated items, a clear gap between them, both behind the flat row"
+    },
+    {
+     "type": "round flat disc (all instances combined)",
+     "count": null,
+     "countConfidence": "low",
+     "where": "across the whole bench",
+     "orientation": "mixed: most flat, at least two tilted upright",
+     "arrangement": "one dense front row plus two set back",
+     "note": "a combined total cannot be stated reliably — the discs overlap each other's edges and the rear ones are partly occluded by the figure's hands and the tools; my separate group counts of 5 and 2 are each medium confidence only"
+    },
+    {
+     "type": "lantern (glass-paned, metal-framed, with a finial top)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right edge of frame, mounted on a post above the bench end",
+     "orientation": "upright",
+     "arrangement": "single, isolated at the right margin"
+    },
+    {
+     "type": "metal pail/vessel holding upright slender rods (tool handles or brushes)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "on the bench at right, just left of and below the lantern",
+     "orientation": "upright",
+     "arrangement": "single vessel; the rods inside splay upward and outward and cannot be counted individually"
+    },
+    {
+     "type": "distant towers / domed spires of a settlement",
+     "count": null,
+     "countConfidence": "low",
+     "where": "far background, right half, on the far side of the water",
+     "orientation": "vertical",
+     "arrangement": "a cluster spread horizontally along the skyline",
+     "note": "too small, pale and hazy to separate individual structures"
+    },
+    {
+     "type": "hanging flower clusters (drooping, wisteria-like)",
+     "count": null,
+     "countConfidence": "low",
+     "where": "upper left, cascading from overhead foliage",
+     "orientation": "hanging downward",
+     "arrangement": "several trailing strands, too intertwined to count"
+    },
+    {
+     "type": "blossoms on thin branches",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower right and bottom foreground, and a sprig at bottom left",
+     "orientation": "various",
+     "arrangement": "scattered along branch lines"
+    }
+   ],
+   "environment": [
+    "long weathered wooden bench/ledge running diagonally across the lower third, made of stacked planks",
+    "pale draped cloth hanging over the front of the bench in several folds",
+    "a stone archway/window opening and pillar at the far left",
+    "broad body of water in the middle distance with a bright streak of reflected light",
+    "far shoreline with buildings and spires",
+    "cloudy sky filling the upper half",
+    "overhanging foliage and trailing blossoms at upper left",
+    "flowering branches in the near foreground at bottom and right"
+   ],
+   "lightSources": [
+    "large pale luminous disc in the sky at the upper right, partly cut off by the right frame edge",
+    "warm orange glow inside the lantern at right — the only warm light in the image",
+    "bright reflected streak on the water surface in the middle distance"
+   ],
+   "moonPhase": "uncertain — the disc reads as full or near-full with mottled surface markings, but its right portion runs off the frame edge and cloud passes across it, so the terminator cannot be located",
+   "spatialRelations": [
+    "the figure is behind the bench, the discs are on the bench between her and the viewer",
+    "the tip of the rod she holds meets the tilted disc at the centre of the bench; the mallet is raised above and to the left of that point",
+    "the lantern and the rod-filled vessel are at the far right end of the bench, opposite the figure",
+    "the water and distant skyline sit between the figure's head-height and the bench, i.e. behind the workbench",
+    "the luminous sky disc is up and to the right of the figure's head",
+    "hanging blossoms frame the upper-left corner; flowering branches frame the lower-right"
+   ],
+   "foreground": [
+    "wooden bench planks and draped cloth",
+    "the row of engraved discs",
+    "flowering branches crossing the bottom-right and bottom-left corners"
+   ],
+   "background": [
+    "expanse of water with light reflection",
+    "distant towered skyline on the far bank",
+    "clouded sky and the large pale sky-disc"
+   ]
+  },
+  "uncertainObservations": [
+   "the total number of round discs cannot be given reliably — they overlap along the row and two are partially hidden behind hands/tools; I report 5 flat in a row and 2 set back, each at medium confidence",
+   "whether the figure is seated, kneeling or standing is not determinable; her lower body is entirely occluded by the bench",
+   "the number of rods in the metal vessel cannot be counted; they overlap",
+   "the phase of the sky-disc is not determinable (frame-cut plus cloud cover)",
+   "the object in the raised hand reads as a mallet but the exact head shape is softened by the rendering",
+   "the distant skyline structures cannot be individually counted"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-f"
+ },
+ {
+  "reviewId": "review-110",
+  "visibleFacts": {
+   "figureCount": 5,
+   "figures": [
+    {
+     "position": "far left, mid-height",
+     "posture": "standing/striding, body in near-profile turned toward the right, one leg forward, hair and garment streaming to the right",
+     "gaze": "toward the right, downward-ish; face largely turned away/obscured by blown hair",
+     "heldObjects": [
+      "a long slender staff, gripped with both hands, its upper end above and to the right of her head"
+     ]
+    },
+    {
+     "position": "left of centre, set back behind the far-left figure, higher in the frame",
+     "posture": "standing, torso turned toward the viewer-left, arms raised in front",
+     "gaze": "face obscured by hair blown across it; direction not determinable",
+     "heldObjects": [
+      "a long slender staff held diagonally"
+     ]
+    },
+    {
+     "position": "centre, nearest the viewer and largest in the frame",
+     "posture": "standing/striding in shallow water, one arm raised high overhead, the other lowered; long hair streaming to the left; skirt billowing",
+     "gaze": "head tilted slightly down and to the viewer's left; face pale and softly rendered",
+     "heldObjects": [
+      "a long staff gripped in the raised overhead hand, running steeply up-and-right"
+     ]
+    },
+    {
+     "position": "right of centre, set back, higher in the frame",
+     "posture": "standing, turned toward the left, arm raised",
+     "gaze": "face mostly hidden behind blown hair",
+     "heldObjects": [
+      "a long staff angled across the body"
+     ]
+    },
+    {
+     "position": "right, foreground-ish, lower than the figure beside her",
+     "posture": "standing/leaning, body angled and leaning back toward the right, one bare leg extended, arms reaching up-right",
+     "gaze": "head turned down and to the viewer's left; face partly veiled by hair",
+     "heldObjects": [
+      "a long staff held up along the right side of the frame"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "long slender staff/pole (bark-textured, some with small leaf sprigs near the top)",
+     "count": 5,
+     "countConfidence": "medium",
+     "where": "spread across the frame, one associated with each figure; their upper ends all reach into the upper third of the picture",
+     "orientation": "none vertical and none lying flat — every one is tilted on a diagonal, and they lean in opposing directions: the leftmost two lean with their tops toward the upper-LEFT, the central and right ones lean with their tops toward the upper-RIGHT, so the group crosses in an X over the middle of the frame",
+     "arrangement": "a loose fan/crossing lattice above the figures rather than a row or ring; the densest crossing is just above and right of the centre figure's head; the widest gap between staff-tops is at the top centre, where the sky shows through, and another gap at the upper-left corner"
+    },
+    {
+     "type": "white water-lily / lotus-like blossom",
+     "count": null,
+     "countConfidence": "low",
+     "where": "bottom of the frame on the water surface, concentrated at bottom-left and scattered along the bottom edge",
+     "orientation": "facing up out of the water",
+     "arrangement": "scattered clumps, mostly along the bottom-left and bottom-centre",
+     "note": "blossoms merge into one another and into the pale water highlights; not individually separable"
+    },
+    {
+     "type": "drifting petals / small pale flecks in the air",
+     "count": null,
+     "countConfidence": "low",
+     "where": "throughout the middle and upper air, thickest around the centre figure",
+     "orientation": "n/a",
+     "arrangement": "scattered"
+    },
+    {
+     "type": "ruined classical structure with standing columns and an arched opening, on raised ground",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper right corner, background, above and behind the right-hand figures",
+     "orientation": "upright",
+     "arrangement": "single structure; the number of its columns cannot be resolved through the haze"
+    }
+   ],
+   "environment": [
+    "shallow open water across the bottom third, with visible ripples and bright reflected highlights",
+    "water plants and white blossoms at the lower-left bank",
+    "overhanging willow-like drooping branches entering the upper-left corner",
+    "pale clouded sky filling the upper half",
+    "vegetation on the slope beneath the ruined structure at upper right",
+    "no path, door, throne, horse, tower or crown visible"
+   ],
+   "lightSources": [
+    "thin crescent in the sky at upper centre-right",
+    "diffuse bright glow in the sky behind and above the figures",
+    "bright specular highlights on the water at bottom centre-right"
+   ],
+   "moonPhase": "crescent — a narrow curved sliver with the bright edge on the left/lower-left and the dark interior visible; clearly not full, though waxing vs waning cannot be stated",
+   "spatialRelations": [
+    "the five figures form a loose cluster across the middle band of the frame, not a straight line: two on the left, one pushed forward at centre, two on the right",
+    "the centre figure stands nearest the viewer and lowest; the second and fourth figures are set furthest back and sit highest in the frame",
+    "all five stand in or at the edge of the water; the centre and right figures' legs are visible against the water",
+    "the staves converge and cross above head height, forming an X whose intersection sits above the centre figure",
+    "the crescent is above and slightly right of the centre figure's raised staff",
+    "the ruined structure is diagonally up-right from the rightmost figure",
+    "hair and garments on every figure stream in the same leftward direction"
+   ],
+   "foreground": [
+    "the centre figure and the rightmost figure",
+    "rippled water and white blossoms along the bottom edge",
+    "the lower shafts of the crossing staves"
+   ],
+   "background": [
+    "pale cloud-filled sky and the crescent",
+    "the ruined columned structure on the upper-right rise",
+    "drooping branches at the upper left"
+   ]
+  },
+  "uncertainObservations": [
+   "the staff count of 5 is medium confidence: the shafts cross one another and several are interrupted by figures and by the pale haze, so a sixth partially hidden shaft cannot be fully excluded",
+   "no face is clearly legible — every figure's features are veiled by blown hair or softened rendering, so gaze directions are approximate",
+   "the number of water blossoms and of columns on the ruined structure cannot be determined",
+   "whether the figures are walking, wading or standing still is ambiguous; the streaming hair and raised legs read as movement but no stride is unambiguous",
+   "which end of each staff is 'top' is clear, but several lower ends disappear into the water and are not traceable to a figure's grip with certainty"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-f"
+ }
+]

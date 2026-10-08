@@ -9,6 +9,7 @@ import { getSpread } from '@/data/spreads'
 import { getCard } from '@/data/deck'
 import { resolveDeckId } from '@/decks/ids'
 import { useI18n } from '@/i18n'
+import { useAuth } from '@/store/AuthContext'
 import { positionLabel, spreadName } from '@/i18n/domain'
 import { useCardName } from '@/hooks/useCardText'
 
@@ -18,11 +19,15 @@ import { useCardName } from '@/hooks/useCardText'
  * 原问题、笔记、心情、后续记录默认隐藏，只有原问题可以由用户自己打开。
  */
 export default function SharePage() {
+  const { user } = useAuth()
   const { id } = useParams()
   const navigate = useNavigate()
   const { t, locale } = useI18n()
   const cardName = useCardName()
-  const entry = useMemo(() => (id ? getEntry(id) : null), [id])
+  const entry = useMemo(() => {
+    const found = id ? getEntry(id) : null
+    return !found?.userId || found.userId === user?.id ? found : null
+  }, [id, user?.id])
   const [showQuestion, setShowQuestion] = useState(false)
   const [copied, setCopied] = useState(false)
 

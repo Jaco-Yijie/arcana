@@ -1,3 +1,4 @@
+import { CINEMATIC_PROFILES } from '../src/atmosphere/cinematic/profiles.ts'
 /**
  * Release 自检（REL 组 · Phase D3）
  *
@@ -315,8 +316,8 @@ function checkLoadingPolicy(): void {
      换句话说：原规则禁止「首页有牌」，新规则允许「首页有牌」但禁止
      「首页有重牌」。守的仍是同一个东西，而且现在能被量化。 */
   const home = read('src/pages/HomePage.tsx')
-  const heroIds = /const HERO_CARD_IDS = \[([^\]]*)\]/.exec(home)
-  const heroCount = heroIds ? (heroIds[1]!.match(/'/g) ?? []).length / 2 : Infinity
+  // Hero selection now belongs to each profile; validate every registered deck, not a removed constant.
+  const heroCount = Math.max(...ALL_DECK_IDS.map(id => CINEMATIC_PROFILES[id].cards.length))
   const homeUsesFace = /TarotCardFace|CardArtwork|DeckCardBack/.test(home)
   const homeThumbOnly = !homeUsesFace || /variant="thumb"/.test(home)
   const homePrewarms = /prewarm/.test(home)
@@ -378,9 +379,13 @@ function checkLoadingPolicy(): void {
      现在守的是「首屏用到的必须预载，首屏用不到的必须不预载」。 */
   const preloaded = [...html.matchAll(/rel="preload"[^>]*\/fonts\/([\w-]+)\.woff2/g)].map((m) => m[1]!)
   check(
-    'REL-06j 只预载首屏字体（Cinzel + 文楷），不预载 Ritual 档',
+    'REL-06j Cinzel 首屏预载、文楷仅中文预载，不预载 Ritual 档',
     preloaded.includes('cinzel-latin')
-    && preloaded.includes('lxgw-wenkai-light-subset')
+    && !preloaded.includes('lxgw-wenkai-light-subset')
+    && /locale !== 'zh-CN'/.test(read('src/i18n/boot.ts'))
+    && /link\.rel = 'preload'/.test(read('src/i18n/boot.ts'))
+    && /link\.href = displayFontUrl/.test(read('src/i18n/boot.ts'))
+    && /fonts\/lxgw-wenkai-light-subset\.woff2/.test(read('src/i18n/boot.ts'))
     && !preloaded.includes('cormorant-garamond-latin'),
     preloaded.join(' + ') || '无',
   )
@@ -397,7 +402,7 @@ function checkLoadingPolicy(): void {
   const shareCard = read('src/features/reading/ShareCard.tsx')
   check(
     'REL-07b 分享页原问题默认关闭',
-    /useState\(false\)/.test(sharePage) && /showQuestion \? entry\.question : null/.test(sharePage),
+    /useState\(false\)/.test(sharePage) && /question: showQuestion \? (?:entry\.question|localized\.value\.question) : null/.test(sharePage),
     'SharePage.tsx',
   )
   check(

@@ -31,7 +31,8 @@ const RISK_KEYWORDS: Record<RiskCategory, string[]> = {
     '癌', '肿瘤', '确诊', '诊断', '化疗', '手术', '病情', '恶性', '复发',
     '要不要吃药', '停药', '精神分裂', '抑郁症', '躁郁', '怀孕', '流产',
     '绝症', '治不好', '体检结果', '化验', '病理',
-    'cancer', 'tumor', 'diagnosis', 'diagnose', 'chemo', 'surgery',
+    '得了什么病', '得了某种病', '得病', '症状', '吃药', '药物',
+    'cancer', 'symptom', 'tumor', 'diagnosis', 'diagnose', 'chemo', 'surgery',
     'medication', 'prescription', 'illness', 'disease', 'pregnan',
   ],
   financial: [
@@ -42,7 +43,7 @@ const RISK_KEYWORDS: Record<RiskCategory, string[]> = {
     'debt', 'bankrupt', 'gamble', 'lottery',
   ],
   legal: [
-    '起诉', '打官司', '诉讼', '开庭', '判刑', '坐牢', '被告', '原告',
+    '起诉', '官司', '胜诉', '败诉', '诉讼', '开庭', '判刑', '坐牢', '被告', '原告',
     '仲裁', '离婚协议', '抚养权', '合同纠纷', '违约金', '报警', '立案',
     '赔偿', '拘留', '取保',
     'lawsuit', 'sue', 'court', 'attorney', 'lawyer', 'custody',

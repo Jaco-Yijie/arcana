@@ -1,0 +1,72 @@
+{
+  "review-001": {
+    "field": "scene/head covering",
+    "current": "A hooded, faceless figure",
+    "reviewers": {
+      "reviewer-b": "兜帽/披风覆盖头部",
+      "reviewer-e": "可见垂落头发，无法辨认兜帽边缘"
+    },
+    "judge": "倾向头发；与 Reviewer B 冲突，未自动修改。",
+    "question": "跪着人物的头部是兜帽覆盖，还是裸露头发垂在脸前？"
+  },
+  "review-003": {
+    "field": "scene/keyObjects/spatialRelations · cup support",
+    "current": "a draped cloth over a low table",
+    "reviewers": {
+      "reviewer-c": "Comparison pass；盲观察描述地面铺布",
+      "reviewer-e": "杯子站在草地铺布上，未确认桌子"
+    },
+    "judge": "未看到桌腿/边沿，但不能排除布下低桌。",
+    "question": "前景杯子在低桌上，还是直接在草地铺布上？"
+  },
+  "review-004": {
+    "field": "scene/spatialRelations · sword arrangement",
+    "current": "arranged in a loose ring around the figure",
+    "reviewers": {
+      "reviewer-a": "Comparison pass；盲观察为左右两组剑",
+      "reviewer-d": "剑只在左右，前后为开放通道"
+    },
+    "judge": "倾向左右夹道；另有剑数分歧，未自动修改。",
+    "question": "人物正后方是否有插地剑，还是剑全部在左右两侧？"
+  },
+  "review-005": {
+    "field": "confidence.uncertainDetails · sword count（原生成自述；不进入 Prompt）",
+    "current": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+    "reviewers": {
+      "reviewer-b": "可辨五把；无法可靠确认是否有第六把",
+      "reviewer-d": "可辨五把；无法确认第六把"
+    },
+    "judge": "倾向五把，但 Reviewer 均不愿确认精确总数。",
+    "question": "船上可以确认的竖立剑总数是五把、六把，还是无法确认？"
+  },
+  "review-009": {
+    "field": "keyObjects · garlanded pole count",
+    "current": "four slender poles forming an arch",
+    "reviewers": {
+      "reviewer-a": "三根",
+      "reviewer-d": "两根"
+    },
+    "judge": "倾向三根，与 Reviewer D 冲突。",
+    "question": "贯穿画面高度的花环杆可确认是两根、三根、四根，还是无法确认？"
+  },
+  "review-010": {
+    "field": "scene · passenger head coverings",
+    "current": "two seated, hooded passengers",
+    "reviewers": {
+      "reviewer-b": "中间乘客披风覆盖头肩",
+      "reviewer-d": "中间乘客裸露头发，另一名有兜帽"
+    },
+    "judge": "倾向仅一人戴兜帽；未自动覆盖冲突观察。",
+    "question": "两名坐着乘客都戴兜帽，还是只有一名？"
+  },
+  "review-207": {
+    "field": "scene · lower-left kneeling figure head covering",
+    "current": "two kneeling, veiled figures",
+    "reviewers": {
+      "reviewer-b": "左下人物为 hooded pale mantle",
+      "reviewer-d": "左下可见编发和花，披肩从肩部开始"
+    },
+    "judge": "倾向左下头发裸露；右侧头部有覆盖物。",
+    "question": "左下跪着人物头部有面纱/兜帽，还是编发裸露可见？"
+  }
+}

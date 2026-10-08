@@ -1,0 +1,337 @@
+{
+  "reviewId": "review-111",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-111.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: corrected vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-111.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "horned mask with two curved horns and dark eye openings",
+          "observed": "the eye openings are pale and luminous, not dark",
+          "evidence": "Both eye apertures read as bright bluish-white shapes against the near-black mask face — they are among the lighter values in that region of the frame and are the reason the mask reads as the visual centre. 'Dark eye openings' inverts the tonal fact.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the two figures face inward toward the central mask, framing it symmetrically",
+          "observed": "both figures are seen from behind with their bodies turned away from the viewer, not turned to face the mask",
+          "evidence": "The left figure presents a full back view — shoulder blades, spine line and the rear of the head — with both arms raised overhead; his body axis points away from the viewer, not toward the plinth. The right figure is likewise seen from behind, with only her head angled slightly to her left. Neither torso is rotated toward the centre, so 'face inward toward the central mask' is not what is painted.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the chain arcs from the left figure's raised hands across the upper left of the frame",
+          "observed": "the chain stays within the figure's own silhouette — a loop between his raised hands just above his head, then draping down his back and left hip",
+          "evidence": "The upper left of the frame is open star field with a large crescent-lit sphere in it and no chain crossing it. The chain is visible only as the loop spanning his two raised hands immediately above the head, and as links running down across the shoulder, back and hip.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "horned mask with two curved horns and dark eye openings",
+            "with": "horned mask with two curved horns and pale, luminous eye openings"
+          },
+          {
+            "find": "the two figures face inward toward the central mask, framing it symmetrically",
+            "with": "both figures are seen from behind, bodies turned away from the viewer, flanking the mask symmetrically without facing it; the right figure's head is angled slightly toward the centre"
+          },
+          {
+            "find": "the chain arcs from the left figure's raised hands across the upper left of the frame",
+            "with": "the chain forms a loop between the left figure's raised hands just above his head, with further lengths draping down his back and left hip"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-111",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left of center, standing on a polished floor",
+              "posture": "standing, seen from behind, both arms raised above the head",
+              "gaze": "away from the viewer, upward/forward into the star field",
+              "heldObjects": [
+                "a chain held in both raised hands, lifted in a loop above and around the head; further lengths of the same chain drape down across the back and left hip"
+              ],
+              "appearance": "short dark hair, long heavy dark robe with a trailing hem, boots"
+            },
+            {
+              "position": "right of center, standing on the same floor",
+              "posture": "standing upright, seen from behind and slightly in profile, arms down at the sides",
+              "gaze": "turned slightly toward the left / toward the central altar",
+              "heldObjects": [
+                "no object clearly in the hands; a chain lies draped across the shoulders and down the back"
+              ],
+              "appearance": "long dark wavy hair, long dark robe reaching the floor"
+            }
+          ],
+          "objects": [
+            {
+              "type": "chain",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one on each figure — the left figure's is lifted over the head and loops down the back; the right figure's hangs across the shoulders. Individual runs and loops are not separately countable"
+            },
+            {
+              "type": "horned mask / horned skull-like face",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "resting on top of the stone altar at dead center; two large curved horns sweep out to either side, two pale glowing eye openings, an engraved circular pattern on the brow"
+            },
+            {
+              "type": "stone altar / plinth",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of frame between the two figures, a squat dark block with a stepped top"
+            },
+            {
+              "type": "hanging censer / lamp on a chain, with smoke rising",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "suspended in front of the altar face, gold, a small flame at its base and a thin smoke plume drifting up and to the right"
+            },
+            {
+              "type": "lit candle on a stand",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far right edge, against the column, small warm flame"
+            },
+            {
+              "type": "celestial body (planet / moon disc)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a large crescent-lit sphere upper left; a smaller sphere with a bright limb upper center-right; a small reddish crescent near center. Additional faint small discs may be present in the star field — total not reliably countable"
+            },
+            {
+              "type": "gold orrery / concentric ring diagram",
+              "count": null,
+              "countConfidence": "low",
+              "where": "drawn in fine gold line over the sky at upper right and again on the wall at mid-left, plus large circles inscribed on the floor; the diagrams interpenetrate and no discrete count is possible"
+            },
+            {
+              "type": "architectural column / pier framing the scene",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one at each side of the frame, supporting an arch that spans the top"
+            }
+          ],
+          "environment": [
+            "a dark stone chamber open to a night sky through a large arch",
+            "deep star field with a bright purple-pink nebula band running diagonally",
+            "polished reflective dark floor inscribed with glowing gold circles and geometric lines",
+            "faint gold circular diagrams on the left wall"
+          ],
+          "lightSources": [
+            "the small flame in the hanging censer",
+            "the candle at the right edge",
+            "the glowing eye openings of the horned mask",
+            "starlight and the nebula band",
+            "the gold floor lines glow faintly"
+          ],
+          "moonPhase": "the largest upper-left sphere shows a crescent-lit limb along its upper-left edge; the exact phase is not determinable",
+          "spatialRelations": [
+            "the two figures stand apart, one on each side of the central altar, both with their backs to the viewer",
+            "the horned mask on the altar sits between and slightly below the two figures' heads",
+            "the censer hangs in front of the altar and above the floor, its smoke rising between the figures",
+            "the gold ring diagram in the sky sits above and right of the altar",
+            "the floor reflects the censer flame as a vertical streak toward the viewer"
+          ],
+          "foreground": [
+            "inscribed reflective floor",
+            "small spherical objects scattered on the floor at lower left and lower right"
+          ],
+          "background": [
+            "star field",
+            "nebula",
+            "celestial spheres",
+            "arch and columns"
+          ],
+          "palette": "deep indigo and near-black with gold line work and small warm flame accents"
+        },
+        "uncertainObservations": [
+          "Whether the left figure is putting the chain on, taking it off, or merely lifting it cannot be determined from a rear view.",
+          "The right figure's hands are hidden in the robe folds; whether anything is held is unknown.",
+          "The number of celestial discs in the sky is not reliably countable — recorded as null.",
+          "The small round objects scattered on the floor at the lower corners could be spheres, stones or reflections; neither their nature nor their number is resolvable.",
+          "Whether the mask on the altar is a mask, a helm or a skull is ambiguous."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the two figures face inward toward the central mask, framing it symmetrically",
+          "observed": "only the right figure is turned toward the mask; the left figure has his back to the viewer with his head tilted up toward the sky, and the two are not symmetric",
+          "evidence": "The left figure's arms are raised overhead and his head is tipped back and up at the starfield — his attention is upward, not at the plinth. He also stands markedly closer to the viewer and renders much larger than the right figure, so the pair does not frame the mask symmetrically.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "horned mask with two curved horns and dark eye openings",
+          "observed": "the two eye openings read as pale and faintly luminous against the dark mask face, not dark",
+          "evidence": "At the mask's centre the two almond eye shapes are distinctly lighter in value than the surrounding mask, reading as lit or glowing rather than as dark voids. The detail is small, so I hold this at medium confidence.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the two figures face inward toward the central mask, framing it symmetrically",
+            "with": "the right figure is turned inward toward the central mask, while the left figure stands closer to the viewer with his back turned and his head tilted up toward the sky"
+          },
+          {
+            "find": "horned mask with two curved horns and dark eye openings",
+            "with": "horned mask with two curved horns and pale, faintly luminous eye openings"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-111",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left of center, foreground",
+              "posture": "standing, seen from behind, both arms raised above the head holding an object aloft",
+              "gaze": "facing away from the viewer, head tilted up toward the sky; face not visible",
+              "heldObjects": [
+                "a ring or open circlet, gripped in both hands above the head"
+              ],
+              "details": "short dark hair, long heavy dark robe with layered folds and a sash, dark boots, a gold chain looped over the shoulders and hanging down the back and side"
+            },
+            {
+              "position": "right of center, foreground",
+              "posture": "standing, seen from behind and slightly in profile, arms down at the sides",
+              "gaze": "head turned toward the viewer's left, toward the central altar; face mostly hidden, only the cheek line visible",
+              "heldObjects": [],
+              "details": "long dark hair falling past the shoulders, long dark floor-length robe, a gold chain draped over the shoulder and down the back"
+            }
+          ],
+          "objects": [
+            {
+              "type": "gold chain worn by a figure",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one on each figure, draped over the shoulders"
+            },
+            {
+              "type": "ring / circlet held aloft",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "above the left figure's head"
+            },
+            {
+              "type": "stone altar / pedestal",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "dead center, between the two figures, roughly waist height, square-topped"
+            },
+            {
+              "type": "horned mask or head",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "resting on top of the central altar, facing the viewer; two curved horns sweeping outward and up, two glowing eye slits, an ornate circular medallion pattern on the brow between the horns"
+            },
+            {
+              "type": "horn on that mask",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "left and right of the mask"
+            },
+            {
+              "type": "tall gold candlestick / censer with a small flame and rising smoke",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "standing on the floor directly in front of the altar, center-bottom"
+            },
+            {
+              "type": "lit candle on a stand",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far right, against the column, at about the right figure's hip height"
+            },
+            {
+              "type": "large circular astronomical wheel / orrery-like disc",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far left, partly cut off by the left column"
+            },
+            {
+              "type": "celestial body (planet or moon) in the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered across the upper sky; see uncertainObservations"
+            },
+            {
+              "type": "stone column/pier framing the scene",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one at the left edge, one at the right edge, supporting an arch across the top"
+            }
+          ],
+          "environment": [
+            "a dark open hall or terrace under an open night sky",
+            "a polished dark floor inscribed with glowing gold concentric circles and geometric figures",
+            "stone arch and columns framing left, right and top",
+            "a dense starfield with a bright band of nebula/Milky Way running diagonally",
+            "thin gold constellation diagrams and orbital rings drawn over the sky",
+            "small gold spheres/orbs resting on the floor in the lower area"
+          ],
+          "lightSources": [
+            "the small flame of the gold censer/candlestick in front of the altar",
+            "the lit candle at the right",
+            "the glowing eyes of the horned mask",
+            "the glowing gold inscriptions in the floor",
+            "starlight and the lit celestial bodies overhead"
+          ],
+          "moonPhase": "the large body at upper left shows a crescent of light along its left edge with the rest of the sphere dark — crescent-lit; whether it is a moon or a planet cannot be determined",
+          "spatialRelations": [
+            "the two figures stand apart, on either side of the central altar, both with their backs to the viewer",
+            "the horned mask on the altar sits between them at chest height and faces the viewer",
+            "the censer stands on the floor in front of the altar, between the altar and the viewer",
+            "the glowing floor circles are centred roughly on the altar and expand outward past both figures",
+            "the arch and columns frame the sky, which fills the entire upper half of the frame"
+          ],
+          "foreground": [
+            "glowing inscribed floor",
+            "gold censer with flame and smoke",
+            "small gold orbs on the floor"
+          ],
+          "background": [
+            "starfield and nebula band",
+            "constellation line diagrams",
+            "celestial bodies",
+            "stone arch"
+          ]
+        },
+        "uncertainObservations": [
+          "Celestial bodies: I can resolve a large crescent-lit sphere at upper left, a smaller pale sphere at upper center, a small reddish crescent below and left of center, and one or two faint dots near the right. That is three to five, but the faint ones are hard to separate from bright stars, so I record the count as null.",
+          "Whether the object held aloft by the left figure is a plain ring, a torc or an open circlet cannot be determined.",
+          "Neither figure's face is visible; I cannot describe expression for either.",
+          "The circular device at the far left is cut off by the column and by the frame; whether it is an armillary sphere, an orrery or a carved wheel cannot be determined.",
+          "Whether the horned object on the altar is a mask, a helm or a skull cannot be determined."
+        ],
+        "reviewConfidence": "medium-high",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

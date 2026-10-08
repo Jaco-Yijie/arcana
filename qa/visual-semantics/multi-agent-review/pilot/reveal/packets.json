@@ -1,0 +1,497 @@
+{
+  "review-001": {
+    "reviewId": "review-001",
+    "existingSemantic": {
+      "scene": "A hooded, faceless figure kneels in a dark stone passage, holding a chalice from which water pours through their cupped hands into a channel below, while a pale bird hovers in the lit wall behind.",
+      "keyObjects": [
+        "stemmed chalice with textured, mottled surface",
+        "stream of water falling from the chalice",
+        "cupped hands catching the water",
+        "stone channel or gutter running toward the viewer",
+        "cobbled stone paving",
+        "arched doorway in the wall behind",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the figure sits between the dark left-hand depth and the lit wall on the right",
+        "the bird hovers above and to the right of the figure's head",
+        "the water falls from the chalice through the hands into the channel in the lower centre",
+        "the arched doorway recedes behind the figure's left shoulder"
+      ],
+      "visualTensions": [
+        "bright falling water against an almost entirely black surround",
+        "the pale hovering bird against the heavy, motionless figure",
+        "the figure's hidden face versus the exposed, overflowing vessel"
+      ],
+      "deckSpecificMotifs": [
+        "monochrome near-greyscale rendering with a trace of violet",
+        "heavy film-grain and weathered-stone texture",
+        "ornamental corner marks and a thin double border",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "something opening and giving out more than can be held",
+        "capacity and flow rather than a relationship between two people",
+        "the vessel as the source of what is offered"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the pale shape in the upper right is a bird or a winged figure",
+      "whether the faint forms on the left are steps or wall shadow",
+      "the exact number of visible stone courses in the channel",
+      "whether the figure's hands are bare or gloved"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 3,
+    "runtimeProjectionBytes": 826
+  },
+  "review-002": {
+    "reviewId": "review-002",
+    "existingSemantic": {
+      "scene": "A lone ragged figure stands in a dark walled garden at night, tending a thorny vine that climbs a trellis of pentacle discs, while three more pentacle-marked planter boxes lie in the foreground and a lit archway stands at the top of distant steps.",
+      "keyObjects": [
+        "trellis of square wooden panels bearing four pentacle discs",
+        "thorny climbing vine with a few small leaves",
+        "long-handled hoe leaning against the wall at left",
+        "three low rectangular planter boxes in the foreground, each holding one pentacle disc",
+        "stone stairway rising at right",
+        "arched stone gateway at the top of the stairs",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the figure stands between the trellis wall on the left and the planter boxes on the right",
+        "the three planter boxes recede diagonally from bottom-centre toward mid-right",
+        "the stairway and archway sit in the upper-right background, behind and above the figure",
+        "the hoe leans against the wall to the left of the figure"
+      ],
+      "visualTensions": [
+        "the figure's attention is on the vine while the pentacles sit fixed in wood and soil",
+        "a lit archway and stairs invite exit while the figure stays bent to the ground",
+        "living thorny growth against rigid geometric grid"
+      ],
+      "deckSpecificMotifs": [
+        "pentacles rendered as embossed discs set into wood and soil",
+        "garden reimagined as a walled, ruined courtyard",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "stepping back to look at what has grown so far",
+        "ongoing tending labour that has not yet yielded",
+        "the question of whether to keep tending"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of pentacles on the trellis (four resolved, possibly more in shadow)",
+      "whether the small pale shapes in the planters are seedlings or debris",
+      "the faint light source beyond the archway"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 3,
+    "runtimeProjectionBytes": 940
+  },
+  "review-003": {
+    "reviewId": "review-003",
+    "existingSemantic": {
+      "scene": "A couple stands with their backs to the viewer on a misty shore, watching two children run toward a distant castle while a rainbow arcs overhead and a table of cups glows in the foreground.",
+      "keyObjects": [
+        "a second cluster of glass goblets on a draped table in the foreground",
+        "a rainbow band",
+        "a full moon",
+        "a lit lantern with a metal frame",
+        "a draped cloth over a low table",
+        "a distant castle with a spire",
+        "scattered pale blossoms and foliage"
+      ],
+      "spatialRelations": [
+        "the couple stands between the foreground table and the children",
+        "the children run ahead of the couple toward the water",
+        "the sky-borne goblets arc above the couple's heads",
+        "the castle sits across the water at the right horizon"
+      ],
+      "visualTensions": [
+        "the couple faces away from the viewer while the table of cups sits behind them",
+        "the children move outward toward the horizon while the adults stand still"
+      ],
+      "deckSpecificMotifs": [
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "watercolour wash texture with soft edges",
+        "floral wreath and trailing ribbon details",
+        "mist-veiled horizon"
+      ],
+      "emphasizedAspects": [
+        "a settled, long-standing bond shown by the couple's relaxed closeness",
+        "ordinary domestic warmth in the shared table and running children",
+        "continuity across generations"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact count of goblets in the sky arc",
+      "exact count of goblets on the foreground table",
+      "whether the small pale shapes near the children are petals or birds",
+      "identity of the distant building's function"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 790
+  },
+  "review-004": {
+    "reviewId": "review-004",
+    "existingSemantic": {
+      "scene": "A blindfolded woman in a long pale gown stands bound at the waist and arms in a marshy field, encircled by upright swords driven into the ground, with a hilltop castle under a breaking sky behind her.",
+      "keyObjects": [
+        "cloth blindfold tied over the eyes, its tail trailing to the right",
+        "thick rope coiled several times around the waist and pinning the arms",
+        "upright swords driven point-down into the ground, arranged in a loose ring around the figure",
+        "long pale gown with patterned hem",
+        "bare feet in wet mud",
+        "shallow water channel winding across the field",
+        "grasses and reeds at the field edges",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the woman stands at the centre with swords planted to her left, right and behind her",
+        "the castle sits far behind her on the left horizon",
+        "the water channel runs from the left middle distance toward the lower foreground",
+        "the blindfold knot and its loose end trail off to the right of her head"
+      ],
+      "visualTensions": [
+        "the tight ring of blades around the figure against the wide open plain beyond",
+        "the bright light in the upper left against the massed dark cloud",
+        "the bound, still body against the trailing, wind-lifted blindfold end"
+      ],
+      "deckSpecificMotifs": [
+        "fine engraved cross-hatching in the manner of an old printed book",
+        "aged ivory paper with dark gilt-edged border",
+        "deep wine-red accents on the sword grips",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "the constraint is real and physically rendered through rope and blindfold",
+        "the encircling enclosure of the swords",
+        "the bowed, still posture of being bound"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of swords fully resolvable in the ring",
+      "whether the trailing cloth at her head is the blindfold's end or a strand of hair"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 2,
+    "runtimeProjectionBytes": 953
+  },
+  "review-005": {
+    "reviewId": "review-005",
+    "existingSemantic": {
+      "scene": "A pale-robed figure stands poling a small wooden boat across still water at night, a second seated figure and a row of upright swords riding in the bow, with a distant spired castle on the far shore.",
+      "keyObjects": [
+        "small wooden boat with carved prow and stern post",
+        "long slender pole held by the standing figure",
+        "row of upright swords standing in the bow of the boat",
+        "hanging lantern with warm glow at the boat's stern",
+        "garlands of vines and small white blossoms draped along the hull",
+        "crescent moon in the upper right sky",
+        "distant spired castle on the far shore",
+        "floating pale petals on the water surface"
+      ],
+      "spatialRelations": [
+        "the boat sits diagonally across the lower half, bow toward the right",
+        "the standing figure occupies the left of the boat, the seated figure the centre, the swords the right",
+        "the castle sits on the horizon at the right, beyond the water",
+        "the moon hangs above and to the right of the castle"
+      ],
+      "visualTensions": [
+        "the boat's forward diagonal against the still, level horizon",
+        "the single warm lantern glow against the cool blue night",
+        "the upright swords held rigid inside a drifting, soft-edged scene"
+      ],
+      "deckSpecificMotifs": [
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "translucent ribbon-veils streaming from the figures and boat",
+        "vine and blossom garlands wound around the hull",
+        "pale floral sprays framing the lower corner"
+      ],
+      "emphasizedAspects": [
+        "a crossing in progress, moving away from one shore toward another",
+        "the burden carried along rather than left behind",
+        "a gentle, unhurried transition"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of swords standing in the bow (appears to be six, some overlapping)",
+      "whether the seated figure's face is veiled or simply turned away",
+      "whether the trailing white shapes are fabric, mist, or both"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 887
+  },
+  "review-006": {
+    "reviewId": "review-006",
+    "existingSemantic": {
+      "scene": "A kneeling figure in a moss-green cloak gathers swords on a wet forest path while a second cloaked figure walks away into the misty trees.",
+      "keyObjects": [
+        "two swords held upright by the kneeling figure",
+        "two swords lying flat on the wet ground in the foreground",
+        "long dark cloak with ragged hem",
+        "leather belt pouch",
+        "small shoulder satchel on the departing figure",
+        "waterlogged path with standing puddles",
+        "fallen brown leaves",
+        "ornamental border with fern fronds and mushrooms"
+      ],
+      "spatialRelations": [
+        "the kneeling figure occupies the left half, the departing figure the right background",
+        "the two fallen swords lie in the immediate foreground, below and in front of the kneeling figure",
+        "the path runs from the lower foreground diagonally back toward the departing figure",
+        "the kneeling figure is larger and nearer; the departing figure is smaller and further away"
+      ],
+      "visualTensions": [
+        "the near figure bowed over the blades against the figure walking calmly away",
+        "bright misty distance against the dark crowded foreground",
+        "stillness of the kneeling pose against the implied motion of the departing walker"
+      ],
+      "deckSpecificMotifs": [
+        "wood-grain and vine border framing the scene",
+        "fern fronds worked into the border corners",
+        "mushrooms drawn at the lower border",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "the aftermath of a dispute rather than the dispute itself",
+        "a cost paid in solitude and in what is left behind",
+        "the departure of the other party"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the two upright blades are held as a pair or one is being sheathed",
+      "exact number of swords visible if any are partly hidden by the cloak"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 773
+  },
+  "review-007": {
+    "reviewId": "review-007",
+    "existingSemantic": {
+      "scene": "Four figures gather at night on a stone platform beneath a garlanded four-post canopy, with a star-filled nebula sky and a lake reflecting lantern light behind them.",
+      "keyObjects": [
+        "four tall wooden posts wrapped in vines and ribbons",
+        "floral garland strung between the posts",
+        "small lanterns hanging on the posts",
+        "low table or cloth spread with fruit, bottles and a bowl",
+        "stone platform with inlaid circular pattern",
+        "backpack carried by the left figure",
+        "platter of fruit held by the right figure"
+      ],
+      "spatialRelations": [
+        "the four posts frame the group, two on each side of the platform",
+        "the garland arcs across the upper middle of the composition",
+        "the food spread sits on the ground between the two pairs of figures",
+        "the lake and distant shore lie behind the platform, below the sky"
+      ],
+      "visualTensions": [
+        "warm intimate lantern light against the vast cold starfield",
+        "the enclosed canopy against the unbounded sky above it"
+      ],
+      "deckSpecificMotifs": [
+        "constellation lines drawn over the sky",
+        "gold star points scattered across the field",
+        "ringed planet with orbiting spheres",
+        "ornamental corner frames with compass-like arcs"
+      ],
+      "emphasizedAspects": [
+        "arrival at a place prepared for gathering",
+        "a structure that holds and shelters those beneath it",
+        "the moment being marked with shared food and light"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the pale disc at upper left is a moon or a planet",
+      "exact number of small lanterns hanging on the posts",
+      "identity of the small objects on the ground spread"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 0,
+    "runtimeProjectionBytes": 742
+  },
+  "review-008": {
+    "reviewId": "review-008",
+    "existingSemantic": {
+      "scene": "Two dark-robed figures stand facing each other in a dim stone chamber, exchanging a small cup with a flower laid across its rim, beneath a row of five lit niches.",
+      "keyObjects": [
+        "small stemmed cup held between the two figures",
+        "pale flower resting across the cup's rim",
+        "five wall niches each holding a stemmed goblet",
+        "stone wall with rectangular recesses",
+        "staircase at the right",
+        "cracked stone floor",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "text '[CARD NAME REDACTED]' at the bottom"
+      ],
+      "spatialRelations": [
+        "the two figures face each other across the cup at the centre",
+        "the row of five niches runs horizontally above the figures' heads",
+        "the staircase rises behind the right-hand figure",
+        "the floor's lit patch lies between and below the two figures"
+      ],
+      "visualTensions": [
+        "the figures' faces are lost in shadow while the cup is faintly lit",
+        "the five lit niches above contrast with the near-black wall around them"
+      ],
+      "deckSpecificMotifs": [
+        "heavy black robes with frayed, trailing hems",
+        "goblets set into wall niches rather than held",
+        "aged, distressed card border"
+      ],
+      "emphasizedAspects": [
+        "an exchange between two people",
+        "something small and tender being offered and received",
+        "a remembered, enclosed place"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the flower is held in the left figure's fingers or simply laid on the cup",
+      "the exact number of steps on the right-hand staircase",
+      "whether the faint shapes at the lower left are branches or cracks"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 751
+  },
+  "review-009": {
+    "reviewId": "review-009",
+    "existingSemantic": {
+      "scene": "Under a floral arch of four slender poles, a group of pale-robed women raise small cups in a moonlit garden beside a misty lake and a distant town.",
+      "keyObjects": [
+        "four slender poles forming an arch",
+        "garland of white flowers and leaves across the arch",
+        "trailing pale ribbons and beaded chains",
+        "hanging glass lanterns",
+        "small cups held by the figures",
+        "round table draped in pale cloth with a lantern and flowers",
+        "full moon",
+        "low lantern on the ground at lower right"
+      ],
+      "spatialRelations": [
+        "the four poles frame the scene, two at left and two at right",
+        "the central figures stand between the poles, in front of the draped table",
+        "the lake and town lie behind the arch, below the moon",
+        "the moon sits in the upper right sky, above the town"
+      ],
+      "visualTensions": [
+        "the solid vertical poles against the dissolving mist",
+        "the close, intimate toast against the vast distant shore"
+      ],
+      "deckSpecificMotifs": [
+        "silver linework on pale ground",
+        "ribbons and beaded chains trailing from the arch",
+        "glass lanterns hung and set on the ground",
+        "low mist near the horizon"
+      ],
+      "emphasizedAspects": [
+        "gathering under a structure",
+        "a moment of arrival being marked together",
+        "a framework that holds and shelters"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of poles resolved as four, but the two rear poles are partly obscured by garland",
+      "number of small cups held by the figures",
+      "identity of the faint figures at the right edge",
+      "whether the small round object at centre is a table or a low stand"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 0,
+    "runtimeProjectionBytes": 693
+  },
+  "review-010": {
+    "reviewId": "review-010",
+    "existingSemantic": {
+      "scene": "A standing boatman poles a small wooden boat carrying two seated, hooded passengers and a cluster of upright swords across a wide river, with a stone tower on the left bank and low mountains on the far shore.",
+      "keyObjects": [
+        "wooden rowing boat with plank hull and rope lashing",
+        "long wooden pole held by the boatman",
+        "cluster of upright swords standing in the boat",
+        "stone tower with battlements on the left bank",
+        "low mountain ridge on the far shore",
+        "cloth bundle or sack in the bottom of the boat",
+        "small belt pouch at the boatman's waist",
+        "reddish-brown cloak over the boatman's shoulders"
+      ],
+      "spatialRelations": [
+        "the boatman stands behind and above the two seated passengers",
+        "the swords stand between the seated passengers and the bow of the boat",
+        "the tower sits on the left bank, behind and above the boat",
+        "the far shore and mountains lie beyond the boat, across the water"
+      ],
+      "visualTensions": [
+        "the boat's forward motion against the stillness of the seated figures",
+        "the sharp vertical swords against the soft horizontal water and sky"
+      ],
+      "deckSpecificMotifs": [
+        "engraved cross-hatching and fine line shading",
+        "ornamental corner flourishes and ruled border",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "a crossing in progress, moving away from what lies behind",
+        "the burden carried along with the travellers",
+        "an undramatic, steady passage rather than a decisive break"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of swords standing in the boat",
+      "whether the pale bundle in the boat is a sack or folded cloth"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 2,
+    "runtimeProjectionBytes": 826
+  },
+  "review-011": {
+    "reviewId": "review-011",
+    "existingSemantic": {
+      "scene": "A crowned rider on a dark horse holds a tall laurel-topped staff before a row of five upright wands, with a domed building and a crowd behind and a star-filled nebula sky above.",
+      "keyObjects": [
+        "tall staff topped with a laurel wreath and a star point",
+        "five upright wands with gold spear-like tips and purple ribbons",
+        "laurel wreath worn on the rider's head",
+        "dark horse with gold-studded bridle and chest harness",
+        "domed building with a lit arched window and a spherical instrument",
+        "reflective water surface",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the rider and horse occupy the left-centre, the five wands stand in a row to the right",
+        "the domed building and crowd sit behind the rider on the left",
+        "the wands stand between the viewer and the water and horizon",
+        "the staff rises above the rider's head into the sky"
+      ],
+      "visualTensions": [
+        "the rider's upward gaze against the horizontal row of wands",
+        "warm horizon light against the cold starfield"
+      ],
+      "deckSpecificMotifs": [
+        "constellation lines linking star points",
+        "nebula cloud band across the sky",
+        "very small gold star points scattered throughout",
+        "gold geometric border with corner compass motifs"
+      ],
+      "emphasizedAspects": [
+        "public visibility, shown by the raised staff and the watching crowd",
+        "being marked or named, shown by the laurel wreath and the star at the staff tip",
+        "a moment of arrival before an open sky"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the dark round body near the crescent moon is a second moon or a shadowed sphere",
+      "exact number of figures in the crowd",
+      "whether the spherical object in the building window is an armillary sphere or a lamp"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 863
+  }
+}

@@ -92,6 +92,47 @@ function ensureListener(): void {
 export const IS_STREAMLIT = import.meta.env.VITE_DEPLOY_TARGET === 'streamlit'
 
 /**
+ * Python 侧按 kind 分派：不同的模型、max_tokens、超时与 Prompt 指纹校验。
+ * 两种请求共用同一个 pending map 与 `streamlit:render` 配对机制 ——
+ * 通信协议只有一套，增加的只是「这一条是什么请求」。
+ */
+export type StreamlitRequestKind = 'reading-request' | 'context-intake-request'
+
+/** 同一毫秒内连发两条时 Date.now() 会撞上，再加一个进程内自增号 */
+let seq = 0
+
+/**
+ * requestId 里带上 kind：解读与背景提问会在同一次占卜里先后发出，
+ * 日志与排查时必须一眼看出这一条是哪一种（intake_… / reading_…）。
+ */
+function nextRequestId(kind: StreamlitRequestKind, sessionId: string): string {
+  seq += 1
+  return `${kind === 'reading-request' ? 'reading' : 'intake'}_${sessionId}_${Date.now()}_${seq}`
+}
+
+/** 发一条请求并等 Python 把结果通过 render args 送回来。超时即 reject。 */
+function requestViaStreamlitTransport(
+  kind: StreamlitRequestKind,
+  messages: { role: string; content: string }[],
+  sessionId: string,
+  timeoutMs: number,
+): Promise<StreamlitReadingResponse> {
+  ensureListener()
+  const requestId = nextRequestId(kind, sessionId)
+
+  return new Promise((resolve, reject) => {
+    pending.set(requestId, { resolve, reject })
+    setComponentValue({ kind, requestId, messages })
+
+    window.setTimeout(() => {
+      if (!pending.has(requestId)) return
+      pending.delete(requestId)
+      reject(new Error('timeout'))
+    }, timeoutMs)
+  })
+}
+
+/**
  * 把一次解读请求交给 Python 侧转发。
  *
  * 注意超时给到 240s：真实解读实测 60–130s，而 Streamlit 还要多一轮
@@ -102,19 +143,22 @@ export function requestViaStreamlit(
   request: Pick<ReadingRequest, 'sessionId'>,
   timeoutMs = 240_000,
 ): Promise<StreamlitReadingResponse> {
-  ensureListener()
-  const requestId = `${request.sessionId}_${Date.now()}`
+  return requestViaStreamlitTransport('reading-request', messages, request.sessionId, timeoutMs)
+}
 
-  return new Promise((resolve, reject) => {
-    pending.set(requestId, { resolve, reject })
-    setComponentValue({ kind: 'reading-request', requestId, messages })
-
-    window.setTimeout(() => {
-      if (!pending.has(requestId)) return
-      pending.delete(requestId)
-      reject(new Error('timeout'))
-    }, timeoutMs)
-  })
+/**
+ * 把一次背景出题请求交给 Python 侧转发。
+ *
+ * 超时刻意比解读短一个数量级：它只是 0–4 道短选择题（关闭推理，实测 1.6–1.8s），
+ * 而用户此刻正卡在「问题落定」之后等着进入下一页。等太久不如当作没有题目，
+ * 直接进牌阵 —— 15s 已经覆盖了 Streamlit 多出来的那一轮 rerun 往返。
+ */
+export function requestContextIntakeViaStreamlit(
+  messages: { role: string; content: string }[],
+  sessionId: string,
+  timeoutMs = 15_000,
+): Promise<StreamlitReadingResponse> {
+  return requestViaStreamlitTransport('context-intake-request', messages, sessionId, timeoutMs)
 }
 
 export type { StructuredReading }

@@ -1,0 +1,22 @@
+{
+  "sourceFile": "qa/visual-semantics/multi-agent-review/wave-1/judge/judge-b.json",
+  "decisions": [
+    {
+      "reviewId": "review-110",
+      "decision": "MARK_UNCERTAIN",
+      "confidence": "medium",
+      "independentFinding": "I opened the image first. Five figures spread left to right across the frame, each associated with a long rough wooden staff; the staves cross in an X over the upper centre. Zooming the staves at 4x, the shafts read as bare wood with small leafy sprigs. The only thing I can resolve actually hanging from a staff is a small pendant on a short chain near the top of the central figure's raised shaft. All the long pale translucent streaming material originates at the figures themselves - shoulders, waists, hems, hair and the lace/net overlay on the gowns - not at any pole. On arrangement: the five heads sit on a shallow left-to-right arc, with the second and fourth figures set higher and further back in the haze; no figure stands behind or on the far side of the central figure, so I cannot see a ring. On the moon, which the source model itself flagged: luminance thresholding shows a complete round mottled disc with a brighter crescent limb along its LOWER right, horns opening up-left. That is a normal way to paint a crescent with the dark limb faintly showing, so I am leaving 'crescent moon' alone, but I note both reviewers placed the bright limb on the upper right, which does not match what I measured.",
+      "reason": "I independently agree with reviewer-b on both items, but AUTO_CORRECT is barred by threshold 2: reviewer-e returned an overall pass and only reviewer-b raised these. Reviewer-e's own blind observation is substantively incompatible with a ring ('the two outermost and the center one lower/nearer, the two intermediate ones higher and set back') and lists no ribbon among her objects, but that is corroboration by implication, not two reviewers reporting the same thing - exactly the 'one passes, only the other raises it' pattern the threshold rules out. Per the tie-breaker I do not choose AUTO_CORRECT when hesitating. MARK_UNCERTAIN on the two named items is the right loss: the ribbon claim asserts an attachment I cannot confirm anywhere on any pole, and reviewer-b states plainly that the haze leaves depth cues too weak for her to establish the arrangement either, so the ring is a fact nobody can verify. I name the two items rather than dropping whole fields so that the verified keyObjects (poles with twigs, flower crowns, sheer gowns, water with petals, blossoms on rocks, ruined arcade) and the verified spatialRelations (the X of poles, the colonnade behind at upper right, the flowered rocks in the lower-left foreground) all survive. One residue I deliberately did not touch: deckSpecificMotifs still carries 'flower crowns and trailing ribbons', which repeats the same unverified ribbon claim, but removing that item would also discard 'flower crowns', which is plainly visible on several figures. That line wants a wording pass downstream, not a deletion here.",
+      "uncertainItems": [
+        {
+          "field": "keyObjects",
+          "item": "long translucent ribbons trailing from the poles"
+        },
+        {
+          "field": "spatialRelations",
+          "item": "the central figure stands nearest the viewer, the others arranged in a loose ring around her"
+        }
+      ]
+    }
+  ]
+}

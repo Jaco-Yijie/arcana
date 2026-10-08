@@ -1,0 +1,104 @@
+[
+ {
+  "reviewId": "review-002",
+  "verdict": "pass",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-006",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "two swords held upright by the kneeling figure",
+    "observed": "count not establishable — two hilts resolvable, blade group may be two or three",
+    "evidence": "Two cross-guards and two pommels are individually separable at the top of the bundle, but below the guards the blade shapes overlap against the figure's knee and cloak; I could resolve at least two blade edges and possibly a third. I did not establish a different number, only that the number is not establishable from the pixels. (The two blades lying on the ground ARE reliably two and that line is correct.)",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two swords held upright by the kneeling figure",
+     "with": "at least two swords held upright by the kneeling figure (a third may be present in the overlapping bundle)"
+    }
+   ]
+  },
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-011",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "five upright wands",
+    "observed": "four upright staves",
+    "evidence": "I counted them one at a time, left to right, in the right third of the frame: (1) the leftmost, nearest the horse's head, leafy crown highest; (2) the next to its right; (3) the third; (4) the rightmost, crown lowest. Each has its own unbroken shaft running down into the shallow water and its own separate reflection below it. There is no fifth shaft anywhere in the row. I re-opened the image specifically to recount and got four both times. The rider's ornate gold staff with the ring finial and star is a fifth pole-like object, but it is visually distinct in form, material and placement, and the existing text already lists it separately as its own keyObject — so it cannot be what the row of 'five' refers to.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the five wands stand in a row to the right",
+    "observed": "four staves stand in a row to the right",
+    "evidence": "Same enumeration as above — four shafts, four bases in the water, four reflections.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "five upright wands",
+     "with": "four upright wands"
+    },
+    {
+     "find": "the five wands stand in a row to the right",
+     "with": "the four wands stand in a row to the right"
+    }
+   ]
+  },
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-009",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "four slender poles forming an arch",
+    "observed": "three poles individually resolvable, a possible fourth",
+    "evidence": "I could separate one thick garlanded pole at the far left running the full height, one slender pole at centre-left rising behind the garland, and one thick garlanded pole at centre-right running the full height. A possible fourth stands behind the right-hand one but the high-key watercolour wash makes it impossible to confirm as a separate shaft. Four may well be right — I simply could not establish it.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "round table draped in pale cloth with a lantern and flowers",
+    "observed": "a cloth-draped table bearing small pale objects that cannot be identified",
+    "evidence": "Small pale shapes sit on the table behind the raised cups, but at that level of wash they cannot be resolved into lanterns, glasses, bottles or flowers. The specific identification is not supported by the pixels.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "four slender poles forming an arch",
+     "with": "at least three slender poles forming an arch, with a possible fourth behind the right-hand pole"
+    },
+    {
+     "find": "the four poles frame the scene, two at left and two at right",
+     "with": "the poles frame the scene at left and at right"
+    },
+    {
+     "find": "round table draped in pale cloth with a lantern and flowers",
+     "with": "round table draped in pale cloth bearing small pale objects"
+    }
+   ]
+  },
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-004",
+  "verdict": "pass",
+  "reviewer": "reviewer-a"
+ }
+]

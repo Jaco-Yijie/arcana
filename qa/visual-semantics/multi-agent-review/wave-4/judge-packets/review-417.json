@@ -1,0 +1,267 @@
+{
+  "reviewId": "review-417",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-417.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-417.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects / scene",
+          "existing": "upright swords with round pommels and crossguards",
+          "observed": "swords standing vertical but HILT-UP / POINT-DOWN: a round ball pommel sits at the very top of each, then grip, then crossguard, then the blade running downward into the stone plinth",
+          "evidence": "On every sword in both flanking groups the topmost element is a round orb, and the tapering end disappears into the plinth below. 'Upright swords' reads as point-up and inverts the actual orientation.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the domed building sits behind her, centred on the path's vanishing point",
+          "observed": "the domed building sits behind her and noticeably to the RIGHT of the walkway's centre line, raised on a bank above the water",
+          "evidence": "The dome and its lit doorway are well right of centre in the frame; the gold reflection of the doorway falls on water to the right of the figure, not down the path's centre.",
+          "confidence": "medium"
+        },
+        {
+          "field": "visualTensions",
+          "existing": "the cloth is being lifted rather than tied in place",
+          "observed": "both her raised hands hold the pale band flat across her eyes; a still frame does not show whether it is going on or coming off",
+          "evidence": "The cloth is fully across both eyes and gripped at both ends; direction of motion is not recoverable from the pixels.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "upright swords with round pommels and crossguards",
+            "with": "swords planted point-down into the plinths, round pommels uppermost above grip and crossguard"
+          },
+          {
+            "find": "walks forward along a wet stone path between two rows of upright swords",
+            "with": "walks forward along a wet stone path between two flanking groups of swords planted point-down on plinths"
+          },
+          {
+            "find": "the domed building sits behind her, centred on the path's vanishing point",
+            "with": "the domed building sits behind her and to the right, raised above the water, off the walkway's centre line"
+          },
+          {
+            "find": "the cloth is being lifted rather than tied in place",
+            "with": "the cloth is held flat across both eyes by her own raised hands; whether it is being lifted or put in place is not readable"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-417",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of frame, walking on wet ground toward the viewer",
+              "posture": "standing / mid-stride, barefoot, upright",
+              "gaze": "head tilted downward; eyes covered by a pale cloth strip her own two raised hands hold in place across her eyes",
+              "heldObjects": [
+                "a pale translucent cloth band / blindfold, held up to her own eyes with both hands"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword planted point-down on a plinth",
+              "count": null,
+              "countConfidence": "low",
+              "where": "flanking the central figure, a group on the left of the frame and a group on the right; each blade rises from a dark rectangular stone plinth at ground level",
+              "orientation": "every blade stands VERTICAL with the round pommel at the TOP and the blade descending into the plinth; the swords read point-down/hilt-up, not point-up",
+              "arrangement": "two flanking groups forming a receding avenue/corridor down either side of the walkway, with a wide open gap in the middle where the figure walks; within each group the pommel heights step down toward the frame edge, so they form a diagonal line, not a level row"
+            },
+            {
+              "type": "rectangular stone plinth / pedestal",
+              "count": null,
+              "countConfidence": "low",
+              "where": "one under each sword, at the base of both flanking groups",
+              "orientation": "upright blocks, flat-topped, faces decorated with faint gold geometric marks",
+              "arrangement": "matching the two flanking groups"
+            },
+            {
+              "type": "domed observatory building",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "mid-distance, right of center, on a rise above the water",
+              "orientation": "dome open/slotted, a lit doorway facing the viewer at the top of a short stair",
+              "arrangement": "single structure"
+            },
+            {
+              "type": "moon / planetary body in the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "one large cratered body upper right; one smaller body upper-left of center; at least one small faint disc near the right edge below the large one",
+              "orientation": "n/a",
+              "arrangement": "scattered across the starfield"
+            }
+          ],
+          "environment": [
+            "night sky with dense stars, a bright nebula band and faint gold constellation lines and orbital rings",
+            "wet reflective ground with standing water and puddles",
+            "a low mountain ridge on the left horizon",
+            "trees along the right middle distance",
+            "a decorated card border on the left and right"
+          ],
+          "lightSources": [
+            "the warm yellow lit doorway of the domed building (the only warm source, reflected as a gold streak on the water)",
+            "the large moon upper right",
+            "the stars and nebula",
+            "the sword blades themselves glow faintly pale"
+          ],
+          "moonPhase": "gibbous, close to full - a slight shading along one limb; exact phase uncertain",
+          "spatialRelations": [
+            "the figure walks forward toward the viewer, between the two flanking sword groups, head bowed",
+            "the swords do not touch her; the nearest plinths are level with her feet on both sides",
+            "the lit building sits behind her right shoulder in the distance",
+            "her bare feet and the plinths are reflected in the wet ground"
+          ],
+          "foreground": [
+            "wet rocky ground, puddles and reflections, a few dark weeds at the bottom edge"
+          ],
+          "background": [
+            "starfield, nebula, moons, mountains, the domed building and its reflection"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of swords cannot be counted reliably - I can pick out about 4 to 5 pommels on the left and about 4 to 5 on the right, but the innermost ones on each side are partly hidden behind the figure's hair and gown, and the outermost run to the frame edge",
+          "whether a sword stands behind the figure on the centre line is not determinable",
+          "the count of sky bodies is uncertain; some faint discs may be bokeh rather than planets"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "walks forward along a wet stone path between two rows of upright swords, lifting a pale cloth from her eyes, toward a small domed lit building under a star-filled sky",
+          "observed": "she walks forward toward the viewer, with her back to the domed building, which stands behind her",
+          "evidence": "The figure faces the viewer and the near swords are the largest in the frame while the dome is small and distant; she is walking out of the avenue toward the camera, not toward the building. The scene line's own later relation ('sits behind her') contradicts 'toward'.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the domed building sits behind her, centred on the path's vanishing point",
+          "observed": "the domed building sits behind her and noticeably right of centre, on a rise beside the water, not on the path's centre line",
+          "evidence": "The dome is offset to the right of the figure with its lit reflection in the water below it; the central gap between the sword ranks does not converge on it.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "walks forward along a wet stone path between two rows of upright swords, lifting a pale cloth from her eyes, toward a small domed lit building under a star-filled sky",
+            "with": "walks forward toward the viewer along a wet path between two rows of upright swords, lifting a pale cloth from her eyes, a small domed lit building behind her under a star-filled sky"
+          },
+          {
+            "find": "the domed building sits behind her, centred on the path's vanishing point",
+            "with": "the domed building sits behind her and to the right of the path, its lit opening reflected in the water"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-417",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, on a path between two ranks of upright blades",
+              "posture": "standing/mid-stride, walking FORWARD toward the viewer, barefoot on wet ground; weight on the forward foot",
+              "gaze": "head bowed, tilted downward and slightly to her right; both hands raised to her face lifting a pale translucent band of cloth away from/over her eyes — her eyes are covered or just being uncovered, not looking at the viewer",
+              "heldObjects": [
+                "a pale gauzy cloth band held in both hands at eye level"
+              ],
+              "clothing": "long dark gown patterned with stars/constellation-like gold marks, layered and trailing; long dark wavy hair blown to her left"
+            }
+          ],
+          "objects": [
+            {
+              "type": "long upright blade with a round pommel, each standing on a dark rectangular stone plinth",
+              "count": 8,
+              "countConfidence": "medium",
+              "where": "four to the left of the central path and four to the right, receding into the middle distance",
+              "orientation": "every one points UP — blade vertical, tip up, round pommel at the very top, hilt below, base set into the plinth; none inverted",
+              "arrangement": "two flanking ranks forming an avenue/corridor, with an open gap down the middle where the figure walks; within each rank the blades step back and rise in a staggered line"
+            },
+            {
+              "type": "dark rectangular stone plinth/base",
+              "count": 8,
+              "countConfidence": "low",
+              "where": "one beneath each blade, in two rows on the wet ground",
+              "orientation": "upright blocks",
+              "arrangement": "matching the two flanking ranks"
+            },
+            {
+              "type": "domed observatory-like building with a lit opening",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "middle distance, right of center, on a low rise reached by steps",
+              "orientation": "dome open/lit toward the viewer",
+              "arrangement": "single, its light reflected in the water below it"
+            },
+            {
+              "type": "planet/moon disc in the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a large grey cratered disc upper right; a smaller grey disc upper left; at least one or two much smaller discs near the right edge and upper center",
+              "orientation": "n/a",
+              "arrangement": "scattered across the starfield; the smallest ones blend into the star haze and cannot be separated reliably"
+            }
+          ],
+          "environment": [
+            "night sky filling the upper half — dense starfield, a coloured nebula/galaxy band running diagonally, thin gold constellation lines and orbital rings drawn over it",
+            "wet, reflective flats/shallow water in the foreground mirroring the blades and the sky",
+            "dark low hills on the horizon at left",
+            "a faint pale twilight glow along the horizon",
+            "dark trees/foliage mass at right, behind the right-hand rank",
+            "decorative border with gold corner ornament at the frame edges"
+          ],
+          "lightSources": [
+            "the starfield and nebula band (broad ambient)",
+            "the lit opening of the domed building in the middle distance, with a reflected light column on the water",
+            "faint self-glow along the blades themselves",
+            "a pale band of residual light at the horizon"
+          ],
+          "moonPhase": "the large disc upper right is rendered as a full, fully-lit cratered sphere; the smaller disc upper left also reads as full/round — no crescent anywhere",
+          "spatialRelations": [
+            "the figure walks forward down the open central gap between the two ranks of upright blades, toward the viewer",
+            "her head is bowed and her hands are at her face; she is not looking where she steps",
+            "the domed building sits behind her right shoulder (viewer's right), well beyond the near ranks",
+            "the blades nearest the viewer are largest at the outer frame edges and diminish toward the center distance"
+          ],
+          "foreground": [
+            "wet reflective ground with puddles and small stones",
+            "the nearest plinths and blades at both frame edges",
+            "the figure's bare feet and trailing hem"
+          ],
+          "background": [
+            "starfield with nebula and constellation lines",
+            "large full planet/moon upper right",
+            "distant hills",
+            "lit domed building and its water reflection"
+          ]
+        },
+        "uncertainObservations": [
+          "The blade count of 8 (4 left + 4 right) is my best resolution; the most distant blade in each rank is small and partly lost in haze, so 8 could be off by one.",
+          "Whether the figure is pulling the cloth off her eyes or tying it on cannot be determined from a still image; the cloth is in her hands at eye level either way.",
+          "The number of small planetary discs in the sky cannot be counted; several candidates are indistinguishable from bright stars.",
+          "The identity of the domed structure (observatory vs. temple) is not determinable; only a dome with a lit opening and an approach stair is visible."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

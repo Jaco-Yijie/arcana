@@ -1,0 +1,1323 @@
+{
+  "generatedFilesUnchanged": 11,
+  "affectedCardsAudited": 68,
+  "runtimeVisionApiCalls": 0,
+  "canonicalAndPromptVerification": "tests/visual-semantics.test.ts: Multi-agent QA",
+  "audit": [
+    {
+      "reviewId": "review-001",
+      "card": "legacy-shadow/cups-01",
+      "decision": "CORRECTED",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-003",
+      "card": "legacy-moonlight/cups-10",
+      "decision": "CORRECTED",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-004",
+      "card": "legacy-classic/swords-08",
+      "decision": "CORRECTED",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-005",
+      "card": "legacy-moonlight/swords-06",
+      "decision": "CORRECTED",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-006",
+      "card": "legacy-forest/swords-05",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-007",
+      "card": "legacy-celestial/wands-04",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-009",
+      "card": "legacy-moonlight/wands-04",
+      "decision": "CORRECTED",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-010",
+      "card": "legacy-classic/swords-06",
+      "decision": "CORRECTED",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-011",
+      "card": "legacy-celestial/wands-06",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-102",
+      "card": "legacy-celestial/swords-10",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-105",
+      "card": "legacy-shadow/major-15",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-107",
+      "card": "legacy-shadow/wands-08",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-109",
+      "card": "legacy-moonlight/pentacles-08",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-110",
+      "card": "legacy-moonlight/wands-05",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-111",
+      "card": "legacy-celestial/major-15",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-113",
+      "card": "legacy-moonlight/wands-09",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-114",
+      "card": "legacy-shadow/swords-08",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-116",
+      "card": "legacy-celestial/cups-04",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-117",
+      "card": "legacy-classic/swords-05",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-201",
+      "card": "legacy-moonlight/swords-03",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-203",
+      "card": "legacy-celestial/swords-04",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-204",
+      "card": "legacy-forest/swords-06",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-206",
+      "card": "legacy-shadow/swords-03",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-207",
+      "card": "legacy-moonlight/pentacles-06",
+      "decision": "CORRECTED",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-208",
+      "card": "legacy-shadow/pentacles-13",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-210",
+      "card": "legacy-shadow/major-03",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-211",
+      "card": "legacy-forest/swords-07",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-212",
+      "card": "legacy-shadow/swords-09",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-215",
+      "card": "legacy-forest/swords-01",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-216",
+      "card": "legacy-moonlight/swords-01",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-217",
+      "card": "legacy-classic/swords-10",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-301",
+      "card": "legacy-shadow/major-04",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-303",
+      "card": "legacy-celestial/swords-05",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-304",
+      "card": "legacy-shadow/pentacles-03",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-306",
+      "card": "legacy-forest/swords-10",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-309",
+      "card": "legacy-forest/swords-03",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-310",
+      "card": "legacy-shadow/major-21",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-311",
+      "card": "legacy-shadow/swords-01",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-312",
+      "card": "legacy-shadow/swords-04",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-314",
+      "card": "legacy-celestial/major-20",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-315",
+      "card": "legacy-forest/swords-09",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-316",
+      "card": "legacy-celestial/swords-07",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-317",
+      "card": "legacy-celestial/swords-06",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-401",
+      "card": "legacy-moonlight/swords-02",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-406",
+      "card": "legacy-moonlight/cups-03",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-407",
+      "card": "legacy-shadow/cups-07",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-408",
+      "card": "legacy-moonlight/swords-05",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-410",
+      "card": "legacy-celestial/major-10",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-412",
+      "card": "legacy-celestial/wands-10",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-414",
+      "card": "legacy-moonlight/swords-08",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-415",
+      "card": "legacy-forest/swords-08",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-416",
+      "card": "legacy-moonlight/wands-08",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-417",
+      "card": "legacy-celestial/swords-08",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-501",
+      "card": "legacy-shadow/swords-02",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-503",
+      "card": "legacy-classic/swords-04",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-504",
+      "card": "legacy-classic/swords-01",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-505",
+      "card": "legacy-celestial/cups-03",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-506",
+      "card": "legacy-moonlight/swords-09",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-507",
+      "card": "legacy-shadow/major-10",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-508",
+      "card": "legacy-shadow/major-06",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-509",
+      "card": "legacy-celestial/wands-05",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-510",
+      "card": "legacy-moonlight/swords-07",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-511",
+      "card": "legacy-shadow/wands-09",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-512",
+      "card": "legacy-classic/swords-07",
+      "decision": "AUTO_CORRECT",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-514",
+      "card": "legacy-shadow/pentacles-09",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-515",
+      "card": "legacy-celestial/swords-03",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-516",
+      "card": "legacy-moonlight/swords-10",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    },
+    {
+      "reviewId": "review-517",
+      "card": "legacy-shadow/swords-07",
+      "decision": "MARK_UNCERTAIN",
+      "runtimeEvidencePresent": true
+    }
+  ],
+  "corrections": [
+    {
+      "card": "legacy-shadow/cups-01",
+      "field": "scene",
+      "before": "A hooded, faceless figure",
+      "after": "A faceless figure with visible loose hair and no hood covering the head",
+      "reason": "头发裸露，没有兜帽；面部仍不可辨认，保留 faceless。"
+    },
+    {
+      "card": "legacy-moonlight/cups-10",
+      "field": "scene",
+      "before": "a table of cups glows in the foreground",
+      "after": "cups resting on a cloth spread on the grass glow in the foreground",
+      "reason": "确认杯子在草地上的布上；未确认桌子，底部支撑物及材质不确定，不推定石头。"
+    },
+    {
+      "card": "legacy-moonlight/cups-10",
+      "field": "keyObjects",
+      "before": "a second cluster of glass goblets on a draped table in the foreground",
+      "after": "a second cluster of glass goblets resting on a cloth spread on the grass in the foreground",
+      "reason": "确认杯子在草地上的布上；未确认桌子，底部支撑物及材质不确定，不推定石头。"
+    },
+    {
+      "card": "legacy-moonlight/cups-10",
+      "field": "keyObjects",
+      "before": "a draped cloth over a low table",
+      "after": "a cloth spread on the grass with the cups resting on it",
+      "reason": "确认杯子在草地上的布上；未确认桌子，底部支撑物及材质不确定，不推定石头。"
+    },
+    {
+      "card": "legacy-moonlight/cups-10",
+      "field": "spatialRelations",
+      "before": "the couple stands between the foreground table and the children",
+      "after": "the couple stands between the foreground cloth with cups and the children",
+      "reason": "确认杯子在草地上的布上；未确认桌子，底部支撑物及材质不确定，不推定石头。"
+    },
+    {
+      "card": "legacy-moonlight/cups-10",
+      "field": "visualTensions",
+      "before": "the table of cups sits behind them",
+      "after": "the cups resting on the cloth sit behind them",
+      "reason": "确认杯子在草地上的布上；未确认桌子，底部支撑物及材质不确定，不推定石头。"
+    },
+    {
+      "card": "legacy-classic/swords-08",
+      "field": "scene",
+      "before": "encircled by upright swords driven into the ground",
+      "after": "flanked by five upright swords to her left and four to her right, forming an open passage",
+      "reason": "确认左5右4，形成开放夹道，没有完整环绕；数量以 Artwork 为准。"
+    },
+    {
+      "card": "legacy-classic/swords-08",
+      "field": "keyObjects",
+      "before": "arranged in a loose ring around the figure",
+      "after": "arranged with five to the left and four to the right, leaving an open passage",
+      "reason": "确认左5右4，形成开放夹道，没有完整环绕；数量以 Artwork 为准。"
+    },
+    {
+      "card": "legacy-classic/swords-08",
+      "field": "spatialRelations",
+      "before": "the woman stands at the centre with swords planted to her left, right and behind her",
+      "after": "five swords stand to the left and four to the right of the woman, leaving an open passage with no complete ring behind her",
+      "reason": "确认左5右4，形成开放夹道，没有完整环绕；数量以 Artwork 为准。"
+    },
+    {
+      "card": "legacy-classic/swords-08",
+      "field": "visualTensions",
+      "before": "the tight ring of blades around the figure against the wide open plain beyond",
+      "after": "the two flanking groups of blades beside the figure against the wide open plain beyond",
+      "reason": "确认左5右4，形成开放夹道，没有完整环绕；数量以 Artwork 为准。"
+    },
+    {
+      "card": "legacy-classic/swords-08",
+      "field": "emphasizedAspects",
+      "before": "the encircling enclosure of the swords",
+      "after": "the flanking arrangement of five swords to the left and four to the right",
+      "reason": "确认左5右4，形成开放夹道，没有完整环绕；数量以 Artwork 为准。"
+    },
+    {
+      "card": "legacy-celestial/wands-04",
+      "field": "keyObjects",
+      "before": "small lanterns hanging on the posts",
+      "after": "small lanterns standing on the platform floor",
+      "reason": "Both reviewers independently returned 'corrected' on exactly this fact and described it identically (lanterns standing on the platform, nothing hanging from the posts); I reached the same conclusion on my own. It is a pure position fact, and the fix is two exact, uniquely-anchored substring swaps. Reviewer-e's separate 'ringed planet with orbiting spheres' point was raised by one reviewer only and is not included."
+    },
+    {
+      "card": "legacy-moonlight/wands-04",
+      "field": "scene",
+      "before": "four slender poles",
+      "after": "three slender poles",
+      "reason": "确认3根主要花环杆；去除原4根和左右各2根断言，不猜未确认分布。"
+    },
+    {
+      "card": "legacy-moonlight/wands-04",
+      "field": "keyObjects",
+      "before": "four slender poles",
+      "after": "three slender poles",
+      "reason": "确认3根主要花环杆；去除原4根和左右各2根断言，不猜未确认分布。"
+    },
+    {
+      "card": "legacy-moonlight/wands-04",
+      "field": "spatialRelations",
+      "before": "the four poles frame the scene, two at left and two at right",
+      "after": "three slender poles frame the scene",
+      "reason": "确认3根主要花环杆；去除原4根和左右各2根断言，不猜未确认分布。"
+    },
+    {
+      "card": "legacy-classic/swords-06",
+      "field": "scene",
+      "before": "two seated, hooded passengers",
+      "after": "two seated passengers (one wearing a hood, the other with uncovered hair)",
+      "reason": "两名坐着乘客中仅一人戴兜帽，中间乘客头发裸露；不添加位置未明确的未佩戴帽子。"
+    },
+    {
+      "card": "legacy-celestial/wands-06",
+      "field": "scene",
+      "before": "five upright wands",
+      "after": "four upright wands",
+      "reason": "逐张放大核对：骑手右侧只有 4 支竖立权杖（另加骑手手中 1 支，全图共 5 支，而非传统的 6 支）。Vision 连跑 4 次有 3 次输出 five —— 它在用牌名里的数字（Six of Wands = 5 支 + 骑手 1 支）代替数数，属于稳定的 card-rank prior leakage，重跑修不好。"
+    },
+    {
+      "card": "legacy-celestial/wands-06",
+      "field": "keyObjects",
+      "before": "five upright wands",
+      "after": "four upright wands",
+      "reason": "逐张放大核对：骑手右侧只有 4 支竖立权杖（另加骑手手中 1 支，全图共 5 支，而非传统的 6 支）。Vision 连跑 4 次有 3 次输出 five —— 它在用牌名里的数字（Six of Wands = 5 支 + 骑手 1 支）代替数数，属于稳定的 card-rank prior leakage，重跑修不好。"
+    },
+    {
+      "card": "legacy-celestial/wands-06",
+      "field": "scene",
+      "before": "row of five",
+      "after": "row of four",
+      "reason": "逐张放大核对：骑手右侧只有 4 支竖立权杖（另加骑手手中 1 支，全图共 5 支，而非传统的 6 支）。Vision 连跑 4 次有 3 次输出 five —— 它在用牌名里的数字（Six of Wands = 5 支 + 骑手 1 支）代替数数，属于稳定的 card-rank prior leakage，重跑修不好。"
+    },
+    {
+      "card": "legacy-celestial/wands-06",
+      "field": "spatialRelations",
+      "before": "five wands",
+      "after": "four wands",
+      "reason": "逐张放大核对：骑手右侧只有 4 支竖立权杖（另加骑手手中 1 支，全图共 5 支，而非传统的 6 支）。Vision 连跑 4 次有 3 次输出 five —— 它在用牌名里的数字（Six of Wands = 5 支 + 骑手 1 支）代替数数，属于稳定的 card-rank prior leakage，重跑修不好。"
+    },
+    {
+      "card": "legacy-celestial/swords-10",
+      "field": "keyObjects",
+      "before": "ten upright swords set point-up in a ring of stone sockets",
+      "after": "ten upright swords set point-down into stone sockets, hilts and pommels uppermost",
+      "reason": "Meets all five thresholds on two items. (1) Orientation: unambiguous at 6x on all ten blades; reviewer-c raised it as a high-confidence issue, and reviewer-a independently recorded 'blades set point-down into the stone... hilts and pommels catching light' in its own blind observation, so two reviewers report the same thing; I reached the same conclusion from the pixels myself; it is observable orientation, not interpretation; and it is a single precise substring. 'Point-up' is a straight inversion of what is painted. (2) Layout: reviewer-c flagged 'encircles' as wrong and reviewer-a independently described 'two symmetrical arcs... with a gap in the middle'; I verified the near rim is in frame and empty, so 'encircles' is a positional error, also fixable as one substring. I deliberately did NOT patch reviewer-a's 'broken column at right' plural complaint (completeness preference, reviewer-c could not count them either) nor reviewer-c's low-confidence doubts about the cloth and the parchment — at 5x the tan sheet shows torn edges and drawn markings, so the existing wording stands and reviewer-c is overturned there."
+    },
+    {
+      "card": "legacy-celestial/swords-10",
+      "field": "spatialRelations",
+      "before": "the ring of swords encircles the fallen cloak and map in the lower half of the image",
+      "after": "two arcs of five swords flank the fallen cloak and map on the left and right of the platform, leaving the near and far edges of the circle open",
+      "reason": "Meets all five thresholds on two items. (1) Orientation: unambiguous at 6x on all ten blades; reviewer-c raised it as a high-confidence issue, and reviewer-a independently recorded 'blades set point-down into the stone... hilts and pommels catching light' in its own blind observation, so two reviewers report the same thing; I reached the same conclusion from the pixels myself; it is observable orientation, not interpretation; and it is a single precise substring. 'Point-up' is a straight inversion of what is painted. (2) Layout: reviewer-c flagged 'encircles' as wrong and reviewer-a independently described 'two symmetrical arcs... with a gap in the middle'; I verified the near rim is in frame and empty, so 'encircles' is a positional error, also fixable as one substring. I deliberately did NOT patch reviewer-a's 'broken column at right' plural complaint (completeness preference, reviewer-c could not count them either) nor reviewer-c's low-confidence doubts about the cloth and the parchment — at 5x the tan sheet shows torn edges and drawn markings, so the existing wording stands and reviewer-c is overturned there."
+    },
+    {
+      "card": "legacy-shadow/wands-08",
+      "field": "spatialRelations",
+      "before": "the shafts sweep from upper right down toward the left, converging near the gate",
+      "after": "the shafts sweep from upper right down toward the left, all mutually parallel rather than converging, and none of them reach the gate",
+      "reason": "Threshold check on the one item I am patching, 'converging near the gate'. Both reviewer-b and reviewer-d independently raised it, both at high confidence, and both also state the shafts never reach the gate. I reached the same conclusion independently and by measurement, not impression: a single global shear rectifies all eight, which is exactly what parallelism means and what convergence would rule out. It is observable geometry, not interpretation, and it is one precise substring. I OVERTURN both reviewers on the sword count, which was their headline issue. Reviewer-b read 14-16 and reviewer-d read 18-20, and both are wrong in the same way: every shaft carries a dark motion trail below and left of its tip, and counting blade plus trail as two objects yields almost exactly reviewer-b's 14-16 from a true count of eight. The existing 'eight' is correct and must not be hedged away. I also decline the 'distant intact castle' change. At 6x the far tower reads to me as a gothic tower with symmetric corner pinnacles, which is as consistent with intact architecture as with a broken crown, so the reviewers' replacement is not established either; the existing wording stays rather than being swapped for an equally unsupported one. Two residual items a human may want to look at, which I did not act on because only one reviewer raised each and neither is resolvable at this rendering scale: whether the shafts' trailing ends are fletching or sword grips, and whether the far-bank structures are intact or ruined."
+    },
+    {
+      "card": "legacy-moonlight/pentacles-08",
+      "field": "scene",
+      "before": "sits at a wooden workbench engraving a round metal disc",
+      "after": "leans over a wooden workbench engraving a round metal disc",
+      "reason": "All five AUTO_CORRECT thresholds hold. (1) The visual fact is unambiguous: absence of any seating and a clearly bent-forward torso. (2) Two independent reviewers reported the same thing without prompting each other - reviewer-d raised it as a formal issue on scene/spatialRelations, and reviewer-b, who returned an overall pass, independently logged it under uncertainObservations as 'Whether the figure is seated or kneeling/standing and leaning cannot be determined; the bench hides her lower body.' (3) I reached the identical conclusion from my own look before reading either. (4) It is an observable fact, not interpretation: presence/absence of a seat in frame and the orientation of the torso. (5) The fix is a minimal substring weakening. I chose AUTO_CORRECT over MARK_UNCERTAIN because marking would discard an entire scene sentence and a spatialRelation whose remaining content both reviewers confirmed; replacing 'sits' with the posture that is actually visible removes exactly the unverifiable claim and keeps everything verified. Both find strings were checked with grep -F against reveal/review-109.md and each occurs exactly once."
+    },
+    {
+      "card": "legacy-moonlight/pentacles-08",
+      "field": "spatialRelations",
+      "before": "the woman sits behind the bench, her hands and tools above the discs",
+      "after": "the woman is behind the bench, leaning forward over it, her hands and tools above the discs",
+      "reason": "All five AUTO_CORRECT thresholds hold. (1) The visual fact is unambiguous: absence of any seating and a clearly bent-forward torso. (2) Two independent reviewers reported the same thing without prompting each other - reviewer-d raised it as a formal issue on scene/spatialRelations, and reviewer-b, who returned an overall pass, independently logged it under uncertainObservations as 'Whether the figure is seated or kneeling/standing and leaning cannot be determined; the bench hides her lower body.' (3) I reached the identical conclusion from my own look before reading either. (4) It is an observable fact, not interpretation: presence/absence of a seat in frame and the orientation of the torso. (5) The fix is a minimal substring weakening. I chose AUTO_CORRECT over MARK_UNCERTAIN because marking would discard an entire scene sentence and a spatialRelation whose remaining content both reviewers confirmed; replacing 'sits' with the posture that is actually visible removes exactly the unverifiable claim and keeps everything verified. Both find strings were checked with grep -F against reveal/review-109.md and each occurs exactly once."
+    },
+    {
+      "card": "legacy-moonlight/wands-05",
+      "field": "spatialRelations",
+      "before": "the central figure stands nearest the viewer, the others arranged in a loose ring around her",
+      "after": "the central figure stands nearest the viewer, with two figures on each side forming a shallow arc and the intermediate figures set further back",
+      "reason": "Reviewer-b and reviewer-f independently dispute ring; independent Judge agrees. Local geometry correction meets strict threshold. Ribbon attachment remains unverified, so filter object and repeated motif while preserving dedicated flower crowns. Prior Judge overlooked valid reviewer-f; do not infer pole count from figures."
+    },
+    {
+      "card": "legacy-celestial/major-15",
+      "field": "keyObjects",
+      "before": "horned mask with two curved horns and dark eye openings",
+      "after": "horned mask with two curved horns and pale, luminous eye openings",
+      "reason": "I am patching only the two items that clear all five thresholds, and deliberately leaving the rest. (1) Mask eyes: visually unambiguous, reported independently by BOTH reviewer-b (high confidence) and reviewer-d (medium), confirmed by my own brightened zoom, a pure observable tonal fact, expressible as one exact substring swap. (2) 'face inward toward the central mask': both reviewers raised it independently, and both of their blind observations state without prompting that both figures are seen from behind with their backs to the viewer - reviewer-b 'bodies turned away from the viewer', reviewer-d 'both with their backs to the viewer'. I confirmed it myself. But the two reviewers then diverge on the SYMMETRY clause: reviewer-b wants to keep 'flanking the mask symmetrically', reviewer-d denies symmetry because the left figure stands markedly closer and renders larger. Since that part is contested and is a compositional judgement rather than an observable, my replacement encodes only the triply-confirmed facts (rear view, one on each side, the right figure's head turned toward the mask) and simply omits the symmetry claim rather than asserting or denying it. Not patched: reviewer-b's third issue, 'the chain arcs from the left figure's raised hands across the upper left of the frame'. Reviewer-d never raised it, so threshold 2 bars it outright, and on looking I find the claim only loosely imprecise rather than false - his raised hands genuinely do sit in the frame's upper-left region, even though the chain does not cross the open star field beyond him. That is a wording matter for a later pass, not a fact error. Both find strings were checked with grep -F against reveal/review-111.md; each occurs exactly once."
+    },
+    {
+      "card": "legacy-celestial/major-15",
+      "field": "spatialRelations",
+      "before": "the two figures face inward toward the central mask, framing it symmetrically",
+      "after": "the two figures stand one on each side of the central mask, both seen from behind with their backs to the viewer; only the right figure's head is turned toward it",
+      "reason": "I am patching only the two items that clear all five thresholds, and deliberately leaving the rest. (1) Mask eyes: visually unambiguous, reported independently by BOTH reviewer-b (high confidence) and reviewer-d (medium), confirmed by my own brightened zoom, a pure observable tonal fact, expressible as one exact substring swap. (2) 'face inward toward the central mask': both reviewers raised it independently, and both of their blind observations state without prompting that both figures are seen from behind with their backs to the viewer - reviewer-b 'bodies turned away from the viewer', reviewer-d 'both with their backs to the viewer'. I confirmed it myself. But the two reviewers then diverge on the SYMMETRY clause: reviewer-b wants to keep 'flanking the mask symmetrically', reviewer-d denies symmetry because the left figure stands markedly closer and renders larger. Since that part is contested and is a compositional judgement rather than an observable, my replacement encodes only the triply-confirmed facts (rear view, one on each side, the right figure's head turned toward the mask) and simply omits the symmetry claim rather than asserting or denying it. Not patched: reviewer-b's third issue, 'the chain arcs from the left figure's raised hands across the upper left of the frame'. Reviewer-d never raised it, so threshold 2 bars it outright, and on looking I find the claim only loosely imprecise rather than false - his raised hands genuinely do sit in the frame's upper-left region, even though the chain does not cross the open star field beyond him. That is a wording matter for a later pass, not a fact error. Both find strings were checked with grep -F against reveal/review-111.md; each occurs exactly once."
+    },
+    {
+      "card": "legacy-moonlight/wands-09",
+      "field": "scene",
+      "before": "beneath a gibbous moon",
+      "after": "beneath a crescent moon",
+      "reason": "The gibbous/crescent fix clears all five thresholds. (1) The visual fact is unambiguous and I verified it instrumentally, not just by eye. (2) Both reviewers returned verdict 'corrected' on this exact item independently - reviewer-a at medium confidence, reviewer-d at high - and both proposed the identical pair of substitutions. (3) I reached the same conclusion from my own look before reading either. (4) Moon phase as painted is an observable fact: the extent and curvature of the lit area, not an interpretation. (5) It is two exact substring swaps. I confirmed with grep -F that each find string occurs exactly once in reveal/review-113.md and that the file contains exactly two occurrences of 'gibbous' in total, so the patch leaves no stale instance behind. I did NOT adopt reviewer-a's second issue - see below."
+    },
+    {
+      "card": "legacy-moonlight/wands-09",
+      "field": "keyObjects",
+      "before": "a gibbous moon in the upper right sky",
+      "after": "a crescent moon in the upper right sky",
+      "reason": "The gibbous/crescent fix clears all five thresholds. (1) The visual fact is unambiguous and I verified it instrumentally, not just by eye. (2) Both reviewers returned verdict 'corrected' on this exact item independently - reviewer-a at medium confidence, reviewer-d at high - and both proposed the identical pair of substitutions. (3) I reached the same conclusion from my own look before reading either. (4) Moon phase as painted is an observable fact: the extent and curvature of the lit area, not an interpretation. (5) It is two exact substring swaps. I confirmed with grep -F that each find string occurs exactly once in reveal/review-113.md and that the file contains exactly two occurrences of 'gibbous' in total, so the patch leaves no stale instance behind. I did NOT adopt reviewer-a's second issue - see below."
+    },
+    {
+      "card": "legacy-shadow/swords-08",
+      "field": "keyObjects",
+      "before": "four upright swords on the right",
+      "after": "three upright swords on the right",
+      "reason": "All five AUTO_CORRECT thresholds are met for the right-side sword count. (1) The fact is unambiguous on the pixels and I verified it myself at four separate crops, including ruling out the hidden-sword case that both reviewers flagged as their residual doubt. (2) Two independent reviewers reported the same thing: reviewer-a ('three upright swords on the right', hilts at x=418/455/492) and reviewer-c ('exactly three pommel-and-cross-guard units' on the right, left row has four). Both also independently counted 4 on the left, so the existing 'four on the left' stands. (3) I reached the same count independently. (4) It is a pure count, not an interpretation. (5) It is a single precise substring swap, and 'four upright swords on the right' is distinct from 'four upright swords on the left', which is correct and untouched. The reason I can go to high confidence where both reviewers stopped at medium is that neither of them ran the inward-gap test: the lit background behind the right row positively excludes a fourth blade rather than merely failing to show one. I am NOT applying reviewer-a's second proposed change ('both hands raised'). That is wrong: the figure's left arm hangs down at its side with open fingers, which I can see plainly in an enlarged crop, and reviewer-c independently described the same thing ('the right arm is raised with the hand at the side of the head'). The existing wording 'one hand raised to a band of cloth across the eyes' is correct and stays."
+    },
+    {
+      "card": "legacy-classic/swords-05",
+      "field": "keyObjects",
+      "before": "two swords lying crossed on the ground at lower left",
+      "after": "two swords lying separate and roughly parallel on the ground at lower left",
+      "reason": "Two separate items clear all five AUTO_CORRECT thresholds, and I patch only those. FIRST, the crossed swords. (1) Unambiguous: at high magnification both blades are fully visible with clear ground between them. (2) Two independent reviewers reported it — reviewer-b filed it as a high-confidence issue ('they neither cross nor overlap'), and reviewer-d independently recorded 'two separate blades lying roughly parallel' in their blind observation before seeing the existing text. (3) I agree independently. (4) It is a spatial fact, not an interpretation. (5) It is one precise substring. Note the generating model itself flagged this as uncertain, so this closes its own open question. SECOND, standing versus walking. (1) Unambiguous: the lifted rear heel is a hard visual fact. (2) Both reviewer-b and reviewer-d filed this as a separate high-confidence issue. (3) I confirmed it. (4) It is posture, observable. (5) Three precise substrings, which I update together so that scene, spatialRelations and visualTensions do not disagree with each other. WHAT I DELIBERATELY DID NOT PATCH: the sword count. The existing text says 'three swords held (one in hand, two against his chest)'. My own reading is that the bundle holds three, not two, which would make four held and six in the frame — but BOTH reviewers explicitly recorded that sub-count as null and refused to commit to two or three, so AUTO_CORRECT threshold 2 is not met for any specific replacement number, and I will not assert a count on my own authority alone. I therefore leave 'three swords' standing in the scene substring unchanged rather than endorsing a hedge, and I escalate the count in my report instead. I also did not patch two single-reviewer items: reviewer-b's 'no V at the top' border note (I confirm the top border is plain double ruling with foliate corner flourishes only, and the one centred fleuron sits at the bottom divider — but only one reviewer raised it, and the top border sits directly against the mask band), and reviewer-d's 'torn versus dagged' tunic note (I agree the scalloping is regular and decorative, and reviewer-b's blind observation also says 'scalloped hem', but reviewer-b did not file it as an issue)."
+    },
+    {
+      "card": "legacy-classic/swords-05",
+      "field": "scene",
+      "before": "stands on a stony shore holding three swords",
+      "after": "strides on a stony shore holding three swords",
+      "reason": "Two separate items clear all five AUTO_CORRECT thresholds, and I patch only those. FIRST, the crossed swords. (1) Unambiguous: at high magnification both blades are fully visible with clear ground between them. (2) Two independent reviewers reported it — reviewer-b filed it as a high-confidence issue ('they neither cross nor overlap'), and reviewer-d independently recorded 'two separate blades lying roughly parallel' in their blind observation before seeing the existing text. (3) I agree independently. (4) It is a spatial fact, not an interpretation. (5) It is one precise substring. Note the generating model itself flagged this as uncertain, so this closes its own open question. SECOND, standing versus walking. (1) Unambiguous: the lifted rear heel is a hard visual fact. (2) Both reviewer-b and reviewer-d filed this as a separate high-confidence issue. (3) I confirmed it. (4) It is posture, observable. (5) Three precise substrings, which I update together so that scene, spatialRelations and visualTensions do not disagree with each other. WHAT I DELIBERATELY DID NOT PATCH: the sword count. The existing text says 'three swords held (one in hand, two against his chest)'. My own reading is that the bundle holds three, not two, which would make four held and six in the frame — but BOTH reviewers explicitly recorded that sub-count as null and refused to commit to two or three, so AUTO_CORRECT threshold 2 is not met for any specific replacement number, and I will not assert a count on my own authority alone. I therefore leave 'three swords' standing in the scene substring unchanged rather than endorsing a hedge, and I escalate the count in my report instead. I also did not patch two single-reviewer items: reviewer-b's 'no V at the top' border note (I confirm the top border is plain double ruling with foliate corner flourishes only, and the one centred fleuron sits at the bottom divider — but only one reviewer raised it, and the top border sits directly against the mask band), and reviewer-d's 'torn versus dagged' tunic note (I agree the scalloping is regular and decorative, and reviewer-b's blind observation also says 'scalloped hem', but reviewer-b did not file it as an issue)."
+    },
+    {
+      "card": "legacy-classic/swords-05",
+      "field": "visualTensions",
+      "before": "the standing man faces left while the other two walk away from him",
+      "after": "the striding man faces left while the other two walk away from him",
+      "reason": "Two separate items clear all five AUTO_CORRECT thresholds, and I patch only those. FIRST, the crossed swords. (1) Unambiguous: at high magnification both blades are fully visible with clear ground between them. (2) Two independent reviewers reported it — reviewer-b filed it as a high-confidence issue ('they neither cross nor overlap'), and reviewer-d independently recorded 'two separate blades lying roughly parallel' in their blind observation before seeing the existing text. (3) I agree independently. (4) It is a spatial fact, not an interpretation. (5) It is one precise substring. Note the generating model itself flagged this as uncertain, so this closes its own open question. SECOND, standing versus walking. (1) Unambiguous: the lifted rear heel is a hard visual fact. (2) Both reviewer-b and reviewer-d filed this as a separate high-confidence issue. (3) I confirmed it. (4) It is posture, observable. (5) Three precise substrings, which I update together so that scene, spatialRelations and visualTensions do not disagree with each other. WHAT I DELIBERATELY DID NOT PATCH: the sword count. The existing text says 'three swords held (one in hand, two against his chest)'. My own reading is that the bundle holds three, not two, which would make four held and six in the frame — but BOTH reviewers explicitly recorded that sub-count as null and refused to commit to two or three, so AUTO_CORRECT threshold 2 is not met for any specific replacement number, and I will not assert a count on my own authority alone. I therefore leave 'three swords' standing in the scene substring unchanged rather than endorsing a hedge, and I escalate the count in my report instead. I also did not patch two single-reviewer items: reviewer-b's 'no V at the top' border note (I confirm the top border is plain double ruling with foliate corner flourishes only, and the one centred fleuron sits at the bottom divider — but only one reviewer raised it, and the top border sits directly against the mask band), and reviewer-d's 'torn versus dagged' tunic note (I agree the scalloping is regular and decorative, and reviewer-b's blind observation also says 'scalloped hem', but reviewer-b did not file it as an issue)."
+    },
+    {
+      "card": "legacy-classic/swords-05",
+      "field": "spatialRelations",
+      "before": "in front of and below the standing man",
+      "after": "in front of and below the striding man",
+      "reason": "Two separate items clear all five AUTO_CORRECT thresholds, and I patch only those. FIRST, the crossed swords. (1) Unambiguous: at high magnification both blades are fully visible with clear ground between them. (2) Two independent reviewers reported it — reviewer-b filed it as a high-confidence issue ('they neither cross nor overlap'), and reviewer-d independently recorded 'two separate blades lying roughly parallel' in their blind observation before seeing the existing text. (3) I agree independently. (4) It is a spatial fact, not an interpretation. (5) It is one precise substring. Note the generating model itself flagged this as uncertain, so this closes its own open question. SECOND, standing versus walking. (1) Unambiguous: the lifted rear heel is a hard visual fact. (2) Both reviewer-b and reviewer-d filed this as a separate high-confidence issue. (3) I confirmed it. (4) It is posture, observable. (5) Three precise substrings, which I update together so that scene, spatialRelations and visualTensions do not disagree with each other. WHAT I DELIBERATELY DID NOT PATCH: the sword count. The existing text says 'three swords held (one in hand, two against his chest)'. My own reading is that the bundle holds three, not two, which would make four held and six in the frame — but BOTH reviewers explicitly recorded that sub-count as null and refused to commit to two or three, so AUTO_CORRECT threshold 2 is not met for any specific replacement number, and I will not assert a count on my own authority alone. I therefore leave 'three swords' standing in the scene substring unchanged rather than endorsing a hedge, and I escalate the count in my report instead. I also did not patch two single-reviewer items: reviewer-b's 'no V at the top' border note (I confirm the top border is plain double ruling with foliate corner flourishes only, and the one centred fleuron sits at the bottom divider — but only one reviewer raised it, and the top border sits directly against the mask band), and reviewer-d's 'torn versus dagged' tunic note (I agree the scalloping is regular and decorative, and reviewer-b's blind observation also says 'scalloped hem', but reviewer-b did not file it as an issue)."
+    },
+    {
+      "card": "legacy-moonlight/swords-03",
+      "field": "scene",
+      "before": "two ornate swords stand point-upward among flowers below her",
+      "after": "two ornate swords stand driven point-downward into the ground among flowers below her",
+      "reason": "The sword orientation meets all five thresholds. (1) Unambiguous on the image: the pommel-grip-crossguard-blade stack reads cleanly top-to-bottom on both weapons. (2) Two independent reviewers reported the same thing at HIGH confidence — reviewer-a and reviewer-d, each citing the hilt-above-blade stack separately. (3) I reached the identical conclusion from the pixels before reading either of them. (4) It is a pure orientation fact, not interpretation. (5) It is expressible as exact substring replacement. I deliberately kept the patch minimal: I corrected only the up/down orientation, which both reviewers confirmed, and preserved the original 'lower right' positional wording, because the two reviewers do NOT agree on position (reviewer-a places the nearer blade at frame centre, reviewer-d accepts lower right) and the two-reviewer threshold is therefore not met for the position claim. I also did NOT patch two further items both reviewers raised, because each fails threshold (1) — the pixels are genuinely ambiguous, and both reviewers only rated them MEDIUM, as did I: the 'folded letter or paper held in both hands' (hands are clasped but no held object is resolvable at this contrast; the source model's own uncertainty list concedes it may be a letter, a card, or folded cloth, yet the scene line states it as fact) and 'rain streaks across the sky' (the speckle is uniform over every surface, not directional, and the water shows no rain disturbance). Those two remain unsupported assertions in the data and are escalated in my report for a separate uncertainty pass rather than silently rewritten here."
+    },
+    {
+      "card": "legacy-moonlight/swords-03",
+      "field": "spatialRelations",
+      "before": "the two swords rise from the lower right, crossing the lower half of her gown",
+      "after": "the two swords descend point-downward into the ground at the lower right, crossing the lower half of her gown",
+      "reason": "The sword orientation meets all five thresholds. (1) Unambiguous on the image: the pommel-grip-crossguard-blade stack reads cleanly top-to-bottom on both weapons. (2) Two independent reviewers reported the same thing at HIGH confidence — reviewer-a and reviewer-d, each citing the hilt-above-blade stack separately. (3) I reached the identical conclusion from the pixels before reading either of them. (4) It is a pure orientation fact, not interpretation. (5) It is expressible as exact substring replacement. I deliberately kept the patch minimal: I corrected only the up/down orientation, which both reviewers confirmed, and preserved the original 'lower right' positional wording, because the two reviewers do NOT agree on position (reviewer-a places the nearer blade at frame centre, reviewer-d accepts lower right) and the two-reviewer threshold is therefore not met for the position claim. I also did NOT patch two further items both reviewers raised, because each fails threshold (1) — the pixels are genuinely ambiguous, and both reviewers only rated them MEDIUM, as did I: the 'folded letter or paper held in both hands' (hands are clasped but no held object is resolvable at this contrast; the source model's own uncertainty list concedes it may be a letter, a card, or folded cloth, yet the scene line states it as fact) and 'rain streaks across the sky' (the speckle is uniform over every surface, not directional, and the water shows no rain disturbance). Those two remain unsupported assertions in the data and are escalated in my report for a separate uncertainty pass rather than silently rewritten here."
+    },
+    {
+      "card": "legacy-forest/swords-06",
+      "field": "scene",
+      "before": "a rack of upright swords is mounted in the boat's bow",
+      "after": "a rack of upright swords is mounted amidships, across the middle of the hull",
+      "reason": "All five thresholds are met. (1) The placement is unambiguous on the image — there is a wide, visibly empty run of hull between the last blade and the prow, and the lantern and rope sit in that gap. (2) Two independent reviewers reported the identical fact at HIGH confidence: reviewer-c and reviewer-e both state the rack is amidships and both state the forward half is clear. (3) I measured the same thing myself from the hull endpoints before reading either. (4) It is an observable position fact, not interpretation or wording taste. (5) It reduces to three exact substring replacements, each verified to occur exactly once in the reveal packet. I touched only the bow/amidships placement; I did not alter the sword count, which both reviewers flagged as unresolvable (reviewer-c left it null, reviewer-e called six a floor) and which the source file already lists under its own uncertainty, nor the lantern-at-the-prow entry, which is correct."
+    },
+    {
+      "card": "legacy-forest/swords-06",
+      "field": "keyObjects",
+      "before": "rack of upright swords mounted across the boat's bow",
+      "after": "rack of upright swords mounted across the middle of the boat",
+      "reason": "All five thresholds are met. (1) The placement is unambiguous on the image — there is a wide, visibly empty run of hull between the last blade and the prow, and the lantern and rope sit in that gap. (2) Two independent reviewers reported the identical fact at HIGH confidence: reviewer-c and reviewer-e both state the rack is amidships and both state the forward half is clear. (3) I measured the same thing myself from the hull endpoints before reading either. (4) It is an observable position fact, not interpretation or wording taste. (5) It reduces to three exact substring replacements, each verified to occur exactly once in the reveal packet. I touched only the bow/amidships placement; I did not alter the sword count, which both reviewers flagged as unresolvable (reviewer-c left it null, reviewer-e called six a floor) and which the source file already lists under its own uncertainty, nor the lantern-at-the-prow entry, which is correct."
+    },
+    {
+      "card": "legacy-forest/swords-06",
+      "field": "spatialRelations",
+      "before": "the figure stands behind the sword rack, which occupies the boat's forward half",
+      "after": "the figure stands behind the sword rack, which occupies the middle of the boat, with open hull between it and the bow",
+      "reason": "All five thresholds are met. (1) The placement is unambiguous on the image — there is a wide, visibly empty run of hull between the last blade and the prow, and the lantern and rope sit in that gap. (2) Two independent reviewers reported the identical fact at HIGH confidence: reviewer-c and reviewer-e both state the rack is amidships and both state the forward half is clear. (3) I measured the same thing myself from the hull endpoints before reading either. (4) It is an observable position fact, not interpretation or wording taste. (5) It reduces to three exact substring replacements, each verified to occur exactly once in the reveal packet. I touched only the bow/amidships placement; I did not alter the sword count, which both reviewers flagged as unresolvable (reviewer-c left it null, reviewer-e called six a floor) and which the source file already lists under its own uncertainty, nor the lantern-at-the-prow entry, which is correct."
+    },
+    {
+      "card": "legacy-moonlight/pentacles-06",
+      "field": "scene",
+      "before": "two kneeling, veiled figures who raise their hands to receive it",
+      "after": "two kneeling figures who raise their hands to receive it, the left with visible braided hair and the right wearing a hood",
+      "reason": "左下编发裸露、没有面纱或兜帽；右侧头部有兜帽。"
+    },
+    {
+      "card": "legacy-shadow/major-03",
+      "field": "scene",
+      "before": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+      "after": "A crowned woman sits on a stone block in a dark overgrown garden",
+      "reason": "All five gates are met for the posture correction. (1) The fact is unambiguous on screen once brightness is raised — the red underskirt lying over the block's top edge is decisive. (2) Both reviewers reported it independently: reviewer-b ('the figure is seated on the stone block, bent sharply forward at the waist, not kneeling beside it') and reviewer-e ('she is seated on the low stone block, leaning far forward, not kneeling beside it'), and both arrived at it via the same underskirt-over-the-block evidence without coordination. (3) My own zoom reaches the same conclusion. (4) Posture and position are observable facts, not interpretation. (5) Two precise substring replacements. The reveal's own spatialRelations line already said 'the woman sits in the lower centre', so this patch also removes an internal contradiction. Deliberately NOT patched: reviewer-e's objection that the lower-right object is shield-shaped rather than a 'disc'. Only reviewer-e raised it, reviewer-b recorded 'round shield/disc' at high confidence, and although the silhouette looks almond/kite-shaped to me, reviewer-e's own caveat is right — a round plate seen obliquely would look the same, and I cannot exclude that. The load-bearing part of that line, the circle-and-cross emblem, is correct either way, so I leave it alone and flag the shape for the next pass."
+    },
+    {
+      "card": "legacy-shadow/major-03",
+      "field": "keyObjects",
+      "before": "stone block or ledge she kneels beside",
+      "after": "stone block or ledge she sits on",
+      "reason": "All five gates are met for the posture correction. (1) The fact is unambiguous on screen once brightness is raised — the red underskirt lying over the block's top edge is decisive. (2) Both reviewers reported it independently: reviewer-b ('the figure is seated on the stone block, bent sharply forward at the waist, not kneeling beside it') and reviewer-e ('she is seated on the low stone block, leaning far forward, not kneeling beside it'), and both arrived at it via the same underskirt-over-the-block evidence without coordination. (3) My own zoom reaches the same conclusion. (4) Posture and position are observable facts, not interpretation. (5) Two precise substring replacements. The reveal's own spatialRelations line already said 'the woman sits in the lower centre', so this patch also removes an internal contradiction. Deliberately NOT patched: reviewer-e's objection that the lower-right object is shield-shaped rather than a 'disc'. Only reviewer-e raised it, reviewer-b recorded 'round shield/disc' at high confidence, and although the silhouette looks almond/kite-shaped to me, reviewer-e's own caveat is right — a round plate seen obliquely would look the same, and I cannot exclude that. The load-bearing part of that line, the circle-and-cross emblem, is correct either way, so I leave it alone and flag the shape for the next pass."
+    },
+    {
+      "card": "legacy-forest/swords-07",
+      "field": "scene",
+      "before": "while glancing back over his shoulder",
+      "after": "while looking ahead along the direction he is walking",
+      "reason": "All five gates are met. (1) The head's orientation is unambiguous at 5x — it is a clean profile, not a three-quarter turn. (2) Both reviewers independently reported it at high confidence: reviewer-b ('the head is in profile facing right, the same direction he is walking; he is not looking back') and reviewer-d ('the head faces the same direction as the movement... it is not turned back toward the camp'), each citing the same hair-mass-behind/face-leading evidence. (3) My own zoom reaches the same conclusion. (4) Head orientation is an observable fact, not interpretation. (5) Three precise substring replacements. I extend the patch to the emphasizedAspects line as well: 'a backward glance that registers awareness of what is left' restates the identical disproven fact, and correcting only two of the three places would leave the file internally contradictory and still feed the false gesture downstream. The replacement wording removes the false premise without asserting anything new. Note, no patch needed: the existing text never commits to sword counts, so my five-on-the-back and two-in-the-rack readings contradict nothing — I record them only because both reviewers flagged the counts as unresolved and they are in fact resolvable at 4x."
+    },
+    {
+      "card": "legacy-forest/swords-07",
+      "field": "visualTensions",
+      "before": "the figure's body moves away while his head turns back",
+      "after": "the orderly, intact camp behind him against his unbroken forward stride away from it",
+      "reason": "All five gates are met. (1) The head's orientation is unambiguous at 5x — it is a clean profile, not a three-quarter turn. (2) Both reviewers independently reported it at high confidence: reviewer-b ('the head is in profile facing right, the same direction he is walking; he is not looking back') and reviewer-d ('the head faces the same direction as the movement... it is not turned back toward the camp'), each citing the same hair-mass-behind/face-leading evidence. (3) My own zoom reaches the same conclusion. (4) Head orientation is an observable fact, not interpretation. (5) Three precise substring replacements. I extend the patch to the emphasizedAspects line as well: 'a backward glance that registers awareness of what is left' restates the identical disproven fact, and correcting only two of the three places would leave the file internally contradictory and still feed the false gesture downstream. The replacement wording removes the false premise without asserting anything new. Note, no patch needed: the existing text never commits to sword counts, so my five-on-the-back and two-in-the-rack readings contradict nothing — I record them only because both reviewers flagged the counts as unresolved and they are in fact resolvable at 4x."
+    },
+    {
+      "card": "legacy-forest/swords-07",
+      "field": "emphasizedAspects",
+      "before": "a backward glance that registers awareness of what is left",
+      "after": "walking on without a backward glance at what is left",
+      "reason": "All five gates are met. (1) The head's orientation is unambiguous at 5x — it is a clean profile, not a three-quarter turn. (2) Both reviewers independently reported it at high confidence: reviewer-b ('the head is in profile facing right, the same direction he is walking; he is not looking back') and reviewer-d ('the head faces the same direction as the movement... it is not turned back toward the camp'), each citing the same hair-mass-behind/face-leading evidence. (3) My own zoom reaches the same conclusion. (4) Head orientation is an observable fact, not interpretation. (5) Three precise substring replacements. I extend the patch to the emphasizedAspects line as well: 'a backward glance that registers awareness of what is left' restates the identical disproven fact, and correcting only two of the three places would leave the file internally contradictory and still feed the false gesture downstream. The replacement wording removes the false premise without asserting anything new. Note, no patch needed: the existing text never commits to sword counts, so my five-on-the-back and two-in-the-rack readings contradict nothing — I record them only because both reviewers flagged the counts as unresolved and they are in fact resolvable at 4x."
+    },
+    {
+      "card": "legacy-shadow/swords-09",
+      "field": "keyObjects",
+      "before": "nine upright swords displayed one per panel",
+      "after": "nine swords displayed one per panel, each hanging point-down with its hilt uppermost",
+      "reason": "All five AUTO_CORRECT gates are met. (1) The orientation is unambiguous on the pixels — hilt mass at top, taper to a point at bottom, repeated nine times. (2) TWO independent reviewers reported the same thing in their blind observations: reviewer-b wrote 'one blade hangs point-down in each compartment' and reviewer-e wrote 'each hilt-up and point-down'. Reviewer-e's overall verdict was 'pass', but the agreement test is on the blind observation, and reviewer-e recorded the identical orientation independently. (3) I reached the same conclusion from the image on my own, before opening the packet. (4) Blade orientation is an observable fact (朝向), not interpretation. (5) The fix is two exact substring replacements, both verified unique in the reveal packet with grep -F. 'Upright sword' conventionally reads as point-up, so the existing wording asserts the inverse of what is on the card; this is a factual error, not a phrasing preference."
+    },
+    {
+      "card": "legacy-shadow/swords-09",
+      "field": "scene",
+      "before": "nine-panel wall cabinet holding nine upright swords",
+      "after": "nine-panel wall cabinet holding nine point-down swords",
+      "reason": "All five AUTO_CORRECT gates are met. (1) The orientation is unambiguous on the pixels — hilt mass at top, taper to a point at bottom, repeated nine times. (2) TWO independent reviewers reported the same thing in their blind observations: reviewer-b wrote 'one blade hangs point-down in each compartment' and reviewer-e wrote 'each hilt-up and point-down'. Reviewer-e's overall verdict was 'pass', but the agreement test is on the blind observation, and reviewer-e recorded the identical orientation independently. (3) I reached the same conclusion from the image on my own, before opening the packet. (4) Blade orientation is an observable fact (朝向), not interpretation. (5) The fix is two exact substring replacements, both verified unique in the reveal packet with grep -F. 'Upright sword' conventionally reads as point-up, so the existing wording asserts the inverse of what is on the card; this is a factual error, not a phrasing preference."
+    },
+    {
+      "card": "legacy-classic/swords-10",
+      "field": "keyObjects",
+      "before": "ten upright swords with round pommels and straight crossguards",
+      "after": "nine upright swords with round pommels and straight crossguards",
+      "reason": "All five gates are met. (1) The count is unambiguous on the specific thing being asserted: the existing text claims 'ten upright swords with round pommels and straight crossguards', and pommels are exactly what IS individually resolvable here — both reviewers note the pommels do not overlap, only the blades do. There are nine. (2) TWO independent reviewers reported it: reviewer-b and reviewer-d both counted nine, both verdict 'corrected'. (3) I reached nine independently, before reading either. Decisively, all three enumerations match slot-for-slot by position and height — far-left low, left tall, left-of-centre medium, centre-left tallest, centre short, centre tall, centre-right medium, right medium-tall, far-right low. Three blind passes agreeing on nine LOCATIONS, not merely on the number nine, is what lifts this past the reviewers' individually hedged 'medium'. (4) Count is an observable fact. (5) Three exact substring replacements, each verified present and unique in the reveal packet with grep -F. On the reviewers' shared caveat that a fully occluded tenth blade cannot be ruled out: that residual applies to any count and cannot be evidence FOR ten; meanwhile 'ten' is the number the card-name prior would supply, which is precisely the failure mode this round exists to catch, and reviewer-d explicitly recorded refusing to adjust toward an expected total. I kept the word 'upright' in the scene string: the blades are driven point-down into the back but stand upright, so 'upright' is accurate and only the numeral needed changing. I also patched the model's own self-reported uncertainty line so the file does not keep asserting ten after the correction."
+    },
+    {
+      "card": "legacy-classic/swords-10",
+      "field": "scene",
+      "before": "ten swords driven upright into the back",
+      "after": "nine swords driven upright into the back",
+      "reason": "All five gates are met. (1) The count is unambiguous on the specific thing being asserted: the existing text claims 'ten upright swords with round pommels and straight crossguards', and pommels are exactly what IS individually resolvable here — both reviewers note the pommels do not overlap, only the blades do. There are nine. (2) TWO independent reviewers reported it: reviewer-b and reviewer-d both counted nine, both verdict 'corrected'. (3) I reached nine independently, before reading either. Decisively, all three enumerations match slot-for-slot by position and height — far-left low, left tall, left-of-centre medium, centre-left tallest, centre short, centre tall, centre-right medium, right medium-tall, far-right low. Three blind passes agreeing on nine LOCATIONS, not merely on the number nine, is what lifts this past the reviewers' individually hedged 'medium'. (4) Count is an observable fact. (5) Three exact substring replacements, each verified present and unique in the reveal packet with grep -F. On the reviewers' shared caveat that a fully occluded tenth blade cannot be ruled out: that residual applies to any count and cannot be evidence FOR ten; meanwhile 'ten' is the number the card-name prior would supply, which is precisely the failure mode this round exists to catch, and reviewer-d explicitly recorded refusing to adjust toward an expected total. I kept the word 'upright' in the scene string: the blades are driven point-down into the back but stand upright, so 'upright' is accurate and only the numeral needed changing. I also patched the model's own self-reported uncertainty line so the file does not keep asserting ten after the correction."
+    },
+    {
+      "card": "legacy-shadow/major-04",
+      "field": "scene",
+      "before": "a crowned figure seated on an ornate throne",
+      "after": "a dark-robed figure, head bowed and in shadow, seated on an ornate throne",
+      "reason": "All five AUTO_CORRECT gates are met for the crown item and only for that item. (1) The absence of a crown is unambiguous on the pixels once the head is brightened - a smooth hair silhouette with no headgear. (2) TWO independent reviewers reported the same thing: reviewer-a ('no crown is present') and reviewer-d ('no crown or headpiece is resolvable'). (3) I reached the same conclusion from my own zoom before reading either packet entry. (4) It is a presence/absence fact, not interpretation. (5) It is one exact substring swap, and the model's own self-reported uncertainty list already concedes 'whether the figure wears a crown or headpiece', so the scene line asserts more than the model itself claims to know. I took reviewer-d's more conservative replacement wording over reviewer-a's 'bare-headed': I can confirm no crown, but I cannot rule out a hood, so the patch removes the crown claim without asserting hair. I deliberately did NOT patch the other two issues. Reviewer-a's 'ram-head armrests' plural objection is single-sourced (reviewer-d counted two ram heads without objecting to the plural), so it fails gate 2. Reviewer-d's 'no arched gate' objection I overturn outright: at 5x brightened zoom a small pointed-arch gateway is plainly visible at the head of the stair flight, so 'flight of steps rising to a small arched gate' is correct as written and stays."
+    },
+    {
+      "card": "legacy-shadow/pentacles-03",
+      "field": "spatialRelations",
+      "before": "the right figure stands slightly further back than the left",
+      "after": "the right figure stands nearer the viewer, on the near side of the bench, while the left figure stands across it",
+      "reason": "All five AUTO_CORRECT gates are met. (1) The depth ordering is unambiguous on the pixels, carried by three independent cues at once: relative figure scale, the robe's overlap in front of the bench, and the hem's position lower in the frame. (2) TWO independent reviewers reported exactly this: reviewer-c ('the right figure stands nearer the viewer than the left', medium) and reviewer-e ('it is the largest figure in the frame, on the near side of the bench', high). They converged on the same wrong clause and quoted the identical find string. (3) I reached the same conclusion from my own look. (4) It is a position fact, not interpretation. (5) It is one exact substring swap; I confirmed with grep -F that 'the right figure stands slightly further back than the left' occurs exactly once in the reveal, so the replacement is unambiguous. I used reviewer-e's fuller replacement wording over reviewer-c's because it fixes both halves of the relation - it states where the right figure is AND where the left figure is - and reviewer-e held this at high confidence. No other field was contested by either reviewer, and the remaining items I spot-checked (three point-up pentacles, the centre figure's chisel, the right figure's drawn sheet) match the existing text."
+    },
+    {
+      "card": "legacy-forest/swords-10",
+      "field": "scene",
+      "before": "kneels on a forest floor at dawn",
+      "after": "kneels on a forest floor under a low sun on the horizon",
+      "reason": "All five AUTO_CORRECT gates are met. (1) The visual fact that goes INTO the text is unambiguous and I verified it at zoom: a low solar disc on the horizon with visible rays. (2) TWO independent reviewers reported the same thing - reviewer-b and reviewer-e both flagged 'at dawn' as undeterminable, and they independently produced byte-identical patches, same find string and same replacement text. (3) I reached the same conclusion from my own look before reading the packet. (4) The patch moves the text FROM an interpretation ('dawn', a time-of-day inference the pixels cannot support) TO an observable position fact (the sun is low on the horizon); it asserts strictly less than the original and nothing I have not verified. (5) It is one exact substring swap, and I confirmed with grep -F that 'kneels on a forest floor at dawn' occurs exactly once in the reveal. I considered MARK_UNCERTAIN and rejected it: the scene field holds a single sentence, so flagging it would discard the whole line - including the sword count, the two-row layout, the cloth gesture and the valley, all of which I independently verified as correct - in order to remove one unsupported word. The schema warns about exactly that cost and says to name the narrowest item possible. The patch achieves the same goal, handing nothing unverified to the interpretation model, at near-zero loss. I checked the rest of the record against my zoom and found no other problem: 'ten sheathed swords with ornate hilts and scabbard tips, laid flat in two rows of five' is exactly right, including the 'sheathed' qualifier that reviewer-e had listed as unresolvable."
+    },
+    {
+      "card": "legacy-forest/swords-03",
+      "field": "spatialRelations",
+      "before": "the woman stands to the left of the panel, her hands at its upper edge",
+      "after": "the woman kneels to the left of the panel, her hands at its upper edge",
+      "reason": "All five gates are met for the posture item and only that item. (1) The posture is visually unambiguous: the bent knee on the ground and the head barely clearing the frame's top rail cannot be produced by a standing figure. (2) reviewer-b and reviewer-d independently flagged the identical field and the identical fact (spatialRelations: 'stands' is wrong, she kneels/crouches), each at high confidence, before seeing each other. (3) I reached the same conclusion from the image on my own. (4) Posture is an observable fact, not interpretation. (5) The fix is a single-word substring replacement. I deliberately did NOT carry the reviewers' other suggestions: 'wooden panel' -> 'stretched woven cloth' was raised by reviewer-d alone (reviewer-b recorded the same object as a 'wooden work frame / stretched panel' without filing an issue), so it fails gate 2 despite my own reading of a visible warp-and-weft weave; and the spool colour is actively contradicted between reviewers (reviewer-b: pink/rose, reviewer-d: dark red), so it fails gate 1. I also kept reviewer-b's 'to the left of' wording rather than reviewer-d's 'behind', since the two disagree on depth and only the standing/kneeling fact is jointly attested."
+    },
+    {
+      "card": "legacy-shadow/major-21",
+      "field": "emphasizedAspects",
+      "before": "a completed circuit, shown as a closed wreath ring",
+      "after": "a completed circuit, shown as an open wreath arch bound at the top and parted at the bottom",
+      "reason": "All five gates are met. (1) The wreath's bottom gap is unambiguous on the image: the two arcs visibly stop short above the pavement and the figure's shadow passes out through the opening. (2) reviewer-b and reviewer-e independently filed the same issue on the same text, each at high confidence, and each independently proposed amending both 'a closed wreath ring' and 'the enclosing wreath ring'. (3) I reached the same conclusion unaided. (4) Open-vs-closed is a presence/absence fact, not interpretation. (5) Two exact substring replacements suffice. I used the more conservative wording of the two proposals: I corrected only the false visual claim ('closed ring' -> 'open arch bound at the top') and left the interpretive framing ('a completed circuit', 'the enclosing ... versus the open horizon') intact, rather than adopting reviewer-e's broader rewrite of the theme itself. Note the rest of the file already describes the foliage correctly as an 'arch' in scene and keyObjects, so these two entries were the only inconsistent ones."
+    },
+    {
+      "card": "legacy-shadow/major-21",
+      "field": "visualTensions",
+      "before": "the enclosing wreath ring versus the open horizon beyond it",
+      "after": "the enclosing wreath arch versus the open horizon beyond its bottom gap",
+      "reason": "All five gates are met. (1) The wreath's bottom gap is unambiguous on the image: the two arcs visibly stop short above the pavement and the figure's shadow passes out through the opening. (2) reviewer-b and reviewer-e independently filed the same issue on the same text, each at high confidence, and each independently proposed amending both 'a closed wreath ring' and 'the enclosing wreath ring'. (3) I reached the same conclusion unaided. (4) Open-vs-closed is a presence/absence fact, not interpretation. (5) Two exact substring replacements suffice. I used the more conservative wording of the two proposals: I corrected only the false visual claim ('closed ring' -> 'open arch bound at the top') and left the interpretive framing ('a completed circuit', 'the enclosing ... versus the open horizon') intact, rather than adopting reviewer-e's broader rewrite of the theme itself. Note the rest of the file already describes the foliage correctly as an 'arch' in scene and keyObjects, so these two entries were the only inconsistent ones."
+    },
+    {
+      "card": "legacy-shadow/swords-01",
+      "field": "spatialRelations",
+      "before": "the sword stands vertically at the centre, its point rising above the figure's head",
+      "after": "the sword stands vertically at the centre, driven point-down into the altar, its crossguard, grip and pommel rising above the figure's head",
+      "reason": "All five gates are met for the sword's orientation. (1) The orientation is unambiguous: pommel at the top, crossguard beneath it, blade running down into the stone, and the altar's crack directly in line with the buried tip. (2) reviewer-b and reviewer-d independently filed the identical issue against the identical spatialRelations line, both at high confidence, with essentially the same proposed wording. (3) I reached the same conclusion unaided. (4) Orientation is an observable fact, explicitly in scope. (5) One exact substring replacement. I withheld reviewer-b's two solo items. Its 'gripping the hilt' -> 'gripping the blade below the crossguard' is directly contradicted by reviewer-d, who records the hand on the grip, so the visual fact is not unambiguous (gate 1 fails). Its 'cracked wall with radiating fracture lines' -> 'fan-vaulted ceiling' was filed by reviewer-b alone; reviewer-d's blind observation does independently describe a fan/rib vault overhead and places the only crack in the altar block, and I read it the same way, but reviewer-d did not raise it at the comparison stage, so I am short of the two-reviewer bar and declined rather than hesitate into a correction. FLAG FOR A LATER PASS: keyObjects 'cracked wall with radiating fracture lines' and spatialRelations 'the cracked wall spreads behind and above the sword' are, in my own reading, a fan vault rather than a fractured wall, and the visualTensions entries that build on 'the towering fracture pattern' and 'the radiating cracks' inherit that reading."
+    },
+    {
+      "card": "legacy-shadow/swords-04",
+      "field": "scene",
+      "before": "three swords set upright in arched wall niches",
+      "after": "three swords mounted point-down in arched wall niches",
+      "reason": "AUTO_CORRECT on the niche swords' orientation only; all five gates pass decisively. (1) At magnification the orientation is beyond doubt: pommel, grip and crossguard at the top of each niche, point at the bottom. (2) reviewer-b and reviewer-e independently filed the identical issue against both occurrences of the wording, and each proposed the same correction. (3) I confirmed it myself from the image. (4) Orientation is an observable fact. (5) Two exact substring replacements. I left visualTensions' 'the upright blades above versus the laid-down blade below' untouched: there 'upright' means vertical as opposed to lying flat, which is still accurate. OVERTURNED: reviewer-b's third issue asked to strip 'bandaging a forearm' down to 'hands clasped at the chest around a narrow pale strip', on the grounds that no wrapping around a forearm could be traced. Both reviewers declared the object unresolvable at full-frame scale, and I nearly marked it uncertain on that basis, but magnifying the chest region settles it: the pale strip is plainly wound in repeated coils around the forearm with the free end held in the other hand. The existing 'bandaging a forearm' and the keyObject 'strip of pale cloth wound around the figure's forearm' are correct and must be kept, so I filed no uncertainty against them. FLAG FOR A LATER PASS: spatialRelations 'the three niche swords are aligned in a row above and to the left of the figure' is wrong in my own reading — the niches are above the figure's torso and head end at the centre-right, and the upper left holds the window. reviewer-b filed this; reviewer-e did not file it but independently located the blades 'upper right' in its blind observation. Because only one reviewer filed it at the comparison stage I held it back rather than hesitate into a correction."
+    },
+    {
+      "card": "legacy-shadow/swords-04",
+      "field": "keyObjects",
+      "before": "three upright swords set into arched wall niches",
+      "after": "three swords mounted point-down (hilts uppermost) in arched wall niches",
+      "reason": "AUTO_CORRECT on the niche swords' orientation only; all five gates pass decisively. (1) At magnification the orientation is beyond doubt: pommel, grip and crossguard at the top of each niche, point at the bottom. (2) reviewer-b and reviewer-e independently filed the identical issue against both occurrences of the wording, and each proposed the same correction. (3) I confirmed it myself from the image. (4) Orientation is an observable fact. (5) Two exact substring replacements. I left visualTensions' 'the upright blades above versus the laid-down blade below' untouched: there 'upright' means vertical as opposed to lying flat, which is still accurate. OVERTURNED: reviewer-b's third issue asked to strip 'bandaging a forearm' down to 'hands clasped at the chest around a narrow pale strip', on the grounds that no wrapping around a forearm could be traced. Both reviewers declared the object unresolvable at full-frame scale, and I nearly marked it uncertain on that basis, but magnifying the chest region settles it: the pale strip is plainly wound in repeated coils around the forearm with the free end held in the other hand. The existing 'bandaging a forearm' and the keyObject 'strip of pale cloth wound around the figure's forearm' are correct and must be kept, so I filed no uncertainty against them. FLAG FOR A LATER PASS: spatialRelations 'the three niche swords are aligned in a row above and to the left of the figure' is wrong in my own reading — the niches are above the figure's torso and head end at the centre-right, and the upper left holds the window. reviewer-b filed this; reviewer-e did not file it but independently located the blades 'upper right' in its blind observation. Because only one reviewer filed it at the comparison stage I held it back rather than hesitate into a correction."
+    },
+    {
+      "card": "legacy-forest/swords-09",
+      "field": "keyObjects",
+      "before": "wooden wall rack holding upright swords with dark blades and brass-toned hilts",
+      "after": "wooden wall rack holding swords hung point-down, dark blades below brass-toned crossguards and pommels",
+      "reason": "Both gates are met on both edits. (1) Night vs daylight: reviewer-a and reviewer-c independently raised exactly this, both at high confidence, and I reached the same conclusion from the image before reading either. It is an observable fact about the dominant light source, not a wording preference, and the existing file already contradicts itself - its own scene line says 'daylight enters through a curtained window' while emphasizedAspects says 'sleepless night-time distress'. (2) Blade orientation: reviewer-a raised it at high confidence, and reviewer-c independently recorded the identical observation in its blind pass ('all hang hilts UP, blades pointing DOWN toward the floor') - this is two independent reviewers reporting the same thing, not one passing. I verified it myself. Orientation is exactly the observable-fact class, and 'upright' in an orientation-sensitive field reads as point-up, which is the reverse of what is on the wall. Both changes express as exact substring replacements, verified verbatim against reveal/review-315.md. I deliberately leave the blade COUNT alone: the two reviewers disagree (five vs at-least-four) and the file's own self-reported uncertainty already flags 'exact number of swords on the wall rack', so no action is needed. I also leave the scene clause 'a rack of swords hangs on the wall behind her' untouched, since it makes no orientation claim and is not wrong."
+    },
+    {
+      "card": "legacy-forest/swords-09",
+      "field": "emphasizedAspects",
+      "before": "sleepless night-time distress",
+      "after": "daytime distress in a bright, sunlit room",
+      "reason": "Both gates are met on both edits. (1) Night vs daylight: reviewer-a and reviewer-c independently raised exactly this, both at high confidence, and I reached the same conclusion from the image before reading either. It is an observable fact about the dominant light source, not a wording preference, and the existing file already contradicts itself - its own scene line says 'daylight enters through a curtained window' while emphasizedAspects says 'sleepless night-time distress'. (2) Blade orientation: reviewer-a raised it at high confidence, and reviewer-c independently recorded the identical observation in its blind pass ('all hang hilts UP, blades pointing DOWN toward the floor') - this is two independent reviewers reporting the same thing, not one passing. I verified it myself. Orientation is exactly the observable-fact class, and 'upright' in an orientation-sensitive field reads as point-up, which is the reverse of what is on the wall. Both changes express as exact substring replacements, verified verbatim against reveal/review-315.md. I deliberately leave the blade COUNT alone: the two reviewers disagree (five vs at-least-four) and the file's own self-reported uncertainty already flags 'exact number of swords on the wall rack', so no action is needed. I also leave the scene clause 'a rack of swords hangs on the wall behind her' untouched, since it makes no orientation claim and is not wrong."
+    },
+    {
+      "card": "legacy-celestial/swords-07",
+      "field": "keyObjects",
+      "before": "two upright swords standing point-up in cylindrical holders on a table",
+      "after": "two swords standing hilt-up, blades driven point-down into cylindrical holders on a table",
+      "reason": "All five gates are met for the table-sword orientation. (1) The fact is unambiguous on the image and I verified it myself before reading any reviewer. (2) Reviewer-c AND reviewer-e independently raised this exact item, both at high confidence - not one passing and one objecting. (3) I reached the same conclusion independently. (4) Orientation is a pure observable fact, not interpretation. (5) It expresses as one precise substring replacement, checked verbatim against reveal/review-316.md. I am deliberately NOT touching two other things the reviewers raised. First, the head direction in visualTensions: reviewer-c says the head turns right toward the lit horizon while reviewer-e says it turns back over the shoulder toward the table on the left - a direct contradiction - and I could not resolve it from the pixels either, so 'the figure's body faces away while the head turns back toward the camp' stays as-is and should be treated as unverified; it sits in visualTensions, a soft field, so leaving it costs less than acting on a coin-flip. Second, the carried-bundle count: both reviewers agree the total is unresolvable, but they disagree on how many hilts are separable (three vs four), so I will not write a replacement number - and the file's own self-reported uncertainty already flags that count, which limits the downstream damage."
+    },
+    {
+      "card": "legacy-celestial/swords-06",
+      "field": "scene",
+      "before": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+      "after": "Two cloaked figures travel in a wooden rowboat on dark water, one seated and one standing at the oar",
+      "reason": "Both edits clear all five gates. Posture: reviewer-b and reviewer-d independently raised that one figure stands rather than sits, both at high confidence, and I saw it unaided - the standing/seated split is unmistakable in the silhouette. The existing file is also self-contradictory, since its own keyObjects line already says 'long wooden oar held by the standing figure' while the scene says both figures sit. Boat orientation: reviewer-b and reviewer-d again both raised it independently (medium and high), and I confirmed it myself from the carved transom nearest the viewer, the hull tapering away, and both figures facing the horizon glow. Both are observable facts - posture and orientation - not interpretation, and both express as exact substring replacements verified verbatim against reveal/review-317.md. I chose reviewer-d's framing over reviewer-b's for the scene line because reviewer-b's rewrite drops 'Two cloaked figures' from the opening, and the count of two is correct and worth keeping. I avoid the word 'poling': reviewer-d notes it cannot be determined whether the implement is a single oar or a punting pole, so I keep the neutral 'at the oar', which matches the existing keyObjects wording. I take no action on the blade count - both reviewers report six as a floor at only medium confidence, and the file's self-reported uncertainty already flags 'exact number of sword blades visible'."
+    },
+    {
+      "card": "legacy-celestial/swords-06",
+      "field": "spatialRelations",
+      "before": "the boat occupies the lower centre, its bow toward the viewer",
+      "after": "the boat occupies the lower centre, seen from astern, its bow pointing away toward the horizon",
+      "reason": "Both edits clear all five gates. Posture: reviewer-b and reviewer-d independently raised that one figure stands rather than sits, both at high confidence, and I saw it unaided - the standing/seated split is unmistakable in the silhouette. The existing file is also self-contradictory, since its own keyObjects line already says 'long wooden oar held by the standing figure' while the scene says both figures sit. Boat orientation: reviewer-b and reviewer-d again both raised it independently (medium and high), and I confirmed it myself from the carved transom nearest the viewer, the hull tapering away, and both figures facing the horizon glow. Both are observable facts - posture and orientation - not interpretation, and both express as exact substring replacements verified verbatim against reveal/review-317.md. I chose reviewer-d's framing over reviewer-b's for the scene line because reviewer-b's rewrite drops 'Two cloaked figures' from the opening, and the count of two is correct and worth keeping. I avoid the word 'poling': reviewer-d notes it cannot be determined whether the implement is a single oar or a punting pole, so I keep the neutral 'at the oar', which matches the existing keyObjects wording. I take no action on the blade count - both reviewers report six as a floor at only medium confidence, and the file's self-reported uncertainty already flags 'exact number of sword blades visible'."
+    },
+    {
+      "card": "legacy-moonlight/swords-02",
+      "field": "deckSpecificMotifs",
+      "before": "silver linework on a deep blue-lavender night ground",
+      "after": "pale silver-lavender linework on a light, near-white ground",
+      "reason": "Meets all five gates for the deckSpecificMotifs line only. (1) The absence of a dark ground is unambiguous on the pixels. (2) Two independent Reviewers recorded it separately in their blind observations: reviewer-d ('no deep blue or night-dark ground anywhere in the frame', confidence high) and reviewer-a ('Sky, sea and drapery are all near-white in value; there is no dark field anywhere in the frame') — reviewer-a's overall verdict was uncertain, but he independently logged the same ground-value fact, which satisfies the two-reporter threshold. (3) I reached the same conclusion on my own pass. (4) Presence/absence of a dark ground is an observable fact, not a reading. (5) It is a single exact substring swap. I REJECT reviewer-d's second proposed patch (scene: 'moonlit sea' -> 'daylight-like illumination'): only reviewer-d raised it, reviewer-a explicitly recorded day-vs-night as undeterminable, and the moonlit-water reading is interpretation, not an observable. The crescent moon and its reflected light column on the water are both plainly present, so 'moonlit sea' stands."
+    },
+    {
+      "card": "legacy-moonlight/cups-03",
+      "field": "scene",
+      "before": "beneath a crescent moon",
+      "after": "beneath a large pale gibbous-to-full moon",
+      "reason": "Meets all five gates for the moon phase only. (1) At 5x the disc is unambiguously a full round face, not a crescent. (2) Two independent Reviewers reported it separately and at high confidence: reviewer-b ('The disc is a complete circle with only a soft shading on its lower-left limb; there is no crescent sliver', confidence high) and reviewer-e ('a large full round face with only a softly shaded lower-left limb', confidence high). (3) I reached the same conclusion on my own pass before reading either. (4) Crescent-vs-round is pure observable shape. (5) Two exact substring swaps. NOTE on find strings: the bare string 'crescent moon' occurs TWICE in the reveal packet (line 3 in scene, line 7 as a keyObject), so I deliberately used longer unique anchors -- 'beneath a crescent moon' and the full keyObject line '  - crescent moon' -- each verified unique with grep -F. I REJECT the two other proposed changes. (a) 'at night' -> daylight: interpretation, not observable, and reviewer-b's own evidence concedes 'whether this is meant as daylight, twilight or a very luminous night cannot be settled from the pixels'. The threshold is not met and I leave the wording alone. (b) reviewer-e's 'separating them from the water' -> 'open sky, no water visible': this is factually wrong and I overturn it. Water IS visible between the figures -- I magnified that band and it shows horizontal ripple banding with a vertical moon-reflection path -- and reviewer-b independently recorded 'water/sea and a bright stepped stairway of light in the center distance' in his environment list. reviewer-e read the moon path as 'a flight of pale steps'; the existing text stands."
+    },
+    {
+      "card": "legacy-moonlight/cups-03",
+      "field": "scene",
+      "before": "crescent moon",
+      "after": "large pale gibbous-to-full moon disc",
+      "reason": "Meets all five gates for the moon phase only. (1) At 5x the disc is unambiguously a full round face, not a crescent. (2) Two independent Reviewers reported it separately and at high confidence: reviewer-b ('The disc is a complete circle with only a soft shading on its lower-left limb; there is no crescent sliver', confidence high) and reviewer-e ('a large full round face with only a softly shaded lower-left limb', confidence high). (3) I reached the same conclusion on my own pass before reading either. (4) Crescent-vs-round is pure observable shape. (5) Two exact substring swaps. NOTE on find strings: the bare string 'crescent moon' occurs TWICE in the reveal packet (line 3 in scene, line 7 as a keyObject), so I deliberately used longer unique anchors -- 'beneath a crescent moon' and the full keyObject line '  - crescent moon' -- each verified unique with grep -F. I REJECT the two other proposed changes. (a) 'at night' -> daylight: interpretation, not observable, and reviewer-b's own evidence concedes 'whether this is meant as daylight, twilight or a very luminous night cannot be settled from the pixels'. The threshold is not met and I leave the wording alone. (b) reviewer-e's 'separating them from the water' -> 'open sky, no water visible': this is factually wrong and I overturn it. Water IS visible between the figures -- I magnified that band and it shows horizontal ripple banding with a vertical moon-reflection path -- and reviewer-b independently recorded 'water/sea and a bright stepped stairway of light in the center distance' in his environment list. reviewer-e read the moon path as 'a flight of pale steps'; the existing text stands."
+    },
+    {
+      "card": "legacy-moonlight/cups-03",
+      "field": "keyObjects",
+      "before": "crescent moon",
+      "after": "large pale gibbous-to-full moon disc",
+      "reason": "Meets all five gates for the moon phase only. (1) At 5x the disc is unambiguously a full round face, not a crescent. (2) Two independent Reviewers reported it separately and at high confidence: reviewer-b ('The disc is a complete circle with only a soft shading on its lower-left limb; there is no crescent sliver', confidence high) and reviewer-e ('a large full round face with only a softly shaded lower-left limb', confidence high). (3) I reached the same conclusion on my own pass before reading either. (4) Crescent-vs-round is pure observable shape. (5) Two exact substring swaps. NOTE on find strings: the bare string 'crescent moon' occurs TWICE in the reveal packet (line 3 in scene, line 7 as a keyObject), so I deliberately used longer unique anchors -- 'beneath a crescent moon' and the full keyObject line '  - crescent moon' -- each verified unique with grep -F. I REJECT the two other proposed changes. (a) 'at night' -> daylight: interpretation, not observable, and reviewer-b's own evidence concedes 'whether this is meant as daylight, twilight or a very luminous night cannot be settled from the pixels'. The threshold is not met and I leave the wording alone. (b) reviewer-e's 'separating them from the water' -> 'open sky, no water visible': this is factually wrong and I overturn it. Water IS visible between the figures -- I magnified that band and it shows horizontal ripple banding with a vertical moon-reflection path -- and reviewer-b independently recorded 'water/sea and a bright stepped stairway of light in the center distance' in his environment list. reviewer-e read the moon path as 'a flight of pale steps'; the existing text stands."
+    },
+    {
+      "card": "legacy-moonlight/swords-05",
+      "field": "keyObjects",
+      "before": "two swords held upright by the foreground figure",
+      "after": "two swords held hilt-up at the foreground figure's lowered sides, blades angled down and outward with both points toward the ground",
+      "reason": "Meets all five gates for the held-sword orientation. (1) At 3x the orientation is unambiguous: hilts up, points down, nothing above the grip. (2) Two independent Reviewers reported it separately and both at HIGH confidence: reviewer-c ('both held blades hang DOWN at her sides... neither blade rises above the grip') and reviewer-e ('both points aim at the ground, neither is raised'). Both also independently flagged that the same error repeats in visualTensions. (3) I reached the identical conclusion on my own pass before reading either. (4) Blade orientation is a pure observable. (5) Two exact substring swaps, each verified unique with grep -F. For the visualTensions line I used reviewer-e's minimal wording, which removes only the false word 'upright' and keeps the held-vs-discarded contrast, rather than reviewer-c's 'echo', which rewrites the tension itself on a wording preference. I REJECT three other proposals. (a) 'toward a moonlit horizon' -> daylit (reviewer-c, medium confidence; reviewer-e logged it only as an uncertainObservation): light-source mood is an inference, not an observable of the kind this gate admits, both Reviewers hedged, and a large moon is plainly in the frame, so the existing wording is not falsified. (b) reviewer-e's visualTensions 'face opposite directions' fix: raised by one Reviewer only, at medium confidence, and directly contradicted by reviewer-c's blind observation ('she is turned away from both the distant figure and the water'). I note for the record that on my own look reviewer-e has the better read -- her head is clearly turned to the viewer's right, toward the departing figure, so reviewer-c's observation is the wrong one -- but a single-Reviewer item about head-versus-body orientation in an interpretive field does not clear the AUTO_CORRECT bar, so I leave the line alone. (c) The ground-sword count: reviewer-c recorded null ('at least 3, possibly more'), reviewer-e recorded 3 with a note that a fourth could be hidden. I independently located exactly three hilts, which matches the existing 'three swords lying crossed on the ground', so the existing number stands and I do not mark it uncertain."
+    },
+    {
+      "card": "legacy-moonlight/swords-05",
+      "field": "visualTensions",
+      "before": "the upright held swords contrast with the swords lying discarded on the ground",
+      "after": "the still-gripped swords, points lowered, contrast with the swords lying discarded on the ground",
+      "reason": "Meets all five gates for the held-sword orientation. (1) At 3x the orientation is unambiguous: hilts up, points down, nothing above the grip. (2) Two independent Reviewers reported it separately and both at HIGH confidence: reviewer-c ('both held blades hang DOWN at her sides... neither blade rises above the grip') and reviewer-e ('both points aim at the ground, neither is raised'). Both also independently flagged that the same error repeats in visualTensions. (3) I reached the identical conclusion on my own pass before reading either. (4) Blade orientation is a pure observable. (5) Two exact substring swaps, each verified unique with grep -F. For the visualTensions line I used reviewer-e's minimal wording, which removes only the false word 'upright' and keeps the held-vs-discarded contrast, rather than reviewer-c's 'echo', which rewrites the tension itself on a wording preference. I REJECT three other proposals. (a) 'toward a moonlit horizon' -> daylit (reviewer-c, medium confidence; reviewer-e logged it only as an uncertainObservation): light-source mood is an inference, not an observable of the kind this gate admits, both Reviewers hedged, and a large moon is plainly in the frame, so the existing wording is not falsified. (b) reviewer-e's visualTensions 'face opposite directions' fix: raised by one Reviewer only, at medium confidence, and directly contradicted by reviewer-c's blind observation ('she is turned away from both the distant figure and the water'). I note for the record that on my own look reviewer-e has the better read -- her head is clearly turned to the viewer's right, toward the departing figure, so reviewer-c's observation is the wrong one -- but a single-Reviewer item about head-versus-body orientation in an interpretive field does not clear the AUTO_CORRECT bar, so I leave the line alone. (c) The ground-sword count: reviewer-c recorded null ('at least 3, possibly more'), reviewer-e recorded 3 with a note that a fourth could be hidden. I independently located exactly three hilts, which matches the existing 'three swords lying crossed on the ground', so the existing number stands and I do not mark it uncertain."
+    },
+    {
+      "card": "legacy-celestial/wands-10",
+      "field": "keyObjects",
+      "before": "crescent moon",
+      "after": "dim round moon disc with its full circular outline visible, phase indeterminate",
+      "reason": "All five AUTO_CORRECT thresholds hold. (1) The fact is unambiguous on the image - a full circular outline is plainly visible at native resolution, and 'crescent' is simply the wrong shape. (2) Two independent Reviewers reported the same thing in their blind observations before comparing: reviewer-b recorded moonPhase as 'gibbous - partly shaded on one side; uncertain' and wrote that the body is 'a near-complete round disc ... no thin crescent sliver'; reviewer-e recorded moonPhase as 'the upper-left sphere reads as a full round disc' with the phase undeterminable. Both filed it as an issue against the same existing string. (3) I reached the same conclusion from my own zoom. (4) It is an observable shape fact, not interpretation. (5) The fix is two precise substring replacements. I deliberately did NOT adopt reviewer-b's 'gibbous', because that is the one point where the two reviewers diverge and I cannot read a phase off the disc either; the replacement asserts only the part both reviewers and I independently agree on - a full round disc, phase indeterminate. I verified both find strings with grep -oF against reveal/review-412.md: each occurs exactly once (line 11 and line 39)."
+    },
+    {
+      "card": "legacy-moonlight/swords-08",
+      "field": "emphasizedAspects",
+      "before": "a surrounding ring of blades that is present but not touching",
+      "after": "blades flanking her on both sides, present but not touching, with open water directly in front of and behind her",
+      "reason": "All five AUTO_CORRECT thresholds are met. (1) The arrangement is unambiguous on the image: I cropped and upscaled the left and right halves and confirmed the open front-and-back lane. (2) Two independent Reviewers reported the same thing: reviewer-a ('not a ring - two loose flanking groups ... with a clear open lane of empty water directly in front of and behind her') and reviewer-c ('not a ring - two loose groups flanking her ... with open water directly in front of her and open misted water directly behind'). Both recorded it independently in their blind observations under objects.arrangement as well, before the comparison stage. (3) I reached the same conclusion from my own look. (4) It is an observable positional fact (where the blades sit), not an interpretation. (5) The fix is one precise substring replacement. Note on what I did NOT act on: both Reviewers also flagged 'misty blue night' as possibly daylight, but both self-rated that at confidence=low and explicitly declined to call it wrong; night-vs-day is not settleable from these high-key pixels when a crescent moon is plainly rendered, so I left the scene line untouched. I also left the sword count alone - reviewer-a said 9, reviewer-c said 8, and the existing file already lists the exact count under self-reported uncertainty, so no claim needs removing."
+    },
+    {
+      "card": "legacy-forest/swords-08",
+      "field": "visualTensions",
+      "before": "the blindfold covers the eyes while the body faces the light",
+      "after": "the blindfold covers the eyes while the sunlit canopy gap lies behind her, her back to the light as she walks toward the viewer",
+      "reason": "Two separate observable-fact corrections, both meeting the full threshold. FIX 1 (hands): the existing text claims the cloth 'binds her hands'. Both Reviewers formally raised this in the comparison stage - reviewer-a ('both hands are free ... No cloth passes around either wrist') and reviewer-c ('only the head is bound ... the extended hand shows spread, unbound fingers'). I confirmed it myself at 4x crop. Presence/absence of a binding is an observable fact, not an interpretation. Note that the two Reviewers contradict each other on WHICH hand does what (reviewer-a says left-at-chest/right-extended, reviewer-c says the reverse); that sub-detail is genuinely unsettled, so I deliberately wrote the replacement without left/right labels and kept only what both agree on and I can see. FIX 2 (light direction): only reviewer-a raised this formally in the comparison stage, but DEPENDING ON BLIND-OBSERVATION CONCORDANCE ('依据盲观察一致') the threshold is met - reviewer-c independently recorded the same fact in his blind observation before comparison, under lightSources ('daylight breaking through the canopy from behind the figure') and spatialRelations ('the path continues past her toward the bright canopy gap behind'), even though his overall verdict did not list it as an issue. Per this run's rule, what each Reviewer independently wrote down blind is what counts, not the final verdict line. I verified the backlighting myself from the image. Light-source position relative to the figure is observable geometry. Both fixes are exact substring replacements; I confirmed each find string occurs exactly once in the reveal with grep -F. I did NOT touch the blade count (reviewer-a said 7, reviewer-c and I said 8) because the reveal already lists the per-side count under self-reported uncertainty and asserts no specific number in the body text."
+    },
+    {
+      "card": "legacy-forest/swords-08",
+      "field": "visualTensions",
+      "before": "the cloth binds her hands and head yet trails loose and free",
+      "after": "the cloth is wound over her eyes while both hands stay free, one gripping the shawl at her chest and the other hanging open and empty, the ends trailing loose",
+      "reason": "Two separate observable-fact corrections, both meeting the full threshold. FIX 1 (hands): the existing text claims the cloth 'binds her hands'. Both Reviewers formally raised this in the comparison stage - reviewer-a ('both hands are free ... No cloth passes around either wrist') and reviewer-c ('only the head is bound ... the extended hand shows spread, unbound fingers'). I confirmed it myself at 4x crop. Presence/absence of a binding is an observable fact, not an interpretation. Note that the two Reviewers contradict each other on WHICH hand does what (reviewer-a says left-at-chest/right-extended, reviewer-c says the reverse); that sub-detail is genuinely unsettled, so I deliberately wrote the replacement without left/right labels and kept only what both agree on and I can see. FIX 2 (light direction): only reviewer-a raised this formally in the comparison stage, but DEPENDING ON BLIND-OBSERVATION CONCORDANCE ('依据盲观察一致') the threshold is met - reviewer-c independently recorded the same fact in his blind observation before comparison, under lightSources ('daylight breaking through the canopy from behind the figure') and spatialRelations ('the path continues past her toward the bright canopy gap behind'), even though his overall verdict did not list it as an issue. Per this run's rule, what each Reviewer independently wrote down blind is what counts, not the final verdict line. I verified the backlighting myself from the image. Light-source position relative to the figure is observable geometry. Both fixes are exact substring replacements; I confirmed each find string occurs exactly once in the reveal with grep -F. I did NOT touch the blade count (reviewer-a said 7, reviewer-c and I said 8) because the reveal already lists the per-side count under self-reported uncertainty and asserts no specific number in the body text."
+    },
+    {
+      "card": "legacy-moonlight/wands-08",
+      "field": "spatialRelations",
+      "before": "her staff rising into the same diagonal axis",
+      "after": "her staff held near-vertical, crossing the wands' diagonal rather than aligning with it",
+      "reason": "Threshold check for the staff-axis fix. (1) Unambiguous on the image and I measured it myself rather than eyeballing it. (2) Two Reviewers independently recorded it, though only one raised it formally - so DEPENDING ON BLIND-OBSERVATION CONCORDANCE ('依据盲观察一致'): reviewer-e raised it in the comparison stage ('the held shaft runs steeply up from her hip past her shoulder, while every sky wand lies on a shallow, near-horizontal downward slope - the two axes are close to perpendicular'), and reviewer-c independently recorded the same opposition in his blind observation before comparison, logging the sky wands as 'leafy/budded tips point to the lower right' while logging the held branch as a separate object with 'tip up and to the right, butt down toward the ground', 'single, separate from the sky group'. Opposite tip directions on the two objects is the same underlying fact. (3) I reached the same conclusion independently. (4) Orientation is an observable fact, explicitly one of the allowed categories. (5) One precise substring replacement, confirmed unique with grep -F. Corroborating detail: the reveal's own keyObjects already says 'one upright blossoming staff held in the figure's hand', which contradicts the spatialRelations line I am fixing - the file is internally inconsistent and my fix resolves it toward the entry that matches the image. WHAT I DELIBERATELY DID NOT ACT ON: both Reviewers also challenged 'moonlit', arguing the scene reads as daylight. I agree the scene is high-key and does not read as night, but neither Reviewer could name what it actually is - reviewer-c wrote 'I cannot tell whether dawn or day is intended' and reviewer-e wrote 'Whether the bright disc is a moon or a sun cannot be determined' - and I cannot settle it either. Replacing 'moonlit' with 'daylight' would assert a fact none of the three of us can verify, so it fails threshold 1. I also did not MARK_UNCERTAIN it: 'moonlit' sits inside the scene sentence, which is not a list field, so the only available move would be dropping the whole scene string, and the rest of that sentence (figure, flowered ledge, blossoming staff, flight of flowering wands, diagonal streak, misty river landscape) is accurate and confirmed by all three of us. Dropping it would cost far more than the one disputed adjective is worth. Flagging here so a human can settle the lighting word separately if wanted. I likewise left the wand count alone - nobody could count them (reviewer-c read 7-9, reviewer-e read about 6, and I could not resolve them either), and the reveal already lists the exact count under self-reported uncertainty without asserting a number."
+    },
+    {
+      "card": "legacy-celestial/swords-08",
+      "field": "scene",
+      "before": "walks forward along a wet stone path between two rows of upright swords, lifting a pale cloth from her eyes, toward a small domed lit building under a star-filled sky",
+      "after": "walks forward toward the viewer along a wet stone path between two rows of upright swords, lifting a pale cloth from her eyes, with a small domed lit building on the rise behind her under a star-filled sky",
+      "reason": "Two observable-fact corrections, both clearing the threshold. FIX 1 (direction of travel): the scene claims she walks 'toward a small domed lit building'. reviewer-d raised this formally at confidence=high, and reviewer-b independently recorded the same fact in his blind observation before comparison - spatialRelations: 'the figure walks forward toward the viewer, between the two flanking sword groups' and 'the lit building sits behind her right shoulder in the distance' - so the two-reviewer bar is met on the formal report plus blind-observation concordance. I verified it myself from the figure's facing, stride and the near-to-far sword scale. The reveal also self-contradicts: its own spatialRelations already says the dome 'sits behind her'. FIX 2 (dome position): both Reviewers raised this formally and in near-identical words - reviewer-b ('noticeably to the RIGHT of the walkway's centre line') and reviewer-d ('noticeably right of centre, on a rise beside the water, not on the path's centre line') - and both independently logged 'right of center' in their blind observations. I measured the offset myself. Position is an observable fact. Both replacements are exact substrings confirmed unique with grep -F. WHAT I DELIBERATELY DID NOT ACT ON: (a) SWORD ORIENTATION - reviewer-b says the swords are hilt-up/point-down into the plinth and wants 'upright swords' rewritten; reviewer-d's summary says the opposite ('every one points UP ... none inverted'). This is a direct Reviewer contradiction, but I can resolve it from the image and I agree with reviewer-b on the geometry: the ball pommel is plainly topmost, with the blade descending into the plinth. I still did not patch it, because the existing wording 'upright swords with round pommels and crossguards' does not actually assert point-up - 'upright' states that they stand vertically, which is true - so reviewer-b's objection is about the connotation of a word, and wording preference is never grounds for AUTO_CORRECT. Note also that reviewer-d's own component ordering ('round pommel at the very top, hilt below') agrees with reviewer-b and contradicts his own summary label, so his dissent is internally inconsistent rather than a genuine rival observation. (b) CLOTH MOTION - 'the cloth is being lifted rather than tied in place' (visualTensions) and 'the blindfold slipping away' (emphasizedAspects) assert a direction of motion that cannot be recovered from a still frame. Both Reviewers independently say so: reviewer-b formally ('direction of motion is not recoverable from the pixels') and reviewer-d in his blind uncertainObservations ('Whether the figure is pulling the cloth off her eyes or tying it on cannot be determined from a still image'). I agree - I cropped the head at 6x and both hands grip the band flat across the eye line, with no cue to direction. This is an unverifiable claim rather than a wrong one, so it belongs on the MARK_UNCERTAIN path, not inside a correction patch; since only one decision per card is allowed and the two positional errors are the higher-value fix, I left the motion wording untouched and kept 'lifting a pale cloth from her eyes' verbatim in my scene replacement rather than silently making an uncertainty call inside a correction. FLAGGING IT HERE for a follow-up uncertainty pass: the items to drop or neutralise are visualTensions 'the cloth is being lifted rather than tied in place' and emphasizedAspects 'the blindfold slipping away'. (c) SWORD COUNT - reviewer-b recorded null, reviewer-d and I both read 8 (4+4); the reveal asserts no number and already lists the count under self-reported uncertainty, so nothing needs changing. (d) 'ringed planet in the upper right sky' - neither Reviewer mentioned a ring and both described only a cratered disc, but I cropped it at 7x and a thin elliptical ring line does encircle the body, so the existing entry is correct and stands."
+    },
+    {
+      "card": "legacy-celestial/swords-08",
+      "field": "spatialRelations",
+      "before": "the domed building sits behind her, centred on the path's vanishing point",
+      "after": "the domed building sits behind her and well to the right of the walkway's centre line, raised on a bank above the water, its lit doorway reflected on the water",
+      "reason": "Two observable-fact corrections, both clearing the threshold. FIX 1 (direction of travel): the scene claims she walks 'toward a small domed lit building'. reviewer-d raised this formally at confidence=high, and reviewer-b independently recorded the same fact in his blind observation before comparison - spatialRelations: 'the figure walks forward toward the viewer, between the two flanking sword groups' and 'the lit building sits behind her right shoulder in the distance' - so the two-reviewer bar is met on the formal report plus blind-observation concordance. I verified it myself from the figure's facing, stride and the near-to-far sword scale. The reveal also self-contradicts: its own spatialRelations already says the dome 'sits behind her'. FIX 2 (dome position): both Reviewers raised this formally and in near-identical words - reviewer-b ('noticeably to the RIGHT of the walkway's centre line') and reviewer-d ('noticeably right of centre, on a rise beside the water, not on the path's centre line') - and both independently logged 'right of center' in their blind observations. I measured the offset myself. Position is an observable fact. Both replacements are exact substrings confirmed unique with grep -F. WHAT I DELIBERATELY DID NOT ACT ON: (a) SWORD ORIENTATION - reviewer-b says the swords are hilt-up/point-down into the plinth and wants 'upright swords' rewritten; reviewer-d's summary says the opposite ('every one points UP ... none inverted'). This is a direct Reviewer contradiction, but I can resolve it from the image and I agree with reviewer-b on the geometry: the ball pommel is plainly topmost, with the blade descending into the plinth. I still did not patch it, because the existing wording 'upright swords with round pommels and crossguards' does not actually assert point-up - 'upright' states that they stand vertically, which is true - so reviewer-b's objection is about the connotation of a word, and wording preference is never grounds for AUTO_CORRECT. Note also that reviewer-d's own component ordering ('round pommel at the very top, hilt below') agrees with reviewer-b and contradicts his own summary label, so his dissent is internally inconsistent rather than a genuine rival observation. (b) CLOTH MOTION - 'the cloth is being lifted rather than tied in place' (visualTensions) and 'the blindfold slipping away' (emphasizedAspects) assert a direction of motion that cannot be recovered from a still frame. Both Reviewers independently say so: reviewer-b formally ('direction of motion is not recoverable from the pixels') and reviewer-d in his blind uncertainObservations ('Whether the figure is pulling the cloth off her eyes or tying it on cannot be determined from a still image'). I agree - I cropped the head at 6x and both hands grip the band flat across the eye line, with no cue to direction. This is an unverifiable claim rather than a wrong one, so it belongs on the MARK_UNCERTAIN path, not inside a correction patch; since only one decision per card is allowed and the two positional errors are the higher-value fix, I left the motion wording untouched and kept 'lifting a pale cloth from her eyes' verbatim in my scene replacement rather than silently making an uncertainty call inside a correction. FLAGGING IT HERE for a follow-up uncertainty pass: the items to drop or neutralise are visualTensions 'the cloth is being lifted rather than tied in place' and emphasizedAspects 'the blindfold slipping away'. (c) SWORD COUNT - reviewer-b recorded null, reviewer-d and I both read 8 (4+4); the reveal asserts no number and already lists the count under self-reported uncertainty, so nothing needs changing. (d) 'ringed planet in the upper right sky' - neither Reviewer mentioned a ring and both described only a cratered disc, but I cropped it at 7x and a thin elliptical ring line does encircle the body, so the existing entry is correct and stands."
+    },
+    {
+      "card": "legacy-shadow/major-10",
+      "field": "keyObjects",
+      "before": "carved relief panels on the wheel's rim segments",
+      "after": "carved relief panels on the wheel's spokes between the hub and rim",
+      "reason": "Reviewer-d and reviewer-f independently report same rim/spoke placement error. Local position clear with high confidence; unrelated dark details remain medium."
+    },
+    {
+      "card": "legacy-celestial/wands-05",
+      "field": "keyObjects",
+      "before": "central bright point of light where the staff tips converge",
+      "after": "central bright point of light separate from the glowing staff tips",
+      "reason": "Reviewer-b/d independently report no central tip meeting; Judge verifies separation at high confidence. Three local replacements remove repeated geometric error without exact node count. Filter dependent interpretation rather than rewrite meaning."
+    },
+    {
+      "card": "legacy-celestial/wands-05",
+      "field": "spatialRelations",
+      "before": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+      "after": "the five staffs radiate inward toward glowing points around an inner ring, apart from the central light",
+      "reason": "Reviewer-b/d independently report no central tip meeting; Judge verifies separation at high confidence. Three local replacements remove repeated geometric error without exact node count. Filter dependent interpretation rather than rewrite meaning."
+    },
+    {
+      "card": "legacy-celestial/wands-05",
+      "field": "scene",
+      "before": "each holding a glowing-tipped staff angled inward toward a luminous point at the centre of a large engraved circular diagram",
+      "after": "each holding a glowing-tipped staff angled inward around a large engraved circular diagram with a distinct luminous centre",
+      "reason": "Reviewer-b/d independently report no central tip meeting; Judge verifies separation at high confidence. Three local replacements remove repeated geometric error without exact node count. Filter dependent interpretation rather than rewrite meaning."
+    },
+    {
+      "card": "legacy-moonlight/swords-07",
+      "field": "keyObjects",
+      "before": "two swords lying crossed on the ground in the lower right",
+      "after": "two swords positioned roughly parallel in the lower right foreground",
+      "reason": "Reviewer-b/e independently identify parallel rather than crossed; Judge confirms at high confidence. Preserve number/location and avoid guessing contact surface."
+    },
+    {
+      "card": "legacy-shadow/wands-09",
+      "field": "visualTensions",
+      "before": "the figure's forward stance against the shadow trailing behind him",
+      "after": "the figure's standing posture against the long shadow stretching forward toward the viewer",
+      "reason": "Reviewer-b/d independently contradict trailing shadow. Judge confirms direction at high confidence, matching existing spatialRelations. Local replacement removes contradictory direction without advancing stride."
+    },
+    {
+      "card": "legacy-classic/swords-07",
+      "field": "keyObjects",
+      "before": "bundle of swords held against the chest, blades crossing and hilts fanning upward",
+      "after": "bundle of swords held against the chest, blades parallel in a single sheaf and hilts fanning upward",
+      "reason": "reviewer-f指出blades crossing错误，b/e冻结观察并排扇形独立支持，Judge确认同向刃面。仅修局部几何。拒绝e的头朝右替换；不补遮挡剑束数量。"
+    }
+  ],
+  "filters": [
+    {
+      "card": "legacy-moonlight/cups-10",
+      "field": "emphasizedAspects",
+      "removed": [
+        "ordinary domestic warmth in the shared table and running children"
+      ]
+    },
+    {
+      "card": "legacy-forest/swords-05",
+      "field": "keyObjects",
+      "removed": [
+        "two swords held upright by the kneeling figure",
+        "two swords lying flat on the wet ground in the foreground",
+        "long dark cloak with ragged hem",
+        "leather belt pouch",
+        "small shoulder satchel on the departing figure",
+        "waterlogged path with standing puddles",
+        "fallen brown leaves",
+        "ornamental border with fern fronds and mushrooms"
+      ]
+    },
+    {
+      "card": "legacy-shadow/major-15",
+      "field": "scene",
+      "removed": [
+        "Two ragged, barefoot figures stand chained to a stone block in a dim vaulted stone chamber, with a large dark horned silhouette looming on the wall behind them."
+      ]
+    },
+    {
+      "card": "legacy-shadow/major-15",
+      "field": "keyObjects",
+      "removed": [
+        "large dark horned silhouette cast on the rear wall"
+      ]
+    },
+    {
+      "card": "legacy-shadow/major-15",
+      "field": "spatialRelations",
+      "removed": [
+        "the horned silhouette rises behind and above both figures, centred on the wall"
+      ]
+    },
+    {
+      "card": "legacy-moonlight/wands-05",
+      "field": "keyObjects",
+      "removed": [
+        "long translucent ribbons trailing from the poles"
+      ]
+    },
+    {
+      "card": "legacy-moonlight/wands-05",
+      "field": "deckSpecificMotifs",
+      "removed": [
+        "flower crowns and trailing ribbons"
+      ]
+    },
+    {
+      "card": "legacy-celestial/cups-04",
+      "field": "keyObjects",
+      "removed": [
+        "stack of books beside the astrolabe"
+      ]
+    },
+    {
+      "card": "legacy-celestial/swords-04",
+      "field": "spatialRelations",
+      "removed": [
+        "the window occupies the full left edge, its light falling across the figure's head and shoulder"
+      ]
+    },
+    {
+      "card": "legacy-shadow/swords-03",
+      "field": "spatialRelations",
+      "removed": [
+        "the two outer swords lean inward at angles, flanking the central blade"
+      ]
+    },
+    {
+      "card": "legacy-shadow/pentacles-13",
+      "field": "keyObjects",
+      "removed": [
+        "small seedling with exposed bare roots on the ground"
+      ]
+    },
+    {
+      "card": "legacy-shadow/pentacles-13",
+      "field": "visualTensions",
+      "removed": [
+        "the lit disc and doorway against the surrounding near-black field"
+      ]
+    },
+    {
+      "card": "legacy-forest/swords-01",
+      "field": "keyObjects",
+      "removed": [
+        "small leafy sprig growing along the sword blade near the hilt"
+      ]
+    },
+    {
+      "card": "legacy-moonlight/swords-01",
+      "field": "keyObjects",
+      "removed": [
+        "small white birds in flight"
+      ]
+    },
+    {
+      "card": "legacy-moonlight/swords-01",
+      "field": "spatialRelations",
+      "removed": [
+        "the moon disc sits behind and above the figure's head, upper right of centre"
+      ]
+    },
+    {
+      "card": "legacy-celestial/swords-05",
+      "field": "scene",
+      "removed": [
+        "A cloaked figure stands on a wet stone platform holding three swords while two smaller figures walk away toward a glowing horizon beneath a star-filled sky."
+      ]
+    },
+    {
+      "card": "legacy-celestial/swords-05",
+      "field": "keyObjects",
+      "removed": [
+        "three swords held point-down in one hand",
+        "gold-framed border with corner compass rosettes"
+      ]
+    },
+    {
+      "card": "legacy-celestial/swords-05",
+      "field": "deckSpecificMotifs",
+      "removed": [
+        "ornamental gold border with compass rosettes"
+      ]
+    },
+    {
+      "card": "legacy-celestial/major-20",
+      "field": "keyObjects",
+      "removed": [
+        "open tablets and scrolls held by the figures"
+      ]
+    },
+    {
+      "card": "legacy-shadow/cups-07",
+      "field": "keyObjects",
+      "removed": [
+        "seven arched wall niches"
+      ]
+    },
+    {
+      "card": "legacy-shadow/cups-07",
+      "field": "spatialRelations",
+      "removed": [
+        "four niches in an upper row, three in a lower row"
+      ]
+    },
+    {
+      "card": "legacy-celestial/major-10",
+      "field": "visualTensions",
+      "removed": [
+        "the reaching hand almost but not quite touching the ring"
+      ]
+    },
+    {
+      "card": "legacy-shadow/swords-02",
+      "field": "scene",
+      "removed": [
+        "A dark-robed woman sits on a cracked stone pavement at night, one hand raised to her head and the other holding a downward-pointing sword, with a second sword planted in the ground beside her, a moonlit sea and a dark doorway behind her."
+      ]
+    },
+    {
+      "card": "legacy-shadow/swords-02",
+      "field": "keyObjects",
+      "removed": [
+        "large gibbous moon"
+      ]
+    },
+    {
+      "card": "legacy-classic/swords-04",
+      "field": "scene",
+      "removed": [
+        "A young man lies with eyes closed on a stone slab beneath a stained-glass window, while four swords hang and rest around him in a vaulted stone chamber."
+      ]
+    },
+    {
+      "card": "legacy-classic/swords-01",
+      "field": "keyObjects",
+      "removed": [
+        "small ring or circlet among the falling papers"
+      ]
+    },
+    {
+      "card": "legacy-celestial/cups-03",
+      "field": "scene",
+      "removed": [
+        "Three women in flowing star-flecked gowns stand barefoot on a wet reflective terrace, raising three golden chalices together beneath a vast nebula sky ringed by constellation lines and astrological circles."
+      ]
+    },
+    {
+      "card": "legacy-celestial/cups-03",
+      "field": "keyObjects",
+      "removed": [
+        "three golden chalices held aloft and touching",
+        "small crescent moon at upper left"
+      ]
+    },
+    {
+      "card": "legacy-celestial/cups-03",
+      "field": "spatialRelations",
+      "removed": [
+        "the three chalices meet at the centre of the upper third, directly beneath the brightest star"
+      ]
+    },
+    {
+      "card": "legacy-moonlight/swords-09",
+      "field": "keyObjects",
+      "removed": [
+        "nine swords mounted horizontally on the wall"
+      ]
+    },
+    {
+      "card": "legacy-shadow/major-06",
+      "field": "keyObjects",
+      "removed": [
+        "a serpent coiled around the trunk of the left tree"
+      ]
+    },
+    {
+      "card": "legacy-shadow/major-06",
+      "field": "spatialRelations",
+      "removed": [
+        "the fruit-bearing tree with the serpent stands to the left of the left figure; the bare tree stands to the right of the right figure"
+      ]
+    },
+    {
+      "card": "legacy-shadow/major-06",
+      "field": "visualTensions",
+      "removed": [
+        "the two trees differ — one fruiting and serpent-coiled, one bare"
+      ]
+    },
+    {
+      "card": "legacy-shadow/major-06",
+      "field": "emphasizedAspects",
+      "removed": [
+        "a choice framed by two differing options, one bearing fruit and a serpent, one bare"
+      ]
+    },
+    {
+      "card": "legacy-shadow/major-06",
+      "field": "deckSpecificMotifs",
+      "removed": [
+        "serpent coiled on a tree trunk"
+      ]
+    },
+    {
+      "card": "legacy-celestial/wands-05",
+      "field": "emphasizedAspects",
+      "removed": [
+        "several forces converging at once on one point"
+      ]
+    },
+    {
+      "card": "legacy-shadow/pentacles-09",
+      "field": "keyObjects",
+      "removed": [
+        "a potted plant at the lower left"
+      ]
+    },
+    {
+      "card": "legacy-celestial/swords-03",
+      "field": "keyObjects",
+      "removed": [
+        "stone table with a second paper and a small red seal"
+      ]
+    },
+    {
+      "card": "legacy-moonlight/swords-10",
+      "field": "keyObjects",
+      "removed": [
+        "thin chains draped between the sword hilts"
+      ]
+    },
+    {
+      "card": "legacy-shadow/swords-07",
+      "field": "spatialRelations",
+      "removed": [
+        "the figure stands between the two pyramid structures, closer to the right one"
+      ]
+    },
+    {
+      "card": "legacy-shadow/swords-07",
+      "field": "visualTensions",
+      "removed": [
+        "the figure's body moves away while its head turns back"
+      ]
+    },
+    {
+      "card": "legacy-shadow/swords-07",
+      "field": "emphasizedAspects",
+      "removed": [
+        "a backward glance that keeps watch on what is left behind"
+      ]
+    }
+  ],
+  "qaOnlyAnnotations": [
+    {
+      "reviewId": "review-116",
+      "field": "model self-reported uncertainty",
+      "item": "exact number of books in the left-hand stack"
+    },
+    {
+      "reviewId": "review-116",
+      "field": "model self-reported uncertainty",
+      "item": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "reviewId": "review-404",
+    "verdict": "pass",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-407",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "seven arched wall niches",
+        "observed": "I can see exactly seven niches (four upper, three lower), which matches, but I cannot establish that seven is the total: the lower row's spacing is irregular in a way that leaves room for one more niche hidden behind the figure. The upper row's four niche centres are evenly spaced (roughly 100-120 px apart at image scale), and the lower row's three visible centres sit at the far left, centre and right with a gap between the far-left and centre niche that is about double the gap between the centre and right niche — i.e. one niche-width of unexplained wall exactly where the figure's robe stands.",
+        "evidence": "Lower-left (key) niche, the figure's robe, and the lower-centre (cloth) niche in the bottom half of the wall. Brightening the image shows every niche sits on a bright ledge; a horizontal brightness scan along the lower ledge line finds lit ledge segments under the three visible lower niches but a completely dark span across the robe's width, so the wall there is occluded rather than shown to be blank. Nothing in the visible wall to either side of the robe shows a niche frame, and nothing rules one out.",
+        "confidence": "medium"
+      }
+    ],
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-409",
+    "verdict": "pass",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-410",
+    "verdict": "pass",
+    "reviewer": "reviewer-f"
+  }
+]

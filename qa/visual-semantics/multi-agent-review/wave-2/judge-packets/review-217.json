@@ -1,0 +1,224 @@
+{
+  "reviewId": "review-217",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-217.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-217.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "ten upright swords with round pommels and straight crossguards",
+          "observed": "nine swords",
+          "evidence": "Nine separate round pommels are individually resolvable against the open sky, left to right, each with its own crossguard and blade; the pommels do not overlap at all, only the blades do lower down.",
+          "confidence": "medium"
+        },
+        {
+          "field": "scene",
+          "existing": "ten swords driven upright into the back",
+          "observed": "nine swords driven point-down into the back",
+          "evidence": "Same nine-pommel enumeration; no tenth hilt breaks the skyline anywhere in the fan.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "ten upright swords with round pommels and straight crossguards",
+            "with": "nine upright swords with round pommels and straight crossguards"
+          },
+          {
+            "find": "ten swords driven upright into the back",
+            "with": "nine swords driven upright into the back"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-217",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center foreground, occupying the lower half of the frame",
+              "posture": "lying face-down and prone on the ground, body roughly horizontal across the frame, head to the left, legs to the right, both arms outstretched — the left arm reaching toward the left edge, the right arm reaching down toward the bottom right; hands open and empty",
+              "gaze": "not determinable — the face is turned down into the ground",
+              "heldObjects": [],
+              "appearance": "dark hair, a heavy rust-red/brown cloak or mantle over the shoulders and back, blue-grey tunic and leggings, pale cuffs at both wrists; motionless"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 9,
+              "countConfidence": "medium",
+              "where": "all driven point-down into the prone figure's back and the ground around it, blades standing upright and fanning slightly outward; counted one pommel at a time from left to right: (1) far left, low; (2) left, tall; (3) left-center, mid; (4) center-left, the tallest; (5) center, shortest/nearest; (6) center-right, tall; (7) right-center, mid; (8) right, tall; (9) far right, low"
+            },
+            {
+              "type": "sun",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the sea horizon at the right, a low bright disc/glow at the waterline with a light path running toward the viewer"
+            },
+            {
+              "type": "cliff/mesa",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far left horizon, a flat-topped dark headland"
+            }
+          ],
+          "environment": [
+            "barren stony ground with scattered rocks filling the foreground",
+            "a body of water along the horizon at the right, lit by a low sun",
+            "heavy hatched storm clouds filling the upper two-thirds of the frame, dark overhead and lighter near the horizon",
+            "a few small sparse plants at the bottom left",
+            "a printed ornamental border with corner flourishes"
+          ],
+          "lightSources": [
+            "low sun at the right horizon, the only bright area; everything else is in shadow"
+          ],
+          "moonPhase": "not applicable — no moon visible",
+          "spatialRelations": [
+            "the swords are clustered over the figure's back and shoulders, densest between the shoulder blades, and lean away from each other rather than standing parallel",
+            "the tallest blades rise into the dark cloud band; the horizon line passes behind them",
+            "the figure's outstretched arms point to the left and bottom-right corners, widening the shape across the frame",
+            "the bright horizon sits directly behind and to the right of the body"
+          ],
+          "foreground": [
+            "the prone body",
+            "the upright swords",
+            "stony ground"
+          ],
+          "background": [
+            "sea",
+            "low sun",
+            "cliff",
+            "storm clouds"
+          ],
+          "notableTension": [
+            "the dark sky above contrasts sharply with the single bright band of light at the horizon"
+          ]
+        },
+        "uncertainObservations": [
+          "the sword count is given as nine from individually resolvable pommels, but blades overlap heavily in the center-left cluster and an additional hidden blade cannot be ruled out",
+          "whether the low bright disc at the horizon is rising or setting cannot be determined",
+          "whether the figure is alive cannot be determined from the image; only that it is motionless and face-down",
+          "no blood or wound detail is resolvable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "ten upright swords with round pommels and straight crossguards",
+          "observed": "nine swords — I resolved nine distinct round pommels, counted individually twice with the same result",
+          "evidence": "Pommels left to right: (1) far left, low; (2) left, tall; (3) left-of-centre, medium; (4) centre-left, tallest; (5) centre, the short low one; (6) centre, tall; (7) centre-right, medium; (8) right, medium-tall; (9) far right, low. Each has its own grip, crossguard and traceable blade entering the back. No tenth pommel appears anywhere in the fan.",
+          "confidence": "medium"
+        },
+        {
+          "field": "scene",
+          "existing": "ten swords driven upright into the back",
+          "observed": "nine swords driven into the back",
+          "evidence": "Same nine-pommel enumeration; the central blades overlap where they enter the body, but overlap hides blade shafts, not pommels, and only nine pommels are painted.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "ten upright swords with round pommels and straight crossguards",
+            "with": "nine upright swords with round pommels and straight crossguards"
+          },
+          {
+            "find": "ten swords driven upright into the back",
+            "with": "nine swords driven upright into the back"
+          },
+          {
+            "find": "exact count of swords is ten as resolved, though the central cluster overlaps slightly",
+            "with": "exact count of swords is nine as resolved, though the central cluster overlaps slightly"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-217",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "lower half of the frame, lying across it horizontally, head to the viewer's left",
+              "posture": "lying face-down / prone on bare ground, both arms flung outward and forward, hands open and limp, legs extended to the right",
+              "gaze": "face turned down into the ground and away; eyes not visible",
+              "heldObjects": [
+                "nothing — both hands are empty and open on the dirt"
+              ],
+              "appearance": "a red-brown cloak or mantle bunched across the shoulders and back, blue-grey tunic and trousers, cuffed sleeves, dark hair; no crown, no blindfold visible, no halo"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword standing upright in the figure's back",
+              "count": 9,
+              "countConfidence": "medium",
+              "where": "all driven point-down into the prone figure's back and shoulders, hilts fanning upward at varying heights and slight angles. Counting each pommel left to right: (1) far left, low; (2) left, tall; (3) left-of-center, medium; (4) center-left, tallest; (5) center, short — the lowest of the group; (6) center, tall; (7) center-right, medium; (8) right, medium-tall; (9) far right, low."
+            },
+            {
+              "type": "small scrub plant",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a few sparse tufts on the bare ground at the lower left and along the middle distance"
+            }
+          ],
+          "environment": [
+            "a barren rocky plain of dirt and loose stones",
+            "a flat sea or estuary on the right middle distance",
+            "a low sunset or sunrise glow on the horizon at the right with a light column on the water",
+            "a dark cliff or mesa silhouette on the left horizon",
+            "a heavy dark sky rendered in dense engraving hatching with streaked cloud bands",
+            "a plain ruled tan border with small corner ornaments"
+          ],
+          "lightSources": [
+            "a low sun at the right horizon, mostly hidden in haze, throwing a bright band across the water and a warm band of light along the horizon"
+          ],
+          "moonPhase": null,
+          "spatialRelations": [
+            "the swords stand in a rough fan or row across the figure's back, their blades converging downward into the body",
+            "the body lies roughly parallel to the horizon line, its head pointing toward the dark cliff side and its feet toward the lit side",
+            "the sunset glow is behind and to the right of the body, at about the height of the sword hilts",
+            "the sky's darkest mass is directly above the body; the only bright area is the right horizon"
+          ],
+          "foreground": [
+            "bare stony ground",
+            "the prone figure and the standing swords",
+            "small scrub"
+          ],
+          "background": [
+            "water with a sun-reflection band",
+            "cliff silhouette",
+            "heavily clouded dark sky"
+          ],
+          "palette": "dark sepia, olive and slate engraving with a warm horizon"
+        },
+        "uncertainObservations": [
+          "I counted nine distinct pommels one at a time. The blades overlap heavily where they enter the back, so a tenth blade fully occluded behind another cannot be ruled out — but nine is what I can individually resolve, and I am not adjusting that number toward any expected total.",
+          "Whether the figure is dead, unconscious or merely lying down cannot be determined from the pixels; only the prone posture and limp open hands are visible.",
+          "Whether the light at the right horizon is a rising or setting sun is not determinable.",
+          "A second smaller form may be present under the cloth mass at the far right of the body, but it more likely reads as the figure's own legs and a fold of the cloak."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

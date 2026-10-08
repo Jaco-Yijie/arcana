@@ -1,0 +1,265 @@
+{
+  "reviewId": "review-005",
+  "blindImage": "qa/visual-semantics/blind-review/review-005.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: corrected vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/pilot/reveal/review-005.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects / spatialRelations",
+          "existing": "hanging lantern with warm glow at the boat's stern",
+          "observed": "the lit lantern hangs from an ornate finial post at the right-hand end of the boat — the same end the text itself calls the bow, outboard of and beyond the row of upright swords",
+          "evidence": "In the image the standing poling figure is at the left end, the seated figure is mid-hull, the swords stand to their right, and the glowing lantern hangs furthest right of all, past the swords, on a decorated post over the water. The text's own spatialRelations place the bow toward the right and the swords in the bow, so putting the lantern at the stern contradicts the pixels and is internally inconsistent.",
+          "confidence": "high"
+        },
+        {
+          "field": "model self-reported uncertainty",
+          "existing": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+          "observed": "I can individually resolve five hilts/blades; a sixth is not establishable — the pale palette and overlapping shafts prevent a reliable count in either direction",
+          "evidence": "Five distinct pommel/cross-guard clusters are separable left-to-right above the gunwale; whatever lies to the right of them cannot be separated from the lantern post's shaft. This is flagged as unverifiable, not as a different number.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "hanging lantern with warm glow at the boat's stern",
+            "with": "hanging lantern with warm glow on a post at the boat's bow, beyond the swords"
+          },
+          {
+            "find": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+            "with": "exact number of swords standing in the bow (not reliably countable; blades overlap)"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-005",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left-of-center, standing in the rear half of a pale boat",
+              "posture": "standing upright, three-quarter/back view, long hair and veil streaming to the left",
+              "gaze": "toward the right, along the water toward the far shore",
+              "heldObjects": [
+                "a slender pale pole held in the right hand, raised and angled down to the water at lower left"
+              ],
+              "clothing": "long white/pale-lilac gown with a very long trailing translucent veil; very long pale hair"
+            },
+            {
+              "position": "center of the boat, seated in front of the standing figure",
+              "posture": "seated, small, back and profile to viewer, head slightly inclined",
+              "gaze": "toward the right/forward (face mostly hidden)",
+              "heldObjects": [
+                "none visible"
+              ],
+              "clothing": "white hood/veil and pale robe"
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright sword standing point-down in the boat",
+              "count": null,
+              "countConfidence": "low",
+              "where": "planted in a row through the middle/forward section of the hull, hilts and pommels catching light above the gunwale, blades running down toward the boat floor",
+              "note": "I can individually resolve 5 hilts left-to-right; one further blade to the right may be a 6th or a reflection/overlap. No number asserted."
+            },
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower center, prow to the right, pale planked hull decorated with trailing garlands of leaves and small white flowers"
+            },
+            {
+              "type": "pole",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "from the standing figure's hand down-left into the water"
+            },
+            {
+              "type": "hanging lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "suspended from an ornate post at the right end (prow) of the boat, glowing warm yellow-white"
+            },
+            {
+              "type": "crescent moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right of the sky, bright, partly veiled by cloud"
+            },
+            {
+              "type": "distant spired building / castle with multiple tall towers",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right background, pale and hazy above the far treeline"
+            }
+          ],
+          "environment": [
+            "still pale water filling the middle and lower frame, with soft reflections and scattered floating petals",
+            "misty trees/foliage along the left edge and the far right shoreline",
+            "high pale blue-white clouded sky",
+            "flowering branches and pale blossoms intruding into the lower-left foreground",
+            "thin ruled border with ornamental corners; overall very high-key watercolor palette of white, pale blue, lilac"
+          ],
+          "lightSources": [
+            "crescent moon, upper right",
+            "the lit lantern at the boat's prow",
+            "a broad pale glow on the water below the moon"
+          ],
+          "moonPhase": "crescent (thin), horns oriented toward the lower left",
+          "spatialRelations": [
+            "the standing figure is behind the seated figure; both face the same direction, toward the prow at right",
+            "the row of blades stands between the seated figure and the lantern post at the prow",
+            "the lantern hangs at the far right of the boat, nearest the viewer's right edge",
+            "the moon is high above and to the right of the distant spires; its light falls on the water between the boat and the far shore",
+            "garlands of leaves and flowers hang down the outside of the hull into the water"
+          ],
+          "foreground": [
+            "blossoming foliage lower left",
+            "water surface and boat reflection",
+            "the boat hull and its flower garlands"
+          ],
+          "background": [
+            "misty treeline",
+            "pale spired towers at right",
+            "cloud bank and crescent moon"
+          ]
+        },
+        "uncertainObservations": [
+          "exact number of upright swords cannot be determined; blades overlap and the pale palette flattens them against the hull",
+          "whether the rightmost pale vertical is a further blade or the lantern post's shaft is ambiguous",
+          "the seated figure's face and gaze are largely hidden by the hood/veil",
+          "whether the distant structure is a building or a formation of tall pale trees is not fully resolvable through the mist"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "model self-reported uncertainty",
+          "existing": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+          "observed": "five hilts are individually resolvable, their pommels stepping upward from left to right; I could not confirm a sixth",
+          "evidence": "Pointing at each pommel in the row from left to right yields five distinct bulbous hilts with five shafts descending to the hull floor. The parenthetical 'six' asserts a number the image does not support, though the two rightmost hilts stand close enough that I will not rule a sixth out.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+            "with": "exact number of swords standing in the bow (five hilts are individually resolvable; the two rightmost stand close together)"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-005",
+        "visibleFacts": {
+          "style": "soft pale watercolour in white, ice blue and lilac, with a thin ornamented border line and small corner flourishes",
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left of centre, standing in the boat toward its near end",
+              "posture": "standing upright, three-quarter back view, body turned to the right",
+              "gaze": "away from the viewer, out over the water toward the right distance",
+              "heldObjects": [
+                "a long slender pole held in one hand, running diagonally down to the left and into the water",
+                "the other arm is raised forward at about chest height, hand near the face; whatever is in that hand, if anything, is not resolvable"
+              ],
+              "notes": "very long pale silver-white hair streaming left; a long white gown with a long translucent veil or train blowing out to the left behind her"
+            },
+            {
+              "position": "centre of the boat, in front of and to the right of the standing figure",
+              "posture": "seated or kneeling low in the boat, back to the viewer",
+              "gaze": "away from the viewer, forward along the boat",
+              "heldObjects": [],
+              "notes": "pale hair, white garment, noticeably smaller in scale than the standing figure"
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright blade standing hilt-up in the boat",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "in a staggered row in the right half of the boat, points resting on the hull floor and ornate hilts raised; pommel heights step upward from left to right"
+            },
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "spans the lower centre of the frame; pale wooden hull with a raised prow at the left, decorated along the outside with a swag of greenery and small white flowers"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "hanging from an ornamented post at the far right end of the boat, glowing warm; its light reflects on the water below it"
+            },
+            {
+              "type": "tall spired building",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "in the right middle distance behind mist, a pale mass of tall thin spires and pinnacles; it reads as a single structure but individual spires cannot be counted"
+            }
+          ],
+          "environment": [
+            "still water filling most of the frame, with soft reflections and a pale vertical light path below the distant spires",
+            "pale frost-toned trees and foliage along the left edge and across the far shoreline",
+            "cloudy sky in the upper third, light blue and white",
+            "pale flowering branches with white blossoms in the lower-left foreground"
+          ],
+          "lightSources": [
+            "a crescent moon in the upper right sky",
+            "the hanging lantern at the right end of the boat",
+            "a diffuse glow behind the distant spires reflected on the water"
+          ],
+          "moonPhase": "crescent — a thin bright crescent whose opening faces down and to the left",
+          "crown": false,
+          "halo": false,
+          "wings": false,
+          "horse": false,
+          "spatialRelations": [
+            "the standing figure is behind and to the left of the seated figure; both face away from the viewer in the same direction",
+            "the row of upright blades stands beyond the seated figure, between her and the lantern post at the boat's far end",
+            "the pole runs from the standing figure's hand diagonally down past the boat's left side into the water",
+            "the crescent moon is in the upper right, roughly above the distant spired building",
+            "the boat sits on open still water with the foreground blossoms partly overlapping its lower left"
+          ],
+          "foreground": [
+            "pale flowering branches at lower left",
+            "the boat's decorated hull",
+            "water surface with scattered pale petal-like flecks"
+          ],
+          "background": [
+            "misty spired building at right",
+            "far treeline",
+            "crescent moon and clouds"
+          ]
+        },
+        "uncertainObservations": [
+          "the two rightmost blades in the row stand close together; the count of 5 is my best resolution but the pair could conceivably be three overlapping",
+          "the standing figure's raised forward hand may be holding something small or may be empty — it cannot be resolved",
+          "the distant pale structure could be a castle or a cathedral-like building; only a silhouette of spires is visible and their number is not countable",
+          "a small indistinct pale form sits at the left rim of the boat near the prow; it may be a decorative element of the hull or a separate object"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

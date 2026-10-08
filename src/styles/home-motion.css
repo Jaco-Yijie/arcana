@@ -1,0 +1,85 @@
+/* Home entrance: visual timing never gates navigation or asset loading. */
+.identity-home {
+  --home-art-delay: 1s;
+  --home-brand-delay: 2s;
+  --home-card-delay: 3s;
+  --home-action-delay: 4s;
+  --home-enter-duration: 1s;
+  --home-float-duration: 8s;
+}
+.identity-home .hero-copy,
+.identity-home .hero-card-stage { animation: none; }
+.identity-home .art-backdrop-home {
+  animation: home-atmosphere var(--home-enter-duration) var(--ease-veil) both;
+}
+.identity-home .art-ink,
+.identity-home .art-cloud,
+.identity-home .art-damask,
+.identity-home .art-axis,
+.identity-home .art-seal,
+.identity-home .hero-sigil {
+  animation: home-art var(--home-enter-duration) var(--ease-veil) var(--home-art-delay) both;
+}
+.identity-home .art-backdrop-home .art-moon {
+  animation: home-art var(--home-enter-duration) var(--ease-veil) var(--home-art-delay) both,
+    arcana-ambient var(--art-motion-duration) var(--ease-veil) var(--home-brand-delay) infinite alternate;
+}
+.identity-home .hero-brand {
+  animation: home-brand var(--home-enter-duration) var(--ease-enter) var(--home-brand-delay) both;
+}
+.hero-brand-letter {
+  display: inline-block;
+  animation: home-letter .7s var(--ease-enter) calc(var(--home-brand-delay) + var(--letter-index) * 65ms) both;
+}
+.identity-home .hero-tagline {
+  animation: home-letter .8s var(--ease-veil) calc(var(--home-brand-delay) + .5s) both;
+}
+.hero-card-entry {
+  animation: home-card-in .9s var(--ease-enter) calc(var(--home-card-delay) + var(--card-index) * 90ms) both;
+}
+.hero-card-float {
+  position: relative;
+  animation: home-card-float var(--home-float-duration) var(--ease-veil) calc(var(--home-action-delay) + var(--card-index) * -.8s) infinite alternate;
+}
+.hero-card-float::before {
+  content: ''; position: absolute; inset: 5%; z-index: -1;
+  box-shadow: var(--shadow-book); border-radius: inherit;
+  animation: home-shadow var(--home-float-duration) var(--ease-veil) var(--home-action-delay) infinite alternate;
+}
+.identity-home .hero-card-stage::before {
+  animation: home-light var(--home-float-duration) var(--ease-veil) infinite alternate;
+}
+.hero-actions { position: relative; }
+.hero-actions::before {
+  content: ''; position: absolute; inset: -.4rem 0 auto; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--identity-gold), transparent);
+  pointer-events: none;
+  animation: home-action 1.2s var(--ease-veil) var(--home-action-delay) both;
+}
+/* A user who focuses the brand area should never have to wait for its reveal. */
+.identity-home:focus-within .hero-brand,
+.identity-home:focus-within .hero-brand-letter,
+.identity-home:focus-within .hero-tagline { animation: none; }
+@keyframes home-atmosphere { from { opacity: .25; } to { opacity: 1; } }
+@keyframes home-art { from { opacity: 0; } }
+@keyframes home-letter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes home-brand { from { filter: blur(3px); letter-spacing: .13em; } to { filter: blur(0); letter-spacing: .075em; } }
+@keyframes home-card-in { from { opacity: 0; transform: translateY(16px) rotate(-2deg); } to { opacity: 1; transform: none; } }
+@keyframes home-card-float { from { transform: translateY(0) rotate(-.35deg); } to { transform: translateY(-4px) rotate(.35deg); } }
+@keyframes home-shadow { from { opacity: .35; } to { opacity: .65; } }
+@keyframes home-light { from { opacity: .4; } to { opacity: .6; } }
+@keyframes home-action { from { opacity: 0; transform: scaleX(.6); } to { opacity: .65; transform: scaleX(1); } }
+@media (max-width: 767px) {
+  .identity-home .hero-brand, .hero-brand-letter { animation: none; }
+  .identity-home .hero-brand { animation: home-letter .8s var(--ease-veil) var(--home-brand-delay) both; }
+  .hero-card-entry { animation-name: home-card-mobile; }
+  .hero-card-float, .hero-card-float::before { animation: none; }
+  .identity-home .art-backdrop-home .art-moon { animation: none; }
+}
+@keyframes home-card-mobile { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .identity-home *, .identity-home *::before, .identity-home *::after { animation: none !important; }
+}
+@media (update: slow) {
+  .identity-home *, .identity-home *::before, .identity-home *::after { animation: none !important; }
+}

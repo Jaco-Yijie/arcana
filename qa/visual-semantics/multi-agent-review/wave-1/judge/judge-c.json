@@ -1,0 +1,67 @@
+[
+  {
+    "reviewId": "review-114",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image before reading any reviewer note and counted the planted swords at several magnifications. Left row: 4 swords, each with a visible round pommel, grip and cross-guard. Right row: 3 swords, same. Total 7 individually resolvable. I then specifically tested the two places a hidden sword could hide. (a) Inward side: the gap between the farthest right-side sword and the figure is open, brightly lit background sky and wall — a fourth sword there would be silhouetted against the glow, and there is none. (b) Outward side: there is one faint thin vertical streak near the right frame edge, but it has no pommel and no cross-guard, and a sword standing nearer the viewer than the last one would be rendered larger and brighter, not dimmer — it is a wall/edge highlight, not a blade. The bright vertical at the far left edge runs the full height of the artwork, well beyond the swords, and is the printed border rule. Separately, on the figure: one hand (the figure's right) is raised and pinching the trailing end of the cloth band at the temple; the other arm hangs down at the figure's side with the fingers open and relaxed, clearly visible against the dark robe. Only one hand is raised.",
+    "reason": "All five AUTO_CORRECT thresholds are met for the right-side sword count. (1) The fact is unambiguous on the pixels and I verified it myself at four separate crops, including ruling out the hidden-sword case that both reviewers flagged as their residual doubt. (2) Two independent reviewers reported the same thing: reviewer-a ('three upright swords on the right', hilts at x=418/455/492) and reviewer-c ('exactly three pommel-and-cross-guard units' on the right, left row has four). Both also independently counted 4 on the left, so the existing 'four on the left' stands. (3) I reached the same count independently. (4) It is a pure count, not an interpretation. (5) It is a single precise substring swap, and 'four upright swords on the right' is distinct from 'four upright swords on the left', which is correct and untouched. The reason I can go to high confidence where both reviewers stopped at medium is that neither of them ran the inward-gap test: the lit background behind the right row positively excludes a fourth blade rather than merely failing to show one. I am NOT applying reviewer-a's second proposed change ('both hands raised'). That is wrong: the figure's left arm hangs down at its side with open fingers, which I can see plainly in an enlarged crop, and reviewer-c independently described the same thing ('the right arm is raised with the hand at the side of the head'). The existing wording 'one hand raised to a band of cloth across the eyes' is correct and stays.",
+    "overturnedReviewer": true,
+    "patch": {
+      "replace": [
+        {
+          "find": "four upright swords on the right",
+          "with": "three upright swords on the right"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-116",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "I opened the image first. At the lower left, below and beside the large glowing engraved star-chart disc, there is a group of three or four flat, layered, roughly rectangular forms catching a thin highlight along their top edges. At native resolution they carry no spines, no covers, no page-block striation and no binding — they read exactly as well as stacked stone slabs or low steps, and they sit continuous with the rock and roots around them. I cannot identify them as books. Two things I checked that the reviewers disputed and that I find the existing description gets RIGHT: (a) the object on the ground at the right genuinely is an armillary sphere on a stand — enlarged, it shows nested rings with an inner tilted ring read as an ellipse, radial meridian spokes, a protruding polar axis pin at the top, all mounted on a tiered stepped pedestal; (b) the disc in the upper right sky is a complete, unbroken circular sphere with faint surface mottling and no terminator line or crescent horns anywhere on it. Also confirmed and unchanged: three upright golden goblets standing in a row on the paving, a fourth goblet floating just above the open palm of a translucent nebula-hand reaching in from the right, and the seated figure's eyes open but directed down and to the viewer's left, away from the offered cup.",
+    "reason": "The books are the textbook MARK_UNCERTAIN case: the existing description asserts a specific identification that the pixels do not support, and I cannot substitute a confident alternative either — 'stone slabs' is no better evidenced than 'books'. Both reviewer-c and reviewer-e independently flagged it on the same grounds (no spines, covers, page edges or bindings; flat rectangles in deep shadow), and I independently agree after enlarging the region 12x. Because it is ambiguous rather than unambiguous, it fails AUTO_CORRECT threshold 1, so I remove the claim instead of rewriting it. I name the items rather than discarding the whole keyObjects field, so the reliable entries both reviewers confirmed — the chalices, the tree, the armillary sphere, the astrolabe disc, the constellation lines, the pavilion — all survive. Three items are named. The first is the books entry itself. The second is the self-reported-uncertainty line 'exact number of books in the left-hand stack', which presupposes the same unsupported identification and would otherwise be left dangling. The third is the self-reported-uncertainty line offering 'crescent moon' as a possibility: both reviewers independently and explicitly ruled out a crescent, and I confirmed the disc is a complete unbroken circle, so leaving that line in would feed the interpretation model an option that is affirmatively false. Dropping it costs almost nothing, since no moon phase is asserted as fact anywhere else in the record. I am overturning reviewer-e on the armillary sphere: reviewer-e claimed no vertical stand, no nested rings and no three-dimensional armature are resolvable, but all three are plainly visible when enlarged, and reviewer-c independently described it as a 'ring device on a post'. The existing keyObjects and spatialRelations entries for the armillary sphere are correct and are left untouched.",
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "stack of books beside the astrolabe"
+      },
+      {
+        "field": "model self-reported uncertainty",
+        "item": "exact number of books in the left-hand stack"
+      },
+      {
+        "field": "model self-reported uncertainty",
+        "item": "whether the small pale disc at upper right is a crescent moon or a partially lit sphere"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-117",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image first. The two swords on the ground at the lower left lie fully visible hilt to tip, separate and roughly parallel, both with pommel to the upper left and point to the lower right, the second offset down and to the right of the first. There is unbroken bare earth and grass between them along their entire length and no intersection anywhere — they are neither crossed nor overlapping. The foreground figure is mid-stride, not standing: his trailing boot (viewer's left) is up on its toe with the heel clear of the ground and the leg extended behind him, while the leading boot (viewer's right) is planted flat and nearer the viewer, with his torso carried forward over it. His head is turned in full left profile, looking back toward the two figures receding up the shore. Also noted: he carries one sword point-down in his lowered hand, and in the crook of his other arm I can resolve three distinct cross-guards with three descending blade faces, not two — see the reason field. The two background figures are both walking away with their backs turned, neither carrying anything visible. The tunic hem is an even, regular scalloped/dagged edge with uniformly sized and spaced points, repeated identically on the shoulder yoke.",
+    "reason": "Two separate items clear all five AUTO_CORRECT thresholds, and I patch only those. FIRST, the crossed swords. (1) Unambiguous: at high magnification both blades are fully visible with clear ground between them. (2) Two independent reviewers reported it — reviewer-b filed it as a high-confidence issue ('they neither cross nor overlap'), and reviewer-d independently recorded 'two separate blades lying roughly parallel' in their blind observation before seeing the existing text. (3) I agree independently. (4) It is a spatial fact, not an interpretation. (5) It is one precise substring. Note the generating model itself flagged this as uncertain, so this closes its own open question. SECOND, standing versus walking. (1) Unambiguous: the lifted rear heel is a hard visual fact. (2) Both reviewer-b and reviewer-d filed this as a separate high-confidence issue. (3) I confirmed it. (4) It is posture, observable. (5) Three precise substrings, which I update together so that scene, spatialRelations and visualTensions do not disagree with each other. WHAT I DELIBERATELY DID NOT PATCH: the sword count. The existing text says 'three swords held (one in hand, two against his chest)'. My own reading is that the bundle holds three, not two, which would make four held and six in the frame — but BOTH reviewers explicitly recorded that sub-count as null and refused to commit to two or three, so AUTO_CORRECT threshold 2 is not met for any specific replacement number, and I will not assert a count on my own authority alone. I therefore leave 'three swords' standing in the scene substring unchanged rather than endorsing a hedge, and I escalate the count in my report instead. I also did not patch two single-reviewer items: reviewer-b's 'no V at the top' border note (I confirm the top border is plain double ruling with foliate corner flourishes only, and the one centred fleuron sits at the bottom divider — but only one reviewer raised it, and the top border sits directly against the mask band), and reviewer-d's 'torn versus dagged' tunic note (I agree the scalloping is regular and decorative, and reviewer-b's blind observation also says 'scalloped hem', but reviewer-b did not file it as an issue).",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "two swords lying crossed on the ground at lower left",
+          "with": "two swords lying separate and roughly parallel on the ground at lower left"
+        },
+        {
+          "find": "stands on a stony shore holding three swords",
+          "with": "strides on a stony shore holding three swords"
+        },
+        {
+          "find": "the standing man faces left while the other two walk away from him",
+          "with": "the striding man faces left while the other two walk away from him"
+        },
+        {
+          "find": "in front of and below the standing man",
+          "with": "in front of and below the striding man"
+        }
+      ]
+    }
+  }
+]

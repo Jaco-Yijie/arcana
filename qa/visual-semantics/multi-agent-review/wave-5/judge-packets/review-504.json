@@ -1,0 +1,428 @@
+{
+  "reviewId": "review-504",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-504.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain vs corrected",
+    "object-count disagreement"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 1,
+    "uncertain": 1,
+    "corrected": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-504.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-504",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, standing on a rocky ridge in the lower-middle of the frame",
+              "posture": "standing, weight on both legs, body in three-quarter view turned toward viewer-right, back partly to the viewer",
+              "gaze": "head tilted up and toward viewer-right, looking up at the raised sword",
+              "heldObjects": [
+                "a long straight sword gripped in the right hand (viewer-right), arm fully extended upward above head height, blade pointing straight up with the point toward the top of the frame",
+                "a second, smaller sheathed blade or dagger hanging at the left hip, hilt visible near the waist"
+              ],
+              "clothing": "short blue-grey belted tunic with decorated hem and cuffs, a long dark red cloak streaming out to viewer-left, knotted rope or cord belt, laced knee-high boots, curly dark hair, bare head"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-center, held aloft above the figure",
+              "orientation": "vertical, point upward, crossguard near the figure's fist",
+              "arrangement": "single"
+            },
+            {
+              "type": "laurel wreath",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-center, encircling the sword blade partway up",
+              "orientation": "horizontal ring seen nearly edge-on, open at the top",
+              "arrangement": "single, threaded onto the blade"
+            },
+            {
+              "type": "book",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right side of frame, some airborne mid-right, others stacked and strewn on the ground at lower-right",
+              "orientation": "mixed; airborne ones open with covers splayed, ground ones flat and tilted",
+              "arrangement": "scattered"
+            },
+            {
+              "type": "loose paper / sheet",
+              "count": null,
+              "countConfidence": "low",
+              "where": "blowing across the right half of the frame and littering the rocky ground at bottom",
+              "orientation": "tumbling at many angles",
+              "arrangement": "scattered, wind-driven"
+            },
+            {
+              "type": "chest / casket",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower-right corner, open with chains or straps across it",
+              "orientation": "lid open and tilted toward viewer",
+              "arrangement": "one large chest with at least one smaller box beside it"
+            },
+            {
+              "type": "chain",
+              "count": null,
+              "countConfidence": "low",
+              "where": "mid-right, looping out of the airborne cluster and over the chest",
+              "orientation": "coiling, broken into loose lengths",
+              "arrangement": "tangled"
+            },
+            {
+              "type": "falling leaf",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered across the left and center sky",
+              "orientation": "tumbling",
+              "arrangement": "scattered"
+            }
+          ],
+          "environment": [
+            "rocky clifftop or ridge the figure stands on",
+            "broad valley below with a river and a multi-arched stone bridge at left",
+            "a many-towered walled castle or city on a hill at mid-left",
+            "distant mountain range along the left horizon",
+            "heavy billowing clouds filling most of the sky",
+            "printed ruled border and corner ornaments framing the whole image"
+          ],
+          "lightSources": [
+            "a burst of radiating light at the sword's tip, upper-center, with rays spreading outward",
+            "general pale daylight behind the clouds"
+          ],
+          "moonPhase": "not visible — no moon anywhere in the frame; the sky shows daytime clouds and a light burst at the sword point",
+          "spatialRelations": [
+            "the laurel wreath sits on the blade above the figure's fist and below the light burst",
+            "the castle and bridge are at the lower-left, behind and below the figure",
+            "the airborne books, chains and papers are to the viewer-right of the figure",
+            "the open chest sits on the ground at the lower-right, below the airborne cluster",
+            "the cloak streams to viewer-left, opposite the raised arm"
+          ],
+          "foreground": [
+            "rocky ground with strewn papers and books",
+            "open chest and smaller box at lower-right",
+            "the figure's boots and lower legs"
+          ],
+          "background": [
+            "cloud-filled sky",
+            "castle on a hill, river, arched bridge",
+            "distant mountains"
+          ]
+        },
+        "uncertainObservations": [
+          "Cannot count the books or loose sheets — they overlap and many are partly cut off at the frame edge.",
+          "Cannot tell whether the object at the figure's left hip is a sheathed dagger, a sword scabbard, or a hanging pouch strap.",
+          "The airborne cluster at mid-right mixes chains, book covers and torn pages; I cannot separate how many distinct items it contains.",
+          "Unclear whether the lower-right box is a chest, a crate, or a broken reliquary."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "small ring or circlet among the falling papers",
+          "observed": "飞散的书页之间没有记录到小环／冠圈。盲观察里唯一的环形物是套在剑身上、位于剑柄上方的那个金色叶环。纸页群极密且互相遮挡，图上分辨不出另有一枚小环",
+          "evidence": "盲观察记录：wreath 只有 1 个，位置「套在剑身上，位于画面上部、剑柄上方」；uncertainObservations 写明「空中飞散的书与纸页数量极多且互相遮挡，完全数不清」",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-504",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center 偏 viewer-left，站在画面下部的岩石高地上",
+              "posture": "站立，双脚分开踩在岩崖边缘；身体以背侧／四分之三侧面朝向观者；右臂（viewer-right 那条）高举过头",
+              "gaze": "头部侧转并仰起，侧脸朝 viewer-right 上方，视线盯着高举的剑尖方向",
+              "heldObjects": [
+                "右手（viewer-right 一侧）在头顶上方高举一把剑，剑身竖直朝上；左臂自然垂在身侧，手中无物"
+              ],
+              "clothing": "棕色卷发，不戴头饰；蓝灰色束腰短袍，领口与下摆有金色缠枝刺绣；锈红色长斗篷向 viewer-left 后方飘起；腰间两条交叉皮带，左胯挂一个空剑鞘；深色紧腿裤；小腿打绑带的高筒靴"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面上部中偏右，被人物高举",
+              "orientation": "竖直，剑尖朝正上方，剑身一直伸到画面上缘；金色十字护手与圆球形柄头",
+              "arrangement": "单个"
+            },
+            {
+              "type": "wreath",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "套在剑身上，位于画面上部、剑柄上方",
+              "orientation": "环形平面正对观者，开口朝上，剑身从环中穿过",
+              "arrangement": "单个金色月桂／橄榄叶编成的环"
+            },
+            {
+              "type": "chest",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面 viewer-right 下部的岩地上",
+              "orientation": "箱盖向 viewer-right 后方大开，箱口朝上",
+              "arrangement": "单个木箱，带金属包角与锁扣"
+            },
+            {
+              "type": "book",
+              "count": null,
+              "countConfidence": "low",
+              "where": "一部分从箱中飞出悬在空中，另一部分散落堆在箱子周围的地上",
+              "orientation": "空中的书摊开、书页张开；地上的书有的平放有的斜插",
+              "arrangement": "散落＋空中漂浮"
+            },
+            {
+              "type": "loose page",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面 viewer-right 大半个区域，从地面一直飘到天空",
+              "orientation": "各种角度翻卷",
+              "arrangement": "成群向上向右飞散"
+            },
+            {
+              "type": "rope",
+              "count": null,
+              "countConfidence": "low",
+              "where": "缠绕在飞出的书册上并向上甩开，画面 viewer-right 中部",
+              "orientation": "呈螺旋与波浪状向外弹开",
+              "arrangement": "若干股绳索，结头正在松脱"
+            },
+            {
+              "type": "castle",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "画面 viewer-left 远景，山谷中的一座山丘上",
+              "orientation": "尖顶塔楼群，侧面朝向观者",
+              "arrangement": "一整片带多座塔楼的城堡／城镇"
+            },
+            {
+              "type": "bridge",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面 viewer-left 下部，城堡下方的河面上",
+              "orientation": "水平横跨，多孔石拱",
+              "arrangement": "单座多拱桥"
+            }
+          ],
+          "environment": [
+            "人物脚下是裸露的岩石崖顶，前景一直延伸到画面下缘",
+            "viewer-left 是开阔河谷：河流、针叶林、起伏草坡",
+            "远处是连绵的灰蓝色山脉，横贯画面中部",
+            "天空占画面上半，有大团细线刻画的积云，viewer-left 的云更暗更厚",
+            "空中有若干飘飞的落叶"
+          ],
+          "lightSources": [
+            "剑尖处迸发的放射状强光（画面上部中偏右，是画面主光源，向四周射出线状光芒）"
+          ],
+          "moonPhase": "not visible — 画面是白天，天空只有云，没有月亮",
+          "spatialRelations": [
+            "剑在人物的正上方偏 viewer-right，花环又在剑柄的上方",
+            "放射光在花环与剑尖所在的位置向四周扩散",
+            "城堡与石桥在人物的 viewer-left 后下方，远低于人物所站的崖顶",
+            "木箱、书与飞页在人物的 viewer-right 下方",
+            "山脉横在人物腰部高度的远景上",
+            "人物脸的朝向与举剑的方向一致，都指向 viewer-right 上方"
+          ],
+          "foreground": [
+            "岩石崖顶与碎石",
+            "viewer-right 下角的木箱、成堆的书与散页"
+          ],
+          "background": [
+            "城堡与多拱石桥",
+            "河谷、森林与远山",
+            "带积云的天空"
+          ]
+        },
+        "uncertainObservations": [
+          "空中飞散的书与纸页数量极多且互相遮挡，完全数不清",
+          "绳索的股数数不清",
+          "书页上有细密的手写线条，但文字内容完全看不清",
+          "剑尖被画幅上缘截断，看不到剑的最顶端",
+          "左胯那件长条物判断为空剑鞘（没有剑柄露出），但也可能是别的佩具，不能完全确定",
+          "viewer-left 远景的建筑群是单一城堡还是城堡加城镇，分不清",
+          "花环的叶形像月桂或橄榄，具体是哪种植物分辨不出"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "long straight double-edged sword held point-up",
+          "observed": "There are TWO swords on this card, not one. Besides the sword raised point-up, a second sword hangs sheathed in a scabbard at the figure's viewer-left hip, running point-down past his left knee. The keyObjects list accounts for only the raised one.",
+          "evidence": "Figure's left hip and leg, roughly x=170-330 / y=480-800 in the 560x933 image. Enlarged 4x it shows a slim tooled-leather scabbard strapped to the belt by two buckled hangers, with a metal locket at the mouth and a chape at the lower end, extending from the belt to below the knee.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "long straight double-edged sword held point-up",
+            "with": "long straight double-edged sword held point-up\n  - a second sword, sheathed in a scabbard hanging point-down at the figure's left hip"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-504",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, standing on a rocky ridge in the lower-middle of the frame; he fills the vertical middle of the card",
+              "posture": "standing upright on a rocky outcrop, weight on both legs, seen from BEHIND at a three-quarter angle (his back is toward the viewer); torso twisted slightly toward the viewer-right; viewer-right arm thrown straight up and out above the head",
+              "gaze": "head turned to his own right (toward the viewer-right) and tilted UP; we see his face in sharp profile against the sky, looking up along the raised arm at the sword. This is a turn toward the raised arm, not a backward look over the shoulder at the viewer",
+              "heldObjects": [
+                "viewer-right hand (raised arm): a single fist closed around the grip of a sword, arm fully extended upward; the blade continues straight up, point UP",
+                "viewer-left arm: hangs down close to the body, mostly hidden behind the torso and cloak; holds nothing"
+              ],
+              "clothing": "slate-blue knee-length tunic with gold embroidered hem and sleeve bands; a russet/brick-red cloak pinned at the shoulders and streaming out to the VIEWER-LEFT; a tooled leather belt plus a diagonal baldric strap; laced/wrapped leather boots to the knee; curly brown hair, bare head, no helmet or crown"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one raised overhead in the upper-center of the frame; a second sheathed in a scabbard hanging at the figure's viewer-left hip and running down past his left knee",
+              "orientation": "the raised sword is VERTICAL with the point UP; the scabbarded one hangs point-DOWN, tilted slightly",
+              "arrangement": "separate — one aloft, one at the hip; they do not touch or cross"
+            },
+            {
+              "type": "laurel wreath",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-center, encircling the raised blade roughly two-thirds of the way up",
+              "orientation": "ring lying in the picture plane, open at the top, tied with a small bow at the bottom where the two leafy sprigs meet",
+              "arrangement": "one wreath made of two mirrored laurel sprigs; the blade passes through its centre"
+            },
+            {
+              "type": "open book",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right side of the frame, a cluster tumbling in mid-air at mid-height plus more stacked on the ground at lower-right",
+              "orientation": "tumbling at all angles, covers splayed open",
+              "arrangement": "a scattered airborne swarm plus ground piles — too many and too overlapped to count"
+            },
+            {
+              "type": "loose page / sheet of paper",
+              "count": null,
+              "countConfidence": "low",
+              "where": "blowing across the whole right half of the sky and littering the rocky ground at lower-right",
+              "orientation": "random, curling in the wind",
+              "arrangement": "scattered swarm, uncountable"
+            },
+            {
+              "type": "twisted rope / cord",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right of centre, writhing up out of the airborne book cluster",
+              "orientation": "curling tendrils rising upward and outward",
+              "arrangement": "several braided strands snaking out of the books; individual strands merge and I cannot separate them"
+            },
+            {
+              "type": "treasure chest",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower-right corner, resting on the rocky ground",
+              "orientation": "lid thrown open, facing the viewer-left",
+              "arrangement": "single, overflowing with papers and scrolls; a rope loops over its rim"
+            },
+            {
+              "type": "walled castle / town",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left middle distance, on a rise above a river valley",
+              "orientation": "seen from across the valley",
+              "arrangement": "one cluster of many conical-roofed towers and curtain walls"
+            },
+            {
+              "type": "arched stone bridge / aqueduct",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "lower-left middle distance, spanning the river below the castle",
+              "orientation": "horizontal, running left to right",
+              "arrangement": "a single multi-arch span; I count roughly five or six arches but will not commit to the number"
+            },
+            {
+              "type": "bird",
+              "count": null,
+              "countConfidence": "low",
+              "where": "small specks in the sky above the castle at the left",
+              "orientation": "in flight",
+              "arrangement": "a few scattered specks, too small to count reliably"
+            }
+          ],
+          "environment": [
+            "a bare rocky ridge or cliff edge forming the foreground the figure stands on",
+            "a broad green river valley with trees and scattered hedgerows in the middle distance at the left",
+            "a range of blue-grey mountains along the horizon",
+            "a pale cream sky with large banked cumulus clouds rendered in fine engraved hatching",
+            "a printed double-rule border with corner ornaments framing the whole picture"
+          ],
+          "lightSources": [
+            "a burst of radiating straight light-rays centred on the upper part of the raised blade, just above and behind the laurel wreath — the blade itself reads as the brightest thing in the frame",
+            "general bright daylight from the pale sky; no sun disc is drawn"
+          ],
+          "moonPhase": "not visible — daytime sky with clouds, no moon or sun disc drawn",
+          "spatialRelations": [
+            "the raised sword rises from his viewer-right hand up through the top-centre of the frame; the wreath sits around the blade well above his head",
+            "the castle and valley lie behind him on the viewer-LEFT, below the level of the ridge",
+            "the swarm of books, pages and ropes is on the viewer-RIGHT of him, at and below shoulder height",
+            "the open chest sits on the ground at the lower-right, below the airborne books",
+            "his cloak streams out behind him to the viewer-LEFT while the papers blow up and to the viewer-RIGHT",
+            "the light-burst is centred behind the blade, above and to the right of his head"
+          ],
+          "foreground": [
+            "the rocky ridge and loose stones",
+            "the figure from the knees down, including the hip scabbard",
+            "the open chest, book piles and scattered sheets at the lower-right"
+          ],
+          "background": [
+            "the castle, river, bridge and valley on the left",
+            "mountains on the horizon",
+            "clouded sky filling the upper half",
+            "the radiating light-burst around the blade"
+          ]
+        },
+        "uncertainObservations": [
+          "I cannot be fully certain the hip object is a scabbarded sword rather than a long sheathed knife or a staff; it is slim, point-down and strapped to the belt, with a visible chape at the lower end.",
+          "The number of books and loose pages is genuinely uncountable; I did not estimate.",
+          "Whether the writhing tendrils among the books are ropes, chains, vines or torn binding cords cannot be resolved; they read as twisted cord to me.",
+          "The arch count on the bridge is approximately five or six but the right end fades into haze.",
+          "No cast shadow of the figure is clearly drawn on the rock, so I cannot state a shadow direction for this card.",
+          "The cloak streams left while the papers blow right; I report both as drawn rather than resolving the wind direction."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

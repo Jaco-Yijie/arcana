@@ -20,7 +20,7 @@
 
 import type { DeckDefinition, DeckVisualSpec } from './types'
 import type { DeckId } from './ids'
-import { ALL_DECK_IDS, DEFAULT_DECK_ID } from './ids'
+import { ALL_DECK_IDS, DEFAULT_DECK_ID, PRODUCTION_DECK_IDS, isProductionDeck } from './ids'
 
 /* ══════════════════════════════════════════════════════════════
  * 装帧规格
@@ -265,4 +265,19 @@ export function getDeck(id: DeckId): DeckDefinition {
 export const artworkDecks = decks.filter((d) => d.kind === 'artwork')
 export const legacyDecks = decks.filter((d) => d.kind === 'legacy')
 
-export { ALL_DECK_IDS, DEFAULT_DECK_ID }
+/**
+ * 对用户开放的五套，按 PRODUCTION_DECK_IDS 的顺序。
+ *
+ * 【所有面向用户的牌组列表都必须读这一个】
+ * 不要在页面里 `decks.filter(...)` 自己判断 —— 那是把同一个产品决定
+ * 复制到 N 个地方，而这次要修的问题恰恰就是首页和 Deck Library
+ * 各自判断、结果不一致（首页摆着五套点不动的「筹备中」）。
+ *
+ * 顺序取自 PRODUCTION_DECK_IDS 而不是 registry 的声明顺序：
+ * 清单是产品决定，陈列顺序属于同一个决定。
+ */
+export const productionDecks: DeckDefinition[] = PRODUCTION_DECK_IDS.map(
+  (id) => deckById[id],
+).filter((d): d is DeckDefinition => d !== undefined)
+
+export { ALL_DECK_IDS, DEFAULT_DECK_ID, PRODUCTION_DECK_IDS, isProductionDeck }

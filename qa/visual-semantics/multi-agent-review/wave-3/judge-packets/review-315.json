@@ -1,0 +1,284 @@
+{
+  "reviewId": "review-315",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-315.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-315.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "wooden wall rack holding upright swords with dark blades and brass-toned hilts",
+          "observed": "wall-mounted swords hung point-DOWN — pommels and brass crossguards uppermost, dark blades descending vertically",
+          "evidence": "On each unit a small rounded pommel with a brass collar sits at the top of the run, a brass crossguard crosses roughly a third of the way down, and the dark blade continues below it and tapers to a point that ends just above a horizontal rail. The wide part of every blade is at the top and the taper is at the bottom — the reverse of point-up. 'Upright' reads as point-up in an orientation-sensitive field and is the same error class flagged in earlier rounds.",
+          "confidence": "high"
+        },
+        {
+          "field": "emphasizedAspects",
+          "existing": "sleepless night-time distress",
+          "observed": "the scene is lit by bright daylight — it is not night",
+          "evidence": "The multi-paned window on the right is filled with bright, sunlit green foliage and throws a strong warm daylight wash across the curtain, the sill ferns, the bed and the woman's back. Daylight, not the small foreground candle, is the dominant light source in the frame. Nothing visible supports night.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "wooden wall rack holding upright swords with dark blades and brass-toned hilts",
+            "with": "wooden wall rack holding swords hung point-down, dark blades below brass-toned crossguards and pommels"
+          },
+          {
+            "find": "while a rack of swords hangs on the wall behind her",
+            "with": "while a rack of point-down swords hangs on the wall behind her"
+          },
+          {
+            "find": "sleepless night-time distress",
+            "with": "daytime distress, the window full of bright sunlight"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-315",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, seated on the near edge of a bed",
+              "posture": "seated, torso bent forward, elbows drawn in, face buried in both hands",
+              "gaze": "not visible — face is covered by the hands",
+              "heldObjects": [],
+              "appearance": "dark curly hair gathered up with loose strands falling, pale long-sleeved blouse, long dark green skirt/dress with an apron-like overlay"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade/sword mounted on the wall",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "on the dark wooden plank wall behind and above the figure, upper left quadrant",
+              "orientation": "point-DOWN — pommels and crossguards uppermost, blades descending vertically",
+              "arrangement": "a single evenly spaced horizontal row, all parallel and flat against the wall; the leftmost is partly veiled by hanging ivy and the rightmost fades into shadow near the figure's head"
+            },
+            {
+              "type": "potted plant / fern",
+              "count": null,
+              "countConfidence": "low",
+              "where": "on the window sill at right (at least two pots), in baskets at lower left and lower right, plus trailing ivy on the back wall",
+              "orientation": "upright",
+              "arrangement": "scattered around the room's edges, framing the lower corners"
+            },
+            {
+              "type": "candle (lit)",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on a small wooden table/stool in the lower-center foreground, standing in a shallow dish/tray",
+              "orientation": "upright, flame burning",
+              "arrangement": "single"
+            },
+            {
+              "type": "window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right side of the room, multi-paned",
+              "orientation": "vertical, open to daylight",
+              "arrangement": "single, with a sheer curtain drawn to its left"
+            },
+            {
+              "type": "pillow",
+              "count": null,
+              "countConfidence": "low",
+              "where": "on the bed at left",
+              "orientation": "n/a",
+              "arrangement": "one clearly visible, a second may be stacked behind it"
+            },
+            {
+              "type": "mushroom",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "bottom left corner, growing on the floor",
+              "orientation": "upright caps",
+              "arrangement": "one larger, one smaller beside it"
+            },
+            {
+              "type": "jug/pitcher",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "lower left foreground beside the candle table",
+              "orientation": "upright",
+              "arrangement": "single"
+            },
+            {
+              "type": "wicker basket",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower left and lower right foreground, holding ferns; another beneath the candle table",
+              "orientation": "upright",
+              "arrangement": "scattered across the foreground"
+            }
+          ],
+          "environment": [
+            "interior of a rustic timber-walled room",
+            "bed with a dark green quilt/blanket occupying the lower half",
+            "daylight window with green foliage visible outside",
+            "ivy and vines growing on the interior back wall",
+            "pale ornamental floral/vine border painted along the left and right edges and corners of the image"
+          ],
+          "lightSources": [
+            "daylight through the window on the right (the dominant light)",
+            "lit candle flame in the lower-center foreground"
+          ],
+          "spatialRelations": [
+            "the row of point-down blades hangs on the wall directly above and behind the seated figure",
+            "the figure sits on the bed's near edge with the window and its plants to her right, the pillow to her left",
+            "the candle on the low table sits between the viewer and the bed, below and in front of the figure"
+          ],
+          "foreground": [
+            "lit candle on a small table",
+            "jug",
+            "wicker baskets with ferns",
+            "mushrooms at bottom left",
+            "potted greenery bottom right"
+          ],
+          "background": [
+            "plank wall with the row of point-down blades",
+            "ivy on the wall",
+            "window with curtain and sill plants",
+            "bright green foliage outside the window"
+          ]
+        },
+        "uncertainObservations": [
+          "Blade count on the wall: five distinct hilt-and-blade units are resolvable, but the leftmost is partly hidden behind hanging ivy and the rightmost fades into shadow, so a sixth outside the visible span cannot be ruled out.",
+          "Whether the wall objects are hung on brackets or mounted flush cannot be determined.",
+          "Number of pillows on the bed is unclear (one certain, possibly two).",
+          "The figure's facial expression cannot be observed at all — the face is entirely covered by her hands."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "emphasizedAspects",
+          "existing": "sleepless night-time distress",
+          "observed": "the scene is daytime — bright daylight floods in through the window",
+          "evidence": "The multi-pane window at the right is filled with bright daylight and sunlit green foliage, and that light falls across the woman's back and the bed; the packet's own scene line and visualTensions already say 'daylight' and 'bright sunlit window'.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "sleepless night-time distress",
+            "with": "daytime distress in a quiet room"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-315",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of frame",
+              "posture": "seated on the edge of a bed, torso folded forward, elbows toward the knees",
+              "gaze": "not visible — both hands are pressed over the face, covering the eyes",
+              "heldObjects": [
+                "nothing; both hands cover the face"
+              ],
+              "clothing": "pale long-sleeved blouse, dark green long skirt; dark curly hair gathered up with loose strands falling"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword mounted on the wall",
+              "count": null,
+              "countConfidence": "low",
+              "where": "on the timber wall panel behind and above the bed, upper-left quadrant",
+              "orientation": "all hang hilts UP, blades pointing DOWN toward the floor",
+              "arrangement": "a single evenly spaced row across the panel; hilts roughly level with one another; the row is cut off at the left by the frame border and ends at the right where the wall meets the window corner"
+            },
+            {
+              "type": "potted plant / fern",
+              "count": null,
+              "countConfidence": "low",
+              "where": "one on the windowsill at right, one in a basket at lower left, one in a basket at lower right; further greenery spills in from the frame edges",
+              "orientation": "upright",
+              "arrangement": "scattered around the room's perimeter"
+            },
+            {
+              "type": "mushroom",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "bottom-left corner of the scene, on the floor",
+              "orientation": "upright, caps up",
+              "arrangement": "one larger in front, one smaller just behind and to its right"
+            },
+            {
+              "type": "candle with lit flame",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the low table at bottom-center, in a shallow dish/holder",
+              "orientation": "upright",
+              "arrangement": "single"
+            },
+            {
+              "type": "pillow on the bed",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "left end of the bed",
+              "orientation": "stacked/leaning",
+              "arrangement": "one behind the other; the rear one is partly hidden"
+            }
+          ],
+          "environment": [
+            "a small rustic bedroom with dark timber walls",
+            "a tall multi-pane window at the right with a pale curtain, daylight and green foliage outside",
+            "a bed with a dark green quilt and a patterned throw draped at the right",
+            "a low wooden table at bottom-center with a bowl and a candle",
+            "a ceramic jug and a wicker basket at lower left",
+            "a wicker basket of greenery at lower right",
+            "ivy or creeper growing across the upper wall and around the window",
+            "a white painted decorative floral/scrollwork border running down the left and right edges of the scene"
+          ],
+          "lightSources": [
+            "daylight through the window at the right — the dominant source, lighting the figure's back and the bed",
+            "a small candle flame on the low table at bottom-center"
+          ],
+          "spatialRelations": [
+            "the row of downward-pointing wall swords is directly behind and above the seated figure",
+            "the figure sits with her back to the window, so her face and hands are in relative shadow",
+            "plants and baskets ring the floor around the foot of the bed"
+          ],
+          "foreground": [
+            "low table with candle and bowl",
+            "baskets and potted greenery",
+            "mushrooms at bottom-left"
+          ],
+          "background": [
+            "timber wall with hanging swords",
+            "window with daylight and foliage"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of swords on the wall cannot be stated reliably: at least 4 hilts are separable, and a 5th shape may be either another sword or a wall batten — the panel is also clipped by the frame border on the left, so more may be out of view",
+          "whether the figure is crying, exhausted or shielding her eyes cannot be determined — only that both hands cover the face",
+          "the object in the shallow dish beside the candle is not identifiable",
+          "the pillow count is uncertain because the shapes overlap"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

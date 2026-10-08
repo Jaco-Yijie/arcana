@@ -1,25 +1,34 @@
 /**
- * Layer 2 · 牌组标识与 Legacy 迁移
+ * Layer 2 · 牌组标识
  *
- * 【两类牌组，边界必须清楚】
- * - Artwork Deck（5 套）：拥有 78 张真实插画的目标牌组。
- *   在 78 张全部就绪之前**不得用于正式抽牌**。
- * - Legacy Deck（5 套）：V2.4 遗留的程序化牌组。它们没有独立插画，
- *   五套共用同一批 SVG 构图 —— 这正是本次改造要终结的状态。
- *   保留它们只有一个理由：**现有用户的抽牌流程与历史日记不能断**。
+ * ══════════════════════════════════════════════════════════════
+ * 【先读这一段：类型名与产品状态已经脱钩了】
+ * 下面两个类型名是历史产物，**不要按字面理解**：
  *
- * Legacy 牌组会在 Phase 3（五套 78 张全部就绪）之后退役。
+ *   LegacyDeckId  这五套现在是**唯一对用户开放的正式牌组**。
+ *                 78/78 真实原画、78/78 视觉语义、AI 解读能用上各自画面。
+ *   ArtworkDeckId 这五套是**尚未完成的未来牌组**（0–3/78），当前对用户隐藏。
+ *
+ * 名字反了，但 id 不能改：它已经写进用户的 localStorage、历史 session、
+ * 日记条目、artwork.lock.json，以及 390 条视觉语义的主键。
+ * 为了名字好看去重命名，等于让所有老用户的历史记录指向一副不存在的牌。
+ *
+ * 所以「哪几套对用户开放」这个问题**不要问 kind，也不要问类型名** ——
+ * 问 PRODUCTION_DECK_IDS（见本文件下半部分）。
+ * taxonomy 的整理留到未来牌组真正上线时一起做，现在优先稳定。
+ * ══════════════════════════════════════════════════════════
  */
 
-/** 五套目标牌组。它们才是「真正的多牌组」。 */
+/** 未来牌组。**当前 0–3/78，对用户隐藏** —— 名字里的 "Artwork" 是历史遗留 */
 export type ArtworkDeckId = 'ethereal' | 'elysian' | 'opaline' | 'wonderland' | 'classic'
 
 /**
- * V2.4 遗留牌组。id 全部加 `legacy-` 前缀。
+ * **当前正式对外的五套牌组**（见 PRODUCTION_DECK_IDS）。前缀是历史遗留，不是产品状态。
  *
- * 【为什么必须加前缀】旧牌组里有一个叫 `classic`，新牌组里也有一个叫 `classic`，
- * 但它们是完全不同的两副牌。不加前缀会让老用户的历史日记被解析成一副
- * 尚未完成、根本不能抽的新牌 —— 这是一次静默的数据损坏。
+ * 【为什么前缀当初必须加，现在也不能去掉】
+ * 未来牌组里有一个叫 `classic`，这里也有一个叫 `classic`，
+ * 但它们是完全不同的两副牌。不加前缀，老用户的历史日记会被解析成
+ * 另一副还没画完的牌 —— 那是一次静默的数据损坏。这条理由今天依然成立。
  */
 export type LegacyDeckId =
   | 'legacy-moonlight'
@@ -49,11 +58,11 @@ export const LEGACY_DECK_IDS: readonly LegacyDeckId[] = [
 export const ALL_DECK_IDS: readonly DeckId[] = [...ARTWORK_DECK_IDS, ...LEGACY_DECK_IDS]
 
 /**
- * 默认牌组 = Legacy Moonlight。
+ * 默认牌组 —— 用户看到的名字是「月光 / Moonlight」。
  *
- * 【为什么默认不是 ethereal】ethereal 现在是 0/78，不能抽牌。
- * 把一个抽不了牌的牌组设成默认，等于让新用户一进来就撞墙。
- * Phase 3 完成后，默认值改为 'ethereal'。
+ * 它必须永远是 PRODUCTION_DECK_IDS 里的一个：默认牌组是
+ * resolveProductionDeckId 的兜底落点，指向一副不能抽的牌等于让新用户一进来就撞墙。
+ * deck:check 对此有断言。
  */
 export const DEFAULT_DECK_ID: DeckId = 'legacy-moonlight'
 
@@ -111,6 +120,62 @@ export function resolveDeckId(raw: unknown, schema?: number): DeckId {
     }
   }
   return isDeckId(raw) ? raw : DEFAULT_DECK_ID
+}
+
+/* ══════════════════════════════════════════════════════════════
+ * 正式对外开放的牌组
+ * ══════════════════════════════════════════════════════════ */
+
+/**
+ * 当前产品**唯一**对用户开放的五套牌组。
+ *
+ * 【为什么 id 还带着 legacy- 前缀】
+ * 它们在产品意义上早已不是「遗留」——78/78 原画、78/78 视觉语义、
+ * AI 解读能用上各自真实画面的，就是这五套。但 id 不能改：
+ * 它已经写进了用户的 localStorage、历史 session、日记条目、
+ * artwork.lock.json 与 390 条视觉语义的主键。为了一个更好看的名字
+ * 去重命名，等于让所有老用户的历史记录指向一副不存在的牌。
+ * **内部 id 是数据，用户看到的是 registry 里的名字，两者不必相同。**
+ * 界面上「legacy」这个词一次都不会出现。
+ *
+ * 【为什么是显式清单，而不是 `kind === 'legacy'` 或 isDeckPlayable】
+ * kind 是技术分类，早就和产品状态脱钩了；isDeckPlayable 只看资产，
+ * 看不到「视觉语义齐了没有、QA 过了没有」。
+ * 「哪几套对用户开放」是一个产品决定，应该有一个能被指着看的地方。
+ *
+ * 【那它会不会忘记更新】
+ * 不会。deck:check 有一条双向断言：清单里的每一套都必须真的齐备
+ * （registry + 78 张原画 + 78 条视觉语义 + 可抽牌），
+ * 而任何一套已经齐备却不在清单里的牌组**会让断言失败**并提示把它加进来。
+ * 所以将来 ethereal 画完 78 张、跑完视觉语义之后，
+ * 这条断言就是那个「记得回来改这一行」的提醒。
+ */
+export const PRODUCTION_DECK_IDS: readonly DeckId[] = [
+  'legacy-moonlight',
+  'legacy-classic',
+  'legacy-forest',
+  'legacy-celestial',
+  'legacy-shadow',
+]
+
+export function isProductionDeck(id: DeckId): boolean {
+  return (PRODUCTION_DECK_IDS as readonly string[]).includes(id)
+}
+
+/**
+ * 解析成一个**可以用来开始新解读**的牌组。
+ *
+ * 【它与 resolveDeckId 的分工，这条线不能模糊】
+ * resolveDeckId  —— 读历史数据用。它只保证「是个合法 DeckId」，
+ *                   历史 session / 日记里存着 ethereal 也照样返回 ethereal，
+ *                   那条记录才打得开、卡图才找得到、也不会被偷偷改写。
+ * 这一个         —— 决定「现在这次抽牌用哪副」。不在正式清单里的一律回落默认。
+ *
+ * 把生产过滤加在 resolveDeckId 上会同时改掉历史解析 —— 那是静默的数据篡改。
+ */
+export function resolveProductionDeckId(raw: unknown, schema?: number): DeckId {
+  const resolved = resolveDeckId(raw, schema)
+  return isProductionDeck(resolved) ? resolved : DEFAULT_DECK_ID
 }
 
 export function isArtworkDeck(id: DeckId): id is ArtworkDeckId {

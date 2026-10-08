@@ -1,0 +1,27 @@
+[
+  {
+    "reviewId": "review-110",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "Image-first: five figures interact with crossing poles; count/ownership unresolved. Central figure nearest with two on each side, intermediate figures higher/back, supports shallow arc rather than enclosing ring. Pole-attached ribbons unconfirmed.",
+    "reason": "Reviewer-b and reviewer-f independently dispute ring; independent Judge agrees. Local geometry correction meets strict threshold. Ribbon attachment remains unverified, so filter object and repeated motif while preserving dedicated flower crowns. Prior Judge overlooked valid reviewer-f; do not infer pole count from figures.",
+    "patch": {
+      "replace": [
+        {
+          "find": "the central figure stands nearest the viewer, the others arranged in a loose ring around her",
+          "with": "the central figure stands nearest the viewer, with two figures on each side forming a shallow arc and the intermediate figures set further back"
+        }
+      ]
+    },
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "long translucent ribbons trailing from the poles"
+      },
+      {
+        "field": "deckSpecificMotifs",
+        "item": "flower crowns and trailing ribbons"
+      }
+    ]
+  }
+]

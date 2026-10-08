@@ -1,0 +1,117 @@
+[
+  {
+    "reviewId": "review-501",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "scene",
+        "existing": "A dark-robed woman sits on a cracked stone pavement at night, one hand raised to her head and the other holding a downward-pointing sword, with a second sword planted in the ground beside her, a moonlit sea and a dark doorway behind her.",
+        "observed": "My frozen blind read recorded a sword hilt in each of the figure's two hands at hip height, blades angled down and out to both sides, rather than one sword held and a second one standing planted in the ground on its own. My observation also did not record a hand raised to the head in the posture field, so my own record of the arms is internally thin on this point.",
+        "evidence": "Both sword hilts sit at roughly the same height on either side of the figure's hips, level with each other, and both blades splay outward in a mirrored V; I separately noted that I could not resolve whether either point actually touches the paving.",
+        "confidence": "low"
+      }
+    ],
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-513",
+    "verdict": "pass",
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-505",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "three golden chalices held aloft and touching",
+        "observed": "I could resolve only two goblets at the convergence point, meeting rim to rim. The centre figure's hands reach the same point but I could not confirm a cup in them; a third cup, if present, is directly behind the other two and not separable.",
+        "evidence": "At the top centre of the group two bowls overlap rim to rim above the centre figure's raised hands; no third bowl silhouette is distinguishable against the nebula behind them.",
+        "confidence": "low"
+      },
+      {
+        "field": "keyObjects",
+        "existing": "small crescent moon at upper left",
+        "observed": "I logged several small pale spheres scattered in the upper sky, including one at the top left edge, but none of them showed a terminator crisp enough for me to call a phase. I recorded moonPhase as not determinable rather than crescent.",
+        "evidence": "The pale disc near the top left is partly cropped by the frame edge and reads as a flat low-contrast disc against the star field; its lit/unlit boundary is not resolvable at this size.",
+        "confidence": "low"
+      }
+    ],
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-507",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "carved relief panels on the wheel's rim segments",
+        "observed": "The carved relief panels sit on the wheel's spokes, in the field between the hub and the rim, not on the outer rim segments. I logged one on the upright spoke directly above the hub (a long S-curved serpentine form), one on the spoke to the viewer-right of the hub (a quadruped in profile), and one on the lower-right spoke.",
+        "evidence": "The outer rim is a separate heavy blocky band with no carving visible on it; each plaque lies along the length of a radial bar running inward to the hub, following the radial direction, and the topmost one clearly starts just above the hub and stops short of the rim.",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "carved relief panels on the wheel's rim segments",
+          "with": "carved relief panels set along the wheel's spokes, between the hub and the rim"
+        }
+      ]
+    },
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-509",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "spatialRelations",
+        "existing": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+        "observed": "The lit staff tips do not meet. They come to rest at separate glowing points spaced apart around an inner ring, well short of the hub, and the hub carries its own single brighter glow that is distinct from them.",
+        "evidence": "Four glowing points are clearly spaced around the inner ring of the engraved diagram at a visible radius from the hub, with dark engraved ground between each of them and the hub; the central glow sits alone at the exact geometric centre with no staff shaft reaching it.",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+          "with": "the five staffs radiate inward and their lit tips come to rest at separate glowing points spaced around an inner ring, short of the circle's centre"
+        },
+        {
+          "find": "central bright point of light where the staff tips converge",
+          "with": "central bright point of light at the hub of the diagram, set inside the ring of lit staff tips"
+        }
+      ]
+    },
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-511",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "visualTensions",
+        "existing": "the figure's forward stance against the shadow trailing behind him",
+        "observed": "The shadow is not behind the figure. It is thrown forward, toward the viewer, across the near paving, because the only light in the scene is the pale glow beyond the doorway behind him. The same reveal's spatialRelations entry already states this correctly, so the visualTensions line contradicts it.",
+        "evidence": "A long dark shadow runs from the figure's feet down the centre of the frame to the bottom edge, filling the near foreground; the figure is a silhouette against the lit doorway, confirming the light is behind him and the cast shadow must fall toward the viewer.",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "the figure's forward stance against the shadow trailing behind him",
+          "with": "the figure's forward stance against the long shadow thrown ahead of him toward the viewer"
+        }
+      ]
+    },
+    "reviewer": "reviewer-d"
+  },
+  {
+    "reviewId": "review-517",
+    "verdict": "pass",
+    "reviewer": "reviewer-d"
+  }
+]

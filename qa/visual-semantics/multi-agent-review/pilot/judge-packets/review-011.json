@@ -1,0 +1,320 @@
+{
+  "reviewId": "review-011",
+  "blindImage": "qa/visual-semantics/blind-review/review-011.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/pilot/reveal/review-011.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "five upright wands",
+          "observed": "four upright staves",
+          "evidence": "I counted them one at a time, left to right, in the right third of the frame: (1) the leftmost, nearest the horse's head, leafy crown highest; (2) the next to its right; (3) the third; (4) the rightmost, crown lowest. Each has its own unbroken shaft running down into the shallow water and its own separate reflection below it. There is no fifth shaft anywhere in the row. I re-opened the image specifically to recount and got four both times. The rider's ornate gold staff with the ring finial and star is a fifth pole-like object, but it is visually distinct in form, material and placement, and the existing text already lists it separately as its own keyObject — so it cannot be what the row of 'five' refers to.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the five wands stand in a row to the right",
+          "observed": "four staves stand in a row to the right",
+          "evidence": "Same enumeration as above — four shafts, four bases in the water, four reflections.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "five upright wands",
+            "with": "four upright wands"
+          },
+          {
+            "find": "the five wands stand in a row to the right",
+            "with": "the four wands stand in a row to the right"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-011",
+        "visibleFacts": {
+          "figureCount": null,
+          "figures": [
+            {
+              "position": "left of center, mounted, upper-middle of the frame",
+              "posture": "seated upright astride a horse, body facing right, one arm raised gripping a tall staff vertically, the other hand low at the reins",
+              "gaze": "forward and slightly upward, toward the right of the frame",
+              "heldObjects": [
+                "a tall ornate golden staff with a ring/wreath finial and a bright star at its tip"
+              ],
+              "clothing": "deep blue-violet robe and cloak with gold embroidery, gold shoulder ornaments; a laurel/leaf wreath crown on the head",
+              "crown": "yes — a golden laurel-leaf wreath"
+            },
+            {
+              "position": "lower left, on the bank behind and below the horse",
+              "posture": "a crowd of small dark standing figures, mostly silhouetted, some facing the rider",
+              "gaze": "several appear turned toward the rider",
+              "heldObjects": [
+                "not resolvable"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright planted stave/pole with a sprouting leafy top",
+              "count": 4,
+              "countConfidence": "high",
+              "where": "right third of the frame, planted in the shallow water and bank, individually resolved left to right: (1) the shortest, nearest the horse's head, its leafy crown highest-left; (2) next to its right, slightly taller crown; (3) the third, crown a little lower; (4) the rightmost, crown lowest. Each shaft runs unbroken down into the water and casts a reflection."
+            },
+            {
+              "type": "ornate golden staff held by the rider",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held vertically by the rider, distinct in form and material from the four planted staves — gold, with a looped ring finial, hanging ribbons, and a radiant star at the top"
+            },
+            {
+              "type": "horse",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center, dark-coated, walking to the right with the near foreleg raised and bent; bridle, chest-strap, gold-trimmed caparison and tasseled harness"
+            },
+            {
+              "type": "domed building with lit windows",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far left edge, behind the crowd — a large ribbed dome, an arched lit window and a round clock-like or rose-window disc glowing gold"
+            },
+            {
+              "type": "crescent moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right quadrant, pale grey-blue, the lit crescent along its left/lower-left limb, with the unlit disc faintly visible"
+            },
+            {
+              "type": "additional faint spherical body (planet-like disc)",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "below and slightly right of the crescent, a dim ringless sphere against the star field"
+            }
+          ],
+          "environment": [
+            "night sky filling the upper two-thirds: dense star field, a violet-and-magenta nebula/galaxy band on the right, thin gold constellation lines and circular orbital arcs drawn over the stars",
+            "shallow still water across the entire foreground, mirroring the horse, the staves and the sky",
+            "a low bank of grass and rock at bottom-right where the staves are planted",
+            "a distant low horizon with a warm orange-gold glow and small spires/treeline at right",
+            "narrow gold ornamental border on the left and right edges"
+          ],
+          "lightSources": [
+            "the star at the tip of the rider's staff (brightest point in the frame)",
+            "warm orange glow along the distant horizon at right",
+            "gold lit windows of the domed building at left",
+            "faint moonlight/starlight overall"
+          ],
+          "moonPhase": "crescent — a thin lit sliver on the left side of the disc; whether waxing or waning is not determinable from the image alone",
+          "spatialRelations": [
+            "the rider and horse face right, moving toward the row of four planted staves",
+            "the four staves stand between the horse and the right edge, all on the far side of the water from the crowd",
+            "the crowd is behind and below the horse on the left bank, the domed building behind them",
+            "the crescent moon sits high above and right of the rider's staff-star",
+            "everything above the waterline is doubled as a reflection in the foreground water"
+          ],
+          "foreground": [
+            "reflective shallow water with shimmering vertical light trails",
+            "rocks and grass at bottom-right and bottom-left"
+          ],
+          "background": [
+            "star field, nebula, constellation lines",
+            "crescent moon and faint second sphere",
+            "domed building and crowd at left",
+            "glowing horizon at right"
+          ],
+          "palette": "deep indigo and violet with gold accents"
+        },
+        "uncertainObservations": [
+          "The crowd at lower left cannot be counted — the figures are small, dark and overlapping, and some merge with the rock and the building's shadow. Total figure count in the frame is therefore null.",
+          "The rider's facial features are small; expression is not reliably readable.",
+          "The faint sphere below the crescent may be a planet, a second moon, or a nebula knot.",
+          "Whether the horse's rear hooves are in the water or on a bank is obscured by reflection.",
+          "It is uncertain whether the fourth (rightmost) stave is planted in water or on the far bank."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "five upright wands with gold spear-like tips and purple ribbons",
+          "observed": "four upright wands planted in a row on the right",
+          "evidence": "I resolved each one individually, left to right: shafts at roughly x=388, x=418, x=452, x=490, each with its own golden sheaf-like finial, its own base entering the water/bank, and its own reflection. The gap between the rightmost shaft and the inner border is empty horizon glow — no fifth shaft, finial or reflection is present, and nothing stands left of x=388 between the horse's head and the row.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "a row of five upright wands",
+          "observed": "a row of four upright wands",
+          "evidence": "Same four individually resolved shafts; the scene sentence repeats the same miscount.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the five wands stand in a row to the right",
+          "observed": "the four wands stand in a row to the right",
+          "evidence": "Same four individually resolved shafts.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "domed building with a lit arched window and a spherical instrument",
+          "observed": "the domed building shows a lit arched window and, below it, a round wheel- or dial-like window with radiating spokes; whether this is a three-dimensional sphere or a flat circular window cannot be determined",
+          "evidence": "The circular element reads flat against the wall with spoke-like divisions, at the same plane as the masonry; no depth cue separates it from the facade.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "a row of five upright wands",
+            "with": "a row of four upright wands"
+          },
+          {
+            "find": "five upright wands with gold spear-like tips and purple ribbons",
+            "with": "four upright wands with gold spear-like tips and purple ribbons"
+          },
+          {
+            "find": "the five wands stand in a row to the right",
+            "with": "the four wands stand in a row to the right"
+          },
+          {
+            "find": "domed building with a lit arched window and a spherical instrument",
+            "with": "domed building with a lit arched window and a round wheel-like window or dial below it"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-011",
+        "visibleFacts": {
+          "figureCount": null,
+          "figures": [
+            {
+              "position": "center-left, mounted, large in frame",
+              "posture": "seated upright on horseback, facing right in near-profile, chin slightly lifted",
+              "gaze": "upward and to the right, toward the sky",
+              "heldObjects": [
+                "a tall staff held vertically in the raised right hand, its top ending in an open ring/wreath finial with a bright star at the apex"
+              ],
+              "notes": "a golden leafy wreath or laurel crown on the head; long cloak, ornate belted robe with metallic trim; visible reins in the other hand"
+            },
+            {
+              "position": "lower left edge, background",
+              "posture": "standing, packed together",
+              "gaze": "indeterminate",
+              "heldObjects": [],
+              "notes": "a crowd of small dark silhouetted onlookers along the shore behind and below the horse; individual faces not resolvable"
+            }
+          ],
+          "objects": [
+            {
+              "type": "horse",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of frame, dark coat, facing right, one foreleg raised mid-step, standing in shallow water; decorated bridle, chest ornament and patterned caparison"
+            },
+            {
+              "type": "staff / pole planted upright in the ground, topped with a golden sheaf-like finial",
+              "count": 4,
+              "countConfidence": "medium-high",
+              "where": "right half of the frame, a row receding to the right: first at x~390, second x~420, third x~455, fourth x~490; each individually resolvable against the sky with its own base in the water/bank"
+            },
+            {
+              "type": "staff held by the rider",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "raised vertically at the left of the rider; its finial is a ring/wreath form, visually different from the sheaf-topped planted poles"
+            },
+            {
+              "type": "crescent moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right, a clear crescent with the lit edge on its lower-left side"
+            },
+            {
+              "type": "additional faint spherical body",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "right side, below and right of the crescent, a dim ringed or banded orb partly lost in the nebula"
+            },
+            {
+              "type": "banner / pennant hanging from a pole",
+              "count": null,
+              "countConfidence": "low",
+              "where": "narrow cloth streamers among the planted poles, mid-right; overlapping and hard to separate"
+            },
+            {
+              "type": "large domed building",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far left edge, partly cut off by the frame; a dome, an arched lit window and a round wheel-like window below it"
+            },
+            {
+              "type": "figure silhouette in the crowd",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower left shore; a dense mass of dark heads and shoulders, at least six or seven individually suggested but not separable"
+            }
+          ],
+          "environment": [
+            "shallow still water across the foreground reflecting light",
+            "a low bank or shoreline at right where the poles are planted",
+            "distant low hills on the horizon",
+            "a warm orange glow along the right horizon",
+            "night sky with a dense star field, a violet nebula band and fine drawn constellation lines and circles",
+            "a thin ornamental border frames the image"
+          ],
+          "lightSources": [
+            "the bright star at the tip of the rider's staff",
+            "the crescent moon upper right",
+            "the warm orange horizon glow at right",
+            "a lit arched window in the domed building at far left"
+          ],
+          "moonPhase": "crescent, lit along the lower-left edge",
+          "spatialRelations": [
+            "the rider and horse move rightward across the foreground water, away from the domed building and the crowd behind them at left",
+            "the four planted poles stand ahead of and to the right of the horse, between it and the glowing horizon",
+            "the rider's own raised staff is on the opposite side of the frame from the planted poles",
+            "the crescent moon sits high above and beyond the poles",
+            "everything above the waterline is doubled as broken reflections in the foreground water"
+          ],
+          "foreground": [
+            "the horse and rider",
+            "reflective shallow water",
+            "the nearest planted poles"
+          ],
+          "background": [
+            "crowd silhouettes and domed building at left",
+            "distant hills and orange horizon",
+            "crescent moon, faint orb, nebula and star field"
+          ]
+        },
+        "uncertainObservations": [
+          "the crowd at lower left cannot be counted — it reads as a mass of overlapping silhouettes, so total figure count for the image is left null",
+          "the number of planted poles is given as 4 from individual resolution of each shaft and finial; a fifth further right would be lost in the horizon glow, but I can see no evidence of one",
+          "the faint body below the crescent may be a planet, a second moon, or a bright nebula knot",
+          "whether the streamers among the poles are attached banners or separate hanging cloth is not determinable",
+          "the rider's staff finial ornamentation is intricate and not fully resolvable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

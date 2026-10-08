@@ -1,0 +1,395 @@
+{
+  "reviewId": "review-109",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-109.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 2,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-109.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-109",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center, upper-middle of frame, behind a long workbench",
+              "posture": "seated or leaning forward over the bench, torso bent toward the work surface",
+              "gaze": "downward at the disc directly under the tool in her hand",
+              "heldObjects": [
+                "a small hammer / mallet raised in the right hand (viewer's left), head up",
+                "a chisel or engraving punch held upright in the left hand (viewer's right), tip resting on a disc"
+              ],
+              "appearance": "long pale wavy hair with small flowers and a beaded ornament in it, pale layered gauzy robe"
+            }
+          ],
+          "objects": [
+            {
+              "type": "flat round engraved disc",
+              "count": 7,
+              "countConfidence": "low",
+              "where": "arrayed along the bench top: five lying flat in a front row running left to right and rising slightly toward the right; one propped slightly higher at center directly beneath the chisel tip; one further right, just left of the metal container. Front-row edges nearly touch, so the front-row count is the weak point"
+            },
+            {
+              "type": "lantern with a lit flame inside",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "far right of the bench, glass-paned with a domed metal top and a ring handle"
+            },
+            {
+              "type": "metal pail / container holding upright tool handles",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right side of the bench, just left of the lantern"
+            },
+            {
+              "type": "tool handle protruding from the pail",
+              "count": null,
+              "countConfidence": "low",
+              "where": "four or five thin dark shafts fan out of the pail's mouth; they cross each other and the exact number is not resolvable"
+            },
+            {
+              "type": "domed / spired tower in the distant skyline",
+              "count": null,
+              "countConfidence": "low",
+              "where": "upper right, across the water; several spires and at least two domes read as distinct but the skyline dissolves into pale wash"
+            }
+          ],
+          "environment": [
+            "a long weathered wooden workbench running diagonally across the lower third",
+            "sheer pale cloth draped over the bench and hanging down in folds",
+            "a broad body of water in the middle distance with a light streak on its surface",
+            "a distant city skyline of towers and domes on the far shore",
+            "hanging wisteria-like blossom clusters cascading from the upper left",
+            "blossom-laden branches at the lower right and lower left",
+            "pale clouded sky"
+          ],
+          "lightSources": [
+            "the lit lantern on the right of the bench",
+            "a large moon high in the upper right",
+            "general diffuse daylight-pale ambient wash"
+          ],
+          "moonPhase": "full or near-full — a large round disc with visible surface mottling, its lower-left edge softened by cloud; no clear terminator line, so it reads as full but this is not certain",
+          "spatialRelations": [
+            "the figure leans in from the left; the row of discs runs away from her toward the lower right",
+            "the chisel tip contacts the raised disc directly below her hands, with the hammer poised above it",
+            "the lantern and pail sit at the far right end of the bench, opposite the figure",
+            "the water and distant city lie behind and above the bench line",
+            "the moon is directly above the distant city"
+          ],
+          "foreground": [
+            "draped cloth",
+            "bench edge",
+            "blossom sprays at lower left and lower right"
+          ],
+          "background": [
+            "water",
+            "distant domed skyline",
+            "moon",
+            "pale clouds"
+          ],
+          "palette": "very pale watercolour — lavender, ice blue, white, with small warm amber only at the lantern"
+        },
+        "uncertainObservations": [
+          "The disc count is the weakest observation: the front-row discs overlap at their rims and the leftmost sits at the edge of the lit area. Recorded as 7 but treat as low confidence — 6 or 8 are both possible.",
+          "Whether the figure is seated or kneeling/standing and leaning cannot be determined; the bench hides her lower body.",
+          "The moon's phase is recorded as full/near-full but cloud softens one limb, so a gibbous phase cannot be ruled out.",
+          "The number of tool shafts in the pail is not resolvable."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene / spatialRelations",
+          "existing": "the woman sits behind the bench, her hands and tools above the discs",
+          "observed": "her posture below the waist is not visible, so seated cannot be established",
+          "evidence": "Her torso is bent sharply forward over the bench and everything below roughly hip level is hidden behind the bench top and the draped cloth. There is no visible seat, stool, chair or thigh line. The forward lean is equally consistent with standing. I recorded her as leaning forward over the bench without committing to seated or standing.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "sits at a wooden workbench engraving a round metal disc",
+            "with": "leans over a workbench engraving a round metal disc"
+          },
+          {
+            "find": "the woman sits behind the bench, her hands and tools above the discs",
+            "with": "the woman is behind the bench, leaning forward over it, her hands and tools above the discs"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-109",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center, upper-middle of frame, leaning in over a bench from the left",
+              "posture": "standing/leaning forward at the waist over a long workbench, both arms extended down and forward toward the work surface",
+              "gaze": "downward, focused on the object directly beneath her hands; eyes lowered, head bowed",
+              "heldObjects": [
+                "a hammer or mallet, raised in the hand on the viewer's left",
+                "a slender chisel or graver, held point-down in the hand on the viewer's right, its tip touching an upright disc"
+              ],
+              "details": "long pale wavy hair with small flowers and a decorative band worked into it, pale layered translucent gown with lace/net overlay, sleeves falling loose at the elbow"
+            }
+          ],
+          "objects": [
+            {
+              "type": "flat circular engraved disc",
+              "count": null,
+              "countConfidence": "low",
+              "where": "laid out along the workbench — a row of them flat on the near/lower ledge, plus at least one propped upright on a small stand under the chisel and one more toward the right near the pail; see uncertainObservations"
+            },
+            {
+              "type": "lantern with a lit flame inside",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right end of the bench, tall, with a domed metal top"
+            },
+            {
+              "type": "metal pail/cup holding upright tools",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "bench, just left of the lantern"
+            },
+            {
+              "type": "slender tool/rod standing in the pail",
+              "count": null,
+              "countConfidence": "low",
+              "where": "inside the metal pail; several thin rods fanned out"
+            },
+            {
+              "type": "hammer/mallet",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "raised in the figure's hand above the work"
+            },
+            {
+              "type": "chisel/graver",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "in the figure's other hand, tip on an upright disc"
+            },
+            {
+              "type": "moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right of the sky"
+            },
+            {
+              "type": "distant tower/spire of a city skyline",
+              "count": null,
+              "countConfidence": "low",
+              "where": "background, across the water on the right; several towers and a domed roof, merging into haze"
+            },
+            {
+              "type": "blossom (pale pink, five-petalled)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered on branches at the right and lower right, and a few resting on the bench"
+            }
+          ],
+          "environment": [
+            "an open ledge, balcony or terrace overlooking water",
+            "a long stone-and-timber workbench running across the lower third of the frame, draped with pale cloth that hangs over the front edge",
+            "hanging wisteria-like flowering vines cascading from the upper left",
+            "a broad body of water in the middle ground",
+            "a hazy pale city skyline on the far shore",
+            "flowering branches entering from the right and lower right",
+            "a thin decorative double-line border inside the frame"
+          ],
+          "lightSources": [
+            "the moon at upper right",
+            "the lit lantern flame on the right end of the bench",
+            "broad diffuse pale daylight-like ambient light with no hard shadows"
+          ],
+          "moonPhase": "appears full or near-full — a large bright round disc partly veiled by cloud; exact phase not determinable because cloud crosses its lower-left edge",
+          "spatialRelations": [
+            "the figure leans in from the left; the row of discs runs away from her to the right along the bench",
+            "the disc she is actually working on is raised on a small support directly under her chisel tip, higher than the flat row in front of it",
+            "the lantern and tool pail sit at the far right end of the bench, beyond the discs",
+            "the water and city are behind and above the bench line, visible over her shoulder",
+            "the hanging vine frames the upper left, the blossom branches frame the right — the figure and bench sit between them"
+          ],
+          "foreground": [
+            "draped cloth hanging from the bench front",
+            "blossom branches at lower right",
+            "scattered petals and small flowers on and below the bench"
+          ],
+          "background": [
+            "water",
+            "hazy city skyline with towers and a dome",
+            "clouded sky with the moon"
+          ]
+        },
+        "uncertainObservations": [
+          "Disc count is NOT reliable and I record it as null. Along the front/lower ledge I can individually resolve five flat discs in a left-to-right row. Set slightly higher and behind them I can resolve the upright disc under the chisel, and one further disc near the pail at the right. That gives at least six clearly separable, plausibly seven or eight — but the discs on the upper level partly overlap each other and the bench edge, and at least one may be a plate or a tool tray rather than another disc.",
+          "The number of thin tools in the metal pail cannot be counted; roughly four or five rods, heavily overlapping.",
+          "Whether the object in her raised hand is a hammer, a mallet or a punch cannot be fully determined, though it reads as a small hammer with a dark head.",
+          "The moon's exact phase is obscured by cloud.",
+          "The distant skyline cannot be counted into discrete buildings."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-109",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center, upper-middle of frame, behind/above a long wooden bench",
+              "posture": "leaning forward over the bench, torso bent, both arms raised in front of chest; lower body is hidden behind the bench so standing vs seated vs kneeling cannot be determined",
+              "gaze": "eyes lowered, directed downward toward the disc-shaped object under her tool",
+              "heldObjects": [
+                "a mallet/hammer with a dark shaft and pale metal head, gripped in the raised hand on the viewer's left, head angled upward",
+                "a slender dark rod/chisel-like tool gripped in the other hand, tip pointing down onto a round disc on the bench"
+              ],
+              "otherDetails": [
+                "long wavy pale hair falling past the shoulders",
+                "small pale flowers and beaded strands woven into the hair",
+                "pale layered translucent robe with fine lace/net texture and a beaded collar",
+                "no crown, no halo, no wings, no blindfold visible"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "round flat disc with engraved concentric/radial patterning",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "along the front/lower plank of the bench, left-of-center to center; individually resolvable at roughly evenly spaced intervals from the left edge of the bench toward the middle",
+              "orientation": "lying flat / tilted slightly toward the viewer, faces showing",
+              "arrangement": "a single left-to-right row, edges nearly touching, no gaps between them; the row stops before the bench's right end"
+            },
+            {
+              "type": "round flat disc with engraved patterning",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "on the upper/rear surface of the bench: one directly beneath the tip of the held rod at center, one further right near the metal vessel",
+              "orientation": "propped up / tilted at an angle rather than flat, faces turned toward the viewer",
+              "arrangement": "two separated items, a clear gap between them, both behind the flat row"
+            },
+            {
+              "type": "round flat disc (all instances combined)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "across the whole bench",
+              "orientation": "mixed: most flat, at least two tilted upright",
+              "arrangement": "one dense front row plus two set back",
+              "note": "a combined total cannot be stated reliably — the discs overlap each other's edges and the rear ones are partly occluded by the figure's hands and the tools; my separate group counts of 5 and 2 are each medium confidence only"
+            },
+            {
+              "type": "lantern (glass-paned, metal-framed, with a finial top)",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right edge of frame, mounted on a post above the bench end",
+              "orientation": "upright",
+              "arrangement": "single, isolated at the right margin"
+            },
+            {
+              "type": "metal pail/vessel holding upright slender rods (tool handles or brushes)",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the bench at right, just left of and below the lantern",
+              "orientation": "upright",
+              "arrangement": "single vessel; the rods inside splay upward and outward and cannot be counted individually"
+            },
+            {
+              "type": "distant towers / domed spires of a settlement",
+              "count": null,
+              "countConfidence": "low",
+              "where": "far background, right half, on the far side of the water",
+              "orientation": "vertical",
+              "arrangement": "a cluster spread horizontally along the skyline",
+              "note": "too small, pale and hazy to separate individual structures"
+            },
+            {
+              "type": "hanging flower clusters (drooping, wisteria-like)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "upper left, cascading from overhead foliage",
+              "orientation": "hanging downward",
+              "arrangement": "several trailing strands, too intertwined to count"
+            },
+            {
+              "type": "blossoms on thin branches",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower right and bottom foreground, and a sprig at bottom left",
+              "orientation": "various",
+              "arrangement": "scattered along branch lines"
+            }
+          ],
+          "environment": [
+            "long weathered wooden bench/ledge running diagonally across the lower third, made of stacked planks",
+            "pale draped cloth hanging over the front of the bench in several folds",
+            "a stone archway/window opening and pillar at the far left",
+            "broad body of water in the middle distance with a bright streak of reflected light",
+            "far shoreline with buildings and spires",
+            "cloudy sky filling the upper half",
+            "overhanging foliage and trailing blossoms at upper left",
+            "flowering branches in the near foreground at bottom and right"
+          ],
+          "lightSources": [
+            "large pale luminous disc in the sky at the upper right, partly cut off by the right frame edge",
+            "warm orange glow inside the lantern at right — the only warm light in the image",
+            "bright reflected streak on the water surface in the middle distance"
+          ],
+          "moonPhase": "uncertain — the disc reads as full or near-full with mottled surface markings, but its right portion runs off the frame edge and cloud passes across it, so the terminator cannot be located",
+          "spatialRelations": [
+            "the figure is behind the bench, the discs are on the bench between her and the viewer",
+            "the tip of the rod she holds meets the tilted disc at the centre of the bench; the mallet is raised above and to the left of that point",
+            "the lantern and the rod-filled vessel are at the far right end of the bench, opposite the figure",
+            "the water and distant skyline sit between the figure's head-height and the bench, i.e. behind the workbench",
+            "the luminous sky disc is up and to the right of the figure's head",
+            "hanging blossoms frame the upper-left corner; flowering branches frame the lower-right"
+          ],
+          "foreground": [
+            "wooden bench planks and draped cloth",
+            "the row of engraved discs",
+            "flowering branches crossing the bottom-right and bottom-left corners"
+          ],
+          "background": [
+            "expanse of water with light reflection",
+            "distant towered skyline on the far bank",
+            "clouded sky and the large pale sky-disc"
+          ]
+        },
+        "uncertainObservations": [
+          "the total number of round discs cannot be given reliably — they overlap along the row and two are partially hidden behind hands/tools; I report 5 flat in a row and 2 set back, each at medium confidence",
+          "whether the figure is seated, kneeling or standing is not determinable; her lower body is entirely occluded by the bench",
+          "the number of rods in the metal vessel cannot be counted; they overlap",
+          "the phase of the sky-disc is not determinable (frame-cut plus cloud cover)",
+          "the object in the raised hand reads as a mallet but the exact head shape is softened by the rendering",
+          "the distant skyline structures cannot be individually counted"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

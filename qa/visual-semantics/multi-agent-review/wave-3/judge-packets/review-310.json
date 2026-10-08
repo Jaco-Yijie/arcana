@@ -1,0 +1,232 @@
+{
+  "reviewId": "review-310",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-310.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-310.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "emphasizedAspects",
+          "existing": "a completed circuit, shown as a closed wreath ring",
+          "observed": "the wreath is NOT closed — it is two separate arcs joined only by the tie at the top, with a wide open gap at the bottom that the figure's path passes through",
+          "evidence": "The left and right foliage arcs both terminate short of the ground, leaving the paving and the figure's cast shadow running out through the opening; a second smaller gap shows where the two arcs' lower ends stop short at the right.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "a completed circuit, shown as a closed wreath ring",
+            "with": "a completed circuit, shown as two wreath arcs joined at the top and open at the bottom"
+          },
+          {
+            "find": "the enclosing wreath ring versus the open horizon beyond it",
+            "with": "the enclosing wreath arcs versus the open horizon beyond them"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-310",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of the frame, mid-height",
+              "posture": "WALKING/striding away from the viewer, seen from behind, mid-step with one bare foot lifted; both arms lowered and held out slightly from the body; long coat or cloak with a ragged, feathered lower hem",
+              "gaze": "away from the viewer, toward the bright horizon ahead",
+              "heldObjects": [
+                "one slender pointed implement in each hand, held down and angled outward"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "slender pointed implement held in the hands",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one in the left hand, one in the right hand, at the figure's sides",
+              "orientation": "both angled downward and outward, tips pointing down-and-away from the body",
+              "arrangement": "one per hand, mirrored"
+            },
+            {
+              "type": "laurel/leaf wreath",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "a large oval ring occupying most of the frame, surrounding the walking figure",
+              "orientation": "leaves sweeping from the bottom upward toward the top knot on both sides",
+              "arrangement": "NOT a closed ring — two separate arcs, one on the left and one on the right, joined only at the top by a tie; the bottom is OPEN, and the figure's path exits through that gap toward the viewer. A second, smaller gap shows at the lower right where the two arcs' ends stop short of each other"
+            },
+            {
+              "type": "ribbon streamer hanging from the wreath's top knot",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "upper center, falling from the tie at the top of the wreath",
+              "orientation": "hanging downward, curling",
+              "arrangement": "one to the left, one to the right of the knot"
+            },
+            {
+              "type": "carved corner relief head",
+              "count": 4,
+              "countConfidence": "high",
+              "where": "one in each corner of the frame",
+              "orientation": "all in profile facing inward",
+              "arrangement": "upper left: a human face in profile facing right; upper right: a bird/eagle head with hooked beak in profile facing left; lower left: a horned bovine head; lower right: a maned lion head"
+            },
+            {
+              "type": "distant tower/spire on the skyline",
+              "count": null,
+              "countConfidence": "low",
+              "where": "background, along the horizon on both sides of the figure",
+              "orientation": "upright",
+              "arrangement": "a dense cluster forming a city skyline; individual towers overlap and cannot be counted"
+            }
+          ],
+          "environment": [
+            "night or deep dusk",
+            "a flat reflective expanse (shallow water or wet ground) in the midground between the figure and the distant skyline",
+            "a cracked stone/cobble pavement in the foreground",
+            "a dense silhouetted cityscape on the far horizon",
+            "near-monochrome black and warm grey palette",
+            "a thin ruled border line down the left and right edges"
+          ],
+          "lightSources": [
+            "a bright pale glow on the horizon directly behind the figure, silhouetting them; it casts a single long shadow from the figure straight down toward the bottom of the frame and lays a bright streak on the reflective midground"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure is centered inside the wreath's opening and is walking away from the viewer, out of the foreground and toward the lit horizon",
+            "the wreath's open bottom aligns with the figure's path and with the long shadow thrown toward the viewer",
+            "the four corner reliefs sit outside the wreath, framing it",
+            "the reflective water sits between the figure and the city, so the city is the most distant element"
+          ],
+          "foreground": [
+            "cracked stone pavement, the figure's long cast shadow, the lower ends of the two wreath arcs, the two lower corner reliefs"
+          ],
+          "background": [
+            "glowing horizon, distant city skyline, reflective flat expanse"
+          ]
+        },
+        "uncertainObservations": [
+          "whether the two objects in the figure's hands are blades, wands, rods, or something else cannot be determined — they are thin, tapering and pointed but held entirely in silhouette",
+          "whether the midground reflective expanse is water or wet pavement is ambiguous",
+          "the figure's head appears bare and dark-haired but a hood cannot be ruled out",
+          "the ragged lower hem of the garment could be torn cloth or feathers",
+          "the number of towers in the skyline is not countable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "emphasizedAspects / visualTensions",
+          "existing": "a completed circuit, shown as a closed wreath ring",
+          "observed": "the wreath is NOT closed — two leafy arcs rise from the bottom of the frame and are bound together only at the top centre, leaving a wide open gap at the bottom where the figure steps through",
+          "evidence": "The two branches meet and are tied with a ribbon at the top; at the bottom they stop short on either side of the paved threshold and never join, so it is an open arch, not a ring.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "a completed circuit, shown as a closed wreath ring",
+            "with": "a threshold framed by an open wreath arch, its two arcs bound at the top and left open at the bottom"
+          },
+          {
+            "find": "the enclosing wreath ring versus the open horizon beyond it",
+            "with": "the enclosing wreath arch versus the open horizon beyond its bottom gap"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-310",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, standing on a reflective wet surface at the threshold of the framed opening",
+              "posture": "standing / mid-stride walking away from the viewer, barefoot, weight on one leg, back turned to the camera",
+              "gaze": "facing away from the viewer, head turned slightly, looking out toward the distant skyline",
+              "heldObjects": [
+                "a long staff/rod in each hand, one per hand"
+              ],
+              "clothing": "long ragged coat or cloak with torn trailing hem"
+            }
+          ],
+          "objects": [
+            {
+              "type": "staff / wand / rod",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one gripped in each of the figure's hands, held at hip height",
+              "orientation": "both angled downward and outward — lower ends pointing down and away from the body, upper ends behind/above the grip",
+              "arrangement": "symmetrically flanking the figure, one to the left, one to the right; no others are resolvable in the frame"
+            },
+            {
+              "type": "carved corner medallion / relief head",
+              "count": 4,
+              "countConfidence": "high",
+              "where": "the four corners of the border",
+              "orientation": "upper-left head is in left profile; upper-right head faces left; lower-left head faces right; lower-right head faces forward-left",
+              "arrangement": "one in each corner, upper-left a human face in profile, upper-right a raptor/eagle head, lower-left a horned bovine head, lower-right a maned feline head"
+            },
+            {
+              "type": "leafy wreath branch",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "framing the central scene as a tall vertical oval",
+              "orientation": "curving upward and inward from the bottom of the frame",
+              "arrangement": "TWO SEPARATE ARCS, not a closed ring — they meet and are bound with a knotted ribbon at the TOP center, and there is a clear OPEN GAP at the BOTTOM where the two arcs do not join; the ribbon's two tails hang down into the opening"
+            }
+          ],
+          "environment": [
+            "wet reflective ground/shallow water in the middle distance",
+            "a distant low skyline of towers and spires on the horizon",
+            "dark overcast sky",
+            "a stone threshold or paved step in the foreground",
+            "a flat panelled border with the four corner medallions"
+          ],
+          "lightSources": [
+            "a diffuse pale glow low on the horizon behind the skyline, silhouetting the figure; a matching sheen reflected on the wet ground"
+          ],
+          "moonPhase": "no moon or sun disc visible",
+          "spatialRelations": [
+            "the figure stands exactly at the center of the wreath opening, stepping away from the viewer toward the horizon",
+            "the wreath's bottom gap coincides with the paved threshold the figure is stepping off",
+            "the four corner medallions sit outside the wreath, on the flat border, one per corner",
+            "a long cast shadow extends from the figure toward the bottom of the frame"
+          ],
+          "foreground": [
+            "paved stone threshold",
+            "long cast shadow",
+            "lower two corner medallions"
+          ],
+          "background": [
+            "distant spired skyline",
+            "reflective water",
+            "dark sky"
+          ]
+        },
+        "uncertainObservations": [
+          "the exact number of staves is stated as 2 from two clearly gripped rods; the deep shadow around the figure's torso means a third partially hidden rod cannot be fully excluded",
+          "whether the bound element at the top of the wreath includes an additional upright sprig or is only the ribbon knot is not resolvable",
+          "the upper-left corner head's species (human vs. winged human) cannot be confirmed — no wings are clearly visible on it"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

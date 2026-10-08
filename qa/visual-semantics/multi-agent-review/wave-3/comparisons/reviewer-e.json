@@ -1,0 +1,136 @@
+[
+ {
+  "reviewId": "review-312",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects / scene",
+    "existing": "three upright swords set into arched wall niches",
+    "observed": "three swords mounted hilt-up / point-DOWN in the three arched niches",
+    "evidence": "In each niche the pommel and cross-guard sit at the top and the blade tapers downward to a point near the niche floor; 'upright' reads as point-up and states the wrong direction.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "three upright swords set into arched wall niches",
+     "with": "three swords mounted point-down (hilts uppermost) in arched wall niches"
+    },
+    {
+     "find": "three swords set upright in arched wall niches",
+     "with": "three swords mounted point-down in arched wall niches"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-310",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "emphasizedAspects / visualTensions",
+    "existing": "a completed circuit, shown as a closed wreath ring",
+    "observed": "the wreath is NOT closed — two leafy arcs rise from the bottom of the frame and are bound together only at the top centre, leaving a wide open gap at the bottom where the figure steps through",
+    "evidence": "The two branches meet and are tied with a ribbon at the top; at the bottom they stop short on either side of the paved threshold and never join, so it is an open arch, not a ring.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a completed circuit, shown as a closed wreath ring",
+     "with": "a threshold framed by an open wreath arch, its two arcs bound at the top and left open at the bottom"
+    },
+    {
+     "find": "the enclosing wreath ring versus the open horizon beyond it",
+     "with": "the enclosing wreath arch versus the open horizon beyond its bottom gap"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-306",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "kneels on a forest floor at dawn",
+    "observed": "a low sun sits on the horizon with visible rays; nothing in the frame distinguishes dawn from dusk",
+    "evidence": "The only time cue is a partly visible solar disc low behind the far treeline with a warm sky gradient — equally consistent with sunrise or sunset.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "kneels on a forest floor at dawn",
+     "with": "kneels on a forest floor under a low sun on the horizon"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-316",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "two upright swords standing point-up in cylindrical holders on a table",
+    "observed": "two swords standing point-DOWN, blades driven into the cylindrical holders with the ornate cross-guards and pommels uppermost",
+    "evidence": "On both blades the decorated cross-guard and pommel are clearly at the top and the blade narrows downward into the small round base on the table.",
+    "confidence": "high"
+   },
+   {
+    "field": "model self-reported uncertainty",
+    "existing": "exact number of swords in the carried bundle (appears to be five, possibly six)",
+    "observed": "only 4 cross-guards/pommels are individually resolvable at the top of the bundle; the overlapping shafts below make any total unconfirmable",
+    "evidence": "The bundle is tightly overlapped and partly behind the cloak, so neither five nor six can be supported from the pixels.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two upright swords standing point-up in cylindrical holders on a table",
+     "with": "two swords standing point-down, hilts uppermost, set into cylindrical holders on a table"
+    },
+    {
+     "find": "exact number of swords in the carried bundle (appears to be five, possibly six)",
+     "with": "exact number of swords in the carried bundle (at least four hilts resolvable; total not determinable)"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-304",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the right figure stands slightly further back than the left",
+    "observed": "the right figure stands nearer the viewer than the left — it is the largest figure in the frame, on the near side of the bench, with its robe running off the bottom-right edge",
+    "evidence": "The left figure is smaller and stands across the bench on the far side, while the right figure overlaps the bench front and is cropped by the lower frame, placing it closest to the camera.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the right figure stands slightly further back than the left",
+     "with": "the right figure stands nearer the viewer, on the near side of the bench, while the left figure stands across it"
+    }
+   ]
+  },
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-308",
+  "verdict": "pass",
+  "reviewer": "reviewer-e"
+ }
+]

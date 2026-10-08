@@ -1,0 +1,488 @@
+[
+ {
+  "reviewId": "review-312",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-right, lying on a raised stone bier/slab",
+     "posture": "reclining / lying on the back, upper body propped against a cushioned headrest at the right end, legs extended to the left, bare feet exposed at the left end",
+     "gaze": "head bowed, face angled downward toward own hands",
+     "heldObjects": [
+      "a small narrow object gripped in both hands at chest height — appears blade-like or a short hilt, too dark to resolve"
+     ],
+     "clothing": "long dark robe/covering draped over the body from chest to ankles; feet left bare"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword/blade",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "upper right, one inside each of three tall pointed arch niches/windows in the back wall",
+     "orientation": "point-DOWN — pommel and cross-guard at the top of each niche, blade tapering downward",
+     "arrangement": "an evenly spaced horizontal row of three, all three at roughly the same height, no gaps between them; they occupy the three arches of a single tracery group"
+    },
+    {
+     "type": "sword/blade",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower right, lying flat on a stone ledge/step below and in front of the bier",
+     "orientation": "horizontal, hilt at the right, point toward the left",
+     "arrangement": "single, isolated, separated from the wall group by the full height of the bier"
+    },
+    {
+     "type": "stained-glass lancet window",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "left wall, upper half",
+     "orientation": "vertical, pointed arch top with a circular rosette above the glazing",
+     "arrangement": "single"
+    }
+   ],
+   "environment": [
+    "dark stone interior, gothic vaulted chamber",
+    "raised carved stone bier/tomb slab with arcaded relief panels on its front face",
+    "stone steps descending at the lower left",
+    "back wall with three pointed-arch niches"
+   ],
+   "lightSources": [
+    "dim pale light through the stained-glass lancet window on the left wall — the only light source; everything else falls away into near-black"
+   ],
+   "moonPhase": "no moon or sun visible",
+   "spatialRelations": [
+    "the three wall blades hang directly above and behind the reclining figure",
+    "the single ground blade lies on a lower ledge in front of the bier, outside and below the group of three",
+    "the figure's head is at the right, nearer the lit window is to the left behind the feet",
+    "steps at lower left lead up toward the bier platform"
+   ],
+   "foreground": [
+    "stone steps at lower left",
+    "the ledge bearing the single horizontal blade at lower right"
+   ],
+   "background": [
+    "the three arched niches with their blades",
+    "dark stone wall surface and faint vault ribs"
+   ]
+  },
+  "uncertainObservations": [
+   "the small object clasped in the figure's hands cannot be resolved — it may be a short blade, a hilt, or clasped hands only",
+   "whether the figure's eyes are open or closed is not determinable at this light level",
+   "faint vertical shapes in deep shadow at the far back center could be columns or additional niches; not countable"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-310",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, standing on a reflective wet surface at the threshold of the framed opening",
+     "posture": "standing / mid-stride walking away from the viewer, barefoot, weight on one leg, back turned to the camera",
+     "gaze": "facing away from the viewer, head turned slightly, looking out toward the distant skyline",
+     "heldObjects": [
+      "a long staff/rod in each hand, one per hand"
+     ],
+     "clothing": "long ragged coat or cloak with torn trailing hem"
+    }
+   ],
+   "objects": [
+    {
+     "type": "staff / wand / rod",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one gripped in each of the figure's hands, held at hip height",
+     "orientation": "both angled downward and outward — lower ends pointing down and away from the body, upper ends behind/above the grip",
+     "arrangement": "symmetrically flanking the figure, one to the left, one to the right; no others are resolvable in the frame"
+    },
+    {
+     "type": "carved corner medallion / relief head",
+     "count": 4,
+     "countConfidence": "high",
+     "where": "the four corners of the border",
+     "orientation": "upper-left head is in left profile; upper-right head faces left; lower-left head faces right; lower-right head faces forward-left",
+     "arrangement": "one in each corner, upper-left a human face in profile, upper-right a raptor/eagle head, lower-left a horned bovine head, lower-right a maned feline head"
+    },
+    {
+     "type": "leafy wreath branch",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "framing the central scene as a tall vertical oval",
+     "orientation": "curving upward and inward from the bottom of the frame",
+     "arrangement": "TWO SEPARATE ARCS, not a closed ring — they meet and are bound with a knotted ribbon at the TOP center, and there is a clear OPEN GAP at the BOTTOM where the two arcs do not join; the ribbon's two tails hang down into the opening"
+    }
+   ],
+   "environment": [
+    "wet reflective ground/shallow water in the middle distance",
+    "a distant low skyline of towers and spires on the horizon",
+    "dark overcast sky",
+    "a stone threshold or paved step in the foreground",
+    "a flat panelled border with the four corner medallions"
+   ],
+   "lightSources": [
+    "a diffuse pale glow low on the horizon behind the skyline, silhouetting the figure; a matching sheen reflected on the wet ground"
+   ],
+   "moonPhase": "no moon or sun disc visible",
+   "spatialRelations": [
+    "the figure stands exactly at the center of the wreath opening, stepping away from the viewer toward the horizon",
+    "the wreath's bottom gap coincides with the paved threshold the figure is stepping off",
+    "the four corner medallions sit outside the wreath, on the flat border, one per corner",
+    "a long cast shadow extends from the figure toward the bottom of the frame"
+   ],
+   "foreground": [
+    "paved stone threshold",
+    "long cast shadow",
+    "lower two corner medallions"
+   ],
+   "background": [
+    "distant spired skyline",
+    "reflective water",
+    "dark sky"
+   ]
+  },
+  "uncertainObservations": [
+   "the exact number of staves is stated as 2 from two clearly gripped rods; the deep shadow around the figure's torso means a third partially hidden rod cannot be fully excluded",
+   "whether the bound element at the top of the wreath includes an additional upright sprig or is only the ribbon knot is not resolvable",
+   "the upper-left corner head's species (human vs. winged human) cannot be confirmed — no wings are clearly visible on it"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-306",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "upper right of center, on a grassy slope",
+     "posture": "kneeling or crouching low on the ground, seen from behind, both arms spread wide outward holding the edges of a cloak open",
+     "gaze": "facing away from the viewer, toward the sunlit horizon",
+     "heldObjects": [
+      "the two outspread edges/corners of a green cloak or cloth"
+     ],
+     "clothing": "green hooded cloak over a pale undergarment"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword/blade (each in a scabbard or wrapped sheath)",
+     "count": 10,
+     "countConfidence": "high",
+     "where": "on the ground across the lower half of the frame, laid on leaf litter and moss",
+     "orientation": "all point-DOWN toward the bottom of the frame — every hilt and cross-guard is at the upper end, every tip at the lower end; all lying flat, roughly parallel, tilted very slightly",
+     "arrangement": "TWO STAGGERED HORIZONTAL ROWS. Back/upper row of 5 (left to right, evenly spaced, no gaps). Front/lower row of 5 (left to right, offset so each front blade sits between two of the back row). Counted individually: back row = 1,2,3,4,5; front row = 1,2,3,4,5."
+    },
+    {
+     "type": "wicker basket",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "on the ground just below and left of the kneeling figure",
+     "orientation": "upright, open top",
+     "arrangement": "single, sitting between the figure and the top row of blades"
+    },
+    {
+     "type": "mushroom / fungus cluster",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered along the left foreground grass, the lower-left corner, and painted into the decorative border at the corners",
+     "orientation": "caps upward",
+     "arrangement": "scattered clusters, not a formal arrangement — too many overlapping small caps to count reliably"
+    }
+   ],
+   "environment": [
+    "deciduous woodland with tall trunks framing both sides",
+    "grassy moss-covered slope in the middle ground",
+    "ferns and low foliage in the foreground corners",
+    "a river or lake valley with low hills on the horizon",
+    "a painted vine-and-fungus decorative border on all four sides"
+   ],
+   "lightSources": [
+    "a low sun on the horizon at center-left, disc partly visible with visible rays streaking outward; warm sky gradient above it"
+   ],
+   "moonPhase": "no moon; a sun is present, low on the horizon, disc partially visible behind the far treeline",
+   "spatialRelations": [
+    "the ten blades lie downslope and in front of the kneeling figure, between the figure and the viewer",
+    "the basket sits directly between the figure and the nearest row of blades",
+    "the figure faces away, toward the sun on the horizon, with arms spread wide",
+    "trees flank the scene on both sides forming a natural vertical frame around the bright horizon gap"
+   ],
+   "foreground": [
+    "the two rows of blades",
+    "ferns, moss, mushrooms, fallen leaves",
+    "painted border"
+   ],
+   "background": [
+    "forest canopy",
+    "river valley",
+    "low hills",
+    "sun on the horizon"
+   ]
+  },
+  "uncertainObservations": [
+   "a pale rounded object lies on the ground immediately left of the basket — possibly a gourd, a bundle, or a stone; cannot identify",
+   "whether the figure is kneeling or sitting back on the heels is ambiguous from behind",
+   "whether the blades are bare or each enclosed in a fabric-wrapped scabbard is ambiguous — the lower two-thirds of each appears wrapped/bound",
+   "mushroom count not attempted; too many small overlapping caps"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-316",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-right, standing on a wet rocky shoreline",
+     "posture": "standing, mid-stride, walking toward the right/away from the viewer; back mostly turned, head turned in left profile",
+     "gaze": "head turned back and slightly downward, over the shoulder, toward the table at the left",
+     "heldObjects": [
+      "a bundle of long blades clasped under/against the right arm, held diagonally against the body"
+     ],
+     "clothing": "long heavy embroidered cloak/coat with a fur or layered collar, boots"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword/blade — carried bundle",
+     "count": null,
+     "countConfidence": "low",
+     "where": "clasped against the walking figure's right side, hilts projecting above the shoulder/arm",
+     "orientation": "point-DOWN — the ornate cross-guards and pommels are at the TOP, the blades run downward past the hip toward the ground",
+     "arrangement": "a tight overlapping bundle, not a spread arrangement. At least 4 separate cross-guards/pommels are individually resolvable at the top; the shafts below overlap heavily so the true total cannot be confirmed"
+    },
+    {
+     "type": "sword/blade — planted upright",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "on the stone table/platform at the left, set into small round weighted bases or stands",
+     "orientation": "vertical, point-DOWN into the base, elaborate cross-guard and pommel uppermost",
+     "arrangement": "the two stand side by side near the left edge of the table, roughly parallel, a small gap between them; they are clearly separate from the carried bundle"
+    },
+    {
+     "type": "small candle/lamp or marker on the table",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered across the map-covered table surface in the lower left",
+     "orientation": "upright",
+     "arrangement": "scattered, several small objects, too dim and small to count individually"
+    }
+   ],
+   "environment": [
+    "night sky filled with dense stars and a visible galactic band",
+    "overlaid gold geometric circle/orbit diagrams across the sky",
+    "a large peaked tent or pavilion at the left with guy ropes and a pennant pole",
+    "a stone table or plinth covered with a map/chart and a draped cloth",
+    "wet rocky tidal shoreline with standing pools and reflections running to the right",
+    "low mountains on the far horizon",
+    "a thin bare pole or mast at the right edge",
+    "a narrow decorative inner border line around the whole image"
+   ],
+   "lightSources": [
+    "a warm orange glow at the horizon on the right (low sun, disc not clearly separable from the glow), reflected in the water",
+    "a small warm lamp glow inside/beside the tent at the left",
+    "ambient starlight"
+   ],
+   "moonPhase": "uncertain — a pale round body sits in the upper left sky, partly shaded; the lit fraction cannot be reliably read",
+   "spatialRelations": [
+    "the figure walks rightward, away from the tent and table, toward the glowing horizon",
+    "the two planted blades remain behind on the table at the left, on the opposite side of the frame from the direction of travel",
+    "the carried bundle sits between the figure's body and the right side of the frame",
+    "the tent is behind and left of the figure; the water channel recedes to the right toward the horizon glow"
+   ],
+   "foreground": [
+    "stone table with map and draped cloth",
+    "wet rock and tidal pools",
+    "the figure's legs and boots"
+   ],
+   "background": [
+    "tent",
+    "mountains",
+    "starfield and geometric sky diagrams",
+    "horizon glow"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of blades in the carried bundle is NOT determinable — 4 hilts are individually resolvable but the overlapping shafts below leave open whether more are hidden; recorded as null deliberately",
+   "a second smaller pale disc appears lower-left of the large one in the sky; it may be a planet, a lens artifact, or part of the drawn diagram",
+   "the horizon light is a diffuse glow; whether a solar disc is actually painted in it cannot be confirmed",
+   "small objects on the table (candles, weights, instruments) are too dim to identify or count"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-304",
+  "visibleFacts": {
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "left",
+     "posture": "standing, leaning forward with weight on the bench, in right-facing profile",
+     "gaze": "downward at the stone block on the bench",
+     "heldObjects": [
+      "one hand flat on / gripping the edge of the worked block; the other arm hangs alongside a long tool resting on the bench"
+     ]
+    },
+    {
+     "position": "center, behind the bench",
+     "posture": "standing, bent sharply forward over the work surface",
+     "gaze": "downward at the block directly beneath the hands",
+     "heldObjects": [
+      "a small pointed hand tool (chisel- or punch-like) held pointing down at the block"
+     ]
+    },
+    {
+     "position": "right",
+     "posture": "standing upright, body angled away from the viewer, turned toward the bench",
+     "gaze": "toward the bench / down at the sheet being held",
+     "heldObjects": [
+      "a large stiff sheet — a drawing, plan or chart — held open with both hands at chest height"
+     ],
+     "clothing": "long dark hooded or high-collared robe reaching the floor"
+    }
+   ],
+   "objects": [
+    {
+     "type": "carved circular disc bearing a five-pointed star",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "in the stone tracery above the archway — one at the upper left, one at the upper center, one at the upper right",
+     "orientation": "all three face the viewer flat-on; each star is point-UP (single point at the top, two arms down)",
+     "arrangement": "a row of three across the top of the wall, each inside its own gabled pointed arch; the CENTER disc sits noticeably HIGHER than the left and right discs, so the row forms a shallow peak rather than a level line. Even spacing, no gaps beyond the arch piers"
+    },
+    {
+     "type": "worked stone block on the bench",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "on top of the trestle bench at the center, being worked on",
+     "orientation": "lying flat, long axis running left-right",
+     "arrangement": "single, though a second lower slab may lie beneath it on the bench top"
+    }
+   ],
+   "environment": [
+    "dark stone interior under a large pointed gothic archway",
+    "a trestle work bench of heavy timber in the center",
+    "timber scaffolding or stacked planks at the left",
+    "rubble and stone offcuts scattered across the floor",
+    "the gabled tracery wall above carrying the three star discs"
+   ],
+   "lightSources": [
+    "a single directional light from high and slightly left-of-center, striking the tracery, the workers' shoulders, and the block; it throws three long dark shadows forward across the floor toward the bottom of the frame"
+   ],
+   "moonPhase": "no moon or sun visible",
+   "spatialRelations": [
+    "all three figures are clustered around one bench, the left and center figures on the far side, the right figure nearer the viewer",
+    "the three star discs are directly above and behind the three figures, roughly aligned with the archway centerline",
+    "the right figure holds the sheet out toward the other two, facing them across the bench",
+    "long cast shadows fan toward the viewer from all three figures"
+   ],
+   "foreground": [
+    "stone rubble floor",
+    "cast shadows",
+    "the right figure's robe"
+   ],
+   "background": [
+    "the dark archway opening",
+    "the tracery wall with three star discs",
+    "a faint column in the shadowed opening"
+   ]
+  },
+  "uncertainObservations": [
+   "the exact tool in the center figure's hand cannot be identified (chisel, punch, stylus or compass point)",
+   "whether the left figure holds a mallet or simply rests a hand on the bench is ambiguous in shadow",
+   "whether the bench holds one block or a block resting on a second slab cannot be resolved",
+   "no faces are lit well enough to read expression"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-e"
+ },
+ {
+  "reviewId": "review-308",
+  "visibleFacts": {
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "foreground left",
+     "posture": "standing still, barefoot, shoulders hunched, head bowed sharply forward and down",
+     "gaze": "downward toward the ground / toward the bundle held against the chest",
+     "heldObjects": [
+      "a bundle of long blades clutched across the chest and against the left shoulder"
+     ],
+     "clothing": "torn, tattered layered garment with ragged shredded hem; bare feet and lower legs"
+    },
+    {
+     "position": "middle distance, center-right on the path",
+     "posture": "standing or walking, seen in silhouette from behind, full-length",
+     "gaze": "away from the viewer, along the path",
+     "heldObjects": [
+      "none resolvable"
+     ]
+    },
+    {
+     "position": "middle distance, right of the second figure",
+     "posture": "standing or walking, seen in silhouette from behind, slightly farther away",
+     "gaze": "away from the viewer, along the path",
+     "heldObjects": [
+      "none resolvable"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword/blade — carried bundle",
+     "count": null,
+     "countConfidence": "low",
+     "where": "gripped against the foreground figure's chest, hilts rising above the left shoulder",
+     "orientation": "point-DOWN and angled to the viewer's left — the pommels and cross-guards are at the TOP, the blades run diagonally downward across the body",
+     "arrangement": "a tight overlapping fan. At least 3 distinct pommels/cross-guards are individually resolvable at the top; the blades below overlap and fade into the dark garment, so the total is not confirmable"
+    },
+    {
+     "type": "sword/blade — on the ground",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "flat on the wet paving in the lower foreground, below and right of the standing figure",
+     "orientation": "both lie horizontal-to-diagonal and both point DOWNWARD-OUTWARD toward the bottom corners — the left one has its hilt upper-right and tip toward the lower left; the right one has its hilt upper-left and tip toward the lower right",
+     "arrangement": "the two CROSS one another near their hilts, forming an X / inverted-V open toward the bottom of the frame; they are not parallel and not in a row"
+    }
+   ],
+   "environment": [
+    "wet stone-paved path or causeway receding diagonally to the upper right",
+    "a low stone parapet or wall running along the right side of the path",
+    "dark cliff face or ruined structures on the left",
+    "heavy broken cloud cover filling the upper half",
+    "standing water reflecting the sky on the paving"
+   ],
+   "lightSources": [
+    "a bright moon in the upper right, its disc partly veiled by cloud, lighting the cloud edges and reflecting in the wet paving as a pale streak"
+   ],
+   "moonPhase": "uncertain — the disc is largely obscured by cloud; the visible glow reads as roughly round but the phase cannot be determined",
+   "spatialRelations": [
+    "the foreground figure stands on the near end of the path, facing roughly toward the viewer's left, head down, while the two distant figures walk away up the path in the opposite direction",
+    "the two ground blades lie behind/below the foreground figure, on the paving between it and the bottom edge",
+    "the path leads from the foreground figure's position toward the two distant figures and the moonlit horizon",
+    "the parapet on the right separates the path from a dark drop or water"
+   ],
+   "foreground": [
+    "the ragged standing figure",
+    "two crossed blades on wet paving",
+    "reflective puddles"
+   ],
+   "background": [
+    "two small walking silhouettes",
+    "cloud bank and moon",
+    "distant flat horizon"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of blades in the carried bundle is NOT determinable — 3 hilts are clearly separable, a 4th may be present in shadow; recorded as null deliberately",
+   "whether the two distant figures are walking or standing still cannot be determined",
+   "the moon's phase is obscured by cloud",
+   "shapes on the far left horizon may be ruined buildings or rock; not identifiable"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-e"
+ }
+]

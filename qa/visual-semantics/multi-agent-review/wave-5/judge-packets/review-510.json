@@ -1,0 +1,280 @@
+{
+  "reviewId": "review-510",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-510.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "object-count disagreement"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-510.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "two swords lying crossed on the ground in the lower right",
+          "observed": "盲观察记录：右下角前景的两把剑是并排、几乎平行地斜躺着（剑柄朝 viewer-right 上方、剑尖朝 viewer-left 下方），不是交叉；而且它们躺在一块垂落的浅色布幔上，不是直接在地面上，剑身上还缠着淡紫色飘带",
+          "evidence": "两条剑身的轴线在画面上保持大致相同的倾角、始终没有相交；下方可见布幔的褶皱与边缘",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two swords lying crossed on the ground in the lower right",
+            "with": "two swords lying side by side, nearly parallel, on draped pale cloth in the lower right"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-510",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "画面中部偏左，站在一片浅色滩地/缓坡上",
+              "posture": "站立行走中，身体与背部朝向 viewer-right 后方（约四分之三背面对观者）",
+              "gaze": "头向 viewer-left 回转，越过肩膀回望；视线朝 viewer-left 略向下",
+              "heldObjects": [
+                "双臂在身前环抱一捆剑，剑柄朝 viewer-right 上方高出肩头，剑身向 viewer-left 下方斜伸到腰胯以下"
+              ],
+              "clothing": "银白与淡紫灰的多层长袍/外套，外罩大量半透明的薄纱飘带与串珠流苏；系带及膝长靴；银白色蓬松长发"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 4,
+              "countConfidence": "medium",
+              "where": "被人物抱在怀中",
+              "orientation": "斜向，剑首朝 viewer-right 上方，剑尖朝 viewer-left 下方",
+              "arrangement": "成束，剑柄呈扇形错开"
+            },
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "画面右下角前景，躺在一块垂落的浅色布幔上",
+              "orientation": "剑柄朝 viewer-right 上方，剑尖朝 viewer-left 下方，近乎平行斜躺",
+              "arrangement": "两把并排，剑身上缠绕着淡紫色飘带"
+            },
+            {
+              "type": "pavilion tent",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面 viewer-right 中景，成片排列",
+              "orientation": "尖顶帐篷，垂幔向下",
+              "arrangement": "一片营地，前后重叠至少三四顶，但相互遮挡数不清"
+            },
+            {
+              "type": "lantern",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "营地中，一盏在帐篷内侧透出暖光，一盏挂在 viewer-right 的支架上",
+              "orientation": "竖直悬挂/立放",
+              "arrangement": "分散两处"
+            },
+            {
+              "type": "banner on pole",
+              "count": null,
+              "countConfidence": "low",
+              "where": "营地上方，画面 viewer-right 中上部",
+              "orientation": "竖直旗杆，旗面向 viewer-left 横向飘",
+              "arrangement": "数面，被帐篷与纱幔挡住数不清"
+            },
+            {
+              "type": "crescent moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面左上角天空",
+              "orientation": "亮缘在 viewer-left 上方，月牙开口朝 viewer-right 下方",
+              "arrangement": "单个，部分被云遮住"
+            }
+          ],
+          "environment": [
+            "清晨/黄昏的淡彩水彩风格，整体是极浅的白、淡蓝、淡紫色调",
+            "画面 viewer-left 是一片平静的水面/湖泊，远处有淡蓝色的山丘剪影",
+            "人物脚下是浅色的碎石滩地",
+            "画面 viewer-right 是一片白色帐篷营地，帐幔层层垂落",
+            "画面右上角垂下一根开着白色花朵的树枝",
+            "画面左下角有白色花丛与叶簇",
+            "空中飘着细小的白色花瓣",
+            "画面四周有浅色细线边框，四角有藤蔓状角饰"
+          ],
+          "lightSources": [
+            "左上角的月牙（冷光）",
+            "营地帐篷内透出的暖黄灯光",
+            "viewer-right 悬挂的提灯暖光",
+            "天空整体的弥散柔光"
+          ],
+          "moonPhase": "crescent — 位于画面左上角，亮缘在 viewer-left 上侧，牙尖朝 viewer-right，部分被云遮挡",
+          "spatialRelations": [
+            "人物在营地的 viewer-left 前方，正朝 viewer-right 后方（营地）走去，但头回望 viewer-left",
+            "两把平放的剑在人物的 viewer-right 下方前景，位置比人物更靠近观者",
+            "月牙在人物头部的 viewer-left 上方",
+            "水面与远山在人物的 viewer-left 后方",
+            "开花的树枝在画面 viewer-right 上角，悬在营地之上",
+            "白色花丛在画面 viewer-left 下角"
+          ],
+          "foreground": [
+            "右下角垂落的浅色布幔与其上的两把剑、缠绕的飘带",
+            "左下角的白色花丛与叶簇",
+            "人物脚下的碎石滩"
+          ],
+          "background": [
+            "左侧水面与远山",
+            "右侧白色帐篷营地与旗杆",
+            "右上角开花的树枝",
+            "布满淡云的天空与月牙"
+          ]
+        },
+        "uncertainObservations": [
+          "抱着的剑的数目：剑首我能清楚数出 4 个，但剑身在纱幔与高光中重叠，可能还有第 5 把被遮住，所以只能给中等把握",
+          "人物的性别看不出，面容偏中性",
+          "营地帐篷的确切数量数不清，帐幔前后重叠且色调几乎与背景同化",
+          "旗杆/旗帜的数量数不清，原因同上",
+          "右下角布幔上那两把剑是躺在布上还是插在布下的地里，分辨不出",
+          "右上角树枝上开的是什么花（像白蔷薇），分辨不出",
+          "画面整体亮度极高、对比极低，许多细部边界无法确定"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "two swords lying crossed on the ground in the lower right",
+          "observed": "前景那两把剑是平行并排的，不是交叉的；剑尖都朝 viewer-left 斜下方，剑柄都朝上，彼此没有交叠成 X 形",
+          "evidence": "盲观察记录：objects.sword(count 2, countConfidence high) orientation = 「剑尖朝 viewer-left 斜下方，剑柄朝上，斜躺／斜插在地面与织物上」，arrangement = 「两把平行并排」",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two swords lying crossed on the ground in the lower right",
+            "with": "two swords lying parallel and side by side on the ground in the lower right"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-510",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center，略偏 viewer-left",
+              "posture": "站立行走中，身体朝 viewer-left 迈步，重心在前腿，上身微微前倾",
+              "gaze": "头向后扭转，越过肩膀朝 viewer-left 下方／侧后方低头看，眼睛半垂",
+              "heldObjects": [
+                "双臂抱住一捆剑：手臂在腰腹高度环抱剑身中段；剑刃朝 viewer-left 斜下方，剑柄朝 viewer-right 斜上方，最高的柄头高过头顶"
+              ],
+              "clothing": "浅银白色短卷发；浅蓝白色上衣与短裙，边缘有细密的蕾丝／刺绣；身后一大片半透明的薄纱披风随风朝 viewer-right 飘起；小腿是系带的高筒靴"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "被人物抱在胸腹前，剑柄伸向画面中上部",
+              "orientation": "斜置：剑尖朝 viewer-left 斜下方，剑柄与尖顶状柄头朝 viewer-right 斜上方",
+              "arrangement": "一捆并排、略成扇形"
+            },
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "画面 viewer-right 下角前景",
+              "orientation": "剑尖朝 viewer-left 斜下方，剑柄朝上，斜躺／斜插在地面与织物上",
+              "arrangement": "两把平行并排"
+            },
+            {
+              "type": "tent",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面 viewer-right 中景，沿着一条路排开",
+              "orientation": "尖顶帐篷，顶上有旗杆",
+              "arrangement": "一排若干顶，向画面深处纵深排列"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "画面 viewer-right，悬挂在帐篷旁的支架上",
+              "orientation": "竖直悬挂的多面体灯笼，内部亮着暖光",
+              "arrangement": "单个（另有一处帐篷内部透出的光晕，看不出灯具本体）"
+            },
+            {
+              "type": "pennant",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面 viewer-right 各帐篷顶的旗杆上",
+              "orientation": "横向飘展的细长三角旗",
+              "arrangement": "多面，散布在帐篷群上方"
+            },
+            {
+              "type": "flowering branch",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面 viewer-right 上角，自上方垂下",
+              "orientation": "枝条向下／向 viewer-left 垂挂",
+              "arrangement": "成簇垂挂，带白色花朵"
+            }
+          ],
+          "environment": [
+            "一条浅色小路从前景通向 viewer-right 后方的帐篷群",
+            "画面 viewer-left 是一片平静的水面／湖，远处有雾中的岸线与丘陵",
+            "地面与水面交界处有低矮的草丛和白色小花",
+            "整幅画笼罩在浓重的白雾／薄纱质感中",
+            "空中有若干飘落的花瓣／叶片"
+          ],
+          "lightSources": [
+            "画面 viewer-right 帐篷旁悬挂的提灯（暖黄色）",
+            "画面 viewer-right 一顶帐篷内部透出的暖光",
+            "画面上方 viewer-left 的新月（冷白色）"
+          ],
+          "moonPhase": "crescent",
+          "spatialRelations": [
+            "新月在人物头部的 viewer-left 上方",
+            "帐篷群在人物的 viewer-right 后方",
+            "两把前景的剑在人物的 viewer-right 下方，比人物更靠近观者",
+            "水面在人物的 viewer-left，低于人物脚下的路面",
+            "开花的枝条在帐篷群的上方、画面 viewer-right 上角",
+            "人物回头的方向与他迈步前进的方向相反"
+          ],
+          "foreground": [
+            "viewer-right 下角的两把剑",
+            "铺开的浅色织物／纱幔",
+            "viewer-left 下角的白色花丛"
+          ],
+          "background": [
+            "新月与云",
+            "雾中的湖面与远岸",
+            "帐篷群与旗杆"
+          ]
+        },
+        "uncertainObservations": [
+          "怀中剑的数量：能数出 5 个尖顶状柄头，剑身约 5 条，但整体色调极淡、边界模糊，可能是 4 或 6",
+          "帐篷数量数不清：至少 4–5 顶，后排在雾里完全糊掉，无法确定总数",
+          "三角旗数量数不清",
+          "人物性别从画面上判断不出（面部轮廓纤细、短发、服装无明确性别指向）",
+          "前景两把剑究竟是插入地面还是平放在织物上，看不出来",
+          "画面 viewer-left 的水体是湖还是海湾，看不出边界",
+          "垂下的开花枝条是什么植物看不出"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

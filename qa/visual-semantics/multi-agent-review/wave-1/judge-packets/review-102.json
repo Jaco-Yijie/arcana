@@ -1,0 +1,335 @@
+{
+  "reviewId": "review-102",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-102.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-102.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "broken column at right",
+          "observed": "several standing columns plus a fragment of arched ruin at right",
+          "evidence": "The right edge holds a thick fluted column in the near ground, at least two further column shafts set back behind it, and a separate fragment of arch/entablature in the upper right corner. More than one column is plainly present, so a singular 'broken column' understates what is painted (I could confirm plurality but not an exact count).",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "broken column at right",
+            "with": "colonnaded ruin with several standing columns at right"
+          },
+          {
+            "find": "the broken column to the right",
+            "with": "the columned ruin to the right"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-102",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of the frame, standing on a paved terrace in the middle distance",
+              "posture": "standing, back fully turned to the viewer, feet apart, arms at sides",
+              "gaze": "away from the viewer, toward the bright horizon on the distant water",
+              "heldObjects": [],
+              "appearance": "a long dark blue-black cloak with a ragged, tattered lower hem; dark hair; the figure is small in the frame relative to the foreground objects"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade (sword) standing upright, left group",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "left half of the round foreground dais, blades set point-down into the stone in a curving row, hilts and pommels catching light"
+            },
+            {
+              "type": "blade (sword) standing upright, right group",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "right half of the round foreground dais, mirroring the left row"
+            },
+            {
+              "type": "blade (sword), total visible",
+              "count": 10,
+              "countConfidence": "medium",
+              "where": "arranged in two symmetrical arcs on the circular foreground dais, with a gap in the middle where the draped cloth lies"
+            },
+            {
+              "type": "circular stone dais with engraved/inlaid markings",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "entire foreground bottom third; gold-inlaid circular bands and small symbols are visible around its rim"
+            },
+            {
+              "type": "draped cloth / spread mantle",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lying flat across the center of the dais between the two blade rows; dark blue with gold star-map-like markings, its folds spilling toward the lower left"
+            },
+            {
+              "type": "moon or planetary body",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "upper left — one larger pale grey sphere near the top-left corner, and one smaller crescent-lit sphere below it"
+            },
+            {
+              "type": "domed structure on columns (rotunda/gazebo)",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left edge, middle distance, standing on the terrace"
+            },
+            {
+              "type": "standing column / pillar ruin",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right edge — a group of tall columns and a fragment of arched ruin; they overlap and the frame cuts them, so individual columns cannot be counted"
+            },
+            {
+              "type": "armillary-sphere-like ring instrument on a pedestal",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "left-center middle distance, between the rotunda and the figure"
+            },
+            {
+              "type": "tall narrow conifer tree",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right middle distance beside the ruins; several, too clustered to count"
+            }
+          ],
+          "environment": [
+            "deep starry night sky covering the upper half, with a bright dense band of stars (galaxy) running from upper right toward center",
+            "faint thin geometric constellation lines and concentric arcs drawn across the sky",
+            "a bright warm orange-gold band of light at the horizon over water, directly behind the figure",
+            "a broad body of still water reflecting the horizon glow",
+            "a mountain range along the horizon on both sides of the water",
+            "wet-looking flagstone terrace between the dais and the shore",
+            "an ornate thin painted border with corner tick marks around the whole image"
+          ],
+          "lightSources": [
+            "a concentrated warm glow at the horizon directly behind the figure (sun at or below the horizon — the disc itself is not clearly separable)",
+            "starlight across the sky",
+            "two pale spheres at upper left"
+          ],
+          "moonPhase": "the smaller upper-left sphere shows a clear crescent of light along its lower-left edge; the larger sphere above it reads as a full or nearly full grey disc — but both are partly overlapped by cloud and the border",
+          "spatialRelations": [
+            "the two rows of blades stand between the viewer and the figure, on the near dais; the figure is well beyond them",
+            "the draped cloth lies on the ground between the two blade rows, in the gap at the dais center",
+            "the figure stands on the horizon line, centered on the bright glow, with the water and mountains beyond",
+            "the rotunda is at the far left and the columned ruins at the far right, framing the central figure",
+            "the sky's constellation arcs converge above the figure's head"
+          ],
+          "foreground": [
+            "circular engraved dais",
+            "two rows of upright blades",
+            "draped star-marked cloth"
+          ],
+          "background": [
+            "starry sky with galaxy band",
+            "two spheres upper left",
+            "horizon glow over water",
+            "mountains",
+            "rotunda left",
+            "column ruins and conifers right"
+          ]
+        },
+        "uncertainObservations": [
+          "blade counts per side are medium confidence — the hilts in each row are closely spaced and partly overlap in perspective; a blade fully hidden behind another cannot be ruled out",
+          "the number of standing columns in the right-hand ruin cannot be determined (overlap plus frame cut)",
+          "whether the horizon glow contains a visible sun disc is ambiguous",
+          "the exact phase of the larger upper-left sphere is not determinable; cloud crosses it",
+          "the ring instrument at left-center is too small to confirm its structure"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "ten upright swords set point-up in a ring of stone sockets",
+          "observed": "ten upright swords set point-DOWN into the stone sockets, with the gold hilts, cross-guards and pommels uppermost",
+          "evidence": "Every blade shows an ornamented gold pommel and cross-guard at its top end, and the blade tapers downward and disappears into a dark circular socket in the platform floor. The orientation is unambiguous at full size and the same on all ten blades. 'Point-up' inverts this.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the ring of swords encircles the fallen cloak and map in the lower half of the image",
+          "observed": "the swords form two separate arcs of five, one along the left of the circular platform and one along the right; the near edge (bottom of frame) and the far edge both have no swords, so the cloth and map are flanked rather than encircled",
+          "evidence": "The bottom foreground of the platform is completely clear of blades, and so is the gap at the centre-rear through which the standing figure is visible. The two groups of five face each other across the cloth with open gaps at both ends.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "dark tattered cloak lying spread on the platform floor",
+          "observed": "a crumpled dark blue-black cloth with gold constellation embroidery spread across the platform centre; whether it is a garment cannot be established",
+          "evidence": "The cloth is bunched and its edges are lost under the pale tan shape, so no hood, sleeve or full hem is visible. The standing figure in the middle ground is still wearing a cloak of similar colour, so reading the floor cloth as a discarded cloak is an inference the pixels do not confirm.",
+          "confidence": "low"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "torn parchment map with drawn markings",
+          "observed": "a pale tan area on the platform to the right of and partly under the dark cloth, carrying a faint grid pattern; whether it is parchment, cloth, or bare engraved stone is not determinable",
+          "evidence": "A faint rectilinear grid is visible on it, which is consistent with a map, but no edge, curl or torn margin separates it from the platform surface.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "ten upright swords set point-up in a ring of stone sockets",
+            "with": "ten upright swords set point-down into stone sockets, hilts uppermost"
+          },
+          {
+            "find": "the ring of swords encircles the fallen cloak and map in the lower half of the image",
+            "with": "two arcs of five swords flank the fallen cloth and map on the left and right of the platform, leaving open gaps at the near and far edges"
+          },
+          {
+            "find": "dark tattered cloak lying spread on the platform floor",
+            "with": "crumpled dark cloth with gold constellation embroidery spread on the platform floor"
+          },
+          {
+            "find": "torn parchment map with drawn markings",
+            "with": "pale tan area with a faint grid pattern, possibly a map or parchment"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-102",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, standing on the stone plaza in the middle distance, beyond the foreground platform",
+              "posture": "standing/walking away from the viewer, seen entirely from behind, in a long hooded cloak with a torn, ragged hem",
+              "gaze": "away from the viewer, toward the glowing horizon",
+              "heldObjects": [],
+              "clothing": "long dark blue-black cloak with gold trim and a tattered lower edge; dark hair visible above the collar"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword planted upright, left group",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "five blades standing point-down in sockets along the left arc of the circular foreground platform; counted left to right"
+            },
+            {
+              "type": "sword planted upright, right group",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "five blades standing point-down in sockets along the right arc of the circular foreground platform"
+            },
+            {
+              "type": "sword (total upright blades resolvable)",
+              "count": 10,
+              "countConfidence": "medium",
+              "where": "arranged in two arcs of five on the circular platform, leaving a gap in the middle"
+            },
+            {
+              "type": "dark cloth / star-embroidered blanket",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "spread across the center of the circular platform between the two sword groups, crumpled, with gold constellation embroidery"
+            },
+            {
+              "type": "pale tan cloth or unrolled map",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "lying on the platform to the right of and partly under the dark cloth"
+            },
+            {
+              "type": "domed pavilion with columns",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left middle-ground, an open rotunda on a terrace"
+            },
+            {
+              "type": "ruined columns / standing arch",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right middle-ground; several column shafts and a broken entablature, overlapping and cropped by the right edge"
+            },
+            {
+              "type": "armillary / ring instrument on a stand",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "left middle-ground between the pavilion and the water, a circular gold ring with internal lines"
+            },
+            {
+              "type": "celestial orb (moon-like body)",
+              "count": 2,
+              "countConfidence": "low",
+              "where": "upper left — a larger mottled sphere near the top-left corner, and a smaller one below it partly in shadow"
+            },
+            {
+              "type": "conifer / cypress tree",
+              "count": null,
+              "countConfidence": "low",
+              "where": "small dark silhouettes along the far shoreline at left and right; too small and clustered to count"
+            }
+          ],
+          "environment": [
+            "night sky filled with stars and a broad Milky Way band running from upper right down toward the horizon",
+            "fine gold constellation lines and concentric geometric star-map arcs drawn across the sky",
+            "a bright warm glow on the horizon at the exact center, with rays spreading over water — a rising or setting sun",
+            "a wide calm body of water across the middle distance",
+            "mountain ranges along the horizon on both sides",
+            "wet stone paving in the middle ground reflecting the horizon light",
+            "a large circular stone platform in the foreground engraved with zodiac/astrological symbols around its rim",
+            "ornate gold-on-black decorative border framing the whole picture"
+          ],
+          "lightSources": [
+            "the warm sunburst on the center horizon and its reflection on the water and wet paving",
+            "the starfield and Milky Way",
+            "the two celestial orbs upper left",
+            "gold glints on the sword blades and the platform engraving"
+          ],
+          "moonPhase": "uncertain — the larger upper-left orb appears mostly lit with shading along one edge; the smaller one below appears partially lit",
+          "spatialRelations": [
+            "the circular sword platform occupies the whole foreground, nearest the viewer",
+            "the swords form two arcs with an open gap at the center, and the cloaked figure stands directly beyond that gap, aligned with the horizon glow",
+            "the figure is walking away from the platform of swords toward the light",
+            "the pavilion is on the left, the ruined colonnade on the right, framing the central horizon",
+            "the cloth on the platform is laid between the viewer and the figure"
+          ],
+          "foreground": [
+            "circular engraved stone platform",
+            "two arcs of planted swords",
+            "crumpled star-embroidered cloth and a pale tan cloth"
+          ],
+          "background": [
+            "water, mountains, horizon sunburst",
+            "starfield, Milky Way, constellation diagrams",
+            "pavilion at left, ruined columns at right",
+            "two celestial orbs upper left"
+          ]
+        },
+        "uncertainObservations": [
+          "the sword count of 10 is a careful one-by-one read of the hilts, but several blades are close together and the outermost on each side are near the frame edge — medium confidence",
+          "whether the horizon glow is a sunrise or a sunset is not determinable",
+          "the phases of the two upper-left orbs cannot be determined",
+          "the pale tan shape on the platform may be a cloth, a map, or a bare patch of stone",
+          "the number of columns in the right-hand ruin cannot be resolved because they overlap and are cropped"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

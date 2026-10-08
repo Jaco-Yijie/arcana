@@ -1,0 +1,197 @@
+{
+  "reviewId": "review-414",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-414.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-414.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "emphasizedAspects",
+          "existing": "a surrounding ring of blades that is present but not touching",
+          "observed": "not a ring — two loose flanking groups (roughly 4 left, 5 right) with a clear open lane of empty water directly in front of and behind her",
+          "evidence": "The water immediately fore and aft of the figure is unbroken; every blade sits to her left or right at varying depths, so the shape is open on two sides, not closed.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "misty blue night",
+          "observed": "the whole image is high-key, pale and luminous with a bright diffuse glow; I could not determine night vs pale daylight from the pixels despite the crescent moon",
+          "evidence": "Values are near-white across sky, mist and water with no dark passages anywhere; only the crescent implies night.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "a surrounding ring of blades that is present but not touching",
+            "with": "blades flanking her on both sides, present but not touching, with open water in front of and behind her"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-414",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, slightly left of center, standing in shallow water",
+              "posture": "standing, both bare feet in ankle-deep water, legs together, body in three-quarter view turned to the viewer's left; head bowed forward and down; not seated, not kneeling",
+              "gaze": "head lowered, face angled down and to the viewer's left; eyes are crossed by a pale band, so the gaze direction is toward the water at her feet rather than outward",
+              "heldObjects": [
+                "nothing held — her arms are held against her sides and are wrapped/bound with pale cords or ribbons that wind around the upper body and waist"
+              ],
+              "clothing": "sheer pale layered gown with a long trailing hem in the water, cords/ribbons wound around the torso and arms, small flowers in the long wavy hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword standing in the water",
+              "count": 9,
+              "countConfidence": "medium",
+              "where": "spread through the shallow water on both sides of the figure — 3 in the middle distance on the viewer-left, 1 large one in the near foreground at the viewer-left, 3 in the middle distance on the viewer-right, 2 large ones in the near foreground at the viewer-right",
+              "orientation": "all vertical, hilt and pommel UPPERMOST, blade running DOWN into the water; every point is submerged, none raised",
+              "arrangement": "not a row and not a ring — a loose scattering on both flanks that leaves a clear open channel of water directly in front of and behind the figure; the near foreground pair on the right and the single large one on the left sit closest to the viewer"
+            }
+          ],
+          "environment": [
+            "a wide expanse of still, shallow, mirror-like water with faint ripples",
+            "trailing willow-like branches with small leaves at the upper left",
+            "pale washed-out mist across the middle distance",
+            "clusters of pale mauve/white flowers and foliage at the lower left and lower right",
+            "a thin painted border line around the image"
+          ],
+          "lightSources": [
+            "a large crescent moon at the upper right, its bright lit limb facing to the lower left and the dark disc faintly visible inside the crescent, set in a diffuse bright halo",
+            "overall high-key diffuse pale light suffusing the whole scene from the upper right"
+          ],
+          "moonPhase": "crescent — a thin lit crescent on the lower-left side of the disc, with the unlit remainder of the disc faintly showing",
+          "spatialRelations": [
+            "the figure stands in the middle of the blade-studded water with blades on both her left and her right; she is enclosed but there is an open lane of empty water at her feet leading toward the viewer",
+            "the bound cords are around her own arms and torso, not tied to any of the blades",
+            "the blades in the middle distance are smaller and hazier than the foreground ones, indicating depth rather than a single line",
+            "her head is bowed toward the water, not raised toward the moon"
+          ],
+          "foreground": [
+            "one large blade at the left and two large blades at the right, hilts detailed and ornate",
+            "pale flowers and a floating petal/leaf at the bottom center",
+            "her reflection and the wet hem of the gown on the water surface"
+          ],
+          "background": [
+            "misty pale water and sky merging with no clear horizon",
+            "crescent moon upper right",
+            "hanging willow foliage upper left"
+          ]
+        },
+        "uncertainObservations": [
+          "The blade count of 9 is my one-by-one tally, but the middle-distance blades are painted very faintly in mist and two of them nearly overlap on the right, so the true number could be 8 or 10.",
+          "Whether the pale band across the eyes is a blindfold or a veil/hair strand cannot be settled at this resolution; it does lie across both eyes.",
+          "The light is bright and high-key despite the crescent moon — I cannot say from the pixels whether this reads as night or as pale daylight with a visible moon."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "emphasizedAspects",
+          "existing": "a surrounding ring of blades that is present but not touching",
+          "observed": "not a ring — two loose groups flanking her, roughly four to the left and four to the right, with open water directly in front of her and open misted water directly behind",
+          "evidence": "The bottom-center foreground and the whole mid-ground behind her are empty water; the blades only occupy the left and right thirds, so the arrangement has large gaps front and back.",
+          "confidence": "medium"
+        },
+        {
+          "field": "scene",
+          "existing": "beneath a large crescent moon in a misty blue night",
+          "observed": "very high-key, bright pale light with a crescent moon in a large bright halo — reads closer to bright daylight mist than to night",
+          "evidence": "Whites are near-paper-white across sky, water and figure with no dark values anywhere; I could not call this night from the pixels, so flagging as uncertain rather than plainly wrong.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "a surrounding ring of blades that is present but not touching",
+            "with": "blades flanking her on both sides, close but not touching, with open water ahead and behind"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-414",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of frame, standing in shallow water",
+              "posture": "STANDING upright, barefoot, ankles in the water, body in near-profile facing the viewer's left, head bowed low",
+              "gaze": "a pale band covers the eyes (blindfolded); the bowed face is directed down and to the left, toward the water at her feet",
+              "heldObjects": [
+                "nothing held — a pale cord/ribbon is wound several times around her upper arms and torso, binding the arms to her sides"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade (long sword) standing in the water",
+              "count": 8,
+              "countConfidence": "medium",
+              "where": "four to the left of the figure, four to the right — in each group one large and near the viewer, the rest smaller and receding into mist",
+              "orientation": "all vertical, driven POINT-DOWN into the shallow water, hilts and pommels uppermost",
+              "arrangement": "scattered upright in two loose groups flanking the figure, with an open gap in the middle where she stands and an open stretch of water directly behind her"
+            },
+            {
+              "type": "pale flowers",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower left and lower right corners, at the water's edge",
+              "orientation": "blooms facing up and outward",
+              "arrangement": "clustered at both bottom corners"
+            }
+          ],
+          "environment": [
+            "broad shallow still water with visible ripple rings around the figure's feet",
+            "a hanging leafy branch draping in from the upper left",
+            "pale mist/fog over the water, no far shore visible",
+            "a drawn thin border line around the image"
+          ],
+          "lightSources": [
+            "bright diffuse light from the upper right, overall very bright and pale — reads as daylight or very bright mist",
+            "a thin crescent moon high at the upper right inside a large bright halo"
+          ],
+          "moonPhase": "crescent — a thin bright arc on the upper-right rim of a faintly visible disc",
+          "spatialRelations": [
+            "the figure stands in the middle of the blade groups, none of the blades touching her",
+            "the two largest blades are nearest the viewer, one at lower left and one at lower right, framing her",
+            "her bowed head points away from the crescent moon, which is behind her to the upper right",
+            "ripple rings spread outward from where she stands"
+          ],
+          "foreground": [
+            "the two large near blades, flowers at both bottom corners, a floating pale petal/leaf on the water at bottom center"
+          ],
+          "background": [
+            "misty water, hanging branch, crescent moon and halo"
+          ]
+        },
+        "uncertainObservations": [
+          "blade count 8 is my best resolution; the farthest blades on both sides are faint in the mist and one more could be hidden, so the real total may be 8 or 9",
+          "whether the band across the eyes is a blindfold or simply the shadow of the bowed brow is not 100% certain, though it reads as a cloth band",
+          "the binding is clearly a cord wrapped around arms and torso, but I cannot tell where it is tied",
+          "the scene is lit like daylight while showing a crescent moon"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

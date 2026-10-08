@@ -1,0 +1,133 @@
+[
+ {
+  "reviewId": "review-316",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "two upright swords standing point-up in cylindrical holders on a table",
+    "observed": "two swords standing hilt-up with blades driven point-DOWN into cylindrical holders on the table",
+    "evidence": "Both swords show cross-guards and ring pommels at the top and each blade tapers downward into the short cylindrical socket at the table surface; nothing points skyward.",
+    "confidence": "high"
+   },
+   {
+    "field": "visualTensions",
+    "existing": "the figure's body faces away while the head turns back toward the camp",
+    "observed": "the body faces away and the head is turned to the right, toward the lit horizon — away from the tent, which is on the left",
+    "evidence": "The lit edge of the cheek and jaw falls on the right side of the head, catching the gold horizon glow; the hair mass sits at the back-left of the skull, so the face is aimed right, not back toward the tent.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two upright swords standing point-up in cylindrical holders on a table",
+     "with": "two swords standing hilt-up, blades driven point-down into cylindrical holders on a table"
+    },
+    {
+     "find": "the figure's body faces away while the head turns back toward the camp",
+     "with": "the figure's body faces away and the head is turned toward the lit horizon, away from the camp"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-304",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the right figure stands slightly further back than the left",
+    "observed": "the right figure stands nearer the viewer than the left, at the near-right side of the bench",
+    "evidence": "The right figure's robe hem sits lower in the frame than the left figure's and its body overlaps the near-right end of the bench, placing it in front of the bench rather than behind it.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the right figure stands slightly further back than the left",
+     "with": "the right figure stands at the near side of the bench, slightly closer to the viewer than the left"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-308",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-303",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-315",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "emphasizedAspects",
+    "existing": "sleepless night-time distress",
+    "observed": "the scene is daytime — bright daylight floods in through the window",
+    "evidence": "The multi-pane window at the right is filled with bright daylight and sunlit green foliage, and that light falls across the woman's back and the bed; the packet's own scene line and visualTensions already say 'daylight' and 'bright sunlit window'.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "sleepless night-time distress",
+     "with": "daytime distress in a quiet room"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-314",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "armillary sphere on a stand",
+    "observed": "two ringed instruments on separate stands — a larger multi-ring armillary sphere further left and a smaller ringed globe beside it",
+    "evidence": "On the platform left of the horn-blower there are two distinct pedestals with a clear gap between them, the left one carrying a large multi-banded sphere and the right a smaller single-ringed globe.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "armillary sphere on a stand",
+     "with": "two ringed instruments on stands — a large armillary sphere and a smaller ringed globe"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-302",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "thin circlet of dark thorny branches on the head",
+    "observed": "an ornate metallic crown with upright pointed jewelled finials, worn over a long dark veil",
+    "evidence": "The headpiece is a bright, symmetric band of gold-toned metal with regular pointed uprights and bead/jewel highlights catching the moonlight — manufactured regularity, not irregular dark branchwork.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "thin circlet of dark thorny branches on the head",
+     "with": "ornate jewelled metal crown with pointed finials, worn over a long dark veil"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ }
+]

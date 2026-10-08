@@ -1,0 +1,395 @@
+{
+  "reviewId": "review-314",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-314.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: uncertain vs corrected",
+    "low reviewer confidence"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 1,
+    "corrected": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-314.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "open tablets and scrolls held by the figures",
+          "observed": "flat open rectangular panels held by the figures; no rolled or furled scroll is resolvable anywhere in the frame",
+          "evidence": "Every held object I could resolve — the three figures at the bottom left, the one seated in the boat at bottom right, and the waders across the middle distance — is the same flat, pale, open rectangular form, several of them faintly glowing. None shows a rolled edge, a spindle or a curled end. The plural 'scrolls' asserts an object class the pixels do not show.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "open tablets and scrolls held by the figures",
+            "with": "flat open panels or tablets held by the figures"
+          },
+          {
+            "find": "while many smaller robed figures wade through dark water holding open tablets and scrolls.",
+            "with": "while many smaller robed figures wade through dark water holding open flat panels."
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-314",
+        "visibleFacts": {
+          "figureCount": null,
+          "figures": [
+            {
+              "position": "upper left, elevated on a stone platform/tower top",
+              "posture": "standing, side-on, one arm raised",
+              "gaze": "up and to the right, toward the bright star",
+              "heldObjects": [
+                "a long flared horn/trumpet raised to the mouth, pointing up and to the right"
+              ],
+              "appearance": "long dark hair, long star-flecked robe with a trailing hem"
+            },
+            {
+              "position": "bottom left foreground, at the base of the stone structure",
+              "posture": "standing/leaning, head lowered",
+              "gaze": "down at the object held",
+              "heldObjects": [
+                "an open flat panel/book"
+              ]
+            },
+            {
+              "position": "bottom left of center, in front of the structure",
+              "posture": "standing, head lowered",
+              "gaze": "down at the object held",
+              "heldObjects": [
+                "an open flat panel/book"
+              ]
+            },
+            {
+              "position": "bottom center-left, largest of the lower figures, back partly to viewer",
+              "posture": "standing",
+              "gaze": "down at the object held",
+              "heldObjects": [
+                "an open flat panel/book"
+              ]
+            },
+            {
+              "position": "bottom right, seated inside a small boat",
+              "posture": "seated in the boat, hooded",
+              "gaze": "down at the object held",
+              "heldObjects": [
+                "an open flat panel/book"
+              ],
+              "nearby": "a lit lantern on the boat's rim"
+            },
+            {
+              "position": "middle ground, numerous hooded robed figures standing in shallow water across the center and right of the frame, several on small stone slabs",
+              "posture": "standing",
+              "gaze": "mostly downward at what each holds, a few turned toward the horizon",
+              "heldObjects": [
+                "an open flat panel/book each, where resolvable"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "robed figure",
+              "count": null,
+              "countConfidence": "low",
+              "where": "spread across the water from the bottom foreground to the distant horizon",
+              "orientation": "upright",
+              "arrangement": "scattered irregularly across the water, denser at bottom and center, thinning toward the horizon; a cluster of three at bottom left beside the stone structure, one in a boat at bottom right, the rest dispersed with wide gaps — not a row and not a ring"
+            },
+            {
+              "type": "horn/trumpet",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "at the lips of the elevated figure, upper left",
+              "orientation": "raised, bell pointing up and to the right toward the bright star",
+              "arrangement": "single"
+            },
+            {
+              "type": "celestial sphere (moon/planet)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered across the night sky — upper left, upper-left edge, top center (partly cut by the frame), upper right (large), right upper, right middle",
+              "orientation": "n/a",
+              "arrangement": "scattered at different sizes; at least five are individually resolvable, one or more touch or are cut by the frame edge"
+            },
+            {
+              "type": "chest/coffer",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "bottom center, on a stone slab in the water",
+              "orientation": "closed, lid down, facing the viewer",
+              "arrangement": "single, decorated with fine gold panel work"
+            },
+            {
+              "type": "armillary sphere / globe on a stand",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "on the platform at left beside the horn figure — a larger ringed sphere and a smaller globe",
+              "orientation": "upright on stands",
+              "arrangement": "side by side, the larger one further left"
+            },
+            {
+              "type": "lantern (lit)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "one on the platform edge beside the horn figure, one on the boat rim at bottom right, several small ones in the alcoves of the stone structure at left",
+              "orientation": "upright, burning",
+              "arrangement": "scattered along the left structure and at two foreground points"
+            },
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "bottom right, in the water",
+              "orientation": "bow toward the left",
+              "arrangement": "single, carrying one seated figure"
+            },
+            {
+              "type": "arched alcove with a figure/statue inside",
+              "count": null,
+              "countConfidence": "low",
+              "where": "in the face of the stone structure at left",
+              "orientation": "upright arches",
+              "arrangement": "a row of at least three lit alcoves along the structure's face, plus one lower down, partly cut by the left frame edge"
+            }
+          ],
+          "environment": [
+            "night sky with dense stars, a purple nebula band at upper left and thin gold constellation lines at upper right",
+            "concentric gold rings radiating from a single bright star at the upper center",
+            "a large dark stone structure/tower at the left with arched lit alcoves",
+            "wide shallow water filling the lower two thirds, with visible ripples and wave crests",
+            "flat stone slabs set in the water that some figures stand on",
+            "a mountain range across the horizon",
+            "warm orange glow on the horizon at center-right with a light path reflected on the water",
+            "thin decorative gold border frame"
+          ],
+          "lightSources": [
+            "the bright central star at the hub of the concentric rings",
+            "warm horizon glow at center-right",
+            "multiple small lanterns (platform, boat, wall alcoves)",
+            "faint glow from the open panels several figures hold"
+          ],
+          "moonPhase": "uncertain",
+          "spatialRelations": [
+            "the horn figure stands well above everyone else on the tower platform at left, aiming the horn at the bright star that is the center of the ring pattern",
+            "the crowd of figures is below and to the right of the tower, standing in the water and facing various directions, most looking down at what they hold rather than up at the horn",
+            "the chest sits in the water at the bottom center, closest to the viewer, with figures behind and beside it",
+            "figures get smaller and fainter toward the horizon"
+          ],
+          "foreground": [
+            "chest on a stone slab",
+            "three figures with open panels at bottom left",
+            "figure in a boat with a lantern at bottom right"
+          ],
+          "background": [
+            "tower with lit alcoves",
+            "starfield with several spheres and concentric rings",
+            "mountains and glowing horizon",
+            "tiny distant figures in the water"
+          ]
+        },
+        "uncertainObservations": [
+          "Total figure count cannot be established — figures overlap, several are very small near the horizon, and some are cut by the frame edges. Roughly a dozen or more are visible.",
+          "Number of celestial spheres in the sky cannot be fixed; at least five are resolvable and at least one is clipped by the frame.",
+          "What the figures hold cannot be identified with certainty — flat, pale, open rectangular objects that could be books, tablets or box lids; several appear to glow.",
+          "Whether the bright central star is a star, a light source or an opening cannot be determined.",
+          "The horizon glow could be sunrise or sunset; no sun disc is visible."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "armillary sphere on a stand",
+          "observed": "two ringed instruments on separate stands — a larger multi-ring armillary sphere further left and a smaller ringed globe beside it",
+          "evidence": "On the platform left of the horn-blower there are two distinct pedestals with a clear gap between them, the left one carrying a large multi-banded sphere and the right a smaller single-ringed globe.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "armillary sphere on a stand",
+            "with": "two ringed instruments on stands — a large armillary sphere and a smaller ringed globe"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-314",
+        "visibleFacts": {
+          "figureCount": null,
+          "figures": [
+            {
+              "position": "upper left, standing on a raised stone platform/tower top",
+              "posture": "standing, side-on, leaning back slightly, both arms raised to hold a long horn to the mouth",
+              "gaze": "upward and to the right, along the horn toward the sky",
+              "heldObjects": [
+                "a long straight trumpet/horn, bell angled up to the right, with a bright star-point of light at the bell"
+              ],
+              "clothing": "long dark robe with gold star flecks; long hair streaming"
+            },
+            {
+              "position": "foreground lower-center-left, back to the viewer",
+              "posture": "standing, head slightly bowed",
+              "gaze": "down at an open book/sheet held in the hands",
+              "heldObjects": [
+                "an open pale book or sheet"
+              ],
+              "clothing": "long dark starred robe, long hair"
+            },
+            {
+              "position": "lower left, on the stone ledge of the platform",
+              "posture": "standing/leaning",
+              "gaze": "down at an open sheet",
+              "heldObjects": [
+                "an open pale book or sheet"
+              ]
+            },
+            {
+              "position": "lower left, beside the previous figure",
+              "posture": "standing",
+              "gaze": "down at an open sheet",
+              "heldObjects": [
+                "an open pale book or sheet"
+              ]
+            },
+            {
+              "position": "lower right, seated inside a small boat",
+              "posture": "seated, turned three-quarters away",
+              "gaze": "down at an open sheet",
+              "heldObjects": [
+                "an open pale sheet"
+              ],
+              "notes": "a lit lantern stands on the boat's gunwale beside this figure"
+            },
+            {
+              "position": "middle distance, several more standing in shallow water across the center and right of the frame",
+              "posture": "standing upright in the water, mostly with backs or profiles to the viewer",
+              "gaze": "variously toward the horizon or down at pale sheets they hold",
+              "heldObjects": [
+                "several of them hold open pale sheets or books"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "robed figure standing in the water",
+              "count": null,
+              "countConfidence": "low",
+              "where": "spread across the flooded middle ground from center-left to the right edge, receding toward the horizon",
+              "orientation": "upright, most facing away from the viewer",
+              "arrangement": "scattered, not a row or a ring; loosely grouped in twos and threes with open water between them, becoming smaller and less distinct toward the horizon"
+            },
+            {
+              "type": "open book / pale sheet held by a figure",
+              "count": null,
+              "countConfidence": "low",
+              "where": "held at chest height by many of the figures",
+              "orientation": "held open, faces angled up toward their readers",
+              "arrangement": "one per figure where visible, but several figures are too small or too dark to tell"
+            },
+            {
+              "type": "celestial sphere / moon or planet in the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered across the sky: a large one upper left, a small one at the far left edge, a large one upper right, a smaller one at the right edge, and one at mid-right",
+              "orientation": "n/a",
+              "arrangement": "scattered at different sizes and heights, no pattern; at least 5 separable, and faint additional discs may be present"
+            },
+            {
+              "type": "armillary sphere / ringed globe on a pedestal",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "on the platform to the left of the horn-blowing figure: a larger ringed sphere further left, a smaller globe just right of it",
+              "orientation": "upright on stands",
+              "arrangement": "side by side, the larger one further from the figure"
+            },
+            {
+              "type": "stone chest / casket",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "foreground center, on a stone slab at the water's edge",
+              "orientation": "closed, lid up",
+              "arrangement": "single, decorated with gold lines and a star motif"
+            },
+            {
+              "type": "lit lantern",
+              "count": null,
+              "countConfidence": "low",
+              "where": "one on the platform edge beside the horn-blower, one on the boat at lower right, and further small warm lights inside the platform's arched niches",
+              "orientation": "upright",
+              "arrangement": "scattered"
+            },
+            {
+              "type": "arched niche in the platform wall",
+              "count": null,
+              "countConfidence": "low",
+              "where": "set into the face of the stone platform at the lower left, each containing a dim portrait-like panel and a small light",
+              "orientation": "upright arches",
+              "arrangement": "a row along the wall, partly hidden behind foreground figures; at least 4 are partly visible"
+            },
+            {
+              "type": "small rowing boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower right, in the shallow water",
+              "orientation": "bow toward the lower right",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "a wide expanse of shallow, rippled water filling the lower two-thirds of the frame",
+            "a large stone platform or mausoleum-like structure occupying the left side, with arched lit niches and stepped stone slabs at the water's edge",
+            "night sky with dense stars, a milky-way band at upper left, gold constellation lines at upper right",
+            "a large set of gold concentric circles centered in the upper middle, radiating from the horn's bell",
+            "a mountain range along the horizon",
+            "thin gold frame border inside the image edges"
+          ],
+          "lightSources": [
+            "a bright star-point of light at the bell of the horn, upper middle",
+            "a warm glow low on the horizon at center-right",
+            "several small lanterns and niche candles on the platform and in the boat",
+            "the celestial spheres are lit but do not cast obvious light on the scene"
+          ],
+          "moonPhase": "uncertain — several discs are present at different sizes; the largest upper-right and upper-left discs read as lit round bodies but no phase edge is resolvable",
+          "spatialRelations": [
+            "the horn-blowing figure stands alone and elevated on the platform at the upper left, above and behind everyone else",
+            "all the other figures are at water level, below and to the right of the platform, and face away from the viewer",
+            "the concentric gold rings emanate from the horn and spread across the upper right sky",
+            "the stone chest sits alone in the foreground, apart from the figures, with no one touching it"
+          ],
+          "foreground": [
+            "robed figures reading pale sheets",
+            "the stone chest",
+            "stone slabs and shallow water"
+          ],
+          "background": [
+            "figures receding into the water",
+            "mountains",
+            "starfield with multiple spheres and circle diagrams"
+          ]
+        },
+        "uncertainObservations": [
+          "the total figure count cannot be stated: roughly a dozen or more separate bodies are visible, but the distant ones overlap, are tiny, and some dark shapes may be rocks rather than people",
+          "the number of celestial spheres in the sky is not reliably countable — at least 5, with possible fainter ones",
+          "the contents of the arched niches (portraits? effigies?) are too dark to identify, and the niches are partly occluded",
+          "it cannot be determined whether the figures are standing on a submerged surface or wading",
+          "whether the pale objects held are books, scrolls or lids is not resolvable at this size"
+        ],
+        "reviewConfidence": "low",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "reviewId": "review-107",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-107.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-107.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the shafts sweep from upper right down toward the left, converging near the gate",
+          "observed": "all shafts run mutually parallel at an identical upper-right-to-lower-left angle; none converge, and none reach the gate",
+          "evidence": "Every shaft in both the upper and lower cluster sits on the same diagonal with no angular variation between them — parallel, not convergent. The lowest-left shaft terminates around the mid-left of the sky, still clearly above and to the right of the top of the stone archway; there is an empty band of sky between the shaft field and the gateway.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects / visualTensions",
+          "existing": "near ruin versus distant intact castle",
+          "observed": "the distant structure is itself visibly ruined — broken, roofless, jagged-topped silhouettes",
+          "evidence": "The far-bank silhouette shows a tall tower with a broken, irregular crown and adjoining walls with ragged open tops and gaps; nothing reads as an intact roofline or complete battlement. The contrast asserted between a near ruin and an intact castle does not exist in the pixels.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "toward a distant castle silhouette above a still river",
+          "observed": "the shafts travel down and to the left, away from the ruined silhouette, which sits low on the right",
+          "evidence": "The ruined structures are in the lower right of the frame at the waterline; the shafts are in the upper two-thirds and angle down-left, so their direction of travel leads away from those structures, not toward them.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "eight elongated shafts with fletched ends crossing the sky",
+          "observed": "count not establishable; substantially more than eight are individually resolvable",
+          "evidence": "Two distinct clusters are present. In the upper cluster I traced roughly eight separate shafts on my own; the lower cluster, between the mid-sky and the archway height, holds roughly seven more. So eight cannot be the total. I did not establish a firm number — the faintest shafts dissolve into dark cloud — so this is flagged as unsupported rather than replaced with a different figure.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "eight elongated shafts with fletched ends crossing the sky",
+          "observed": "the shafts are tapered at one end; whether the trailing ends carry fletching is not determinable",
+          "evidence": "At this rendering scale the rear ends show small angular flares that could be fletching, a socket, or simply brush detail. The image does not support the specific claim of fletched ends.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the shafts sweep from upper right down toward the left, converging near the gate",
+            "with": "the shafts sweep from upper right down toward the left, all mutually parallel, and none reach the gate"
+          },
+          {
+            "find": "near ruin versus distant intact castle",
+            "with": "near ruin versus distant ruin across the water"
+          },
+          {
+            "find": "distant multi-towered castle silhouette",
+            "with": "distant multi-towered ruined silhouette with broken, roofless tops"
+          },
+          {
+            "find": "the castle sits on the far bank at the right, below the shafts' path",
+            "with": "the ruined structures sit on the far bank at the right, below the shafts' path"
+          },
+          {
+            "find": "toward a distant castle silhouette above a still river",
+            "with": "away to the lower left, above a ruined silhouette and a still river on the right"
+          },
+          {
+            "find": "eight elongated shafts with fletched ends crossing the sky",
+            "with": "numerous elongated tapered shafts crossing the sky in two parallel clusters (exact count not determinable; clearly more than eight)"
+          },
+          {
+            "find": "exact count of the streaking shafts (appears to be eight, some partially cropped or fading)",
+            "with": "exact count of the streaking shafts (not determinable; clearly more than eight, roughly 14-16 traceable across two clusters)"
+          },
+          {
+            "find": "gothic ruin and castle architecture",
+            "with": "gothic ruin architecture, near and far"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-107",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "lower left of center, standing on a stone ledge in front of an open gate",
+              "posture": "standing / mid-stride, weight on back leg, seen from behind",
+              "gaze": "away from the viewer, into the lit gateway",
+              "heldObjects": [
+                "gripping an iron gate bar with the near (left) hand"
+              ],
+              "clothing": "long ragged coat with torn trailing hem, dark boots, dark hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "elongated tapered rod / shaft-like object in the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "filling the upper two-thirds of the sky in two loose diagonal clusters, all angled parallel from upper-right to lower-left; an upper cluster of roughly 8 and a lower cluster of roughly 7 are individually traceable, total appears to be around 14-16 but several are faint, partially overlapping, or fade into the dark cloud"
+            },
+            {
+              "type": "iron gate leaf (hinged, open)",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one swung open toward the viewer at left of the archway, one standing flat against the wall to the right of the archway"
+            },
+            {
+              "type": "stone archway / gateway",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left-of-center, mid-to-lower frame; pointed arch with carved voussoirs, light glowing from inside"
+            },
+            {
+              "type": "ruined tower / tall broken building",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right background across the water; one tall silhouette is distinct at upper right of the ruin mass, the remainder is an unresolvable dark cluster of broken structures"
+            }
+          ],
+          "environment": [
+            "night sky with heavy cloud",
+            "stone wall and battlement running up the left side",
+            "pale glowing light inside the archway",
+            "still water / river across the lower right",
+            "ruined city silhouette on the far bank",
+            "stone paving in the immediate foreground"
+          ],
+          "lightSources": [
+            "warm pale glow from within the archway, behind the figure",
+            "a diffuse pale break in the clouds low on the right horizon, reflected as a vertical streak on the water"
+          ],
+          "moonPhase": "no moon disc visible",
+          "spatialRelations": [
+            "the figure is silhouetted against the glow of the gateway, back to the viewer",
+            "the sky objects all run parallel on the same diagonal, above and to the right of the gateway",
+            "the ruins sit across the water to the right, far behind and below the sky objects",
+            "the archway and wall occupy the left half; the open sky and water occupy the right half"
+          ],
+          "foreground": [
+            "stone ledge / paving",
+            "the figure",
+            "the open iron gate leaf"
+          ],
+          "background": [
+            "clouded sky with the rod-like objects",
+            "water",
+            "ruined structures"
+          ],
+          "palette": "near-monochrome, very dark charcoal and grey-brown with a single warm highlight"
+        },
+        "uncertainObservations": [
+          "The number of rod-like objects in the sky cannot be resolved reliably — the faintest ones blend into the dark cloud and several overlap. Recorded as null deliberately.",
+          "The objects' far ends are tapered and could be points or flared tips; the level of detail does not settle it.",
+          "Whether the second gate panel at right is a swung leaf or a fixed grille is ambiguous.",
+          "The number of distinct ruined buildings on the far bank is not countable."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "eight elongated shafts with fletched ends crossing the sky",
+          "observed": "far more than eight — roughly eighteen to twenty, in two separate diagonal clusters",
+          "evidence": "The sky holds two distinct clusters separated by a band of empty sky. Going one at a time I resolve about ten shafts in the upper cluster alone (y roughly 115-270) and about eight or nine in the lower cluster (y roughly 330-450). I cannot commit to an exact total, but eight is demonstrably too few: the upper cluster by itself exceeds it.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the shafts sweep from upper right down toward the left, converging near the gate",
+          "observed": "the shafts are spread across the upper sky in two parallel-oriented clusters and do not converge; none approach the gate",
+          "evidence": "All shafts share the same tilt rather than converging on a point, and the lowest of them stops well above and to the right of the archway. The gate area is empty sky.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects / visualTensions",
+          "existing": "near ruin versus distant intact castle",
+          "observed": "the distant structures across the water are also broken — jagged, stub-topped towers",
+          "evidence": "The tall tower on the far bank has a ragged, broken crown, and the silhouette extending right of it is a row of irregular jagged stubs, not intact walls or roofs.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "eight elongated shafts with fletched ends crossing the sky",
+            "with": "many elongated shafts with fletched ends crossing the sky, in two loose diagonal clusters (roughly eighteen to twenty)"
+          },
+          {
+            "find": "while eight long shafts streak diagonally across a dark sky toward a distant castle silhouette above a still river",
+            "with": "while many long shafts streak diagonally across a dark sky above a distant ruined tower silhouette and a still river"
+          },
+          {
+            "find": "the shafts sweep from upper right down toward the left, converging near the gate",
+            "with": "the shafts sweep from upper right down toward the left in two clusters, spread across the upper sky without converging and never reaching the gate"
+          },
+          {
+            "find": "distant multi-towered castle silhouette",
+            "with": "distant silhouette of broken, multi-towered ruins"
+          },
+          {
+            "find": "near ruin versus distant intact castle",
+            "with": "near ruin versus further ruins across the water"
+          },
+          {
+            "find": "exact count of the streaking shafts (appears to be eight, some partially cropped or fading)",
+            "with": "exact count of the streaking shafts (well over a dozen, roughly eighteen to twenty; some partially cropped or fading)"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-107",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "lower left, at the threshold of the gate",
+              "posture": "standing / mid-stride, seen from behind, weight forward, legs apart, one arm extended forward-left with the hand on the open gate",
+              "gaze": "facing away from the viewer, toward the lit archway; face not visible",
+              "heldObjects": [
+                "the edge/bars of the open gate, with one hand"
+              ],
+              "details": "dark ragged long coat or cloak with torn, streaming hem, dark hair, silhouetted almost entirely black against the light of the arch"
+            }
+          ],
+          "objects": [
+            {
+              "type": "elongated blade-like object flying through the sky",
+              "count": null,
+              "countConfidence": "low",
+              "where": "the upper half of the sky, in two loose diagonal clusters — one upper cluster and one middle cluster, all tilted the same way and angled down-left"
+            },
+            {
+              "type": "stone archway",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left of center, framing a glowing opening"
+            },
+            {
+              "type": "wrought-iron gate leaf",
+              "count": null,
+              "countConfidence": "low",
+              "where": "at the archway; at least one leaf is clearly swung open toward the viewer, with a second panel of ironwork visible to its right"
+            },
+            {
+              "type": "ruined tower / broken building silhouette",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right middle ground, across the water; one tall tower is clearly resolvable, with a low broken ridge of further structures extending right from it"
+            },
+            {
+              "type": "body of water",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right and lower right, running from the middle ground toward the bottom edge, with a pale reflected streak on its surface"
+            }
+          ],
+          "environment": [
+            "night",
+            "heavy clouded sky with visible cloud banding",
+            "a stone wall and paved ledge running from the gate to the right",
+            "dark rocky shoreline",
+            "no visible sun or moon disk"
+          ],
+          "lightSources": [
+            "a warm glow from inside the archway, behind the figure",
+            "a pale diffuse break in the clouds low on the right horizon, reflected on the water"
+          ],
+          "moonPhase": null,
+          "spatialRelations": [
+            "the figure stands with the lit archway to their left/front and the dark water and ruins to their right",
+            "the flying blades are all above the horizon, none intersect the figure or the gate",
+            "the two blade clusters are separated by a band of empty sky",
+            "the archway and its wall occupy the left third; the sky occupies the upper two thirds; the water and ruins fill the right"
+          ],
+          "foreground": [
+            "the figure",
+            "the open iron gate",
+            "the stone ledge and wall"
+          ],
+          "background": [
+            "flying blades in the sky",
+            "ruined tower and structures across the water",
+            "clouded night sky"
+          ]
+        },
+        "uncertainObservations": [
+          "I cannot give a reliable count for the flying blades. Working through them one by one I resolve roughly nine or ten in the upper cluster and roughly nine or ten in the middle cluster, so approximately eighteen to twenty in total — but they overlap, several are very faint against the dark sky, and at least two near the right margin may be cut by the frame edge. Recording as null.",
+          "The glow inside the arch has no visible source object (no lamp, flame or figure resolvable within it).",
+          "Whether the gate has one leaf or two cannot be settled; the ironwork to the right of the open leaf may be a second closed leaf or a fixed railing.",
+          "The number of ruined structures on the right shore cannot be counted; they merge into one dark mass."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

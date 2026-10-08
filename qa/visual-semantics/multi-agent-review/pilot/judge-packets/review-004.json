@@ -1,0 +1,241 @@
+{
+  "reviewId": "review-004",
+  "blindImage": "qa/visual-semantics/blind-review/review-004.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "pass": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/pilot/reveal/review-004.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-004",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of the frame, standing",
+              "posture": "standing upright and still, barefoot, head bowed and tilted down to her right; arms pinned to her sides by binding",
+              "gaze": "not determinable — the eyes are covered",
+              "heldObjects": [
+                "nothing — the hands are bound at the sides, one hand visible at the hip"
+              ],
+              "clothing": "long pale ankle-length gown with an embroidered hem band; long curly hair blowing to the right",
+              "blindfold": "yes — a wide pale cloth band tied across the eyes, knot and tail visible at the right side of the head",
+              "bindings": "a heavy rope wound several times around the upper arms and chest and again around the waist/hips, with a loose rope end hanging down past the knee"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword planted point-down in the ground, blade upright",
+              "count": null,
+              "countConfidence": "low",
+              "where": "arranged around the figure in two groups. LEFT group, individually resolved: (1) far left, nearest the viewer, large hilt low in the frame; (2) just right of it, hilt slightly higher, shorter blade; (3) further back, hilt high, slimmer; (4) nearest the figure's left, hilt high, slimmest. RIGHT group: (5) a slim one set far back, close to the figure's right elbow, hilt high; (6) a large near one at right with a round pommel; (7) another large near one at the far right. A possible eighth pommel sits between (6) and (7) and I cannot confirm it."
+            },
+            {
+              "type": "ruined castle or fortress on a hill",
+              "count": 1,
+              "countConfidence": "medium-high",
+              "where": "left middle distance, a broken multi-towered silhouette on a rise"
+            },
+            {
+              "type": "sun",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left corner, a warm pale disc with long straight rays fanning down and right across the sky"
+            },
+            {
+              "type": "stream or watercourse",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "winding from beneath the castle in the left distance down through the middle ground and into the muddy foreground at the figure's feet"
+            },
+            {
+              "type": "clump of tall reeds/grasses",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right middle ground, several sparse tufts"
+            }
+          ],
+          "environment": [
+            "flat, bleak, waterlogged plain with churned mud, puddles and scattered stones",
+            "overcast sky worked in fine engraved hatching with a bank of clouds at upper right",
+            "sparse dead grass and weeds",
+            "a printed ornamental border with foliate corner ornaments on all four sides",
+            "faint small marks in the lower border corners resembling an artist's signature/date"
+          ],
+          "lightSources": [
+            "the sun at upper left, its rays raking across the upper-left third of the scene"
+          ],
+          "moonPhase": "not applicable — no moon; a sun is present instead",
+          "spatialRelations": [
+            "the planted swords stand in the ground on both sides of the figure, forming a corridor or enclosure around her; none touches her",
+            "the nearest swords are level with or slightly in front of her feet, the others recede behind her",
+            "the stream runs from the castle at the far left, past the sword line, and ends in the puddles at her bare feet",
+            "the sun is behind her upper left; the figure's head is bowed away from it",
+            "the castle sits on the horizon behind the left group of swords"
+          ],
+          "foreground": [
+            "the nearest planted swords at left and right",
+            "muddy ground, puddles, loose stones",
+            "the figure's bare feet"
+          ],
+          "background": [
+            "the ruined castle on its hill",
+            "the winding stream",
+            "the hatched sky and clouds",
+            "the sun and its rays"
+          ],
+          "palette": "sepia/ink engraving on aged cream paper with muted ochre and pale blue-grey washes",
+          "style": "line engraving / etching with cross-hatching"
+        },
+        "uncertainObservations": [
+          "The sword count is deliberately left null. I can individually resolve seven upright swords (four in the left group, three in the right), and there appears to be one further round pommel between the two large right-hand swords that I cannot confirm as a separate weapon. So: at least 7, possibly 8. I am not stating a single number.",
+          "The right group's hilts overlap each other at similar depths, which is the specific reason the count is unreliable there.",
+          "It cannot be determined whether the figure's eyes are open behind the blindfold, or whether her mouth is open.",
+          "Whether the winding pale line from the castle is a stream, a road or a flooded track is ambiguous.",
+          "The distant structure is read as a ruined fortification, but its architecture is too small and hatched to be certain it is not a rock outcrop.",
+          "The marks in the lower border corners may be a signature, plate number or decorative ticks."
+        ],
+        "reviewConfidence": "medium-high",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene / keyObjects / spatialRelations / visualTensions / emphasizedAspects",
+          "existing": "arranged in a loose ring around the figure",
+          "observed": "the blades stand in two flanking groups, left and right, with open ground directly behind and directly in front of the figure",
+          "evidence": "Four blades are resolvable to her left (two large in the near foreground, two smaller and further back) and at least three to her right. The ground immediately behind her, where the stream runs into the middle distance, carries no blade, so no closure at the back is visible. 'Ring' / 'encircled' is not supported by the pixels; a flanking corridor is.",
+          "confidence": "medium"
+        },
+        {
+          "field": "model self-reported uncertainty",
+          "existing": "exact number of swords fully resolvable in the ring",
+          "observed": "I also could not fix the number — at least 7 are present, reading as 8, with the rearmost merging into the background hatching",
+          "evidence": "Agreement, recorded only so the count stays flagged downstream rather than being filled in later.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "encircled by upright swords driven into the ground",
+            "with": "flanked on both sides by upright swords driven into the ground"
+          },
+          {
+            "find": "arranged in a loose ring around the figure",
+            "with": "arranged in two flanking groups on either side of the figure"
+          },
+          {
+            "find": "the woman stands at the centre with swords planted to her left, right and behind her",
+            "with": "the woman stands at the centre with swords planted to her left and right, receding into the middle distance on both sides"
+          },
+          {
+            "find": "the tight ring of blades around the figure against the wide open plain beyond",
+            "with": "the flanking blades pressing in on the figure against the wide open plain beyond"
+          },
+          {
+            "find": "the encircling enclosure of the swords",
+            "with": "the corridor of swords closing in from both sides"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-004",
+        "visibleFacts": {
+          "style": "sepia/ink engraving or etching on a parchment ground, inside an ornate cream printed border with floral ornaments at all four corners; small illegible marks at bottom-left and bottom-right inside the border",
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "centre of the frame, standing on wet muddy ground",
+              "posture": "standing upright, barefoot, head bowed and tilted down toward her left; body slightly turned",
+              "gaze": "not determinable — the eyes are covered",
+              "heldObjects": [],
+              "notes": "young woman with long curly hair blowing to the right; a light cloth blindfold tied across the eyes; long pale long-sleeved dress with a patterned band near the hem; arms are bound to her sides by rope so the hands are not visible"
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright blade planted point-down in the ground",
+              "count": null,
+              "countConfidence": "low",
+              "where": "arranged around the figure on both sides; I resolve 4 on the left (two nearer/larger at far left, two smaller and farther back toward the centre-left) and at least 3 on the right (one large in the near right foreground, one to its right, and at least one smaller farther back). Total reads as 7 or 8 but the rear ones overlap and fade into the hatching, so I will not fix a number"
+            },
+            {
+              "type": "rope binding",
+              "count": null,
+              "countConfidence": "medium",
+              "where": "coiled several times around the upper arms and chest, again around the waist/hips, with a loose end hanging down past her right hip"
+            },
+            {
+              "type": "blindfold",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "tied across the eyes, knotted at the side, ends trailing into the hair"
+            },
+            {
+              "type": "ruined castle / fortress on a hill",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "upper left middle distance, on a raised mound; several broken towers, but individual towers are not separately countable"
+            }
+          ],
+          "environment": [
+            "flat marshy ground with tufts of grass and small stones",
+            "a winding stream or muddy water channel running from the background down through the centre foreground, passing beside the figure's feet",
+            "tall reeds / grasses at the right edge",
+            "hatched cloudy sky occupying the upper third"
+          ],
+          "lightSources": [
+            "a sun in the upper-left corner with straight radiating rays cast diagonally down to the right; rendered as a pale yellow glow partly behind cloud"
+          ],
+          "sunPresent": true,
+          "moonPhase": null,
+          "crown": false,
+          "halo": false,
+          "wings": false,
+          "throne": false,
+          "horse": false,
+          "spatialRelations": [
+            "the blades stand in the ground on both sides of the figure, forming a loose corridor she stands in the middle of",
+            "the stream runs between the blades from background to foreground, passing just left of her feet",
+            "the hilltop ruin sits behind and to the left of her head",
+            "the sun's rays fall from upper left across her bowed head"
+          ],
+          "foreground": [
+            "muddy water channel",
+            "the two largest blades, one at far left and one at right",
+            "scattered stones and grass tufts"
+          ],
+          "background": [
+            "hilltop ruin",
+            "low horizon",
+            "reed beds",
+            "hatched clouds and sun rays"
+          ]
+        },
+        "uncertainObservations": [
+          "the exact number of planted blades cannot be determined — the rearmost ones overlap each other and merge with the background hatching; I can only say at least 7 are present, possibly 8",
+          "whether the figure's hands are tied in front or behind cannot be seen; they are not visible at all",
+          "the ruined structure on the hill may be a castle or a fortified wall; the number of its towers is not countable",
+          "the light source in the upper left is a rayed disc partly behind cloud; it reads as a sun but its outline is not fully drawn"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

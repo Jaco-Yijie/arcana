@@ -1,0 +1,226 @@
+{
+  "reviewId": "review-304",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-304.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-304.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the right figure stands slightly further back than the left",
+          "observed": "the right figure stands nearer the viewer than the left, at the near-right side of the bench",
+          "evidence": "The right figure's robe hem sits lower in the frame than the left figure's and its body overlaps the near-right end of the bench, placing it in front of the bench rather than behind it.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the right figure stands slightly further back than the left",
+            "with": "the right figure stands at the near side of the bench, slightly closer to the viewer than the left"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-304",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "left, behind the near end of the work bench",
+              "posture": "standing, leaning forward, both hands resting on / working at the bench top",
+              "gaze": "downward at the bench surface",
+              "heldObjects": [
+                "possibly a small tool under the right hand — not clearly resolvable"
+              ],
+              "clothing": "light rolled-sleeve shirt with a dark apron or skirt"
+            },
+            {
+              "position": "center, behind the bench",
+              "posture": "standing, bent over the stone block",
+              "gaze": "downward at the stone block",
+              "heldObjects": [
+                "a slender tool (chisel-like) held point-down against the block",
+                "the other hand steadies the block"
+              ],
+              "clothing": "dark tunic, hair tied up"
+            },
+            {
+              "position": "right, standing at the near-right side facing left",
+              "posture": "standing upright, body turned toward the bench",
+              "gaze": "toward the stone block / the sheet in their hands",
+              "heldObjects": [
+                "a large pale sheet (plan, drawing or parchment) held open with both hands"
+              ],
+              "clothing": "long dark hooded robe/cloak reaching the floor"
+            }
+          ],
+          "objects": [
+            {
+              "type": "circular medallion carved with a five-pointed star inside a ring",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "set into the stone gables above the arch: one left, one center, one right",
+              "orientation": "all three stars point UP (single point at top, two points down)",
+              "arrangement": "a row of three, the central one noticeably higher than the two flanking it; clear stone gaps between them"
+            },
+            {
+              "type": "worked stone block on the bench",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of the bench, under the central figure's tool",
+              "orientation": "lying flat",
+              "arrangement": "single block set on the bench top"
+            }
+          ],
+          "environment": [
+            "a large pointed gothic stone arch framing a dark interior",
+            "three pointed stone gables above the arch, each holding one star medallion",
+            "rough wooden scaffolding or timber props at the left",
+            "a heavy trestle work bench with visible legs and cross bracing",
+            "rubble and stone chips on the floor",
+            "an interior column visible deep inside the arch"
+          ],
+          "lightSources": [
+            "a single strong light from the front/upper area outside the frame — it throws long hard shadows from the three figures and the bench forward toward the bottom of the frame"
+          ],
+          "spatialRelations": [
+            "the three figures form an open horseshoe around the bench: two behind it (left and center) and one at the right side; the near side facing the viewer is open",
+            "the three star medallions sit directly above the group, in the masonry"
+          ],
+          "foreground": [
+            "stone floor with rubble and long cast shadows"
+          ],
+          "background": [
+            "dark arch interior",
+            "carved gables with the three star medallions"
+          ]
+        },
+        "uncertainObservations": [
+          "the exact tool in the central figure's hand (chisel, punch or stylus) is not resolvable",
+          "what the left figure's hands rest on or hold is lost in shadow",
+          "the image is very dark overall; small objects on the bench cannot be individually counted",
+          "facial features and expressions are not readable on any of the three figures"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the right figure stands slightly further back than the left",
+          "observed": "the right figure stands nearer the viewer than the left — it is the largest figure in the frame, on the near side of the bench, with its robe running off the bottom-right edge",
+          "evidence": "The left figure is smaller and stands across the bench on the far side, while the right figure overlaps the bench front and is cropped by the lower frame, placing it closest to the camera.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the right figure stands slightly further back than the left",
+            "with": "the right figure stands nearer the viewer, on the near side of the bench, while the left figure stands across it"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-304",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "left",
+              "posture": "standing, leaning forward with weight on the bench, in right-facing profile",
+              "gaze": "downward at the stone block on the bench",
+              "heldObjects": [
+                "one hand flat on / gripping the edge of the worked block; the other arm hangs alongside a long tool resting on the bench"
+              ]
+            },
+            {
+              "position": "center, behind the bench",
+              "posture": "standing, bent sharply forward over the work surface",
+              "gaze": "downward at the block directly beneath the hands",
+              "heldObjects": [
+                "a small pointed hand tool (chisel- or punch-like) held pointing down at the block"
+              ]
+            },
+            {
+              "position": "right",
+              "posture": "standing upright, body angled away from the viewer, turned toward the bench",
+              "gaze": "toward the bench / down at the sheet being held",
+              "heldObjects": [
+                "a large stiff sheet — a drawing, plan or chart — held open with both hands at chest height"
+              ],
+              "clothing": "long dark hooded or high-collared robe reaching the floor"
+            }
+          ],
+          "objects": [
+            {
+              "type": "carved circular disc bearing a five-pointed star",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "in the stone tracery above the archway — one at the upper left, one at the upper center, one at the upper right",
+              "orientation": "all three face the viewer flat-on; each star is point-UP (single point at the top, two arms down)",
+              "arrangement": "a row of three across the top of the wall, each inside its own gabled pointed arch; the CENTER disc sits noticeably HIGHER than the left and right discs, so the row forms a shallow peak rather than a level line. Even spacing, no gaps beyond the arch piers"
+            },
+            {
+              "type": "worked stone block on the bench",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on top of the trestle bench at the center, being worked on",
+              "orientation": "lying flat, long axis running left-right",
+              "arrangement": "single, though a second lower slab may lie beneath it on the bench top"
+            }
+          ],
+          "environment": [
+            "dark stone interior under a large pointed gothic archway",
+            "a trestle work bench of heavy timber in the center",
+            "timber scaffolding or stacked planks at the left",
+            "rubble and stone offcuts scattered across the floor",
+            "the gabled tracery wall above carrying the three star discs"
+          ],
+          "lightSources": [
+            "a single directional light from high and slightly left-of-center, striking the tracery, the workers' shoulders, and the block; it throws three long dark shadows forward across the floor toward the bottom of the frame"
+          ],
+          "moonPhase": "no moon or sun visible",
+          "spatialRelations": [
+            "all three figures are clustered around one bench, the left and center figures on the far side, the right figure nearer the viewer",
+            "the three star discs are directly above and behind the three figures, roughly aligned with the archway centerline",
+            "the right figure holds the sheet out toward the other two, facing them across the bench",
+            "long cast shadows fan toward the viewer from all three figures"
+          ],
+          "foreground": [
+            "stone rubble floor",
+            "cast shadows",
+            "the right figure's robe"
+          ],
+          "background": [
+            "the dark archway opening",
+            "the tracery wall with three star discs",
+            "a faint column in the shadowed opening"
+          ]
+        },
+        "uncertainObservations": [
+          "the exact tool in the center figure's hand cannot be identified (chisel, punch, stylus or compass point)",
+          "whether the left figure holds a mallet or simply rests a hand on the bench is ambiguous in shadow",
+          "whether the bench holds one block or a block resting on a second slab cannot be resolved",
+          "no faces are lit well enough to read expression"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

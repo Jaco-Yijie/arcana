@@ -1,0 +1,271 @@
+{
+  "reviewId": "review-409",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-409.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs corrected",
+    "low reviewer confidence"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 2,
+    "corrected": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-409.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-409",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "upper-center, standing on top of a stone platform",
+              "posture": "standing, legs planted wide apart in a braced/straddling stance, knees slightly bent, torso squared to the viewer",
+              "gaze": "head faces forward, out of the frame toward the viewer",
+              "heldObjects": [
+                "one long pole/staff gripped with both hands, held roughly horizontally across the front of the body, extending well past the body on both sides"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "long pole / stave with a tapered point",
+              "count": null,
+              "countConfidence": "low",
+              "where": "below and around the stone platform, occupying the whole lower half of the frame; shafts run off the bottom and side edges of the frame",
+              "orientation": "all tapered tips point UPWARD and outward, away from the lower center; the shafts lean - the left-hand ones lean up-and-left, the right-hand ones lean up-and-right",
+              "arrangement": "a splayed radial fan / starburst rising from below the platform, not a row and not a closed ring; tips are at different heights so they form a ragged, staggered arc rather than a level line"
+            },
+            {
+              "type": "long pole / stave held by the figure",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "in the figure's two hands, upper-center",
+              "orientation": "horizontal, tilted very slightly, tips pointing left and right",
+              "arrangement": "single, held across the body"
+            },
+            {
+              "type": "stone platform / wall top",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of the frame, below the figure",
+              "orientation": "flat top surface receding to the upper right; a sheer blocky face drops away toward the viewer",
+              "arrangement": "single mass with visible coursed stonework and dark arched recesses in its lower face"
+            }
+          ],
+          "environment": [
+            "coursed stone masonry platform / rampart",
+            "dark arched openings in the stonework below",
+            "black void filling the upper background",
+            "painted border lines at the left and right edges of the card"
+          ],
+          "lightSources": [
+            "no light source visible in frame; a weak cool rim-light from the upper left picks out the figure's shoulders, the pole and the top edges of the stones"
+          ],
+          "moonPhase": "not applicable - no moon or sky visible",
+          "spatialRelations": [
+            "the figure stands ON TOP of the platform, not behind or beside it",
+            "the figure is above and behind the fan of pointed poles; none of the lower poles touch the figure",
+            "the figure faces the viewer, i.e. faces the fan of poles below",
+            "the held pole is above and separate from the group below"
+          ],
+          "foreground": [
+            "the upward-pointing poles"
+          ],
+          "background": [
+            "black, featureless"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of poles below cannot be resolved reliably - I can individually pick out roughly 7 to 9 tapered tips, but several shafts overlap, cross and run off the frame edge, so I will not commit to a number",
+          "whether some of the dark vertical shapes at the lower right are additional shafts or shadow",
+          "whether the scene is night or simply an unlit interior cannot be determined; there is no sky"
+        ],
+        "reviewConfidence": "low",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the figure stands above the stakes, which point upward toward the platform",
+          "observed": "the stakes point upward and outward, away from the platform, splayed radially around its base",
+          "evidence": "Each stake is bedded in the ground at its lower end nearest the platform and leans away from it, tips rising toward the frame edges and the viewer. They fan outward like a palisade; none leans inward toward the platform.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the figure stands above the stakes, which point upward toward the platform",
+            "with": "the figure stands above the stakes, which point upward and outward, splayed away from the platform around its base"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-409",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "upper center, standing on top of a raised stone platform/wall",
+              "posture": "standing with feet planted wide apart and knees bent in a braced stance, torso turned toward the right of frame, arms extended forward",
+              "gaze": "head faces right, in the same direction the staff extends and the body is braced; not turned back over the shoulder",
+              "heldObjects": [
+                "a long wooden pole/staff gripped in both hands"
+              ],
+              "clothing": "short jacket/tunic with a ragged hanging fringe at the hip, trousers"
+            }
+          ],
+          "objects": [
+            {
+              "type": "long wooden pole/staff held by the figure",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "across the figure's body at chest height, extending well beyond him on both sides",
+              "orientation": "held roughly HORIZONTAL, tilting slightly downward to the left and slightly upward to the right",
+              "arrangement": "single, gripped with both hands near the center-right of its length"
+            },
+            {
+              "type": "wooden stake/pole planted in the ground around the base of the platform",
+              "count": null,
+              "countConfidence": "low",
+              "where": "in the lower half of the frame, ringing the foot of the stone platform on the left, right and bottom",
+              "orientation": "all point UP and OUTWARD — each is bedded in the ground at its lower end with its sharp tip raised away from the platform; none point down",
+              "arrangement": "a radiating fan/palisade splayed outward around the platform base rather than a straight row; several overlap in the darkness. I can individually resolve roughly 7-9 of them (about 3-4 on the left, about 3 on the right, and 1-2 at the bottom center) but cannot commit to an exact number"
+            }
+          ],
+          "environment": [
+            "a large block-built stone platform/parapet occupying the center of the frame, with arched openings visible in its lower face",
+            "dark sloping ground around the platform base",
+            "a black, featureless upper background — no sky detail, no horizon",
+            "aged border texture at the frame edges"
+          ],
+          "lightSources": [
+            "a single dim light from above/upper-left that catches the top surface of the platform, the figure's shoulders and arms, and the upper edges of the stakes; source itself not visible in frame",
+            "no visible sun, moon, fire or lamp"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure stands on top of the platform, above and behind the ring of stakes",
+            "the stakes lean away from the platform in all directions, their tips rising toward the viewer and the frame edges",
+            "the staff's right end passes over the edge of the platform and over the stakes below on that side",
+            "the figure's stance and head both face right; his left side leads the pose"
+          ],
+          "foreground": [
+            "the outward-leaning stakes",
+            "dark ground"
+          ],
+          "background": [
+            "black void above the platform"
+          ]
+        },
+        "uncertainObservations": [
+          "The number of planted stakes cannot be determined reliably: they overlap, several run off the bottom edge, and the lighting is too dim to separate them. Estimated range 7-9.",
+          "Whether the staff is a plain pole or has any fitting at its ends is not resolvable.",
+          "Whether the scene is outdoors at night or inside a very dark space cannot be determined; there is no sky detail.",
+          "The dark openings in the platform face may be arches, windows or shadows."
+        ],
+        "reviewConfidence": "low",
+        "reviewer": "reviewer-d"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-409",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "upper-center of the image, standing on top of a stone wall / rampart",
+              "posture": "standing with legs wide apart in a braced, low stance, knees bent, torso squared toward the viewer but turned slightly toward viewer-right; both arms forward and apart at chest height",
+              "gaze": "head in profile facing viewer-right, chin slightly lowered, looking out past the staff",
+              "heldObjects": [
+                "a single long wooden staff gripped in both hands across the front of the body at roughly chest height, held almost horizontally and tilting slightly down toward viewer-right; the staff extends well past both hands, further on the viewer-left side"
+              ],
+              "clothing": "a dark fitted jacket/tunic with a ragged, torn, strip-like hem hanging to the thighs; dark trousers; boots or wrapped footwear; short tousled wind-blown hair"
+            }
+          ],
+          "objects": [
+            {
+              "type": "staff",
+              "count": 6,
+              "countConfidence": "medium",
+              "where": "rising from below/behind the stone wall in the lower two-thirds of the image, three on the viewer-left side and three on the viewer-right side of the wall",
+              "orientation": "near-vertical but each leaning at a different angle, tapered points aimed up toward the top of the frame; lower ends disappear into darkness below the frame",
+              "arrangement": "a loose fan / palisade splayed outward around the wall, none crossing the figure"
+            },
+            {
+              "type": "staff",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "in the figure's two hands at the top of the image",
+              "orientation": "horizontal, tipped slightly down toward viewer-right",
+              "arrangement": "single"
+            },
+            {
+              "type": "arched opening",
+              "count": null,
+              "countConfidence": "low",
+              "where": "in the face of the stone wall below the figure, viewer-right of center",
+              "orientation": "upright arches set into the wall face",
+              "arrangement": "spaced along the wall; several dark voids are visible but merge with the surrounding shadow"
+            }
+          ],
+          "environment": [
+            "a massive stone-block wall / rampart, its flat top running diagonally from lower-left to upper-right, on which the figure stands",
+            "the near face of the wall built of large rectangular blocks, rim-lit along its upper edge",
+            "dark arched voids or recesses in the wall face below the figure",
+            "a nearly black, featureless background above and behind the figure — no sky detail, stars, horizon or landscape resolvable",
+            "a deep dark void below the wall from which the staves rise",
+            "thin double-line decorative borders along the left and right edges of the image"
+          ],
+          "lightSources": [
+            "an off-frame light high on the viewer-right, inferred from the rim-light along the figure's right contour, the lit top edge of the wall and the highlights on the viewer-right faces of the staves",
+            "no lamp, flame, moon, star or luminous object visible in frame"
+          ],
+          "moonPhase": "not visible — the sky area is uniformly black with no moon, stars or clouds resolvable",
+          "spatialRelations": [
+            "the figure stands on top of the wall, above everything else in the frame",
+            "the held staff crosses in front of the figure's torso, its viewer-left end overhanging the empty dark space to the left",
+            "the six rising staves are all below the figure and splay outward to either side of the wall",
+            "three staves are on the viewer-left of the wall, three on the viewer-right",
+            "the tips of the rising staves all stop below the level of the figure's feet",
+            "the wall's top edge recedes from lower-left toward upper-right",
+            "the arched openings are in the wall face below and to the viewer-right of the figure"
+          ],
+          "foreground": [
+            "the rising staves and their pointed tips",
+            "the dark lower face of the stone wall"
+          ],
+          "background": [
+            "an undifferentiated black field above the wall"
+          ]
+        },
+        "uncertainObservations": [
+          "The image is very dark and low-contrast; everything below the figure had to be brightness-boosted to read, so the stave count is my main uncertainty.",
+          "I count 6 rising staves (tips at roughly 17%, 30%, 43% of image width on the left side and 65%, 70%, 77% on the right). A seventh stave fully hidden behind the wall mass or running off the bottom-right corner cannot be excluded; two of the right-hand shafts run close together and could in principle be one forked stave or two.",
+          "I cannot tell whether the rising staves are planted in the ground, held by unseen hands, or part of a structure — their lower ends are lost in darkness.",
+          "The number of arched openings in the wall is not countable; the dark voids blend into the shadow, so I recorded null.",
+          "The figure's sex and age are not determinable; the face is in shadowed profile.",
+          "I cannot confirm whether the footwear is boots or wrapped cloth.",
+          "Whether the background is open night sky or an enclosed dark space is undeterminable — there is no horizon, star or architectural cue above the wall."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

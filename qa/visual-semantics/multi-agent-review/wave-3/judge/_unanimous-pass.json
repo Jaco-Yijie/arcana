@@ -1,0 +1,26 @@
+[
+ {
+  "reviewId": "review-305",
+  "decision": "AUTO_PASS",
+  "confidence": "high",
+  "reason": "两名独立 Reviewer 均判 pass 且自评可信，按 §13 未升级 Judge 复核。",
+  "escalated": false,
+  "judgedBy": "coordinator-rule"
+ },
+ {
+  "reviewId": "review-307",
+  "decision": "AUTO_PASS",
+  "confidence": "high",
+  "reason": "两名独立 Reviewer 均判 pass 且自评可信，按 §13 未升级 Judge 复核。",
+  "escalated": false,
+  "judgedBy": "coordinator-rule"
+ },
+ {
+  "reviewId": "review-308",
+  "decision": "AUTO_PASS",
+  "confidence": "high",
+  "reason": "两名独立 Reviewer 均判 pass 且自评可信，按 §13 未升级 Judge 复核。",
+  "escalated": false,
+  "judgedBy": "coordinator-rule"
+ }
+]

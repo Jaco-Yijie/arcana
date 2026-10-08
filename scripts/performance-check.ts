@@ -276,10 +276,22 @@ section('PERF · Prompt 边界与重试')
 
 const promptSrc = read('server/prompts/tarotReadingPromptV2.ts')
 const ctxSrc = read('server/context/rebuild.ts')
+/* 【这条断言被收紧过一次，原文与理由都留在这里】
+   原文是 `!/artwork|\.webp|assets\/decks|cardArtworkUrl/i` —— 连 **artwork 这个词**
+   出现在源码里都算失败。它想防的是「牌面资产被拖进解读链路」：
+   图片 URL 进 Prompt、资产 resolver 被 import，两者都会让解读依赖素材层。
+
+   Visual Semantic Layer V1 之后，Prompt 里出现了一句英文说明
+   「pre-analysed from the real artwork」—— 它是给模型看的一句散文，
+   既不是路径也不是模块。按词命中就判失败，拦的是措辞而不是依赖。
+
+   所以这里改成按**真正的目标**断言：不许出现资产路径、不许出现资产解析器。
+   「渲染出来的 Prompt 里确实没有资产路径」这条运行期性质由 deck:check 的
+   「Prompt 里没有资产路径痕迹」单独守着，两条互补，没有放松。 */
 check(
-  'PERF-09 Reading prompt 不包含 artwork URL / 资产模块',
-  !/artwork|\.webp|assets\/decks|cardArtworkUrl/i.test(promptSrc)
-  && !/artwork|cardArtworkUrl/i.test(ctxSrc),
+  'PERF-09 Reading prompt 不引用资产路径 / 资产解析模块',
+  !/\.webp|assets\/decks|cardArtworkUrl|decks\/artwork/i.test(promptSrc)
+  && !/\.webp|assets\/decks|cardArtworkUrl|decks\/artwork/i.test(ctxSrc),
   '牌面资产与解读完全无关',
 )
 check(

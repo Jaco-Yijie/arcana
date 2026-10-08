@@ -1,0 +1,150 @@
+[
+ {
+  "reviewId": "review-009",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects / spatialRelations / scene",
+    "existing": "four slender poles forming an arch",
+    "observed": "two garlanded poles are individually resolvable — one at left, one at right; a possible third vertical sits behind the garland near the upper centre-left, but no fourth can be separated from the foliage",
+    "evidence": "Only one full-height wrapped pole is visible left of the figures (roughly one-sixth in from the left edge) and one right of them. The area right of the right-hand pole contains shrubbery and a faint crowd, not a second pole. I cannot establish four.",
+    "confidence": "medium"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the four poles frame the scene, two at left and two at right",
+    "observed": "one resolvable pole at left and one at right; the 'two and two' symmetry is not visible",
+    "evidence": "No second pole is separable on the right side of the frame at any depth I can resolve.",
+    "confidence": "medium"
+   },
+   {
+    "field": "scene",
+    "existing": "a group of pale-robed women raise small cups",
+    "observed": "three foreground figures, of whom two raise a cup; the leftmost figure's hands are not visible at all",
+    "evidence": "Two cups are raised and nearly touching at upper centre, one from the tall central figure and one from the right-hand figure. The left figure is cut off by the left pole below the shoulders.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "Under a floral arch of four slender poles",
+     "with": "Under a floral arch of slender garlanded poles"
+    },
+    {
+     "find": "four slender poles forming an arch",
+     "with": "slender garlanded poles forming an arch (two individually resolvable, others possibly hidden by garland)"
+    },
+    {
+     "find": "the four poles frame the scene, two at left and two at right",
+     "with": "garlanded poles frame the scene, one resolvable at left and one at right"
+    },
+    {
+     "find": "a group of pale-robed women raise small cups",
+     "with": "pale-robed women stand together, two of them raising cups"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-004",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene / keyObjects / spatialRelations / visualTensions / emphasizedAspects",
+    "existing": "arranged in a loose ring around the figure",
+    "observed": "the blades stand in two flanking groups, left and right, with open ground directly behind and directly in front of the figure",
+    "evidence": "Four blades are resolvable to her left (two large in the near foreground, two smaller and further back) and at least three to her right. The ground immediately behind her, where the stream runs into the middle distance, carries no blade, so no closure at the back is visible. 'Ring' / 'encircled' is not supported by the pixels; a flanking corridor is.",
+    "confidence": "medium"
+   },
+   {
+    "field": "model self-reported uncertainty",
+    "existing": "exact number of swords fully resolvable in the ring",
+    "observed": "I also could not fix the number — at least 7 are present, reading as 8, with the rearmost merging into the background hatching",
+    "evidence": "Agreement, recorded only so the count stays flagged downstream rather than being filled in later.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "encircled by upright swords driven into the ground",
+     "with": "flanked on both sides by upright swords driven into the ground"
+    },
+    {
+     "find": "arranged in a loose ring around the figure",
+     "with": "arranged in two flanking groups on either side of the figure"
+    },
+    {
+     "find": "the woman stands at the centre with swords planted to her left, right and behind her",
+     "with": "the woman stands at the centre with swords planted to her left and right, receding into the middle distance on both sides"
+    },
+    {
+     "find": "the tight ring of blades around the figure against the wide open plain beyond",
+     "with": "the flanking blades pressing in on the figure against the wide open plain beyond"
+    },
+    {
+     "find": "the encircling enclosure of the swords",
+     "with": "the corridor of swords closing in from both sides"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-010",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "two seated, hooded passengers",
+    "observed": "two seated passengers, only one of whom is hooded",
+    "evidence": "The centre seated figure is bare-headed with long light-brown hair falling loose over a pale cream cloak; the figure immediately to its right wears a dark blue-grey hood that fully covers the head. The difference is plainly visible.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "wooden rowing boat with plank hull and rope lashing",
+    "observed": "the boat is poled, not rowed — no oars, thole pins or oarlocks appear anywhere in the hull",
+    "evidence": "The only propulsion device in the frame is the long straight pole in the standing figure's hands, entering the water at lower left. The text's own scene line says 'poles a small wooden boat', so keyObjects contradicts it.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two seated, hooded passengers",
+     "with": "two seated passengers, one hooded and one bare-headed"
+    },
+    {
+     "find": "wooden rowing boat with plank hull and rope lashing",
+     "with": "wooden boat with plank hull and rope lashing, driven by a pole"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-005",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "model self-reported uncertainty",
+    "existing": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+    "observed": "five hilts are individually resolvable, their pommels stepping upward from left to right; I could not confirm a sixth",
+    "evidence": "Pointing at each pommel in the row from left to right yields five distinct bulbous hilts with five shafts descending to the hull floor. The parenthetical 'six' asserts a number the image does not support, though the two rightmost hilts stand close enough that I will not rule a sixth out.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+     "with": "exact number of swords standing in the bow (five hilts are individually resolvable; the two rightmost stand close together)"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ }
+]

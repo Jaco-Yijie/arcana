@@ -1,0 +1,175 @@
+[
+ {
+  "reviewId": "review-201",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "two ornate swords stand point-upward among flowers below her",
+    "observed": "both blades are planted point-DOWN — each has its round pommel at the top, the decorated grip below it, then a wide ornate crossguard, and the blade tapers downward from there",
+    "evidence": "Center blade: pommel at roughly mid-frame height, crossguard just beneath it, blade narrowing down-left past her skirt toward the lower left. Right blade: same stack — knob, grip, crossguard on top, blade tapering down toward the bottom edge. Neither has a point at its upper end.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the two swords rise from the lower right, crossing the lower half of her gown",
+    "observed": "the two swords descend from their hilts at mid-height down toward the lower left / lower edge; they are driven downward, not rising",
+    "evidence": "Same hilt-above-blade stack on both weapons; the widest part of each shaft is at the top and it narrows going down.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "folded letter or paper held in both hands",
+    "observed": "both hands are drawn up and clasped loosely in front of the chest with the fingers curled; no distinct folded object is resolvable in them",
+    "evidence": "At this very low contrast the pale shape near her chest reads as gown collar / sleeve fabric, not as a separate held sheet. The model itself flags this as uncertain.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "rain streaks across the sky",
+    "observed": "the sky is heavy pale cloud with a fine overall speckle; no distinct directional rain streaks are resolvable, and the water surface shows no rain disturbance",
+    "evidence": "The speckling is uniform across sky, figure and foreground alike rather than falling in one direction, so 'soft rain' is not supportable from the pixels.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two ornate swords stand point-upward among flowers below her",
+     "with": "two ornate swords stand point-downward, driven into the ground among flowers below her"
+    },
+    {
+     "find": "the two swords rise from the lower right, crossing the lower half of her gown",
+     "with": "the two swords are planted point-down at the lower right, their blades descending across the lower half of her gown"
+    },
+    {
+     "find": "folded letter or paper held in both hands",
+     "with": "both hands clasped loosely at the chest, no object clearly visible in them"
+    },
+    {
+     "find": "rain streaks across the sky",
+     "with": "fine pale speckling and drifting mist across the sky"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-213",
+  "verdict": "pass",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-205",
+  "verdict": "pass",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-207",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "two kneeling, veiled figures who raise their hands to receive it",
+    "observed": "only the right-hand kneeling figure has a covered head; the left-hand kneeling figure reads as bare-headed, with pale braided hair dressed with small flowers and a shawl across the shoulders",
+    "evidence": "The right figure's head covering runs continuously from crown to shoulder; on the left figure the braid pattern and floral ornament are visible on the head itself, with the shawl starting at the shoulder line.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "round coins with star/pentacle designs lying on the draped cloth on the ground",
+    "observed": "the discs lie on a pale, softly washed ground; whether there is a draped cloth beneath them cannot be resolved",
+    "evidence": "The foreground is a near-white wash with no distinguishable cloth hem, fold shadow or edge separating a textile from the ground.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two kneeling, veiled figures who raise their hands to receive it",
+     "with": "two kneeling figures who raise their hands to receive it, the right one veiled"
+    },
+    {
+     "find": "round coins with star/pentacle designs lying on the draped cloth on the ground",
+     "with": "round coins with star/pentacle designs lying on the pale ground"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-209",
+  "verdict": "pass",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-211",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "carrying a bundle of swords on his back while glancing back over his shoulder",
+    "observed": "the head faces the same direction as the movement — forward and to the right, slightly downward at the path ahead; it is not turned back toward the camp",
+    "evidence": "The hair mass sits on the rear/upper-left of the skull and the face is in profile on the right side, with nose, lips and chin all pointing right toward the frame edge — the same direction as the advancing leg and the leaning torso. The sword bundle sits on the left side of the torso, confirming his back is toward the camp and his face away from it.",
+    "confidence": "high"
+   },
+   {
+    "field": "visualTensions",
+    "existing": "the figure's body moves away while his head turns back",
+    "observed": "body and head both point the same way; there is no counter-turn of the head",
+    "evidence": "Same profile evidence as above — the face is on the leading side of the head, not the trailing side.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "carrying a bundle of swords on his back while glancing back over his shoulder",
+     "with": "carrying a bundle of swords on his back, his face turned ahead in the direction he is walking"
+    },
+    {
+     "find": "the figure's body moves away while his head turns back",
+     "with": "the orderly camp behind him against his unbroken forward stride away from it"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-217",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "ten upright swords with round pommels and straight crossguards",
+    "observed": "nine swords — I resolved nine distinct round pommels, counted individually twice with the same result",
+    "evidence": "Pommels left to right: (1) far left, low; (2) left, tall; (3) left-of-centre, medium; (4) centre-left, tallest; (5) centre, the short low one; (6) centre, tall; (7) centre-right, medium; (8) right, medium-tall; (9) far right, low. Each has its own grip, crossguard and traceable blade entering the back. No tenth pommel appears anywhere in the fan.",
+    "confidence": "medium"
+   },
+   {
+    "field": "scene",
+    "existing": "ten swords driven upright into the back",
+    "observed": "nine swords driven into the back",
+    "evidence": "Same nine-pommel enumeration; the central blades overlap where they enter the body, but overlap hides blade shafts, not pommels, and only nine pommels are painted.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "ten upright swords with round pommels and straight crossguards",
+     "with": "nine upright swords with round pommels and straight crossguards"
+    },
+    {
+     "find": "ten swords driven upright into the back",
+     "with": "nine swords driven upright into the back"
+    },
+    {
+     "find": "exact count of swords is ten as resolved, though the central cluster overlaps slightly",
+     "with": "exact count of swords is nine as resolved, though the central cluster overlaps slightly"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ }
+]

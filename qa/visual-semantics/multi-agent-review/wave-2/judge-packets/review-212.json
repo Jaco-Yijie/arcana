@@ -1,0 +1,259 @@
+{
+  "reviewId": "review-212",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-212.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: corrected vs pass"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 1,
+    "pass": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-212.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "nine upright swords displayed one per panel",
+          "observed": "nine swords, each hanging point-down with the hilt uppermost",
+          "evidence": "In every one of the nine compartments the pommel and crossguard sit at the top of the panel and the blade tapers downward to a point at the bottom, so the blades are inverted rather than upright. The count of nine is correct.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "nine-panel wall cabinet holding nine upright swords",
+          "observed": "nine-panel wall cabinet holding nine point-down swords",
+          "evidence": "Same orientation reading across all three rows of the 3x3 grid.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "nine upright swords displayed one per panel",
+            "with": "nine swords displayed one per panel, each hanging point-down with its hilt uppermost"
+          },
+          {
+            "find": "nine-panel wall cabinet holding nine upright swords",
+            "with": "nine-panel wall cabinet holding nine point-down swords"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-212",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-right, seated on the edge of a bed",
+              "posture": "seated on the near edge of the bed, back to the viewer, torso twisted slightly to the right, legs hanging down, bare feet on the floor",
+              "gaze": "away from the viewer, toward the window at the right",
+              "heldObjects": [
+                "the raised right hand grips or pushes aside the heavy curtain"
+              ],
+              "appearance": "dark tousled hair, dark long-sleeved sleep garment, barefoot"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 9,
+              "countConfidence": "high",
+              "where": "mounted on the wall at the upper left in a dark wooden display case divided into a 3x3 grid of compartments; one blade hangs point-down in each compartment — top row three, middle row three, bottom row three"
+            },
+            {
+              "type": "bed",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower center, with a spindled headboard at the left and a rumpled dark coverlet"
+            },
+            {
+              "type": "window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right side, tall, the only source of light"
+            },
+            {
+              "type": "curtain",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "heavy dark drapes hanging on either side of the window; the left-hand one is being held back by the figure"
+            },
+            {
+              "type": "nightstand/small table",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "far left beside the headboard, carrying a small round-faced clock and a short stack of books"
+            },
+            {
+              "type": "tower/spire",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "visible through the window, a tall pointed spire rising above a dense cityscape"
+            },
+            {
+              "type": "rug",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the floor beneath and in front of the bed, patterned, mostly in shadow"
+            }
+          ],
+          "environment": [
+            "a dark bedroom interior",
+            "patterned wallpaper or worn wall surface",
+            "flagstone or tiled floor visible in the lower right where the light falls",
+            "a city of rooftops and a spire seen through the window under a pale blank sky"
+          ],
+          "lightSources": [
+            "cold pale daylight through the window at the right; it throws a long bright wedge across the floor toward the bottom of the frame. No lamp or candle is lit"
+          ],
+          "moonPhase": "not applicable — no moon or sun disc visible, only flat pale sky",
+          "spatialRelations": [
+            "the grid of wall-mounted swords hangs directly behind and above the seated figure, on the wall opposite the window",
+            "the figure sits between the sword case and the window, facing the window and away from the swords",
+            "the light from the window falls past the figure onto the floor, leaving the sword case in deep shadow",
+            "the bed's headboard is at the far left, the figure at the far right end of the mattress"
+          ],
+          "foreground": [
+            "floor and the cast light wedge",
+            "rug edge"
+          ],
+          "background": [
+            "sword display case",
+            "wall",
+            "cityscape through the window"
+          ],
+          "notableTension": [
+            "the room is almost entirely dark while a single bright rectangle of outside light dominates the right side"
+          ]
+        },
+        "uncertainObservations": [
+          "the small object on the nightstand reads as a round-faced clock but its face is not legible",
+          "whether the figure is pulling the curtain open or holding it shut cannot be determined from the single frame",
+          "the figure's face is not visible at all; expression cannot be reported",
+          "the number of separate curtain panels is ambiguous — the drapery may be one continuous swag"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-212",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, seated on the edge of a bed",
+              "posture": "seated, back to viewer, torso twisted toward the window, bare feet and lower legs visible, right arm raised high gripping the edge of a heavy curtain and pulling it aside",
+              "gaze": "away from viewer, toward the window / distant city (face not visible)",
+              "heldObjects": [
+                "edge of a drawn-back curtain"
+              ],
+              "clothing": "dark long-sleeved robe or nightshirt, barefoot"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade mounted in a wall frame",
+              "count": 9,
+              "countConfidence": "high",
+              "where": "upper left wall, inside a dark rectangular frame divided into a 3x3 lattice of panes; one blade per pane, each hilt-up and point-down; counted pane by pane: three across the top row, three across the middle row, three across the bottom row"
+            },
+            {
+              "type": "bed",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower center-left, metal-railed headboard against the left wall, heavy rumpled bedding"
+            },
+            {
+              "type": "bedside table",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "far left, beside the headboard"
+            },
+            {
+              "type": "small clock",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the bedside table, a small round-faced object on a stand"
+            },
+            {
+              "type": "stacked books",
+              "count": null,
+              "countConfidence": "low",
+              "where": "on the bedside table below the clock; a short stack, individual volumes not separable"
+            },
+            {
+              "type": "window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right side, tall opening framed by a heavy dark curtain"
+            },
+            {
+              "type": "curtain panel",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one large panel held back at left of the window, a second dark mass at the far right edge of the window"
+            },
+            {
+              "type": "tall spired building",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "seen through the window, a slender pointed spire rising above a dense cityscape"
+            },
+            {
+              "type": "rug",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "floor, lower left, patterned edge visible"
+            }
+          ],
+          "environment": [
+            "dark room interior",
+            "cracked stone or tiled floor",
+            "textured dark walls",
+            "cityscape of rooftops beyond the window",
+            "overcast pale sky outside"
+          ],
+          "lightSources": [
+            "pale daylight from the window, casting a long wedge of light and the curtain's shadow across the floor toward the lower right"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the framed blades hang on the wall directly above and behind the head of the bed, to the figure's left",
+            "the figure sits on the near edge of the bed with the raised arm bridging to the curtain at the window",
+            "the light wedge from the window runs diagonally across the floor in front of the bed",
+            "the bedside table with clock and books is at the far end of the bed, away from the window"
+          ],
+          "foreground": [
+            "cracked floor",
+            "edge of rug",
+            "bed with heavy bedding"
+          ],
+          "background": [
+            "framed wall of blades",
+            "window with curtain",
+            "distant city with a tall spire"
+          ]
+        },
+        "uncertainObservations": [
+          "the small round object on the bedside table reads as a clock on a stand but its face is too dark to confirm",
+          "the number of separate books in the bedside stack cannot be resolved",
+          "whether the shapes beyond the window are rooftops or ruins is not determinable at this scale",
+          "the figure's face and expression are entirely hidden"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

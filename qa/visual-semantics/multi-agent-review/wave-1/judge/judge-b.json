@@ -1,0 +1,64 @@
+[
+  {
+    "reviewId": "review-109",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image before reading any reviewer notes. A single pale-haired figure is bent sharply forward at the waist over a long draped workbench, hammer raised in the hand on the viewer's left and a chisel held point-down in the hand on the viewer's right, its tip on a disc. Everything below roughly hip level dissolves into a mass of translucent gauzy drapery to the left of the bench: there is no chair, stool, bench-seat, thigh line or knee anywhere in frame. I zoomed the lower-body region at 3x specifically to look for a seat and found none. Separately, when I zoomed the bench at 4x with a coordinate ruler I could resolve seven discs (six lying flat in a receding row at x approximately 149, 215, 274, 322, 371, 432 plus the one set higher under the chisel tip at x approximately 301), but the existing description only says 'several', so no count claim needs touching.",
+    "reason": "All five AUTO_CORRECT thresholds hold. (1) The visual fact is unambiguous: absence of any seating and a clearly bent-forward torso. (2) Two independent reviewers reported the same thing without prompting each other - reviewer-d raised it as a formal issue on scene/spatialRelations, and reviewer-b, who returned an overall pass, independently logged it under uncertainObservations as 'Whether the figure is seated or kneeling/standing and leaning cannot be determined; the bench hides her lower body.' (3) I reached the identical conclusion from my own look before reading either. (4) It is an observable fact, not interpretation: presence/absence of a seat in frame and the orientation of the torso. (5) The fix is a minimal substring weakening. I chose AUTO_CORRECT over MARK_UNCERTAIN because marking would discard an entire scene sentence and a spatialRelation whose remaining content both reviewers confirmed; replacing 'sits' with the posture that is actually visible removes exactly the unverifiable claim and keeps everything verified. Both find strings were checked with grep -F against reveal/review-109.md and each occurs exactly once.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "sits at a wooden workbench engraving a round metal disc",
+          "with": "leans over a wooden workbench engraving a round metal disc"
+        },
+        {
+          "find": "the woman sits behind the bench, her hands and tools above the discs",
+          "with": "the woman is behind the bench, leaning forward over it, her hands and tools above the discs"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-111",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image and brightened/zoomed three regions before reading the packet. Mask: on the plinth sits a horned helm-like mask whose two almond eye apertures are distinctly LIGHTER than the near-black face around them, with a faint warm glow inside - they are the brightest thing on the mask and the reason it reads as the visual centre. 'Dark eye openings' inverts the actual tonal relationship. Figures: at 4x the left figure is unambiguously a full rear view - back of the head, shoulder line and the fall of the robe down his back, face not visible - with both arms raised overhead, each hand gripping a chain; the chain is unmistakably a chain, with individual oval links I can count, looped over his head and running down his back and left hip. His wrists are not shackled; his hands grip it freely. The right figure is also a rear view: her back is to us, her robe falls away from us, and only her head is turned in profile toward the viewer's left, toward the altar; her near hand is raised bare and open onto the chain lying on her shoulder. So neither torso is turned toward the mask.",
+    "reason": "I am patching only the two items that clear all five thresholds, and deliberately leaving the rest. (1) Mask eyes: visually unambiguous, reported independently by BOTH reviewer-b (high confidence) and reviewer-d (medium), confirmed by my own brightened zoom, a pure observable tonal fact, expressible as one exact substring swap. (2) 'face inward toward the central mask': both reviewers raised it independently, and both of their blind observations state without prompting that both figures are seen from behind with their backs to the viewer - reviewer-b 'bodies turned away from the viewer', reviewer-d 'both with their backs to the viewer'. I confirmed it myself. But the two reviewers then diverge on the SYMMETRY clause: reviewer-b wants to keep 'flanking the mask symmetrically', reviewer-d denies symmetry because the left figure stands markedly closer and renders larger. Since that part is contested and is a compositional judgement rather than an observable, my replacement encodes only the triply-confirmed facts (rear view, one on each side, the right figure's head turned toward the mask) and simply omits the symmetry claim rather than asserting or denying it. Not patched: reviewer-b's third issue, 'the chain arcs from the left figure's raised hands across the upper left of the frame'. Reviewer-d never raised it, so threshold 2 bars it outright, and on looking I find the claim only loosely imprecise rather than false - his raised hands genuinely do sit in the frame's upper-left region, even though the chain does not cross the open star field beyond him. That is a wording matter for a later pass, not a fact error. Both find strings were checked with grep -F against reveal/review-111.md; each occurs exactly once.",
+    "overturnedReviewer": true,
+    "patch": {
+      "replace": [
+        {
+          "find": "horned mask with two curved horns and dark eye openings",
+          "with": "horned mask with two curved horns and pale, luminous eye openings"
+        },
+        {
+          "find": "the two figures face inward toward the central mask, framing it symmetrically",
+          "with": "the two figures stand one on each side of the central mask, both seen from behind with their backs to the viewer; only the right figure's head is turned toward it"
+        }
+      ]
+    },
+    "overturnedReviewerDetail": "I overturn reviewer-d's observation that the left figure holds 'a ring or open circlet' aloft. At 4x the object is plainly a chain - individual oval links run continuously from his left hand, over his head, down his back and around his hip. Reviewer-b read it as a chain, and the existing description independently calls it 'heavy chain held overhead by the left figure', so reviewer-d is the outlier. I also could not confirm reviewer-d's claim that the left figure's head is tilted up toward the sky: the head is seen from behind and the face is not visible, so that is not determinable and I did not let it into the replacement text."
+  },
+  {
+    "reviewId": "review-113",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the image first. One figure stands among a grove of upright vine-wrapped poles, both hands stacked on the top of the pole in front of her, head tipped forward, face in profile looking down and to the right. On the moon, which is the item at issue: at 5x the disc is large and its full circle is faintly visible, but the LIT portion is a distinct band arcing along the right and lower-right rim. I isolated it two ways - a luminance window and a red-minus-blue warmth map - and both leave the same shape: a crescent whose inner terminator is concave toward the lit limb, covering well under half the disc, with the remainder showing faintly as earthshine. A gibbous phase would light MORE than half the disc behind a convex terminator; that is demonstrably not what is painted. Separately I counted the poles at three different heights with a coordinate ruler (tops against the sky at y150-250, a band at y255-330, and one at y330-420) and reconciled them to eight shafts at roughly x = 64, 127, 192, 260, 315 (the one she leans on), 342, 386, 436 - but the existing description never asserts a pole count, so nothing there needs touching.",
+    "reason": "The gibbous/crescent fix clears all five thresholds. (1) The visual fact is unambiguous and I verified it instrumentally, not just by eye. (2) Both reviewers returned verdict 'corrected' on this exact item independently - reviewer-a at medium confidence, reviewer-d at high - and both proposed the identical pair of substitutions. (3) I reached the same conclusion from my own look before reading either. (4) Moon phase as painted is an observable fact: the extent and curvature of the lit area, not an interpretation. (5) It is two exact substring swaps. I confirmed with grep -F that each find string occurs exactly once in reveal/review-113.md and that the file contains exactly two occurrences of 'gibbous' in total, so the patch leaves no stale instance behind. I did NOT adopt reviewer-a's second issue - see below.",
+    "overturnedReviewer": true,
+    "patch": {
+      "replace": [
+        {
+          "find": "beneath a gibbous moon",
+          "with": "beneath a crescent moon"
+        },
+        {
+          "find": "a gibbous moon in the upper right sky",
+          "with": "a crescent moon in the upper right sky"
+        }
+      ]
+    },
+    "overturnedReviewerDetail": "I overturn reviewer-a's second issue, where she claimed 'no pendant or ring is resolvable' on the leaned staff and proposed deleting that item. That is wrong, and had I taken it on trust I would have destroyed a real observation. At 12x on the staff's mid-section there is unmistakably a fine chain of small diamond-shaped bead links running down the shaft, and hanging on it a single discrete pale-gold pendant: a thick annulus open on its right side - a crescent. Reviewer-a filed this at LOW confidence and reviewer-d never raised it at all, so it was barred from AUTO_CORRECT by threshold 2 regardless, but I want the record to say the item is supported, not merely unproven. One residual imprecision I am flagging rather than patching: the existing text reads 'hung with a small crescent pendant and a ring', which claims TWO objects. I can resolve only ONE pendant, whose form is genuinely ambiguous between a crescent and a closed ring because of that gap - which is exactly what the source model itself hedged as 'whether the small pendant on the leaned staff is a crescent or a ring', in the singular. The keyObjects line appears to have turned one hedged object into two. No reviewer raised this, so I leave it for a later wording pass."
+  }
+]

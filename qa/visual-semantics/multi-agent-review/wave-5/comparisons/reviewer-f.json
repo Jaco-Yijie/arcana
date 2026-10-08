@@ -1,0 +1,121 @@
+[
+  {
+    "reviewId": "review-501",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "large gibbous moon",
+        "observed": "The moon is a CRESCENT, lit along the viewer-right limb, with the unlit remainder of the disc faintly visible. At most about half the disc is lit — it is not gibbous.",
+        "evidence": "Moon at the upper right of the sky, roughly x=390-530 / y=90-230 in the 560x933 image. Enlarged 5x and brightened, the boundary between the lit and unlit areas is clearly CONCAVE, bowing rightward into the bright side, which is the signature of a crescent; a gibbous moon's terminator bows the other way. A 3-level posterisation of the same crop shows the lit area as an unmistakable sickle with horns pointing up-left and down-left.",
+        "confidence": "high"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        { "find": "large gibbous moon", "with": "large crescent moon, lit along its right limb" }
+      ]
+    },
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-503",
+    "verdict": "pass",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-504",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "long straight double-edged sword held point-up",
+        "observed": "There are TWO swords on this card, not one. Besides the sword raised point-up, a second sword hangs sheathed in a scabbard at the figure's viewer-left hip, running point-down past his left knee. The keyObjects list accounts for only the raised one.",
+        "evidence": "Figure's left hip and leg, roughly x=170-330 / y=480-800 in the 560x933 image. Enlarged 4x it shows a slim tooled-leather scabbard strapped to the belt by two buckled hangers, with a metal locket at the mouth and a chape at the lower end, extending from the belt to below the knee.",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        { "find": "long straight double-edged sword held point-up", "with": "long straight double-edged sword held point-up\n  - a second sword, sheathed in a scabbard hanging point-down at the figure's left hip" }
+      ]
+    },
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-507",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "carved relief panels on the wheel's rim segments",
+        "observed": "The carved creature reliefs sit on the wheel's SPOKES, not on its rim segments. Three broad wedge-shaped spoke panels between the hub and the rim carry the reliefs: a coiling S-shaped serpent on the panel at about 1 o'clock, a long-muzzled jackal- or dog-headed beast on the panel at about 3 o'clock, and a winged four-legged creature on the panel at about 5 o'clock. The outer rim itself is a plain double band of masonry blocks with no figurative carving.",
+        "evidence": "Hub and spoke area, roughly x=200-520 / y=250-560 in the 560x933 image. Enlarged 3x and brightened, the jackal relief is plainly bounded by the wedge-shaped spoke panel that springs from the hub and stops short of the rim; the rim band beyond it shows only block jointing.",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        { "find": "carved relief panels on the wheel's rim segments", "with": "carved relief panels set into the wheel's broad spokes, between the hub and the rim" }
+      ]
+    },
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-508",
+    "verdict": "pass",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-512",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "bundle of swords held against the chest, blades crossing and hilts fanning upward",
+        "observed": "The blades do NOT cross. They lie parallel in a single gathered sheaf, all tilted the same way — points down to the viewer-left, grips and pommels fanning up to the viewer-right. What does lie across the bundle is a pair of gold cross-guards belonging to two of the swords; those are quillons crossing the blades, not blades crossing each other. (The hilts fanning upward is correct.)",
+        "evidence": "Carried bundle, roughly x=240-460 / y=280-430 in the 560x933 image. At 6x the blade faces above the hands run as a neat parallel fan with no intersections, and the blade tips emerging below the hands (x=190-330 / y=420-540) stay parallel all the way down.",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        { "find": "bundle of swords held against the chest, blades crossing and hilts fanning upward", "with": "bundle of swords held against the chest, blades parallel in a single sheaf and hilts fanning upward" }
+      ]
+    },
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-515",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "constellation lines and gold star points",
+        "observed": "There are TWO moons in this sky and keyObjects lists neither. A larger one sits at the upper-left corner and a smaller one lower down at the middle left, just above and left of the figure's head. Both are crescents lit along the LOWER-RIGHT limb with the unlit remainder of the disc faintly visible. The smaller disc is a genuine second moon, not a lens flare: it shows the same crescent limb and the same faint full-disc outline as the larger one.",
+        "evidence": "Larger moon roughly x=60-230 / y=60-180; smaller moon roughly x=80-260 / y=440-560, in the 560x933 image. Both enlarged 5x and brightened show a bright sickle on the lower-right edge of a dim circular disc — a flare would have no dark limb and no disc edge.",
+        "confidence": "high"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        { "find": "constellation lines and gold star points", "with": "constellation lines and gold star points\n  - two crescent moons, a larger one at the upper left and a smaller one at the mid left, both lit along the lower-right limb" }
+      ]
+    },
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-517",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "visualTensions",
+        "existing": "the figure's body moves away while its head turns back",
+        "observed": "I cannot find any evidence of a backward glance on this card. The head is drawn as a featureless rear silhouette: the back of the skull faces the viewer, rim-lit along its upper-left edge, with no face, eye, ear or profile visible on either side at any magnification. A head turned back would present a profile toward the viewer-left; none is drawn. In my blind pass I recorded the head as aligned with the body, i.e. facing the direction of travel, and noted that the gaze direction is simply not determinable. The same claim is restated in emphasizedAspects as 'a backward glance that keeps watch on what is left behind'.",
+        "evidence": "Head, roughly x=230-330 / y=320-400 in the 560x933 image. Enlarged 9x and brightened 3.4x it resolves only to a mass of shaggy dark hair with highlights along the top-left; the lower-right of the mass, where a cheek or jaw would fall if the head were turned back, holds no recoverable detail. For contrast, review-512 draws its backward glance explicitly, with a full three-quarter face turned opposite to the direction of travel — nothing comparable exists here.",
+        "confidence": "medium"
+      }
+    ],
+    "reviewer": "reviewer-f"
+  }
+]

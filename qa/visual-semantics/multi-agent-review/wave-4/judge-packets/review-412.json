@@ -1,0 +1,209 @@
+{
+  "reviewId": "review-412",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-412.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-412.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "crescent moon",
+          "observed": "a small grey disc, mostly lit with shading on one limb - reads gibbous, not a crescent",
+          "evidence": "The body at the upper left is a near-complete round disc with surface mottling; no thin crescent sliver. It is small and dim, so I recorded the phase as uncertain rather than certain.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "crescent moon",
+            "with": "small moon or planetary disc, mostly lit with shading on one limb"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-412",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of frame, on a descending path",
+              "posture": "standing / mid-stride walking, bent slightly forward under a load, booted",
+              "gaze": "back fully turned to the viewer; head faces forward along the direction of travel, toward the lit city ahead - not turned back",
+              "heldObjects": [
+                "two large bundles of staves carried across the back and shoulders, one over each shoulder, each bundle lashed with rope near the middle; the arms are under/around the bundles"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "stave / wand with a burning tip",
+              "count": null,
+              "countConfidence": "low",
+              "where": "two bundles rising from behind the figure's shoulders, one splaying up-left and one splaying up-right",
+              "orientation": "all shafts point UPWARD and outward; the burning, glowing tips are at the TOP of each shaft",
+              "arrangement": "two fanned bundles flanking the head, with a clear V-shaped gap between them directly above the figure's head; within each bundle the flame tips step down in a diagonal line toward the outside of the frame"
+            },
+            {
+              "type": "rope lashing around a bundle",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one wrapped around each bundle at chest/shoulder height",
+              "orientation": "wound horizontally around the shafts",
+              "arrangement": "one per bundle"
+            },
+            {
+              "type": "domed city building",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right middle distance, across water - a large dome with a smaller dome and a tall lantern-topped tower behind it, plus lit ranges of windows",
+              "orientation": "upright",
+              "arrangement": "a clustered skyline"
+            }
+          ],
+          "environment": [
+            "night sky with dense stars, a nebula band and gold constellation lines and circular astrological diagrams",
+            "a rocky downhill path leading from foreground to the city",
+            "water/river between the path and the city",
+            "a rocky slope with a tree at the upper left",
+            "a warm dusk glow low on the horizon",
+            "decorated card border left and right"
+          ],
+          "lightSources": [
+            "the flames on the stave tips (the brightest, nearest source)",
+            "the lit windows and domes of the city",
+            "a small grey moon/planet upper left",
+            "the residual dusk glow at the horizon",
+            "stars"
+          ],
+          "moonPhase": "gibbous - partly shaded on one side; uncertain",
+          "spatialRelations": [
+            "the figure walks AWAY from the viewer, downhill, toward the city",
+            "the stave tips are above and behind the figure's head, none in front of him",
+            "the path curves down and to the right toward the water and the city",
+            "the figure's own shadow/reflection falls on the lit path ahead"
+          ],
+          "foreground": [
+            "dark rocky ground and boulders on both sides of the path"
+          ],
+          "background": [
+            "the illuminated city, the water, distant hills, and the starfield"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of staves cannot be counted reliably - I can individually resolve roughly 5 flame tips on the left bundle and roughly 5 to 6 on the right, but the shafts overlap heavily where they enter the bundles and some tips are close enough to merge",
+          "whether both bundles contain the same number of shafts is not determinable",
+          "the figure's face is entirely hidden; sex and age are not readable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects / spatialRelations",
+          "existing": "crescent moon",
+          "observed": "a dim grey-blue sphere in the upper-left sky reading as a full round disc, unevenly and faintly lit; phase not determinable",
+          "evidence": "The upper-left body shows a complete circular outline with no bright limb and no dark-limb cusp, so I could not confirm a crescent; I recorded moonPhase as uncertain.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "crescent moon",
+            "with": "dim round moon disc, phase indeterminate"
+          },
+          {
+            "find": "whether the moon is waxing or waning",
+            "with": "the moon's phase — it reads as a full round dim disc, not clearly crescent"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-412",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, lower-middle of frame on a path",
+              "posture": "standing / mid-stride walking, seen from directly behind",
+              "gaze": "head faces away from viewer, forward along the path toward the lit city ahead; not turned back",
+              "heldObjects": [
+                "a large bundle of long wooden staves carried across the back and shoulders, lashed with rope around the torso"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "long wooden stave with a lit flame at its upper tip",
+              "count": 10,
+              "countConfidence": "medium",
+              "where": "strapped across the figure's back and shoulders, shafts crossing behind the torso, tips rising above the figure",
+              "orientation": "all shafts angle upward and outward; burning tips point UP and away from the body; butt ends point down toward the ground",
+              "arrangement": "two fans, one splaying to the upper-left (5 lit tips resolvable) and one to the upper-right (5 lit tips resolvable), crossing in an X behind the shoulders; there is an open gap at the center directly above the figure's head where no stave rises"
+            },
+            {
+              "type": "rope binding",
+              "count": null,
+              "countConfidence": "low",
+              "where": "wrapped around the figure's chest/torso holding the two stave fans",
+              "orientation": "horizontal wraps",
+              "arrangement": "one visible wrap on each side of the torso; exact number of turns not resolvable"
+            }
+          ],
+          "environment": [
+            "rocky, wet, stony path descending toward the lower foreground",
+            "steep dark slope with scrub on the left",
+            "wide night sky filled with dense stars and a purple Milky Way band",
+            "faint gold geometric constellation lines and circular astrolabe-like diagrams overlaid on the sky",
+            "distant city on the right with a large dome, a tall tower with a lit cupola, many small lit windows",
+            "a river or water channel below the city reflecting its lights",
+            "a band of dim blue-orange twilight glow along the horizon behind the city"
+          ],
+          "lightSources": [
+            "the burning tips of the staves (warm gold)",
+            "lit windows and lamps of the distant city",
+            "a dim grey-blue sphere (moon) in the upper-left sky",
+            "stars / Milky Way",
+            "faint residual twilight glow at the horizon"
+          ],
+          "moonPhase": "uncertain — the upper-left sphere reads as a full round disc but is dark and unevenly lit, so the phase cannot be determined",
+          "spatialRelations": [
+            "the figure is between the viewer and the city; it is walking away from the viewer",
+            "the city sits to the right of the path's vanishing point, not straight ahead",
+            "the stave bundle is wider than the figure's body on both sides",
+            "the figure's shadow / the wet path reflects light ahead of it"
+          ],
+          "foreground": [
+            "wet dark stones and rubble",
+            "puddled reflective path surface"
+          ],
+          "background": [
+            "domed and towered lit city",
+            "water",
+            "star-filled night sky with drawn constellation geometry"
+          ]
+        },
+        "uncertainObservations": [
+          "The staves overlap heavily inside each bundle; only the lit tips are individually resolvable (5 left, 5 right). Unlit shafts could raise the true total.",
+          "Whether the dark sphere upper-left is a moon or a planet cannot be determined."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

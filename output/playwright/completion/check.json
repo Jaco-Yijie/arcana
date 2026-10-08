@@ -1,0 +1,68 @@
+[
+  {
+    "locale": "zh-CN",
+    "mode": "standard",
+    "loadingHidden": true,
+    "widths": [
+      375,
+      390,
+      430
+    ],
+    "oldReadingSaved": true,
+    "newSessionClean": true,
+    "preferencesPreserved": true
+  },
+  {
+    "locale": "zh-CN",
+    "mode": "deep",
+    "loadingHidden": true,
+    "widths": [
+      375,
+      390,
+      430
+    ],
+    "oldReadingSaved": true,
+    "newSessionClean": true,
+    "preferencesPreserved": true
+  },
+  {
+    "locale": "en-US",
+    "mode": "standard",
+    "loadingHidden": true,
+    "widths": [
+      375,
+      390,
+      430
+    ],
+    "oldReadingSaved": true,
+    "newSessionClean": true,
+    "preferencesPreserved": true
+  },
+  {
+    "locale": "en-US",
+    "mode": "deep",
+    "loadingHidden": true,
+    "widths": [
+      375,
+      390,
+      430
+    ],
+    "oldReadingSaved": true,
+    "newSessionClean": true,
+    "preferencesPreserved": true
+  },
+  {
+    "action": "save",
+    "navigation": true
+  },
+  {
+    "action": "share",
+    "navigation": true
+  },
+  {
+    "followUp": "actions disabled until response completes"
+  },
+  {
+    "failure": "no completion actions"
+  }
+]

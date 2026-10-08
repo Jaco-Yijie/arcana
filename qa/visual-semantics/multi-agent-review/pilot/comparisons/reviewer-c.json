@@ -1,0 +1,122 @@
+[
+ {
+  "reviewId": "review-007",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "small lanterns hanging on the posts",
+    "observed": "three lit lanterns standing on the platform floor (lower left, beside the central spread, lower right); the lights that are actually suspended hang from the garland, and the posts carry wound point-lights rather than lanterns",
+    "evidence": "Each of the three lantern bodies sits at platform level with a visible base and its own reflection on the inlaid floor; none is attached to or suspended from a post.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "small lanterns hanging on the posts",
+     "with": "small lanterns standing on the platform, with strings of small lights wound around the posts and garland"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-003",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-002",
+  "verdict": "pass",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-006",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "two swords held upright by the kneeling figure",
+    "observed": "held-blade count not establishable — two pommels and crossguards are clearly resolvable above the hands, but the overlapping blade edges below the grip may be two or three",
+    "evidence": "The blades below the hands overlap and are partly crossed by the cloak edge; I could not separate them one by one, so I recorded no count. The two grounded swords in the foreground are confirmed at two.",
+    "confidence": "low"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "small shoulder satchel on the departing figure",
+    "observed": "a dark shape at the departing figure's hip could be a pouch or bag, but at that scale and in that haze it cannot be confirmed as a satchel",
+    "evidence": "The departing figure is small, back-turned and veiled in mist; I recorded their carried items as indeterminate.",
+    "confidence": "low"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "two swords held upright by the kneeling figure",
+     "with": "swords held upright by the kneeling figure (two hilts clearly visible; exact blade count obscured)"
+    },
+    {
+     "find": "small shoulder satchel on the departing figure",
+     "with": "a small bag or pouch at the departing figure's hip (indistinct)"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-011",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "five upright wands with gold spear-like tips and purple ribbons",
+    "observed": "four upright wands planted in a row on the right",
+    "evidence": "I resolved each one individually, left to right: shafts at roughly x=388, x=418, x=452, x=490, each with its own golden sheaf-like finial, its own base entering the water/bank, and its own reflection. The gap between the rightmost shaft and the inner border is empty horizon glow — no fifth shaft, finial or reflection is present, and nothing stands left of x=388 between the horse's head and the row.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "a row of five upright wands",
+    "observed": "a row of four upright wands",
+    "evidence": "Same four individually resolved shafts; the scene sentence repeats the same miscount.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the five wands stand in a row to the right",
+    "observed": "the four wands stand in a row to the right",
+    "evidence": "Same four individually resolved shafts.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "domed building with a lit arched window and a spherical instrument",
+    "observed": "the domed building shows a lit arched window and, below it, a round wheel- or dial-like window with radiating spokes; whether this is a three-dimensional sphere or a flat circular window cannot be determined",
+    "evidence": "The circular element reads flat against the wall with spoke-like divisions, at the same plane as the masonry; no depth cue separates it from the facade.",
+    "confidence": "low"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a row of five upright wands",
+     "with": "a row of four upright wands"
+    },
+    {
+     "find": "five upright wands with gold spear-like tips and purple ribbons",
+     "with": "four upright wands with gold spear-like tips and purple ribbons"
+    },
+    {
+     "find": "the five wands stand in a row to the right",
+     "with": "the four wands stand in a row to the right"
+    },
+    {
+     "find": "domed building with a lit arched window and a spherical instrument",
+     "with": "domed building with a lit arched window and a round wheel-like window or dial below it"
+    }
+   ]
+  },
+  "reviewer": "reviewer-c"
+ }
+]

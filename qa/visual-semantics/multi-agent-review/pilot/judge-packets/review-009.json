@@ -1,0 +1,337 @@
+{
+  "reviewId": "review-009",
+  "blindImage": "qa/visual-semantics/blind-review/review-009.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/pilot/reveal/review-009.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "four slender poles forming an arch",
+          "observed": "three poles individually resolvable, a possible fourth",
+          "evidence": "I could separate one thick garlanded pole at the far left running the full height, one slender pole at centre-left rising behind the garland, and one thick garlanded pole at centre-right running the full height. A possible fourth stands behind the right-hand one but the high-key watercolour wash makes it impossible to confirm as a separate shaft. Four may well be right — I simply could not establish it.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "round table draped in pale cloth with a lantern and flowers",
+          "observed": "a cloth-draped table bearing small pale objects that cannot be identified",
+          "evidence": "Small pale shapes sit on the table behind the raised cups, but at that level of wash they cannot be resolved into lanterns, glasses, bottles or flowers. The specific identification is not supported by the pixels.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "four slender poles forming an arch",
+            "with": "at least three slender poles forming an arch, with a possible fourth behind the right-hand pole"
+          },
+          {
+            "find": "the four poles frame the scene, two at left and two at right",
+            "with": "the poles frame the scene at left and at right"
+          },
+          {
+            "find": "round table draped in pale cloth with a lantern and flowers",
+            "with": "round table draped in pale cloth bearing small pale objects"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-009",
+        "visibleFacts": {
+          "figureCount": null,
+          "figures": [
+            {
+              "position": "left of center, partly occluded behind the central figure",
+              "posture": "standing, turned toward the right/center",
+              "gaze": "toward the center of the group",
+              "heldObjects": [
+                "not resolvable — hands are hidden behind the central figure"
+              ],
+              "clothing": "pale lilac gown, long dark hair, a small pale flower circlet on the head"
+            },
+            {
+              "position": "center, nearest the viewer, the largest figure",
+              "posture": "standing, back three-quarters to the viewer, weight on one leg, right arm raised high",
+              "gaze": "toward the right-hand figure",
+              "heldObjects": [
+                "a stemmed goblet raised at head height in the right hand"
+              ],
+              "clothing": "long pale cream-lilac gown with a sash at the waist and a trailing veil; long loose hair; a white flower crown"
+            },
+            {
+              "position": "right of center, facing left",
+              "posture": "standing, turned to face the central figure, right arm raised to meet hers",
+              "gaze": "toward the central figure",
+              "heldObjects": [
+                "a stemmed goblet raised at chin/eye height",
+                "possibly something in the lowered left hand, not resolvable"
+              ],
+              "clothing": "pale lavender gown, braided hair, a flower circlet"
+            },
+            {
+              "position": "right background and center-background behind the table",
+              "posture": "a diffuse group of standing figures, very pale and washed out",
+              "gaze": "unresolvable",
+              "heldObjects": [
+                "unresolvable"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "raised stemmed goblet/cup",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "at the center of the frame at head height, two goblets brought together almost rim to rim — one from the central figure's raised right hand, one from the right figure's raised right hand"
+            },
+            {
+              "type": "garlanded vertical pole of an arbour",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "individually resolved: one thick pole at the far left running the full height, one slender pole at center-left rising behind the garland, one thick pole at center-right running the full height"
+            },
+            {
+              "type": "hanging lantern",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "left of center, suspended from the flower garland — one larger and lower, one smaller and slightly left/below it"
+            },
+            {
+              "type": "standing lantern on the ground",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "lower right, among the white flowers at the base of the right-hand pole"
+            },
+            {
+              "type": "table with a pale cloth",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "center, behind and below the raised goblets, bearing small pale objects (bottles, glasses or flowers — not resolvable)"
+            },
+            {
+              "type": "moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper right, a large soft pale disc partly behind cloud"
+            }
+          ],
+          "environment": [
+            "an arbour or canopy of poles hung with flowering garlands, trailing ribbons and streamers across the whole top of the frame",
+            "white daisy-like flowers and green foliage filling the lower left, lower right and the ground",
+            "a broad calm body of water (lake or bay) across the middle distance with a bright vertical light reflection on it",
+            "a hillside town of pale buildings, towers and slim spires along the far shore at the right",
+            "trees along the opposite shoreline",
+            "pale overcast-lit sky with soft clouds",
+            "a thin drawn border line framing the image"
+          ],
+          "lightSources": [
+            "the pale moon at upper right",
+            "the small hanging lanterns and the ground lantern, faintly glowing warm",
+            "scattered warm window lights in the distant town",
+            "an overall diffuse ambient glow with no hard shadows"
+          ],
+          "moonPhase": "appears full or nearly full — a complete round pale disc, but its edges are soft and partly veiled by cloud, so full vs. gibbous cannot be settled",
+          "spatialRelations": [
+            "the three foreground figures stand close together in a loose arc under the arbour, the two on the right touching their raised goblets together at the group's center",
+            "the leftmost figure stands slightly behind the central one and is partly hidden by her",
+            "the table sits behind the group, between them and the water",
+            "the arbour poles frame the group, one at each side and one rising behind them",
+            "the moon is up and to the right, above the distant town; its reflection appears on the water"
+          ],
+          "foreground": [
+            "the three figures",
+            "white flowers and foliage along the bottom edge",
+            "the ground lantern at lower right"
+          ],
+          "background": [
+            "the lake and its light reflection",
+            "the hillside town with spires",
+            "the moon and clouds",
+            "the faint crowd of additional figures at the right"
+          ],
+          "palette": "very high-key watercolour — white, lilac, pale blue, soft sage green"
+        },
+        "uncertainObservations": [
+          "Total figure count cannot be given: three figures are resolvable in the foreground, but the right-hand and center-background hold a pale, washed-out crowd of further figures that cannot be separated or counted.",
+          "The number of raised cups is stated only for cups I could individually resolve (two). The leftmost figure's hands are hidden behind the central figure, so she may or may not also hold one. Do not treat 2 as a total.",
+          "A possible fourth arbour pole may stand behind the right-hand one; the wash makes it impossible to confirm.",
+          "The small objects on the table are not identifiable.",
+          "The moon's exact phase is indeterminate due to cloud veiling.",
+          "It is unclear whether the right figure holds anything in her lowered left hand."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects / spatialRelations / scene",
+          "existing": "four slender poles forming an arch",
+          "observed": "two garlanded poles are individually resolvable — one at left, one at right; a possible third vertical sits behind the garland near the upper centre-left, but no fourth can be separated from the foliage",
+          "evidence": "Only one full-height wrapped pole is visible left of the figures (roughly one-sixth in from the left edge) and one right of them. The area right of the right-hand pole contains shrubbery and a faint crowd, not a second pole. I cannot establish four.",
+          "confidence": "medium"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the four poles frame the scene, two at left and two at right",
+          "observed": "one resolvable pole at left and one at right; the 'two and two' symmetry is not visible",
+          "evidence": "No second pole is separable on the right side of the frame at any depth I can resolve.",
+          "confidence": "medium"
+        },
+        {
+          "field": "scene",
+          "existing": "a group of pale-robed women raise small cups",
+          "observed": "three foreground figures, of whom two raise a cup; the leftmost figure's hands are not visible at all",
+          "evidence": "Two cups are raised and nearly touching at upper centre, one from the tall central figure and one from the right-hand figure. The left figure is cut off by the left pole below the shoulders.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "Under a floral arch of four slender poles",
+            "with": "Under a floral arch of slender garlanded poles"
+          },
+          {
+            "find": "four slender poles forming an arch",
+            "with": "slender garlanded poles forming an arch (two individually resolvable, others possibly hidden by garland)"
+          },
+          {
+            "find": "the four poles frame the scene, two at left and two at right",
+            "with": "garlanded poles frame the scene, one resolvable at left and one at right"
+          },
+          {
+            "find": "a group of pale-robed women raise small cups",
+            "with": "pale-robed women stand together, two of them raising cups"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-009",
+        "visibleFacts": {
+          "style": "soft pastel watercolour, pale lilac/white palette, thin light border line",
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "left of centre, partly occluded by a vertical garlanded pole",
+              "posture": "standing, upper body only clearly visible",
+              "gaze": "turned toward centre-right, head slightly tilted",
+              "heldObjects": [],
+              "notes": "dark/brown hair, pale gown; hands not visible in frame"
+            },
+            {
+              "position": "centre, nearest the viewer",
+              "posture": "standing, three-quarter/back view, body turned to the right",
+              "gaze": "toward the raised hands / toward the right-hand figure",
+              "heldObjects": [
+                "a cup raised overhead in the right hand"
+              ],
+              "notes": "tallest figure; long wavy light-brown hair loose to the waist, white floral wreath on the head, long pale gown with a sash/belt at the waist and a trailing translucent overlayer"
+            },
+            {
+              "position": "right of centre",
+              "posture": "standing, facing left toward the centre figure",
+              "gaze": "toward the centre figure / toward the raised cups",
+              "heldObjects": [
+                "a cup raised in the near hand"
+              ],
+              "notes": "pale lilac gown, braided hair with small flowers"
+            }
+          ],
+          "objects": [
+            {
+              "type": "cup / goblet",
+              "count": null,
+              "countConfidence": "low",
+              "where": "two are raised and nearly touching at upper centre, one held by the centre figure and one by the right figure; the draped table behind them carries small pale vessels that cannot be individually resolved"
+            },
+            {
+              "type": "lantern",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "two hang from the garland in the upper-left quadrant at different heights; one stands on the ground at lower right"
+            },
+            {
+              "type": "tall garlanded pole / pillar",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one at left (behind the leftmost figure), one at right; both wrapped in leaves, white blossoms and ribbons, running from the top of the frame to the ground. Further greenery hangs at the extreme left edge that may or may not belong to a third pole"
+            },
+            {
+              "type": "draped table",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "centre, behind and between the figures; white cloth, small indistinct items on top"
+            },
+            {
+              "type": "background figures",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a pale indistinct crowd along the right middle-ground beyond the right-hand pole; individual bodies are not separable"
+            },
+            {
+              "type": "tall spire / tower",
+              "count": null,
+              "countConfidence": "low",
+              "where": "one thin pale spire in the left middle distance above the garland; additional towers appear in the hillside town at right"
+            }
+          ],
+          "environment": [
+            "outdoor night or twilight scene",
+            "a canopy of leafy garland with hanging ribbons and swags strung between the poles across the top third",
+            "a broad lake or bay across the middle of the frame with a pale light-path on its surface",
+            "a hillside town with buildings, towers and small lit windows on the far right shore",
+            "trees along the far shoreline",
+            "grass and white daisies / flowering plants filling the lower left and lower right foreground"
+          ],
+          "lightSources": [
+            "large pale round moon in the upper right sky",
+            "warm glow inside the two hanging lanterns and the ground lantern",
+            "reflected light streak on the water"
+          ],
+          "moonPhase": "uncertain — a bright round disc, reads as full or near-full, but its edge is softened by cloud",
+          "spatialRelations": [
+            "the centre and right figures face each other and each raise a cup; the two cups almost meet above the centre of the frame",
+            "the left figure stands behind and to the side of the centre figure, partly hidden by the left pole",
+            "the draped table sits between and behind the figures",
+            "the two garlanded poles frame the group like a canopy, with the lake and town visible between them",
+            "the moon sits in the upper right, diagonally opposite the hanging lanterns in the upper left"
+          ],
+          "foreground": [
+            "white daisies and leafy plants",
+            "grass",
+            "the standing ground lantern at lower right"
+          ],
+          "background": [
+            "lake with light reflection",
+            "hillside town with towers",
+            "distant treeline",
+            "moon and pale clouds"
+          ]
+        },
+        "uncertainObservations": [
+          "total number of cups cannot be fixed: two raised cups are clearly resolvable, but pale objects on the table may or may not be additional vessels",
+          "the number of people in the right-hand background crowd cannot be counted",
+          "moon phase not determinable with confidence (round but cloud-softened)",
+          "whether a third garlanded pole exists at the extreme left frame edge, or whether that greenery belongs to the left pole",
+          "hands of the leftmost figure are not visible, so nothing can be said about what she holds"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

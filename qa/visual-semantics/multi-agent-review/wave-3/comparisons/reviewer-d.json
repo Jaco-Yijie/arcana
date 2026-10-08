@@ -1,0 +1,174 @@
+[
+ {
+  "reviewId": "review-301",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "A dark, near-monochrome depiction of a crowned figure seated on an ornate throne at the edge of a stone causeway, with a fortress on a crag in the distance.",
+    "observed": "The figure's head is entirely in shadow; no crown or headpiece is resolvable, and it may equally read as a hood or loose dark hair.",
+    "evidence": "At the head there is only an unbroken dark mass with no points, band or highlight; the model itself lists 'whether the figure wears a crown or headpiece' as uncertain yet the scene line asserts it flatly.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "flight of steps rising to a small arched gate",
+    "observed": "A flight of steps is visible in the middle distance on the road, but no arched gate or arched structure can be resolved at its top.",
+    "evidence": "The steps fade into unmodulated black before any opening appears; the only architecture I can separate is the fortress silhouette much further up the crag.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a crowned figure seated on an ornate throne",
+     "with": "a dark-robed figure, head bowed and in shadow, seated on an ornate throne"
+    },
+    {
+     "find": "flight of steps rising to a small arched gate",
+     "with": "flight of steps rising along the road toward the fortress"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-313",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "torn paper or parchment sheet split by the blade",
+    "observed": "An open book lying face-up on the slab — two pale facing pages tented up from a central gutter, with a visible page-block thickness at the front edge — not a single flat sheet, and not torn.",
+    "evidence": "The pale form reads as two planes meeting in a V at the centre where the blade tip sits, and the front edge of the object shows the stepped thickness of a stack of pages; there is no tear line anywhere apart from the blade itself.",
+    "confidence": "medium"
+   },
+   {
+    "field": "visualTensions",
+    "existing": "the intact sheet of paper against its clean tear",
+    "observed": "Same error carried forward: the object is an open book, and no tear is visible in it.",
+    "evidence": "The only thing interrupting the pages is the blade tip resting in the central gutter.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "driving a sword point-down into a torn document on a stone slab",
+     "with": "driving a sword point-down into an open book on a stone slab"
+    },
+    {
+     "find": "torn paper or parchment sheet split by the blade",
+     "with": "open book lying face-up, the blade tip resting in its central gutter"
+    },
+    {
+     "find": "the intact sheet of paper against its clean tear",
+     "with": "the pale open pages against the surrounding blackness"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-305",
+  "verdict": "pass",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-307",
+  "verdict": "pass",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-309",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the woman stands to the left of the panel, her hands at its upper edge",
+    "observed": "She is kneeling/crouching low behind the panel, not standing; her legs are bent under her and her torso leans forward over the frame.",
+    "evidence": "A bent pale-clad knee and lower leg are clearly visible at the lower left beneath her green cloak, and her shoulders sit barely above the frame's top rail — a standing figure could not be that low relative to a panel whose base rests on the ground.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "large weathered wooden panel or board",
+    "observed": "A square wooden frame holding stretched coarse woven cloth, i.e. an embroidery/tapestry frame — the working surface is fabric, not wood.",
+    "evidence": "The whole inner face shows a visible warp-and-weft weave running to the frame's edges, and the heart patch and blades are stitched through it; the wood is only the four surrounding bars.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "bends over a large wooden panel on which a red heart-shaped patch is pierced by three swords",
+     "with": "kneels over a square frame of stretched woven cloth on which a red heart-shaped patch is pierced by three swords"
+    },
+    {
+     "find": "large weathered wooden panel or board",
+     "with": "square wooden frame holding stretched coarse woven cloth"
+    },
+    {
+     "find": "the woman stands to the left of the panel, her hands at its upper edge",
+     "with": "the woman kneels behind the panel, left of centre, her hands over its upper edge"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-311",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the sword stands vertically at the centre, its point rising above the figure's head",
+    "observed": "The blade is vertical but POINT-DOWN: its tip is driven into the top of the stone altar. What rises above the figure's head is the crossguard, grip and pommel.",
+    "evidence": "The horizontal quillons sit high at the top of the frame with a short grip and small finial above them, and the bright blade runs downward from there through the figure's hand into the altar top — where a large crack splits the block's front face directly in line with the tip.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the sword stands vertically at the centre, its point rising above the figure's head",
+     "with": "the sword stands vertically at the centre, point-down into the altar, its crossguard and pommel rising above the figure's head"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-317",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the boat occupies the lower centre, its bow toward the viewer",
+    "observed": "The boat is seen from ASTERN — the stern, with its carved decorative transom panel, faces the viewer; the bow points away toward the lit horizon.",
+    "evidence": "The near end is the wide, rounded end carrying a carved panel and the boat's interior recedes away from it, narrowing to a point at the far end; both figures face away from the viewer toward that far end and the horizon glow.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+    "observed": "Only one figure is seated; the other is standing upright, working the oar/pole with both hands.",
+    "evidence": "The rear figure's full torso, shoulders and head rise well above the seated figure's, with the cloak hanging in vertical folds to the boat's floor — the model's own keyObjects line already says 'held by the standing figure'.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+     "with": "Two cloaked figures travel in a wooden rowboat on dark water, one seated and one standing at the oar"
+    },
+    {
+     "find": "the boat occupies the lower centre, its bow toward the viewer",
+     "with": "the boat occupies the lower centre, seen from astern, its bow pointing away toward the horizon"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ }
+]

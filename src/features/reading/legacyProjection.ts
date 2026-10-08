@@ -49,8 +49,15 @@ export function toLegacyReading(
     relations: structured.relationships.map((r) => r.interpretation),
     trend: structured.narrative,
     // V1 的 watchOut 在 V2 里没有直接对应项，用「对问题的回答」兜底，保证详情页不空
-    watchOut: structured.answerToQuestion ? [structured.answerToQuestion] : [],
-    actions: structured.reflectionQuestions,
+    watchOut: [
+      ...(structured.answerToQuestion ? [structured.answerToQuestion] : []),
+      ...(structured.watchFor ?? []),
+    ],
+    // V2.4 起 V1 的 actions 对应行动建议；没有行动建议的旧解读仍回落到反思问题
+    actions:
+      structured.actionPlan && structured.actionPlan.length > 0
+        ? structured.actionPlan.map((item) => item.action)
+        : structured.reflectionQuestions,
     safetyNotice: structured.safetyNotice,
   }
 }

@@ -1,0 +1,107 @@
+[
+ {
+  "reviewId": "review-403",
+  "verdict": "pass",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-402",
+  "verdict": "pass",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-405",
+  "verdict": "pass",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-415",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "visualTensions",
+    "existing": "the blindfold covers the eyes while the body faces the light",
+    "observed": "the bright canopy break is BEHIND her; she walks down the path toward the viewer, backlit, with her back to the light",
+    "evidence": "The single light source is a sun shaft breaking through the canopy at upper centre-right, which falls on the path behind her and rims her shoulders; her feet and body advance toward the bottom of the frame.",
+    "confidence": "high"
+   },
+   {
+    "field": "visualTensions",
+    "existing": "the cloth binds her hands and head yet trails loose and free",
+    "observed": "only the head/eyes are wound; both hands are free — her left hand grips the shawl edge at her chest, her right arm hangs down and out with fingers open",
+    "evidence": "No cloth passes around either wrist; the pale strips hang from the shawl and the head wrap across the skirt, not from her hands.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the blindfold covers the eyes while the body faces the light",
+     "with": "the blindfold covers the eyes while the body walks out of the light, her back to the sunlit gap behind her"
+    },
+    {
+     "find": "the cloth binds her hands and head yet trails loose and free",
+     "with": "the cloth is wound over her eyes while both hands stay free, one holding the shawl and one hanging open, the loose ends trailing"
+    }
+   ]
+  },
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-414",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "emphasizedAspects",
+    "existing": "a surrounding ring of blades that is present but not touching",
+    "observed": "not a ring — two loose flanking groups (roughly 4 left, 5 right) with a clear open lane of empty water directly in front of and behind her",
+    "evidence": "The water immediately fore and aft of the figure is unbroken; every blade sits to her left or right at varying depths, so the shape is open on two sides, not closed.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "misty blue night",
+    "observed": "the whole image is high-key, pale and luminous with a bright diffuse glow; I could not determine night vs pale daylight from the pixels despite the crescent moon",
+    "evidence": "Values are near-white across sky, mist and water with no dark passages anywhere; only the crescent implies night.",
+    "confidence": "low"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "a surrounding ring of blades that is present but not touching",
+     "with": "blades flanking her on both sides, present but not touching, with open water in front of and behind her"
+    }
+   ]
+  },
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-401",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "deckSpecificMotifs",
+    "existing": "silver linework on a deep blue-lavender night ground",
+    "observed": "the ground is very pale and high-key — white-and-pale-blue clouded sky with a bright glittering light path on the sea; it reads far closer to daylight than to a night ground, though a crescent moon is present",
+    "evidence": "Sky, sea and drapery are all near-white in value; there is no dark field anywhere in the frame. I recorded day-vs-night as undeterminable, so I flag rather than overturn.",
+    "confidence": "low"
+   }
+  ],
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-413",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "fish-like form rising above the cup",
+    "observed": "a faint pale plume/vapour rising from the cup; I could not resolve it into a fish or any other definite form",
+    "evidence": "At this resolution the shape above the rim is a soft luminous smear with scattered specks; the model itself lists fish-vs-flame as uncertain.",
+    "confidence": "low"
+   }
+  ],
+  "reviewer": "reviewer-a"
+ }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "reviewId": "review-503",
+    "verdict": "pass",
+    "reviewer": "reviewer-a"
+  },
+  {
+    "reviewId": "review-515",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "stone table with a second paper and a small red seal",
+        "observed": "I recorded one or two small dark objects on the parapet between the figure and the armillary sphere, logged as count null / countConfidence low because I could not separate or identify them. I did not resolve a second sheet of paper, and I did not resolve any red seal.",
+        "evidence": "The parapet surface to the viewer-right of the figure, between the held letter and the armillary sphere: at this scale and in this light the items there read only as small dark masses. The one sheet I could resolve is the lit one held in the figure's hands.",
+        "confidence": "low"
+      }
+    ],
+    "reviewer": "reviewer-a"
+  },
+  {
+    "reviewId": "review-514",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "a potted plant at the lower left",
+        "observed": "I recorded two planted urns / garden pots, but on the viewer-RIGHT, on and beside the lower parapet behind the figure. At the viewer-left I recorded only the vine trellis, the stone steps and a single upright stone pedestal / small column among the vines — no pot.",
+        "evidence": "Lower-right quadrant: two upright planted containers sit beside the pentacle parapet, catching the light. Lower-left quadrant: steps, trellis and a slim pedestal shaft. I also recorded in my blind pass that the lower-left quadrant of this image is effectively unreadable, so I cannot assert that nothing is there — hence low confidence rather than a correction.",
+        "confidence": "low"
+      }
+    ],
+    "reviewer": "reviewer-a"
+  },
+  {
+    "reviewId": "review-502",
+    "verdict": "pass",
+    "reviewer": "reviewer-a"
+  },
+  {
+    "reviewId": "review-501",
+    "verdict": "pass",
+    "reviewer": "reviewer-a"
+  },
+  {
+    "reviewId": "review-513",
+    "verdict": "pass",
+    "reviewer": "reviewer-a"
+  },
+  {
+    "reviewId": "review-505",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "three golden chalices held aloft and touching",
+        "observed": "Two goblets, not three. I resolved exactly two bowls, two stems and two feet at the apex, leaning together rim to rim. Four raised forearms converge on them — two hands on the viewer-left goblet and two hands on the viewer-right goblet.",
+        "evidence": "The apex of the figure group, above all three heads. Enlarged, the silhouette shows one taller/nearer goblet on the viewer-left and one slightly lower goblet on the viewer-right, with four distinct wrists (bangled) gripping them. There is no third bowl, stem or foot anywhere in that cluster, and no occluding mass that could hide one.",
+        "confidence": "high"
+      },
+      {
+        "field": "scene",
+        "existing": "raising three golden chalices together beneath a vast nebula sky",
+        "observed": "The three women raise two goblets between them, four arms meeting at the apex.",
+        "evidence": "Same apex cluster: three dancers, four raised arms, two goblet bowls.",
+        "confidence": "high"
+      },
+      {
+        "field": "spatialRelations",
+        "existing": "the three chalices meet at the centre of the upper third, directly beneath the brightest star",
+        "observed": "Two goblets meet at the centre of the upper third, tilted toward each other and touching rim to rim.",
+        "evidence": "Apex cluster above the centre figure's head.",
+        "confidence": "high"
+      },
+      {
+        "field": "keyObjects",
+        "existing": "small crescent moon at upper left",
+        "observed": "I recorded several small faint discs scattered in the starfield (upper-left edge, small one right of centre near the top, a faint one at mid-left) but logged countConfidence low, and recorded moonPhase as 'not visible' because none of them reads unambiguously as a phased moon against the nebula.",
+        "evidence": "Upper-left sky: a pale disc is present, but at this size and against the nebula I could not resolve a terminator, so I cannot confirm 'crescent'. Flagging only that the phase is asserted beyond what I could see — not that the disc is absent.",
+        "confidence": "low"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "three golden chalices held aloft and touching",
+          "with": "two golden chalices held aloft and touching, each gripped by two hands (four raised arms converge on them)"
+        },
+        {
+          "find": "raising three golden chalices together",
+          "with": "raising two golden chalices together between them"
+        },
+        {
+          "find": "the three chalices meet at the centre of the upper third",
+          "with": "the two chalices meet at the centre of the upper third"
+        }
+      ]
+    },
+    "reviewer": "reviewer-a"
+  }
+]

@@ -1,0 +1,308 @@
+{
+  "reviewId": "review-503",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-503.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 2,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-503.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-503",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, occupying the lower-middle band of the image, body laid out roughly horizontally from viewer-left to viewer-right",
+              "posture": "lying supine (on the back) on a raised stone slab / bench-tomb; head at viewer-left, feet at viewer-right; legs straight and covered by drapery",
+              "gaze": "head tilted slightly back and up toward the viewer-left window; eyes appear closed",
+              "heldObjects": [
+                "no object gripped; both hands rest folded/crossed on the chest, roughly at mid-chest height, palms down"
+              ],
+              "clothing": "pale cream long-sleeved undergarment with a patterned/embroidered band across the chest, a rust-brown over-robe over the torso and hips, pale yellow drapery over the legs; curly light-brown hair, no headwear; head rests on a dark red cushion"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "upper-right portion of the image, mounted flat against the stone block wall above and behind the reclining figure",
+              "orientation": "all three vertical, pommel/hilt at the top, blade tips pointing straight down",
+              "arrangement": "a row of three, evenly spaced, hanging parallel at the same height"
+            },
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower-left to lower-center, lying flat on the top surface of the stone slab, along the front edge below the reclining figure",
+              "orientation": "horizontal, pommel at viewer-left, blade tip toward viewer-right",
+              "arrangement": "single"
+            },
+            {
+              "type": "cushion",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "viewer-left, under the figure's head",
+              "orientation": "horizontal",
+              "arrangement": "single"
+            },
+            {
+              "type": "stained-glass window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-left, in the side wall",
+              "orientation": "vertical, pointed (lancet) arch top",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "interior stone chamber built of large rectangular ashlar blocks",
+            "tall pointed-arch window on the viewer-left wall filled with coloured glass (blue, cream, amber panes, floral tracery at the top)",
+            "deep window sill / ledge below the window",
+            "raised rectangular stone slab or bench-tomb running across the lower half of the image",
+            "the front face of the slab is carved with a row of small blind arcade arches",
+            "stone-paved floor visible at the bottom-left",
+            "decorative ruled border frame with corner flourishes around the whole image on a tan ground"
+          ],
+          "lightSources": [
+            "daylight entering through the viewer-left stained-glass window, cast as visible diagonal light shafts travelling down-right across the back wall"
+          ],
+          "moonPhase": "not visible — the scene is an interior; no sky or moon appears",
+          "spatialRelations": [
+            "the three hanging swords are above and behind the reclining figure, on the back wall",
+            "the single horizontal sword is below the figure, on the front edge of the slab the figure lies on",
+            "the window is at viewer-left of the figure, roughly level with and above the figure's head",
+            "the light shafts cross from the window (upper-left) down toward the figure and the lower-right wall",
+            "the cushion is between the figure's head and the slab surface"
+          ],
+          "foreground": [
+            "stone slab with carved arcade front face",
+            "single horizontal sword lying on the slab",
+            "paved floor at bottom-left",
+            "ruled decorative border"
+          ],
+          "background": [
+            "ashlar block wall",
+            "three suspended swords",
+            "stained-glass lancet window and its sill"
+          ]
+        },
+        "uncertainObservations": [
+          "Cannot tell whether the figure's eyes are fully closed or only nearly closed; the face is small and softly drawn.",
+          "Cannot tell whether the three wall swords are hung on pegs, embedded in the wall, or floating; no fixings are visible.",
+          "Cannot determine the figure's sex from the image; face and hair are ambiguous.",
+          "The horizontal sword on the slab: I cannot tell whether it rests loose on the stone or is carved as part of it.",
+          "The slab could be read as a bed or as a tomb/effigy plinth; the image does not resolve this."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "in a vaulted stone chamber",
+          "observed": "I recorded an interior stone chamber of large ashlar blocks with a tall lancet window, but no ceiling is shown anywhere in the frame, so I cannot confirm the chamber is vaulted. The only arcading I could see is carved on the front face of the stone slab, not overhead.",
+          "evidence": "The top edge of the image is wall and window only; the frame crops well below any ceiling line. The blind arcading is on the slab's front face in the lower half of the picture.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-503",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, lying on a stone bench or tomb slab in the lower-left half of the frame",
+              "posture": "lying supine, full length, body horizontal with head at viewer-left and feet at viewer-right, head resting on a cushion",
+              "gaze": "face turned upward and slightly toward viewer-left; eyes appear closed",
+              "heldObjects": [
+                "hands folded together and resting on the chest, one over the other"
+              ],
+              "clothing": "pale cream long-sleeved undergown with a patterned band at the cuff, a rust/ochre overgarment with decorated border across the torso, a pale yellow draped blanket or robe covering the legs, curly light brown hair, bare head"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "mounted on the stone wall in the upper-right quadrant, side by side",
+              "orientation": "vertical, points downward, pommels up",
+              "arrangement": "an evenly spaced row of three, parallel"
+            },
+            {
+              "type": "sword",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lying flat on the top surface of the stone slab, along its front edge below the reclining figure",
+              "orientation": "horizontal, hilt at viewer-left, point toward viewer-right",
+              "arrangement": "single"
+            },
+            {
+              "type": "cushion / pillow",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "under the figure's head at left",
+              "orientation": "flat, long axis horizontal",
+              "arrangement": "single"
+            },
+            {
+              "type": "stained glass window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-left, set in the wall above and behind the figure's head",
+              "orientation": "upright, pointed arch top with a rosette in the tracery",
+              "arrangement": "single tall lancet"
+            }
+          ],
+          "environment": [
+            "interior stone chamber with large ashlar block walls",
+            "a raised stone bench, tomb chest or bier with blind arcading carved along its front face",
+            "stone flagstone floor in the lower-right",
+            "a deep window embrasure with a sill at the left",
+            "printed ruled border with corner ornaments framing the whole image"
+          ],
+          "lightSources": [
+            "daylight entering through the stained glass window at upper-left, throwing a visible wedge of light rays diagonally down and to the right across the wall and onto the figure"
+          ],
+          "moonPhase": "not visible — interior scene, no sky and no moon in the frame",
+          "spatialRelations": [
+            "the three wall swords hang above and to the viewer-right of the reclining figure",
+            "the fourth sword lies horizontally below the figure, on the slab top",
+            "the window is behind and above the figure's head at the left",
+            "the light beam from the window crosses the wall between the window and the hanging swords and falls onto the figure's torso",
+            "the three hanging swords' points stop above the level of the figure's body"
+          ],
+          "foreground": [
+            "the front face of the carved stone slab with its arcading",
+            "the horizontal sword on the slab's top edge",
+            "flagstone floor at bottom-right"
+          ],
+          "background": [
+            "the block stone wall",
+            "the three mounted swords",
+            "the stained glass window and its embrasure"
+          ]
+        },
+        "uncertainObservations": [
+          "Cannot determine whether the figure is asleep or dead — eyes are closed but there is no other cue I can read.",
+          "Cannot tell whether the three swords are hung on brackets, embedded in the wall, or painted on it; no fixings are visible.",
+          "Cannot resolve the stained glass imagery beyond the rosette and vertical panel pattern.",
+          "Cannot tell whether the stone support is a bed, a bench, or a tomb chest."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-503",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "lower-left through center, lying along a stone slab that runs from the left edge to the right edge of the frame",
+              "posture": "lying supine (on the back), head at the viewer-LEFT on a cushion, feet toward the viewer-RIGHT; body horizontal across the frame",
+              "gaze": "face turned upward toward the ceiling, chin raised, eyes closed",
+              "heldObjects": [
+                "no object in either hand; both hands rest flat and folded one over the other on the chest/upper abdomen"
+              ],
+              "clothing": "cream/ivory long-sleeved undertunic with an embroidered neck yoke; a russet-brown surcoat with a patterned braid border over the torso; a pale yellow robe/blanket draped over the legs down to the feet; curly light-brown hair, bare head, no crown or helm"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 4,
+              "countConfidence": "high",
+              "where": "three mounted high on the stone wall behind and above the figure (upper-right of frame); one lying on the flat top ledge of the slab in front of the body (lower-left to lower-center)",
+              "orientation": "the three wall swords are VERTICAL with points DOWN and pommels up; the slab sword is HORIZONTAL, hilt at viewer-left, point toward viewer-right",
+              "arrangement": "the three wall swords hang in a single evenly spaced row, parallel to one another, none crossing; the fourth lies alone and separate on the ledge"
+            },
+            {
+              "type": "cushion / pillow",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "under the figure's head at the viewer-left end of the slab",
+              "orientation": "flat on the slab",
+              "arrangement": "single, dark red"
+            },
+            {
+              "type": "stained-glass window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper-left of the frame, set in the left wall",
+              "orientation": "upright pointed-arch (lancet) window",
+              "arrangement": "single, with a quatrefoil/rosette in the arch head and a latticed body of pale blue, cream and amber panes"
+            },
+            {
+              "type": "stone tomb slab / bench",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "spanning the lower half of the frame",
+              "orientation": "horizontal, receding slightly to the right",
+              "arrangement": "single block with a carved arcade of blind arches along its front face"
+            }
+          ],
+          "environment": [
+            "a stone-walled interior chamber built of large ashlar blocks",
+            "flagstone floor visible at lower-left in a light/dark checker",
+            "a decorative printed border frame with corner scrollwork runs around all four edges of the picture"
+          ],
+          "lightSources": [
+            "daylight entering through the stained-glass window at upper-left",
+            "a visible slanting shaft/beam of light crossing the chamber from the window down toward the lower right",
+            "a bright trapezoid of projected window-light on the rear stone wall behind the three swords"
+          ],
+          "moonPhase": "not visible — the scene is a lit interior with no sky or moon in frame",
+          "spatialRelations": [
+            "the three swords hang on the wall ABOVE and BEHIND the reclining figure, over the lower half of his body and legs",
+            "the single fourth sword lies in FRONT of the body, on the slab's ledge, lower and nearer the viewer than the body",
+            "the window is at the viewer-left, beyond and above the figure's head",
+            "each wall sword casts its shadow onto the wall to its own viewer-RIGHT, consistent with light arriving from the viewer-left",
+            "the light beam travels from upper-left down to lower-right"
+          ],
+          "foreground": [
+            "the carved front face of the stone slab",
+            "the single horizontal sword on the slab ledge",
+            "the printed border frame"
+          ],
+          "background": [
+            "ashlar stone wall with the three hanging swords",
+            "stained-glass lancet window at upper-left",
+            "checkered flagstone floor at lower-left"
+          ]
+        },
+        "uncertainObservations": [
+          "I cannot tell whether the hands are simply laid one atop the other or lightly interlaced; they are not in a palms-together prayer position.",
+          "Whether the stone block is a tomb/effigy slab or a plain bed-bench cannot be determined from what is drawn.",
+          "The figure's sex is not clearly readable; the face is youthful and beardless.",
+          "The exact number of flagstones and blind arches on the slab face is not countable and I did not attempt it.",
+          "The hilts of the three wall swords look identical to one another at this resolution; I cannot verify small differences between them."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

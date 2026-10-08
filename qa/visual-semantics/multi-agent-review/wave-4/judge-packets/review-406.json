@@ -1,0 +1,276 @@
+{
+  "reviewId": "review-406",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-406.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-406.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene / keyObjects",
+          "existing": "crescent moon",
+          "observed": "a large pale round moon, gibbous to near-full, at the upper centre-right",
+          "evidence": "The disc is a complete circle with only a soft shading on its lower-left limb; there is no crescent sliver. Exact phase between gibbous and full is uncertain, but 'crescent' is wrong.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "stand on a balustraded terrace at night",
+          "observed": "the whole frame is bright, pale and high-key - white clouds, luminous sky, pale sunlit-looking drapery; it does not read as a night scene",
+          "evidence": "Background sky, clouds and gowns are near-white with soft shadows, and the only small flame (the table candle) is not what is lighting the figures. Whether this is meant as daylight, twilight or a very luminous night cannot be settled from the pixels, but flat 'at night' contradicts the light level.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "stand on a balustraded terrace at night, raising three stemmed goblets together beneath a crescent moon",
+            "with": "stand on a balustraded terrace under a bright, pale, high-key sky, raising three stemmed goblets together beneath a large near-full moon"
+          },
+          {
+            "find": "crescent moon",
+            "with": "large pale gibbous-to-full moon"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-406",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "left",
+              "posture": "standing, body angled toward the center, long pale-blue/lilac gown, flower circlet in long wavy hair",
+              "gaze": "head tilted up and to the right, toward the meeting point of the cups",
+              "heldObjects": [
+                "one footed goblet, raised overhead in the right hand"
+              ]
+            },
+            {
+              "position": "center",
+              "posture": "standing, seen mostly from behind / three-quarter back, long pale gown, flower circlet",
+              "gaze": "head tilted up and slightly right, face largely turned away from the viewer, looking toward the cups",
+              "heldObjects": [
+                "one footed goblet, raised overhead"
+              ]
+            },
+            {
+              "position": "right",
+              "posture": "standing, body angled toward the center-left, long white gown, flower circlet",
+              "gaze": "head turned toward the center and tilted up toward the cups",
+              "heldObjects": [
+                "one footed goblet, raised overhead in the left hand"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "footed goblet / stemmed cup",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "held aloft at the top center of the frame, just below the moon",
+              "orientation": "all three upright, bowls opening upward, rims meeting/clinking together",
+              "arrangement": "a tight inward-facing cluster of three whose rims touch at the center - a closed meeting, no gap"
+            },
+            {
+              "type": "bowl / footed platter of fruit (grapes and round fruit)",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on a draped table at the lower right",
+              "orientation": "upright, contents heaped",
+              "arrangement": "single, with a small lit candle in a glass beside it and a slender silvery ornament behind it"
+            },
+            {
+              "type": "stone balustrade / railing",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "running horizontally behind the three figures at waist height",
+              "orientation": "level, facing the viewer",
+              "arrangement": "a continuous run broken visually by the figures' bodies"
+            }
+          ],
+          "environment": [
+            "a terrace or balcony with a balustrade",
+            "pale luminous sky with soft clouds",
+            "water/sea and a bright stepped stairway of light in the center distance",
+            "wisteria and white blossom vines hanging from the upper left and upper right corners",
+            "white flowers and foliage along the lower left",
+            "a plain narrow card border"
+          ],
+          "lightSources": [
+            "the large pale moon at the upper center-right",
+            "a bright diffuse glow filling the whole sky and the central stairway - the scene reads as bright and high-key, not dark",
+            "a small candle flame on the table at the lower right"
+          ],
+          "moonPhase": "gibbous, close to full - a soft shading on the lower-left limb; uncertain because the disc is very pale against a pale sky",
+          "spatialRelations": [
+            "the three figures stand close together in a shallow arc, all turned inward toward each other",
+            "all three arms rise to a single point where the three cup rims meet",
+            "the moon sits directly above and slightly right of the meeting cups",
+            "the table with the fruit and candle sits in front of and to the right of the right-hand figure, nearer the viewer",
+            "the stairway of light rises behind the center figure, between her and the right-hand figure"
+          ],
+          "foreground": [
+            "the draped table with fruit bowl, candle and ornament at lower right",
+            "flowering plants at lower left",
+            "the figures' trailing gowns"
+          ],
+          "background": [
+            "balustrade, water, the luminous stairway, clouds and the moon"
+          ]
+        },
+        "uncertainObservations": [
+          "the light is bright and pale overall despite a visible moon; whether this is intended as daylight, twilight or a very luminous night cannot be determined from the pixels",
+          "the exact moon phase is not readable against the pale sky",
+          "whether the central bright vertical band is a flight of steps or a column of light is ambiguous",
+          "faces are softly rendered; expressions are not reliably readable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "stand on a balustraded terrace at night, raising three stemmed goblets together beneath a crescent moon",
+          "observed": "the scene is lit by broad, diffuse, daylight-bright light — pale blue-white sky with sunlit white clouds; the moon disc is large and reads near-full/gibbous, not a crescent",
+          "evidence": "Nothing in the frame reads as night: the sky is high-key blue-white with bright cumulus, shadows are absent, and the disc at upper centre-right is a large full round face with only a softly shaded lower-left limb.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "separating them from the water",
+          "observed": "no water is visible; behind the balustrade there is open bright sky and a flight of pale steps",
+          "evidence": "The area beyond the balustrade is cloud and sky with a pale stair behind the centre figure; no water surface, shoreline or reflection appears anywhere in the frame.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "stand on a balustraded terrace at night, raising three stemmed goblets together beneath a crescent moon",
+            "with": "stand on a balustraded terrace in bright, diffuse, daylight-like light, raising three stemmed goblets together beneath a large pale near-full moon disc"
+          },
+          {
+            "find": "crescent moon",
+            "with": "large pale moon disc, reading near-full/gibbous"
+          },
+          {
+            "find": "separating them from the water",
+            "with": "separating them from the open sky, with a flight of pale steps beyond"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-406",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "left",
+              "posture": "standing, body turned toward center, seen three-quarter from behind",
+              "gaze": "head tilted up and toward the center, looking at the raised vessels",
+              "heldObjects": [
+                "one stemmed goblet raised overhead in the near (right) arm"
+              ]
+            },
+            {
+              "position": "center",
+              "posture": "standing, back largely to the viewer, body turned slightly right",
+              "gaze": "head turned away from the viewer toward the upper center/right, face not visible",
+              "heldObjects": [
+                "one stemmed goblet raised overhead"
+              ]
+            },
+            {
+              "position": "right",
+              "posture": "standing, body turned toward center, three-quarter rear view",
+              "gaze": "head turned toward the center-left, looking at the raised vessels",
+              "heldObjects": [
+                "one stemmed goblet raised overhead in the near (left) arm"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "stemmed goblet / cup",
+              "count": 3,
+              "countConfidence": "high",
+              "where": "raised high at the top center of the frame, above the three figures' heads",
+              "orientation": "all upright, bowls open upward",
+              "arrangement": "clustered together, rims nearly touching; one slightly left and lower, one highest at center, one right and lower — an inward-facing triangle, not a row"
+            },
+            {
+              "type": "flower crown / blossoms in hair",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "one on each figure's head",
+              "orientation": "n/a",
+              "arrangement": "one per figure"
+            },
+            {
+              "type": "round fruits (grape-like) in a shallow footed bowl",
+              "count": null,
+              "countConfidence": "low",
+              "where": "on a draped table in the lower-right foreground",
+              "orientation": "n/a",
+              "arrangement": "heaped in a single bowl; individual fruits too small and overlapping to count"
+            },
+            {
+              "type": "lit candle / small lamp",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the table at the far lower right, beside the fruit bowl",
+              "orientation": "upright",
+              "arrangement": "single"
+            }
+          ],
+          "environment": [
+            "an open terrace or balcony with a pale stone balustrade running behind and below the figures",
+            "a flight of pale steps visible behind the center figure, leading up/away",
+            "flowering vines with white blossoms and hanging wisteria-like sprays framing the upper-left and upper-right corners",
+            "pale flowering shrubs along the lower-left edge",
+            "a bright, high, cloud-filled sky"
+          ],
+          "lightSources": [
+            "a large pale luminous disc (moon) high in the upper center-right of the sky",
+            "broad diffuse bright ambient light filling the whole scene",
+            "a small candle flame on the table at lower right"
+          ],
+          "moonPhase": "uncertain — the disc reads as nearly full / gibbous with a softly shaded lower-left limb, but the haze prevents a definite call",
+          "spatialRelations": [
+            "the three figures stand close together in a shallow arc, all angled inward toward the point where the cups meet",
+            "the left and right figures flank the center figure; the center figure is slightly forward/lower",
+            "all three raised arms converge upward to the same point",
+            "the table with fruit and candle sits in front of and below the right figure, in the near foreground"
+          ],
+          "foreground": [
+            "draped white table with fruit bowl and candle",
+            "pale flowering plants at lower left"
+          ],
+          "background": [
+            "balustrade and steps",
+            "bright clouded sky with the pale disc"
+          ]
+        },
+        "uncertainObservations": [
+          "The overall palette is extremely pale and high-key; the light reads as bright and daylight-like even though a moon disc is present, so 'night' cannot be asserted from the pixels.",
+          "Fruit in the bowl cannot be individually counted."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

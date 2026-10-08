@@ -1,0 +1,34 @@
+{
+  "reviewer": "reviewer-d",
+  "stage": "blind-observation",
+  "images": [
+    {
+      "reviewId": "review-401",
+      "path": "qa/visual-semantics/blind-review/wave-4/review-401.png"
+    },
+    {
+      "reviewId": "review-413",
+      "path": "qa/visual-semantics/blind-review/wave-4/review-413.png"
+    },
+    {
+      "reviewId": "review-405",
+      "path": "qa/visual-semantics/blind-review/wave-4/review-405.png"
+    },
+    {
+      "reviewId": "review-407",
+      "path": "qa/visual-semantics/blind-review/wave-4/review-407.png"
+    },
+    {
+      "reviewId": "review-409",
+      "path": "qa/visual-semantics/blind-review/wave-4/review-409.png"
+    },
+    {
+      "reviewId": "review-411",
+      "path": "qa/visual-semantics/blind-review/wave-4/review-411.png"
+    },
+    {
+      "reviewId": "review-417",
+      "path": "qa/visual-semantics/blind-review/wave-4/review-417.png"
+    }
+  ]
+}

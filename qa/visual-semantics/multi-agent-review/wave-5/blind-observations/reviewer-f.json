@@ -1,0 +1,861 @@
+[
+  {
+    "reviewId": "review-501",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center, slightly left of the vertical midline, occupying the lower-middle of the frame",
+          "posture": "kneeling / sitting back on the heels on a cracked stone pavement; body squared to the viewer, torso upright, long skirt spread out around her on the ground",
+          "gaze": "head faces forward toward the viewer and is tilted slightly downward; eyes appear closed or heavily downcast. NOT turned over either shoulder",
+          "heldObjects": [
+            "viewer-right hand: grips a sword hilt at roughly hip height, arm extended down and outward; blade angles down-right with the point resting on the pavement",
+            "viewer-left hand: raised up to her own head, fingers touching the hairline/temple above the left brow — holding no object",
+            "the viewer-left sword is NOT in a hand: its hilt sits free in mid-air beside her skirt with the blade angling down-left to the pavement, appearing planted/standing rather than held"
+          ],
+          "clothing": "dark long-sleeved off-shoulder gown with a heavy pleated skirt and a draped shawl over the viewer-left shoulder; long dark hair loose past the shoulders; a dark narrow band/ribbon of cloth lies across the forehead above the eyebrows (sitting on the brow, not covering the eyes)"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "one to the figure's viewer-left, one to her viewer-right, both in the lower half of the frame flanking her skirt",
+          "orientation": "both blades angle downward and outward from her waist height to the ground; points DOWN, touching the pavement",
+          "arrangement": "splayed apart in a V / X-limb shape, mirrored on either side of her — they do NOT cross, do not touch each other, and are not parallel"
+        },
+        {
+          "type": "carved pavement emblem",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "inlaid flat in the cracked pavement in the foreground: one on the viewer-left, one on the viewer-right, roughly symmetric and below each sword tip",
+          "orientation": "flat on the ground, seen from above",
+          "arrangement": "one per side; viewer-left emblem is a radiating sun/star rosette with a ring of triangular rays, viewer-right emblem is a plain crescent"
+        },
+        {
+          "type": "door",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "background viewer-left, set in a dark stone wall at the top of a short flight of steps",
+          "orientation": "upright, closed, facing the viewer",
+          "arrangement": "single; a circular tracery window / rose motif sits above the lintel"
+        },
+        {
+          "type": "steps",
+          "count": null,
+          "countConfidence": "low",
+          "where": "background viewer-left, descending from the door toward the pavement",
+          "orientation": "horizontal treads receding",
+          "arrangement": "a short stacked flight; individual treads blur into shadow"
+        },
+        {
+          "type": "tower / distant structure",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "far background viewer-right, standing in or at the edge of the water",
+          "orientation": "upright silhouette",
+          "arrangement": "single small silhouette on the moonlit water"
+        }
+      ],
+      "environment": [
+        "cracked, crazed stone pavement covering the whole foreground and midground",
+        "dark stone wall with a doorway and steps at viewer-left",
+        "an open body of water (sea or lake) filling the right middle distance",
+        "rocky cliffs / dark headland along the right edge behind the water",
+        "heavy broken cloud across the night sky"
+      ],
+      "lightSources": [
+        "the moon, high in the sky at upper-right — the dominant light",
+        "a long specular moon-path on the water running toward the lower-left",
+        "a bright starburst flare at the point where the VIEWER-LEFT sword tip meets the pavement",
+        "a softer pool of brightness at the point where the VIEWER-RIGHT sword tip meets the pavement (a glow, but no distinct star-flare)",
+        "two broad lit bands of pavement running down-left and down-right from beneath the figure, with a dark wedge of shadow between them directly below her"
+      ],
+      "moonPhase": "crescent",
+      "spatialRelations": [
+        "the moon is at the upper-right, well above and to the right of the figure's head",
+        "the doorway and steps are behind the figure on the viewer-left",
+        "the water and cliffs are behind the figure on the viewer-right",
+        "the viewer-left sword's point sits on the pavement to the lower-left of her skirt; the viewer-right sword's point sits on the pavement to the lower-right",
+        "the sun/star rosette is below and slightly left of the left sword tip; the crescent emblem is below and slightly right of the right sword tip",
+        "the figure's own shadow falls toward the viewer, straight down the dark central wedge of pavement between the two lit bands"
+      ],
+      "foreground": [
+        "cracked pavement with the two carved emblems",
+        "the two sword blades and their points",
+        "the dark central shadow wedge cast toward the viewer"
+      ],
+      "background": [
+        "doorway with rose-tracery window and steps (viewer-left)",
+        "moonlit water with a distant tower silhouette (viewer-right)",
+        "rocky cliff mass at the right edge",
+        "clouded night sky with the moon at upper-right"
+      ]
+    },
+    "uncertainObservations": [
+      "The moon's lit fraction is ambiguous: the illuminated area is a thick crescent on the viewer-RIGHT limb and could also be read as just under half (first-quarter). The unlit remainder of the disc is faintly visible, so the full circle is outlined.",
+      "Whether the dark band across the forehead is a tied cloth blindfold pushed up onto the brow, a headband, or simply a hank of her own hair cannot be resolved at this resolution. It does not cover the eyes.",
+      "I cannot confirm whether her eyes are fully closed or narrowly open and cast down.",
+      "The viewer-left sword's hilt is unoccupied in every enlargement I made, but the hilt area is dark and partly overlapped by her skirt and hair, so a concealed hand cannot be completely ruled out.",
+      "The number of steps in front of the doorway is not countable.",
+      "The right-hand sword tip's glow may be a reflection of the moonlit pavement rather than an emitted flare."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-503",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "lower-left through center, lying along a stone slab that runs from the left edge to the right edge of the frame",
+          "posture": "lying supine (on the back), head at the viewer-LEFT on a cushion, feet toward the viewer-RIGHT; body horizontal across the frame",
+          "gaze": "face turned upward toward the ceiling, chin raised, eyes closed",
+          "heldObjects": [
+            "no object in either hand; both hands rest flat and folded one over the other on the chest/upper abdomen"
+          ],
+          "clothing": "cream/ivory long-sleeved undertunic with an embroidered neck yoke; a russet-brown surcoat with a patterned braid border over the torso; a pale yellow robe/blanket draped over the legs down to the feet; curly light-brown hair, bare head, no crown or helm"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 4,
+          "countConfidence": "high",
+          "where": "three mounted high on the stone wall behind and above the figure (upper-right of frame); one lying on the flat top ledge of the slab in front of the body (lower-left to lower-center)",
+          "orientation": "the three wall swords are VERTICAL with points DOWN and pommels up; the slab sword is HORIZONTAL, hilt at viewer-left, point toward viewer-right",
+          "arrangement": "the three wall swords hang in a single evenly spaced row, parallel to one another, none crossing; the fourth lies alone and separate on the ledge"
+        },
+        {
+          "type": "cushion / pillow",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "under the figure's head at the viewer-left end of the slab",
+          "orientation": "flat on the slab",
+          "arrangement": "single, dark red"
+        },
+        {
+          "type": "stained-glass window",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper-left of the frame, set in the left wall",
+          "orientation": "upright pointed-arch (lancet) window",
+          "arrangement": "single, with a quatrefoil/rosette in the arch head and a latticed body of pale blue, cream and amber panes"
+        },
+        {
+          "type": "stone tomb slab / bench",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "spanning the lower half of the frame",
+          "orientation": "horizontal, receding slightly to the right",
+          "arrangement": "single block with a carved arcade of blind arches along its front face"
+        }
+      ],
+      "environment": [
+        "a stone-walled interior chamber built of large ashlar blocks",
+        "flagstone floor visible at lower-left in a light/dark checker",
+        "a decorative printed border frame with corner scrollwork runs around all four edges of the picture"
+      ],
+      "lightSources": [
+        "daylight entering through the stained-glass window at upper-left",
+        "a visible slanting shaft/beam of light crossing the chamber from the window down toward the lower right",
+        "a bright trapezoid of projected window-light on the rear stone wall behind the three swords"
+      ],
+      "moonPhase": "not visible — the scene is a lit interior with no sky or moon in frame",
+      "spatialRelations": [
+        "the three swords hang on the wall ABOVE and BEHIND the reclining figure, over the lower half of his body and legs",
+        "the single fourth sword lies in FRONT of the body, on the slab's ledge, lower and nearer the viewer than the body",
+        "the window is at the viewer-left, beyond and above the figure's head",
+        "each wall sword casts its shadow onto the wall to its own viewer-RIGHT, consistent with light arriving from the viewer-left",
+        "the light beam travels from upper-left down to lower-right"
+      ],
+      "foreground": [
+        "the carved front face of the stone slab",
+        "the single horizontal sword on the slab ledge",
+        "the printed border frame"
+      ],
+      "background": [
+        "ashlar stone wall with the three hanging swords",
+        "stained-glass lancet window at upper-left",
+        "checkered flagstone floor at lower-left"
+      ]
+    },
+    "uncertainObservations": [
+      "I cannot tell whether the hands are simply laid one atop the other or lightly interlaced; they are not in a palms-together prayer position.",
+      "Whether the stone block is a tomb/effigy slab or a plain bed-bench cannot be determined from what is drawn.",
+      "The figure's sex is not clearly readable; the face is youthful and beardless.",
+      "The exact number of flagstones and blind arches on the slab face is not countable and I did not attempt it.",
+      "The hilts of the three wall swords look identical to one another at this resolution; I cannot verify small differences between them."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-504",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "center-left, standing on a rocky ridge in the lower-middle of the frame; he fills the vertical middle of the card",
+          "posture": "standing upright on a rocky outcrop, weight on both legs, seen from BEHIND at a three-quarter angle (his back is toward the viewer); torso twisted slightly toward the viewer-right; viewer-right arm thrown straight up and out above the head",
+          "gaze": "head turned to his own right (toward the viewer-right) and tilted UP; we see his face in sharp profile against the sky, looking up along the raised arm at the sword. This is a turn toward the raised arm, not a backward look over the shoulder at the viewer",
+          "heldObjects": [
+            "viewer-right hand (raised arm): a single fist closed around the grip of a sword, arm fully extended upward; the blade continues straight up, point UP",
+            "viewer-left arm: hangs down close to the body, mostly hidden behind the torso and cloak; holds nothing"
+          ],
+          "clothing": "slate-blue knee-length tunic with gold embroidered hem and sleeve bands; a russet/brick-red cloak pinned at the shoulders and streaming out to the VIEWER-LEFT; a tooled leather belt plus a diagonal baldric strap; laced/wrapped leather boots to the knee; curly brown hair, bare head, no helmet or crown"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "one raised overhead in the upper-center of the frame; a second sheathed in a scabbard hanging at the figure's viewer-left hip and running down past his left knee",
+          "orientation": "the raised sword is VERTICAL with the point UP; the scabbarded one hangs point-DOWN, tilted slightly",
+          "arrangement": "separate — one aloft, one at the hip; they do not touch or cross"
+        },
+        {
+          "type": "laurel wreath",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper-center, encircling the raised blade roughly two-thirds of the way up",
+          "orientation": "ring lying in the picture plane, open at the top, tied with a small bow at the bottom where the two leafy sprigs meet",
+          "arrangement": "one wreath made of two mirrored laurel sprigs; the blade passes through its centre"
+        },
+        {
+          "type": "open book",
+          "count": null,
+          "countConfidence": "low",
+          "where": "right side of the frame, a cluster tumbling in mid-air at mid-height plus more stacked on the ground at lower-right",
+          "orientation": "tumbling at all angles, covers splayed open",
+          "arrangement": "a scattered airborne swarm plus ground piles — too many and too overlapped to count"
+        },
+        {
+          "type": "loose page / sheet of paper",
+          "count": null,
+          "countConfidence": "low",
+          "where": "blowing across the whole right half of the sky and littering the rocky ground at lower-right",
+          "orientation": "random, curling in the wind",
+          "arrangement": "scattered swarm, uncountable"
+        },
+        {
+          "type": "twisted rope / cord",
+          "count": null,
+          "countConfidence": "low",
+          "where": "right of centre, writhing up out of the airborne book cluster",
+          "orientation": "curling tendrils rising upward and outward",
+          "arrangement": "several braided strands snaking out of the books; individual strands merge and I cannot separate them"
+        },
+        {
+          "type": "treasure chest",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "lower-right corner, resting on the rocky ground",
+          "orientation": "lid thrown open, facing the viewer-left",
+          "arrangement": "single, overflowing with papers and scrolls; a rope loops over its rim"
+        },
+        {
+          "type": "walled castle / town",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "left middle distance, on a rise above a river valley",
+          "orientation": "seen from across the valley",
+          "arrangement": "one cluster of many conical-roofed towers and curtain walls"
+        },
+        {
+          "type": "arched stone bridge / aqueduct",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "lower-left middle distance, spanning the river below the castle",
+          "orientation": "horizontal, running left to right",
+          "arrangement": "a single multi-arch span; I count roughly five or six arches but will not commit to the number"
+        },
+        {
+          "type": "bird",
+          "count": null,
+          "countConfidence": "low",
+          "where": "small specks in the sky above the castle at the left",
+          "orientation": "in flight",
+          "arrangement": "a few scattered specks, too small to count reliably"
+        }
+      ],
+      "environment": [
+        "a bare rocky ridge or cliff edge forming the foreground the figure stands on",
+        "a broad green river valley with trees and scattered hedgerows in the middle distance at the left",
+        "a range of blue-grey mountains along the horizon",
+        "a pale cream sky with large banked cumulus clouds rendered in fine engraved hatching",
+        "a printed double-rule border with corner ornaments framing the whole picture"
+      ],
+      "lightSources": [
+        "a burst of radiating straight light-rays centred on the upper part of the raised blade, just above and behind the laurel wreath — the blade itself reads as the brightest thing in the frame",
+        "general bright daylight from the pale sky; no sun disc is drawn"
+      ],
+      "moonPhase": "not visible — daytime sky with clouds, no moon or sun disc drawn",
+      "spatialRelations": [
+        "the raised sword rises from his viewer-right hand up through the top-centre of the frame; the wreath sits around the blade well above his head",
+        "the castle and valley lie behind him on the viewer-LEFT, below the level of the ridge",
+        "the swarm of books, pages and ropes is on the viewer-RIGHT of him, at and below shoulder height",
+        "the open chest sits on the ground at the lower-right, below the airborne books",
+        "his cloak streams out behind him to the viewer-LEFT while the papers blow up and to the viewer-RIGHT",
+        "the light-burst is centred behind the blade, above and to the right of his head"
+      ],
+      "foreground": [
+        "the rocky ridge and loose stones",
+        "the figure from the knees down, including the hip scabbard",
+        "the open chest, book piles and scattered sheets at the lower-right"
+      ],
+      "background": [
+        "the castle, river, bridge and valley on the left",
+        "mountains on the horizon",
+        "clouded sky filling the upper half",
+        "the radiating light-burst around the blade"
+      ]
+    },
+    "uncertainObservations": [
+      "I cannot be fully certain the hip object is a scabbarded sword rather than a long sheathed knife or a staff; it is slim, point-down and strapped to the belt, with a visible chape at the lower end.",
+      "The number of books and loose pages is genuinely uncountable; I did not estimate.",
+      "Whether the writhing tendrils among the books are ropes, chains, vines or torn binding cords cannot be resolved; they read as twisted cord to me.",
+      "The arch count on the bridge is approximately five or six but the right end fades into haze.",
+      "No cast shadow of the figure is clearly drawn on the rock, so I cannot state a shadow direction for this card.",
+      "The cloak streams left while the papers blow right; I report both as drawn rather than resolving the wind direction."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-507",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "left of centre, in the middle band of the frame, standing on a flight of stone steps",
+          "posture": "mid-stride climbing: lunging up and forward to the viewer-right, rear (viewer-left) leg trailing down the steps, front leg planted on a higher tread, torso pitched forward, both arms extended toward the wheel's hub — the stance of someone shoving or climbing onto the wheel",
+          "gaze": "seen from BEHIND and slightly left; the back of the head is toward the viewer and the face is turned away toward the wheel at the viewer-right. No face is visible and the head is NOT turned back over the shoulder",
+          "heldObjects": [
+            "upper arm (viewer-right of the two): hand closed around the projecting axle/hub boss at the centre of the wheel, at about head height",
+            "lower arm: hand open and pressed flat against the hub plate just below the first hand",
+            "no tool, weapon or lantern is carried"
+          ],
+          "clothing": "a long dark coat or cloak with a deeply shredded, ribbon-like hem that streams out and down to the viewer-left; dark close-fitting trousers and soft shoes; dark shortish hair; bare head"
+        }
+      ],
+      "objects": [
+        {
+          "type": "wheel",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "dominating the right two-thirds of the frame, standing vertically from near the floor to the top of the picture",
+          "orientation": "upright, face-on to the viewer, axle pointing out of the picture toward the viewer-left",
+          "arrangement": "one enormous wheel built of stone/masonry blocks: a decorated central hub boss, radiating spokes, and a double concentric outer rim"
+        },
+        {
+          "type": "wheel spoke",
+          "count": null,
+          "countConfidence": "low",
+          "where": "radiating from the hub in the right half of the frame",
+          "orientation": "radial",
+          "arrangement": "evenly spaced around the hub; several are narrow bars and at least three are broad wedge-shaped relief panels. The lower-left sector is hidden behind the figure and behind deep shadow, so I cannot count them — roughly eight to ten are discernible but I will not commit to a number"
+        },
+        {
+          "type": "carved relief creature on a spoke panel",
+          "count": 3,
+          "countConfidence": "medium",
+          "where": "on the broad spoke panels: one at about the 1 o'clock position, one at about 3 o'clock to the right of the hub, one at about 5 o'clock below the hub",
+          "orientation": "each creature in side profile facing the viewer-left (inward/toward the hub)",
+          "arrangement": "one creature per broad panel: the upper panel bears a coiling S-shaped serpent; the right-hand panel a standing long-muzzled jackal- or dog-headed beast; the lower panel a winged four-legged creature. A fourth panel may exist in the hidden lower-left sector"
+        },
+        {
+          "type": "stone step",
+          "count": null,
+          "countConfidence": "low",
+          "where": "lower-left, a flight climbing from the lower-left corner up and to the right toward the wheel",
+          "orientation": "horizontal treads receding up to the right",
+          "arrangement": "a straight flight; the lower treads merge into darkness so the total is not countable"
+        },
+        {
+          "type": "arched window / lattice skylight",
+          "count": null,
+          "countConfidence": "low",
+          "where": "upper-left and far left — a glazed lattice panel at the top-left above the wheel and tall dark arched openings down the left wall",
+          "orientation": "upright arches; the top-left lattice is set into the vault",
+          "arrangement": "a row along the left wall, mostly swallowed by shadow"
+        }
+      ],
+      "environment": [
+        "a cavernous stone interior: ribbed arches, piers and a vaulted ceiling",
+        "flagstone floor at the lower-left",
+        "a squat stone pedestal or plinth supporting the top of the step flight, directly beneath the figure's leading foot",
+        "heavy soot-dark grain and speckle over the whole image",
+        "a thin ragged printed border along the left and right edges"
+      ],
+      "lightSources": [
+        "a glazed lattice window/skylight at the TOP-LEFT, the brightest patch in the frame",
+        "a diffuse glow close around the wheel's hub where the figure's hands are",
+        "the figure is rim-lit along his upper-left contour — shoulder, back of the head and the trailing cloak edges catch the light",
+        "the step treads are lit on their top surfaces"
+      ],
+      "moonPhase": "not visible — an enclosed interior, no sky or moon in frame",
+      "spatialRelations": [
+        "the wheel stands to the viewer-RIGHT of the figure; he faces it and reaches right",
+        "the hub is at roughly the figure's head height, slightly above",
+        "the steps ascend from the lower-left corner up toward the wheel at the right",
+        "a very large dark concentric ring-shadow of the wheel is thrown onto the wall BEHIND and to the viewer-RIGHT of the wheel, offset right — i.e. the light comes from the viewer-left",
+        "the serpent panel is above the hub, the jackal panel is level with and right of the hub, the winged creature is below the hub",
+        "the lattice skylight is up and to the left, above the top-left arc of the wheel's rim"
+      ],
+      "foreground": [
+        "the stone steps and plinth at the lower-left",
+        "the figure's trailing shredded hem",
+        "dark flagstones at the bottom edge"
+      ],
+      "background": [
+        "vaulted stone hall with arches and piers on the left",
+        "the lattice skylight at the top-left",
+        "the oversized ring-shadow of the wheel on the right-hand wall"
+      ]
+    },
+    "uncertainObservations": [
+      "The image is extremely dark and heavily grained; I brightened it several times and many areas still resolve to nothing. Several of my readings here are low-confidence.",
+      "The spoke count is not determinable — the lower-left sector of the wheel is occluded by the figure and by shadow.",
+      "The lower spoke creature reads as winged and four-legged; whether it is a griffin, a sphinx or a winged bull I cannot tell.",
+      "I cannot tell whether the figure is pushing the wheel to turn it or climbing onto it; both readings fit the pose.",
+      "Whether the big dark concentric arcs on the right are the wheel's cast shadow or a second wheel set further back is ambiguous; I lean to a cast shadow because the arcs track the rim's curvature.",
+      "The figure's face is never visible, so nothing can be said about expression, age or sex.",
+      "I could not find a clearly drawn cast shadow of the FIGURE himself to corroborate the light direction."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-508",
+    "visibleFacts": {
+      "figureCount": 2,
+      "figures": [
+        {
+          "position": "left of centre, standing on a paved path; silhouetted against the bright sky",
+          "posture": "standing upright in near-full profile, facing to the VIEWER-RIGHT toward the other figure; both arms reach forward and down to meet the other figure's hands at waist height",
+          "gaze": "head bowed, face in left profile looking DOWN at the joined hands; not turned over the shoulder and not looking at the viewer",
+          "heldObjects": [
+            "both hands extended forward, clasped with the other figure's hands at the centre of the frame; ribbon-like tattered strips hang straight down from where the hands meet",
+            "no weapon, cup or other object"
+          ],
+          "clothing": "dark long jacket or coat over trousers, with long shredded ribbon-like strips hanging from the sleeves, hem and shoulders; laced ankle boots; short tousled hair; rendered as a near-black silhouette"
+        },
+        {
+          "position": "right of centre, mirroring the first figure across the central axis",
+          "posture": "standing upright in near-full profile, facing to the VIEWER-LEFT toward the first figure; both arms reach forward and down to the joined hands",
+          "gaze": "head bowed, face in right profile looking DOWN at the joined hands",
+          "heldObjects": [
+            "both hands extended forward and clasped with the first figure's hands at waist height",
+            "no other object"
+          ],
+          "clothing": "long dark floor-length dress with fitted bodice and shredded strips trailing from the sleeves and skirt; hair gathered up into a loose knot/bun with loose strands escaping; also a near-black silhouette"
+        }
+      ],
+      "objects": [
+        {
+          "type": "bare tree",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "one at the left edge, one at the right edge, framing the pair",
+          "orientation": "upright, trunks rising from the ground into the upper corners",
+          "arrangement": "one per side, symmetrically placed"
+        },
+        {
+          "type": "round fruit on the left tree",
+          "count": null,
+          "countConfidence": "low",
+          "where": "hanging from the leafless branches of the LEFT tree only",
+          "orientation": "hanging",
+          "arrangement": "scattered singly across the branches; I count on the order of a dozen dark globes but they overlap the dark background and I will not commit to a number. The RIGHT tree carries no fruit"
+        },
+        {
+          "type": "serpent",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "coiled around the trunk of the LEFT tree, in the lower half of that trunk",
+          "orientation": "spiralling upward around the trunk, head toward the upper right",
+          "arrangement": "single snake, roughly three coils"
+        },
+        {
+          "type": "mountain peak",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "centre background, directly between the two figures, below the light burst",
+          "orientation": "a pointed conical peak",
+          "arrangement": "one dominant peak with lower ridges fading away on both sides"
+        }
+      ],
+      "environment": [
+        "a cracked, cobbled or flagged path running from the bottom edge up between the figures into the distance",
+        "low dark hedge-like masses along both sides of the path in the foreground",
+        "a dark hillside/ridge landscape behind the figures",
+        "a very dark, heavily textured night or dusk sky",
+        "a thin printed rule border down the left and right edges"
+      ],
+      "lightSources": [
+        "a single bright V- / chevron-shaped burst of light high in the sky on the central axis, its apex pointing DOWN and its two arms opening upward to the left and right, with a short tail of light trailing down below the apex",
+        "a broad pale glow behind and between the two figures at the horizon, which is what silhouettes them",
+        "no lamp, candle, moon or sun disc is drawn"
+      ],
+      "moonPhase": "not visible — no moon is drawn; the only light in the sky is the V-shaped burst",
+      "spatialRelations": [
+        "the two figures face each other across the central axis, the man on the viewer-left and the woman on the viewer-right",
+        "the light burst hangs in the sky directly ABOVE and BETWEEN their two heads",
+        "the mountain peak sits between them at chest height, further away",
+        "the fruited tree with the serpent is behind the LEFT figure; the bare, fruitless tree is behind the RIGHT figure",
+        "both figures' shadows are cast FORWARD toward the viewer, down the path to the bottom of the frame, splaying slightly apart — the left figure's toward the lower-left, the right figure's toward the lower-right — consistent with the light coming from behind them on the central axis"
+      ],
+      "foreground": [
+        "the cracked paved path and the two long cast shadows",
+        "the dark hedge masses at the lower left and lower right"
+      ],
+      "background": [
+        "the two framing trees",
+        "the central mountain peak",
+        "the glowing horizon and the V-shaped burst in the night sky"
+      ]
+    },
+    "uncertainObservations": [
+      "Both figures are almost pure silhouette; faces, hands and clothing detail are only readable after heavy brightening, and fine detail may be invention of the contrast stretch.",
+      "I cannot tell whether anything is actually held between the joined hands or whether the hanging strips are just the ragged ends of their sleeves.",
+      "The number of fruits on the left tree is not countable against the dark sky.",
+      "Whether the pale band at the horizon between the figures is water, mist or lit ground is not determinable.",
+      "The sexes I assign (left read as male by trousers/boots, right as female by dress/updo) are inferred from clothing silhouette only.",
+      "I could not find any winged figure, angel or face inside the light burst; it reads to me as an abstract chevron of light, but the texture is noisy enough that I may be missing a shape."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-512",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "centre of the frame, striding across the middle and lower middle of the card",
+          "posture": "walking/striding, body in three-quarter view turned toward the viewer; both boots point to the VIEWER-RIGHT, the near leg swung forward in mid-step — he is moving to the viewer-right, away from the tent; torso hunched slightly over the bundle he clutches",
+          "gaze": "head turned BACK over his shoulder to the VIEWER-LEFT and tilted slightly down, eyes directed back toward the tent and the ground he is leaving; brow furrowed. This is a definite backward over-the-shoulder look, opposite to his direction of travel",
+          "heldObjects": [
+            "both arms wrapped around a bundle of swords hugged diagonally across his chest; the lower (viewer-left) hand grips the blades from below and the upper hand clamps them against his chest",
+            "the blades point DOWN to the viewer-left and the grips/pommels fan UP to the viewer-right past his shoulder",
+            "he grips the bare blades, not the hilts"
+          ],
+          "clothing": "slate-blue belted tunic with gold embroidered hems and cuffs; a thick rust-brown hooded scarf/cowl bunched around the neck and shoulders; buff hose; calf-high boots with criss-cross wrapped lacing; curly brown hair, bare head"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword (carried in the arms)",
+          "count": null,
+          "countConfidence": "low",
+          "where": "clutched diagonally across the figure's chest, centre of the frame",
+          "orientation": "all tilted the same way — points DOWN to the viewer-left, pommels UP to the viewer-right; parallel, not crossed",
+          "arrangement": "a single gathered bundle fanned slightly like a sheaf. I can resolve FOUR round disc-shaped pommels on wrapped grips sticking out to the upper right, TWO gold cross-guards lying across the blades, and about FIVE pale blade faces in the fan below the hands; these three counts do not reconcile cleanly, so I will not state a total"
+        },
+        {
+          "type": "sword (left behind, standing in the ground)",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "lower-LEFT of the frame, planted among rocks on the ground just outside the tent",
+          "orientation": "both VERTICAL-ish with points DOWN driven into the earth, hilts up, blades leaning slightly to the viewer-right",
+          "arrangement": "the two stand side by side and PARALLEL, overlapping but not crossed; both have wrapped grips, round disc pommels and straight gold cross-guards like the carried ones"
+        },
+        {
+          "type": "pavilion tent",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "left third of the frame, behind the figure",
+          "orientation": "conical/peaked roof with the entrance flap open toward the viewer-right",
+          "arrangement": "single large tent with guy ropes and a separate upright pole at the far left"
+        },
+        {
+          "type": "banner / pennon",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "flying from a crossbar at the apex of the tent pole, upper-left",
+          "orientation": "hanging vertically from a horizontal bar, fringed at the bottom",
+          "arrangement": "single rust-red banner bearing a dark rampant beast device"
+        },
+        {
+          "type": "oil lamp / lantern",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "inside the tent, on a chest or low table, visible through the open flap",
+          "orientation": "upright, standing",
+          "arrangement": "single, lit, casting a warm glow inside the tent"
+        },
+        {
+          "type": "hilltop castle",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "right background, on a rocky hill",
+          "orientation": "seen from below and to the left",
+          "arrangement": "one crenellated keep and curtain wall with a small flag/pennant on the tower"
+        }
+      ],
+      "environment": [
+        "a stony, rutted dirt path/track running from the lower-left up to the viewer-right toward the castle hill",
+        "scattered boulders and tufts of scrub grass over the ground",
+        "an overcast sky of fine engraved horizontal hatching with banked clouds",
+        "a printed double-rule border with ornamental corners around the whole picture"
+      ],
+      "lightSources": [
+        "flat overcast daylight across the scene — the brightest areas are the pale sky and the ground",
+        "the lit oil lamp inside the tent, the only warm light, glowing from the tent's interior at the viewer-left"
+      ],
+      "moonPhase": "not visible — overcast daytime sky, no moon",
+      "spatialRelations": [
+        "the tent stands BEHIND the figure on the viewer-LEFT; the castle hill is AHEAD of him on the viewer-RIGHT",
+        "the two planted swords are on the ground at the lower-LEFT, between the tent and the figure, behind his trailing leg",
+        "his head is turned back toward the tent and the two planted swords while his feet carry him to the viewer-right",
+        "the carried bundle crosses his torso from lower-left to upper-right; the pommels project past his right shoulder into the sky",
+        "the banner flies above and to the left of his head",
+        "no clear cast shadow is drawn under the figure"
+      ],
+      "foreground": [
+        "the rocky track and boulders",
+        "the two swords planted in the ground at the lower-left",
+        "the figure's legs and boots"
+      ],
+      "background": [
+        "the pavilion tent with its banner and glowing lamp (left)",
+        "the hilltop castle with its pennant (right)",
+        "the hatched overcast sky"
+      ]
+    },
+    "uncertainObservations": [
+      "The number of swords in the carried bundle is the thing I most want to report and the thing I am least sure of. At maximum enlargement I count 4 round pommels on wrapped grips, 2 gold cross-guards and roughly 5 bright blade faces. Blades and grips overlap, so a total of either five or six is possible; I refuse to pick one.",
+      "I count 4 blade tips emerging below his hands, but the lower tips merge into his tunic and at least one more may be hidden.",
+      "The two swords at the lower-left read to me as driven point-first into the ground, but they could instead be leaning against an unseen rock; the very tips are lost in the stones.",
+      "Whether his backward look is aimed at the tent, at the two planted swords, or simply downward cannot be settled; the eye direction is back and down to the viewer-left in all readings.",
+      "The device on the banner is a rampant quadruped, probably a lion, but it is too small to identify with confidence.",
+      "There is no clearly drawn cast shadow anywhere in this card, so I report no shadow direction."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-515",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "lower-left quadrant, seated on the edge of a dark stone plinth/parapet above water",
+          "posture": "seated, knees to the viewer-right, body in three-quarter view seen from BEHIND and slightly left; shoulders hunched forward over what he is reading",
+          "gaze": "head in sharp profile facing the VIEWER-RIGHT and tilted DOWN; eyes on the sheet of paper held up in front of him. He does not look up at the sky and does not look back over his shoulder",
+          "heldObjects": [
+            "a single sheet of handwritten paper / letter held up at chest height in front of him; the visible hand (his right, on the viewer-right side) grips the sheet by its right edge, the other hand is behind the page"
+          ],
+          "clothing": "a long dark blue-black hooded robe/cloak, the hood lying empty on his back; the whole garment is embroidered with fine gold constellation lines joining small gold star-points; dark curly hair, bare head"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword",
+          "count": 3,
+          "countConfidence": "high",
+          "where": "all three in the upper half of the frame, in the sky, arranged around a large crystalline heart",
+          "orientation": "ALL THREE point DOWN/INWARD into the heart, hilts outward: the central one is exactly VERTICAL, point straight down into the top cleft of the heart; the viewer-LEFT one runs diagonally from the upper-left down to the lower-right; the viewer-RIGHT one runs diagonally from the upper-right down to the lower-left",
+          "arrangement": "a symmetrical fan/trident around the central axis. They converge on the heart but do NOT cross one another anywhere in the picture"
+        },
+        {
+          "type": "crystalline heart",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "upper-centre of the frame, filling the middle of the sky",
+          "orientation": "upright, point downward, seen face-on",
+          "arrangement": "single, faceted like cut glass, its facets drawn as a net of gold constellation lines with star-points at the vertices"
+        },
+        {
+          "type": "moon",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "one large moon at the UPPER-LEFT corner of the sky; a second, smaller moon lower down at the MIDDLE-LEFT, just above and left of the seated figure's head",
+          "orientation": "both discs lit along the LOWER-RIGHT limb",
+          "arrangement": "two separate moons in the same sky, the upper one roughly twice the apparent diameter of the lower one"
+        },
+        {
+          "type": "lantern",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "lower-right, standing against the front face of the stone plinth below the table top",
+          "orientation": "upright, hanging/standing",
+          "arrangement": "single glazed metal lantern with a lit flame inside — the only warm light in the picture"
+        },
+        {
+          "type": "armillary sphere",
+          "count": 1,
+          "countConfidence": "high",
+          "where": "on the flat stone table top to the viewer-right of the figure",
+          "orientation": "upright on a footed base",
+          "arrangement": "single gilded ringed sphere"
+        },
+        {
+          "type": "sealed letter / document",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "lying flat on the stone table top between the figure and the armillary sphere",
+          "orientation": "flat, face up",
+          "arrangement": "a single pale sheet bearing a red wax seal"
+        },
+        {
+          "type": "small upright cross-shaped ornament",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "on the stone table top, between the sealed letter and the armillary sphere",
+          "orientation": "upright on a small base",
+          "arrangement": "single; it reads as either a miniature sword stood point-down or a small cross/finial"
+        },
+        {
+          "type": "concentric astrological circle / orbit line",
+          "count": null,
+          "countConfidence": "low",
+          "where": "drawn in fine gold across the whole sky, centred roughly on the heart, with smaller ring clusters at the upper-right and right edges",
+          "orientation": "flat rings in the picture plane",
+          "arrangement": "many overlapping circles and arcs; too many and too faint to count"
+        },
+        {
+          "type": "ruined colonnade / arcade",
+          "count": 1,
+          "countConfidence": "medium",
+          "where": "right edge of the frame, standing at the water's edge behind the table",
+          "orientation": "upright, receding to the right",
+          "arrangement": "one structure of fluted columns carrying a round arch and a broken entablature"
+        }
+      ],
+      "environment": [
+        "a broad still lake or flooded plain filling the middle distance behind the figure",
+        "a low range of mountains on the far horizon",
+        "a line of dark conifers along the far shore at both left and right",
+        "a polished dark stone plinth/table and parapet occupying the lower-right",
+        "fine diagonal streaks like falling rain over the whole sky",
+        "a thin gold rule border inside a black frame around the picture"
+      ],
+      "lightSources": [
+        "the two crescent moons on the left side of the sky",
+        "three concentrated star-flares exactly where the three sword points enter the heart: one at the heart's top cleft (central sword) and one in each lobe (the two diagonals)",
+        "a bright break in the cloud low on the horizon above the lake, centre-right, laying a specular path across the water",
+        "the lit lantern at the lower-right",
+        "scattered starlight and the glowing gold constellation lines"
+      ],
+      "moonPhase": "crescent",
+      "spatialRelations": [
+        "the heart with its three swords hangs in the sky directly ABOVE and slightly right of the seated figure",
+        "the central sword descends on the picture's vertical axis; the two diagonals come in symmetrically from the upper-left and upper-right",
+        "the larger moon is at the upper-left, well above and left of the heart; the smaller moon is lower and nearer, just left of and above the figure's head",
+        "the stone table with the armillary sphere, the sealed letter and the ornament is to the figure's viewer-RIGHT",
+        "the lantern sits below the table top at the lower-right, nearer the viewer",
+        "the ruined colonnade stands behind the table at the right edge",
+        "the lake lies between the figure and the distant mountains"
+      ],
+      "foreground": [
+        "the seated figure and his embroidered cloak",
+        "the dark stone plinth and table top with its objects",
+        "the lit lantern at the lower-right"
+      ],
+      "background": [
+        "the crystalline heart pierced by three swords",
+        "the two crescent moons and the gold orbit circles",
+        "the lake, far shore, conifers and mountains",
+        "the ruined colonnade at the right"
+      ]
+    },
+    "uncertainObservations": [
+      "Both moons are crescents lit on the lower-right limb with the unlit remainder faintly visible; the smaller one is dim enough that I checked it twice, but I am confident there really are TWO separate moons in this sky.",
+      "The small upright object on the table between the letter and the armillary sphere may be a miniature sword stood point-down, a cross, or a candlestick; I cannot tell.",
+      "I cannot read any of the writing on the held letter.",
+      "The central sword's blade is partly lost in the glare where it enters the heart, so I cannot confirm whether its point emerges below.",
+      "I found no clearly drawn cast shadow anywhere in this card, so I report no shadow direction.",
+      "The number of orbit circles and stars is uncountable and I did not attempt it."
+    ],
+    "reviewConfidence": "high",
+    "reviewer": "reviewer-f"
+  },
+  {
+    "reviewId": "review-517",
+    "visibleFacts": {
+      "figureCount": 1,
+      "figures": [
+        {
+          "position": "centre-left of the frame, striding across a cobbled yard between two structures",
+          "posture": "striding/half-running to the VIEWER-RIGHT, body pitched forward, rear (viewer-left) leg extended back, front leg bearing the weight; BAREFOOT — bare toes and bare lower legs are clearly visible on both feet",
+          "gaze": "seen from BEHIND; only the back of the head is drawn, rim-lit along the top-left. No face, eye or profile is visible at any magnification, so I cannot state a gaze direction. The head is aligned with the body, i.e. turned the same way he is travelling — it is NOT turned back over the shoulder toward the viewer",
+          "heldObjects": [
+            "a bundle of swords clamped under/against his viewer-right side, gripped by one hand at about waist height",
+            "the blades trail DOWN and BACK to the viewer-LEFT; the grips and pommels fan UP and to the viewer-RIGHT past his hand"
+          ],
+          "clothing": "a dark ragged cloak or mantle whose hem is torn into long ribbon-like streamers trailing far out behind him to the viewer-left; dark close-fitting tunic and trousers cut off at the calf; shaggy dark hair; bare head; bare feet"
+        }
+      ],
+      "objects": [
+        {
+          "type": "sword (carried)",
+          "count": null,
+          "countConfidence": "low",
+          "where": "bundled against the figure's right side, centre of the frame",
+          "orientation": "all tilted the same way, points DOWN-LEFT (trailing behind him), pommels UP-RIGHT; parallel, not crossed",
+          "arrangement": "a single gathered sheaf. At maximum brightening I can resolve THREE wrapped grips with pommels and one cross-guard, and about three or four blade faces trailing below; a fourth grip may be hidden at the top right. The image is too dark for me to commit to a total"
+        },
+        {
+          "type": "sword (planted in the ground)",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "one at the viewer-LEFT, standing in the cobbles to the left of the left structure's doorway; one at the viewer-RIGHT, standing in the ground to the right of the right structure",
+          "orientation": "both VERTICAL, points DOWN driven into the ground, hilts up with straight cross-guards",
+          "arrangement": "one on each side of the frame, upright and parallel to each other, well separated — not crossed"
+        },
+        {
+          "type": "pyramidal stone hut / tent",
+          "count": 2,
+          "countConfidence": "high",
+          "where": "one in the left middle distance, one in the right middle distance, flanking the figure",
+          "orientation": "both facing the viewer, apex up",
+          "arrangement": "two steep triangular shingled/stone structures, each with a finial at the apex and a dark rectangular doorway; the right one has a small triangular device carved over its lintel"
+        }
+      ],
+      "environment": [
+        "a cobbled/flagged yard or lane whose paving winds from the lower-left across to the right middle distance",
+        "a very dark enclosing background — walls or hillside — with no sky visible",
+        "a thin ragged printed border down the left and right edges"
+      ],
+      "lightSources": [
+        "a single soft glow high on the UPPER-LEFT of the background, behind and above the left hut — an unexplained bright patch, no lamp or disc is drawn inside it",
+        "the cobbles are lit in a broad winding band running from the lower-left up to the right, brightest in the middle of the yard",
+        "the figure is rim-lit along his upper-LEFT contour (top of the head, shoulder, cloak edge)"
+      ],
+      "moonPhase": "not visible — no sky and no moon are shown; the upper-left glow has no visible disc",
+      "spatialRelations": [
+        "the two huts stand one on each side of the figure, both behind him in depth",
+        "the left planted sword is to the LEFT of the left hut's doorway; the right planted sword is to the RIGHT of the right hut",
+        "the figure moves from the left of the frame toward the viewer-right, i.e. away from the glowing upper-left background",
+        "the left planted sword throws a long shadow down and to the viewer-RIGHT across the cobbles",
+        "the figure's own shadow falls down and to the viewer-RIGHT of his feet",
+        "both cast shadows agree on a light source up and to the viewer-LEFT"
+      ],
+      "foreground": [
+        "the lit cobblestones",
+        "the figure's bare feet and the trailing shredded cloak streamers",
+        "the trailing sword points"
+      ],
+      "background": [
+        "the two pyramidal huts with their dark doorways",
+        "the two planted swords",
+        "the glow at the upper-left and the otherwise black surroundings"
+      ]
+    },
+    "uncertainObservations": [
+      "This is the darkest of the eight. I brightened it more than three times over and large parts of the frame still hold no recoverable detail; several readings here are low-confidence.",
+      "The number of carried swords cannot be determined: three grips plus one cross-guard are resolvable, a fourth may be hidden, and the blade count below the hand reads as three or four.",
+      "No face is visible at all, so I cannot say whether he is looking ahead, down or back — I can only say the head is not turned back toward the viewer.",
+      "Whether the two structures are stone cairns/tombs, shingled huts or stiffened tents is ambiguous; they have doorways and roof finials.",
+      "The source of the upper-left glow is not drawn; it could be a moon behind cloud, a lamp out of frame or a lit opening.",
+      "I cannot confirm whether the planted swords' points are driven into the earth or merely hidden behind foreground stones."
+    ],
+    "reviewConfidence": "medium",
+    "reviewer": "reviewer-f"
+  }
+]

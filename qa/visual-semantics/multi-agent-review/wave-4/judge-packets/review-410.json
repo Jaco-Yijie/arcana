@@ -1,0 +1,365 @@
+{
+  "reviewId": "review-410",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-410.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 2,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-410.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-410",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of frame, standing on a small circular stone platform in water",
+              "posture": "standing upright, feet apart, robed; back turned to the viewer",
+              "gaze": "head faces away from the viewer, tilted up toward the great wheel in the sky",
+              "heldObjects": [
+                "nothing held; the right arm is raised up and forward, index finger extended, touching or nearly touching the lower rim of the wheel"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "large circular astrolabe / zodiac wheel in the sky",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "dominating the upper two-thirds of the frame, directly above the figure",
+              "orientation": "face-on to the viewer, concentric gold rings with radiating spokes and a bright hub at the center",
+              "arrangement": "a single closed ring structure, with four brighter marked points at roughly the top, left, right and bottom of the outer band"
+            },
+            {
+              "type": "constellation creature drawn in starlines",
+              "count": 4,
+              "countConfidence": "high",
+              "where": "one in each corner region around the wheel: a winged humanoid upper left; a bird with spread wings upper right; a horned bull lower left; a lion lower right",
+              "orientation": "each faces inward toward the wheel",
+              "arrangement": "four corners, symmetric, one per corner"
+            },
+            {
+              "type": "armillary sphere on a stand",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "on the platform, one to the figure's left (frame left, larger) and one to the figure's right (frame right, smaller/lower)",
+              "orientation": "upright on legged stands, rings tilted",
+              "arrangement": "flanking the standing figure"
+            },
+            {
+              "type": "small classical pavilion / colonnaded structure on the shore",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one at the far left edge, one at the far right edge, both at the waterline in the middle distance",
+              "orientation": "upright, facing inward",
+              "arrangement": "flanking, one per side"
+            },
+            {
+              "type": "planet / moon disc",
+              "count": null,
+              "countConfidence": "low",
+              "where": "two discs inside the upper part of the wheel; one large banded planet at the lower left corner; a crescent-lit body at the left edge above it; one disc at the lower right",
+              "orientation": "n/a",
+              "arrangement": "scattered around the frame edges and inside the wheel"
+            }
+          ],
+          "environment": [
+            "night sky full of stars, nebula clouds and fine gold constellation lines",
+            "a broad still water surface reflecting the sky and the platform",
+            "a low mountain range on the horizon",
+            "a warm orange dusk band at the horizon behind the figure",
+            "decorated card border left and right"
+          ],
+          "lightSources": [
+            "the glowing gold wheel (brightest element)",
+            "the warm dusk band on the horizon",
+            "stars and nebulae",
+            "small warm lights within the two shore pavilions"
+          ],
+          "moonPhase": "uncertain - several discs are present; the one at the left edge reads as a crescent, the others as full or gibbous",
+          "spatialRelations": [
+            "the figure stands ON the circular platform, back to the viewer, facing the horizon and the wheel",
+            "the raised arm reaches up to the wheel's lower rim, so the wheel appears to hang directly above and in front of him",
+            "the two armillary spheres sit on the same platform, on either side of him, at roughly waist height",
+            "the platform is surrounded by water on all sides; its lit edge reflects downward"
+          ],
+          "foreground": [
+            "the water surface and its reflections in the bottom third"
+          ],
+          "background": [
+            "mountains, the two shore pavilions, and the starfield"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of planetary discs cannot be fixed - several faint round shapes could be lens-bokeh rather than bodies",
+          "whether the smaller right-hand device on the platform is a second armillary sphere or a sundial/other instrument is not resolvable",
+          "the number of marked points on the wheel's outer band is uncertain; four are clearly brighter but there may be more"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "visualTensions / spatialRelations",
+          "existing": "the reaching hand almost but not quite touching the ring",
+          "observed": "the raised fingertips appear to meet the glowing node on the wheel's lower rim; contact vs. a small gap is not resolvable",
+          "evidence": "A bright rim node sits exactly at the fingertips with no visible dark gap between hand and rim, so 'not quite touching' may overstate a separation I cannot see.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the reaching hand almost but not quite touching the ring",
+            "with": "the reaching hand meeting the glowing node on the ring's lower rim"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-410",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, standing on a round stone platform in water",
+              "posture": "standing, seen from behind, weight even, feet apart",
+              "gaze": "head faces away from viewer, tilted up toward the great wheel above; face not visible",
+              "heldObjects": [
+                "nothing held; the raised right arm reaches up and its fingertips touch the lower rim of the wheel"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "large circular wheel / disc of concentric rings in the sky",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper half of the frame, centered",
+              "orientation": "flat-on to the viewer, upright",
+              "arrangement": "one closed ring with multiple nested rings, radial spokes, and a small bright hub at center; four bright glowing nodes sit on the rim at the top, left, right and bottom (the bottom node is the one the figure's hand touches)"
+            },
+            {
+              "type": "constellation figure drawn in stars at the frame corners",
+              "count": 4,
+              "countConfidence": "high",
+              "where": "upper-left, upper-right, lower-left, lower-right, one in each corner around the wheel",
+              "orientation": "upper-left winged humanoid faces right/inward; upper-right bird with spread wings faces left/inward; lower-left horned bovine faces right/inward; lower-right maned lion faces left/inward",
+              "arrangement": "four corners, all facing inward toward the central wheel"
+            },
+            {
+              "type": "armillary sphere / ringed globe on a stand",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "on the stone platform, one to the figure's right (viewer's left) and one to the figure's left (viewer's right), flanking the figure",
+              "orientation": "upright on tripod-style stands",
+              "arrangement": "flanking pair, one each side of the standing figure"
+            },
+            {
+              "type": "small colonnaded pavilion / ruined portico on the far shore",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "far left edge and far right edge at the waterline",
+              "orientation": "facing inward toward the water",
+              "arrangement": "one at each side of the frame, symmetrical"
+            },
+            {
+              "type": "planet-like sphere floating in the sky/scene",
+              "count": null,
+              "countConfidence": "low",
+              "where": "several scattered — two inside the wheel's upper area, one lower-left near the water, one lower-right, one bottom-left corner",
+              "orientation": "n/a",
+              "arrangement": "scattered, no pattern"
+            }
+          ],
+          "environment": [
+            "still dark water filling the lower third, reflecting the sky and platform",
+            "circular tiered stone platform / island",
+            "low dark mountain ridge across the horizon",
+            "dense star field with nebula clouds in violet and blue",
+            "fine gold grid and tick-mark lines ruled across the sky"
+          ],
+          "lightSources": [
+            "the glowing gold wheel and its four rim nodes",
+            "a warm orange band of twilight glow low on the horizon behind the mountains",
+            "stars and the constellation lines",
+            "small warm lamp glows at the two shoreline pavilions"
+          ],
+          "moonPhase": "not applicable / uncertain — no single dominant moon; several small spheres appear but none clearly phase-lit",
+          "spatialRelations": [
+            "the figure stands at the center of the platform directly beneath the wheel; its raised arm bridges the gap between platform and wheel",
+            "the wheel's bottom rim node is directly above the figure's hand",
+            "the two armillary spheres sit lower than the figure's shoulders, on the platform deck",
+            "the four constellation beasts surround the wheel, one per corner"
+          ],
+          "foreground": [
+            "dark reflective water with vertical light reflections",
+            "the stone platform edge"
+          ],
+          "background": [
+            "mountain ridge",
+            "twilight horizon glow",
+            "star field with nebulae and ruled gold sky-grid"
+          ]
+        },
+        "uncertainObservations": [
+          "The exact number of floating planet-spheres cannot be counted reliably; several are faint or cut by the frame.",
+          "Whether the lower-right object on the platform is a second armillary sphere or a different ringed instrument is not fully resolvable.",
+          "Time of day reads as night, but a strong orange band at the horizon means it could be late dusk."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-410",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of the image, slightly viewer-left of center, standing on a round tiered stone platform in the lower-middle third",
+              "posture": "standing upright, seen from behind, feet planted apart; viewer-right arm raised high and fully extended above the head with the index finger pointing up; viewer-left arm hanging down at the side",
+              "gaze": "head seen from behind, tilted up toward the raised hand and the great wheel; face not visible",
+              "heldObjects": [
+                "nothing held; the raised viewer-right hand's extended fingertip reaches the lower rim of the large celestial wheel, appearing to touch or nearly touch it"
+              ],
+              "clothing": "a long dark blue/charcoal robe reaching the ankles, with a sash or belt at the waist and a trailing ribbon/scarf flowing to the viewer-left; short dark hair; the robe fabric is speckled with small star-like points"
+            }
+          ],
+          "objects": [
+            {
+              "type": "celestial wheel",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "dominating the upper two-thirds of the sky, centered horizontally, its lower rim just above the figure's raised fingertip",
+              "orientation": "flat-on to the viewer, upright circular disc",
+              "arrangement": "single; built of many concentric gold rings with inscribed tick-mark and glyph bands, radial spokes to the rim, a radiant star at the exact center, and four larger round marker nodes at the top, bottom, viewer-left and viewer-right of the rim"
+            },
+            {
+              "type": "constellation creature",
+              "count": 4,
+              "countConfidence": "high",
+              "where": "one in each corner region of the sky around the wheel",
+              "orientation": "all in side/three-quarter profile, drawn as star points joined by thin lines",
+              "arrangement": "one per corner: upper-viewer-left a winged humanoid holding an open book; upper-viewer-right a bird of prey/eagle with wings spread; lower-viewer-left a horned bull/ox facing viewer-right; lower-viewer-right a maned lion facing viewer-left"
+            },
+            {
+              "type": "armillary sphere",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the platform, viewer-left of the figure",
+              "orientation": "upright on a footed pedestal, rings crossing at several angles",
+              "arrangement": "single"
+            },
+            {
+              "type": "astronomical ring instrument",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the platform, viewer-right of the figure",
+              "orientation": "upright on a pedestal, a graduated ring/disc with crossed spokes and a finial on top",
+              "arrangement": "single"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the platform at the foot of the viewer-right instrument",
+              "orientation": "upright, small, with a warm lit flame inside casting a vertical reflection on the water",
+              "arrangement": "single"
+            },
+            {
+              "type": "planet orb",
+              "count": null,
+              "countConfidence": "low",
+              "where": "floating inside the wheel (several small orbs) and low near the water surface in the lower corners",
+              "orientation": "spheres, variously lit from one side",
+              "arrangement": "scattered; at least two or three inside the wheel's field and three near the lower edges of the frame"
+            },
+            {
+              "type": "building",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "on the far shores at the viewer-left and viewer-right edges, at the waterline",
+              "orientation": "upright classical colonnaded structures with arches, lit from within",
+              "arrangement": "one at each side edge"
+            }
+          ],
+          "environment": [
+            "a deep blue-black star-filled night sky filling the upper two-thirds",
+            "a vast flat expanse of still, dark, reflective water filling the lower third",
+            "a round tiered stone platform of several stacked circular steps rising just above the waterline at image center",
+            "a low mountain range across the far horizon behind the water",
+            "a band of warm pink/orange twilight glow with streaked clouds along the horizon",
+            "a vertical streak of light reflected on the water beneath the horizon glow",
+            "classical colonnaded buildings with lit interiors on the far shores at both side edges",
+            "mirror reflections of the platform, the instruments, the lantern and the floating orbs in the water",
+            "faint gold geodetic / graticule lines and tick-marked scale strips running along the inner left and right borders",
+            "thin double-line decorative borders along the left and right edges of the image"
+          ],
+          "lightSources": [
+            "the great celestial wheel itself, glowing gold in the upper sky",
+            "the small lantern on the platform at the figure's viewer-right",
+            "warm pink/orange twilight glow along the horizon behind the mountains",
+            "scattered stars and the glowing constellation lines",
+            "lit windows/interiors of the shoreline buildings",
+            "glow from the floating planet orbs"
+          ],
+          "moonPhase": "not visible — no identifiable moon; several small cratered spheres float as planet-like orbs inside the wheel and near the water, but none is presented as the scene's moon",
+          "spatialRelations": [
+            "the figure stands at the center of the round platform, which sits at the center of the water",
+            "the figure's raised fingertip is directly below the lower rim of the celestial wheel and aligned with the wheel's vertical axis",
+            "the celestial wheel is centered above the figure and fills the sky above the horizon",
+            "the four constellation creatures surround the wheel, one per corner, outside its rim",
+            "the armillary sphere is on the platform to the figure's viewer-left; the ring instrument and lantern are on the platform to the figure's viewer-right",
+            "the mountains and horizon glow lie behind the platform, below the wheel",
+            "the shoreline buildings are at the far viewer-left and far viewer-right, level with the horizon",
+            "the platform and figure are mirrored in the water directly below them",
+            "the floating orbs sit in front of and to both sides of the platform, nearest the lower frame edge"
+          ],
+          "foreground": [
+            "the water surface with reflections",
+            "the floating planet orbs in the lower corners",
+            "the lowest step of the stone platform"
+          ],
+          "background": [
+            "the celestial wheel",
+            "the four constellation creatures",
+            "the star field and nebula bands",
+            "the distant mountains and twilight horizon",
+            "the shoreline buildings"
+          ]
+        },
+        "uncertainObservations": [
+          "The upper-viewer-left constellation is a clearly humanoid winged figure holding an open book. It is drawn as star-lines, not as a living person, so I did not include it in figureCount; if constellation humanoids count, figureCount would be 2. Flagging the ambiguity as the schema requires.",
+          "I did not attempt an exact count of the celestial wheel's radial spokes or of the glyphs on its inscribed bands; the subdivisions are too fine and repeat at several radii.",
+          "The number of floating planet orbs is not reliably countable: some are partly cut by the frame edge, some blend into the water reflections and some sit inside the wheel's field. Recorded as null.",
+          "The device on the platform at the figure's viewer-right reads as a graduated ring or small astrolabe/armillary on a pedestal, but I cannot resolve its type with confidence.",
+          "I cannot tell whether the raised fingertip makes contact with the wheel's rim or stops just short of it.",
+          "The shoreline structures at the left and right edges are small and partly cut by the frame; I counted two but a further structure hidden in the glare is possible.",
+          "The figure's sex and age are not determinable — the figure is seen entirely from behind.",
+          "Whether the horizon glow is sunset or sunrise cannot be determined."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

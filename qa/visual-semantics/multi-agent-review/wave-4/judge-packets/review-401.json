@@ -1,0 +1,216 @@
+{
+  "reviewId": "review-401",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-401.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: uncertain vs corrected"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 1,
+    "corrected": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-401.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "deckSpecificMotifs",
+          "existing": "silver linework on a deep blue-lavender night ground",
+          "observed": "the ground is very pale and high-key — white-and-pale-blue clouded sky with a bright glittering light path on the sea; it reads far closer to daylight than to a night ground, though a crescent moon is present",
+          "evidence": "Sky, sea and drapery are all near-white in value; there is no dark field anywhere in the frame. I recorded day-vs-night as undeterminable, so I flag rather than overturn.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-401",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of frame",
+              "posture": "seated on a low pale stone ledge/bench, facing forward toward the viewer, skirts spread wide over the stone to either side; knees together and forward; not standing, not kneeling",
+              "gaze": "a pale cloth band is tied across the eyes, covering both; the head is upright and faces straight out toward the viewer, tilted very slightly to her right",
+              "heldObjects": [
+                "two swords, one in each hand, arms crossed over the chest — the viewer-left blade is held in her right hand and angles up to the UPPER LEFT, the viewer-right blade is held in her left hand and angles up to the UPPER RIGHT, the two forming an X that crosses just above her wrists"
+              ],
+              "clothing": "pale layered gown with a jewelled/beaded belt at the waist, a sheer lace-like shawl over both shoulders and arms trailing down, long pale wavy hair with small ornaments, a pendant on a chain at the throat"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "crossed over the seated figure's chest, one rising to each upper corner of the frame",
+              "orientation": "both POINT-UP and outward — the hilts are low, at her hands near her chest, and the tips reach up to the upper left and upper right; neither is planted or reversed",
+              "arrangement": "a symmetric X / crossed pair, arms folded across the body; the crossing point sits just above the hands, and the blades open outward above it"
+            },
+            {
+              "type": "stone baluster / column post",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "left edge, mid-height, at the end of a low stone rail",
+              "orientation": "upright",
+              "arrangement": "single visible post at the near end of the rail"
+            }
+          ],
+          "environment": [
+            "calm open sea filling the middle distance behind the figure",
+            "a pale stone terrace with a low balustrade at the left and a stone ledge/step under the figure",
+            "a flowering branch with pale blossoms hanging in from the upper left",
+            "small rocky islets on the horizon at the right",
+            "pale blue and white clouded sky",
+            "a thin painted border around the image"
+          ],
+          "lightSources": [
+            "a large crescent moon high in the upper right, lit limb facing lower left",
+            "a broad glittering light path on the sea below and to the right of the moon, running toward the viewer",
+            "overall bright, diffuse high-key light across the whole scene"
+          ],
+          "moonPhase": "crescent — a fairly thick crescent with the lit edge on the lower-left of the disc and the rest of the disc faintly visible",
+          "spatialRelations": [
+            "the figure sits with her back to the sea, facing out of the frame toward the viewer",
+            "the moon is behind her and to her right (viewer's right), roughly above the right-hand blade tip",
+            "the two blade tips point outward to the two upper corners, opening away from each other; the gap between them frames her head",
+            "the stone rail runs along the left behind her; flowering plants are at the lower left"
+          ],
+          "foreground": [
+            "the spread pale skirts and lace shawl filling the bottom half",
+            "the stone ledge and pale flowers at the lower left"
+          ],
+          "background": [
+            "sea, moonlit water path, distant islets, clouded sky",
+            "overhanging blossoming branch upper left"
+          ]
+        },
+        "uncertainObservations": [
+          "The scene light reads as bright and daylight-like even though a crescent moon is plainly in the sky; I cannot determine from the pixels whether the intent is night or day.",
+          "Whether her eyes are shut beneath the band is not visible; the band itself clearly covers both eyes.",
+          "Fine detail of the hilts and of the pendant is not resolvable."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "deckSpecificMotifs",
+          "existing": "silver linework on a deep blue-lavender night ground",
+          "observed": "pale silver-lavender linework on a light, near-white ground",
+          "evidence": "The card is overwhelmingly pale: white-to-pale-blue sky with white clouds, white stone, white gown. There is no deep blue or night-dark ground anywhere in the frame.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "sits on a stone ledge before a moonlit sea",
+          "observed": "sits on a stone ledge before a brightly lit sea under broad daylight-style illumination, with a thin crescent moon also present in the upper-right sky",
+          "evidence": "Overall illumination is bright diffuse daylight on pale blue sky and white clouds; the crescent moon is a small element in that daylit sky, not the scene's light source.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "silver linework on a deep blue-lavender night ground",
+            "with": "pale silver-lavender linework on a light, near-white ground"
+          },
+          {
+            "find": "sits on a stone ledge before a moonlit sea",
+            "with": "sits on a stone ledge before a bright, pale-lit sea under daylight-like illumination, a thin crescent moon in the sky"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-401",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center",
+              "posture": "seated on a low pale stone block/ledge, knees together, long skirt pooling over the stone and onto the paving",
+              "gaze": "head faces forward toward the viewer, tilted very slightly downward; eyes are covered by a white cloth band tied across them, so no gaze direction is visible",
+              "heldObjects": [
+                "long blade in the right hand",
+                "long blade in the left hand"
+              ],
+              "armPosition": "both forearms crossed at the wrists in front of the chest/stomach, each hand gripping one hilt"
+            }
+          ],
+          "objects": [
+            {
+              "type": "long straight blade with a crossguard",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "held in front of the torso, tips reaching up past the level of the figure's head to the upper left and upper right",
+              "orientation": "both point UP and outward (tips up, hilts down at chest level)",
+              "arrangement": "crossed in an X in front of the chest, wrists overlapping; left-hand blade angles up to the right, right-hand blade angles up to the left"
+            },
+            {
+              "type": "stone baluster / short pillar on a railing",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "left edge, mid-height",
+              "orientation": "upright",
+              "arrangement": "single, at the left frame edge"
+            },
+            {
+              "type": "small rocky islets on the horizon",
+              "count": null,
+              "countConfidence": "low",
+              "where": "right side, far distance on the water",
+              "orientation": "n/a",
+              "arrangement": "scattered along the horizon; too small and pale to resolve individually"
+            }
+          ],
+          "environment": [
+            "open water / sea filling the middle distance, with a bright vertical light-path on its surface right of center",
+            "pale stone paving and stone steps in the foreground",
+            "pale stone balustrade and pillar at left",
+            "hanging flowering branches with small white blossoms across the upper left",
+            "small pale flowers and foliage at lower left",
+            "pale blue sky with soft white clouds"
+          ],
+          "lightSources": [
+            "broad diffuse bright daylight-style illumination over the whole scene",
+            "a thin crescent moon in the upper right of the sky",
+            "a bright reflected light column on the water right of center"
+          ],
+          "moonPhase": "thin crescent; the bright limb reads as lying along the outer (upper-right) edge with the dark disc toward the lower left, but the exact orientation is not fully resolvable",
+          "spatialRelations": [
+            "the seated figure is centered, with the sea behind her and the stone balustrade to her right side of frame (viewer's left)",
+            "the two blade tips frame her head symmetrically, one on each side",
+            "the crescent moon sits in the sky above and to the right of her head",
+            "the flowering branches hang down into the frame above and left of her"
+          ],
+          "foreground": [
+            "stone paving",
+            "stone step/ledge the figure sits on",
+            "flowers and leaves at lower left",
+            "draped translucent fabric spreading across the stone"
+          ],
+          "background": [
+            "sea",
+            "distant pale islets at right",
+            "cloudy pale-blue sky",
+            "crescent moon"
+          ]
+        },
+        "uncertainObservations": [
+          "The scene is lit like bright overcast daylight yet a crescent moon is visible; I record both rather than picking one.",
+          "Exact orientation of the crescent's horns is uncertain at this resolution.",
+          "Number of distant islets on the horizon cannot be resolved.",
+          "Whether the figure sits on a block or on a wide step is ambiguous; the surface is a pale stone slab either way."
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

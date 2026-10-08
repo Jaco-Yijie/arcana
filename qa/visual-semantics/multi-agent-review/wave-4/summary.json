@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "mode": "rest",
+  "generatedAt": "2026-10-08T08:19:44.459Z",
+  "total": 17,
+  "decisions": {
+    "AUTO_PASS": 7,
+    "AUTO_CORRECT": 8,
+    "MARK_UNCERTAIN": 2,
+    "HUMAN_REVIEW": 0,
+    "CORRECTED": 0,
+    "UNJUDGED": 0
+  },
+  "finalDistribution": {
+    "PASS": 7,
+    "AUTO_CORRECT": 8,
+    "CORRECTED": 0,
+    "MARK_UNCERTAIN": 2,
+    "HUMAN_REVIEW": 0
+  },
+  "humanFinalApplied": [],
+  "finalRecords": [
+    {
+      "reviewId": "review-401",
+      "card": "legacy-moonlight/swords-02",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-402",
+      "card": "legacy-shadow/swords-10",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-403",
+      "card": "legacy-shadow/cups-14",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-404",
+      "card": "legacy-moonlight/pentacles-10",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-405",
+      "card": "legacy-shadow/pentacles-14",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-406",
+      "card": "legacy-moonlight/cups-03",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-407",
+      "card": "legacy-shadow/cups-07",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-408",
+      "card": "legacy-moonlight/swords-05",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-409",
+      "card": "legacy-shadow/wands-07",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-410",
+      "card": "legacy-celestial/major-10",
+      "finalStatus": "MARK_UNCERTAIN"
+    },
+    {
+      "reviewId": "review-411",
+      "card": "legacy-shadow/wands-05",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-412",
+      "card": "legacy-celestial/wands-10",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-413",
+      "card": "legacy-shadow/cups-11",
+      "finalStatus": "PASS"
+    },
+    {
+      "reviewId": "review-414",
+      "card": "legacy-moonlight/swords-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-415",
+      "card": "legacy-forest/swords-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-416",
+      "card": "legacy-moonlight/wands-08",
+      "finalStatus": "AUTO_CORRECT"
+    },
+    {
+      "reviewId": "review-417",
+      "card": "legacy-celestial/swords-08",
+      "finalStatus": "AUTO_CORRECT"
+    }
+  ],
+  "unresolvedTasks": [],
+  "reviewerVerdicts": {
+    "pass": 15,
+    "corrected": 14,
+    "uncertain": 9
+  },
+  "reviewerVerdictAgreement": {
+    "agree": 12,
+    "total": 17,
+    "rate": 70.6
+  },
+  "runtimeRisks": [
+    "Held-object label agreement below 80%; limited lexical proxy, investigate matching/wording before any global runtime policy change.",
+    "Spatial relation word overlap is not semantic agreement; semantic agreement rate is unavailable without additional independent comparison.",
+    "First two reviewers only; null abstentions and ambiguous object pairings excluded. Third reviewers inform Judges, not primary-pair rates."
+  ],
+  "byDeck": {
+    "legacy-moonlight": {
+      "AUTO_CORRECT": 5,
+      "AUTO_PASS": 1
+    },
+    "legacy-shadow": {
+      "AUTO_PASS": 6,
+      "MARK_UNCERTAIN": 1
+    },
+    "legacy-celestial": {
+      "MARK_UNCERTAIN": 1,
+      "AUTO_CORRECT": 2
+    },
+    "legacy-forest": {
+      "AUTO_CORRECT": 1
+    }
+  },
+  "agreement": {
+    "note": "分母只计「两人都对该项表过态」的情况。一方写 null 是弃权，不算分歧。",
+    "dualReviewedImages": 17,
+    "exactAgreementRate": 88.2,
+    "denominators": {
+      "figureCount": {
+        "agree": 17,
+        "total": 17,
+        "details": []
+      },
+      "objectCount": {
+        "agree": 14,
+        "total": 16,
+        "details": [
+          "review-414 sword 9 vs 8",
+          "review-415 sword 7 vs 8"
+        ]
+      },
+      "moonPhase": {
+        "agree": 7,
+        "total": 7,
+        "details": []
+      },
+      "exact": {
+        "agree": 15,
+        "total": 17,
+        "details": []
+      }
+    },
+    "heldObjectRate": 75,
+    "heldObjectCounts": {
+      "agree": 6,
+      "total": 8,
+      "details": []
+    },
+    "postureRate": 100,
+    "postureCounts": {
+      "agree": 11,
+      "total": 11,
+      "details": []
+    },
+    "gazeRate": 66.7,
+    "gazeCounts": {
+      "agree": 2,
+      "total": 3,
+      "details": []
+    },
+    "structuredLabelNote": "held object / posture / gaze 只在单人图或唯一位置匹配人物间比明确归一标签；不同措辞、身份和遮挡无法自动完整语义对齐，不能解释成全部视觉事实准确率。",
+    "figureCountRate": 100,
+    "objectCountRate": 87.5,
+    "moonPhaseRate": 100,
+    "spatialRelationWordOverlapMedian": 51.9,
+    "spatialRelationNote": "这是两人空间关系描述的词袋重合度中位数，不是语义一致率。同一个关系用不同措辞表达是常态，该值天生偏低，只看趋势。",
+    "disagreements": {
+      "figureCount": [],
+      "objectCount": [
+        "review-414 sword 9 vs 8",
+        "review-415 sword 7 vs 8"
+      ],
+      "moonPhase": []
+    },
+    "ambiguousPairings": [
+      "review-404 pentacle (2 vs 1 条，配对不确定)",
+      "review-405 pentacle (1 vs 2 条，配对不确定)",
+      "review-407 cup (2 vs 3 条，配对不确定)",
+      "review-408 sword (2 vs 2 条，配对不确定)"
+    ]
+  },
+  "judgeVerdictDivergenceCounts": {
+    "divergent": 2,
+    "compared": 17
+  },
+  "judgeVerdictDivergenceRate": 11.8,
+  "judgeSelfDeclaredOverturns": [
+    "review-404",
+    "review-409",
+    "review-413"
+  ],
+  "uncertainRate": 11.8,
+  "humanReviewRate": 0,
+  "correctionRate": 47.1,
+  "control": null
+}

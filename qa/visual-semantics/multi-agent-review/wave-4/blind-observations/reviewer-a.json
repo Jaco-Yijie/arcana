@@ -1,0 +1,526 @@
+[
+ {
+  "reviewId": "review-403",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, occupying the middle and lower-middle of the frame",
+     "posture": "seated, sitting well back on a large carved stone throne, knees forward, feet resting on the stone platform at lower left",
+     "gaze": "head tilted downward and turned toward the viewer's left, eyes cast down in the direction of the vessel he holds; he does not face forward out of the frame",
+     "heldObjects": [
+      "a footed goblet/chalice, held in his viewer-left hand, arm extended out to the left roughly at chest-to-waist height, the bowl held upright",
+      "a vertical shaft with a broadened top, under his viewer-right hand where that arm drapes over the throne arm; the shaft descends and rests on the stone block below (object type not resolvable)"
+     ],
+     "clothing": "long dark robe with a patterned/embroidered border running down the front, heavy sleeves, chain or necklace on the chest, tall spired crown on the head"
+    }
+   ],
+   "objects": [
+    {
+     "type": "footed goblet / chalice",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held in the figure's viewer-left hand, left of center at roughly chest height",
+     "orientation": "upright, bowl opening upward",
+     "arrangement": "single object, no group"
+    },
+    {
+     "type": "vertical shaft / rod under the figure's viewer-right hand",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right of center, running down from the throne arm to the stone block below",
+     "orientation": "vertical, top end (broader, guard-like) uppermost, lower end resting on or entering the stone block",
+     "arrangement": "single object"
+    },
+    {
+     "type": "throne",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center, behind and under the seated figure",
+     "orientation": "upright, facing viewer-left/forward; tall pointed-arch back panel, spired finials on the posts",
+     "arrangement": "single, set on a raised stone platform"
+    }
+   ],
+   "environment": [
+    "large flat stone platform / pier edge occupying the lower third",
+    "open dark water with low breaking waves at mid-left",
+    "a masonry block at lower right containing a lattice/grille opening, with water spilling down out of it in a small fall",
+    "very dark sky with no visible celestial body"
+   ],
+   "lightSources": [
+    "a pale, low band of light on the horizon at the left, just above the water — the only bright area in the scene",
+    "faint highlights on the goblet rim and on the figure's crown, hands and face"
+   ],
+   "moonPhase": "not visible — no moon or sun disc appears anywhere in the frame",
+   "spatialRelations": [
+    "the throne sits on the stone platform, with the water on the viewer-left side and the spilling grille structure on the viewer-right side, so the seated figure is flanked by water on both sides",
+    "the goblet is held out away from the body over the platform edge, not drawn to the chest",
+    "the figure is seated on the throne, not standing beside or kneeling at it",
+    "the head is inclined down-left toward the goblet, not raised and not turned back over the shoulder"
+   ],
+   "foreground": [
+    "rough stone paving of the platform, bottom edge of frame",
+    "the masonry block and the falling water at lower right"
+   ],
+   "background": [
+    "dark textured wall/sky field behind the throne",
+    "the sea and the pale horizon band at left"
+   ]
+  },
+  "uncertainObservations": [
+   "The object under the figure's viewer-right hand cannot be identified from the pixels — the top reads as a broad guard or grip and the shaft is straight and vertical, but the lower end disappears against the dark stone.",
+   "Whether the pale horizon band is dawn, dusk or moonlight on cloud cannot be determined; no source disc is visible.",
+   "The scene is extremely low-key; small details of the robe hem, the feet and the throne base may be present but are not resolvable."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-415",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of frame, standing on a dirt path",
+     "posture": "standing upright, mid-stride, both bare feet on the wet path, weight on the near foot; not seated, not kneeling",
+     "gaze": "eyes are covered by a pale cloth band wound around the head; the head is turned to the figure's left (viewer's right) and slightly up, away from the direction the body and feet face",
+     "heldObjects": [
+      "no weapon or vessel in either hand; her viewer-right hand (her left) is raised to her chest gripping the edge of the draped shawl; her viewer-left arm hangs down and is extended slightly out and forward from the body, fingers open and loose"
+     ],
+     "clothing": "long pale cream layered skirt, a wrapped patterned green-grey shawl over the shoulders and one arm, a sash/pouch at the waist, trailing pale ribbons/strips hanging from the shawl and the head wrap; long dark braided hair; barefoot"
+    }
+   ],
+   "objects": [
+    {
+     "type": "upright sword planted in the ground",
+     "count": 7,
+     "countConfidence": "medium",
+     "where": "standing in the earth on both sides of the path — 3 on the viewer-left of the figure, 4 on the viewer-right",
+     "orientation": "all vertical with the pommel and crossguard at the TOP and the blade running DOWN into the soil; the points are buried, not raised",
+     "arrangement": "two flanking files, one on each side of the path, forming an avenue/corridor the figure walks through; the gap is the open path down the middle, and there is a wide unobstructed opening directly ahead of the figure (no blade blocks the path itself)"
+    },
+    {
+     "type": "mushrooms / toadstools",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower-left corner, painted as part of the decorative border",
+     "orientation": "upright caps on stalks",
+     "arrangement": "a small cluster; individual caps overlap so an exact count is unreliable"
+    }
+   ],
+   "environment": [
+    "dense green summer woodland, tall trunks on both sides, heavy leaf canopy overhead",
+    "a muddy, leaf-littered path with standing water/puddles running from the foreground into the distance",
+    "ivy and ferns on the ground and climbing the trunks",
+    "an ornate painted border frame around the whole image with foliage/mushroom/fern motifs in the corners"
+   ],
+   "lightSources": [
+    "bright daylight sun breaking through the canopy from the upper center-right, throwing a bright shaft down the path behind the figure"
+   ],
+   "moonPhase": "no moon visible — this is a daylight scene",
+   "spatialRelations": [
+    "the figure walks toward the viewer, coming down the path out of the bright gap between the trees",
+    "the planted blades flank her on both sides and are set back into the undergrowth off the path; she is between the two files, not behind or in front of them",
+    "her head is turned back over her shoulder to the viewer's right while her body and feet continue toward the viewer — head direction and travel direction differ",
+    "the blades stand roughly in receding perspective, the nearest ones largest at the left and right edges"
+   ],
+   "foreground": [
+    "wet muddy path with reflective puddles and scattered leaves",
+    "border mushrooms lower left, fern and lily-of-the-valley sprays lower right"
+   ],
+   "background": [
+    "sunlit break in the woodland canopy, hazy pale-green light",
+    "receding tree trunks and ivy"
+   ]
+  },
+  "uncertainObservations": [
+   "Blade count is my best individual tally (left: 3, right: 4) but the group is partly screened by foliage and trunks and the outer ones are clipped by the painted border, so an eighth blade could be hidden at either edge or behind the figure. Treat 7 as probable, not certain.",
+   "Whether the cloth over the eyes is a deliberate binding or simply a head wrap that has slipped cannot be determined; it does clearly cover both eyes.",
+   "Exact mushroom count in the corner is not resolvable."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-414",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, slightly left of center, standing in shallow water",
+     "posture": "standing, both bare feet in ankle-deep water, legs together, body in three-quarter view turned to the viewer's left; head bowed forward and down; not seated, not kneeling",
+     "gaze": "head lowered, face angled down and to the viewer's left; eyes are crossed by a pale band, so the gaze direction is toward the water at her feet rather than outward",
+     "heldObjects": [
+      "nothing held — her arms are held against her sides and are wrapped/bound with pale cords or ribbons that wind around the upper body and waist"
+     ],
+     "clothing": "sheer pale layered gown with a long trailing hem in the water, cords/ribbons wound around the torso and arms, small flowers in the long wavy hair"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword standing in the water",
+     "count": 9,
+     "countConfidence": "medium",
+     "where": "spread through the shallow water on both sides of the figure — 3 in the middle distance on the viewer-left, 1 large one in the near foreground at the viewer-left, 3 in the middle distance on the viewer-right, 2 large ones in the near foreground at the viewer-right",
+     "orientation": "all vertical, hilt and pommel UPPERMOST, blade running DOWN into the water; every point is submerged, none raised",
+     "arrangement": "not a row and not a ring — a loose scattering on both flanks that leaves a clear open channel of water directly in front of and behind the figure; the near foreground pair on the right and the single large one on the left sit closest to the viewer"
+    }
+   ],
+   "environment": [
+    "a wide expanse of still, shallow, mirror-like water with faint ripples",
+    "trailing willow-like branches with small leaves at the upper left",
+    "pale washed-out mist across the middle distance",
+    "clusters of pale mauve/white flowers and foliage at the lower left and lower right",
+    "a thin painted border line around the image"
+   ],
+   "lightSources": [
+    "a large crescent moon at the upper right, its bright lit limb facing to the lower left and the dark disc faintly visible inside the crescent, set in a diffuse bright halo",
+    "overall high-key diffuse pale light suffusing the whole scene from the upper right"
+   ],
+   "moonPhase": "crescent — a thin lit crescent on the lower-left side of the disc, with the unlit remainder of the disc faintly showing",
+   "spatialRelations": [
+    "the figure stands in the middle of the blade-studded water with blades on both her left and her right; she is enclosed but there is an open lane of empty water at her feet leading toward the viewer",
+    "the bound cords are around her own arms and torso, not tied to any of the blades",
+    "the blades in the middle distance are smaller and hazier than the foreground ones, indicating depth rather than a single line",
+    "her head is bowed toward the water, not raised toward the moon"
+   ],
+   "foreground": [
+    "one large blade at the left and two large blades at the right, hilts detailed and ornate",
+    "pale flowers and a floating petal/leaf at the bottom center",
+    "her reflection and the wet hem of the gown on the water surface"
+   ],
+   "background": [
+    "misty pale water and sky merging with no clear horizon",
+    "crescent moon upper right",
+    "hanging willow foliage upper left"
+   ]
+  },
+  "uncertainObservations": [
+   "The blade count of 9 is my one-by-one tally, but the middle-distance blades are painted very faintly in mist and two of them nearly overlap on the right, so the true number could be 8 or 10.",
+   "Whether the pale band across the eyes is a blindfold or a veil/hair strand cannot be settled at this resolution; it does lie across both eyes.",
+   "The light is bright and high-key despite the crescent moon — I cannot say from the pixels whether this reads as night or as pale daylight with a visible moon."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-402",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "upper-middle of frame, small in the distance, on the cracked plain",
+     "posture": "down on all fours — crawling, torso low, one arm braced forward on the ground, legs trailing behind with one bare foot and sole turned up toward the viewer; not standing, not sitting, not lying flat",
+     "gaze": "the head is raised and faces away from the viewer, toward the bright horizon ahead; the back of the head is what we see — the figure is not looking back over the shoulder",
+     "heldObjects": [
+      "nothing held; the near arm is planted on the ground supporting the body"
+     ],
+     "clothing": "a ragged dark cloak or robe covering the back and trailing behind; the near arm and one foot are bare"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword laid flat on a spread cloth",
+     "count": 10,
+     "countConfidence": "medium",
+     "where": "the whole lower half of the frame, on a dark crumpled cloth spread over the cracked ground",
+     "orientation": "all lying flat on the ground, parallel, each with the pommel at the TOP (far side) and the blade running DOWN the frame so the POINTS aim toward the bottom edge / toward the viewer; none upright, none planted",
+     "arrangement": "two horizontal rows of 5 — an upper row of 5 across the middle of the cloth and a lower row of 5 nearer the bottom; the lower row is offset to the left relative to the upper row, and the two rows are separated by a clear horizontal gap of bare cloth"
+    },
+    {
+     "type": "ruined columned building on a hill",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper-left, silhouetted on a ridge",
+     "orientation": "upright; a row of standing columns under a dark mass",
+     "arrangement": "single structure at the crest of the left ridge"
+    }
+   ],
+   "environment": [
+    "a wide plain of dry, deeply cracked mud stretching to the horizon",
+    "dark ridges closing in on the left and the right",
+    "a bare dead tree silhouette at the right edge",
+    "heavy dark cloud filling the upper half of the sky",
+    "a dark crumpled cloth or cloak spread flat in the foreground beneath the blades"
+   ],
+   "lightSources": [
+    "a narrow bright band of yellow-white light on the horizon at the center, low down, under the cloud bank — the only light in the scene; no sun or moon disc is actually visible",
+    "cold pale rim-light on the blades themselves"
+   ],
+   "moonPhase": "not visible — no lunar disc anywhere in the frame",
+   "spatialRelations": [
+    "the blades are laid out in the near foreground BETWEEN the viewer and the crawling figure; the figure is beyond them, further up the plain",
+    "the crawling figure moves away from the viewer and away from the blades, toward the lit horizon",
+    "the blades rest on top of the spread cloth, not stuck through it into the earth",
+    "the two rows of 5 are aligned across the frame, not radiating and not in a circle"
+   ],
+   "foreground": [
+    "the spread dark cloth and the ten flat blades",
+    "cracked mud around and beneath the cloth"
+   ],
+   "background": [
+    "the lit horizon strip and the dark cloud mass",
+    "the ruined columns on the left ridge and the dead tree at the right"
+   ]
+  },
+  "uncertainObservations": [
+   "Blade count: I resolved 5 pommels in the upper row and 5 in the lower row, giving 10, but the outermost blade of each row runs close to the dark cloth edge and the image is very low-key, so a partially hidden eleventh cannot be fully excluded.",
+   "Whether the horizon light is sunrise or sunset is not determinable from the pixels; the scene reads as near-dark with a single bright horizon band, not as full daylight and not as a moonlit night.",
+   "The figure's facial features are not resolvable; posture and head direction are clear, expression is not."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-401",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of frame",
+     "posture": "seated on a low pale stone ledge/bench, facing forward toward the viewer, skirts spread wide over the stone to either side; knees together and forward; not standing, not kneeling",
+     "gaze": "a pale cloth band is tied across the eyes, covering both; the head is upright and faces straight out toward the viewer, tilted very slightly to her right",
+     "heldObjects": [
+      "two swords, one in each hand, arms crossed over the chest — the viewer-left blade is held in her right hand and angles up to the UPPER LEFT, the viewer-right blade is held in her left hand and angles up to the UPPER RIGHT, the two forming an X that crosses just above her wrists"
+     ],
+     "clothing": "pale layered gown with a jewelled/beaded belt at the waist, a sheer lace-like shawl over both shoulders and arms trailing down, long pale wavy hair with small ornaments, a pendant on a chain at the throat"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "crossed over the seated figure's chest, one rising to each upper corner of the frame",
+     "orientation": "both POINT-UP and outward — the hilts are low, at her hands near her chest, and the tips reach up to the upper left and upper right; neither is planted or reversed",
+     "arrangement": "a symmetric X / crossed pair, arms folded across the body; the crossing point sits just above the hands, and the blades open outward above it"
+    },
+    {
+     "type": "stone baluster / column post",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "left edge, mid-height, at the end of a low stone rail",
+     "orientation": "upright",
+     "arrangement": "single visible post at the near end of the rail"
+    }
+   ],
+   "environment": [
+    "calm open sea filling the middle distance behind the figure",
+    "a pale stone terrace with a low balustrade at the left and a stone ledge/step under the figure",
+    "a flowering branch with pale blossoms hanging in from the upper left",
+    "small rocky islets on the horizon at the right",
+    "pale blue and white clouded sky",
+    "a thin painted border around the image"
+   ],
+   "lightSources": [
+    "a large crescent moon high in the upper right, lit limb facing lower left",
+    "a broad glittering light path on the sea below and to the right of the moon, running toward the viewer",
+    "overall bright, diffuse high-key light across the whole scene"
+   ],
+   "moonPhase": "crescent — a fairly thick crescent with the lit edge on the lower-left of the disc and the rest of the disc faintly visible",
+   "spatialRelations": [
+    "the figure sits with her back to the sea, facing out of the frame toward the viewer",
+    "the moon is behind her and to her right (viewer's right), roughly above the right-hand blade tip",
+    "the two blade tips point outward to the two upper corners, opening away from each other; the gap between them frames her head",
+    "the stone rail runs along the left behind her; flowering plants are at the lower left"
+   ],
+   "foreground": [
+    "the spread pale skirts and lace shawl filling the bottom half",
+    "the stone ledge and pale flowers at the lower left"
+   ],
+   "background": [
+    "sea, moonlit water path, distant islets, clouded sky",
+    "overhanging blossoming branch upper left"
+   ]
+  },
+  "uncertainObservations": [
+   "The scene light reads as bright and daylight-like even though a crescent moon is plainly in the sky; I cannot determine from the pixels whether the intent is night or day.",
+   "Whether her eyes are shut beneath the band is not visible; the band itself clearly covers both eyes.",
+   "Fine detail of the hilts and of the pendant is not resolvable."
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-413",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left of center, occupying the full height of the left half",
+     "posture": "standing upright on wet ground, seen in profile facing the viewer's right; shoulders rounded, head bowed sharply forward and down; not seated, not kneeling",
+     "gaze": "looking straight down into the vessel held at chest height; the face is in profile turned right, the eyes are cast down, not toward the lit doorway behind and above",
+     "heldObjects": [
+      "a single footed cup/bowl, cradled in BOTH hands at chest height, held upright, with a faint pale vapour or glow rising out of it toward the figure's face"
+     ],
+     "clothing": "a long, heavy, tattered patterned robe or cloak reaching the ground, torn strips hanging from the sleeve and hem; dark unkempt hair"
+    }
+   ],
+   "objects": [
+    {
+     "type": "footed cup / vessel",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held in both hands at the figure's chest, left-center of frame",
+     "orientation": "upright, opening upward, faint vapour rising",
+     "arrangement": "single object; no other vessel appears anywhere in the frame"
+    },
+    {
+     "type": "stone doorway / arched gate set into a rock face",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right of center, mid-height, raised above the shore",
+     "orientation": "upright, facing the viewer's left toward the figure; round-arched with carved jambs and a dark leaf/door within",
+     "arrangement": "single opening; a bright light spills out from its base down onto the wet ground"
+    },
+    {
+     "type": "scattered stones/pebbles on the wet flat",
+     "count": null,
+     "countConfidence": "low",
+     "where": "the foreground and middle ground on the right",
+     "orientation": "lying on the ground",
+     "arrangement": "irregular scatter; individual stones are too small and too dark to tally"
+    }
+   ],
+   "environment": [
+    "a wide wet tidal flat / shore with shallow water and low breaking waves running across the middle of the frame from the left",
+    "a dark rocky cliff or headland on the right into which the doorway is built",
+    "a very dark, textured sky with no visible celestial body",
+    "a long dark shadow stretching from the lower right up toward the lit doorway"
+   ],
+   "lightSources": [
+    "a bright pale glow at the foot of the arched doorway, spilling out and reflecting in a long streak across the wet ground and the shallow water",
+    "a faint luminous vapour rising from the cup, catching the figure's face and hands",
+    "no moon and no sun is visible"
+   ],
+   "moonPhase": "not visible — no lunar disc in the frame",
+   "spatialRelations": [
+    "the figure stands on the shore with the sea at his back (viewer-left) and the lit doorway ahead of him to the viewer-right, but he does NOT face or look at the doorway — his head is bowed to the cup",
+    "the doorway sits higher than the figure, set up in the rock, and its light falls down and across toward the lower right, not onto the figure's face",
+    "the long cast shadow runs from the lower-right foreground toward the doorway's light",
+    "the waterline runs behind the figure, roughly at his knee level in the picture plane"
+   ],
+   "foreground": [
+    "wet dark sand with scattered pebbles and reflected light streaks",
+    "the trailing hem and torn strips of the robe"
+   ],
+   "background": [
+    "dark sea and low surf on the left",
+    "the rock face, the arched lit doorway on the right",
+    "black sky"
+   ]
+  },
+  "uncertainObservations": [
+   "The scene is extremely dark; details of the robe's pattern, the figure's feet, and anything inside the doorway are not resolvable.",
+   "The exact nature of what rises from the cup (steam, smoke, sparks or light) cannot be determined — only that a faint pale plume is present above the rim.",
+   "I cannot tell whether the figure is barefoot; the hem covers the feet."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-405",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left of center, standing on stone paving",
+     "posture": "standing upright, body seen from behind in three-quarter view, turned toward the viewer's right; feet on the ground, long cloak train pooling and trailing behind to the lower left; not seated, not kneeling",
+     "gaze": "head turned to the viewer's right toward the stone gateway and the pouring chute; we see the back and right side of the head, a sliver of the profile — the face is directed away from the viewer, toward the structure",
+     "heldObjects": [
+      "in the viewer-LEFT hand, held out to the side and up at about shoulder height, palm upward: a single flat golden disc incised with a five-pointed star inside a circle, glowing",
+      "the viewer-RIGHT arm is extended forward and right, the hand gripping a lever/handle projecting from the gate structure; a stream is pouring out of the chute directly beneath that hand"
+     ],
+     "clothing": "a long heavily patterned/brocaded cloak or mantle with an extremely long train dragging across the paving, high collar, dark inner garment; dark shoulder-length hair and a beard visible at the jaw"
+    }
+   ],
+   "objects": [
+    {
+     "type": "golden disc bearing a five-pointed star (pentacle)",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "left of frame, balanced on/above the figure's upturned left palm, shoulder height",
+     "orientation": "flat face turned toward the viewer, upright in the picture plane, star fully legible",
+     "arrangement": "single object; it is the brightest thing in the picture and no second disc of this kind appears anywhere"
+    },
+    {
+     "type": "carved bull's / ox head",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "mounted high on the stone gate structure, upper right, above the arch",
+     "orientation": "projecting out from the wall, facing the viewer's left toward the figure, horns spread wide",
+     "arrangement": "single, centered over the arch"
+    },
+    {
+     "type": "barrel / tub receiving or holding the poured material",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "lower right, below the chute",
+     "orientation": "upright, open tops",
+     "arrangement": "side by side; the left one sits directly under the falling stream, the right one already stands heaped above its rim"
+    },
+    {
+     "type": "sack / stuffed bag on the ground",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "bottom right of frame, on the paving in front of the barrels",
+     "orientation": "lying flat, slumped",
+     "arrangement": "one flatter cushion-like sack at the left, one rounder tied sack at the right edge, partly cropped by the frame"
+    },
+    {
+     "type": "arched gateway with a heavy vertical-barred gate/portcullis",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right of center, filling the right half of the upper frame",
+     "orientation": "upright, the opening facing the viewer's left toward the figure",
+     "arrangement": "single arch within a large squared stone tower/facade"
+    },
+    {
+     "type": "coins/grain in the pouring stream and heaps",
+     "count": null,
+     "countConfidence": "low",
+     "where": "the falling stream and the heaped barrel at lower right",
+     "orientation": "falling downward out of the chute",
+     "arrangement": "a continuous granular stream and mounded heaps; individual items cannot be separated or counted"
+    }
+   ],
+   "environment": [
+    "a massive stone gate-tower with carved mouldings occupying the right half",
+    "a dark hillside at the left with a tall spired castle/cathedral silhouette and a long flight of steps or a ramp climbing toward it",
+    "flat stone paving in the foreground, wet-looking, catching light",
+    "a black, faintly star-flecked night sky",
+    "a printed border line down both sides of the image"
+   ],
+   "lightSources": [
+    "the glowing golden disc in the figure's raised hand — the dominant light, casting the highlights on his cloak and on the paving",
+    "a weak diffuse glow in the sky behind the hilltop spires at the upper left",
+    "no moon or sun disc is visible"
+   ],
+   "moonPhase": "not visible — no lunar disc in the frame",
+   "spatialRelations": [
+    "the figure stands with his back to the viewer between the castle hill (behind, left) and the gate structure (ahead, right); he is not inside the arch but on the paving in front of it",
+    "the disc is held out on the side AWAY from the gate, the working hand is on the gate side — the two hands do opposite things",
+    "the pouring stream falls from a chute under the figure's right hand down into the nearer barrel below",
+    "the bull's head is directly above the arch and above the pouring chute, looking back toward the figure",
+    "a long shadow of the figure runs from his feet toward the lower right across the paving"
+   ],
+   "foreground": [
+    "the trailing cloak train and the stone paving",
+    "the sacks and barrels at the lower right"
+   ],
+   "background": [
+    "the spired castle silhouette and stair on the left hill",
+    "the night sky",
+    "the upper masonry of the gate tower"
+   ]
+  },
+  "uncertainObservations": [
+   "What is pouring from the chute cannot be identified — it reads as a granular stream (grain, coins or gravel), but individual items are not resolvable, so no count is possible.",
+   "The number of containers at lower right is a best tally of 2 barrels plus 2 sacks; the right edge crops the group, so another container may be out of frame.",
+   "The figure's face is largely turned away; features other than the beard line are not resolvable.",
+   "Whether the incised star on the disc is exactly five-pointed is as far as I can resolve — the point count reads as five but the glow blooms over the engraving."
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ }
+]

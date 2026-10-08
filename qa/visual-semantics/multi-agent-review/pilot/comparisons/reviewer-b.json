@@ -1,0 +1,80 @@
+[
+ {
+  "reviewId": "review-010",
+  "verdict": "pass",
+  "notes": "Every asserted element matches what I recorded: one standing poler behind two seated hooded passengers, long pole, upright blades clustered between the passengers and the bow, battlemented stone tower on the left bank, low ridge on the far shore, bundle/sack on the boat floor, belt pouch, rust-red cloak, engraved cross-hatching and ruled border with corner flourishes. The text deliberately avoids stating a sword count and self-flags it as uncertain, which matches my own null count.",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-005",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects / spatialRelations",
+    "existing": "hanging lantern with warm glow at the boat's stern",
+    "observed": "the lit lantern hangs from an ornate finial post at the right-hand end of the boat — the same end the text itself calls the bow, outboard of and beyond the row of upright swords",
+    "evidence": "In the image the standing poling figure is at the left end, the seated figure is mid-hull, the swords stand to their right, and the glowing lantern hangs furthest right of all, past the swords, on a decorated post over the water. The text's own spatialRelations place the bow toward the right and the swords in the bow, so putting the lantern at the stern contradicts the pixels and is internally inconsistent.",
+    "confidence": "high"
+   },
+   {
+    "field": "model self-reported uncertainty",
+    "existing": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+    "observed": "I can individually resolve five hilts/blades; a sixth is not establishable — the pale palette and overlapping shafts prevent a reliable count in either direction",
+    "evidence": "Five distinct pommel/cross-guard clusters are separable left-to-right above the gunwale; whatever lies to the right of them cannot be separated from the lantern post's shaft. This is flagged as unverifiable, not as a different number.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "hanging lantern with warm glow at the boat's stern",
+     "with": "hanging lantern with warm glow on a post at the boat's bow, beyond the swords"
+    },
+    {
+     "find": "exact number of swords standing in the bow (appears to be six, some overlapping)",
+     "with": "exact number of swords standing in the bow (not reliably countable; blades overlap)"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-008",
+  "verdict": "pass",
+  "notes": "Matches my record: two dark near-silhouetted figures standing face to face, a small lit stemmed cup with a pale flower between them at centre, a horizontal row of five rectangular wall recesses each holding one stemmed goblet, a staircase rising at the right, cracked stone floor, frayed trailing robe hems. I independently resolved five niched goblets one by one, so the stated five is supported. The flower's exact attachment and the lower-left branches are self-flagged as uncertain, consistent with my own notes.",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-001",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "deckSpecificMotifs",
+    "existing": "monochrome near-greyscale rendering with a trace of violet",
+    "observed": "the palette reads as warm brown/sepia-black with ivory-amber highlights; I saw no violet anywhere in the frame",
+    "evidence": "The stone wall, the robe, the paving and the lit patch around the pale bird are all warm brown-to-amber in tone; the only near-neutral areas are the deepest blacks. 'Near-greyscale' is arguable, but the asserted violet trace is not supported by anything visible.",
+    "confidence": "medium"
+   },
+   {
+    "field": "scene / keyObjects",
+    "existing": "cupped hands catching the water",
+    "observed": "one hand grips the chalice's body/stem while the other single hand is held open, palm up, beneath the falling stream",
+    "evidence": "The water does not pass through two cupped hands; the left hand supports the vessel at chest height and only the right hand is extended flat under the overflow before it falls to the step. The phrasing overstates a two-handed cupping that is not in the pixels.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "monochrome near-greyscale rendering with a trace of violet",
+     "with": "near-monochrome warm brown/sepia rendering"
+    },
+    {
+     "find": "cupped hands catching the water",
+     "with": "one open hand held beneath the falling water"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ }
+]

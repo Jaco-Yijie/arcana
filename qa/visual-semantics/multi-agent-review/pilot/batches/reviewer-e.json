@@ -1,0 +1,22 @@
+{
+  "reviewer": "reviewer-e",
+  "stage": "blind-observation",
+  "images": [
+    {
+      "reviewId": "review-008",
+      "path": "qa/visual-semantics/blind-review/review-008.png"
+    },
+    {
+      "reviewId": "review-001",
+      "path": "qa/visual-semantics/blind-review/review-001.png"
+    },
+    {
+      "reviewId": "review-007",
+      "path": "qa/visual-semantics/blind-review/review-007.png"
+    },
+    {
+      "reviewId": "review-003",
+      "path": "qa/visual-semantics/blind-review/review-003.png"
+    }
+  ]
+}

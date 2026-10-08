@@ -4,7 +4,7 @@ import { languageCode } from './types'
 import { IS_STREAMLIT, requestViaStreamlit } from '@/features/reading/streamlitTransport'
 import { parseTranslation, translationMessages } from './translation'
 
-const fields = new Set(['question', 'optimizedQuestion', 'headline', 'readingTheme', 'overallEnergy', 'interpretation', 'connectionToQuestion', 'narrative', 'answerToQuestion', 'reflectionQuestions', 'safetyNotice', 'position', 'cardName', 'positionLabel', 'text', 'relations', 'trend', 'watchOut', 'actions', 'content', 'mood', 'note', 'outcome', 'insight'])
+const fields = new Set(['question', 'optimizedQuestion', 'headline', 'readingTheme', 'overallEnergy', 'interpretation', 'connectionToQuestion', 'narrative', 'answerToQuestion', 'action', 'reason', 'timeframe', 'watchFor', 'coreIssue', 'whyItMatters', 'evidence', 'signal', 'reflectionQuestions', 'safetyNotice', 'position', 'cardName', 'positionLabel', 'text', 'relations', 'trend', 'watchOut', 'actions', 'content', 'mood', 'note', 'outcome', 'insight'])
 const cache = new Map<string, string[]>()
 const textCache = new Map<string, string>()
 function needsTranslation(text: string, language: 'zh' | 'en') {

@@ -1,0 +1,2275 @@
+{
+  "version": 1,
+  "_readme": [
+    "人工复核记录与修正。手写文件，进 git，PR 里逐条 review。",
+    "键是 deckId/cardId。不在这里的牌一律 reviewStatus=unreviewed。",
+    "reviewStatus: pass | corrected | uncertain",
+    "replace: 逐字精确子串替换，作用于 scene 与全部列表条目（推荐，跨重新生成仍然有效）",
+    "patch:   整字段覆盖（会连带盖掉该字段里模型写的其它条目，慎用）",
+    "uncertainFields: 人工判定不可靠的字段，整个清空、不进 Reading Prompt",
+    "reason / reviewer / reviewedAt 只进 QA 报告，绝不进 Reading Prompt。",
+    "用 npm run visual:review 查看与标记；改完跑 npm run visual:check 验证。"
+  ],
+  "entries": {
+    "legacy-celestial/cups-03": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-505",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-a.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "high",
+          "independentFinding": "三名人物举臂聚拢杯群，能辨认两个杯轮廓但重叠遮挡使总杯数无法确定。天空左上有部分被遮的浅色圆盘，精确月相难辨。"
+        }
+      },
+      "uncertainFields": [
+        "scene"
+      ],
+      "patch": {
+        "keyObjects": [
+          "constellation lines linking gold star points",
+          "concentric astrological ring diagram across the sky",
+          "small pale disc at upper right",
+          "domed colonnaded pavilion with a lit lantern at right",
+          "cluster of dark grapes and pomegranates at lower left",
+          "cut pomegranate showing seeds"
+        ],
+        "spatialRelations": [
+          "the three figures form a triangle around the central raised cups",
+          "the pavilion sits behind and to the right of the right-hand figure",
+          "the fruit cluster lies in the near foreground below the left figure"
+        ]
+      },
+      "reason": "两名 Reviewer 都只辨出两个杯，但 reviewer-d 明确不能排除第三杯被遮，a 亦在不确定项承认可能完全遮挡；自身观察同样不能确认准确总数。因此拒绝强改为二杯，将所有现有三杯数量断言降级，并移除无法确认的新月对象条目。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-d/judge-agent"
+    },
+    "legacy-celestial/cups-04": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-116",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-c.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "I opened the image first. At the lower left, below and beside the large glowing engraved star-chart disc, there is a group of three or four flat, layered, roughly rectangular forms catching a thin highlight along their top edges. At native resolution they carry no spines, no covers, no page-block striation and no binding — they read exactly as well as stacked stone slabs or low steps, and they sit continuous with the rock and roots around them. I cannot identify them as books. Two things I checked that the reviewers disputed and that I find the existing description gets RIGHT: (a) the object on the ground at the right genuinely is an armillary sphere on a stand — enlarged, it shows nested rings with an inner tilted ring read as an ellipse, radial meridian spokes, a protruding polar axis pin at the top, all mounted on a tiered stepped pedestal; (b) the disc in the upper right sky is a complete, unbroken circular sphere with faint surface mottling and no terminator line or crescent horns anywhere on it. Also confirmed and unchanged: three upright golden goblets standing in a row on the paving, a fourth goblet floating just above the open palm of a translucent nebula-hand reaching in from the right, and the seated figure's eyes open but directed down and to the viewer's left, away from the offered cup."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "golden chalice held by the luminous hand",
+          "three golden chalices standing in a row on the ground",
+          "large gnarled tree trunk and branches",
+          "armillary sphere on a stand at the right",
+          "circular astrolabe or star chart leaning at the left",
+          "constellation lines and star points across the sky",
+          "small domed pavilion on the far shore"
+        ]
+      },
+      "reason": "The books are the textbook MARK_UNCERTAIN case: the existing description asserts a specific identification that the pixels do not support, and I cannot substitute a confident alternative either — 'stone slabs' is no better evidenced than 'books'. Both reviewer-c and reviewer-e independently flagged it on the same grounds (no spines, covers, page edges or bindings; flat rectangles in deep shadow), and I independently agree after enlarging the region 12x. Because it is ambiguous rather than unambiguous, it fails AUTO_CORRECT threshold 1, so I remove the claim instead of rewriting it. I name the items rather than discarding the whole keyObjects field, so the reliable entries both reviewers confirmed — the chalices, the tree, the armillary sphere, the astrolabe disc, the constellation lines, the pavilion — all survive. Three items are named. The first is the books entry itself. The second is the self-reported-uncertainty line 'exact number of books in the left-hand stack', which presupposes the same unsupported identification and would otherwise be left dangling. The third is the self-reported-uncertainty line offering 'crescent moon' as a possibility: both reviewers independently and explicitly ruled out a crescent, and I confirmed the disc is a complete unbroken circle, so leaving that line in would feed the interpretation model an option that is affirmatively false. Dropping it costs almost nothing, since no moon phase is asserted as fact anywhere else in the record. I am overturning reviewer-e on the armillary sphere: reviewer-e claimed no vertical stand, no nested rings and no three-dimensional armature are resolvable, but all three are plainly visible when enlarged, and reviewer-c independently described it as a 'ring device on a post'. The existing keyObjects and spatialRelations entries for the armillary sphere are correct and are left untouched.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-celestial/major-10": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-410",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-b.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "I opened the image and zoomed the raised hand at 9x and at 16x nearest-neighbour. The figure stands back-to-viewer on a round tiered platform in water, viewer-right arm raised with index finger extended toward the wheel's lower rim node. Against the wheel's main graduated band there is a clear gap, but a thin hairline arc of the wheel and the wheel's vertical axis stem come down exactly to the fingertip. At native resolution the fingertip and that line are separated by at most one or two pixels, and the glow around the node bleeds over the finger, so I cannot establish whether there is contact or a small gap. The rest of the described scene checks out: four constellation line-figures (winged humanoid with an open book upper-left, winged bird upper-right, bull lower-left, lion lower-right), a large armillary sphere on the figure's viewer-left and a smaller ringed instrument plus a lit lantern on the viewer-right, warm horizon glow behind mountains, platform mirrored in the water."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "visualTensions": [
+          "the figure's small scale against the enormous ring",
+          "warm horizon glow against the cold blue-violet sky"
+        ]
+      },
+      "reason": "The existing visualTensions item asserts a definite separation ('almost but not quite'), and builds a tension on it. Reviewer-e flagged it and reviewer-f independently recorded in his blind observation that he 'cannot tell whether the raised fingertip makes contact with the wheel's rim or stops just short of it'; reviewer-b, although he voted pass, also recorded it non-committally as 'touching or nearly touching'. So the unresolvability is independently on record from more than one reviewer and matches my own zoom. I am NOT applying reviewer-e's patch: it swaps one unverifiable assertion (a gap) for the opposite unverifiable assertion (contact), which fails threshold 1 - the visual fact is ambiguous, not unambiguous. The correct action is to drop the over-asserted item rather than flip it. I am naming only the visualTensions item; the spatialRelations line 'its raised hand nearly touching the ring's lower rim' is a soft hedge compatible with either reading, so I am leaving it in to minimise loss.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e+reviewer-f/judge-agent"
+    },
+    "legacy-celestial/major-15": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-111",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image and brightened/zoomed three regions before reading the packet. Mask: on the plinth sits a horned helm-like mask whose two almond eye apertures are distinctly LIGHTER than the near-black face around them, with a faint warm glow inside - they are the brightest thing on the mask and the reason it reads as the visual centre. 'Dark eye openings' inverts the actual tonal relationship. Figures: at 4x the left figure is unambiguously a full rear view - back of the head, shoulder line and the fall of the robe down his back, face not visible - with both arms raised overhead, each hand gripping a chain; the chain is unmistakably a chain, with individual oval links I can count, looped over his head and running down his back and left hip. His wrists are not shackled; his hands grip it freely. The right figure is also a rear view: her back is to us, her robe falls away from us, and only her head is turned in profile toward the viewer's left, toward the altar; her near hand is raised bare and open onto the chain lying on her shoulder. So neither torso is turned toward the mask."
+        }
+      },
+      "replace": [
+        {
+          "find": "horned mask with two curved horns and dark eye openings",
+          "with": "horned mask with two curved horns and pale, luminous eye openings"
+        },
+        {
+          "find": "the two figures face inward toward the central mask, framing it symmetrically",
+          "with": "the two figures stand one on each side of the central mask, both seen from behind with their backs to the viewer; only the right figure's head is turned toward it"
+        }
+      ],
+      "reason": "I am patching only the two items that clear all five thresholds, and deliberately leaving the rest. (1) Mask eyes: visually unambiguous, reported independently by BOTH reviewer-b (high confidence) and reviewer-d (medium), confirmed by my own brightened zoom, a pure observable tonal fact, expressible as one exact substring swap. (2) 'face inward toward the central mask': both reviewers raised it independently, and both of their blind observations state without prompting that both figures are seen from behind with their backs to the viewer - reviewer-b 'bodies turned away from the viewer', reviewer-d 'both with their backs to the viewer'. I confirmed it myself. But the two reviewers then diverge on the SYMMETRY clause: reviewer-b wants to keep 'flanking the mask symmetrically', reviewer-d denies symmetry because the left figure stands markedly closer and renders larger. Since that part is contested and is a compositional judgement rather than an observable, my replacement encodes only the triply-confirmed facts (rear view, one on each side, the right figure's head turned toward the mask) and simply omits the symmetry claim rather than asserting or denying it. Not patched: reviewer-b's third issue, 'the chain arcs from the left figure's raised hands across the upper left of the frame'. Reviewer-d never raised it, so threshold 2 bars it outright, and on looking I find the claim only loosely imprecise rather than false - his raised hands genuinely do sit in the frame's upper-left region, even though the chain does not cross the open star field beyond him. That is a wording matter for a later pass, not a fact error. Both find strings were checked with grep -F against reveal/review-111.md; each occurs exactly once.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-celestial/major-20": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-314",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-c.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "Looking at the image myself before reading any reviewer: every object I can resolve in a figure's hands is the same flat, pale, open rectangular form held at chest height - the three figures at the bottom left, the hooded figure seated in the small boat at bottom right, and the waders scattered across the middle distance. Several of them glow faintly. I cannot find a single rolled, furled or spindled object anywhere in the frame. At this rendering size I also cannot positively confirm these are books or tablets rather than panels or lids - I can only confirm they are flat and open. Separately, I did see two ringed instruments on stands on the left platform, a larger multi-ring sphere and a smaller globe beside it, not one."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "long horn with flared bell",
+          "stone tower platform with arched niches",
+          "armillary sphere on a stand",
+          "small lantern on the platform edge",
+          "large studded chest in the foreground",
+          "small rowing boat with a lantern",
+          "concentric ring lines in the sky"
+        ]
+      },
+      "reason": "The keyObjects entry asserts two object classes joined by 'and', and the second one ('scrolls') is a positive claim I cannot substantiate from the pixels. Reviewer-a affirmatively reports no rolled or furled form is resolvable anywhere; reviewer-c independently records in its uncertainObservations that 'whether the pale objects held are books, scrolls or lids is not resolvable at this size'. So the two reviewers do not jointly assert a replacement fact - one says the class is absent, the other says the class is undecidable - which fails the AUTO_CORRECT bar (no two-reviewer agreement on a single observable fact, and the fact is not unambiguous on the image). Dropping the item is the minimal-loss move: it removes an unverifiable object class rather than rewriting it into a different unverifiable one. I am naming the single item rather than the field, so the other seven keyObjects entries survive. The scene sentence repeats the same unverified word ('holding open tablets and scrolls') but I am not touching it, because dropping the whole scene line to remove two words would cost far more than it saves - flagging the keyObjects item is enough to stop the interpretation model from treating scrolls as established. On reviewer-c's separate armillary-sphere point I do NOT correct: both reviewers logged that count at only medium confidence, and more importantly 'armillary sphere on a stand' is an under-specified entry, not a false one - it never claims there is exactly one - so there is no factual error to fix.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-celestial/swords-03": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-515",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-c.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "棱面心由三剑穿入；人物坐看纸，桌另纸状物及暗小物，金属环仪和灯。左两浅圆盘类别/月相不稳。"
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "three swords with ornate hilts and glowing blades",
+          "large faceted crystal heart",
+          "open document held by the figure",
+          "armillary sphere on the table",
+          "lit lantern on the ground at lower right",
+          "ruined stone arch on the right",
+          "constellation lines and gold star points"
+        ]
+      },
+      "reason": "f补two crescent moons无双人明确确认，Judge不确认，拒绝插入。a存疑红印，f声称蜡印，c无法辨认，Judge无法确认seal，过滤组合对象。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c+reviewer-f/judge-agent"
+    },
+    "legacy-celestial/swords-04": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-203",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-a.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "Looking at the image myself first: the tall pointed arched window runs from the top of the artwork down to roughly the level of the reclining figure's head — about the upper half of the left edge. Below that point the left edge is solid interior: the armillary sphere on its tripod, the carved end panel of the stone bier, then polished dark floor carrying a large circular star-chart inlay. The window is simply not present along the lower half of the left edge. I also independently count three swords mounted point-down on the wall above the figure, evenly spaced with clear dark gaps, plus one separate blade laid horizontally along the front panel of the bier — these two groups are reliable. One figure lies supine, head left on a dark pillow, hands folded on the chest, covered by a constellation-patterned coverlet. A caged lantern with a warm flame stands at the right end. The wall is flat and covered in faint circular star-chart diagrams; no ceiling, vault rib or springing is visible anywhere in the frame, but the view is also cropped above the hanging blades, so I cannot affirm or deny a vault."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "spatialRelations": [
+          "the three wall swords hang above and to the right of the reclining figure",
+          "the caged lantern sits at the far right end of the slab, opposite the armillary sphere at the left",
+          "the floor star-map lies below and in front of the slab, centred under the composition"
+        ]
+      },
+      "reason": "The 'full left edge' claim is wrong on the pixels — I verified that independently — but only ONE reviewer (reviewer-a, and only at medium confidence) raised it; reviewer-c did not. The two-reviewer threshold for AUTO_CORRECT is explicitly not met, so I will not rewrite it. Removing the single claim is the lower-cost, safer action than handing a false spatial assertion to the interpretation model, and it is excisable as one named list entry, so nothing else in spatialRelations is lost — the reliable entries (lantern opposite the armillary sphere, floor star-map below and in front of the slab, three swords above the figure) all survive. I did NOT action reviewer-c's separate objection to 'dark vaulted chamber' in the scene line: it too is single-reviewer, the ceiling is outside the crop so the claim is neither confirmable nor refutable from pixels, and 'vaulted' is a fragment inside the scene sentence rather than a list entry — excising it would require discarding the entire scene field, a cost far out of proportion to a low-impact architectural descriptor. The two reviewers do not contradict each other here; they each flagged a different unsupported assertion, so this is not a HUMAN_REVIEW case.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-celestial/swords-05": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-303",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/review-303-rejudge.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "Image-first: foreground figure holds point-down sword bundle; two swords lie on pavement; two distant figures face away. Cannot trace independent held hilt/guard/blade assemblies to verify exactly three. Border rules and side ticks visible, compass rosettes not resolved."
+        }
+      },
+      "uncertainFields": [
+        "scene"
+      ],
+      "patch": {
+        "keyObjects": [
+          "two swords lying flat on the stone floor",
+          "circular astrological floor engraving",
+          "Roman numeral V at top centre",
+          "text 'Five of Swords' at bottom",
+          "domed colonnaded structure at left",
+          "armillary sphere on a stand at left"
+        ],
+        "deckSpecificMotifs": [
+          "constellation lines drawn across the sky",
+          "spiral galaxy rendered in violet",
+          "gold astrological floor diagram"
+        ]
+      },
+      "reason": "Previous AUTO_PASS alleged reviewer-f placeholders/three cups, contradicted by current valid sword-scene evidence. Border correction has only one explicit reporter. Held count unresolved: a null, c three with two-or-four caveat, f confident three, Judge cannot verify. Filter repeated scene count and named object/motif claims; retain ground swords and other reliable evidence.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c+reviewer-f/judge-agent"
+    },
+    "legacy-celestial/swords-06": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-317",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "Looking at the image myself first: there are two figures in the boat and they are not both seated. The farther figure STANDS upright - full torso, shoulders and head rise well clear of the gunwale, cloak falling in vertical folds to the boat's floor - with both hands high on a long pole/oar that angles down into the water off the boat's right side. Only the nearer figure, wrapped in a patterned blue-violet cloak, is seated. The boat is seen from astern: the end nearest me is the broad, rounded, carved transom, and the hull narrows away toward the far end; both figures face away from me toward the golden horizon glow, and the reflected light track runs from the horizon down the water toward the boat. So the bow points away, not toward the viewer. Upright blades line both rails - I read three to a side but could not rule out another hidden behind the standing figure's cloak."
+        }
+      },
+      "replace": [
+        {
+          "find": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing",
+          "with": "Two cloaked figures travel in a wooden rowboat on dark water, one seated and one standing at the oar"
+        },
+        {
+          "find": "the boat occupies the lower centre, its bow toward the viewer",
+          "with": "the boat occupies the lower centre, seen from astern, its bow pointing away toward the horizon"
+        }
+      ],
+      "reason": "Both edits clear all five gates. Posture: reviewer-b and reviewer-d independently raised that one figure stands rather than sits, both at high confidence, and I saw it unaided - the standing/seated split is unmistakable in the silhouette. The existing file is also self-contradictory, since its own keyObjects line already says 'long wooden oar held by the standing figure' while the scene says both figures sit. Boat orientation: reviewer-b and reviewer-d again both raised it independently (medium and high), and I confirmed it myself from the carved transom nearest the viewer, the hull tapering away, and both figures facing the horizon glow. Both are observable facts - posture and orientation - not interpretation, and both express as exact substring replacements verified verbatim against reveal/review-317.md. I chose reviewer-d's framing over reviewer-b's for the scene line because reviewer-b's rewrite drops 'Two cloaked figures' from the opening, and the count of two is correct and worth keeping. I avoid the word 'poling': reviewer-d notes it cannot be determined whether the implement is a single oar or a punting pole, so I keep the neutral 'at the oar', which matches the existing keyObjects wording. I take no action on the blade count - both reviewers report six as a floor at only medium confidence, and the file's self-reported uncertainty already flags 'exact number of sword blades visible'.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-celestial/swords-07": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-316",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "Looking at the image myself first: on the table at the left, two swords stand vertically, and both show an ornate cross-guard and ring pommel at the TOP with the blade narrowing downward into a short cylindrical socket at the table surface. Neither points skyward. The cloaked figure stands centre-right with its back to me, mid-stride toward the lit horizon on the right, carrying a tight bundle of blades against its right side with the hilts projecting above the shoulder. I could pick out roughly four distinct cross-guards at the top of that bundle but the shafts below overlap and merge into the dark cloak, so I cannot fix a total. I could NOT determine which way the head is facing - it is a dark silhouette against a dark sky."
+        }
+      },
+      "replace": [
+        {
+          "find": "two upright swords standing point-up in cylindrical holders on a table",
+          "with": "two swords standing hilt-up, blades driven point-down into cylindrical holders on a table"
+        }
+      ],
+      "reason": "All five gates are met for the table-sword orientation. (1) The fact is unambiguous on the image and I verified it myself before reading any reviewer. (2) Reviewer-c AND reviewer-e independently raised this exact item, both at high confidence - not one passing and one objecting. (3) I reached the same conclusion independently. (4) Orientation is a pure observable fact, not interpretation. (5) It expresses as one precise substring replacement, checked verbatim against reveal/review-316.md. I am deliberately NOT touching two other things the reviewers raised. First, the head direction in visualTensions: reviewer-c says the head turns right toward the lit horizon while reviewer-e says it turns back over the shoulder toward the table on the left - a direct contradiction - and I could not resolve it from the pixels either, so 'the figure's body faces away while the head turns back toward the camp' stays as-is and should be treated as unverified; it sits in visualTensions, a soft field, so leaving it costs less than acting on a coin-flip. Second, the carried-bundle count: both reviewers agree the total is unresolvable, but they disagree on how many hilts are separable (three vs four), so I will not write a replacement number - and the file's own self-reported uncertainty already flags that count, which limits the downstream damage.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-celestial/swords-08": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-417",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer notes. A barefoot woman in a dark star-flecked gown walks mid-stride TOWARD THE VIEWER down the open lane between two flanking ranks of swords on stone plinths; her body faces the viewer, her toes point toward the bottom of the frame, and the nearest swords are the largest in the frame. Both her hands are raised to the ends of a pale cloth band lying flat across her eyes; her head is bowed. The domed lit building is in the middle distance at roughly x=355 in a 560-wide frame, while the figure is at roughly x=265 and the open lane between the ranks is centred near x=280 - so the dome sits well RIGHT of the walkway's centre line, raised on a bank, its warm doorway throwing a gold reflection onto the water to the right. It is behind her, not ahead of her. I counted 8 swords, 4 per side, each on its own dark plinth. On every one the round ball pommel is at the very top, then the grip, then the crossguard, then the blade running DOWN into the plinth. The large body in the upper right is a cratered sphere encircled by a thin elliptical ring line."
+        }
+      },
+      "replace": [
+        {
+          "find": "walks forward along a wet stone path between two rows of upright swords, lifting a pale cloth from her eyes, toward a small domed lit building under a star-filled sky",
+          "with": "walks forward toward the viewer along a wet stone path between two rows of upright swords, lifting a pale cloth from her eyes, with a small domed lit building on the rise behind her under a star-filled sky"
+        },
+        {
+          "find": "the domed building sits behind her, centred on the path's vanishing point",
+          "with": "the domed building sits behind her and well to the right of the walkway's centre line, raised on a bank above the water, its lit doorway reflected on the water"
+        }
+      ],
+      "reason": "Two observable-fact corrections, both clearing the threshold. FIX 1 (direction of travel): the scene claims she walks 'toward a small domed lit building'. reviewer-d raised this formally at confidence=high, and reviewer-b independently recorded the same fact in his blind observation before comparison - spatialRelations: 'the figure walks forward toward the viewer, between the two flanking sword groups' and 'the lit building sits behind her right shoulder in the distance' - so the two-reviewer bar is met on the formal report plus blind-observation concordance. I verified it myself from the figure's facing, stride and the near-to-far sword scale. The reveal also self-contradicts: its own spatialRelations already says the dome 'sits behind her'. FIX 2 (dome position): both Reviewers raised this formally and in near-identical words - reviewer-b ('noticeably to the RIGHT of the walkway's centre line') and reviewer-d ('noticeably right of centre, on a rise beside the water, not on the path's centre line') - and both independently logged 'right of center' in their blind observations. I measured the offset myself. Position is an observable fact. Both replacements are exact substrings confirmed unique with grep -F. WHAT I DELIBERATELY DID NOT ACT ON: (a) SWORD ORIENTATION - reviewer-b says the swords are hilt-up/point-down into the plinth and wants 'upright swords' rewritten; reviewer-d's summary says the opposite ('every one points UP ... none inverted'). This is a direct Reviewer contradiction, but I can resolve it from the image and I agree with reviewer-b on the geometry: the ball pommel is plainly topmost, with the blade descending into the plinth. I still did not patch it, because the existing wording 'upright swords with round pommels and crossguards' does not actually assert point-up - 'upright' states that they stand vertically, which is true - so reviewer-b's objection is about the connotation of a word, and wording preference is never grounds for AUTO_CORRECT. Note also that reviewer-d's own component ordering ('round pommel at the very top, hilt below') agrees with reviewer-b and contradicts his own summary label, so his dissent is internally inconsistent rather than a genuine rival observation. (b) CLOTH MOTION - 'the cloth is being lifted rather than tied in place' (visualTensions) and 'the blindfold slipping away' (emphasizedAspects) assert a direction of motion that cannot be recovered from a still frame. Both Reviewers independently say so: reviewer-b formally ('direction of motion is not recoverable from the pixels') and reviewer-d in his blind uncertainObservations ('Whether the figure is pulling the cloth off her eyes or tying it on cannot be determined from a still image'). I agree - I cropped the head at 6x and both hands grip the band flat across the eye line, with no cue to direction. This is an unverifiable claim rather than a wrong one, so it belongs on the MARK_UNCERTAIN path, not inside a correction patch; since only one decision per card is allowed and the two positional errors are the higher-value fix, I left the motion wording untouched and kept 'lifting a pale cloth from her eyes' verbatim in my scene replacement rather than silently making an uncertainty call inside a correction. FLAGGING IT HERE for a follow-up uncertainty pass: the items to drop or neutralise are visualTensions 'the cloth is being lifted rather than tied in place' and emphasizedAspects 'the blindfold slipping away'. (c) SWORD COUNT - reviewer-b recorded null, reviewer-d and I both read 8 (4+4); the reveal asserts no number and already lists the count under self-reported uncertainty, so nothing needs changing. (d) 'ringed planet in the upper right sky' - neither Reviewer mentioned a ring and both described only a cratered disc, but I cropped it at 7x and a thin elliptical ring line does encircle the body, so the existing entry is correct and stands.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-celestial/swords-10": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-102",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer notes and zoomed the foreground at 6x. Ten swords stand on a circular engraved stone dais: five on the left arc, five on the right arc, each with an ornamented gold pommel and cross-guard at its TOP end and the blade tapering downward into a dark round socket cut into the floor. The orientation is identical on all ten. The dais's near rim is fully inside the frame (its front face and engraved band are visible, not cropped) and carries no swords; the far-centre gap, through which the cloaked figure is visible, carries none either. So the two groups of five face each other across the cloth rather than ringing it. The pale tan sheet is a torn parchment with ragged, lifted edges and drawn line-work, clearly sitting on top of the stone."
+        }
+      },
+      "replace": [
+        {
+          "find": "ten upright swords set point-up in a ring of stone sockets",
+          "with": "ten upright swords set point-down into stone sockets, hilts and pommels uppermost"
+        },
+        {
+          "find": "the ring of swords encircles the fallen cloak and map in the lower half of the image",
+          "with": "two arcs of five swords flank the fallen cloak and map on the left and right of the platform, leaving the near and far edges of the circle open"
+        }
+      ],
+      "reason": "Meets all five thresholds on two items. (1) Orientation: unambiguous at 6x on all ten blades; reviewer-c raised it as a high-confidence issue, and reviewer-a independently recorded 'blades set point-down into the stone... hilts and pommels catching light' in its own blind observation, so two reviewers report the same thing; I reached the same conclusion from the pixels myself; it is observable orientation, not interpretation; and it is a single precise substring. 'Point-up' is a straight inversion of what is painted. (2) Layout: reviewer-c flagged 'encircles' as wrong and reviewer-a independently described 'two symmetrical arcs... with a gap in the middle'; I verified the near rim is in frame and empty, so 'encircles' is a positional error, also fixable as one substring. I deliberately did NOT patch reviewer-a's 'broken column at right' plural complaint (completeness preference, reviewer-c could not count them either) nor reviewer-c's low-confidence doubts about the cloth and the parchment — at 5x the tan sheet shows torn edges and drawn markings, so the existing wording stands and reviewer-c is overturned there.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-celestial/wands-04": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "pilot",
+        "reviewId": "review-007",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "pilot/judge/judge-agent.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "On my first pass, before opening the packet, I noted the lanterns as sitting on the platform floor: one at lower left by the near post's base, one at centre beside the food spread, one at lower right. Each has a visible base resting on the inlaid stone and its own reflection in the wet surface. Zooming the post tops shows flower clusters, ribbons and tiny wound point-lights — nothing suspended from any post."
+        }
+      },
+      "replace": [
+        {
+          "find": "small lanterns hanging on the posts",
+          "with": "small lanterns standing on the platform floor"
+        }
+      ],
+      "reason": "Both reviewers independently returned 'corrected' on exactly this fact and described it identically (lanterns standing on the platform, nothing hanging from the posts); I reached the same conclusion on my own. It is a pure position fact, and the fix is two exact, uniquely-anchored substring swaps. Reviewer-e's separate 'ringed planet with orbiting spheres' point was raised by one reviewer only and is not included.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-celestial/wands-05": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-509",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-b.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "correctionConfidence": "high",
+          "independentFinding": "Image-first: five figures around luminous diagram, tip-light mapping uncertain. Second inspection confirms central glow separated by engraved ground from surrounding tip areas; rods do not meet centre."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "emphasizedAspects": [
+          "no single figure dominating the others"
+        ]
+      },
+      "reason": "Reviewer-b/d independently report no central tip meeting; Judge verifies separation at high confidence. Three local replacements remove repeated geometric error without exact node count. Filter dependent interpretation rather than rewrite meaning.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent",
+      "replace": [
+        {
+          "find": "central bright point of light where the staff tips converge",
+          "with": "central bright point of light separate from the glowing staff tips"
+        },
+        {
+          "find": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+          "with": "the five staffs radiate inward toward glowing points around an inner ring, apart from the central light"
+        },
+        {
+          "find": "each holding a glowing-tipped staff angled inward toward a luminous point at the centre of a large engraved circular diagram",
+          "with": "each holding a glowing-tipped staff angled inward around a large engraved circular diagram with a distinct luminous centre"
+        }
+      ]
+    },
+    "legacy-celestial/wands-06": {
+      "reviewStatus": "corrected",
+      "reviewedAt": "2026-09-27",
+      "reviewer": "manual",
+      "reason": "逐张放大核对：骑手右侧只有 4 支竖立权杖（另加骑手手中 1 支，全图共 5 支，而非传统的 6 支）。Vision 连跑 4 次有 3 次输出 five —— 它在用牌名里的数字（Six of Wands = 5 支 + 骑手 1 支）代替数数，属于稳定的 card-rank prior leakage，重跑修不好。",
+      "replace": [
+        {
+          "find": "five upright wands",
+          "with": "four upright wands"
+        },
+        {
+          "find": "row of five",
+          "with": "row of four"
+        },
+        {
+          "find": "five wands",
+          "with": "four wands"
+        }
+      ]
+    },
+    "legacy-celestial/wands-10": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-412",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image and zoomed the upper-left celestial body (around x=155-225, y=70-140) at 12x, both raw and brightness-lifted. It is a complete circular disc: the full rim outline is traceable the whole way round, the interior shows surface mottling, and the only bright areas are warm amber highlights along the lower-left and lower-right limbs. There is no crescent sliver and no terminator cutting across the disc. I also independently counted the staves to check nothing else was off: 5 glowing tips on the left bundle and 5 on the right, 10 in total, each bundle rope-lashed, which matches the existing description and both reviewers."
+        }
+      },
+      "replace": [
+        {
+          "find": "crescent moon",
+          "with": "dim round moon disc with its full circular outline visible, phase indeterminate"
+        }
+      ],
+      "reason": "All five AUTO_CORRECT thresholds hold. (1) The fact is unambiguous on the image - a full circular outline is plainly visible at native resolution, and 'crescent' is simply the wrong shape. (2) Two independent Reviewers reported the same thing in their blind observations before comparing: reviewer-b recorded moonPhase as 'gibbous - partly shaded on one side; uncertain' and wrote that the body is 'a near-complete round disc ... no thin crescent sliver'; reviewer-e recorded moonPhase as 'the upper-left sphere reads as a full round disc' with the phase undeterminable. Both filed it as an issue against the same existing string. (3) I reached the same conclusion from my own zoom. (4) It is an observable shape fact, not interpretation. (5) The fix is two precise substring replacements. I deliberately did NOT adopt reviewer-b's 'gibbous', because that is the one point where the two reviewers diverge and I cannot read a phase off the disc either; the replacement asserts only the part both reviewers and I independently agree on - a full round disc, phase indeterminate. I verified both find strings with grep -oF against reveal/review-412.md: each occurs exactly once (line 11 and line 39).",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e/judge-agent"
+    },
+    "legacy-classic/swords-01": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-504",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-a.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "站立人物高举一把竖直向上的剑，剑身穿过枝叶环；左后方斗篷飘动，右侧有开箱、书本及重叠飞页。腰侧挂件细节无法确认其内是否装剑；纸页间未能分辨独立小环。"
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "long straight double-edged sword held point-up",
+          "wreath of leaves encircling the blade near its midpoint",
+          "red cloak streaming to the left",
+          "scattering loose papers and folded sheets",
+          "broken chains and a coiled rope-like chain",
+          "open wooden chest spilling books and papers",
+          "scattered closed books on the ground"
+        ]
+      },
+      "reason": "reviewer-f 的第二把剑主张与其自身不确定项及 reviewer-c/e 的鞘/佩具歧义冲突，不能从鞘推定内部有剑，不满足自动修正门槛。reviewer-e 点名的纸页间小环在密集重叠图像中无法独立确认，按条目移除该对象，保留高举剑及其他可靠事实。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e+reviewer-f/judge-agent"
+    },
+    "legacy-classic/swords-04": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-503",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-a.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "high",
+          "independentFinding": "一人仰卧石台，胸前双手叠合；墙上三把竖直向下剑，石台前沿一把横剑。左侧尖拱窗可见；画面顶部是墙面，未显示可辨认的拱顶或天花。"
+        }
+      },
+      "uncertainFields": [
+        "scene"
+      ],
+      "reason": "reviewer-c 对 vaulted 的质疑得到自身图像观察确认；a/f 的 pass 不足以证实画外屋顶。不能把尖拱窗等同拱顶，也不满足两名 Reviewer 明确一致的自动修正门槛。scene 含不可核实 vaulted，标为不确定，其他对象与空间关系保留。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c+reviewer-f/judge-agent"
+    },
+    "legacy-classic/swords-05": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-117",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image first. The two swords on the ground at the lower left lie fully visible hilt to tip, separate and roughly parallel, both with pommel to the upper left and point to the lower right, the second offset down and to the right of the first. There is unbroken bare earth and grass between them along their entire length and no intersection anywhere — they are neither crossed nor overlapping. The foreground figure is mid-stride, not standing: his trailing boot (viewer's left) is up on its toe with the heel clear of the ground and the leg extended behind him, while the leading boot (viewer's right) is planted flat and nearer the viewer, with his torso carried forward over it. His head is turned in full left profile, looking back toward the two figures receding up the shore. Also noted: he carries one sword point-down in his lowered hand, and in the crook of his other arm I can resolve three distinct cross-guards with three descending blade faces, not two — see the reason field. The two background figures are both walking away with their backs turned, neither carrying anything visible. The tunic hem is an even, regular scalloped/dagged edge with uniformly sized and spaced points, repeated identically on the shoulder yoke."
+        }
+      },
+      "replace": [
+        {
+          "find": "two swords lying crossed on the ground at lower left",
+          "with": "two swords lying separate and roughly parallel on the ground at lower left"
+        },
+        {
+          "find": "stands on a stony shore holding three swords",
+          "with": "strides on a stony shore holding three swords"
+        },
+        {
+          "find": "the standing man faces left while the other two walk away from him",
+          "with": "the striding man faces left while the other two walk away from him"
+        },
+        {
+          "find": "in front of and below the standing man",
+          "with": "in front of and below the striding man"
+        }
+      ],
+      "reason": "Two separate items clear all five AUTO_CORRECT thresholds, and I patch only those. FIRST, the crossed swords. (1) Unambiguous: at high magnification both blades are fully visible with clear ground between them. (2) Two independent reviewers reported it — reviewer-b filed it as a high-confidence issue ('they neither cross nor overlap'), and reviewer-d independently recorded 'two separate blades lying roughly parallel' in their blind observation before seeing the existing text. (3) I agree independently. (4) It is a spatial fact, not an interpretation. (5) It is one precise substring. Note the generating model itself flagged this as uncertain, so this closes its own open question. SECOND, standing versus walking. (1) Unambiguous: the lifted rear heel is a hard visual fact. (2) Both reviewer-b and reviewer-d filed this as a separate high-confidence issue. (3) I confirmed it. (4) It is posture, observable. (5) Three precise substrings, which I update together so that scene, spatialRelations and visualTensions do not disagree with each other. WHAT I DELIBERATELY DID NOT PATCH: the sword count. The existing text says 'three swords held (one in hand, two against his chest)'. My own reading is that the bundle holds three, not two, which would make four held and six in the frame — but BOTH reviewers explicitly recorded that sub-count as null and refused to commit to two or three, so AUTO_CORRECT threshold 2 is not met for any specific replacement number, and I will not assert a count on my own authority alone. I therefore leave 'three swords' standing in the scene substring unchanged rather than endorsing a hedge, and I escalate the count in my report instead. I also did not patch two single-reviewer items: reviewer-b's 'no V at the top' border note (I confirm the top border is plain double ruling with foliate corner flourishes only, and the one centred fleuron sits at the bottom divider — but only one reviewer raised it, and the top border sits directly against the mask band), and reviewer-d's 'torn versus dagged' tunic note (I agree the scalloping is regular and decorative, and reviewer-b's blind observation also says 'scalloped hem', but reviewer-b did not file it as an issue).",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-classic/swords-07": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-512",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "人物迈步且头脸朝左；剑束斜跨胸腹，刃面并排朝左下、剑柄朝右上。护手横越刃面，无清晰剑刃相交。左下另两剑，左帐篷右城堡。"
+        }
+      },
+      "replace": [
+        {
+          "find": "bundle of swords held against the chest, blades crossing and hilts fanning upward",
+          "with": "bundle of swords held against the chest, blades parallel in a single sheaf and hilts fanning upward"
+        }
+      ],
+      "reason": "reviewer-f指出blades crossing错误，b/e冻结观察并排扇形独立支持，Judge确认同向刃面。仅修局部几何。拒绝e的头朝右替换；不补遮挡剑束数量。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e+reviewer-f/judge-agent"
+    },
+    "legacy-classic/swords-10": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-217",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I counted the image myself before opening the packet. Engraving-style card: one prone figure lying face-down on barren stony ground, head to the left, legs to the right, both arms flung outward with open empty hands, rust-red cloak bunched over the back, blue-grey tunic and pale wrist cuffs. Blades stand upright out of the back, driven point-down. I enumerated the round pommels one at a time against the open sky, left to right: (1) far left, low; (2) left, tall; (3) left-of-centre, medium; (4) centre-left, the tallest; (5) centre, the short low one; (6) centre, tall; (7) centre-right, medium; (8) right, medium-tall; (9) far right, low. NINE pommels. The pommels are silhouetted separately against sky and do not overlap each other — only the blade shafts overlap further down where they converge into the body. No tenth pommel breaks the skyline anywhere in the fan. Background: dark hatched storm sky, a low sun on the sea horizon at right with a light column on the water, a dark flat-topped cliff at the far left horizon."
+        }
+      },
+      "replace": [
+        {
+          "find": "ten upright swords with round pommels and straight crossguards",
+          "with": "nine upright swords with round pommels and straight crossguards"
+        },
+        {
+          "find": "ten swords driven upright into the back",
+          "with": "nine swords driven upright into the back"
+        }
+      ],
+      "reason": "All five gates are met. (1) The count is unambiguous on the specific thing being asserted: the existing text claims 'ten upright swords with round pommels and straight crossguards', and pommels are exactly what IS individually resolvable here — both reviewers note the pommels do not overlap, only the blades do. There are nine. (2) TWO independent reviewers reported it: reviewer-b and reviewer-d both counted nine, both verdict 'corrected'. (3) I reached nine independently, before reading either. Decisively, all three enumerations match slot-for-slot by position and height — far-left low, left tall, left-of-centre medium, centre-left tallest, centre short, centre tall, centre-right medium, right medium-tall, far-right low. Three blind passes agreeing on nine LOCATIONS, not merely on the number nine, is what lifts this past the reviewers' individually hedged 'medium'. (4) Count is an observable fact. (5) Three exact substring replacements, each verified present and unique in the reveal packet with grep -F. On the reviewers' shared caveat that a fully occluded tenth blade cannot be ruled out: that residual applies to any count and cannot be evidence FOR ten; meanwhile 'ten' is the number the card-name prior would supply, which is precisely the failure mode this round exists to catch, and reviewer-d explicitly recorded refusing to adjust toward an expected total. I kept the word 'upright' in the scene string: the blades are driven point-down into the back but stand upright, so 'upright' is accurate and only the numeral needed changing. I also patched the model's own self-reported uncertainty line so the file does not keep asserting ten after the correction.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-forest/swords-01": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-215",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-c.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "I viewed the image before reading the packet. One figure, curly dark hair, green-brown woodland tunic and boots, mid-stride on a forest path; right arm raised holding one long straight sword point-up, left hand braced on a thick vine; one dark bird perched upper left; vine arches enclosing both sides; mushrooms lower left and white star-flowers along the bottom. On the blade specifically: the fist and crossguard sit low, and the blade runs a long bare stretch upward before any foliage appears. The leaves cluster from roughly a third of the way up the blade to about two-thirds toward the tip — mid-to-upper blade, not near the hilt. I also cannot tell from the pixels whether that foliage is attached to the blade or is background creeper passing in front of it."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "long straight double-edged sword with a crossguard and wrapped grip",
+          "thick twisted vines and roots forming an arch around the figure",
+          "narrow dirt path receding into the trees",
+          "black bird perched on a moss-covered trunk",
+          "cluster of pale mushrooms at the lower left",
+          "small white star-shaped flowers among the undergrowth",
+          "carved wooden-look border frame with the numeral I at the top and the title text at the bottom"
+        ]
+      },
+      "reason": "The existing keyObjects entry makes two assertions and neither survives. POSITION: 'near the hilt' is contradicted by what I see — the foliage sits mid-to-upper blade with a clear bare gap above the crossguard. ATTACHMENT: 'growing along' asserts the sprig is attached, and both reviewers independently said this is undeterminable (reviewer-a: 'whether the green sprigs near the blade are attached to the sword or are background foliage passing in front of it cannot be determined'; reviewer-c: 'whether the foliage on the blade is growing from it or merely draped over it is not determinable'), as did the generating model's own self-reported uncertainty. I did NOT take AUTO_CORRECT: only reviewer-c raised the position error, reviewer-a passed and never stated a position along the blade, so gate 2 (two independent reviewers reporting the same thing) is not met, and the schema says to step away from AUTO_CORRECT when hesitating. Dropping this single item is the lowest-loss move: the sword itself, the bird, the vines, the path, the mushrooms and the flowers are all independently confirmed by both reviewers and stay intact.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c+reviewer-f/judge-agent"
+    },
+    "legacy-forest/swords-03": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-309",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer notes. A woman in a green/olive cloak with pale lace-edged undersleeves is low to the ground on the left: a bent, pale-cream-clad knee and lower leg rest on the earth at the lower left under her cloak, and the crown of her head sits only slightly above the top rail of the work frame whose base rests on the ground. She is kneeling/crouching, not standing. Her hands are together over the frame's upper edge, gaze down. On the stretched surface is one red heart-shaped patch, point down, pierced by exactly three swords: the centre one vertical with pommel up, the left and right ones angled inward. Heavy rain streaks the whole frame; forest, a river valley in the right background, baskets, pots, a spool, mushrooms and ferns around the base; ornate botanical border."
+        }
+      },
+      "replace": [
+        {
+          "find": "the woman stands to the left of the panel, her hands at its upper edge",
+          "with": "the woman kneels to the left of the panel, her hands at its upper edge"
+        }
+      ],
+      "reason": "All five gates are met for the posture item and only that item. (1) The posture is visually unambiguous: the bent knee on the ground and the head barely clearing the frame's top rail cannot be produced by a standing figure. (2) reviewer-b and reviewer-d independently flagged the identical field and the identical fact (spatialRelations: 'stands' is wrong, she kneels/crouches), each at high confidence, before seeing each other. (3) I reached the same conclusion from the image on my own. (4) Posture is an observable fact, not interpretation. (5) The fix is a single-word substring replacement. I deliberately did NOT carry the reviewers' other suggestions: 'wooden panel' -> 'stretched woven cloth' was raised by reviewer-d alone (reviewer-b recorded the same object as a 'wooden work frame / stretched panel' without filing an issue), so it fails gate 2 despite my own reading of a visible warp-and-weft weave; and the spool colour is actively contradicted between reviewers (reviewer-b: pink/rose, reviewer-d: dark red), so it fails gate 1. I also kept reviewer-b's 'to the left of' wording rather than reviewer-d's 'behind', since the two disagree on depth and only the standing/kneeling fact is jointly attested.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-forest/swords-05": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "pilot",
+        "reviewId": "review-006",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "pilot/judge/judge-agent.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "Two hilts, two crossguards and two scabbard throats are unambiguous in the kneeling figure's grip, and at the bottom of the bundle two brass scabbard chapes are visible. But a third parallel shaft runs down to the right of them and vanishes behind the boot and undergrowth without a resolvable tip, so I cannot close the count at two. The two swords lying in the water are cleanly two. The departing figure does carry a visible satchel on a shoulder strap."
+        }
+      },
+      "uncertainFields": [
+        "keyObjects"
+      ],
+      "reason": "Both reviewers independently reached the same conclusion — two hilts clear, blade group possibly two or three, no number assertable — and my own look agrees. The existing keyObjects asserts 'two swords held upright', a count the image cannot support. Per the rule, the field is dropped rather than guessed at; I am not substituting a number. I do overturn reviewer-c's secondary doubt about the satchel: the strap and bag are plainly drawn at the departing figure's back and hip.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-forest/swords-06": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-204",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I viewed the image before reading the packet. The flat wooden boat runs stern-left to bow-right; the hull spans roughly x=50 to x=420 in the frame, so its midpoint is near x=235. The row of upright hilted blades spans roughly x=150 to x=290, centred near x=220 — squarely amidships. The cloaked figure stands at the stern (left) end, seen entirely from behind, both hands on a long pole angled down into the water at the right. Between the last blade and the prow there is a long, clearly empty stretch of hull: the only things in it are a small hanging lantern around x=318 and a coil of rope looped over the bow post near x=400. The blade row is therefore not in the bow, and does not occupy the boat's forward half. I resolve six pommels in the row, though they overlap enough that a hidden seventh cannot be excluded — I am not touching the count. Surroundings: sunlit deciduous forest, slanted light shafts from upper centre-right, grassy bank and pale path on the right shore, ferns, white daisies, mushrooms and a mossy stump across the foreground, tree trunks framing both edges."
+        }
+      },
+      "replace": [
+        {
+          "find": "a rack of upright swords is mounted in the boat's bow",
+          "with": "a rack of upright swords is mounted amidships, across the middle of the hull"
+        },
+        {
+          "find": "rack of upright swords mounted across the boat's bow",
+          "with": "rack of upright swords mounted across the middle of the boat"
+        },
+        {
+          "find": "the figure stands behind the sword rack, which occupies the boat's forward half",
+          "with": "the figure stands behind the sword rack, which occupies the middle of the boat, with open hull between it and the bow"
+        }
+      ],
+      "reason": "All five thresholds are met. (1) The placement is unambiguous on the image — there is a wide, visibly empty run of hull between the last blade and the prow, and the lantern and rope sit in that gap. (2) Two independent reviewers reported the identical fact at HIGH confidence: reviewer-c and reviewer-e both state the rack is amidships and both state the forward half is clear. (3) I measured the same thing myself from the hull endpoints before reading either. (4) It is an observable position fact, not interpretation or wording taste. (5) It reduces to three exact substring replacements, each verified to occur exactly once in the reveal packet. I touched only the bow/amidships placement; I did not alter the sword count, which both reviewers flagged as unresolvable (reviewer-c left it null, reviewer-e called six a floor) and which the source file already lists under its own uncertainty, nor the lantern-at-the-prow entry, which is correct.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-forest/swords-07": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-211",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the blind image and zoomed the head at 5x. The face is in clean profile pointing right and slightly down — brow, nose, lips and chin all on the right side of the skull, with the dark curly hair mass behind them on the left. That is the same direction as the leaning torso, the advancing leg and the planted boot. The camp — tent, sword rack, fire ring, basket — is behind him at the left, and nothing in his head or shoulders is rotated toward it. He is looking ahead along his line of travel, not back. While zoomed in I also settled the counts the reviewers could not: five sword pommels on his back (five distinct grips and cross-guards, no sixth hidden at that resolution) and two swords standing in the rack — the two outer uprights in the rack are plain wooden posts with rounded tops, not sword hilts."
+        }
+      },
+      "replace": [
+        {
+          "find": "while glancing back over his shoulder",
+          "with": "while looking ahead along the direction he is walking"
+        },
+        {
+          "find": "the figure's body moves away while his head turns back",
+          "with": "the orderly, intact camp behind him against his unbroken forward stride away from it"
+        },
+        {
+          "find": "a backward glance that registers awareness of what is left",
+          "with": "walking on without a backward glance at what is left"
+        }
+      ],
+      "reason": "All five gates are met. (1) The head's orientation is unambiguous at 5x — it is a clean profile, not a three-quarter turn. (2) Both reviewers independently reported it at high confidence: reviewer-b ('the head is in profile facing right, the same direction he is walking; he is not looking back') and reviewer-d ('the head faces the same direction as the movement... it is not turned back toward the camp'), each citing the same hair-mass-behind/face-leading evidence. (3) My own zoom reaches the same conclusion. (4) Head orientation is an observable fact, not interpretation. (5) Three precise substring replacements. I extend the patch to the emphasizedAspects line as well: 'a backward glance that registers awareness of what is left' restates the identical disproven fact, and correcting only two of the three places would leave the file internally contradictory and still feed the false gesture downstream. The replacement wording removes the false premise without asserting anything new. Note, no patch needed: the existing text never commits to sword counts, so my five-on-the-back and two-in-the-rack readings contradict nothing — I record them only because both reviewers flagged the counts as unresolved and they are in fact resolvable at 4x.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-forest/swords-08": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-415",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer notes. A barefoot woman walks mid-stride down a woodland path TOWARD the viewer. A pale cloth band is wound over both eyes with ends trailing. Both of her hands are free and unbound: one is raised to her chest gripping the edge of the draped green shawl, the other arm hangs down and out from the body with the hand open and the fingers visibly spread apart. I cropped and upscaled that arm at 4x and confirmed no loop, wrap or cord crosses either wrist. The only bright light is the sun breaking through a gap in the canopy at upper center, which is BEHIND her and down the path she is walking away from; she is backlit and rim-lit, advancing out of the light toward the darker foreground. I counted 8 planted blades, 4 flanking each side, all pommel-up with the blade driven down into the soil."
+        }
+      },
+      "replace": [
+        {
+          "find": "the blindfold covers the eyes while the body faces the light",
+          "with": "the blindfold covers the eyes while the sunlit canopy gap lies behind her, her back to the light as she walks toward the viewer"
+        },
+        {
+          "find": "the cloth binds her hands and head yet trails loose and free",
+          "with": "the cloth is wound over her eyes while both hands stay free, one gripping the shawl at her chest and the other hanging open and empty, the ends trailing loose"
+        }
+      ],
+      "reason": "Two separate observable-fact corrections, both meeting the full threshold. FIX 1 (hands): the existing text claims the cloth 'binds her hands'. Both Reviewers formally raised this in the comparison stage - reviewer-a ('both hands are free ... No cloth passes around either wrist') and reviewer-c ('only the head is bound ... the extended hand shows spread, unbound fingers'). I confirmed it myself at 4x crop. Presence/absence of a binding is an observable fact, not an interpretation. Note that the two Reviewers contradict each other on WHICH hand does what (reviewer-a says left-at-chest/right-extended, reviewer-c says the reverse); that sub-detail is genuinely unsettled, so I deliberately wrote the replacement without left/right labels and kept only what both agree on and I can see. FIX 2 (light direction): only reviewer-a raised this formally in the comparison stage, but DEPENDING ON BLIND-OBSERVATION CONCORDANCE ('依据盲观察一致') the threshold is met - reviewer-c independently recorded the same fact in his blind observation before comparison, under lightSources ('daylight breaking through the canopy from behind the figure') and spatialRelations ('the path continues past her toward the bright canopy gap behind'), even though his overall verdict did not list it as an issue. Per this run's rule, what each Reviewer independently wrote down blind is what counts, not the final verdict line. I verified the backlighting myself from the image. Light-source position relative to the figure is observable geometry. Both fixes are exact substring replacements; I confirmed each find string occurs exactly once in the reveal with grep -F. I did NOT touch the blade count (reviewer-a said 7, reviewer-c and I said 8) because the reveal already lists the per-side count under self-reported uncertainty and asserts no specific number in the body text.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-forest/swords-09": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-315",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "Looking at the image myself first: the room is unmistakably lit by bright daylight. The multi-paned window on the right is filled with sunlit green foliage and throws a strong warm wash across the curtain, the sill ferns, the bed and the woman's back; the small candle on the foreground table is a minor accent, not the dominant source. Nothing in the frame reads as night. On the wall behind her, each mounted blade carries a rounded pommel and brass collar at the TOP, a brass crossguard about a third of the way down, and a dark blade that continues below and tapers to a point near the bottom - the wide part of every blade is uppermost and the taper is lowest, i.e. they hang hilt-up, point-down. I could not fix the number of blades; I read roughly five but the leftmost is veiled by ivy and the rightmost dissolves into shadow."
+        }
+      },
+      "replace": [
+        {
+          "find": "wooden wall rack holding upright swords with dark blades and brass-toned hilts",
+          "with": "wooden wall rack holding swords hung point-down, dark blades below brass-toned crossguards and pommels"
+        },
+        {
+          "find": "sleepless night-time distress",
+          "with": "daytime distress in a bright, sunlit room"
+        }
+      ],
+      "reason": "Both gates are met on both edits. (1) Night vs daylight: reviewer-a and reviewer-c independently raised exactly this, both at high confidence, and I reached the same conclusion from the image before reading either. It is an observable fact about the dominant light source, not a wording preference, and the existing file already contradicts itself - its own scene line says 'daylight enters through a curtained window' while emphasizedAspects says 'sleepless night-time distress'. (2) Blade orientation: reviewer-a raised it at high confidence, and reviewer-c independently recorded the identical observation in its blind pass ('all hang hilts UP, blades pointing DOWN toward the floor') - this is two independent reviewers reporting the same thing, not one passing. I verified it myself. Orientation is exactly the observable-fact class, and 'upright' in an orientation-sensitive field reads as point-up, which is the reverse of what is on the wall. Both changes express as exact substring replacements, verified verbatim against reveal/review-315.md. I deliberately leave the blade COUNT alone: the two reviewers disagree (five vs at-least-four) and the file's own self-reported uncertainty already flags 'exact number of swords on the wall rack', so no action is needed. I also leave the scene clause 'a rack of swords hangs on the wall behind her' untouched, since it makes no orientation claim and is not wrong.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-forest/swords-10": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-306",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "Sunlit woodland slope. I counted the swords myself at 2.6x zoom: exactly TEN, in two rows of five (back row 5, front row 5, the front row offset so each sits between two of the back row). Every one lies flat with pommel and crossguard at the UPPER end and tip at the lower end, and every one is clearly SHEATHED - each has a scabbard with a decorative metal chape at the tip and leather straps wrapped around the body, so no bare blade is exposed anywhere. The figure kneels with its back to the viewer, bare-headed with dark curly hair, hood folded down at the shoulders, both arms spread wide holding the two edges of a green cloak open toward the light. On the contested point: the sun is a low disc sitting on the horizon behind the far treeline with visible rays and a warm sky wash above it. I can find no cue anywhere in the frame - no shadow direction, no sky-gradient asymmetry, no dew, no mist, nothing - that separates sunrise from sunset."
+        }
+      },
+      "replace": [
+        {
+          "find": "kneels on a forest floor at dawn",
+          "with": "kneels on a forest floor under a low sun on the horizon"
+        }
+      ],
+      "reason": "All five AUTO_CORRECT gates are met. (1) The visual fact that goes INTO the text is unambiguous and I verified it at zoom: a low solar disc on the horizon with visible rays. (2) TWO independent reviewers reported the same thing - reviewer-b and reviewer-e both flagged 'at dawn' as undeterminable, and they independently produced byte-identical patches, same find string and same replacement text. (3) I reached the same conclusion from my own look before reading the packet. (4) The patch moves the text FROM an interpretation ('dawn', a time-of-day inference the pixels cannot support) TO an observable position fact (the sun is low on the horizon); it asserts strictly less than the original and nothing I have not verified. (5) It is one exact substring swap, and I confirmed with grep -F that 'kneels on a forest floor at dawn' occurs exactly once in the reveal. I considered MARK_UNCERTAIN and rejected it: the scene field holds a single sentence, so flagging it would discard the whole line - including the sword count, the two-row layout, the cloth gesture and the valley, all of which I independently verified as correct - in order to remove one unsupported word. The schema warns about exactly that cost and says to name the narrowest item possible. The patch achieves the same goal, handing nothing unverified to the interpretation model, at near-zero loss. I checked the rest of the record against my zoom and found no other problem: 'ten sheathed swords with ornate hilts and scabbard tips, laid flat in two rows of five' is exactly right, including the 'sheathed' qualifier that reviewer-e had listed as unresolvable.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e/judge-agent"
+    },
+    "legacy-moonlight/cups-03": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-406",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I viewed the image before reading the packet. Three women stand in a shallow inward-facing ring, each raising one stemmed goblet; exactly three goblets, all upright, rims converging at a single high point below the moon. The moon at upper centre-right is a LARGE COMPLETE ROUND DISC with visible crater mottling and a soft shading along the lower-left limb -- there is no crescent sliver anywhere; at 5x magnification it reads gibbous to full. Behind the figures, between the centre and right figure, I can clearly see a water surface: horizontal ripple bands with a vertical bright reflection path running down from the moon toward a baluster post, i.e. a terrace overlooking water. On the lower-right table: a shallow footed bowl heaped with white and purple grapes and round fruit, a lidded ornate glass decanter, and a lit candle in a glass holder. The whole frame is high-key and pale."
+        }
+      },
+      "replace": [
+        {
+          "find": "beneath a crescent moon",
+          "with": "beneath a large pale gibbous-to-full moon"
+        },
+        {
+          "find": "crescent moon",
+          "with": "large pale gibbous-to-full moon disc"
+        }
+      ],
+      "reason": "Meets all five gates for the moon phase only. (1) At 5x the disc is unambiguously a full round face, not a crescent. (2) Two independent Reviewers reported it separately and at high confidence: reviewer-b ('The disc is a complete circle with only a soft shading on its lower-left limb; there is no crescent sliver', confidence high) and reviewer-e ('a large full round face with only a softly shaded lower-left limb', confidence high). (3) I reached the same conclusion on my own pass before reading either. (4) Crescent-vs-round is pure observable shape. (5) Two exact substring swaps. NOTE on find strings: the bare string 'crescent moon' occurs TWICE in the reveal packet (line 3 in scene, line 7 as a keyObject), so I deliberately used longer unique anchors -- 'beneath a crescent moon' and the full keyObject line '  - crescent moon' -- each verified unique with grep -F. I REJECT the two other proposed changes. (a) 'at night' -> daylight: interpretation, not observable, and reviewer-b's own evidence concedes 'whether this is meant as daylight, twilight or a very luminous night cannot be settled from the pixels'. The threshold is not met and I leave the wording alone. (b) reviewer-e's 'separating them from the water' -> 'open sky, no water visible': this is factually wrong and I overturn it. Water IS visible between the figures -- I magnified that band and it shows horizontal ripple banding with a vertical moon-reflection path -- and reviewer-b independently recorded 'water/sea and a bright stepped stairway of light in the center distance' in his environment list. reviewer-e read the moon path as 'a flight of pale steps'; the existing text stands.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e/judge-agent"
+    },
+    "legacy-moonlight/pentacles-08": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-109",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer notes. A single pale-haired figure is bent sharply forward at the waist over a long draped workbench, hammer raised in the hand on the viewer's left and a chisel held point-down in the hand on the viewer's right, its tip on a disc. Everything below roughly hip level dissolves into a mass of translucent gauzy drapery to the left of the bench: there is no chair, stool, bench-seat, thigh line or knee anywhere in frame. I zoomed the lower-body region at 3x specifically to look for a seat and found none. Separately, when I zoomed the bench at 4x with a coordinate ruler I could resolve seven discs (six lying flat in a receding row at x approximately 149, 215, 274, 322, 371, 432 plus the one set higher under the chisel tip at x approximately 301), but the existing description only says 'several', so no count claim needs touching."
+        }
+      },
+      "replace": [
+        {
+          "find": "sits at a wooden workbench engraving a round metal disc",
+          "with": "leans over a wooden workbench engraving a round metal disc"
+        },
+        {
+          "find": "the woman sits behind the bench, her hands and tools above the discs",
+          "with": "the woman is behind the bench, leaning forward over it, her hands and tools above the discs"
+        }
+      ],
+      "reason": "All five AUTO_CORRECT thresholds hold. (1) The visual fact is unambiguous: absence of any seating and a clearly bent-forward torso. (2) Two independent reviewers reported the same thing without prompting each other - reviewer-d raised it as a formal issue on scene/spatialRelations, and reviewer-b, who returned an overall pass, independently logged it under uncertainObservations as 'Whether the figure is seated or kneeling/standing and leaning cannot be determined; the bench hides her lower body.' (3) I reached the identical conclusion from my own look before reading either. (4) It is an observable fact, not interpretation: presence/absence of a seat in frame and the orientation of the torso. (5) The fix is a minimal substring weakening. I chose AUTO_CORRECT over MARK_UNCERTAIN because marking would discard an entire scene sentence and a spatialRelation whose remaining content both reviewers confirmed; replacing 'sits' with the posture that is actually visible removes exactly the unverifiable claim and keeps everything verified. Both find strings were checked with grep -F against reveal/review-109.md and each occurs exactly once.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d+reviewer-f/judge-agent"
+    },
+    "legacy-moonlight/pentacles-10": {
+      "reviewStatus": "pass",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-404",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-a.json",
+          "decision": "AUTO_PASS",
+          "confidence": "medium",
+          "independentFinding": "I viewed the image first. Seven human figures (incl. a carried infant) plus one white long-haired dog lying at the right. Nine pentacle discs lie face-up on a pale cloth on the ground, and a tenth glowing pentacle is held by the seated child with the bearded elder's hand supporting it from below. Background: a large pale moon at the upper left, a still lake with a vertical light reflection, a domed colonnaded pavilion and steps on the far shore, misty hills, a stone archway with wisteria at the right, and a lit cage lantern on a ledge at the far right. On the foreground woman's posture: her hip and torso are low to the ground and pitched forward, but her lower legs are completely hidden under drapery -- I cannot distinguish kneeling from sitting-low. On the light: the frame is high-key and pale throughout, yet a moon and a moon-path on the water are both plainly present; I cannot assert daylight."
+        }
+      },
+      "reason": "Both of reviewer-e's issues fail the bar, and the other two Reviewers passed. (1) 'moonlit garden' -> 'brightly lit': this is interpretation of mood, not an observable. reviewer-e himself wrote 'I could not assert night from the pixels, only that a moon is visible'. The other two independently read the opposite way -- reviewer-c logged lightSources 'a large moon at the upper left' and only hedged twilight-vs-night, reviewer-f logged the environment as 'night or pre-dawn sky'. So the two-reporter threshold is not met and the pixels do not contradict 'moonlit': a moon and its reflection streak are both there. (2) 'kneeling woman' -> 'seated, forward-leaning': directly contradicted by reviewer-f, who independently recorded 'kneeling / sitting low on the ground' and twice called her 'the kneeling foreground woman'; reviewer-c recorded the hybrid 'seated/kneeling'. reviewer-e's own evidence concedes 'her drapery hides the lower legs, so I cannot fully exclude a kneel'. My own close crop confirms the lower legs are not visible. Unresolvable at this resolution and not an unambiguous visual fact, so no correction. I deliberately do NOT mark this item uncertain: the load-bearing content of that spatialRelations line is the left-right flanking of the discs by woman and dog, which is correct and independently confirmed by all three Reviewers, and dropping the item to excise one borderline posture adjective would cost more evidence than it saves. Note also that the existing text never asserts a disc count ('a scatter of gold pentacle discs') and already self-flags the count as uncertain, so the 9-vs-10 spread across Reviewers needs no action.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e+reviewer-f/judge-agent"
+    },
+    "legacy-moonlight/swords-01": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-216",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-c.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "I viewed the image before the packet. High-key pale blue/white painting. One figure, long pale hair, flowing gown and translucent veil, standing on a carved stone plinth, head bowed, both hands gripping the hilt of one large sword held vertically POINT-DOWN, the blade descending to the plinth surface. An ornate pointed crown sits low on the blade near the plinth. BIRDS: I can pick out exactly one small pale bird-like shape, upper left among the blossoming branches — I cannot resolve a second, and even that one is faint enough that I would not swear it is a bird rather than a petal cluster. MOON: at upper right there is a thin bright crescent arc, not a full round disc; its unlit remainder is lost in cloud, and I cannot rule out that the bright arc is a break in the clouds."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "large two-handed sword with ornate crossguard, held vertically",
+          "crown of pointed metalwork pierced by the blade",
+          "stone plinth with carved tracery",
+          "long translucent veil or drapery streaming around the figure",
+          "scattered pale petals and leaf-like fragments",
+          "flowering branch with pale blossoms at lower left",
+          "arched stone frame at upper left"
+        ],
+        "spatialRelations": [
+          "the sword is held in front of the figure's torso, blade descending past her waist",
+          "the crown sits low on the blade, below the hands, above the plinth",
+          "the plinth occupies the lower centre, the figure standing on its top edge"
+        ]
+      },
+      "reason": "Two separate assertions in the existing description outrun the evidence, and both reviewers independently reported each of them (reviewer-c and reviewer-e both filed the plural-birds issue and both filed the moon-disc issue, from independent blind passes; both returned verdict 'uncertain'). I reached the same two conclusions on my own before reading them. I deliberately did NOT take AUTO_CORRECT on the moon despite the two-reviewer agreement, because gate 1 (the visual fact must be unambiguous) fails: both reviewers rated it medium confidence and both put it in their own uncertainObservations — reviewer-c 'cloud overlap makes the exact phase/orientation unreliable', reviewer-e 'whether it is a moon disc or a cloud break cannot be determined'. Swapping 'disc' for 'crescent' would trade one unverified claim for another slightly better one, when the honest state is that the lunar body's form is not resolvable. Same logic on the birds: the count is not merely wrong-plural, it is unresolvable, so correcting it to 'one' would still assert more than the pixels support. Naming both items individually rather than discarding whole fields: the rest of keyObjects (sword, crown, plinth, veil, blossoming branch) and the other three spatialRelations entries are confirmed by both reviewers and by me, and they survive intact.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-moonlight/swords-02": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-401",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any packet. The entire frame is high-key: white-to-pale-blue clouded sky, near-white sea, white stone, white gown and veils. There is no deep blue, no lavender-dark field, no night ground anywhere in the frame — the darkest values in the image are mid-grey foliage at the lower left. A fairly thick crescent moon does sit in the upper-right sky and a bright glittering light path runs down the sea below it, so the sea is genuinely lit by that light source; the scene is simultaneously high-key and moonlit."
+        }
+      },
+      "replace": [
+        {
+          "find": "silver linework on a deep blue-lavender night ground",
+          "with": "pale silver-lavender linework on a light, near-white ground"
+        }
+      ],
+      "reason": "Meets all five gates for the deckSpecificMotifs line only. (1) The absence of a dark ground is unambiguous on the pixels. (2) Two independent Reviewers recorded it separately in their blind observations: reviewer-d ('no deep blue or night-dark ground anywhere in the frame', confidence high) and reviewer-a ('Sky, sea and drapery are all near-white in value; there is no dark field anywhere in the frame') — reviewer-a's overall verdict was uncertain, but he independently logged the same ground-value fact, which satisfies the two-reporter threshold. (3) I reached the same conclusion on my own pass. (4) Presence/absence of a dark ground is an observable fact, not a reading. (5) It is a single exact substring swap. I REJECT reviewer-d's second proposed patch (scene: 'moonlit sea' -> 'daylight-like illumination'): only reviewer-d raised it, reviewer-a explicitly recorded day-vs-night as undeterminable, and the moonlit-water reading is interpretation, not an observable. The crescent moon and its reflected light column on the water are both plainly present, so 'moonlit sea' stands.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-d/judge-agent"
+    },
+    "legacy-moonlight/swords-03": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-201",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer note. On the two blades to the woman's right I can resolve, top to bottom on each: a round pommel, a decorated grip, a wide ornate crossguard, then a blade that tapers downward and disappears into the pale blossoms near the bottom edge. Neither blade has a point at its upper end. Both are driven point-DOWN into the ground. The nearer blade's hilt sits at roughly 59% of the frame width (centre-right, in front of her skirt); the second sits at roughly 86% (right edge), its hilt lower in the frame. Separately: one figure, standing in three-quarter profile facing right, head bowed, eyes closed or nearly so, both hands raised and clasped together at her chest — I could not resolve any held object between them, the region is near-white on near-white with a sheer drape passing in front. A crescent moon sits upper right, lit on its outer edge. I see a uniform fine granular speckle over the whole painting — sky, gown and foreground blossoms alike — not directional streaks falling across the sky only."
+        }
+      },
+      "replace": [
+        {
+          "find": "two ornate swords stand point-upward among flowers below her",
+          "with": "two ornate swords stand driven point-downward into the ground among flowers below her"
+        },
+        {
+          "find": "the two swords rise from the lower right, crossing the lower half of her gown",
+          "with": "the two swords descend point-downward into the ground at the lower right, crossing the lower half of her gown"
+        }
+      ],
+      "reason": "The sword orientation meets all five thresholds. (1) Unambiguous on the image: the pommel-grip-crossguard-blade stack reads cleanly top-to-bottom on both weapons. (2) Two independent reviewers reported the same thing at HIGH confidence — reviewer-a and reviewer-d, each citing the hilt-above-blade stack separately. (3) I reached the identical conclusion from the pixels before reading either of them. (4) It is a pure orientation fact, not interpretation. (5) It is expressible as exact substring replacement. I deliberately kept the patch minimal: I corrected only the up/down orientation, which both reviewers confirmed, and preserved the original 'lower right' positional wording, because the two reviewers do NOT agree on position (reviewer-a places the nearer blade at frame centre, reviewer-d accepts lower right) and the two-reviewer threshold is therefore not met for the position claim. I also did NOT patch two further items both reviewers raised, because each fails threshold (1) — the pixels are genuinely ambiguous, and both reviewers only rated them MEDIUM, as did I: the 'folded letter or paper held in both hands' (hands are clasped but no held object is resolvable at this contrast; the source model's own uncertainty list concedes it may be a letter, a card, or folded cloth, yet the scene line states it as fact) and 'rain streaks across the sky' (the speckle is uniform over every surface, not directional, and the water shows no rain disturbance). Those two remain unsupported assertions in the data and are escalated in my report for a separate uncertainty pass rather than silently rewritten here.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-d/judge-agent"
+    },
+    "legacy-moonlight/swords-05": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-408",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I viewed the image before reading the packet and magnified the hands 3x. The foreground woman is seen from behind, arms LOWERED, a sword in each fist at hip height: hilts up in the grip, blades running DOWN and outward past her skirt toward the ground, forming a shallow inverted V. No part of either blade rises above the hand -- neither is upright. Three further swords lie flat on the ground in the foreground; I resolved three distinct pommel-grip-crossguard assemblies with blades running right. A second pale figure walks away barefoot through ankle-deep water at the right, empty-handed. A large round mottled moon sits at the upper right with two birds; white chrysanthemum-like blossoms fill the lower left. Her head is turned to the viewer's RIGHT in near-profile, looking down toward the water and the departing figure."
+        }
+      },
+      "replace": [
+        {
+          "find": "two swords held upright by the foreground figure",
+          "with": "two swords held hilt-up at the foreground figure's lowered sides, blades angled down and outward with both points toward the ground"
+        },
+        {
+          "find": "the upright held swords contrast with the swords lying discarded on the ground",
+          "with": "the still-gripped swords, points lowered, contrast with the swords lying discarded on the ground"
+        }
+      ],
+      "reason": "Meets all five gates for the held-sword orientation. (1) At 3x the orientation is unambiguous: hilts up, points down, nothing above the grip. (2) Two independent Reviewers reported it separately and both at HIGH confidence: reviewer-c ('both held blades hang DOWN at her sides... neither blade rises above the grip') and reviewer-e ('both points aim at the ground, neither is raised'). Both also independently flagged that the same error repeats in visualTensions. (3) I reached the identical conclusion on my own pass before reading either. (4) Blade orientation is a pure observable. (5) Two exact substring swaps, each verified unique with grep -F. For the visualTensions line I used reviewer-e's minimal wording, which removes only the false word 'upright' and keeps the held-vs-discarded contrast, rather than reviewer-c's 'echo', which rewrites the tension itself on a wording preference. I REJECT three other proposals. (a) 'toward a moonlit horizon' -> daylit (reviewer-c, medium confidence; reviewer-e logged it only as an uncertainObservation): light-source mood is an inference, not an observable of the kind this gate admits, both Reviewers hedged, and a large moon is plainly in the frame, so the existing wording is not falsified. (b) reviewer-e's visualTensions 'face opposite directions' fix: raised by one Reviewer only, at medium confidence, and directly contradicted by reviewer-c's blind observation ('she is turned away from both the distant figure and the water'). I note for the record that on my own look reviewer-e has the better read -- her head is clearly turned to the viewer's right, toward the departing figure, so reviewer-c's observation is the wrong one -- but a single-Reviewer item about head-versus-body orientation in an interpretive field does not clear the AUTO_CORRECT bar, so I leave the line alone. (c) The ground-sword count: reviewer-c recorded null ('at least 3, possibly more'), reviewer-e recorded 3 with a note that a fourth could be hidden. I independently located exactly three hilts, which matches the existing 'three swords lying crossed on the ground', so the existing number stands and I do not mark it uncertain.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-moonlight/swords-07": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-510",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "medium",
+          "correctionConfidence": "high",
+          "independentFinding": "Image-first: figure carries overlapping swords, two distinct lower-right foreground swords. Second inspection confirms roughly parallel axes, no X. Underlying surface contact and carried count unresolved."
+        }
+      },
+      "replace": [
+        {
+          "find": "two swords lying crossed on the ground in the lower right",
+          "with": "two swords positioned roughly parallel in the lower right foreground"
+        }
+      ],
+      "reason": "Reviewer-b/e independently identify parallel rather than crossed; Judge confirms at high confidence. Preserve number/location and avoid guessing contact surface.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e/judge-agent"
+    },
+    "legacy-moonlight/swords-08": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-414",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer notes. A single standing figure is barefoot in ankle-deep water, head bowed, a pale cloth band across both eyes, pale cords/vines wound several times around her torso and upper arms. The upright swords are NOT arranged as a ring around her: I counted 4 on the viewer-left (3 receding in mist plus 1 large foreground blade) and 5 on the viewer-right (3 receding plus 2 large foreground blades), 9 total. The water directly in front of her (bottom-center, where a petal floats) and the whole misted mid-ground directly behind her are unbroken empty water. The blades occupy only the left and right thirds of the frame, so the shape is open on two sides."
+        }
+      },
+      "replace": [
+        {
+          "find": "a surrounding ring of blades that is present but not touching",
+          "with": "blades flanking her on both sides, present but not touching, with open water directly in front of and behind her"
+        }
+      ],
+      "reason": "All five AUTO_CORRECT thresholds are met. (1) The arrangement is unambiguous on the image: I cropped and upscaled the left and right halves and confirmed the open front-and-back lane. (2) Two independent Reviewers reported the same thing: reviewer-a ('not a ring - two loose flanking groups ... with a clear open lane of empty water directly in front of and behind her') and reviewer-c ('not a ring - two loose groups flanking her ... with open water directly in front of her and open misted water directly behind'). Both recorded it independently in their blind observations under objects.arrangement as well, before the comparison stage. (3) I reached the same conclusion from my own look. (4) It is an observable positional fact (where the blades sit), not an interpretation. (5) The fix is one precise substring replacement. Note on what I did NOT act on: both Reviewers also flagged 'misty blue night' as possibly daylight, but both self-rated that at confidence=low and explicitly declined to call it wrong; night-vs-day is not settleable from these high-key pixels when a crescent moon is plainly rendered, so I left the scene line untouched. I also left the sword count alone - reviewer-a said 9, reviewer-c said 8, and the existing file already lists the exact count under self-reported uncertainty, so no claim needs removing.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-moonlight/swords-09": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-506",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-a.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "high",
+          "independentFinding": "坐床人物双手掩脸，左墙横剑由上而下排列，能分辨八把可见剑，顶部遮蔽/截断使总数无法确认。右下竖件呈床角装饰柱，右上近圆月亮及窗外水面可见。"
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "bed with layered translucent drapery",
+          "pillows behind the figure",
+          "open window with sheer lace curtain",
+          "full moon",
+          "small lit lantern on a tray at lower right",
+          "pale blossoms and foliage at lower left",
+          "carved metal bedpost at lower right"
+        ]
+      },
+      "reason": "reviewer-b/e 的八把可见剑相互印证，但两者均承认顶部可能存在被截断或遮住的剑；自身观察也不能排除。因此不满足明确总数自动修正门槛，拒绝 nine→eight 的精确替换，只移除九把计数条目，保留 scene 中无计数的剑列及空间关系。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e/judge-agent"
+    },
+    "legacy-moonlight/swords-10": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-516",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-c.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "high",
+          "independentFinding": "浅衣长发人物俯卧，近手伸右下，背部剑群扇形；柄周细线混织物雾气，不能分辨链节连接。左上新月，右背景暖光水面。"
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "cluster of silver swords rising from the figure's back",
+          "crescent moon",
+          "small white blossoms woven into the hair",
+          "pale peony-like flowers at lower left",
+          "translucent ribbon trailing across the water",
+          "shallow rippling water",
+          "ornamental border with the numeral X at the top"
+        ]
+      },
+      "reason": "两名Reviewer不能佐证细链，Judge不能辨链节路径。不猜物件，过滤thin chains保留剑群姿态。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-moonlight/wands-05": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-110",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/review-110-rejudge.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "Image-first: five figures interact with crossing poles; count/ownership unresolved. Central figure nearest with two on each side, intermediate figures higher/back, supports shallow arc rather than enclosing ring. Pole-attached ribbons unconfirmed."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "tall slender wooden poles with small twigs and leaves",
+          "flower crowns and small blossoms in the women's hair",
+          "sheer layered pale gowns",
+          "shallow water with ripples and floating petals",
+          "white blossoms on dark rocks at lower left",
+          "thin silver border frame with the numeral V at top",
+          "ruined arcade of columns at upper right"
+        ],
+        "deckSpecificMotifs": [
+          "silver linework border with botanical corner ornaments",
+          "mist-veiled ruined architecture",
+          "petals drifting through the air"
+        ]
+      },
+      "reason": "Reviewer-b and reviewer-f independently dispute ring; independent Judge agrees. Local geometry correction meets strict threshold. Ribbon attachment remains unverified, so filter object and repeated motif while preserving dedicated flower crowns. Prior Judge overlooked valid reviewer-f; do not infer pole count from figures.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e+reviewer-f/judge-agent",
+      "replace": [
+        {
+          "find": "the central figure stands nearest the viewer, the others arranged in a loose ring around her",
+          "with": "the central figure stands nearest the viewer, with two figures on each side forming a shallow arc and the intermediate figures set further back"
+        }
+      ]
+    },
+    "legacy-moonlight/wands-08": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-416",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer notes. A pale-haired figure stands barefoot on a flowered rise, seen from behind in three-quarter view, head turned in profile to the viewer's right. She holds a single budding branch in her right hand. I measured the two axes off the pixels after cropping: the held branch runs from its butt end near the ground at roughly (265,767) up to its budded tip at roughly (335,510), i.e. about 15 degrees off vertical - near-upright, leaning only slightly right, tip UP. The flying wands in the sky all lie on a shallow parallel diagonal, e.g. one running from about (20,120) to (487,217), i.e. about 78 degrees off vertical, tips pointing DOWN and to the right. The two axes are roughly 63 degrees apart, close to perpendicular. The held branch therefore does not share the wands' diagonal axis; it crosses it."
+        }
+      },
+      "replace": [
+        {
+          "find": "her staff rising into the same diagonal axis",
+          "with": "her staff held near-vertical, crossing the wands' diagonal rather than aligning with it"
+        }
+      ],
+      "reason": "Threshold check for the staff-axis fix. (1) Unambiguous on the image and I measured it myself rather than eyeballing it. (2) Two Reviewers independently recorded it, though only one raised it formally - so DEPENDING ON BLIND-OBSERVATION CONCORDANCE ('依据盲观察一致'): reviewer-e raised it in the comparison stage ('the held shaft runs steeply up from her hip past her shoulder, while every sky wand lies on a shallow, near-horizontal downward slope - the two axes are close to perpendicular'), and reviewer-c independently recorded the same opposition in his blind observation before comparison, logging the sky wands as 'leafy/budded tips point to the lower right' while logging the held branch as a separate object with 'tip up and to the right, butt down toward the ground', 'single, separate from the sky group'. Opposite tip directions on the two objects is the same underlying fact. (3) I reached the same conclusion independently. (4) Orientation is an observable fact, explicitly one of the allowed categories. (5) One precise substring replacement, confirmed unique with grep -F. Corroborating detail: the reveal's own keyObjects already says 'one upright blossoming staff held in the figure's hand', which contradicts the spatialRelations line I am fixing - the file is internally inconsistent and my fix resolves it toward the entry that matches the image. WHAT I DELIBERATELY DID NOT ACT ON: both Reviewers also challenged 'moonlit', arguing the scene reads as daylight. I agree the scene is high-key and does not read as night, but neither Reviewer could name what it actually is - reviewer-c wrote 'I cannot tell whether dawn or day is intended' and reviewer-e wrote 'Whether the bright disc is a moon or a sun cannot be determined' - and I cannot settle it either. Replacing 'moonlit' with 'daylight' would assert a fact none of the three of us can verify, so it fails threshold 1. I also did not MARK_UNCERTAIN it: 'moonlit' sits inside the scene sentence, which is not a list field, so the only available move would be dropping the whole scene string, and the rest of that sentence (figure, flowered ledge, blossoming staff, flight of flowering wands, diagonal streak, misty river landscape) is accurate and confirmed by all three of us. Dropping it would cost far more than the one disputed adjective is worth. Flagging here so a human can settle the lighting word separately if wanted. I likewise left the wand count alone - nobody could count them (reviewer-c read 7-9, reviewer-e read about 6, and I could not resolve them either), and the reveal already lists the exact count under self-reported uncertainty without asserting a number.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-moonlight/wands-09": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-113",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image first. One figure stands among a grove of upright vine-wrapped poles, both hands stacked on the top of the pole in front of her, head tipped forward, face in profile looking down and to the right. On the moon, which is the item at issue: at 5x the disc is large and its full circle is faintly visible, but the LIT portion is a distinct band arcing along the right and lower-right rim. I isolated it two ways - a luminance window and a red-minus-blue warmth map - and both leave the same shape: a crescent whose inner terminator is concave toward the lit limb, covering well under half the disc, with the remainder showing faintly as earthshine. A gibbous phase would light MORE than half the disc behind a convex terminator; that is demonstrably not what is painted. Separately I counted the poles at three different heights with a coordinate ruler (tops against the sky at y150-250, a band at y255-330, and one at y330-420) and reconciled them to eight shafts at roughly x = 64, 127, 192, 260, 315 (the one she leans on), 342, 386, 436 - but the existing description never asserts a pole count, so nothing there needs touching."
+        }
+      },
+      "replace": [
+        {
+          "find": "beneath a gibbous moon",
+          "with": "beneath a crescent moon"
+        },
+        {
+          "find": "a gibbous moon in the upper right sky",
+          "with": "a crescent moon in the upper right sky"
+        }
+      ],
+      "reason": "The gibbous/crescent fix clears all five thresholds. (1) The visual fact is unambiguous and I verified it instrumentally, not just by eye. (2) Both reviewers returned verdict 'corrected' on this exact item independently - reviewer-a at medium confidence, reviewer-d at high - and both proposed the identical pair of substitutions. (3) I reached the same conclusion from my own look before reading either. (4) Moon phase as painted is an observable fact: the extent and curvature of the lit area, not an interpretation. (5) It is two exact substring swaps. I confirmed with grep -F that each find string occurs exactly once in reveal/review-113.md and that the file contains exactly two occurrences of 'gibbous' in total, so the patch leaves no stale instance behind. I did NOT adopt reviewer-a's second issue - see below.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-d/judge-agent"
+    },
+    "legacy-shadow/cups-07": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-407",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-a.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "I viewed the image first and brightened it 3.4x to read the near-black wall. A lone robed figure seen from behind stands on a tiled floor before a dark stone wall of arched niches, each niche holding a footed chalice with a distinct object above it. I can resolve exactly SEVEN niches: upper row of four (serpent, tower/turret, crown, leafy branch) and lower row of three (key at far left, a white cloth the figure's right hand is lifting off the centre one, an oval mirror-like disc at the right). The figure's left arm is raised toward the upper-left niche. Critically, measuring the niche centres, the upper row is evenly spaced, while in the lower row the far-left-to-centre gap is roughly double the centre-to-right gap, and the figure's body stands exactly in that double-width span. I independently judged, before reading any packet, that one more lower-row niche could be hidden behind the robe. I can neither confirm nor exclude it, so I cannot verify that seven is the total."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "chalices set in the niches",
+          "small serpent coiled above the chalice in the upper-left niche",
+          "small tower or turret above the chalice in the second upper niche",
+          "crown above the chalice in the third upper niche",
+          "leafy branch or plant above the chalice in the upper-right niche",
+          "key above the chalice in the lower-left niche",
+          "cloth held in the figure's right hand"
+        ],
+        "spatialRelations": [
+          "the figure overlaps the lower-middle niche, standing between the two rows",
+          "the raised left hand reaches the upper-left niche",
+          "the lower-right niche holds a chalice with a dark oval disc above it"
+        ]
+      },
+      "reason": "Not AUTO_CORRECT, because the correct number is unknown -- the ambiguity itself is the finding, and I have no unambiguous fact to patch to. Not AUTO_PASS, because the description asserts a total ('seven arched wall niches') that the pixels do not establish. Two independent Reviewers recorded exactly this, independently of each other and of me: reviewer-d ('the lower row jumps from the far-left niche straight to the centre one, a gap about twice the other spacing, and the figure's body fills that position... the asserted total of seven is not verifiable') and reviewer-f, who went further and ran a brightness scan along the lower ledge line, finding lit ledge under the three visible niches but 'a completely dark span across the robe's width, so the wall there is occluded rather than shown to be blank'. My own measurement agrees. I name the two specific items rather than discarding whole fields. I remove BOTH numeric items, not just the keyObjects one, because 'four niches in an upper row, three in a lower row' re-asserts the same unverifiable total of seven -- dropping only one would leave the downstream model able to reconstruct 'seven' anyway. The cost is low: the remaining keyObjects still enumerate each niche's contents by position (upper-left serpent, second upper tower, third upper crown, upper-right branch, lower-left key), so the two-row niche-wall layout survives without the unverified count. Note that the model's own self-reported uncertainty already includes 'the precise number of niches fully visible at the left edge', which corroborates the flag. reviewer-b passed but raised no counter-observation on the niche count, so nothing is overturned.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d+reviewer-f/judge-agent"
+    },
+    "legacy-shadow/cups-11": {
+      "reviewStatus": "pass",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-413",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-b.json",
+          "decision": "AUTO_PASS",
+          "confidence": "high",
+          "independentFinding": "I opened the image and isolated the 47x45 pixel region above the cup rim (x 258-305, y 355-400), normalised its contrast and upscaled it 18x. The shape resolves unmistakably into a fish: a round eye with a dark pupil and pale ring near the upper right, a curved gill-cover arc behind it, a pointed snout, a dorsal fin ridge along the upper back, a pectoral fin low on the left flank, and a forked caudal tail dipping back toward the cup's rim. The body arcs head-up out of the goblet, with scattered bright droplets around it. I also checked the rest of the scene: the cup is held in both hands at chest height by a figure in profile facing viewer-right with the head bowed; the arch in the rock face contains a closed panelled door with light leaking along its right edge and under its threshold, throwing a bright band across the wet stony sand toward the lower right; sea and surf lie behind and to the left."
+        }
+      },
+      "reason": "Both reviewer-a and reviewer-d independently report the same thing - that the shape above the cup is an unresolvable pale plume - and both want the fish claim removed. The two-reviewer threshold is met for their claim, but what they recorded is the limit of their own inspection, not a property of the image. 'I could not resolve it' is not the same as 'it is not there', and MARK_UNCERTAIN is reserved for facts I cannot verify. I can verify this one: at 18x with contrast normalisation the fish anatomy is explicit, and reviewer-a himself rated his issue confidence 'low'. Marking it uncertain would delete a real, resolvable and distinctive detail, along with the dependent keyObjects entry about the droplets around the fish form. The existing wording is also already appropriately hedged as 'fish-like form', and the file's own self-reported uncertainty already carries 'whether the shape rising from the cup is a fish or a flame-like form', so nothing is over-asserted. Everything else in the existing description checks out against my own reading, including the closed door inside the lit arch and the light band running toward the lower right.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-d/judge-agent"
+    },
+    "legacy-shadow/cups-13": {
+      "reviewStatus": "pass",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-302",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-a.json",
+          "decision": "AUTO_PASS",
+          "confidence": "high",
+          "independentFinding": "Seated woman on a carved stone throne (shell/fan motif on the backrest), head bowed over a tall ornate footed goblet, moon upper right over dark water with a reflection streak, steps descending right. I zoomed two contested regions. (a) THE VESSEL'S SUPPORT: at 3x brightened zoom the goblet's foot stands on a soft, folded, brocade-patterned surface that falls away in vertical drapery - her gown over her knees. Stone throne arms flank it on BOTH sides at a similar height, which is what made it look like a ledge at full-frame scale, but the surface directly under the foot is unmistakably cloth, not masonry. (b) THE HEADPIECE: at 5x zoom it is NOT a regular repeating structure. It is an irregular, asymmetric tangle of thin branching twig-like spikes of uneven length and angle, with small bead-like glints, clustered more heavily at the left and right temples. It reads as thorn branchwork catching moonlight."
+        }
+      },
+      "reason": "Both reviewer corrections fail on my own inspection, so the existing text stands. Reviewer-a's highest-confidence claim - that the vessel 'stands on the flat stone seat, her gown draping to the right of it' - is contradicted by the pixels: the drapery runs UNDER the goblet's foot, so the existing 'resting on the figure's lap' is right and reviewer-c independently read it the same way. Reviewer-a and reviewer-c did both flag the headpiece, so that item clears the two-reviewer gate, but it fails gates 1 and 3: both argued from 'manufactured regularity' and 'regular repeating points', and at 5x zoom I see the opposite - irregular branching twig forms. I will not overturn a defensible existing reading on an argument my own zoom contradicts, and the reveal already self-flags 'whether the head ornament is a thorn circlet or a thin metal crown'. The remaining two objections are single-sourced and fail gate 2: reviewer-a alone disputes the 'hinged' lid (no hinge is resolvable, but none is ruled out either) and the plural 'spire silhouettes' (already hedged in the reveal's own uncertainty list as 'the exact number of spire silhouettes'). Nothing here warrants MARK_UNCERTAIN, because the two claims I could not verify are already carried as declared uncertainties in the source record.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-shadow/major-03": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-210",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the blind image and then brightened the figure's lower body at 3x. There is a flat stone block/ledge at her right, and the red patterned under-layer of her gown drapes over its top surface and down its front face — her hip is resting on the block, which is bearing her weight. Her torso folds forward from a seated hip, knees bent in front, and both bare hands press into the dark soil on either side of a small leafy seedling. This is a seated posture on the block, not a kneel beside it. I also confirmed the lower-right object: a large plate with chipped, broken edges bearing a clean incised Venus sign, a circle with a cross below it."
+        }
+      },
+      "replace": [
+        {
+          "find": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+          "with": "A crowned woman sits on a stone block in a dark overgrown garden"
+        },
+        {
+          "find": "stone block or ledge she kneels beside",
+          "with": "stone block or ledge she sits on"
+        }
+      ],
+      "reason": "All five gates are met for the posture correction. (1) The fact is unambiguous on screen once brightness is raised — the red underskirt lying over the block's top edge is decisive. (2) Both reviewers reported it independently: reviewer-b ('the figure is seated on the stone block, bent sharply forward at the waist, not kneeling beside it') and reviewer-e ('she is seated on the low stone block, leaning far forward, not kneeling beside it'), and both arrived at it via the same underskirt-over-the-block evidence without coordination. (3) My own zoom reaches the same conclusion. (4) Posture and position are observable facts, not interpretation. (5) Two precise substring replacements. The reveal's own spatialRelations line already said 'the woman sits in the lower centre', so this patch also removes an internal contradiction. Deliberately NOT patched: reviewer-e's objection that the lower-right object is shield-shaped rather than a 'disc'. Only reviewer-e raised it, reviewer-b recorded 'round shield/disc' at high confidence, and although the silhouette looks almond/kite-shaped to me, reviewer-e's own caveat is right — a round plate seen obliquely would look the same, and I cannot exclude that. The load-bearing part of that line, the circle-and-cross emblem, is correct either way, so I leave it alone and flag the shape for the next pass.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e/judge-agent"
+    },
+    "legacy-shadow/major-04": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-301",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the blind image and then zoomed 5x with brightness lift on the head region. The figure is seated hunched forward on a high-backed stone throne, head dropped low. The head is a rounded mass of rim-lit strands reading as shoulder-length hair; its silhouette against the lighter hillside is unbroken - no band, no points, no metallic specular glint, although metal elsewhere in the frame (the staff orb, the throne relief) does catch hard highlights. I see no crown. Separately I zoomed the middle-distance stair flight: there IS a small structure with a pointed-arch opening at the top of the steps, clearly resolvable once brightened."
+        }
+      },
+      "replace": [
+        {
+          "find": "a crowned figure seated on an ornate throne",
+          "with": "a dark-robed figure, head bowed and in shadow, seated on an ornate throne"
+        }
+      ],
+      "reason": "All five AUTO_CORRECT gates are met for the crown item and only for that item. (1) The absence of a crown is unambiguous on the pixels once the head is brightened - a smooth hair silhouette with no headgear. (2) TWO independent reviewers reported the same thing: reviewer-a ('no crown is present') and reviewer-d ('no crown or headpiece is resolvable'). (3) I reached the same conclusion from my own zoom before reading either packet entry. (4) It is a presence/absence fact, not interpretation. (5) It is one exact substring swap, and the model's own self-reported uncertainty list already concedes 'whether the figure wears a crown or headpiece', so the scene line asserts more than the model itself claims to know. I took reviewer-d's more conservative replacement wording over reviewer-a's 'bare-headed': I can confirm no crown, but I cannot rule out a hood, so the patch removes the crown claim without asserting hair. I deliberately did NOT patch the other two issues. Reviewer-a's 'ram-head armrests' plural objection is single-sourced (reviewer-d counted two ram heads without objecting to the plural), so it fails gate 2. Reviewer-d's 'no arched gate' objection I overturn outright: at 5x brightened zoom a small pointed-arch gateway is plainly visible at the head of the stair flight, so 'flight of steps rising to a small arched gate' is correct as written and stays.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-d/judge-agent"
+    },
+    "legacy-shadow/major-06": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-508",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-b.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "Image-first: two figures join hands, pale strips hang there, flanking trees, fruit-like forms left, mountain between, wing-shaped sky light. Coiling trunk form lacks independently identifiable head/scales."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "cracked stone paving forming a path",
+          "two bare branching trees",
+          "small round fruits hanging on the left tree",
+          "a luminous winged shape in the sky",
+          "a pale mountain peak on the horizon",
+          "tattered cloth hanging between the joined hands",
+          "a rectangular border frame with the numeral VI at the top and the words THE LOVERS at the bottom"
+        ],
+        "spatialRelations": [
+          "the two figures face each other across the centre of the path, hands meeting at the midpoint",
+          "the winged light sits directly above and between the two heads",
+          "the mountain peak rises in the distance directly behind the gap between the two figures"
+        ],
+        "visualTensions": [
+          "the bright winged light above contrasts with the bowed, shadowed heads below",
+          "the figures' garments are torn and trailing while their stance is still and composed"
+        ],
+        "deckSpecificMotifs": [
+          "monochrome near-black rendering with silver highlights",
+          "aged, distressed border with engraved-style lettering",
+          "winged light motif in the sky"
+        ],
+        "emphasizedAspects": [
+          "two distinct presences held in a single joined gesture",
+          "a bond formed under a shared light rather than under external authority"
+        ]
+      },
+      "reason": "Reviewer-c flags serpent, reviewer-e admits vine uncertainty; f pass cannot establish identity. Filter serpent-bearing claims without inventing another identity. Preserve other reliable facts.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e+reviewer-f/judge-agent"
+    },
+    "legacy-shadow/major-10": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-507",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "medium",
+          "correctionConfidence": "high",
+          "independentFinding": "Image-first: figure braced on steps at radial wheel hub. Second inspection confirms relief plaques on broad radial spoke panels between hub and separate segmented rim; counts/species unresolved."
+        }
+      },
+      "replace": [
+        {
+          "find": "carved relief panels on the wheel's rim segments",
+          "with": "carved relief panels on the wheel's spokes between the hub and rim"
+        }
+      ],
+      "reason": "Reviewer-d and reviewer-f independently report same rim/spoke placement error. Local position clear with high confidence; unrelated dark details remain medium.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d+reviewer-f/judge-agent"
+    },
+    "legacy-shadow/major-15": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-105",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-a.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "I viewed the image before the packet and then re-exposed the rear wall at 3x with heavy gamma lift. The dark mass is a broad vertical column rising from floor level behind the plinth that forks into two thick limbs sweeping outward and upward toward the top corners, with a lit patch of wall between them. It has no secondary twigs, which is unlike a tree, and no head or skull mass at the fork, which is unlike a horned skull; the limbs simply continue off the top of the frame. I could not decide between horns, a bare trunk, a stain and a cast shadow, and nothing in the pixels settles it. Separately I DID resolve the plinth emblem: at 6x it is a five-pointed star, and an inverted one at that, with two points up, two side points joined by a horizontal bar in the lower half, and a single point descending below it. Not a hexagram. I also resolved the chains: the right figure wears a closed metal ring around the neck and grips the chain with both hands at the chest, while the left figure holds an open ring clear above its bowed head."
+        }
+      },
+      "uncertainFields": [
+        "scene"
+      ],
+      "patch": {
+        "keyObjects": [
+          "stone block or plinth at centre with a carved five-pointed star on its front face",
+          "two heavy chains running from the block outward to each figure",
+          "metal ring or hoop held overhead by the left figure",
+          "small arched wooden door set into the left wall",
+          "carved Roman numeral XV at the top of the card",
+          "title text 'THE DEVIL' at the bottom",
+          "tattered, frayed garments on both figures"
+        ],
+        "spatialRelations": [
+          "the stone block sits at the centre of the floor between the two figures",
+          "the chains slope down from each figure's neck and hands to the top of the block",
+          "the arched door is set low in the left wall, behind the left figure"
+        ]
+      },
+      "reason": "Both reviewers independently reported the wall shape as indeterminate, and my own re-exposed read agrees, so 'horned' is an assertion the pixels do not carry. It is exactly the failure mode this wave exists to catch: the traditional iconography of the card supplies the horns, not the image. I did not take AUTO_CORRECT, because the corrected claim would be 'form indeterminate', which is an absence of a finding rather than an unambiguous observable fact, and threshold 1 is not met. I name all three items that carry the word rather than discarding a whole field. The scene sentence is included deliberately: it is the most-read field, and deleting the keyObjects and spatialRelations lines while leaving 'horned' standing in scene would both leave the unsupported claim in the place that matters most and leave the record self-contradictory. A human restoring it need only drop one adjective; the rest of that sentence (two ragged barefoot figures, chained to a stone block, dim vaulted stone chamber) I verified as accurate and it is suggested verbatim below. I OVERTURN reviewer-a on the star: the point count is resolvable at sufficient exposure and 'five-pointed' is correct, so that claim stays.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-d/judge-agent"
+    },
+    "legacy-shadow/major-21": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-310",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I viewed the image before reading any reviewer notes. A near-monochrome, very dark plate. One figure, seen from behind, mid-stride and barefoot, in a long ragged-hemmed coat, walking away from the viewer toward a pale glow low on the horizon; a long shadow is thrown back toward the viewer across cracked paving. One slender pointed rod/blade in each hand, two total, both angled down and outward. The foliage surround is NOT a closed ring: two leafy arcs rise from the lower left and lower right, meet and are bound by a ribbon knot at the top centre (two ribbon tails hanging into the opening), and at the bottom they terminate separately, leaving a wide gap through which the paving and the figure's cast shadow run out of the frame. Four carved corner heads outside the foliage: human profile upper left, hooked-beak raptor upper right, horned bovine lower left, maned lion lower right. Reflective wet expanse and a distant spired skyline behind the figure."
+        }
+      },
+      "replace": [
+        {
+          "find": "a completed circuit, shown as a closed wreath ring",
+          "with": "a completed circuit, shown as an open wreath arch bound at the top and parted at the bottom"
+        },
+        {
+          "find": "the enclosing wreath ring versus the open horizon beyond it",
+          "with": "the enclosing wreath arch versus the open horizon beyond its bottom gap"
+        }
+      ],
+      "reason": "All five gates are met. (1) The wreath's bottom gap is unambiguous on the image: the two arcs visibly stop short above the pavement and the figure's shadow passes out through the opening. (2) reviewer-b and reviewer-e independently filed the same issue on the same text, each at high confidence, and each independently proposed amending both 'a closed wreath ring' and 'the enclosing wreath ring'. (3) I reached the same conclusion unaided. (4) Open-vs-closed is a presence/absence fact, not interpretation. (5) Two exact substring replacements suffice. I used the more conservative wording of the two proposals: I corrected only the false visual claim ('closed ring' -> 'open arch bound at the top') and left the interpretive framing ('a completed circuit', 'the enclosing ... versus the open horizon') intact, rather than adopting reviewer-e's broader rewrite of the theme itself. Note the rest of the file already describes the foliage correctly as an 'arch' in scene and keyObjects, so these two entries were the only inconsistent ones.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e/judge-agent"
+    },
+    "legacy-shadow/pentacles-03": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-304",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "Three figures around a trestle workbench under a large gothic arch, three pentacle medallions in gabled niches above (I zoomed these: three five-pointed stars in rings, all point-UP, the centre one higher and larger). On the depth question I read the image the same way before opening the packet: the RIGHT figure is the nearest to the viewer, not the furthest. It is the largest figure in the frame, its robe overlaps and passes in front of the bench's near-right end, and its hem runs down past the left figure's hem toward the bottom-right of the picture area. The left figure is distinctly smaller and stands across the bench on the far side, next to the centre figure. I also zoomed the right figure: bare-headed with dark hair and a hood folded down at the back of the neck, holding a large stiff sheet that does carry drawn architectural lines, and the centre figure holds a single chisel-like tool point-down on the block with the other hand flat on the stone - no mallet is visible."
+        }
+      },
+      "replace": [
+        {
+          "find": "the right figure stands slightly further back than the left",
+          "with": "the right figure stands nearer the viewer, on the near side of the bench, while the left figure stands across it"
+        }
+      ],
+      "reason": "All five AUTO_CORRECT gates are met. (1) The depth ordering is unambiguous on the pixels, carried by three independent cues at once: relative figure scale, the robe's overlap in front of the bench, and the hem's position lower in the frame. (2) TWO independent reviewers reported exactly this: reviewer-c ('the right figure stands nearer the viewer than the left', medium) and reviewer-e ('it is the largest figure in the frame, on the near side of the bench', high). They converged on the same wrong clause and quoted the identical find string. (3) I reached the same conclusion from my own look. (4) It is a position fact, not interpretation. (5) It is one exact substring swap; I confirmed with grep -F that 'the right figure stands slightly further back than the left' occurs exactly once in the reveal, so the replacement is unambiguous. I used reviewer-e's fuller replacement wording over reviewer-c's because it fixes both halves of the relation - it states where the right figure is AND where the left figure is - and reviewer-e held this at high confidence. No other field was contested by either reviewer, and the remaining items I spot-checked (three point-up pentacles, the centre figure's chisel, the right figure's drawn sheet) match the existing text.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-shadow/pentacles-09": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-514",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-c.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "长衣人物伸空手，鸟在手右上张翼；上墙五枚下墙四枚圆星徽，左阶梯。左下容器状弧线暗部遮挡，无法确认盆栽。"
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "five pentacle medallions set in arched niches along the upper wall",
+          "four pentacle medallions set in arched niches along the lower balustrade",
+          "a bird with spread wings hovering above the raised hand",
+          "a long dark patterned gown with a trailing hem",
+          "climbing vines with leaves and hanging grape clusters",
+          "stone steps at the left",
+          "a low stone balustrade running to the right"
+        ]
+      },
+      "reason": "两名Reviewer明确盆器在右侧，左侧只确认阶梯植物模糊装饰；Judge不能确认左下盆栽。不以未辨出推断不存在，过滤争议对象。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-shadow/pentacles-13": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-208",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-b.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "I opened the blind image and brightened two crops. The pentacle disc is unambiguous: one golden disc, a five-pointed star inside a circle, steadied from above by one hand, standing upright against the open arched door. One rabbit, sitting, facing left toward the figure — also unambiguous. The small plant is where I run out of certainty: at 7x with brightness raised I see a thin leafy stem whose base fans out into a spray of fine branching filaments that lie on top of the dark leaf litter rather than disappearing into it. That leans toward exposed roots, but the filaments catch rim light in exactly the same way as the dry twigs and debris littering the ground all around them, and I cannot separate the two. I also looked at the doorway: the opening behind the door is solid black. What is catching light is the disc and the planked face of the door leaf, not the doorway interior."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "keyObjects": [
+          "round disc bearing a five-pointed star, held in the woman's hand",
+          "open arched wooden door set in a stone wall",
+          "thin spiked stem or thorn lying across the ground near the seedling",
+          "crown of small points on the woman's head",
+          "stone wall with carved panels visible inside the doorway",
+          "rabbit",
+          "tall flowering plant stems at the left edge"
+        ],
+        "visualTensions": [
+          "the woman's downward reach toward a fragile uprooted plant against the solid stone architecture"
+        ]
+      },
+      "reason": "Neither issue clears the AUTO_CORRECT bar — reviewer-e raised both and reviewer-c returned a clean pass, so criterion 2 fails on each. But I cannot confirm either claim myself, and the two reviewers read the plant in opposite directions (reviewer-c: 'sprouting from the soil'; reviewer-e: not determinable), while the existing text asserts a third, stronger thing: uprooted with exposed bare roots. An unverifiable claim about whether a plant is uprooted directly steers interpretation, so it should not be handed downstream. Same for the doorway: I can confirm the disc is lit, I cannot confirm the doorway is, and the reveal's own spatialRelations line already calls it 'the dark interior of the doorway'. I am naming the two specific lines rather than discarding whole fields, so the reliable keyObjects both reviewers confirmed independently (the pentacle disc, the rabbit, the open arched door, the crown, the staircase) all survive. Flagged, not patched: the scene line also carries 'a small uprooted seedling'. It is the same unconfirmed claim, but scene is one undivided blob and marking it would destroy the whole description for one word — it needs a human word-level edit or a second-pass patch.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e+reviewer-f/judge-agent"
+    },
+    "legacy-shadow/swords-01": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-311",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I viewed the image before reading any reviewer notes. A dark vaulted stone chamber. One cloaked figure, seen from behind, left of centre, one arm raised and extended to the sword on the central axis. The sword is vertical and POINT-DOWN: a small round pommel sits at the very top, the straight crossguard below it, and the glowing blade descends from there past the figure's hand into the top face of a stone block/altar, where a large vertical crack splits the block's front face directly in line with the tip. A circular incised disc with radiating spokes rings the entry point on the altar top. A pale bare-branching mass spreads symmetrically left and right behind the blade at about crossguard height. Overhead the ceiling is a fan/rib vault in regular masonry courses radiating from a point directly above the sword, with a light shaft descending from its apex. An arched doorway with steps sits at the right; leaning slabs at the left."
+        }
+      },
+      "replace": [
+        {
+          "find": "the sword stands vertically at the centre, its point rising above the figure's head",
+          "with": "the sword stands vertically at the centre, driven point-down into the altar, its crossguard, grip and pommel rising above the figure's head"
+        }
+      ],
+      "reason": "All five gates are met for the sword's orientation. (1) The orientation is unambiguous: pommel at the top, crossguard beneath it, blade running down into the stone, and the altar's crack directly in line with the buried tip. (2) reviewer-b and reviewer-d independently filed the identical issue against the identical spatialRelations line, both at high confidence, with essentially the same proposed wording. (3) I reached the same conclusion unaided. (4) Orientation is an observable fact, explicitly in scope. (5) One exact substring replacement. I withheld reviewer-b's two solo items. Its 'gripping the hilt' -> 'gripping the blade below the crossguard' is directly contradicted by reviewer-d, who records the hand on the grip, so the visual fact is not unambiguous (gate 1 fails). Its 'cracked wall with radiating fracture lines' -> 'fan-vaulted ceiling' was filed by reviewer-b alone; reviewer-d's blind observation does independently describe a fan/rib vault overhead and places the only crack in the altar block, and I read it the same way, but reviewer-d did not raise it at the comparison stage, so I am short of the two-reviewer bar and declined rather than hesitate into a correction. FLAG FOR A LATER PASS: keyObjects 'cracked wall with radiating fracture lines' and spatialRelations 'the cracked wall spreads behind and above the sword' are, in my own reading, a fan vault rather than a fractured wall, and the visualTensions entries that build on 'the towering fracture pattern' and 'the radiating cracks' inherit that reading.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-shadow/swords-02": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-501",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-d",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-a.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "一只手抬至头侧，另一只手靠近右剑柄，两剑向两侧下方展开；左剑是否插入地面不清。月亮右侧亮区明显，但纹理与暗部使精确月相无法稳判。"
+        }
+      },
+      "uncertainFields": [
+        "scene"
+      ],
+      "patch": {
+        "keyObjects": [
+          "two swords with plain crossguards and straight blades",
+          "woman's long dark gown with lace-textured skirt",
+          "arched doorway with a panelled door and a circular carved emblem above it",
+          "stone steps leading up to the doorway",
+          "cracked stone paving with a circular sun-like medallion on the left and a crescent medallion on the right",
+          "Roman numeral II at the top of the card",
+          "the words Two of Swords at the bottom"
+        ]
+      },
+      "reason": "reviewer-d 的双手持剑读法与可见抬手及 reviewer-a/f 独立观察冲突；拒绝其改姿势建议。reviewer-f 的 crescent 与 a/d 的 gibbous 分歧，自身观察不足以确认精确月相，且不满足两名 Reviewer 一致自动修正门槛。丢弃争议月相条目和含不可靠 planted 细节的 scene；其他可靠字段保留。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-d+reviewer-f/judge-agent"
+    },
+    "legacy-shadow/swords-03": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-206",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-a.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "medium",
+          "independentFinding": "I opened the image first. A kneeling figure in tattered dark robes hunches over a large corded bundle on cobblestones, head bowed, face hidden by long hair; one hand grips the hilt of a large vertical sword driven into the bundle, the other is splayed flat on the bundle. Three swords are individually resolvable. Tracing each blade axis: the left sword's pommel sits at roughly x=140 while its blade enters the bundle near x=205; the right sword's pommel sits near x=400 while its blade enters near x=355; the central sword is vertical near x=255. So on both outer swords the TOP is further from the centre than the point is — their hilts splay away from the central blade, forming a fan, while their points converge into the bundle. Under the ordinary reading of 'lean inward' (top tilting toward centre) the existing line is backwards; under a reading about where the points converge it is defensible. Background: a bright ragged break in heavy cloud at upper right backlighting the figure, a bare dead tree upper left, a cobbled road receding right toward a distant spired silhouette with specks that read as birds."
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "spatialRelations": [
+          "the central sword is held upright by the figure and points down into the bundle",
+          "the bundle sits in the lower centre foreground, the figure rises behind it",
+          "the road recedes from the bundle toward the castle on the right horizon"
+        ]
+      },
+      "reason": "My own reading of the geometry agrees with reviewer-b: the outer hilts splay outward, so 'lean inward' is misleading as stated. But AUTO_CORRECT is explicitly barred here — this is the exact case the threshold names, one reviewer passing and only the other raising it. reviewer-e returned a clean pass and recorded 'all three swords converge on the same bundle', which is true of the points and does not contradict reviewer-b, so the two are not in direct conflict and this is not HUMAN_REVIEW either; I can read the geometry myself. AUTO_PASS would be wrong too, because reviewer-b is not merely expressing a wording preference — the lean direction is measurable and the natural reading of the existing phrase is false. Since the phrase is genuinely ambiguous between 'tops tilt in' (false) and 'points converge in' (true), and since I may not rewrite it on one reviewer's report, the conservative action is to drop the single entry rather than hand a phrase that reads backwards to the interpretation model. The loss is contained: it is one named spatialRelations entry, and the reliable neighbours survive, including 'the central sword is held upright by the figure and points down into the bundle', which I independently confirm, and the road-to-castle recession. The three-sword count, which both reviewers call a floor rather than a certainty because the figure's body covers part of the bundle, is left untouched.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e+reviewer-f/judge-agent"
+    },
+    "legacy-shadow/swords-04": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-312",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I viewed the image before reading any reviewer notes, then magnified two regions because the plate is extremely dark. Back wall: three tall pointed-arch niches, one sword in each. Magnified, every one is unambiguously HILT-UP / POINT-DOWN — round pommel at the top, wrapped grip, horizontal crossguard, blade tapering downward to a point near the niche floor. The three niches sit across the centre-and-right of the back wall; the only thing at upper left is the traceried lancet window. A fourth sword lies flat and horizontal on a low stone ledge at the lower right, hilt right, point left. The figure reclines on a carved stone slab, head propped at the RIGHT end, bare feet at the LEFT end. Magnified, the figure's lower forearm is visibly WRAPPED in a pale strip in distinct parallel coils running wrist-to-elbow, while the other hand pinches the strip's free end and draws it taut upward — the figure is binding its own forearm. Short flight of steps at lower left."
+        }
+      },
+      "replace": [
+        {
+          "find": "three swords set upright in arched wall niches",
+          "with": "three swords mounted point-down in arched wall niches"
+        },
+        {
+          "find": "three upright swords set into arched wall niches",
+          "with": "three swords mounted point-down (hilts uppermost) in arched wall niches"
+        }
+      ],
+      "reason": "AUTO_CORRECT on the niche swords' orientation only; all five gates pass decisively. (1) At magnification the orientation is beyond doubt: pommel, grip and crossguard at the top of each niche, point at the bottom. (2) reviewer-b and reviewer-e independently filed the identical issue against both occurrences of the wording, and each proposed the same correction. (3) I confirmed it myself from the image. (4) Orientation is an observable fact. (5) Two exact substring replacements. I left visualTensions' 'the upright blades above versus the laid-down blade below' untouched: there 'upright' means vertical as opposed to lying flat, which is still accurate. OVERTURNED: reviewer-b's third issue asked to strip 'bandaging a forearm' down to 'hands clasped at the chest around a narrow pale strip', on the grounds that no wrapping around a forearm could be traced. Both reviewers declared the object unresolvable at full-frame scale, and I nearly marked it uncertain on that basis, but magnifying the chest region settles it: the pale strip is plainly wound in repeated coils around the forearm with the free end held in the other hand. The existing 'bandaging a forearm' and the keyObject 'strip of pale cloth wound around the figure's forearm' are correct and must be kept, so I filed no uncertainty against them. FLAG FOR A LATER PASS: spatialRelations 'the three niche swords are aligned in a row above and to the left of the figure' is wrong in my own reading — the niches are above the figure's torso and head end at the centre-right, and the upper left holds the window. reviewer-b filed this; reviewer-e did not file it but independently located the blades 'upper right' in its blind observation. Because only one reviewer filed it at the comparison stage I held it back rather than hesitate into a correction.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e/judge-agent"
+    },
+    "legacy-shadow/swords-06": {
+      "reviewStatus": "pass",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-104",
+        "reviewers": [
+          "reviewer-c",
+          "reviewer-e"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-a.json",
+          "decision": "AUTO_PASS",
+          "confidence": "high",
+          "independentFinding": "I opened the image first and found it extremely low-key, so I pulled the two sword clusters out separately at 8x with brightness lifted and autocontrast applied. At that exposure the count is unambiguous: exactly THREE swords stand in the left cluster and exactly THREE in the right, six in total, every one hilt-and-pommel up with the blade driven down into the stone-block boat. Each blade shows a distinct pale shaft, a crossguard and a round pommel, with clear dark gaps between them and no partially occluded fourth shaft in either group. Two figures only: a standing poler in a ragged coat, back to the viewer, gripping a long pole that angles down-left into the water, and a hooded figure seated low and to his right. The hull is stacked stone blocks, as described."
+        }
+      },
+      "reason": "Both reviewers reached 'not resolvable, six or seven' only because they read the image at native exposure, where the blades are dark-on-dark. That is a limit of how they looked, not a property of the picture. With the gamma lifted the blades separate cleanly and the count resolves to six, matching the existing description exactly. Reviewer-c's 'about 4 hilts resolvable along the left' and reviewer-e's 'three or four pale vertical blades' are both mistakes: the shape immediately right of the third left-hand sword is the standing figure's dark tattered coat hem crossed by the punt pole, and it has neither pommel nor crossguard and is dark rather than pale. Hedging the description to 'at least six... exact count not resolvable' would discard a fact the pixels do support, which is a real loss, so the existing 'six upright swords' stands.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-c+reviewer-e/judge-agent"
+    },
+    "legacy-shadow/swords-07": {
+      "reviewStatus": "uncertain",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-517",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-c.json",
+          "decision": "MARK_UNCERTAIN",
+          "confidence": "high",
+          "independentFinding": "人物向右迈步，头暗色背侧轮廓，眼睛/回望不可靠；两尖顶建筑之间，二维无法定远近。左右独立竖剑，怀抱剑数暗部重叠不明。"
+        }
+      },
+      "uncertainFields": [],
+      "patch": {
+        "visualTensions": [
+          "the two planted swords stand still and upright while the carried blades are bundled and angled",
+          "bright cobble highlights against an almost entirely black field"
+        ],
+        "emphasizedAspects": [
+          "departure from a place while carrying something away",
+          "moving quietly and unseen under cover of darkness"
+        ],
+        "spatialRelations": [
+          "one upright sword is planted to the left of the figure, the other to the right",
+          "the cobbled path curves from the right structure toward the lower left foreground",
+          "the light source sits high and behind the figure, above and left of centre"
+        ]
+      },
+      "reason": "b/f反对明确回头，d行进方向与图像/b/f不符。Judge面部不足不补eyes lowered；建筑远近无两人一致，不强改。过滤回望与距离条目。",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d+reviewer-f/judge-agent"
+    },
+    "legacy-shadow/swords-08": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-114",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-c"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer note and counted the planted swords at several magnifications. Left row: 4 swords, each with a visible round pommel, grip and cross-guard. Right row: 3 swords, same. Total 7 individually resolvable. I then specifically tested the two places a hidden sword could hide. (a) Inward side: the gap between the farthest right-side sword and the figure is open, brightly lit background sky and wall — a fourth sword there would be silhouetted against the glow, and there is none. (b) Outward side: there is one faint thin vertical streak near the right frame edge, but it has no pommel and no cross-guard, and a sword standing nearer the viewer than the last one would be rendered larger and brighter, not dimmer — it is a wall/edge highlight, not a blade. The bright vertical at the far left edge runs the full height of the artwork, well beyond the swords, and is the printed border rule. Separately, on the figure: one hand (the figure's right) is raised and pinching the trailing end of the cloth band at the temple; the other arm hangs down at the figure's side with the fingers open and relaxed, clearly visible against the dark robe. Only one hand is raised."
+        }
+      },
+      "replace": [
+        {
+          "find": "four upright swords on the right",
+          "with": "three upright swords on the right"
+        }
+      ],
+      "reason": "All five AUTO_CORRECT thresholds are met for the right-side sword count. (1) The fact is unambiguous on the pixels and I verified it myself at four separate crops, including ruling out the hidden-sword case that both reviewers flagged as their residual doubt. (2) Two independent reviewers reported the same thing: reviewer-a ('three upright swords on the right', hilts at x=418/455/492) and reviewer-c ('exactly three pommel-and-cross-guard units' on the right, left row has four). Both also independently counted 4 on the left, so the existing 'four on the left' stands. (3) I reached the same count independently. (4) It is a pure count, not an interpretation. (5) It is a single precise substring swap, and 'four upright swords on the right' is distinct from 'four upright swords on the left', which is correct and untouched. The reason I can go to high confidence where both reviewers stopped at medium is that neither of them ran the inward-gap test: the lit background behind the right row positively excludes a fourth blade rather than merely failing to show one. I am NOT applying reviewer-a's second proposed change ('both hands raised'). That is wrong: the figure's left arm hangs down at its side with open fingers, which I can see plainly in an enlarged crop, and reviewer-c independently described the same thing ('the right arm is raised with the hand at the side of the head'). The existing wording 'one hand raised to a band of cloth across the eyes' is correct and stays.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-c/judge-agent"
+    },
+    "legacy-shadow/swords-09": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-2",
+        "reviewId": "review-212",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-e",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-2/judge/judge-c.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I opened the image before reading any reviewer notes. Upper-left wall holds a dark rectangular case divided into a 3x3 lattice: nine blades, one per pane. In every pane the pommel and crossguard sit at the TOP of the compartment and the blade tapers downward to a point at the bottom — all nine hang hilt-up / point-down, with no exception in any of the three rows. Count of nine is unambiguous (3+3+3). Separately: a figure sits on the near edge of the bed, back to viewer, right arm raised to the curtain at the tall window; barefoot; a pale wedge of daylight crosses the cracked floor; a spired cityscape is visible outside."
+        }
+      },
+      "replace": [
+        {
+          "find": "nine upright swords displayed one per panel",
+          "with": "nine swords displayed one per panel, each hanging point-down with its hilt uppermost"
+        },
+        {
+          "find": "nine-panel wall cabinet holding nine upright swords",
+          "with": "nine-panel wall cabinet holding nine point-down swords"
+        }
+      ],
+      "reason": "All five AUTO_CORRECT gates are met. (1) The orientation is unambiguous on the pixels — hilt mass at top, taper to a point at bottom, repeated nine times. (2) TWO independent reviewers reported the same thing in their blind observations: reviewer-b wrote 'one blade hangs point-down in each compartment' and reviewer-e wrote 'each hilt-up and point-down'. Reviewer-e's overall verdict was 'pass', but the agreement test is on the blind observation, and reviewer-e recorded the identical orientation independently. (3) I reached the same conclusion from the image on my own, before opening the packet. (4) Blade orientation is an observable fact (朝向), not interpretation. (5) The fix is two exact substring replacements, both verified unique in the reveal packet with grep -F. 'Upright sword' conventionally reads as point-up, so the existing wording asserts the inverse of what is on the card; this is a factual error, not a phrasing preference.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-e+reviewer-f/judge-agent"
+    },
+    "legacy-shadow/swords-14": {
+      "reviewStatus": "pass",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-3",
+        "reviewId": "review-313",
+        "reviewers": [
+          "reviewer-a",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-3/judge/judge-b.json",
+          "decision": "AUTO_PASS",
+          "confidence": "high",
+          "independentFinding": "I viewed the image before reading any reviewer notes, and on first pass at full-frame scale I misread the pale object as a cracked stone lid, so I magnified it twice. Magnified, it is a single thin, roughly square sheet of parchment lying flat on the dark stone slab, and it is TORN. Both halves lie coplanar with the slab top — there is no tented V, no valley, no pages rising away from a centre line. The dark line between them is ragged and irregular in width, with uneven fibrous edges and the two sides slightly offset: a tear, not a straight bound gutter. The tear runs all the way through the sheet's near edge, notching it into two separately drooping corners — an open book lying spine-toward-the-viewer would show a continuous bound edge there, not a gap. The near edge is a single thin lip that curls down over the slab's chamfered corner; there is no stacked page-block. The sword's bright point rests exactly at the head of the tear. Elsewhere: one crowned, dark-robed figure facing the viewer, face lost in shadow under a tall spiked crown, one hand on the sword, the other gripping a bar of the open spear-topped iron gate at right; a butterfly carved in relief on the slab's front face; clouded night sky with a pale break and distant gothic spires beyond the gate."
+        }
+      },
+      "reason": "Both reviewers are mistaken and the existing description is right. reviewer-a (high confidence) and reviewer-d (medium) independently converged on 'open book', but they converged on the same misreading, and agreement between two reviewers is not evidence when magnification contradicts both. Their two stated pieces of evidence do not survive the zoom: the 'spine gutter V' is in fact a ragged, variable-width tear whose halves are flat and coplanar rather than tented, and the 'wedge of stacked page edges' at the front is the sheet's own torn corner draping over the slab's chamfered edge, a single thin lip with no page block behind it. The decisive detail neither reviewer accounted for is that the split passes straight through the sheet's near edge and divides it into two separately hanging corners; a bound book cannot be open that way. There is also no cover, no boards, no leaves and no binding anywhere on the object. So keyObjects 'torn paper or parchment sheet split by the blade', the scene phrase 'driving a sword point-down into a torn document on a stone slab', and visualTensions 'the intact sheet of paper against its clean tear' all stand, and I reject both reviewers' patches in full, since every one of their proposed edits descends from the book reading. Minor note, not acted on and not a correction: 'clean tear' in visualTensions is a slightly generous description of what is actually a ragged tear, but that is wording, not an observable-fact error, and neither reviewer raised it.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-a+reviewer-d/judge-agent"
+    },
+    "legacy-shadow/wands-07": {
+      "reviewStatus": "pass",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-4",
+        "reviewId": "review-409",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d",
+          "reviewer-f"
+        ],
+        "judge": {
+          "sourceFile": "wave-4/judge/judge-b.json",
+          "decision": "AUTO_PASS",
+          "confidence": "high",
+          "independentFinding": "I opened the image and, because it is extremely dark, applied a gamma lift and overlaid a pixel grid to measure the stakes rather than eyeball them. I can resolve 6 sharpened stakes rising from the dark ground below the platform. I measured each shaft's 2D lean from its bright tip down along its highlight: left-side stakes run tip(95,432)->base(59,595) and tip(174,477)->base(109,775), i.e. the tip is up-and-RIGHT of the base; right-side stakes run tip(392,517)->base(440,750), tip(431,450)->base(492,640), tip(360,635)->base(400,835), i.e. the tip is up-and-LEFT of the base; one central stake at tip(242,535)->base(262,835) is essentially vertical. The tips therefore CONVERGE upward toward the platform while the lower ends splay outward toward the frame edges. The figure stands on top of the platform in a wide braced stance holding one long staff roughly horizontally in both hands."
+        }
+      },
+      "reason": "Reviewer-d's suggested correction asserts the stakes 'point upward and outward, splayed away from the platform'; reviewer-b and reviewer-f use the same outward-splay language in their blind observations ('tips point UPWARD and outward, away from the lower center', 'splay outward to either side of the wall'). The two-reviewer threshold is met for the claim, but threshold 3 fails: my own measurement of the image gives the opposite. Reviewer-b's specific wording is inverted - he wrote 'the left-hand ones lean up-and-left, the right-hand ones lean up-and-right', while measurement shows left-hand ones lean up-and-right and right-hand ones lean up-and-left. What the reviewers correctly saw is the bases splaying outward; they then mis-attributed that splay to the tips. The existing text 'the figure stands above the stakes, which point upward toward the platform' is accurate as written, so the patch would introduce an error rather than fix one. I am not marking the stake count uncertain because the existing file already lists 'exact number of stakes visible, as several are cropped or lost in shadow' under its own uncertainty notes, which matches all three reviewers and my own reading.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d+reviewer-f/judge-agent"
+    },
+    "legacy-shadow/wands-08": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-1",
+        "reviewId": "review-107",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-1/judge/judge-a.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "high",
+          "independentFinding": "I viewed the image first, then measured the sky rather than eyeballing it. I sheared the sky region by a single uniform slope; every shaft became horizontal at the same shear, which is direct proof that all of them are mutually parallel with no convergence. In the sheared view the shafts separate into eight cleanly isolated horizontal streaks. I cross-checked this three ways: a perpendicular-axis projection gave the same eight lateral positions stably across assumed slopes from 0.74 to 0.86; the one anomalously long streak turned out at high magnification to be a single blade (tapered tip, crossguard notch, flared grip) smeared by slight perspective, not two end to end; and a sweep of the far-left sky strip found no shafts outside the sampled region. Count is eight. Each shaft also trails a distinctly darker streak running down-left from its tip. The lowest shaft's tip stops around (173,408), with a band of open sky between it and the top of the gate masonry; nothing intersects the archway. One figure, back turned, one hand gripping a bar of the open wrought-iron gate leaf, facing a warm glow inside the arch."
+        }
+      },
+      "replace": [
+        {
+          "find": "the shafts sweep from upper right down toward the left, converging near the gate",
+          "with": "the shafts sweep from upper right down toward the left, all mutually parallel rather than converging, and none of them reach the gate"
+        }
+      ],
+      "reason": "Threshold check on the one item I am patching, 'converging near the gate'. Both reviewer-b and reviewer-d independently raised it, both at high confidence, and both also state the shafts never reach the gate. I reached the same conclusion independently and by measurement, not impression: a single global shear rectifies all eight, which is exactly what parallelism means and what convergence would rule out. It is observable geometry, not interpretation, and it is one precise substring. I OVERTURN both reviewers on the sword count, which was their headline issue. Reviewer-b read 14-16 and reviewer-d read 18-20, and both are wrong in the same way: every shaft carries a dark motion trail below and left of its tip, and counting blade plus trail as two objects yields almost exactly reviewer-b's 14-16 from a true count of eight. The existing 'eight' is correct and must not be hedged away. I also decline the 'distant intact castle' change. At 6x the far tower reads to me as a gothic tower with symmetric corner pinnacles, which is as consistent with intact architecture as with a broken crown, so the reviewers' replacement is not established either; the existing wording stays rather than being swapped for an equally unsupported one. Two residual items a human may want to look at, which I did not act on because only one reviewer raised each and neither is resolvable at this rendering scale: whether the shafts' trailing ends are fletching or sword grips, and whether the far-bank structures are intact or ruined.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-shadow/wands-09": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "multi-agent",
+      "provenance": {
+        "run": "wave-5",
+        "reviewId": "review-511",
+        "reviewers": [
+          "reviewer-b",
+          "reviewer-d"
+        ],
+        "judge": {
+          "sourceFile": "wave-5/judge/judge-resume-b.json",
+          "decision": "AUTO_CORRECT",
+          "confidence": "medium",
+          "correctionConfidence": "high",
+          "independentFinding": "Image-first: figure standing in doorway, diagonal staff, forehead wrap, long foreground shadow. Second inspection confirms backlight and shadow from feet toward viewer; distant silhouettes/wrap purpose unresolved."
+        }
+      },
+      "replace": [
+        {
+          "find": "the figure's forward stance against the shadow trailing behind him",
+          "with": "the figure's standing posture against the long shadow stretching forward toward the viewer"
+        }
+      ],
+      "reason": "Reviewer-b/d independently contradict trailing shadow. Judge confirms direction at high confidence, matching existing spatialRelations. Local replacement removes contradictory direction without advancing stride.",
+      "reviewedAt": "2026-10-08",
+      "reviewer": "multi-agent:reviewer-b+reviewer-d/judge-agent"
+    },
+    "legacy-shadow/cups-01": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "human-final",
+      "reviewer": "user",
+      "reviewedAt": "2026-10-08",
+      "reason": "头发裸露，没有兜帽；面部仍不可辨认，保留 faceless。",
+      "provenance": {
+        "humanFinalSource": "multi-agent-review/human-final-decisions.json",
+        "reviewId": "review-001",
+        "previousJudgeUnmodified": true
+      },
+      "qaOverrides": {
+        "figures.0.role": "kneeling figure with visible loose hair and no hood",
+        "figures.0.posture": "kneeling, head bowed so the face is entirely hidden by dark hair, both hands raised holding a chalice"
+      },
+      "replace": [
+        {
+          "find": "A hooded, faceless figure",
+          "with": "A faceless figure with visible loose hair and no hood covering the head"
+        }
+      ]
+    },
+    "legacy-moonlight/cups-10": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "human-final",
+      "reviewer": "user",
+      "reviewedAt": "2026-10-08",
+      "reason": "确认杯子在草地上的布上；未确认桌子，底部支撑物及材质不确定，不推定石头。",
+      "provenance": {
+        "humanFinalSource": "multi-agent-review/human-final-decisions.json",
+        "reviewId": "review-003",
+        "previousJudgeUnmodified": true
+      },
+      "qaOverrides": {
+        "confidence.uncertainDetails.1": "exact count of goblets resting on the foreground cloth; the exact support beneath the cloth is unclear",
+        "foreground.0": "a pale patterned cloth spread on the grass; the exact support beneath it is unclear",
+        "foreground.1": "a cluster of glass goblets resting on the cloth"
+      },
+      "replace": [
+        {
+          "find": "a table of cups glows in the foreground",
+          "with": "cups resting on a cloth spread on the grass glow in the foreground"
+        },
+        {
+          "find": "a second cluster of glass goblets on a draped table in the foreground",
+          "with": "a second cluster of glass goblets resting on a cloth spread on the grass in the foreground"
+        },
+        {
+          "find": "a draped cloth over a low table",
+          "with": "a cloth spread on the grass with the cups resting on it"
+        },
+        {
+          "find": "the couple stands between the foreground table and the children",
+          "with": "the couple stands between the foreground cloth with cups and the children"
+        },
+        {
+          "find": "the table of cups sits behind them",
+          "with": "the cups resting on the cloth sit behind them"
+        }
+      ],
+      "patch": {
+        "emphasizedAspects": [
+          "a settled, long-standing bond shown by the couple's relaxed closeness",
+          "continuity across generations"
+        ]
+      },
+      "qaUncertainFields": [
+        "support beneath the foreground cloth",
+        "material of that support"
+      ]
+    },
+    "legacy-classic/swords-08": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "human-final",
+      "reviewer": "user",
+      "reviewedAt": "2026-10-08",
+      "reason": "确认左5右4，形成开放夹道，没有完整环绕；数量以 Artwork 为准。",
+      "provenance": {
+        "humanFinalSource": "multi-agent-review/human-final-decisions.json",
+        "reviewId": "review-004",
+        "previousJudgeUnmodified": true
+      },
+      "qaOverrides": {
+        "composition.openness": "open passage between flanking sword groups, open toward the distant horizon",
+        "confidence.uncertainDetails.0": "five swords are confirmed on the left and four on the right, forming an open passage"
+      },
+      "replace": [
+        {
+          "find": "encircled by upright swords driven into the ground",
+          "with": "flanked by five upright swords to her left and four to her right, forming an open passage"
+        },
+        {
+          "find": "arranged in a loose ring around the figure",
+          "with": "arranged with five to the left and four to the right, leaving an open passage"
+        },
+        {
+          "find": "the woman stands at the centre with swords planted to her left, right and behind her",
+          "with": "five swords stand to the left and four to the right of the woman, leaving an open passage with no complete ring behind her"
+        },
+        {
+          "find": "the tight ring of blades around the figure against the wide open plain beyond",
+          "with": "the two flanking groups of blades beside the figure against the wide open plain beyond"
+        },
+        {
+          "find": "the encircling enclosure of the swords",
+          "with": "the flanking arrangement of five swords to the left and four to the right"
+        }
+      ]
+    },
+    "legacy-moonlight/swords-06": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "human-final",
+      "reviewer": "user",
+      "reviewedAt": "2026-10-08",
+      "reason": "五把剑清晰可辨，无法可靠确认额外一把；原错误仅在 QA uncertainDetails，不新增 Runtime 描述。",
+      "provenance": {
+        "humanFinalSource": "multi-agent-review/human-final-decisions.json",
+        "reviewId": "review-005",
+        "previousJudgeUnmodified": true
+      },
+      "qaOverrides": {
+        "confidence.uncertainDetails.0": "five swords are clearly visible; no additional sword can be reliably confirmed"
+      }
+    },
+    "legacy-moonlight/wands-04": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "human-final",
+      "reviewer": "user",
+      "reviewedAt": "2026-10-08",
+      "reason": "确认3根主要花环杆；去除原4根和左右各2根断言，不猜未确认分布。",
+      "provenance": {
+        "humanFinalSource": "multi-agent-review/human-final-decisions.json",
+        "reviewId": "review-009",
+        "previousJudgeUnmodified": true
+      },
+      "qaOverrides": {
+        "confidence.uncertainDetails.0": "three main garlanded slender poles can be reliably confirmed"
+      },
+      "replace": [
+        {
+          "find": "four slender poles",
+          "with": "three slender poles"
+        },
+        {
+          "find": "the four poles frame the scene, two at left and two at right",
+          "with": "three slender poles frame the scene"
+        }
+      ]
+    },
+    "legacy-classic/swords-06": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "human-final",
+      "reviewer": "user",
+      "reviewedAt": "2026-10-08",
+      "reason": "两名坐着乘客中仅一人戴兜帽，中间乘客头发裸露；不添加位置未明确的未佩戴帽子。",
+      "provenance": {
+        "humanFinalSource": "multi-agent-review/human-final-decisions.json",
+        "reviewId": "review-010",
+        "previousJudgeUnmodified": true
+      },
+      "qaOverrides": {},
+      "replace": [
+        {
+          "find": "two seated, hooded passengers",
+          "with": "two seated passengers (one wearing a hood, the other with uncovered hair)"
+        }
+      ]
+    },
+    "legacy-moonlight/pentacles-06": {
+      "reviewStatus": "corrected",
+      "reviewMethod": "human-final",
+      "reviewer": "user",
+      "reviewedAt": "2026-10-08",
+      "reason": "左下编发裸露、没有面纱或兜帽；右侧头部有兜帽。",
+      "provenance": {
+        "humanFinalSource": "multi-agent-review/human-final-decisions.json",
+        "reviewId": "review-207",
+        "previousJudgeUnmodified": true
+      },
+      "qaOverrides": {
+        "figures.2.role": "kneeling figure with visible uncovered braided hair, left",
+        "figures.1.role": "kneeling hooded figure, right",
+        "foreground.3": "folds of the right kneeling figure’s hood and garments"
+      },
+      "replace": [
+        {
+          "find": "two kneeling, veiled figures who raise their hands to receive it",
+          "with": "two kneeling figures who raise their hands to receive it, the left with visible braided hair and the right wearing a hood"
+        }
+      ]
+    }
+  }
+}

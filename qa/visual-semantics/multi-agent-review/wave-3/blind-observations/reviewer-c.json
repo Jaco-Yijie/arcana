@@ -1,0 +1,690 @@
+[
+ {
+  "reviewId": "review-316",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-right, occupying roughly the middle third of the frame",
+     "posture": "standing, seen from behind, weight on the forward leg, head turned slightly right toward the horizon",
+     "gaze": "toward the right, at the glowing horizon over water",
+     "heldObjects": [
+      "a bundle of bladed weapons strapped/carried against the back, hilts uppermost"
+     ],
+     "clothing": "long dark cloak/coat with gold-thread embroidery and star-like flecks, tall boots"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword (standing in the stone/map table)",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "left of frame, planted in the flat table surface at the table's far edge",
+     "orientation": "hilts up, blades driven point-DOWN into the table top",
+     "arrangement": "side by side, roughly parallel, a small gap between them; both toward the left half of the table"
+    },
+    {
+     "type": "sword/blade carried on the figure's back",
+     "count": null,
+     "countConfidence": "low",
+     "where": "against the figure's back, upper-center of frame",
+     "orientation": "hilts up and fanned slightly apart at the top; blades angle DOWN behind the body",
+     "arrangement": "a tight fan/cluster in a single holder; individual blades overlap and merge into the dark cloak so they cannot be separated one by one"
+    },
+    {
+     "type": "small vessel/candle-like object on the table",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered across the map table surface, lower-left quadrant",
+     "orientation": "upright",
+     "arrangement": "scattered, several small dark shapes"
+    }
+   ],
+   "environment": [
+    "night sky filled with stars and a broad milky-way band",
+    "faint gold circular/astronomical diagrams overlaid on the sky",
+    "a large embroidered tent or canopy at the left, its fabric printed with circle-and-star diagrams",
+    "a low table or platform at lower left bearing a map or chart",
+    "wet stony ground and a shallow winding waterway running from lower-center to the right horizon",
+    "distant mountain ridge on the right horizon",
+    "a thin pole or standard at the far right edge",
+    "an ornate thin gold frame border inside the image edges"
+   ],
+   "lightSources": [
+    "warm gold glow at the horizon on the right (low sun), reflected as a bright streak on the water",
+    "a pale round moon high in the upper left",
+    "one or two tiny warm lamp points near the tent at mid-left"
+   ],
+   "moonPhase": "uncertain — a round pale disc with mottled shading, reads as full or near-full but the terminator cannot be resolved",
+   "spatialRelations": [
+    "the standing figure is between the tent/table at left and the lit horizon at right, with its back to the viewer",
+    "the two planted swords are well to the left of and below the figure, not touching it",
+    "the waterway leads from the figure's feet toward the glow on the horizon"
+   ],
+   "foreground": [
+    "map table with two downward-planted swords",
+    "wet rocky ground",
+    "the standing figure"
+   ],
+   "background": [
+    "starfield and diagrams",
+    "mountains",
+    "lit horizon and water"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of blades carried on the figure's back cannot be resolved: at least 3 hilts are separable at the top but the shafts below overlap and blend with the dark cloak",
+   "moon phase not determinable",
+   "the small objects on the map table may be candles, vials or weights — not resolvable",
+   "whether the glow on the right horizon is sunrise or sunset is not determinable"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-304",
+  "visibleFacts": {
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "left, behind the near end of the work bench",
+     "posture": "standing, leaning forward, both hands resting on / working at the bench top",
+     "gaze": "downward at the bench surface",
+     "heldObjects": [
+      "possibly a small tool under the right hand — not clearly resolvable"
+     ],
+     "clothing": "light rolled-sleeve shirt with a dark apron or skirt"
+    },
+    {
+     "position": "center, behind the bench",
+     "posture": "standing, bent over the stone block",
+     "gaze": "downward at the stone block",
+     "heldObjects": [
+      "a slender tool (chisel-like) held point-down against the block",
+      "the other hand steadies the block"
+     ],
+     "clothing": "dark tunic, hair tied up"
+    },
+    {
+     "position": "right, standing at the near-right side facing left",
+     "posture": "standing upright, body turned toward the bench",
+     "gaze": "toward the stone block / the sheet in their hands",
+     "heldObjects": [
+      "a large pale sheet (plan, drawing or parchment) held open with both hands"
+     ],
+     "clothing": "long dark hooded robe/cloak reaching the floor"
+    }
+   ],
+   "objects": [
+    {
+     "type": "circular medallion carved with a five-pointed star inside a ring",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "set into the stone gables above the arch: one left, one center, one right",
+     "orientation": "all three stars point UP (single point at top, two points down)",
+     "arrangement": "a row of three, the central one noticeably higher than the two flanking it; clear stone gaps between them"
+    },
+    {
+     "type": "worked stone block on the bench",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center of the bench, under the central figure's tool",
+     "orientation": "lying flat",
+     "arrangement": "single block set on the bench top"
+    }
+   ],
+   "environment": [
+    "a large pointed gothic stone arch framing a dark interior",
+    "three pointed stone gables above the arch, each holding one star medallion",
+    "rough wooden scaffolding or timber props at the left",
+    "a heavy trestle work bench with visible legs and cross bracing",
+    "rubble and stone chips on the floor",
+    "an interior column visible deep inside the arch"
+   ],
+   "lightSources": [
+    "a single strong light from the front/upper area outside the frame — it throws long hard shadows from the three figures and the bench forward toward the bottom of the frame"
+   ],
+   "spatialRelations": [
+    "the three figures form an open horseshoe around the bench: two behind it (left and center) and one at the right side; the near side facing the viewer is open",
+    "the three star medallions sit directly above the group, in the masonry"
+   ],
+   "foreground": [
+    "stone floor with rubble and long cast shadows"
+   ],
+   "background": [
+    "dark arch interior",
+    "carved gables with the three star medallions"
+   ]
+  },
+  "uncertainObservations": [
+   "the exact tool in the central figure's hand (chisel, punch or stylus) is not resolvable",
+   "what the left figure's hands rest on or hold is lost in shadow",
+   "the image is very dark overall; small objects on the bench cannot be individually counted",
+   "facial features and expressions are not readable on any of the three figures"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-308",
+  "visibleFacts": {
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "foreground left",
+     "posture": "standing, barefoot, head bowed low, shoulders hunched, arms wrapped around a bundle held against the chest",
+     "gaze": "downward at the ground / at the bundle; face in deep shadow",
+     "heldObjects": [
+      "a cradled bundle of swords"
+     ],
+     "clothing": "ragged, shredded dark coat and trousers, bare feet"
+    },
+    {
+     "position": "middle distance, right of center on the causeway",
+     "posture": "walking away from the viewer",
+     "gaze": "away, toward the far end of the path",
+     "heldObjects": [
+      "none resolvable"
+     ],
+     "clothing": "long dark coat, silhouetted"
+    },
+    {
+     "position": "middle distance, slightly further right and behind the previous figure",
+     "posture": "walking away from the viewer",
+     "gaze": "away, toward the far end of the path",
+     "heldObjects": [
+      "none resolvable"
+     ],
+     "clothing": "long dark coat, silhouetted"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword lying on the ground",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "bottom-center of the frame, on the wet paving in front of the standing figure",
+     "orientation": "both lying flat/horizontal on the stones; the upper one's point aims left, the lower one's point aims down-left; hilts toward the right",
+     "arrangement": "the two overlap near their hilts, forming a shallow X / crossing, not a neat parallel pair"
+    },
+    {
+     "type": "sword held in the foreground figure's arms",
+     "count": null,
+     "countConfidence": "low",
+     "where": "cradled diagonally across the chest",
+     "orientation": "hilts up and to the right, blades angling DOWN to the left",
+     "arrangement": "a compressed fan; hilts are partly separable at the top but the blades merge into one dark mass"
+    }
+   ],
+   "environment": [
+    "a wet stone causeway or paved path running from the lower right into the distance",
+    "dark water or flooded flats on both sides of the path",
+    "a faint ruined city or wall silhouette on the left horizon",
+    "heavy broken cloud across the sky"
+   ],
+   "lightSources": [
+    "a bright moon in the upper right, its disc partly veiled by cloud, lighting the cloud edges and the wet stones"
+   ],
+   "moonPhase": "uncertain — the glow is round and bright but cloud covers part of the disc",
+   "spatialRelations": [
+    "the foreground figure stands off the path at the left, facing down and away from the two walking figures",
+    "the two walking figures are together on the path, receding toward the horizon, with a visible gap between them",
+    "the two grounded swords lie between the viewer and the foreground figure's feet"
+   ],
+   "foreground": [
+    "barefoot figure with sword bundle",
+    "two swords lying on wet paving"
+   ],
+   "background": [
+    "two receding walking figures",
+    "causeway",
+    "moonlit clouds",
+    "distant ruins"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of swords carried by the foreground figure cannot be resolved — at least 3 hilts are distinguishable, possibly more; blades overlap completely",
+   "moon phase not determinable through the cloud",
+   "whether the two distant figures carry anything cannot be seen",
+   "the left-horizon silhouette may be a city, a wall or a cliff"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-303",
+  "visibleFacts": {
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "foreground, left of center",
+     "posture": "standing, seen from behind, feet apart on a stone pavement, right arm hanging down at the side",
+     "gaze": "toward the right/horizon (head turned right, profile barely visible)",
+     "heldObjects": [
+      "several sword hilts gripped in the lowered right hand"
+     ],
+     "clothing": "long dark cloak covered in gold star/constellation embroidery, tall boots"
+    },
+    {
+     "position": "middle-right distance, on the same pavement near the water's edge",
+     "posture": "standing/walking away from the viewer",
+     "gaze": "away, toward the lit horizon",
+     "heldObjects": [
+      "none resolvable"
+     ],
+     "clothing": "long coat, hood or cap"
+    },
+    {
+     "position": "middle-right distance, to the right of and slightly ahead of the previous figure",
+     "posture": "standing/walking away from the viewer",
+     "gaze": "away, toward the lit horizon",
+     "heldObjects": [
+      "none resolvable"
+     ],
+     "clothing": "long coat"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword held in the foreground figure's lowered hand",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "hanging from the right hand, blades reaching down toward the pavement at the figure's right side",
+     "orientation": "hilts up at the hand, blades pointing DOWN, tips nearly touching the ground",
+     "arrangement": "a narrow fan spreading slightly as it descends; the blades overlap where they leave the hand"
+    },
+    {
+     "type": "sword lying flat on the pavement",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "lower right of center, on the stone circle in front of and right of the figure",
+     "orientation": "both lying horizontal, hilts toward the upper right, points toward the lower left",
+     "arrangement": "roughly parallel, side by side with a clear gap between them, slightly offset (one nearer the viewer)"
+    }
+   ],
+   "environment": [
+    "a wide stone pavement inscribed with large concentric gold circles and zodiac-like glyph bands, wet and reflective",
+    "night sky with a spiral galaxy at upper left, dense starfield, gold constellation lines and a large circular diagram at center-right",
+    "a colonnaded domed pavilion at the far left edge with a hanging lamp and a ring/armillary device",
+    "open water beyond the pavement, mountains on the far horizon",
+    "banded clouds across the middle-right sky",
+    "thin gold frame border inside the image edges"
+   ],
+   "lightSources": [
+    "warm gold glow low on the horizon at center-right, mirrored on the water and on the wet pavement",
+    "a large pale cratered sphere (moon or planet) high in the upper right",
+    "a small warm lamp flame at the left pavilion"
+   ],
+   "moonPhase": "uncertain — the upper-right sphere reads as a full or gibbous lit disc with visible surface mottling; no clear terminator",
+   "spatialRelations": [
+    "the foreground figure stands with its back to the viewer, offset left, while the two smaller figures are far to the right near the water",
+    "the two grounded swords lie on the pavement between the foreground figure and the distant pair",
+    "the concentric pavement circles are centered roughly under and to the right of the foreground figure"
+   ],
+   "foreground": [
+    "cloaked figure holding downward-pointing swords",
+    "two swords lying on the inscribed pavement"
+   ],
+   "background": [
+    "two small receding figures",
+    "lit horizon and water",
+    "galaxy, stars, constellation diagrams",
+    "domed pavilion at far left"
+   ]
+  },
+  "uncertainObservations": [
+   "the held-sword count is the weakest observation here: three blade shafts are visible below the hand but only two hilts are clearly separable, so the true number may be 2 or 4",
+   "exact phase/identity of the upper-right sphere (moon vs planet) not determinable",
+   "whether the two distant figures are walking or standing still cannot be told",
+   "small dark shapes on the water at center may be posts or boats — not resolvable"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-315",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of frame",
+     "posture": "seated on the edge of a bed, torso folded forward, elbows toward the knees",
+     "gaze": "not visible — both hands are pressed over the face, covering the eyes",
+     "heldObjects": [
+      "nothing; both hands cover the face"
+     ],
+     "clothing": "pale long-sleeved blouse, dark green long skirt; dark curly hair gathered up with loose strands falling"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword mounted on the wall",
+     "count": null,
+     "countConfidence": "low",
+     "where": "on the timber wall panel behind and above the bed, upper-left quadrant",
+     "orientation": "all hang hilts UP, blades pointing DOWN toward the floor",
+     "arrangement": "a single evenly spaced row across the panel; hilts roughly level with one another; the row is cut off at the left by the frame border and ends at the right where the wall meets the window corner"
+    },
+    {
+     "type": "potted plant / fern",
+     "count": null,
+     "countConfidence": "low",
+     "where": "one on the windowsill at right, one in a basket at lower left, one in a basket at lower right; further greenery spills in from the frame edges",
+     "orientation": "upright",
+     "arrangement": "scattered around the room's perimeter"
+    },
+    {
+     "type": "mushroom",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "bottom-left corner of the scene, on the floor",
+     "orientation": "upright, caps up",
+     "arrangement": "one larger in front, one smaller just behind and to its right"
+    },
+    {
+     "type": "candle with lit flame",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "on the low table at bottom-center, in a shallow dish/holder",
+     "orientation": "upright",
+     "arrangement": "single"
+    },
+    {
+     "type": "pillow on the bed",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "left end of the bed",
+     "orientation": "stacked/leaning",
+     "arrangement": "one behind the other; the rear one is partly hidden"
+    }
+   ],
+   "environment": [
+    "a small rustic bedroom with dark timber walls",
+    "a tall multi-pane window at the right with a pale curtain, daylight and green foliage outside",
+    "a bed with a dark green quilt and a patterned throw draped at the right",
+    "a low wooden table at bottom-center with a bowl and a candle",
+    "a ceramic jug and a wicker basket at lower left",
+    "a wicker basket of greenery at lower right",
+    "ivy or creeper growing across the upper wall and around the window",
+    "a white painted decorative floral/scrollwork border running down the left and right edges of the scene"
+   ],
+   "lightSources": [
+    "daylight through the window at the right — the dominant source, lighting the figure's back and the bed",
+    "a small candle flame on the low table at bottom-center"
+   ],
+   "spatialRelations": [
+    "the row of downward-pointing wall swords is directly behind and above the seated figure",
+    "the figure sits with her back to the window, so her face and hands are in relative shadow",
+    "plants and baskets ring the floor around the foot of the bed"
+   ],
+   "foreground": [
+    "low table with candle and bowl",
+    "baskets and potted greenery",
+    "mushrooms at bottom-left"
+   ],
+   "background": [
+    "timber wall with hanging swords",
+    "window with daylight and foliage"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of swords on the wall cannot be stated reliably: at least 4 hilts are separable, and a 5th shape may be either another sword or a wall batten — the panel is also clipped by the frame border on the left, so more may be out of view",
+   "whether the figure is crying, exhausted or shielding her eyes cannot be determined — only that both hands cover the face",
+   "the object in the shallow dish beside the candle is not identifiable",
+   "the pillow count is uncertain because the shapes overlap"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-314",
+  "visibleFacts": {
+   "figureCount": null,
+   "figures": [
+    {
+     "position": "upper left, standing on a raised stone platform/tower top",
+     "posture": "standing, side-on, leaning back slightly, both arms raised to hold a long horn to the mouth",
+     "gaze": "upward and to the right, along the horn toward the sky",
+     "heldObjects": [
+      "a long straight trumpet/horn, bell angled up to the right, with a bright star-point of light at the bell"
+     ],
+     "clothing": "long dark robe with gold star flecks; long hair streaming"
+    },
+    {
+     "position": "foreground lower-center-left, back to the viewer",
+     "posture": "standing, head slightly bowed",
+     "gaze": "down at an open book/sheet held in the hands",
+     "heldObjects": [
+      "an open pale book or sheet"
+     ],
+     "clothing": "long dark starred robe, long hair"
+    },
+    {
+     "position": "lower left, on the stone ledge of the platform",
+     "posture": "standing/leaning",
+     "gaze": "down at an open sheet",
+     "heldObjects": [
+      "an open pale book or sheet"
+     ]
+    },
+    {
+     "position": "lower left, beside the previous figure",
+     "posture": "standing",
+     "gaze": "down at an open sheet",
+     "heldObjects": [
+      "an open pale book or sheet"
+     ]
+    },
+    {
+     "position": "lower right, seated inside a small boat",
+     "posture": "seated, turned three-quarters away",
+     "gaze": "down at an open sheet",
+     "heldObjects": [
+      "an open pale sheet"
+     ],
+     "notes": "a lit lantern stands on the boat's gunwale beside this figure"
+    },
+    {
+     "position": "middle distance, several more standing in shallow water across the center and right of the frame",
+     "posture": "standing upright in the water, mostly with backs or profiles to the viewer",
+     "gaze": "variously toward the horizon or down at pale sheets they hold",
+     "heldObjects": [
+      "several of them hold open pale sheets or books"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "robed figure standing in the water",
+     "count": null,
+     "countConfidence": "low",
+     "where": "spread across the flooded middle ground from center-left to the right edge, receding toward the horizon",
+     "orientation": "upright, most facing away from the viewer",
+     "arrangement": "scattered, not a row or a ring; loosely grouped in twos and threes with open water between them, becoming smaller and less distinct toward the horizon"
+    },
+    {
+     "type": "open book / pale sheet held by a figure",
+     "count": null,
+     "countConfidence": "low",
+     "where": "held at chest height by many of the figures",
+     "orientation": "held open, faces angled up toward their readers",
+     "arrangement": "one per figure where visible, but several figures are too small or too dark to tell"
+    },
+    {
+     "type": "celestial sphere / moon or planet in the sky",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered across the sky: a large one upper left, a small one at the far left edge, a large one upper right, a smaller one at the right edge, and one at mid-right",
+     "orientation": "n/a",
+     "arrangement": "scattered at different sizes and heights, no pattern; at least 5 separable, and faint additional discs may be present"
+    },
+    {
+     "type": "armillary sphere / ringed globe on a pedestal",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "on the platform to the left of the horn-blowing figure: a larger ringed sphere further left, a smaller globe just right of it",
+     "orientation": "upright on stands",
+     "arrangement": "side by side, the larger one further from the figure"
+    },
+    {
+     "type": "stone chest / casket",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "foreground center, on a stone slab at the water's edge",
+     "orientation": "closed, lid up",
+     "arrangement": "single, decorated with gold lines and a star motif"
+    },
+    {
+     "type": "lit lantern",
+     "count": null,
+     "countConfidence": "low",
+     "where": "one on the platform edge beside the horn-blower, one on the boat at lower right, and further small warm lights inside the platform's arched niches",
+     "orientation": "upright",
+     "arrangement": "scattered"
+    },
+    {
+     "type": "arched niche in the platform wall",
+     "count": null,
+     "countConfidence": "low",
+     "where": "set into the face of the stone platform at the lower left, each containing a dim portrait-like panel and a small light",
+     "orientation": "upright arches",
+     "arrangement": "a row along the wall, partly hidden behind foreground figures; at least 4 are partly visible"
+    },
+    {
+     "type": "small rowing boat",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower right, in the shallow water",
+     "orientation": "bow toward the lower right",
+     "arrangement": "single"
+    }
+   ],
+   "environment": [
+    "a wide expanse of shallow, rippled water filling the lower two-thirds of the frame",
+    "a large stone platform or mausoleum-like structure occupying the left side, with arched lit niches and stepped stone slabs at the water's edge",
+    "night sky with dense stars, a milky-way band at upper left, gold constellation lines at upper right",
+    "a large set of gold concentric circles centered in the upper middle, radiating from the horn's bell",
+    "a mountain range along the horizon",
+    "thin gold frame border inside the image edges"
+   ],
+   "lightSources": [
+    "a bright star-point of light at the bell of the horn, upper middle",
+    "a warm glow low on the horizon at center-right",
+    "several small lanterns and niche candles on the platform and in the boat",
+    "the celestial spheres are lit but do not cast obvious light on the scene"
+   ],
+   "moonPhase": "uncertain — several discs are present at different sizes; the largest upper-right and upper-left discs read as lit round bodies but no phase edge is resolvable",
+   "spatialRelations": [
+    "the horn-blowing figure stands alone and elevated on the platform at the upper left, above and behind everyone else",
+    "all the other figures are at water level, below and to the right of the platform, and face away from the viewer",
+    "the concentric gold rings emanate from the horn and spread across the upper right sky",
+    "the stone chest sits alone in the foreground, apart from the figures, with no one touching it"
+   ],
+   "foreground": [
+    "robed figures reading pale sheets",
+    "the stone chest",
+    "stone slabs and shallow water"
+   ],
+   "background": [
+    "figures receding into the water",
+    "mountains",
+    "starfield with multiple spheres and circle diagrams"
+   ]
+  },
+  "uncertainObservations": [
+   "the total figure count cannot be stated: roughly a dozen or more separate bodies are visible, but the distant ones overlap, are tiny, and some dark shapes may be rocks rather than people",
+   "the number of celestial spheres in the sky is not reliably countable — at least 5, with possible fainter ones",
+   "the contents of the arched niches (portraits? effigies?) are too dark to identify, and the niches are partly occluded",
+   "it cannot be determined whether the figures are standing on a submerged surface or wading",
+   "whether the pale objects held are books, scrolls or lids is not resolvable at this size"
+  ],
+  "reviewConfidence": "low",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-302",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, seated on a large stone throne",
+     "posture": "seated, knees together and angled to the viewer's right, torso leaning forward over her lap, head bowed",
+     "gaze": "downward, directly into the vessel she holds",
+     "heldObjects": [
+      "left hand holds the hinged lid of the vessel open, tilted back",
+      "right hand holds a thin straight implement (rod/stylus/key-like) angled down toward the vessel's mouth"
+     ],
+     "clothing": "long dark gown with embroidered bodice and trailing skirt; a long dark veil falling from under the crown over both shoulders",
+     "headwear": "an ornate spiked and jewelled crown worn over the veil"
+    }
+   ],
+   "objects": [
+    {
+     "type": "footed vessel / goblet with a hinged lid",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "resting on her right knee/lap at the center of the frame",
+     "orientation": "upright, mouth up, lid swung open to the right",
+     "arrangement": "single, held between both hands"
+    },
+    {
+     "type": "stone throne",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "left of center, filling the left third of the frame",
+     "orientation": "backrest upright, facing right-of-frame",
+     "arrangement": "single; the backrest is carved with a large fan/shell motif"
+    },
+    {
+     "type": "tall dark tower or spire silhouette",
+     "count": null,
+     "countConfidence": "low",
+     "where": "background right, across the water",
+     "orientation": "vertical",
+     "arrangement": "at least one sharply pointed spire at the right edge plus broader dark masses behind the throne; they overlap and cannot be separated"
+    },
+    {
+     "type": "stone step descending toward the water",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower right, leading from the throne platform down to the waterline",
+     "orientation": "horizontal treads",
+     "arrangement": "a short flight; individual treads blur into shadow"
+    }
+   ],
+   "environment": [
+    "a stone terrace or platform at night",
+    "still dark water at the right with a vertical moonlight reflection on it",
+    "dark architecture — walls, piers and a pointed spire — behind and to the right",
+    "an aged, cracked paper-like border at the left edge of the image"
+   ],
+   "lightSources": [
+    "a large pale sphere (moon) high at the upper right, partly overlapping the right frame edge, lighting her face, hands, the crown and the vessel from that side",
+    "the moonlight streak on the water at lower right"
+   ],
+   "moonPhase": "uncertain — a large round mottled disc with a bright right limb; it reads as full or gibbous but the left side fades into darkness rather than showing a clean terminator",
+   "spatialRelations": [
+    "the woman sits with the throne behind her on the left and the open moonlit water to her right",
+    "the vessel is at the exact center of the composition, directly beneath her lowered face",
+    "her veil and skirt spill leftward and downward over the throne's seat and the platform"
+   ],
+   "foreground": [
+    "the throne, the seated crowned woman, and the lidded vessel"
+   ],
+   "background": [
+    "dark towers and walls",
+    "moonlit water and steps",
+    "the moon at upper right"
+   ]
+  },
+  "uncertainObservations": [
+   "the thin implement in her right hand cannot be identified — it could be a stylus, a key, a pin or a small blade",
+   "whether the vessel's lid is attached by a hinge or simply lifted away is not resolvable",
+   "the moon's phase and whether its disc is clipped by the frame edge are both uncertain",
+   "her facial expression is lit but ambiguous; only that the eyes are lowered is certain",
+   "the number of towers/spires in the background cannot be counted — the silhouettes merge"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ }
+]

@@ -1,0 +1,46 @@
+{
+  "run": "wave-5",
+  "count": 8,
+  "cards": [
+    {
+      "reviewId": "review-501",
+      "blindImage": "qa/visual-semantics/blind-review/wave-5/review-501.png",
+      "split": "reviewer-a=pass vs reviewer-d=uncertain"
+    },
+    {
+      "reviewId": "review-503",
+      "blindImage": "qa/visual-semantics/blind-review/wave-5/review-503.png",
+      "split": "reviewer-a=pass vs reviewer-c=uncertain"
+    },
+    {
+      "reviewId": "review-504",
+      "blindImage": "qa/visual-semantics/blind-review/wave-5/review-504.png",
+      "split": "reviewer-c=pass vs reviewer-e=uncertain"
+    },
+    {
+      "reviewId": "review-507",
+      "blindImage": "qa/visual-semantics/blind-review/wave-5/review-507.png",
+      "split": "reviewer-b=pass vs reviewer-d=corrected"
+    },
+    {
+      "reviewId": "review-508",
+      "blindImage": "qa/visual-semantics/blind-review/wave-5/review-508.png",
+      "split": "reviewer-c=uncertain vs reviewer-e=pass"
+    },
+    {
+      "reviewId": "review-512",
+      "blindImage": "qa/visual-semantics/blind-review/wave-5/review-512.png",
+      "split": "reviewer-b=pass vs reviewer-e=corrected"
+    },
+    {
+      "reviewId": "review-515",
+      "blindImage": "qa/visual-semantics/blind-review/wave-5/review-515.png",
+      "split": "reviewer-a=uncertain vs reviewer-c=pass"
+    },
+    {
+      "reviewId": "review-517",
+      "blindImage": "qa/visual-semantics/blind-review/wave-5/review-517.png",
+      "split": "reviewer-b=corrected vs reviewer-d=pass"
+    }
+  ]
+}

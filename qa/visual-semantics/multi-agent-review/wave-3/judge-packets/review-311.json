@@ -1,0 +1,294 @@
+{
+  "reviewId": "review-311",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-311.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-311.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the sword stands vertically at the centre, its point rising above the figure's head",
+          "observed": "the sword stands vertically point-DOWN, driven into the altar top; what rises above the figure's head is the grip and round pommel",
+          "evidence": "The small round pommel is at the very top with the crossguard below it, and the blade descends from the crossguard through the altar's top face and continues down its cracked front — the point is inside the stone, not in the air.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "gripping the hilt of a glowing upright sword",
+          "observed": "the raised hand grips the blade below the crossguard, not the hilt; the sword hangs point-down",
+          "evidence": "The figure's hand sits clearly beneath the crossguard bar, on the ricasso/blade, while grip and pommel are well above it out of reach.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "cracked wall with radiating fracture lines",
+          "observed": "a fan-vaulted stone ceiling whose masonry ribs radiate outward from a point directly above the sword",
+          "evidence": "The radiating pattern occupies the top of the frame and curves like a dome seen from below, in regular masonry courses, with the light shaft descending from its apex; the only actual crack is in the altar block's front face.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the sword stands vertically at the centre, its point rising above the figure's head",
+            "with": "the sword stands vertically at the centre, driven point-down into the altar, its grip and pommel rising above the figure's head"
+          },
+          {
+            "find": "gripping the hilt of a glowing upright sword",
+            "with": "gripping the blade of a glowing sword driven point-down"
+          },
+          {
+            "find": "cracked wall with radiating fracture lines",
+            "with": "fan-vaulted ceiling with stone ribs radiating from a point above the sword"
+          },
+          {
+            "find": "the cracked wall spreads behind and above the sword",
+            "with": "the fan vault spreads above the sword"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-311",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center, lower half of the frame",
+              "posture": "standing, seen from behind, right arm raised high and extended forward to grip the sword's grip; long hooded cloak reaching the floor",
+              "gaze": "away from the viewer, toward the sword and the far end of the chamber",
+              "heldObjects": [
+                "the grip of a large upright sword"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword/blade",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of the frame, standing in the top of a stone block",
+              "orientation": "point DOWN, driven vertically into the stone; round pommel at the top, straight crossguard below it, blade descending into the block",
+              "arrangement": "single, isolated, on the central vertical axis"
+            },
+            {
+              "type": "stone block / altar slab",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center, waist-to-chest height, the sword planted in its top face",
+              "orientation": "rectangular, long axis running away from the viewer",
+              "arrangement": "single; a large crack splits its front face directly beneath the blade"
+            },
+            {
+              "type": "carved circular sigil/disc",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "inlaid in the top surface of the stone block, encircling the point where the blade enters",
+              "orientation": "flat, facing up",
+              "arrangement": "concentric rings with radiating spokes"
+            },
+            {
+              "type": "branching antler-like / bare-tree-like growth",
+              "count": null,
+              "countConfidence": "low",
+              "where": "spreading out to the left and right from the blade just above the crossguard, pale and glowing",
+              "orientation": "branches spreading outward and upward",
+              "arrangement": "two symmetrical sprays, one each side of the blade; individual branches cannot be counted"
+            },
+            {
+              "type": "arched doorway",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right side, midground, in the chamber wall",
+              "orientation": "upright pointed arch",
+              "arrangement": "single, with a flight of steps descending from it toward the floor"
+            },
+            {
+              "type": "stone pillar / leaning slab",
+              "count": null,
+              "countConfidence": "low",
+              "where": "left background and right background, flanking the chamber",
+              "orientation": "upright to slightly leaning",
+              "arrangement": "several tall slab-like forms receding into darkness on both sides; not countable"
+            }
+          ],
+          "environment": [
+            "dark stone interior chamber",
+            "fan/rib vaulted ceiling whose ribs radiate outward from a point directly above the sword",
+            "cobblestone or flagstone floor",
+            "steps at the right leading up to the arched doorway",
+            "near-monochrome black and warm grey palette",
+            "small dark particles/debris drifting in the air around the blade"
+          ],
+          "lightSources": [
+            "the sword blade itself glows white, the single brightest element",
+            "a faint shaft of light descending from the vault apex onto the sword"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure stands to the left of the sword and reaches across/up to it, so the blade is between the figure and the viewer's center line",
+            "the vault ribs converge directly above the sword, and the crack in the stone runs directly below it — one continuous vertical axis",
+            "the doorway and stair on the right are set well back from the block"
+          ],
+          "foreground": [
+            "flagstone floor, the block's cracked front face, the cloak's trailing hem"
+          ],
+          "background": [
+            "vaulted ceiling, receding stone slabs, arched doorway with steps"
+          ]
+        },
+        "uncertainObservations": [
+          "whether the pale branching forms around the blade are antlers, bare branches, roots, or light artifacts cannot be determined",
+          "the figure's head is hooded or dark-haired; hair vs hood is not distinguishable",
+          "the number of leaning slabs in the side darkness is not countable",
+          "whether a second, smaller light source exists behind the doorway is ambiguous"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "the sword stands vertically at the centre, its point rising above the figure's head",
+          "observed": "The blade is vertical but POINT-DOWN: its tip is driven into the top of the stone altar. What rises above the figure's head is the crossguard, grip and pommel.",
+          "evidence": "The horizontal quillons sit high at the top of the frame with a short grip and small finial above them, and the bright blade runs downward from there through the figure's hand into the altar top — where a large crack splits the block's front face directly in line with the tip.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the sword stands vertically at the centre, its point rising above the figure's head",
+            "with": "the sword stands vertically at the centre, point-down into the altar, its crossguard and pommel rising above the figure's head"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-311",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center, foreground, seen from BEHIND",
+              "posture": "standing, back to the viewer, right arm raised high and extended forward to grip the blade's grip at about head height",
+              "gaze": "away from the viewer, toward the blade and the stone block; face not visible at all",
+              "heldObjects": [
+                "the grip of a large luminous blade"
+              ],
+              "clothing": "a long dark cloak or mantle falling from the shoulders to the floor, gathered in heavy vertical folds; short dark hair visible above the collar"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of the frame, running from the figure's raised hand down into the stone block",
+              "orientation": "point-DOWN and vertical — the tip is driven into the top of the stone block; the crossguard sits above the hand, with a long straight upper quillon/rain-guard and a small finial at the very top",
+              "arrangement": "single, standing alone and perfectly vertical; it is the brightest object in the frame"
+            },
+            {
+              "type": "stone block / altar",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center foreground, the blade's tip enters its top surface",
+              "orientation": "front face toward the viewer, flat top",
+              "arrangement": "single; a carved circular rosette/disc with radiating spokes is incised into the top surface around the blade, and a large vertical crack splits the front face directly below the blade"
+            },
+            {
+              "type": "bare branching structure (tree-like twigs)",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "immediately behind the blade at crossguard height, spreading symmetrically to the left and right",
+              "orientation": "branches radiating outward and upward from behind the blade's midpoint",
+              "arrangement": "a single pale branching mass, wider than tall, forming a canopy/halo behind the blade; the blade's shaft runs vertically through its centre"
+            },
+            {
+              "type": "arched stone doorway",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "right side, middle distance",
+              "orientation": "pointed/round arch facing left toward the chamber's interior",
+              "arrangement": "single dark opening set into the right wall"
+            },
+            {
+              "type": "stair",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "right side, running diagonally up alongside and below the archway",
+              "orientation": "ascending from the lower right toward the archway",
+              "arrangement": "single flight; individual treads are partly lost in shadow"
+            },
+            {
+              "type": "large leaning stone slab / monolith",
+              "count": null,
+              "countConfidence": "low",
+              "where": "left side, middle distance, and again at the far right edge",
+              "orientation": "tilted, leaning inward",
+              "arrangement": "at least two on the left and one at the right edge, but they merge into the dark wall and cannot be separated reliably"
+            },
+            {
+              "type": "small dark specks",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered in the air immediately around the blade and the branch mass",
+              "orientation": "indeterminate",
+              "arrangement": "loose scatter; could be falling debris, leaves, or distant birds"
+            }
+          ],
+          "environment": [
+            "the interior of a large dark stone chamber",
+            "a ribbed/fan vault radiating outward overhead from a point above the blade",
+            "cobbled or flagstone floor",
+            "near-monochrome black and warm-grey palette"
+          ],
+          "lightSources": [
+            "a shaft of pale light descending from the apex of the vault directly onto the blade; the blade itself glows white along its whole length; no sun, no moon, no flame"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure stands to the left of the blade and reaches rightward/upward to it; the blade is centred in the frame, the figure is not",
+            "the blade runs vertically from the vault's light shaft, through the pale branching mass, past the figure's hand, and down into the stone block",
+            "the crack in the stone block is directly in line with the blade's tip",
+            "a long shadow of the figure extends from the base of the cloak toward the lower edge of the frame",
+            "the vault's ribs converge on a point directly above the blade's hilt"
+          ],
+          "foreground": [
+            "cobbled floor",
+            "the figure's cloak and cast shadow",
+            "the cracked stone block"
+          ],
+          "background": [
+            "vaulted ceiling",
+            "arched doorway at right",
+            "stair",
+            "leaning slabs at left",
+            "light shaft from above"
+          ]
+        },
+        "uncertainObservations": [
+          "the figure's face, sex, age and expression are entirely unknown — the figure is seen only from behind",
+          "whether the pale branching mass is a real tree, dead branches, cracks in the air, or an emanation from the blade cannot be determined",
+          "the small dark specks around the blade cannot be identified (debris vs. birds vs. leaves)",
+          "the number of leaning slabs on the left cannot be counted",
+          "whether the carved circle on the block's top is a rosette, a clock face or an inscribed ring is not legible",
+          "whether the stair at the right ascends or descends relative to the chamber floor is ambiguous"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

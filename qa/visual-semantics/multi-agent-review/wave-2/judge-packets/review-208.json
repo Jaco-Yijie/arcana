@@ -1,0 +1,272 @@
+{
+  "reviewId": "review-208",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-208.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "pass": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-208.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-208",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left-of-center, filling the left half of the frame",
+              "posture": "kneeling / crouched low, body in profile facing right, long heavy embroidered gown and cloak pooling on the ground behind her",
+              "gaze": "downward and to the right, toward the ground where her lower hand reaches",
+              "heldObjects": [
+                "raised/forward hand: holds up a round flat disc engraved with a five-pointed star inside a circle",
+                "lower hand: empty, fingers extended toward a small plant sprouting from the soil"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "round disc engraved with a five-pointed star",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held up at chest height in front of the open door, center-right of frame"
+            },
+            {
+              "type": "crown",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the figure's head, tall and spiked/ornate"
+            },
+            {
+              "type": "rabbit",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower right, sitting upright on the ground, facing left toward the figure, ears erect"
+            },
+            {
+              "type": "door",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "arched wooden door set in a stone wall at center-right, standing open toward the viewer/right, with visible iron hinges and a handle"
+            },
+            {
+              "type": "staircase",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "stone steps ascending in the upper-left background, disappearing into darkness"
+            },
+            {
+              "type": "urn / planter with trailing plants",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "atop the stone structure at upper right, above the door"
+            },
+            {
+              "type": "seedling / small sprouting plant",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the ground at lower center, directly beneath the figure's reaching hand"
+            },
+            {
+              "type": "tall flowering stems",
+              "count": null,
+              "countConfidence": "low",
+              "where": "along the left edge, several upright stalks with pale open blooms"
+            }
+          ],
+          "environment": [
+            "stone wall with an arched doorway",
+            "stone staircase",
+            "dark earth / garden floor with scattered leaf litter",
+            "climbing vines on the stonework",
+            "flowering plants at the left edge and above the door"
+          ],
+          "lightSources": [
+            "no explicit lamp or sun visible; the brightest points are the engraved disc, the figure's face and hands, and the pale flowers — the scene is otherwise near-black"
+          ],
+          "moonPhase": "not present / not visible",
+          "spatialRelations": [
+            "the figure kneels in the left-center, angled toward the door at right",
+            "the disc is held between the figure and the open doorway, roughly at the door's mid-height",
+            "the rabbit sits on the ground to the right of her reaching hand, separated from her by the sprout",
+            "the staircase in the upper left recedes away from the viewer, behind the figure's back",
+            "the planter sits on top of the wall, directly above the arched door"
+          ],
+          "foreground": [
+            "dark soil, leaf litter, the sprout, the rabbit, the hem of the gown"
+          ],
+          "background": [
+            "stone stairs, dark wall, foliage silhouettes"
+          ]
+        },
+        "uncertainObservations": [
+          "the image is extremely dark overall; large portions of the background are effectively black and may contain unresolved objects",
+          "whether the door opens onto an interior space or a recess cannot be seen — the opening is solid black",
+          "the object on the ground beneath her hand reads as a small plant with roots/stem, but its exact form is hard to resolve against the dark soil",
+          "the number of flowering stalks at the left edge cannot be counted; they merge into darkness",
+          "I cannot tell whether the staircase has a railing or where it terminates"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "small seedling with exposed bare roots on the ground",
+          "observed": "a small plant with a thin stem and a few leaves sitting in the dark soil; fine radiating filaments at its base may be roots, or may be surrounding stems and leaf litter",
+          "evidence": "Whether the plant is uprooted or growing in place cannot be settled at this light level — the filaments below the leaves are not clearly distinguishable from the debris on the soil. The packet itself flags the nearby thin stem as ambiguous for the same reason.",
+          "confidence": "medium"
+        },
+        {
+          "field": "visualTensions",
+          "existing": "the lit disc and doorway against the surrounding near-black field",
+          "observed": "the engraved disc reads as faintly luminous, but the doorway interior is dark, not lit",
+          "evidence": "The panels inside the arch are dim and catch only weak light; the packet's own spatialRelations line calls it 'the dark interior of the doorway'.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "small seedling with exposed bare roots on the ground",
+            "with": "small seedling on the ground, its base a spray of fine filaments that may be roots or surrounding stems"
+          },
+          {
+            "find": "the other hand reaching down toward a small uprooted seedling",
+            "with": "the other hand reaching down toward a small seedling on the ground"
+          },
+          {
+            "find": "the lit disc and doorway against the surrounding near-black field",
+            "with": "the faintly lit disc against the surrounding near-black field and the dark doorway"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-208",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, kneeling / crouching low on dark ground, seen in profile facing right",
+              "posture": "kneeling with the body folded forward, long gown pooled on the ground behind; the near arm is raised and bent, holding a round disc upright at about chest height; the far arm reaches forward and down, fingers extended toward a small plant in the soil",
+              "gaze": "forward and slightly down, toward the plant and the open door",
+              "heldObjects": [
+                "a round engraved disc bearing a five-pointed star inside a circle"
+              ],
+              "clothing": "heavy long dark gown with embroidered banding down the sleeves and skirt, trailing behind",
+              "headwear": "an open crown of upright points with small blossoms set among them"
+            }
+          ],
+          "objects": [
+            {
+              "type": "disc engraved with a five-pointed star in a circle",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "held upright in the figure's raised near hand, center of frame"
+            },
+            {
+              "type": "crown",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "on the figure's head, many-pointed with small flowers"
+            },
+            {
+              "type": "seedling / small plant",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "on the ground just beyond the figure's reaching hand, a thin stem with a few leaves"
+            },
+            {
+              "type": "rabbit",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "lower right, sitting upright on the ground, ears raised, body turned toward the figure"
+            },
+            {
+              "type": "arched wooden door",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right of center, set into a stone structure and standing open toward the viewer, with visible hinges, a ring handle and panelled boards"
+            },
+            {
+              "type": "stone staircase",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "upper left background, a flight of steps climbing away into darkness"
+            },
+            {
+              "type": "stone urn / planter with foliage",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "above and behind the doorway, on a ledge at upper right, spilling leaves"
+            },
+            {
+              "type": "tall flowering plant",
+              "count": null,
+              "countConfidence": "low",
+              "where": "along the left edge, several upright stems with pale open blooms and buds; stems overlap and run off the frame edge"
+            },
+            {
+              "type": "stair step",
+              "count": null,
+              "countConfidence": "low",
+              "where": "the background flight; individual treads fade into shadow near the top"
+            }
+          ],
+          "environment": [
+            "night or deep shade",
+            "dark bare soil / garden floor strewn with leaves",
+            "mossy stone walls",
+            "stone stair at left",
+            "climbing vegetation on the walls"
+          ],
+          "lightSources": [
+            "diffuse pale light from the upper left falling on the figure's face, shoulder and the stair treads",
+            "the engraved disc itself reads slightly luminous against the dark gown"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the open door stands directly in front of the kneeling figure, its lower edge just beyond her reaching hand",
+            "the held disc is between the figure's face and the door, roughly at the door's mid-height",
+            "the small plant is on the ground between the figure's reaching hand and the rabbit",
+            "the rabbit sits on the far side of the plant from the figure, at the foot of the open door",
+            "the staircase recedes behind the figure's back on the opposite side from the door"
+          ],
+          "foreground": [
+            "dark soil with scattered leaves",
+            "the kneeling figure's trailing skirt",
+            "the rabbit",
+            "flowering stems at the left edge"
+          ],
+          "background": [
+            "stone stair climbing into darkness",
+            "mossy stone wall",
+            "planter above the doorway"
+          ]
+        },
+        "uncertainObservations": [
+          "whether the disc is being held out toward the door or simply carried is not determinable from posture alone",
+          "the number of blooms on the left-edge plants cannot be counted",
+          "the number of stair treads cannot be counted; the upper ones vanish into shadow",
+          "what lies beyond the open door is entirely dark",
+          "the faint glow on the disc may be painted luminance or reflected light — the source is not identifiable",
+          "small pale shapes on the wall to the right of the door may be more blossoms but are too dark to confirm"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

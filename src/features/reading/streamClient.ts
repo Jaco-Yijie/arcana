@@ -260,7 +260,54 @@ export function extractPartialStringList(raw: string, field: string): string[] {
   return out
 }
 
-/** JSON 字符串转义还原。三个提取器共用一份，避免各写各的迟早不一致 */
+/**
+ * 从流里抽出**已经写完**的行动建议（V2.4 actionPlan）。
+ *
+ * 与其他提取器同一条原则：只放出已闭合的对象，写到一半的那条不显示。
+ * 对象里有三个可选顺序的字段，用正则逐个匹配容易漏，所以这里按括号深度扫出
+ * 每个完整的 `{…}`（跳过字符串内部的括号），再交给 JSON.parse。
+ */
+export function extractPartialActions(raw: string): { action: string; reason: string; timeframe?: string }[] {
+  const key = '"actionPlan"'
+  const at = raw.indexOf(key)
+  if (at === -1) return []
+  const open = raw.indexOf('[', at + key.length)
+  if (open === -1) return []
+  const out: { action: string; reason: string; timeframe?: string }[] = []
+  let depth = 0
+  let start = -1
+  let inString = false
+  for (let i = open + 1; i < raw.length; i += 1) {
+    const ch = raw[i]
+    if (inString) {
+      if (ch === '\\') i += 1
+      else if (ch === '"') inString = false
+      continue
+    }
+    if (ch === '"') inString = true
+    else if (ch === '{') {
+      if (depth === 0) start = i
+      depth += 1
+    } else if (ch === '}') {
+      depth -= 1
+      if (depth === 0 && start !== -1) {
+        try {
+          const item = JSON.parse(raw.slice(start, i + 1)) as Record<string, unknown>
+          const action = typeof item.action === 'string' ? item.action.trim() : ''
+          const reason = typeof item.reason === 'string' ? item.reason.trim() : ''
+          const timeframe = typeof item.timeframe === 'string' ? item.timeframe.trim() : ''
+          if (action) out.push({ action, reason, ...(timeframe ? { timeframe } : {}) })
+        } catch {
+          /* 结构不完整就跳过，done 时由服务端校验后的结果替换 */
+        }
+        start = -1
+      }
+    } else if (ch === ']' && depth === 0) break
+  }
+  return out
+}
+
+/** JSON 字符串转义还原。几个提取器共用一份，避免各写各的迟早不一致 */
 function unescapeJson(x: string): string {
   return x.replace(/\\n/g, '\n').replace(/\\(.)/g, '$1').trim()
 }

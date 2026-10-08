@@ -1,0 +1,76 @@
+[
+  {
+    "reviewId": "review-207",
+    "decision": "HUMAN_REVIEW",
+    "confidence": "medium",
+    "independentFinding": "I opened the blind image and then zoomed the lower-left kneeling figure at 4x. I see pale braided hair with lavender blossoms pinned into it, the braid clearly visible on the crown and back of the head, and a pale shawl/mantle that begins at the shoulder line — no veil or hood over the head itself. The right-hand kneeling figure, by contrast, has a continuous pale covering running from crown to shoulder. So only one of the two kneeling figures reads as veiled to me. Separately, on a contrast-enhanced 3x crop of the foreground I can clearly see translucent gauzy fabric with gold-thread edging spread across the ground, with a distinct hem running diagonally past the coins — the pentacle coins lie on that draped cloth. I count five pentacle-faced coins on the ground plus one higher, plainer disc, the lantern at lower right is lit, and the left scale pan holds a small heap of several overlapping coins while the right pan holds a single upright coin.",
+    "reason": "Two issues, handled differently. (1) 'two kneeling, veiled figures': the reviewers contradict each other head-on — reviewer-d reports the left figure as bare-headed with braided flowered hair, reviewer-b records it as a 'hooded pale mantle'. My own zoom agrees with reviewer-d, but only one reviewer raised this, so AUTO_CORRECT criterion 2 is not met, and the claim sits inside the single scene blob, so MARK_UNCERTAIN would discard the entire scene line for one adjective — an unacceptable loss. A direct reviewer conflict over a one-word fact that a human settles at a glance belongs here. (2) 'lying on the draped cloth on the ground': I overturn reviewer-d. The draped translucent cloth is plainly there under the coins once contrast is raised; reviewer-b did not object, and reviewer-d's objection does not survive my own look. That keyObjects line should stand as written.",
+    "overturnedReviewer": true,
+    "disputedFacts": [
+      "Whether the lower-left kneeling figure's head is veiled/hooded (reviewer-b) or bare-headed with braided, flower-dressed hair and a shoulder shawl (reviewer-d, and my own reading).",
+      "Whether a draped cloth lies under the ground coins — reviewer-d says it cannot be resolved; I find it clearly present and overturn that objection, so this needs no human time unless the above answer surprises."
+    ],
+    "askHumanToVerifyOnly": "In the lower-left corner of review-207, is that kneeling figure's head covered by a veil or hood, or is her hair bare and visible?"
+  },
+  {
+    "reviewId": "review-208",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "I opened the blind image and brightened two crops. The pentacle disc is unambiguous: one golden disc, a five-pointed star inside a circle, steadied from above by one hand, standing upright against the open arched door. One rabbit, sitting, facing left toward the figure — also unambiguous. The small plant is where I run out of certainty: at 7x with brightness raised I see a thin leafy stem whose base fans out into a spray of fine branching filaments that lie on top of the dark leaf litter rather than disappearing into it. That leans toward exposed roots, but the filaments catch rim light in exactly the same way as the dry twigs and debris littering the ground all around them, and I cannot separate the two. I also looked at the doorway: the opening behind the door is solid black. What is catching light is the disc and the planked face of the door leaf, not the doorway interior.",
+    "reason": "Neither issue clears the AUTO_CORRECT bar — reviewer-e raised both and reviewer-c returned a clean pass, so criterion 2 fails on each. But I cannot confirm either claim myself, and the two reviewers read the plant in opposite directions (reviewer-c: 'sprouting from the soil'; reviewer-e: not determinable), while the existing text asserts a third, stronger thing: uprooted with exposed bare roots. An unverifiable claim about whether a plant is uprooted directly steers interpretation, so it should not be handed downstream. Same for the doorway: I can confirm the disc is lit, I cannot confirm the doorway is, and the reveal's own spatialRelations line already calls it 'the dark interior of the doorway'. I am naming the two specific lines rather than discarding whole fields, so the reliable keyObjects both reviewers confirmed independently (the pentacle disc, the rabbit, the open arched door, the crown, the staircase) all survive. Flagged, not patched: the scene line also carries 'a small uprooted seedling'. It is the same unconfirmed claim, but scene is one undivided blob and marking it would destroy the whole description for one word — it needs a human word-level edit or a second-pass patch.",
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "small seedling with exposed bare roots on the ground"
+      },
+      {
+        "field": "visualTensions",
+        "item": "the lit disc and doorway against the surrounding near-black field"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-210",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the blind image and then brightened the figure's lower body at 3x. There is a flat stone block/ledge at her right, and the red patterned under-layer of her gown drapes over its top surface and down its front face — her hip is resting on the block, which is bearing her weight. Her torso folds forward from a seated hip, knees bent in front, and both bare hands press into the dark soil on either side of a small leafy seedling. This is a seated posture on the block, not a kneel beside it. I also confirmed the lower-right object: a large plate with chipped, broken edges bearing a clean incised Venus sign, a circle with a cross below it.",
+    "reason": "All five gates are met for the posture correction. (1) The fact is unambiguous on screen once brightness is raised — the red underskirt lying over the block's top edge is decisive. (2) Both reviewers reported it independently: reviewer-b ('the figure is seated on the stone block, bent sharply forward at the waist, not kneeling beside it') and reviewer-e ('she is seated on the low stone block, leaning far forward, not kneeling beside it'), and both arrived at it via the same underskirt-over-the-block evidence without coordination. (3) My own zoom reaches the same conclusion. (4) Posture and position are observable facts, not interpretation. (5) Two precise substring replacements. The reveal's own spatialRelations line already said 'the woman sits in the lower centre', so this patch also removes an internal contradiction. Deliberately NOT patched: reviewer-e's objection that the lower-right object is shield-shaped rather than a 'disc'. Only reviewer-e raised it, reviewer-b recorded 'round shield/disc' at high confidence, and although the silhouette looks almond/kite-shaped to me, reviewer-e's own caveat is right — a round plate seen obliquely would look the same, and I cannot exclude that. The load-bearing part of that line, the circle-and-cross emblem, is correct either way, so I leave it alone and flag the shape for the next pass.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+          "with": "A crowned woman sits on a stone block in a dark overgrown garden"
+        },
+        {
+          "find": "stone block or ledge she kneels beside",
+          "with": "stone block or ledge she sits on"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-211",
+    "decision": "AUTO_CORRECT",
+    "confidence": "high",
+    "independentFinding": "I opened the blind image and zoomed the head at 5x. The face is in clean profile pointing right and slightly down — brow, nose, lips and chin all on the right side of the skull, with the dark curly hair mass behind them on the left. That is the same direction as the leaning torso, the advancing leg and the planted boot. The camp — tent, sword rack, fire ring, basket — is behind him at the left, and nothing in his head or shoulders is rotated toward it. He is looking ahead along his line of travel, not back. While zoomed in I also settled the counts the reviewers could not: five sword pommels on his back (five distinct grips and cross-guards, no sixth hidden at that resolution) and two swords standing in the rack — the two outer uprights in the rack are plain wooden posts with rounded tops, not sword hilts.",
+    "reason": "All five gates are met. (1) The head's orientation is unambiguous at 5x — it is a clean profile, not a three-quarter turn. (2) Both reviewers independently reported it at high confidence: reviewer-b ('the head is in profile facing right, the same direction he is walking; he is not looking back') and reviewer-d ('the head faces the same direction as the movement... it is not turned back toward the camp'), each citing the same hair-mass-behind/face-leading evidence. (3) My own zoom reaches the same conclusion. (4) Head orientation is an observable fact, not interpretation. (5) Three precise substring replacements. I extend the patch to the emphasizedAspects line as well: 'a backward glance that registers awareness of what is left' restates the identical disproven fact, and correcting only two of the three places would leave the file internally contradictory and still feed the false gesture downstream. The replacement wording removes the false premise without asserting anything new. Note, no patch needed: the existing text never commits to sword counts, so my five-on-the-back and two-in-the-rack readings contradict nothing — I record them only because both reviewers flagged the counts as unresolved and they are in fact resolvable at 4x.",
+    "overturnedReviewer": false,
+    "patch": {
+      "replace": [
+        {
+          "find": "while glancing back over his shoulder",
+          "with": "while looking ahead along the direction he is walking"
+        },
+        {
+          "find": "the figure's body moves away while his head turns back",
+          "with": "the orderly, intact camp behind him against his unbroken forward stride away from it"
+        },
+        {
+          "find": "a backward glance that registers awareness of what is left",
+          "with": "walking on without a backward glance at what is left"
+        }
+      ]
+    }
+  }
+]

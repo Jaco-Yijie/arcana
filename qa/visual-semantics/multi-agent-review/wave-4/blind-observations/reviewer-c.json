@@ -1,0 +1,569 @@
+[
+ {
+  "reviewId": "review-416",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, lower third, standing on a grassy rise",
+     "posture": "standing / mid-stride, weight on the forward leg, barefoot, body seen from behind in three-quarter view",
+     "gaze": "head turned to the viewer's right, face shown in profile looking right and slightly upward — the same direction the body is moving",
+     "heldObjects": [
+      "one slender leafy budding branch held in the right hand, shaft angled diagonally with the leafy tip pointing up and to the right, butt end resting down near the ground"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "long slender leafy/budding branch (sky)",
+     "count": null,
+     "countConfidence": "low",
+     "where": "filling the upper two thirds of the sky, entering from the left edge and extending across to the right edge",
+     "orientation": "all run as parallel diagonals from upper-left down to lower-right; leafy/budded tips point to the lower right, bare ends to the upper left",
+     "arrangement": "a stack of roughly parallel diagonal lines, evenly spaced but overlapping and fading into cloud; no ring, no gap structure I can localize"
+    },
+    {
+     "type": "leafy branch held by the figure",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "in the figure's right hand, center of frame",
+     "orientation": "tip up and to the right, butt down toward the ground",
+     "arrangement": "single, separate from the sky group"
+    }
+   ],
+   "environment": [
+    "grassy hilltop edge with white and pale flowering shrubs at lower left",
+    "pale blue sky with heavy soft cloud",
+    "distant misty forested hills and a river with a low arched bridge at lower right",
+    "bright water reflection on the river"
+   ],
+   "lightSources": [
+    "broad diffuse daylight from the upper right",
+    "a large pale moon disc high in the upper right, partly veiled by cloud"
+   ],
+   "moonPhase": "uncertain — the disc reads as nearly full but its lower-left edge is lost in cloud",
+   "spatialRelations": [
+    "the figure stands at the lower-left, below and to the left of the whole sky branch group",
+    "the held branch is the only one at the figure's level; every other branch is airborne well above her",
+    "the river and bridge sit behind and to the right of her, at roughly her knee height in the frame"
+   ],
+   "foreground": [
+    "flowering shrubs and grass at lower left",
+    "the figure's bare feet and trailing hair/veil"
+   ],
+   "background": [
+    "misty hills, river, bridge, cloudy sky, moon"
+   ]
+  },
+  "uncertainObservations": [
+   "sky branch count cannot be resolved reliably — they overlap, several fade into cloud and some are cut by the frame; my best read is roughly 7-9 distinct shafts, so I am recording null rather than a number",
+   "whether the ends entering from the left edge are single branches or two branches meeting cannot be told",
+   "the light reads as bright daylight even though a moon disc is visible; I cannot tell whether dawn or day is intended"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-404",
+  "visibleFacts": {
+   "figureCount": 7,
+   "figures": [
+    {
+     "position": "far left, seated on the ground",
+     "posture": "seated, legs folded, hands in lap",
+     "gaze": "turned to the right, toward the group's center",
+     "heldObjects": []
+    },
+    {
+     "position": "left foreground, nearest the viewer",
+     "posture": "seated/kneeling and leaning forward over the cloth",
+     "gaze": "down and to the right, toward the discs on the ground",
+     "heldObjects": [
+      "right hand extended down, fingertips touching or about to touch one ground disc"
+     ]
+    },
+    {
+     "position": "center, behind the child",
+     "posture": "seated, upper body inclined forward",
+     "gaze": "down and to the right toward the child",
+     "heldObjects": []
+    },
+    {
+     "position": "center-right, small child",
+     "posture": "seated between the center woman and the bearded elder",
+     "gaze": "down at the glowing disc held in front of it",
+     "heldObjects": [
+      "hands near/under a glowing disc"
+     ]
+    },
+    {
+     "position": "right of center, bearded older man in a blue robe",
+     "posture": "seated, leaning toward the child",
+     "gaze": "down toward the child and the glowing disc",
+     "heldObjects": [
+      "a glowing disc held in both hands, held flat/face-up in front of the child"
+     ]
+    },
+    {
+     "position": "upper right, under a stone arch",
+     "posture": "standing",
+     "gaze": "head inclined down toward the infant it carries",
+     "heldObjects": [
+      "an infant held against the chest"
+     ]
+    },
+    {
+     "position": "upper right, carried infant",
+     "posture": "held upright against the standing figure's chest",
+     "gaze": "toward the standing figure's face",
+     "heldObjects": []
+    }
+   ],
+   "objects": [
+    {
+     "type": "round disc engraved with a five-pointed star, lying on the cloth",
+     "count": null,
+     "countConfidence": "low",
+     "where": "spread across a pale cloth on the ground in the lower center and lower right",
+     "orientation": "all lying flat, face-up, star engraving visible on most",
+     "arrangement": "a loose staggered grid of short rows receding away from the viewer; overlapping edges and soft focus on the farther ones — my best read is 9 or 10 on the ground, not resolvable to a firm number"
+    },
+    {
+     "type": "glowing disc held aloft",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "in the bearded man's hands in front of the seated child, center-right",
+     "orientation": "held flat, face-up, emitting light",
+     "arrangement": "single, separate from the ground group"
+    },
+    {
+     "type": "white long-haired dog",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right side, on the ground beside the group",
+     "orientation": "head raised, facing left toward the group",
+     "arrangement": "lying down, body stretched to the right"
+    },
+    {
+     "type": "hanging lantern with warm light",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "far right edge, behind the foliage",
+     "orientation": "hanging upright",
+     "arrangement": "single"
+    }
+   ],
+   "environment": [
+    "pale cloth spread on the ground",
+    "stone arch / gateway with columns at the right, draped in hanging wisteria",
+    "a lake with a bright vertical reflection, mountains behind",
+    "a domed pavilion and stone steps on the left shore",
+    "flowering shrubs along the lower left border"
+   ],
+   "lightSources": [
+    "a large moon at the upper left",
+    "the glowing disc in the man's hands",
+    "a small warm lantern at the far right edge",
+    "a bright reflective streak on the lake"
+   ],
+   "moonPhase": "crescent — a bright arc on the left/lower-left with the rest of the disc faintly visible; exact phase uncertain",
+   "spatialRelations": [
+    "the seven figures form an open arc around the cloth, open toward the viewer at the bottom of the frame",
+    "the dog lies to the right of the seated group, outside the arc, facing in",
+    "the standing adult and infant are behind and above the seated group, under the arch",
+    "the discs lie between the seated figures and the bottom edge; the left foreground figure reaches down to the nearest one"
+   ],
+   "foreground": [
+    "the cloth and the ground discs",
+    "the left foreground seated figure",
+    "flowers at the lower left"
+   ],
+   "background": [
+    "arch and wisteria, lake, mountains, moon, pavilion and steps"
+   ]
+  },
+  "uncertainObservations": [
+   "ground disc count is not resolvable: several overlap, the far ones are blurred into the cloth; approximately 9-10",
+   "whether the glowing disc is held by the man, the child, or both jointly cannot be determined — both pairs of hands are at it",
+   "the sex/age of the standing figure under the arch cannot be determined",
+   "the scene is moonlit but overall very bright and pale; I cannot rule out twilight rather than full night"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-408",
+  "visibleFacts": {
+   "figureCount": 2,
+   "figures": [
+    {
+     "position": "left of center, foreground, on the shore",
+     "posture": "standing upright, seen from behind, back bare, long gown",
+     "gaze": "head turned over the left shoulder, face in profile looking down and to the viewer's left — away from the water she faces",
+     "heldObjects": [
+      "one blade in each hand, gripped at the hilt, arms hanging down at her sides"
+     ]
+    },
+    {
+     "position": "right middle distance, standing in shallow water",
+     "posture": "standing, seen from behind, semi-transparent/faded",
+     "gaze": "facing away from the viewer, out toward the open water",
+     "heldObjects": []
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade (long straight sword)",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "held one in each of the foreground figure's lowered hands",
+     "orientation": "both point DOWN toward the ground — the left-hand blade angles down and to the left, the right-hand blade angles down and to the right; neither is raised",
+     "arrangement": "one to each side of the figure, symmetrical, tips converging toward the ground"
+    },
+    {
+     "type": "blade lying flat on the ground",
+     "count": null,
+     "countConfidence": "low",
+     "where": "across the foreground strip at the bottom of the frame, in front of and below the figure",
+     "orientation": "lying flat and horizontal-to-diagonal, tips pointing to the right / lower right",
+     "arrangement": "overlapping near-parallel diagonals crossing each other; I can individually resolve at least 3 but the group blurs into the flowers and shoreline"
+    },
+    {
+     "type": "bird in flight",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "upper right sky",
+     "orientation": "wings spread, flying",
+     "arrangement": "scattered, one higher than the other"
+    }
+   ],
+   "environment": [
+    "stony/pebbled shore in the foreground with pale water lilies and chrysanthemum-like flowers",
+    "calm shallow sea with low ripples to the right",
+    "low scattered rocks in the water",
+    "soft cloud bank across the sky"
+   ],
+   "lightSources": [
+    "diffuse pale daylight, overall bright",
+    "a large pale moon disc at the upper right"
+   ],
+   "moonPhase": "uncertain — a large disc, the right portion brighter, partly hidden behind cloud and the frame edge",
+   "spatialRelations": [
+    "the foreground figure stands on land at the left; the water begins to her right",
+    "the distant second figure stands in the water well behind and to the right of her, moving away",
+    "the ground blades lie in front of the figure, between her feet and the bottom edge, not touching her",
+    "she is turned away from both the distant figure and the water"
+   ],
+   "foreground": [
+    "flowers, pebbles, the blades lying flat"
+   ],
+   "background": [
+    "sea, rocks, distant figure, clouds, moon, birds"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of blades lying on the ground cannot be counted reliably — they overlap and fade into the shoreline; at least 3, possibly more",
+   "whether the distant figure is a person, a reflection or a ghostly duplicate cannot be determined from the pixels",
+   "the bird count (2) is at small scale and could be 2 or 3",
+   "light reads as bright overcast daylight, not night, despite the visible moon"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-403",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "upper center, on a raised stone platform",
+     "posture": "SEATED on a tall-backed stone throne, upright, knees forward, feet on the platform, heavy robe draped over the legs and down the step",
+     "gaze": "head bowed and tilted down and to his right (viewer's left), eyes lowered toward the held vessel, not out at the viewer",
+     "heldObjects": [
+      "a footed goblet/chalice in the right hand (viewer's left), arm extended out from the body, the cup held UPRIGHT and roughly level",
+      "the left hand (viewer's right) rests on the stone block beside the throne, fingers closed around a slender vertical shaft whose visible end points DOWN toward the block"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "goblet / footed cup",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held out at chest height on the viewer's left",
+     "orientation": "upright, bowl up",
+     "arrangement": "single"
+    },
+    {
+     "type": "pointed crown",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "on the figure's head",
+     "orientation": "upright, points up",
+     "arrangement": "single"
+    },
+    {
+     "type": "stone throne with a pointed gothic arch back",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center right, on the platform",
+     "orientation": "upright, facing the viewer's left-front",
+     "arrangement": "single, with a carved finial spire at its left shoulder"
+    },
+    {
+     "type": "pendant/medallion on a chain",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "on the figure's chest",
+     "orientation": "hanging down",
+     "arrangement": "single"
+    },
+    {
+     "type": "stone sluice / grate with water falling through it",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "lower right, below and to the right of the throne",
+     "orientation": "water falls straight down",
+     "arrangement": "single opening in the masonry"
+    }
+   ],
+   "environment": [
+    "large stone platform / pier of dressed blocks",
+    "dark open sea with low waves at the left",
+    "a stepped masonry wall dropping away at the bottom of the frame",
+    "a heavy dark sky with no visible stars"
+   ],
+   "lightSources": [
+    "a faint pale band of light low on the sea horizon at the left",
+    "a weak grey glow high in the upper left sky",
+    "no lamp, fire or moon visible"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the figure sits above and to the right of the sea; the water is at his back-left and far below the platform edge",
+    "the cup is held out over empty air on the sea side",
+    "the falling water at the lower right is below the hand resting on the block, on the opposite side from the cup"
+   ],
+   "foreground": [
+    "the dark stone platform edge and steps at the bottom"
+   ],
+   "background": [
+    "sea, horizon glow, dark sky"
+   ]
+  },
+  "uncertainObservations": [
+   "the object gripped in the left hand cannot be identified — only a short vertical shaft and a pommel-like top are resolvable in the darkness; it could be a sceptre, a hilt or part of the throne fitting",
+   "the scene is extremely dark; details of the robe, throne carving and the figure's face are largely unreadable",
+   "whether the light at the horizon is dusk, dawn or moonlight behind cloud cannot be determined — I can only say it reads as night or deep twilight"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-415",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of frame, on a forest path",
+     "posture": "STANDING, mid-stride walking forward toward the viewer / down the path, barefoot, weight on the left leg",
+     "gaze": "eyes covered by a pale cloth band tied around the head (blindfolded); the face is turned to the viewer's right, three-quarter, not straight ahead along the path",
+     "heldObjects": [
+      "right hand raised to the chest, gripping the edge of a green shawl",
+      "left arm extended down and out to the side, hand open, fingers spread, empty"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade (long sword) planted in the ground",
+     "count": 8,
+     "countConfidence": "medium",
+     "where": "four on the left side of the path, four on the right side",
+     "orientation": "every one is vertical and driven POINT-DOWN into the earth, hilt and pommel uppermost, crossguards level",
+     "arrangement": "two flanking rows lining the path and receding into the distance; a wide open gap down the middle where the figure walks; nothing planted in front of or behind her on the path itself"
+    },
+    {
+     "type": "mushroom",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "lower left corner, on the bank",
+     "orientation": "caps up on upright stalks",
+     "arrangement": "clustered"
+    },
+    {
+     "type": "fern frond",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "lower right corner",
+     "orientation": "arcing up and to the left",
+     "arrangement": "single large frond with a small white bell-flower stem beside it"
+    }
+   ],
+   "environment": [
+    "a narrow earth and leaf-litter path running away from the viewer",
+    "ivy-covered tree trunks on both sides",
+    "dense green canopy overhead",
+    "mossy banks and ground foliage",
+    "an ornamental drawn border frame with leaf motifs around the whole image"
+   ],
+   "lightSources": [
+    "daylight breaking through the canopy from behind the figure, upper center — a bright gap in the leaves; warm and clearly daytime"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the figure stands between the two rows of planted blades, level with roughly the second blade of each row",
+    "the path continues past her toward the bright canopy gap behind",
+    "her extended left hand reaches toward, but does not touch, the left-hand row"
+   ],
+   "foreground": [
+    "mushrooms at lower left, fern at lower right, wet leaf-strewn path",
+    "the nearest planted blade on each side"
+   ],
+   "background": [
+    "forest trunks, ivy, the bright canopy opening"
+   ]
+  },
+  "uncertainObservations": [
+   "the blade count of 4 + 4 is my best resolution; the farthest blade in each row is small and partly screened by foliage, so the true total could be 7 or 9",
+   "I cannot tell whether the cloth over the eyes is tied at the back or simply draped"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-414",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of frame, standing in shallow water",
+     "posture": "STANDING upright, barefoot, ankles in the water, body in near-profile facing the viewer's left, head bowed low",
+     "gaze": "a pale band covers the eyes (blindfolded); the bowed face is directed down and to the left, toward the water at her feet",
+     "heldObjects": [
+      "nothing held — a pale cord/ribbon is wound several times around her upper arms and torso, binding the arms to her sides"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade (long sword) standing in the water",
+     "count": 8,
+     "countConfidence": "medium",
+     "where": "four to the left of the figure, four to the right — in each group one large and near the viewer, the rest smaller and receding into mist",
+     "orientation": "all vertical, driven POINT-DOWN into the shallow water, hilts and pommels uppermost",
+     "arrangement": "scattered upright in two loose groups flanking the figure, with an open gap in the middle where she stands and an open stretch of water directly behind her"
+    },
+    {
+     "type": "pale flowers",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower left and lower right corners, at the water's edge",
+     "orientation": "blooms facing up and outward",
+     "arrangement": "clustered at both bottom corners"
+    }
+   ],
+   "environment": [
+    "broad shallow still water with visible ripple rings around the figure's feet",
+    "a hanging leafy branch draping in from the upper left",
+    "pale mist/fog over the water, no far shore visible",
+    "a drawn thin border line around the image"
+   ],
+   "lightSources": [
+    "bright diffuse light from the upper right, overall very bright and pale — reads as daylight or very bright mist",
+    "a thin crescent moon high at the upper right inside a large bright halo"
+   ],
+   "moonPhase": "crescent — a thin bright arc on the upper-right rim of a faintly visible disc",
+   "spatialRelations": [
+    "the figure stands in the middle of the blade groups, none of the blades touching her",
+    "the two largest blades are nearest the viewer, one at lower left and one at lower right, framing her",
+    "her bowed head points away from the crescent moon, which is behind her to the upper right",
+    "ripple rings spread outward from where she stands"
+   ],
+   "foreground": [
+    "the two large near blades, flowers at both bottom corners, a floating pale petal/leaf on the water at bottom center"
+   ],
+   "background": [
+    "misty water, hanging branch, crescent moon and halo"
+   ]
+  },
+  "uncertainObservations": [
+   "blade count 8 is my best resolution; the farthest blades on both sides are faint in the mist and one more could be hidden, so the real total may be 8 or 9",
+   "whether the band across the eyes is a blindfold or simply the shadow of the bowed brow is not 100% certain, though it reads as a cloth band",
+   "the binding is clearly a cord wrapped around arms and torso, but I cannot tell where it is tied",
+   "the scene is lit like daylight while showing a crescent moon"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-c"
+ },
+ {
+  "reviewId": "review-402",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "middle distance, center, on a cracked dry plain",
+     "posture": "on hands and knees — CRAWLING, not standing and not lying flat; torso propped on both arms, bare soles of the feet turned toward the viewer, a heavy cloak dragging behind",
+     "gaze": "facing AWAY from the viewer, toward the light at the horizon; the head is turned slightly to the viewer's right, not looking back",
+     "heldObjects": []
+    }
+   ],
+   "objects": [
+    {
+     "type": "blade (dagger/short sword) lying flat",
+     "count": 10,
+     "countConfidence": "high",
+     "where": "across the whole foreground, laid on a dark spread cloth on the cracked ground",
+     "orientation": "every blade points DOWNWARD toward the bottom of the frame — pommels and round pommel-discs at the top, tips toward the viewer; none point up",
+     "arrangement": "two horizontal rows of five: an upper row of 5 and a lower row of 5, evenly spaced and roughly parallel, the lower row offset slightly left; no gaps within either row"
+    },
+    {
+     "type": "ruined stone columns",
+     "count": null,
+     "countConfidence": "low",
+     "where": "on a dark hill at the upper left",
+     "orientation": "upright, several broken",
+     "arrangement": "a colonnade silhouette, too dark to count"
+    },
+    {
+     "type": "bare tree",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right edge, upper third",
+     "orientation": "upright, branches spreading",
+     "arrangement": "single silhouette"
+    }
+   ],
+   "environment": [
+    "dry cracked earth / mud-flat ground",
+    "a dark heavy cloth spread under the blades",
+    "a ruined colonnade on a rise at the left",
+    "low dark hills on both sides",
+    "heavy dark clouds"
+   ],
+   "lightSources": [
+    "a single narrow band of warm pale light on the horizon at the center, low behind the figure — the only light source; everything else is in deep shadow",
+    "no moon, no stars, no lamp visible"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the blades lie in the foreground between the viewer and the figure; the figure is beyond them and does not touch them",
+    "the figure crawls toward the horizon light, away from the viewer and away from the blades",
+    "the ruins sit behind and to the left of the figure"
+   ],
+   "foreground": [
+    "the spread cloth and the ten blades"
+   ],
+   "background": [
+    "the crawling figure, the lit horizon band, ruins, clouds, bare tree"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of ruined columns at the upper left cannot be counted — the silhouette is almost fully black",
+   "I cannot tell whether the horizon light is sunset or sunrise; it reads as night or deep dusk with a single low glow",
+   "the figure's face is not visible, so the direction of the gaze is inferred only from head and shoulder orientation, which point forward/away"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-c"
+ }
+]

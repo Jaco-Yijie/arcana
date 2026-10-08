@@ -1,0 +1,277 @@
+{
+  "reviewId": "review-204",
+  "blindImage": "qa/visual-semantics/blind-review/wave-2/review-204.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-2/reveal/review-204.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "rack of upright swords mounted across the boat's bow",
+          "observed": "the rack of upright blades is mounted amidships, across the middle of the hull, not at the bow",
+          "evidence": "The boat runs stern-left to bow-right across the frame. The row of upright hilted objects sits over the middle of the hull, directly in front of the standing figure, with a clear stretch of empty hull between the rack and the bow — the lantern and rope coil occupy that bow section, well to the right of the last blade.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the figure stands behind the sword rack, which occupies the boat's forward half",
+          "observed": "the figure standing behind the rack is correct, but the rack occupies the middle of the boat, not its forward half",
+          "evidence": "Same arrangement: the rack straddles the hull's midpoint. The forward (bow) half of the boat is open and empty apart from the hanging lantern and rope at the prow. 'Forward half' places the blades a full boat-quarter further right than they are painted.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "a rack of upright swords is mounted in the boat's bow",
+          "observed": "mounted amidships, in the middle of the hull",
+          "evidence": "Same as above — the scene line repeats the bow placement.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "rack of upright swords mounted across the boat's bow",
+            "with": "rack of upright swords mounted across the middle of the boat"
+          },
+          {
+            "find": "the figure stands behind the sword rack, which occupies the boat's forward half",
+            "with": "the figure stands behind the sword rack, which occupies the middle of the boat, with open hull between it and the bow"
+          },
+          {
+            "find": "a rack of upright swords is mounted in the boat's bow",
+            "with": "a rack of upright swords is mounted amidships"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-204",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left-of-center, standing in the stern-left area of a boat",
+              "posture": "standing upright, seen entirely from behind, both hands gripping a long pole angled down to the right into the water",
+              "gaze": "away from viewer, head turned slightly right, looking downstream/ahead",
+              "heldObjects": [
+                "a long straight punting pole/oar, angled from upper-left down to lower-right where it enters the water"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center of frame, floating on calm water, bow pointing right"
+            },
+            {
+              "type": "upright blade-like objects standing in a row inside the boat",
+              "count": null,
+              "countConfidence": "low",
+              "where": "planted vertically in a row along the middle of the boat's hull, in front of the standing figure; each has a small knobbed pommel and a crossguard-like top"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "small hanging lantern at the boat's right/bow end, near a coil of rope"
+            },
+            {
+              "type": "mushroom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "cluster on the mossy bank in the lower-left corner; at least three caps resolvable"
+            },
+            {
+              "type": "tree trunk framing the frame edge",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "one vertical trunk hard against the left edge, one against the right edge"
+            }
+          ],
+          "environment": [
+            "still river / broad forest stream",
+            "dense green deciduous woodland on both banks",
+            "grassy bank and a light-colored path on the right shore",
+            "ferns, moss, white daisy-like flowers and mushrooms along the near bank in the foreground"
+          ],
+          "lightSources": [
+            "bright hazy daylight breaking through the trees at upper-center-right; visible slanted sunbeams / light shafts falling toward the water"
+          ],
+          "moonPhase": "not present",
+          "spatialRelations": [
+            "the boat sits across the middle of the frame with its bow to the right; the figure stands at the left end of it, behind the row of upright objects",
+            "the row of upright objects stands between the viewer and the figure's torso",
+            "the pole crosses the boat diagonally and its tip enters the water at lower-right, producing small ripples",
+            "sunbeams come from upper right and fall onto the water surface behind the boat",
+            "foreground bank vegetation is sharply detailed and frames the bottom edge"
+          ],
+          "foreground": [
+            "mossy near bank with ferns, mushrooms, white flowers, a rotting stump at lower right"
+          ],
+          "background": [
+            "sunlit forest interior, tall slender trunks, a clearing where the light comes through",
+            "reflections of the trees on the water"
+          ]
+        },
+        "uncertainObservations": [
+          "the upright objects in the boat overlap one another; I can individually resolve six pommel tops, but the row is dense enough that additional ones could be hidden behind those — count deliberately left null",
+          "whether those upright objects are blades, staves or posts is not determinable — only that they are slim, vertical, hilt-topped and planted in the hull",
+          "the small object at the bow reads as a lantern but could be a hanging bell or float",
+          "mushroom caps in the lower-left overlap the ferns; a precise count is not possible",
+          "the figure's face is never visible, so expression and exact gaze direction are unknown"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "a rack of upright swords is mounted in the boat's bow",
+          "observed": "the row of upright blades stands amidships, straddling the middle of the hull; the bow section ahead of it is clear except for the hanging lantern and the rope-looped bow post",
+          "evidence": "The blade row occupies roughly the central third of the hull, with the standing figure aft of it and a substantial empty length of boat between the last blade and the bow. This is a placement fact, not wording.",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the figure stands behind the sword rack, which occupies the boat's forward half",
+          "observed": "the figure stands at the stern end nearest the viewer; the blade row straddles the boat's midpoint rather than occupying its forward half",
+          "evidence": "The row spans across the middle of the hull, not the forward half — the forward half toward the bow is largely empty.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "a rack of upright swords is mounted in the boat's bow",
+            "with": "a rack of upright swords is mounted amidships"
+          },
+          {
+            "find": "rack of upright swords mounted across the boat's bow",
+            "with": "rack of upright swords mounted across the boat amidships"
+          },
+          {
+            "find": "the figure stands behind the sword rack, which occupies the boat's forward half",
+            "with": "the figure stands at the stern behind the sword rack, which straddles the middle of the hull, leaving the bow clear"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-204",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "left of center, standing upright in the rear-left of a flat wooden boat",
+              "posture": "standing, back to viewer, both hands gripping a long pole angled down into the water to the right; weight on the rear foot",
+              "gaze": "away from viewer, forward along the river",
+              "heldObjects": [
+                "a long punting pole, its lower end in the water at the right of the boat"
+              ],
+              "clothing": "hooded / draped green-grey cloak with a fringed hem over a long tunic"
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright blade standing in the boat",
+              "count": 6,
+              "countConfidence": "medium",
+              "where": "planted in a single row across the boat's floor in front of the figure, points down and hilts up; counted pommel by pommel from left to right along the row"
+            },
+            {
+              "type": "boat",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "center, a shallow wooden punt seen from the rear-left quarter, riding low on calm water"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "hanging at the forward right rail of the boat, a small pale-glassed lamp"
+            },
+            {
+              "type": "coiled rope",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "at the boat's bow, looped over the upright post"
+            },
+            {
+              "type": "mushroom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower-left foreground bank, a small cluster of pale-capped mushrooms; several caps overlap"
+            },
+            {
+              "type": "fern",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower-left and lower-center foreground, several fronds"
+            },
+            {
+              "type": "white daisy-like flower",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower-right foreground and right bank; many small blooms, not countable"
+            },
+            {
+              "type": "tree trunk framing the frame edge",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "one slim trunk running up the left edge, one up the right edge"
+            }
+          ],
+          "environment": [
+            "calm river",
+            "dense green deciduous forest on both banks",
+            "grassy bank with a pale path at right",
+            "mossy foreground bank in the lower corners"
+          ],
+          "lightSources": [
+            "sunlight breaking through the canopy from the upper center-right, falling as visible slanted beams across the far bank and water"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the row of upright blades stands between the figure and the bow, dividing the length of the boat",
+            "the figure is at the stern end, nearest the viewer's left",
+            "the pole enters the water on the right side of the boat, leaving a small ripple ring",
+            "the boat is moving along the river away from the darker near bank toward the brighter far water",
+            "the lantern hangs on the opposite side of the blade row from the figure"
+          ],
+          "foreground": [
+            "mossy bank with mushrooms and ferns at lower left",
+            "daisies and a mossy stump at lower right",
+            "framing tree trunks at both edges"
+          ],
+          "background": [
+            "sunlit forest interior",
+            "pale glare of sky through the trees at upper center",
+            "grassy clearing and path on the right bank"
+          ]
+        },
+        "uncertainObservations": [
+          "the upright blades stand close together in a row and their hilts partly overlap; six distinct pommels were resolved, but an additional blade directly behind another could not be excluded — treat 6 as a best-resolved count, not certain",
+          "the hanging object at the boat's right rail reads as a lantern but its glass and flame are not clearly resolved",
+          "the mushroom and daisy counts are not determinable",
+          "the figure's face and any facial features are not visible",
+          "whether the figure wears a hood up or a draped shoulder cloak is ambiguous"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

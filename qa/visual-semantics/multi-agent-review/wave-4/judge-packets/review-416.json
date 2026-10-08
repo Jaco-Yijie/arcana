@@ -1,0 +1,191 @@
+{
+  "reviewId": "review-416",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-416.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-416.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene",
+          "existing": "a moonlit sky above a misty river landscape",
+          "observed": "bright pale-blue daylight sky with sunlit white cloud; a large pale moon disc is visible but is not the light source",
+          "evidence": "The whole scene is high-key daylight — white cumulus lit from the upper right, bright haze on the hills, a sun-bright reflection on the river. Nothing in the frame is lit as night.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "a moonlit sky above a misty river landscape",
+            "with": "a bright daylight sky, a pale moon disc still visible in it, above a misty river landscape"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-416",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, lower third, standing on a grassy rise",
+              "posture": "standing / mid-stride, weight on the forward leg, barefoot, body seen from behind in three-quarter view",
+              "gaze": "head turned to the viewer's right, face shown in profile looking right and slightly upward — the same direction the body is moving",
+              "heldObjects": [
+                "one slender leafy budding branch held in the right hand, shaft angled diagonally with the leafy tip pointing up and to the right, butt end resting down near the ground"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "long slender leafy/budding branch (sky)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "filling the upper two thirds of the sky, entering from the left edge and extending across to the right edge",
+              "orientation": "all run as parallel diagonals from upper-left down to lower-right; leafy/budded tips point to the lower right, bare ends to the upper left",
+              "arrangement": "a stack of roughly parallel diagonal lines, evenly spaced but overlapping and fading into cloud; no ring, no gap structure I can localize"
+            },
+            {
+              "type": "leafy branch held by the figure",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "in the figure's right hand, center of frame",
+              "orientation": "tip up and to the right, butt down toward the ground",
+              "arrangement": "single, separate from the sky group"
+            }
+          ],
+          "environment": [
+            "grassy hilltop edge with white and pale flowering shrubs at lower left",
+            "pale blue sky with heavy soft cloud",
+            "distant misty forested hills and a river with a low arched bridge at lower right",
+            "bright water reflection on the river"
+          ],
+          "lightSources": [
+            "broad diffuse daylight from the upper right",
+            "a large pale moon disc high in the upper right, partly veiled by cloud"
+          ],
+          "moonPhase": "uncertain — the disc reads as nearly full but its lower-left edge is lost in cloud",
+          "spatialRelations": [
+            "the figure stands at the lower-left, below and to the left of the whole sky branch group",
+            "the held branch is the only one at the figure's level; every other branch is airborne well above her",
+            "the river and bridge sit behind and to the right of her, at roughly her knee height in the frame"
+          ],
+          "foreground": [
+            "flowering shrubs and grass at lower left",
+            "the figure's bare feet and trailing hair/veil"
+          ],
+          "background": [
+            "misty hills, river, bridge, cloudy sky, moon"
+          ]
+        },
+        "uncertainObservations": [
+          "sky branch count cannot be resolved reliably — they overlap, several fade into cloud and some are cut by the frame; my best read is roughly 7-9 distinct shafts, so I am recording null rather than a number",
+          "whether the ends entering from the left edge are single branches or two branches meeting cannot be told",
+          "the light reads as bright daylight even though a moon disc is visible; I cannot tell whether dawn or day is intended"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "spatialRelations",
+          "existing": "her staff rising into the same diagonal axis",
+          "observed": "the held branch is near-vertical, leaning only slightly to the right; it crosses the wands' shallow upper-left-to-lower-right diagonal rather than aligning with it",
+          "evidence": "The held shaft runs steeply up from her hip past her shoulder, while every sky wand lies on a shallow, near-horizontal downward slope — the two axes are close to perpendicular.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "streaks diagonally across a moonlit sky",
+          "observed": "the sky is daylight-bright — blue-white with sunlit cloud — with a large pale moon disc visible in it; the illumination does not read as moonlight",
+          "evidence": "Ambient light is high-key and broad, the river carries a bright specular glint, and the landscape is rendered in daylight haze rather than night values.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "her staff rising into the same diagonal axis",
+            "with": "her staff held near-vertical, crossing the wands' diagonal rather than aligning with it"
+          },
+          {
+            "find": "streaks diagonally across a moonlit sky",
+            "with": "streaks diagonally across a bright, daylight-lit sky carrying a large pale moon disc"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-416",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, on a grassy rise",
+              "posture": "standing, mid-step, walking toward the right; barefoot; seen from behind in three-quarter view",
+              "gaze": "head turned to the viewer's right, in profile, looking forward/outward across the valley — the same direction the body is moving, NOT looking back",
+              "heldObjects": [
+                "one long slender leafy branch/rod held in the right hand, gripped about mid-shaft"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "long slender leafy branch / budding rod",
+              "count": null,
+              "countConfidence": "low",
+              "where": "floating across the sky in the upper two-thirds of the frame, plus one held by the figure",
+              "orientation": "the sky branches all lie on the same diagonal, running from upper-left down to lower-right, roughly parallel; the held branch is near-vertical, leaning slightly to the right, with its leafy tip UP and its butt end down past the figure's hip",
+              "arrangement": "the sky branches are stacked as a set of parallel diagonal streaks, evenly spaced, none crossing; I can resolve roughly six such diagonals but the topmost and faintest ones blur into the cloud and some are cut by the left and right frame edges"
+            }
+          ],
+          "environment": [
+            "a grassy, flower-dotted hilltop in the lower-left foreground",
+            "pale white blossoms and foliage along the lower-left edge",
+            "a misty valley to the right with a winding pale river",
+            "a low arched bridge and small pale structures in the middle distance at right",
+            "soft blue-grey hills fading into haze on the right",
+            "a bright cloud-filled sky occupying most of the frame"
+          ],
+          "lightSources": [
+            "a large pale luminous disc at the upper right (moon-like, with faint surface mottling), partly veiled by cloud",
+            "broad diffuse bright light filling the sky; the scene reads clearly as daytime-bright, not night",
+            "a bright specular glint on the river in the middle right"
+          ],
+          "moonPhase": "uncertain — the disc appears as a full or near-full round face but its right side runs off the frame edge and cloud covers part of it",
+          "spatialRelations": [
+            "the figure stands on the near, higher ground; the valley and river lie below and to the right",
+            "the floating branches pass behind and above the figure, none touching her",
+            "the held branch's tip rises to about the level of the figure's shoulder/head",
+            "the figure's long hair and gown stream to the LEFT, opposite her direction of travel"
+          ],
+          "foreground": [
+            "grass, small white flowers, leafy shrubs on the hilltop"
+          ],
+          "background": [
+            "misty river valley with a bridge",
+            "hazy hills",
+            "bright clouded sky with the pale disc"
+          ]
+        },
+        "uncertainObservations": [
+          "The number of floating sky branches cannot be counted reliably — they are pale, low-contrast, partly hidden by cloud, and several are cut off by the frame. My best estimate is about six, but I will not state it as a count.",
+          "Whether the bright disc is a moon or a sun cannot be determined; it has faint mottling suggesting a moon but the sky is daylight-bright."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

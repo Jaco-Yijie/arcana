@@ -13,6 +13,7 @@ import { getCard } from '@/data/deck'
 import { resolveDeckId } from '@/decks/ids'
 import { formatDateTime } from '@/utils/format'
 import { useI18n } from '@/i18n'
+import { useAuth } from '@/store/AuthContext'
 import { positionLabel, spreadName } from '@/i18n/domain'
 import { useCardName } from '@/hooks/useCardText'
 
@@ -46,22 +47,23 @@ function EditableBlock({
 }
 
 export default function JournalDetailPage() {
+  const { user } = useAuth()
   const { id } = useParams()
   const navigate = useNavigate()
   const { t, locale } = useI18n()
   const cardName = useCardName()
   const [sourceEntry, setEntry] = useState<JournalEntry | null>(() => (id ? getEntry(id) : null))
 
-  const localized = useLocalizedContent(sourceEntry)
+  const localized = useLocalizedContent(!sourceEntry?.userId || sourceEntry.userId === user?.id ? sourceEntry : null)
   const entry = localized.value
 
   const commit = useCallback(
     (patch: Partial<Pick<JournalEntry, 'mood' | 'note' | 'outcome'>>) => {
-      if (!id) return
+      if (!id || (sourceEntry?.userId && sourceEntry.userId !== user?.id)) return
       const next = patchEntry(id, patch)
       if (next) setEntry(next)
     },
-    [id],
+    [id, sourceEntry?.userId, user?.id],
   )
 
   if (localized.pending) return <AppShell back="/journal"><TranslationStatus error={localized.error} retry={localized.retry} /></AppShell>

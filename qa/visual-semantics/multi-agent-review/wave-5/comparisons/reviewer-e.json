@@ -1,0 +1,108 @@
+[
+  {
+    "reviewId": "review-512",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "visualTensions",
+        "existing": "the man's body moves away while his head turns back toward the tent",
+        "observed": "人物朝 viewer-left 迈步，头却向后扭转、越过右肩朝 viewer-right／画面后方看；而帐篷在他的 viewer-left 后方。回头的方向与帐篷所在的方向相反，他望向的是远处城堡所在的那一侧",
+        "evidence": "盲观察记录：gaze = 越过右肩朝 viewer-right／画面后方，眼睛斜向上后方；tent = 画面 viewer-left，从上缘延伸到中部；castle = 画面 viewer-right 远景山丘顶上；spatialRelations 明确写了「怀中剑捆的柄头指向城堡所在的那一侧」与「人物回头的方向与他迈步前进的方向相反」",
+        "confidence": "high"
+      },
+      {
+        "field": "spatialRelations",
+        "existing": "the two planted swords lie in the lower-left foreground, behind and below the man",
+        "observed": "两把插地的剑在人物的 viewer-left 前方（即他迈步前进的那一侧），而且处在最前景、比人物更靠近观者；位置在帐篷门口与画面下缘之间。说它们在人物「身后」与观察不符",
+        "evidence": "盲观察记录：objects.sword(count 2) where = 画面 viewer-left 前景地面，帐篷门口外的石地上；spatialRelations = 「两把插地的剑在人物的 viewer-left 前方、位于帐篷门口和画面下缘之间」；foreground 列表里第一项就是这两把剑",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "the man's body moves away while his head turns back toward the tent",
+          "with": "the man's body moves away to the left while his head turns back over his right shoulder, away from the tent and toward the castle side of the frame"
+        },
+        {
+          "find": "the two planted swords lie in the lower-left foreground, behind and below the man",
+          "with": "the two planted swords stand point-down in the lower-left foreground, ahead of and below the man, between the tent's opening and the bottom edge"
+        },
+        {
+          "find": "while two more swords stand planted in the ground behind him",
+          "with": "while two more swords stand planted point-down in the foreground ahead of him"
+        }
+      ]
+    },
+    "reviewer": "reviewer-e"
+  },
+  {
+    "reviewId": "review-510",
+    "verdict": "corrected",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "two swords lying crossed on the ground in the lower right",
+        "observed": "前景那两把剑是平行并排的，不是交叉的；剑尖都朝 viewer-left 斜下方，剑柄都朝上，彼此没有交叠成 X 形",
+        "evidence": "盲观察记录：objects.sword(count 2, countConfidence high) orientation = 「剑尖朝 viewer-left 斜下方，剑柄朝上，斜躺／斜插在地面与织物上」，arrangement = 「两把平行并排」",
+        "confidence": "medium"
+      }
+    ],
+    "suggestedPatch": {
+      "replace": [
+        {
+          "find": "two swords lying crossed on the ground in the lower right",
+          "with": "two swords lying parallel and side by side on the ground in the lower right"
+        }
+      ]
+    },
+    "reviewer": "reviewer-e"
+  },
+  {
+    "reviewId": "review-506",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "nine swords mounted horizontally on the wall",
+        "observed": "墙上可见并可清点的剑是 8 把，沿竖直导轨等间距排成一列；最下面那把完全露出、其下方没有再出现剑身，所以「最下几把被头发遮住」这个数到 9 的理由与观察不符。唯一无法排除的是画面最上缘之外是否还有被截断／被遮蔽带盖住的一把，这一处无法判定，所以不敢断言 9 一定错",
+        "evidence": "盲观察记录：objects.sword count = 8、countConfidence = high，并在 uncertainObservations 里写明「竖直导轨还继续向画面最上缘延伸，顶端是否还有被画幅边缘截断的第 9 把无法确认」。复核这一条已记录的疑点时，最下一把剑下方只有床与头发，没有第 9 把",
+        "confidence": "medium"
+      }
+    ],
+    "reviewer": "reviewer-e"
+  },
+  {
+    "reviewId": "review-516",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "thin chains draped between the sword hilts",
+        "observed": "盲观察时在剑柄之间没有记录到任何链条；当时逐一记下的物件只有插在背上的 10 把剑、水边的花丛和水面上的半透明飘带。剑柄之间是否真有细链，从我记下的内容无法佐证",
+        "evidence": "盲观察记录的 objects 列表只含 sword / flower / ribbon 三类；对剑群的描述是「呈扇形／栅栏状散开，高低参差，中央一把最高」，未提及任何连接剑柄的链状物，uncertainObservations 里也没有相关条目",
+        "confidence": "medium"
+      }
+    ],
+    "reviewer": "reviewer-e"
+  },
+  {
+    "reviewId": "review-504",
+    "verdict": "uncertain",
+    "issues": [
+      {
+        "field": "keyObjects",
+        "existing": "small ring or circlet among the falling papers",
+        "observed": "飞散的书页之间没有记录到小环／冠圈。盲观察里唯一的环形物是套在剑身上、位于剑柄上方的那个金色叶环。纸页群极密且互相遮挡，图上分辨不出另有一枚小环",
+        "evidence": "盲观察记录：wreath 只有 1 个，位置「套在剑身上，位于画面上部、剑柄上方」；uncertainObservations 写明「空中飞散的书与纸页数量极多且互相遮挡，完全数不清」",
+        "confidence": "low"
+      }
+    ],
+    "reviewer": "reviewer-e"
+  },
+  {
+    "reviewId": "review-508",
+    "verdict": "pass",
+    "reviewer": "reviewer-e"
+  }
+]

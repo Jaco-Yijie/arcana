@@ -1,0 +1,166 @@
+[
+ {
+  "reviewId": "review-207",
+  "verdict": "pass",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-209",
+  "verdict": "pass",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-211",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "while glancing back over his shoulder",
+    "observed": "the head is in profile facing right, the same direction he is walking; he is not looking back",
+    "evidence": "The face (nose, eye, jaw) is on the right side of the head with the hair mass to its left, and both boots and the forward-leaning torso point right. The camp is behind him at the left, so his gaze is along his line of travel, away from the camp.",
+    "confidence": "high"
+   },
+   {
+    "field": "visualTensions",
+    "existing": "the figure's body moves away while his head turns back",
+    "observed": "body and head both face the direction of travel; there is no backward turn",
+    "evidence": "No part of the head or shoulders is rotated toward the tent side of the frame.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "while glancing back over his shoulder",
+     "with": "while looking ahead in the direction he is walking"
+    },
+    {
+     "find": "the figure's body moves away while his head turns back",
+     "with": "the camp lies behind him and he does not turn his head toward it"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-217",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "ten upright swords with round pommels and straight crossguards",
+    "observed": "nine swords",
+    "evidence": "Nine separate round pommels are individually resolvable against the open sky, left to right, each with its own crossguard and blade; the pommels do not overlap at all, only the blades do lower down.",
+    "confidence": "medium"
+   },
+   {
+    "field": "scene",
+    "existing": "ten swords driven upright into the back",
+    "observed": "nine swords driven point-down into the back",
+    "evidence": "Same nine-pommel enumeration; no tenth hilt breaks the skyline anywhere in the fan.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "ten upright swords with round pommels and straight crossguards",
+     "with": "nine upright swords with round pommels and straight crossguards"
+    },
+    {
+     "find": "ten swords driven upright into the back",
+     "with": "nine swords driven upright into the back"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-212",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "nine upright swords displayed one per panel",
+    "observed": "nine swords, each hanging point-down with the hilt uppermost",
+    "evidence": "In every one of the nine compartments the pommel and crossguard sit at the top of the panel and the blade tapers downward to a point at the bottom, so the blades are inverted rather than upright. The count of nine is correct.",
+    "confidence": "high"
+   },
+   {
+    "field": "scene",
+    "existing": "nine-panel wall cabinet holding nine upright swords",
+    "observed": "nine-panel wall cabinet holding nine point-down swords",
+    "evidence": "Same orientation reading across all three rows of the 3x3 grid.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "nine upright swords displayed one per panel",
+     "with": "nine swords displayed one per panel, each hanging point-down with its hilt uppermost"
+    },
+    {
+     "find": "nine-panel wall cabinet holding nine upright swords",
+     "with": "nine-panel wall cabinet holding nine point-down swords"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-210",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene",
+    "existing": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+    "observed": "the figure is seated on the stone block, bent sharply forward at the waist, not kneeling beside it",
+    "evidence": "The hips rest on the block's top surface and the red underskirt drapes over its right edge; the knees are bent in front with the arms reaching down between them. The packet's own spatialRelations line already says she 'sits', contradicting the scene line.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "stone block or ledge she kneels beside",
+    "observed": "stone block or ledge she sits on",
+    "evidence": "Same observation: the block is under her, supporting her weight, not adjacent to her.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "A crowned woman kneels in a dark overgrown garden beside a stone block",
+     "with": "A crowned woman sits on a stone block in a dark overgrown garden"
+    },
+    {
+     "find": "stone block or ledge she kneels beside",
+     "with": "stone block or ledge she sits on"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-206",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the two outer swords lean inward at angles, flanking the central blade",
+    "observed": "the two outer swords lean outward, their hilts splaying away from the central blade",
+    "evidence": "The left sword's pommel sits well to the left of the point where its blade enters the bundle, and the right sword's pommel sits well to the right of its own entry point; both tops therefore tilt away from the vertical centre sword, forming a splayed fan rather than converging on it.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the two outer swords lean inward at angles, flanking the central blade",
+     "with": "the two outer swords lean outward at angles, splaying away from the central blade"
+    }
+   ]
+  },
+  "reviewer": "reviewer-b"
+ }
+]

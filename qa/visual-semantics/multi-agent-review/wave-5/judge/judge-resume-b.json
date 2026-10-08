@@ -1,0 +1,109 @@
+[
+  {
+    "reviewId": "review-507",
+    "decision": "AUTO_CORRECT",
+    "confidence": "medium",
+    "correctionConfidence": "high",
+    "independentFinding": "Image-first: figure braced on steps at radial wheel hub. Second inspection confirms relief plaques on broad radial spoke panels between hub and separate segmented rim; counts/species unresolved.",
+    "reason": "Reviewer-d and reviewer-f independently report same rim/spoke placement error. Local position clear with high confidence; unrelated dark details remain medium.",
+    "patch": {
+      "replace": [
+        {
+          "find": "carved relief panels on the wheel's rim segments",
+          "with": "carved relief panels on the wheel's spokes between the hub and rim"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-508",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "independentFinding": "Image-first: two figures join hands, pale strips hang there, flanking trees, fruit-like forms left, mountain between, wing-shaped sky light. Coiling trunk form lacks independently identifiable head/scales.",
+    "reason": "Reviewer-c flags serpent, reviewer-e admits vine uncertainty; f pass cannot establish identity. Filter serpent-bearing claims without inventing another identity. Preserve other reliable facts.",
+    "uncertainItems": [
+      {
+        "field": "keyObjects",
+        "item": "a serpent coiled around the trunk of the left tree"
+      },
+      {
+        "field": "spatialRelations",
+        "item": "the fruit-bearing tree with the serpent stands to the left of the left figure; the bare tree stands to the right of the right figure"
+      },
+      {
+        "field": "visualTensions",
+        "item": "the two trees differ — one fruiting and serpent-coiled, one bare"
+      },
+      {
+        "field": "deckSpecificMotifs",
+        "item": "serpent coiled on a tree trunk"
+      },
+      {
+        "field": "emphasizedAspects",
+        "item": "a choice framed by two differing options, one bearing fruit and a serpent, one bare"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-509",
+    "decision": "MARK_UNCERTAIN",
+    "confidence": "medium",
+    "correctionConfidence": "high",
+    "independentFinding": "Image-first: five figures around luminous diagram, tip-light mapping uncertain. Second inspection confirms central glow separated by engraved ground from surrounding tip areas; rods do not meet centre.",
+    "reason": "Reviewer-b/d independently report no central tip meeting; Judge verifies separation at high confidence. Three local replacements remove repeated geometric error without exact node count. Filter dependent interpretation rather than rewrite meaning.",
+    "patch": {
+      "replace": [
+        {
+          "find": "central bright point of light where the staff tips converge",
+          "with": "central bright point of light separate from the glowing staff tips"
+        },
+        {
+          "find": "the five staffs radiate inward and their lit tips meet near the centre of the circle",
+          "with": "the five staffs radiate inward toward glowing points around an inner ring, apart from the central light"
+        },
+        {
+          "find": "each holding a glowing-tipped staff angled inward toward a luminous point at the centre of a large engraved circular diagram",
+          "with": "each holding a glowing-tipped staff angled inward around a large engraved circular diagram with a distinct luminous centre"
+        }
+      ]
+    },
+    "uncertainItems": [
+      {
+        "field": "emphasizedAspects",
+        "item": "several forces converging at once on one point"
+      }
+    ]
+  },
+  {
+    "reviewId": "review-510",
+    "decision": "AUTO_CORRECT",
+    "confidence": "medium",
+    "correctionConfidence": "high",
+    "independentFinding": "Image-first: figure carries overlapping swords, two distinct lower-right foreground swords. Second inspection confirms roughly parallel axes, no X. Underlying surface contact and carried count unresolved.",
+    "reason": "Reviewer-b/e independently identify parallel rather than crossed; Judge confirms at high confidence. Preserve number/location and avoid guessing contact surface.",
+    "patch": {
+      "replace": [
+        {
+          "find": "two swords lying crossed on the ground in the lower right",
+          "with": "two swords positioned roughly parallel in the lower right foreground"
+        }
+      ]
+    }
+  },
+  {
+    "reviewId": "review-511",
+    "decision": "AUTO_CORRECT",
+    "confidence": "medium",
+    "correctionConfidence": "high",
+    "independentFinding": "Image-first: figure standing in doorway, diagonal staff, forehead wrap, long foreground shadow. Second inspection confirms backlight and shadow from feet toward viewer; distant silhouettes/wrap purpose unresolved.",
+    "reason": "Reviewer-b/d independently contradict trailing shadow. Judge confirms direction at high confidence, matching existing spatialRelations. Local replacement removes contradictory direction without advancing stride.",
+    "patch": {
+      "replace": [
+        {
+          "find": "the figure's forward stance against the shadow trailing behind him",
+          "with": "the figure's standing posture against the long shadow stretching forward toward the viewer"
+        }
+      ]
+    }
+  }
+]

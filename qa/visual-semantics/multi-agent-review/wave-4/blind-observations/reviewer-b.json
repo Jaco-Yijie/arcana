@@ -1,0 +1,585 @@
+[
+ {
+  "reviewId": "review-407",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, slightly left of center, lower half of frame",
+     "posture": "standing upright, barefoot, weight on both feet, back turned to the viewer",
+     "gaze": "head faces away from viewer, toward the wall of niches; face not visible",
+     "heldObjects": [
+      "nothing gripped; right arm raised high toward the top-left niche with open hand, left arm extended forward-right so the hand touches/reaches into a lower niche holding a draped cloth"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "arched wall niche",
+     "count": 7,
+     "countConfidence": "high",
+     "where": "cut into the dark stone wall; 4 in the upper row, 3 visible in the lower row",
+     "orientation": "arched tops, all openings facing the viewer",
+     "arrangement": "two horizontal rows. Upper row of 4 is evenly spaced across the full width. Lower row is NOT evenly spaced: one niche at far left, then a wide gap where the standing figure's body blocks the wall, then two niches right of the figure. The gap behind the figure is wide enough to hide a probable eighth niche."
+    },
+    {
+     "type": "footed goblet / chalice",
+     "count": 7,
+     "countConfidence": "medium",
+     "where": "one seated inside each visible niche",
+     "orientation": "all upright, standing on their bases, bowls opening upward",
+     "arrangement": "same two-row layout as the niches: 4 across the top, 3 across the bottom with a gap at the lower-center where the figure stands"
+    },
+    {
+     "type": "object rising out of / resting in each goblet",
+     "count": 7,
+     "countConfidence": "medium",
+     "where": "upper row left-to-right: a coiled serpentine shape; a small crenellated tower/turret shape; a crown; a spray of leaves/palm frond. Lower row left-to-right: a key-like shape with a looped bow; a hanging draped cloth (the one the figure's hand is at); an open oval ring or wreath",
+     "orientation": "each sits vertically above the cup mouth",
+     "arrangement": "one per cup"
+    }
+   ],
+   "environment": [
+    "dark stone / masonry wall filling most of the frame",
+    "stone paved floor in the lower portion",
+    "interior, no sky visible",
+    "painted border lines at the left and right edges of the card"
+   ],
+   "lightSources": [
+    "no light source is visible in frame; a faint diffuse glow falls from the upper left and a pale patch of light lies on the floor behind the figure's feet"
+   ],
+   "moonPhase": "not applicable - no moon or sky visible",
+   "spatialRelations": [
+    "the figure stands with its back fully to the viewer, facing into the wall",
+    "the raised arm reaches up and to the left, hand near the leftmost upper niche but not touching the cup",
+    "the lowered arm reaches right, hand at the cloth-draped cup in the lower row",
+    "the figure's torso occupies the horizontal gap between the lower-left niche and the lower-center niche"
+   ],
+   "foreground": [
+    "stone floor slabs",
+    "the figure's bare feet and trailing robe hem"
+   ],
+   "background": [
+    "the niched wall; everything beyond is solid black"
+   ]
+  },
+  "uncertainObservations": [
+   "whether an eighth niche/cup is hidden behind the figure's body in the lower row - the lower-row spacing implies one, but nothing of it is visible",
+   "the identity of the small shapes inside several cups (serpent vs. vine, key vs. clasp, ring vs. wreath) is ambiguous at this brightness",
+   "the scene is extremely dark; low-contrast detail may be lost"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-409",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "upper-center, standing on top of a stone platform",
+     "posture": "standing, legs planted wide apart in a braced/straddling stance, knees slightly bent, torso squared to the viewer",
+     "gaze": "head faces forward, out of the frame toward the viewer",
+     "heldObjects": [
+      "one long pole/staff gripped with both hands, held roughly horizontally across the front of the body, extending well past the body on both sides"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "long pole / stave with a tapered point",
+     "count": null,
+     "countConfidence": "low",
+     "where": "below and around the stone platform, occupying the whole lower half of the frame; shafts run off the bottom and side edges of the frame",
+     "orientation": "all tapered tips point UPWARD and outward, away from the lower center; the shafts lean - the left-hand ones lean up-and-left, the right-hand ones lean up-and-right",
+     "arrangement": "a splayed radial fan / starburst rising from below the platform, not a row and not a closed ring; tips are at different heights so they form a ragged, staggered arc rather than a level line"
+    },
+    {
+     "type": "long pole / stave held by the figure",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "in the figure's two hands, upper-center",
+     "orientation": "horizontal, tilted very slightly, tips pointing left and right",
+     "arrangement": "single, held across the body"
+    },
+    {
+     "type": "stone platform / wall top",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center of the frame, below the figure",
+     "orientation": "flat top surface receding to the upper right; a sheer blocky face drops away toward the viewer",
+     "arrangement": "single mass with visible coursed stonework and dark arched recesses in its lower face"
+    }
+   ],
+   "environment": [
+    "coursed stone masonry platform / rampart",
+    "dark arched openings in the stonework below",
+    "black void filling the upper background",
+    "painted border lines at the left and right edges of the card"
+   ],
+   "lightSources": [
+    "no light source visible in frame; a weak cool rim-light from the upper left picks out the figure's shoulders, the pole and the top edges of the stones"
+   ],
+   "moonPhase": "not applicable - no moon or sky visible",
+   "spatialRelations": [
+    "the figure stands ON TOP of the platform, not behind or beside it",
+    "the figure is above and behind the fan of pointed poles; none of the lower poles touch the figure",
+    "the figure faces the viewer, i.e. faces the fan of poles below",
+    "the held pole is above and separate from the group below"
+   ],
+   "foreground": [
+    "the upward-pointing poles"
+   ],
+   "background": [
+    "black, featureless"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of poles below cannot be resolved reliably - I can individually pick out roughly 7 to 9 tapered tips, but several shafts overlap, cross and run off the frame edge, so I will not commit to a number",
+   "whether some of the dark vertical shapes at the lower right are additional shafts or shadow",
+   "whether the scene is night or simply an unlit interior cannot be determined; there is no sky"
+  ],
+  "reviewConfidence": "low",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-411",
+  "visibleFacts": {
+   "figureCount": 5,
+   "figures": [
+    {
+     "position": "top center",
+     "posture": "standing, leaning forward from the waist",
+     "gaze": "head down toward the center of the pit; face turned toward the viewer/downward",
+     "heldObjects": [
+      "one long pole, gripped in both hands, angled down-forward into the center"
+     ]
+    },
+    {
+     "position": "left, upper-middle",
+     "posture": "standing, bent forward at the waist, arm extended",
+     "gaze": "head lowered toward the pit center",
+     "heldObjects": [
+      "one long pole angled down-right toward the center"
+     ]
+    },
+    {
+     "position": "right, upper-middle",
+     "posture": "standing, bent forward, arm extended",
+     "gaze": "head lowered toward the pit center",
+     "heldObjects": [
+      "one long pole angled down-left toward the center"
+     ]
+    },
+    {
+     "position": "lower left",
+     "posture": "standing, seen from above and behind, bent forward",
+     "gaze": "head down and away from the viewer, toward the pit center",
+     "heldObjects": [
+      "one long pole angled up-right toward the center"
+     ]
+    },
+    {
+     "position": "lower right",
+     "posture": "standing, seen from above and behind, bent forward",
+     "gaze": "head down and away from the viewer, toward the pit center",
+     "heldObjects": [
+      "one long pole angled up-left toward the center"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "long pole / stave",
+     "count": 5,
+     "countConfidence": "high",
+     "where": "one from each figure, spanning the mouth of the circular pit; they all converge and cross at a single knot at the center of the pit",
+     "orientation": "all lie roughly in the horizontal plane, radiating inward from the rim toward the center; no tip points up out of the picture",
+     "arrangement": "a five-armed radial star / asterisk that crosses in one central bundle - a closed crossing at the middle, open spokes at the rim"
+    },
+    {
+     "type": "circular pit / well mouth",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center of the frame, directly below the crossing poles",
+     "orientation": "seen from directly above, opening downward into darkness",
+     "arrangement": "single ring of stone coursing around a dark circular void"
+    }
+   ],
+   "environment": [
+    "stone-paved courtyard seen from a high overhead angle",
+    "stone walls with an arched doorway at the upper right",
+    "an angled wall/structure at the upper left",
+    "painted border lines at the left and right edges of the card"
+   ],
+   "lightSources": [
+    "no light source visible in frame; a diffuse pale light falls from the upper left across the paving"
+   ],
+   "moonPhase": "not applicable - no sky visible",
+   "spatialRelations": [
+    "all five figures stand around the rim of the pit, spaced unevenly - a wider gap between the top-center figure and the two lower figures",
+    "every figure leans inward toward the pit",
+    "the poles pass OVER the open mouth of the pit and meet at one point above the void",
+    "nothing is visible inside the pit"
+   ],
+   "foreground": [
+    "the lower two figures, seen from above"
+   ],
+   "background": [
+    "courtyard walls and the arched doorway"
+   ]
+  },
+  "uncertainObservations": [
+   "faces are not resolvable at this brightness; posture and head direction are read from silhouette",
+   "whether the poles are physically lashed together at the crossing point or merely overlap cannot be determined"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-417",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of frame, walking on wet ground toward the viewer",
+     "posture": "standing / mid-stride, barefoot, upright",
+     "gaze": "head tilted downward; eyes covered by a pale cloth strip her own two raised hands hold in place across her eyes",
+     "heldObjects": [
+      "a pale translucent cloth band / blindfold, held up to her own eyes with both hands"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword planted point-down on a plinth",
+     "count": null,
+     "countConfidence": "low",
+     "where": "flanking the central figure, a group on the left of the frame and a group on the right; each blade rises from a dark rectangular stone plinth at ground level",
+     "orientation": "every blade stands VERTICAL with the round pommel at the TOP and the blade descending into the plinth; the swords read point-down/hilt-up, not point-up",
+     "arrangement": "two flanking groups forming a receding avenue/corridor down either side of the walkway, with a wide open gap in the middle where the figure walks; within each group the pommel heights step down toward the frame edge, so they form a diagonal line, not a level row"
+    },
+    {
+     "type": "rectangular stone plinth / pedestal",
+     "count": null,
+     "countConfidence": "low",
+     "where": "one under each sword, at the base of both flanking groups",
+     "orientation": "upright blocks, flat-topped, faces decorated with faint gold geometric marks",
+     "arrangement": "matching the two flanking groups"
+    },
+    {
+     "type": "domed observatory building",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "mid-distance, right of center, on a rise above the water",
+     "orientation": "dome open/slotted, a lit doorway facing the viewer at the top of a short stair",
+     "arrangement": "single structure"
+    },
+    {
+     "type": "moon / planetary body in the sky",
+     "count": null,
+     "countConfidence": "low",
+     "where": "one large cratered body upper right; one smaller body upper-left of center; at least one small faint disc near the right edge below the large one",
+     "orientation": "n/a",
+     "arrangement": "scattered across the starfield"
+    }
+   ],
+   "environment": [
+    "night sky with dense stars, a bright nebula band and faint gold constellation lines and orbital rings",
+    "wet reflective ground with standing water and puddles",
+    "a low mountain ridge on the left horizon",
+    "trees along the right middle distance",
+    "a decorated card border on the left and right"
+   ],
+   "lightSources": [
+    "the warm yellow lit doorway of the domed building (the only warm source, reflected as a gold streak on the water)",
+    "the large moon upper right",
+    "the stars and nebula",
+    "the sword blades themselves glow faintly pale"
+   ],
+   "moonPhase": "gibbous, close to full - a slight shading along one limb; exact phase uncertain",
+   "spatialRelations": [
+    "the figure walks forward toward the viewer, between the two flanking sword groups, head bowed",
+    "the swords do not touch her; the nearest plinths are level with her feet on both sides",
+    "the lit building sits behind her right shoulder in the distance",
+    "her bare feet and the plinths are reflected in the wet ground"
+   ],
+   "foreground": [
+    "wet rocky ground, puddles and reflections, a few dark weeds at the bottom edge"
+   ],
+   "background": [
+    "starfield, nebula, moons, mountains, the domed building and its reflection"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of swords cannot be counted reliably - I can pick out about 4 to 5 pommels on the left and about 4 to 5 on the right, but the innermost ones on each side are partly hidden behind the figure's hair and gown, and the outermost run to the frame edge",
+   "whether a sword stands behind the figure on the centre line is not determinable",
+   "the count of sky bodies is uncertain; some faint discs may be bokeh rather than planets"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-412",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of frame, on a descending path",
+     "posture": "standing / mid-stride walking, bent slightly forward under a load, booted",
+     "gaze": "back fully turned to the viewer; head faces forward along the direction of travel, toward the lit city ahead - not turned back",
+     "heldObjects": [
+      "two large bundles of staves carried across the back and shoulders, one over each shoulder, each bundle lashed with rope near the middle; the arms are under/around the bundles"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "stave / wand with a burning tip",
+     "count": null,
+     "countConfidence": "low",
+     "where": "two bundles rising from behind the figure's shoulders, one splaying up-left and one splaying up-right",
+     "orientation": "all shafts point UPWARD and outward; the burning, glowing tips are at the TOP of each shaft",
+     "arrangement": "two fanned bundles flanking the head, with a clear V-shaped gap between them directly above the figure's head; within each bundle the flame tips step down in a diagonal line toward the outside of the frame"
+    },
+    {
+     "type": "rope lashing around a bundle",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one wrapped around each bundle at chest/shoulder height",
+     "orientation": "wound horizontally around the shafts",
+     "arrangement": "one per bundle"
+    },
+    {
+     "type": "domed city building",
+     "count": null,
+     "countConfidence": "low",
+     "where": "right middle distance, across water - a large dome with a smaller dome and a tall lantern-topped tower behind it, plus lit ranges of windows",
+     "orientation": "upright",
+     "arrangement": "a clustered skyline"
+    }
+   ],
+   "environment": [
+    "night sky with dense stars, a nebula band and gold constellation lines and circular astrological diagrams",
+    "a rocky downhill path leading from foreground to the city",
+    "water/river between the path and the city",
+    "a rocky slope with a tree at the upper left",
+    "a warm dusk glow low on the horizon",
+    "decorated card border left and right"
+   ],
+   "lightSources": [
+    "the flames on the stave tips (the brightest, nearest source)",
+    "the lit windows and domes of the city",
+    "a small grey moon/planet upper left",
+    "the residual dusk glow at the horizon",
+    "stars"
+   ],
+   "moonPhase": "gibbous - partly shaded on one side; uncertain",
+   "spatialRelations": [
+    "the figure walks AWAY from the viewer, downhill, toward the city",
+    "the stave tips are above and behind the figure's head, none in front of him",
+    "the path curves down and to the right toward the water and the city",
+    "the figure's own shadow/reflection falls on the lit path ahead"
+   ],
+   "foreground": [
+    "dark rocky ground and boulders on both sides of the path"
+   ],
+   "background": [
+    "the illuminated city, the water, distant hills, and the starfield"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of staves cannot be counted reliably - I can individually resolve roughly 5 flame tips on the left bundle and roughly 5 to 6 on the right, but the shafts overlap heavily where they enter the bundles and some tips are close enough to merge",
+   "whether both bundles contain the same number of shafts is not determinable",
+   "the figure's face is entirely hidden; sex and age are not readable"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-410",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center of frame, standing on a small circular stone platform in water",
+     "posture": "standing upright, feet apart, robed; back turned to the viewer",
+     "gaze": "head faces away from the viewer, tilted up toward the great wheel in the sky",
+     "heldObjects": [
+      "nothing held; the right arm is raised up and forward, index finger extended, touching or nearly touching the lower rim of the wheel"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "large circular astrolabe / zodiac wheel in the sky",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "dominating the upper two-thirds of the frame, directly above the figure",
+     "orientation": "face-on to the viewer, concentric gold rings with radiating spokes and a bright hub at the center",
+     "arrangement": "a single closed ring structure, with four brighter marked points at roughly the top, left, right and bottom of the outer band"
+    },
+    {
+     "type": "constellation creature drawn in starlines",
+     "count": 4,
+     "countConfidence": "high",
+     "where": "one in each corner region around the wheel: a winged humanoid upper left; a bird with spread wings upper right; a horned bull lower left; a lion lower right",
+     "orientation": "each faces inward toward the wheel",
+     "arrangement": "four corners, symmetric, one per corner"
+    },
+    {
+     "type": "armillary sphere on a stand",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "on the platform, one to the figure's left (frame left, larger) and one to the figure's right (frame right, smaller/lower)",
+     "orientation": "upright on legged stands, rings tilted",
+     "arrangement": "flanking the standing figure"
+    },
+    {
+     "type": "small classical pavilion / colonnaded structure on the shore",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one at the far left edge, one at the far right edge, both at the waterline in the middle distance",
+     "orientation": "upright, facing inward",
+     "arrangement": "flanking, one per side"
+    },
+    {
+     "type": "planet / moon disc",
+     "count": null,
+     "countConfidence": "low",
+     "where": "two discs inside the upper part of the wheel; one large banded planet at the lower left corner; a crescent-lit body at the left edge above it; one disc at the lower right",
+     "orientation": "n/a",
+     "arrangement": "scattered around the frame edges and inside the wheel"
+    }
+   ],
+   "environment": [
+    "night sky full of stars, nebula clouds and fine gold constellation lines",
+    "a broad still water surface reflecting the sky and the platform",
+    "a low mountain range on the horizon",
+    "a warm orange dusk band at the horizon behind the figure",
+    "decorated card border left and right"
+   ],
+   "lightSources": [
+    "the glowing gold wheel (brightest element)",
+    "the warm dusk band on the horizon",
+    "stars and nebulae",
+    "small warm lights within the two shore pavilions"
+   ],
+   "moonPhase": "uncertain - several discs are present; the one at the left edge reads as a crescent, the others as full or gibbous",
+   "spatialRelations": [
+    "the figure stands ON the circular platform, back to the viewer, facing the horizon and the wheel",
+    "the raised arm reaches up to the wheel's lower rim, so the wheel appears to hang directly above and in front of him",
+    "the two armillary spheres sit on the same platform, on either side of him, at roughly waist height",
+    "the platform is surrounded by water on all sides; its lit edge reflects downward"
+   ],
+   "foreground": [
+    "the water surface and its reflections in the bottom third"
+   ],
+   "background": [
+    "mountains, the two shore pavilions, and the starfield"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of planetary discs cannot be fixed - several faint round shapes could be lens-bokeh rather than bodies",
+   "whether the smaller right-hand device on the platform is a second armillary sphere or a sundial/other instrument is not resolvable",
+   "the number of marked points on the wheel's outer band is uncertain; four are clearly brighter but there may be more"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ },
+ {
+  "reviewId": "review-406",
+  "visibleFacts": {
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "left",
+     "posture": "standing, body angled toward the center, long pale-blue/lilac gown, flower circlet in long wavy hair",
+     "gaze": "head tilted up and to the right, toward the meeting point of the cups",
+     "heldObjects": [
+      "one footed goblet, raised overhead in the right hand"
+     ]
+    },
+    {
+     "position": "center",
+     "posture": "standing, seen mostly from behind / three-quarter back, long pale gown, flower circlet",
+     "gaze": "head tilted up and slightly right, face largely turned away from the viewer, looking toward the cups",
+     "heldObjects": [
+      "one footed goblet, raised overhead"
+     ]
+    },
+    {
+     "position": "right",
+     "posture": "standing, body angled toward the center-left, long white gown, flower circlet",
+     "gaze": "head turned toward the center and tilted up toward the cups",
+     "heldObjects": [
+      "one footed goblet, raised overhead in the left hand"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "footed goblet / stemmed cup",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "held aloft at the top center of the frame, just below the moon",
+     "orientation": "all three upright, bowls opening upward, rims meeting/clinking together",
+     "arrangement": "a tight inward-facing cluster of three whose rims touch at the center - a closed meeting, no gap"
+    },
+    {
+     "type": "bowl / footed platter of fruit (grapes and round fruit)",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "on a draped table at the lower right",
+     "orientation": "upright, contents heaped",
+     "arrangement": "single, with a small lit candle in a glass beside it and a slender silvery ornament behind it"
+    },
+    {
+     "type": "stone balustrade / railing",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "running horizontally behind the three figures at waist height",
+     "orientation": "level, facing the viewer",
+     "arrangement": "a continuous run broken visually by the figures' bodies"
+    }
+   ],
+   "environment": [
+    "a terrace or balcony with a balustrade",
+    "pale luminous sky with soft clouds",
+    "water/sea and a bright stepped stairway of light in the center distance",
+    "wisteria and white blossom vines hanging from the upper left and upper right corners",
+    "white flowers and foliage along the lower left",
+    "a plain narrow card border"
+   ],
+   "lightSources": [
+    "the large pale moon at the upper center-right",
+    "a bright diffuse glow filling the whole sky and the central stairway - the scene reads as bright and high-key, not dark",
+    "a small candle flame on the table at the lower right"
+   ],
+   "moonPhase": "gibbous, close to full - a soft shading on the lower-left limb; uncertain because the disc is very pale against a pale sky",
+   "spatialRelations": [
+    "the three figures stand close together in a shallow arc, all turned inward toward each other",
+    "all three arms rise to a single point where the three cup rims meet",
+    "the moon sits directly above and slightly right of the meeting cups",
+    "the table with the fruit and candle sits in front of and to the right of the right-hand figure, nearer the viewer",
+    "the stairway of light rises behind the center figure, between her and the right-hand figure"
+   ],
+   "foreground": [
+    "the draped table with fruit bowl, candle and ornament at lower right",
+    "flowering plants at lower left",
+    "the figures' trailing gowns"
+   ],
+   "background": [
+    "balustrade, water, the luminous stairway, clouds and the moon"
+   ]
+  },
+  "uncertainObservations": [
+   "the light is bright and pale overall despite a visible moon; whether this is intended as daylight, twilight or a very luminous night cannot be determined from the pixels",
+   "the exact moon phase is not readable against the pale sky",
+   "whether the central bright vertical band is a flight of steps or a column of light is ambiguous",
+   "faces are softly rendered; expressions are not reliably readable"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-b"
+ }
+]

@@ -1,0 +1,770 @@
+{
+  "review-301": {
+    "reviewId": "review-301",
+    "existingSemantic": {
+      "scene": "A dark, near-monochrome depiction of a crowned figure seated on an ornate throne at the edge of a stone causeway, with a fortress on a crag in the distance.",
+      "keyObjects": [
+        "high-backed throne with carved ram-head armrests",
+        "circular ram-head emblem on the throne back",
+        "tall staff topped with a sphere",
+        "rectangular stone block or pillar at the figure's feet",
+        "stone causeway with cracked paving",
+        "flight of steps rising to a small arched gate",
+        "distant fortress with towers on a rocky crag",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the throne and figure occupy the left foreground",
+        "the causeway runs from the lower right toward the distant fortress",
+        "the fortress sits above and behind the figure on the horizon",
+        "the staff rises vertically between the figure and the causeway"
+      ],
+      "visualTensions": [
+        "the figure's stillness against the long receding path",
+        "the small scale of the distant fortress against the large foreground throne"
+      ],
+      "deckSpecificMotifs": [
+        "ram-head carving on the throne",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "weathered, grungy border"
+      ],
+      "emphasizedAspects": [
+        "established structure and seat of authority",
+        "a frame built and held"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the figure wears a crown or headpiece",
+      "exact number of towers on the distant fortress",
+      "whether the small arched structure is a gate or a doorway",
+      "the precise colour of the drapery in shadow"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 3,
+    "runtimeProjectionBytes": 679
+  },
+  "review-302": {
+    "reviewId": "review-302",
+    "existingSemantic": {
+      "scene": "A long-haired woman in a dark gown sits on a carved stone throne, head bowed, working with a small tool at an ornate lidded vessel resting on her lap, beside dark water under a large pale sphere.",
+      "keyObjects": [
+        "ornate footed metal vessel with a hinged lid, resting on the figure's lap",
+        "small slender implement held in the right hand",
+        "carved stone throne with a shell-like fan motif on its backrest",
+        "thin circlet of dark thorny branches on the head",
+        "long dark gown with embroidered trim at the neckline and cuffs",
+        "large pale mottled sphere in the upper right sky",
+        "stone steps descending at the lower right",
+        "narrow spire silhouettes on the far right horizon"
+      ],
+      "spatialRelations": [
+        "the throne and figure occupy the left two-thirds; the open sky and water fill the right",
+        "the pale sphere sits high right, above the spire silhouettes",
+        "the vessel is centred on the figure's lap, between her two hands",
+        "the steps descend from the throne's base toward the water at lower right"
+      ],
+      "visualTensions": [
+        "bright pale sphere against an almost black sky",
+        "fine silver highlights on metal and embroidery against deep shadow",
+        "the figure's stillness against the implied small motion of her hands"
+      ],
+      "deckSpecificMotifs": [
+        "monochrome black-and-silver rendering with only a trace of violet",
+        "aged, distressed card border with a thin inner rule",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "gothic architectural silhouettes of spires and towers"
+      ],
+      "emphasizedAspects": [
+        "close, unhurried attention to a single vessel",
+        "stillness held inside a dark, enclosing setting",
+        "depth of feeling kept private and inward"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the implement is a spoon, key or pin",
+      "whether the head ornament is a thorn circlet or a thin metal crown",
+      "whether the pale sphere is fully round or slightly cropped at the frame edge",
+      "the exact number of spire silhouettes on the right"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 866
+  },
+  "review-303": {
+    "reviewId": "review-303",
+    "existingSemantic": {
+      "scene": "A cloaked figure stands on a wet stone platform holding three swords while two smaller figures walk away toward a glowing horizon beneath a star-filled sky.",
+      "keyObjects": [
+        "three swords held point-down in one hand",
+        "two swords lying flat on the stone floor",
+        "circular astrological floor engraving",
+        "gold-framed border with corner compass rosettes",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "text '[CARD NAME REDACTED]' at bottom",
+        "domed colonnaded structure at left",
+        "armillary sphere on a stand at left"
+      ],
+      "spatialRelations": [
+        "the sword-bearer stands between the viewer and the departing pair",
+        "the two loose swords lie in the lower right foreground, closer to the viewer than the standing figure",
+        "the departing figures are small and distant, near the horizon line on the right",
+        "the domed structure sits behind and to the left of the standing figure"
+      ],
+      "visualTensions": [
+        "the large near figure faces the small receding pair",
+        "held swords point down while loose swords lie abandoned",
+        "warm horizon light against cold starfield"
+      ],
+      "deckSpecificMotifs": [
+        "constellation lines drawn across the sky",
+        "spiral galaxy rendered in violet",
+        "gold astrological floor diagram",
+        "ornamental gold border with compass rosettes"
+      ],
+      "emphasizedAspects": [
+        "the dispute is already over and others are walking away",
+        "the winner stands alone holding what was won",
+        "weapons set down rather than raised"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the small pale disc in the upper right is a moon or a planet",
+      "exact number of swords held, which may be three or four due to overlap",
+      "whether the tiny marks near the water line are figures or rocks"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 768
+  },
+  "review-304": {
+    "reviewId": "review-304",
+    "existingSemantic": {
+      "scene": "Three figures work by dim light inside a dark stone archway beneath three pointed niches, each holding a disc engraved with a five-pointed star.",
+      "keyObjects": [
+        "three circular discs engraved with five-pointed stars",
+        "three pointed arch niches framing the discs",
+        "large stone archway",
+        "stone workbench on trestle legs",
+        "rectangular stone block being worked",
+        "chisel or punch held by the centre figure",
+        "large unrolled sheet held by the right figure",
+        "small hand tool lying on the bench"
+      ],
+      "spatialRelations": [
+        "the three discs sit in a row above the archway, the middle one slightly higher",
+        "the archway encloses the three figures and the bench",
+        "the bench occupies the lower centre, between the left and right figures",
+        "the right figure stands slightly further back than the left"
+      ],
+      "visualTensions": [
+        "the bright engraved discs against the near-black wall",
+        "the three figures close together yet each absorbed in a separate task"
+      ],
+      "deckSpecificMotifs": [
+        "gothic pointed-arch niches",
+        "pentacles rendered as weathered stone medallions",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "skilled work carried out in a shared place",
+        "the plan or drawing held alongside the material being worked",
+        "craft and structure aligned under one roof"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the right figure's sheet shows a drawn plan or plain surface",
+      "exact number of small tools on the bench",
+      "whether the left figure's hand rests on a tool or the stone"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 2,
+    "runtimeProjectionBytes": 709
+  },
+  "review-305": {
+    "reviewId": "review-305",
+    "existingSemantic": {
+      "scene": "A pale-haired figure in translucent white drapery lies asleep on a stone ledge beneath an arched window, while three swords hang point-down in the air above her and a fourth sword rests flat on the step below.",
+      "keyObjects": [
+        "three swords suspended point-down in the window opening",
+        "one sword lying horizontally on the stone step below the sleeper",
+        "ornate cushion with tassel under the sleeper's head",
+        "stone ledge or slab",
+        "arched window frame with tracery",
+        "pale blossoms and vines",
+        "sheer draped fabric over the ledge",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the three hanging swords are centred in the window opening directly above the sleeping figure",
+        "the horizontal sword lies on the step below and in front of the sleeper",
+        "the sleeper's body spans the width of the ledge, head at left, feet toward the right",
+        "flowering vines frame the arch on both left and right sides"
+      ],
+      "visualTensions": [
+        "sharp straight blades against soft rounded drapery and blossoms",
+        "stillness of the sleeping body against the implied suspension of the hanging swords"
+      ],
+      "deckSpecificMotifs": [
+        "silver filigree linework",
+        "floral vine border framing the arch",
+        "translucent layered drapery",
+        "misty low horizon over water"
+      ],
+      "emphasizedAspects": [
+        "a deliberate stop, shown as undisturbed sleep",
+        "stillness held in place, shown by the suspended blades",
+        "nothing being solved during the pause"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the pale disc behind the arch is a moon or a light source",
+      "whether the surface at the bottom edge is water or polished stone"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 868
+  },
+  "review-306": {
+    "reviewId": "review-306",
+    "existingSemantic": {
+      "scene": "A cloaked figure kneels on a forest floor at dawn, holding out a dark cloth toward a sunlit valley, with ten sheathed swords laid in two rows on the mossy ground before them.",
+      "keyObjects": [
+        "ten sheathed swords with ornate hilts and scabbard tips, laid flat in two rows of five",
+        "large woven wicker basket with a strap",
+        "small wooden cup",
+        "cloth-wrapped bundle",
+        "dark green cloak spread between the figure's hands",
+        "mushrooms with pale caps growing among the ferns",
+        "fern fronds",
+        "moss and ivy ground cover"
+      ],
+      "spatialRelations": [
+        "the two rows of swords occupy the lower half of the frame, below the kneeling figure",
+        "the basket sits between the swords and the figure's knees",
+        "the figure is silhouetted against the bright gap in the trees",
+        "the sunlit valley lies beyond and below the tree line, framed by trunks"
+      ],
+      "visualTensions": [
+        "the figure's outward, open gesture against the still, laid-down swords",
+        "bright warm horizon light against the dark shaded foreground"
+      ],
+      "deckSpecificMotifs": [
+        "botanical border of ferns, seed pods and mushrooms framing the scene",
+        "muted woodcut-like linework over painterly greens",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "title banner reading [CARD NAME REDACTED] at the base"
+      ],
+      "emphasizedAspects": [
+        "a finished state, shown as weapons laid down and no longer held",
+        "release and relief, shown in the open, unguarded posture and the cloth offered outward"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the small dark object beside the basket is a cup or a folded pouch",
+      "exact count of mushrooms in the border"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 862
+  },
+  "review-307": {
+    "reviewId": "review-307",
+    "existingSemantic": {
+      "scene": "Two long-haired figures in dark robes stand facing each other on a cracked stone street, both reaching up to a knotted garland strung between two vine-wrapped wooden poles, with a crenellated stone building behind them.",
+      "keyObjects": [
+        "two tall wooden poles wrapped in dark vines and foliage",
+        "a swag of dark foliage and cloth strung between the poles, meeting at a central knot",
+        "long tattered strips of fabric hanging from the central knot",
+        "cracked stone paving underfoot",
+        "a crenellated stone building with a dark arched doorway",
+        "faint draped cloths hanging on lines at the left and right edges"
+      ],
+      "spatialRelations": [
+        "the two figures mirror each other symmetrically about the central knot",
+        "the poles frame the figures on the outer left and right",
+        "the stone building sits behind the figures at the end of the street",
+        "the central knot hangs directly above the midpoint between the two figures"
+      ],
+      "visualTensions": [
+        "the raised, celebratory gesture of the arms against the heavy, shadowed surroundings",
+        "the pale pool of light on the ground against the surrounding darkness"
+      ],
+      "deckSpecificMotifs": [
+        "vine-wrapped wooden poles",
+        "tattered hanging fabric strips",
+        "monochrome near-black rendering with a faint violet cast",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "a structure that stands and can be gathered under",
+        "a moment of shared acknowledgement between two people"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the draped cloths at the left and right edges are hanging laundry or banners",
+      "the exact number of poles, since the outer edges are cropped and shadowed",
+      "whether the pale patch on the paving is light or a lighter stone"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 893
+  },
+  "review-308": {
+    "reviewId": "review-308",
+    "existingSemantic": {
+      "scene": "A barefoot, ragged figure stands head-down on a wet stone causeway clutching a bundle of swords, while two distant figures walk away along the same path under a stormy, moonlit sky.",
+      "keyObjects": [
+        "bundle of swords held by the foreground figure",
+        "two swords lying crossed on the wet pavement in the foreground",
+        "wet stone-paved causeway",
+        "ragged, torn coat and bare feet of the foreground figure",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the sword-bearing figure is nearer the viewer and to the left; the two walkers are smaller and further along the causeway to the right",
+        "the two fallen swords lie on the ground below and in front of the standing figure",
+        "the causeway recedes from the lower foreground toward the horizon at centre-right",
+        "the moonlit break in the clouds sits above and behind the two departing figures"
+      ],
+      "visualTensions": [
+        "the large near figure faces down and inward while the two small figures move away from him",
+        "bright moonlit sky above against the near-black ground below",
+        "the causeway's solid stone against the void falling away at its right edge"
+      ],
+      "deckSpecificMotifs": [
+        "engraved-style dark border with worn, distressed edges",
+        "monochrome chiaroscuro rendering with almost no chroma",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "the cost of the win, shown as a lone, ragged, barefoot figure left behind",
+        "the other parties walking away, the dispute already over for them",
+        "what was spent rather than what was gained"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of swords in the bundle held by the figure (several, overlapping)",
+      "whether the flat dark expanse behind the causeway is water or bare ground",
+      "whether the pale disc in the clouds is a moon or a light break in the cloud",
+      "whether the distant left silhouettes are ruins or rock"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 4,
+    "runtimeProjectionBytes": 949
+  },
+  "review-309": {
+    "reviewId": "review-309",
+    "existingSemantic": {
+      "scene": "A rain-soaked woman in a green cloak bends over a large wooden panel on which a red heart-shaped patch is pierced by three swords, set in a misty forest clearing.",
+      "keyObjects": [
+        "large weathered wooden panel or board",
+        "red heart-shaped patch of cloth or leather stitched onto the panel",
+        "three swords with round pommels driven into the patch",
+        "coarse thread and stitching along the patch edges",
+        "wicker basket at right holding folded cloth",
+        "wicker basket at left behind the woman",
+        "ceramic jug and shallow bowl at lower left",
+        "spool of dark thread beside the bowl"
+      ],
+      "spatialRelations": [
+        "the panel occupies the centre and lower right, angled toward the viewer",
+        "the woman stands to the left of the panel, her hands at its upper edge",
+        "the three swords are clustered in the middle of the heart patch, the central one upright and the outer two angled inward",
+        "baskets and vessels flank the panel at ground level on both sides"
+      ],
+      "visualTensions": [
+        "the soft, mended heart shape against the hard metal blades",
+        "the woman's careful handiwork against the violence of the piercing",
+        "warm red patch against the cool green surround"
+      ],
+      "deckSpecificMotifs": [
+        "botanical border of ferns, mushrooms and berries",
+        "rain as a continuous visual texture",
+        "hand-stitched, repaired cloth as a recurring material",
+        "muted, painterly forest realism"
+      ],
+      "emphasizedAspects": [
+        "something true and painful made visible",
+        "the clarity of the wound and the pain arriving together",
+        "the wound as an object that is tended rather than hidden"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the heart patch is cloth, leather or painted wood",
+      "whether the small box at lower right is a chest or a book",
+      "the exact number of mushrooms in the lower-left cluster"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 0,
+    "runtimeProjectionBytes": 785
+  },
+  "review-310": {
+    "reviewId": "review-310",
+    "existingSemantic": {
+      "scene": "A lone figure seen from behind walks through a large leafy wreath-arch toward a distant city skyline, framed by four corner portrait panels and the Roman [NUMERAL REDACTED] above the title The World.",
+      "keyObjects": [
+        "large wreath of leaves forming an arch",
+        "ribbon bow tied at the top of the wreath",
+        "two thin rods or batons held one in each hand",
+        "stone step or threshold beneath the figure",
+        "cracked paving stones in the foreground",
+        "four corner portrait panels",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the walker stands inside the wreath opening, framed by its leaves",
+        "the wreath arch spans the full height of the card, its bow at the top centre",
+        "the four portrait panels occupy the four corners outside the wreath",
+        "the distant city skyline sits behind and below the walker, beyond the threshold"
+      ],
+      "visualTensions": [
+        "the enclosing wreath ring versus the open horizon beyond it",
+        "the walker's forward motion versus the static, symmetrical frame"
+      ],
+      "deckSpecificMotifs": [
+        "four corner portrait panels replacing a single surrounding figure",
+        "wreath rendered as dense dark foliage rather than a plain ring",
+        "engraved, weathered monochrome card texture"
+      ],
+      "emphasizedAspects": [
+        "a completed circuit, shown as a closed wreath ring",
+        "crossing a threshold and moving on",
+        "the whole framed and set down as a finished panel"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the two thin rods are batons, wands or walking sticks",
+      "whether the pale ground beyond the threshold is water or stone",
+      "exact number of leaves and their species in the wreath",
+      "whether the lower-left animal head is bovine or another horned creature"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 2,
+    "runtimeProjectionBytes": 803
+  },
+  "review-311": {
+    "reviewId": "review-311",
+    "existingSemantic": {
+      "scene": "A lone hooded figure stands before a stone altar in a dark vaulted chamber, gripping the hilt of a glowing upright sword whose blade throws light onto a cracked, radiating wall behind it.",
+      "keyObjects": [
+        "upright sword with crossguard, wrapped grip and round pommel",
+        "stone block altar with a circular carved emblem on its top",
+        "glowing blade emitting light and small drifting sparks",
+        "bare branching twigs flanking the blade at crossguard height",
+        "cracked wall with radiating fracture lines",
+        "arched doorway with a short flight of steps",
+        "tall rectangular slab leaning at the left",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the sword stands vertically at the centre, its point rising above the figure's head",
+        "the figure stands to the left of the altar, hand on the hilt",
+        "the arched doorway and steps recede to the right of the altar",
+        "the cracked wall spreads behind and above the sword"
+      ],
+      "visualTensions": [
+        "blade light against surrounding blackness",
+        "the figure's small scale against the towering fracture pattern",
+        "stillness of the pose against the implied force of the radiating cracks"
+      ],
+      "deckSpecificMotifs": [
+        "aged parchment border with worn edges",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]",
+        "monochrome silver-on-black rendering"
+      ],
+      "emphasizedAspects": [
+        "a single decisive point of clarity",
+        "separation of one thing from its surroundings",
+        "precision as the source of relief"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the branching forms beside the blade are twigs, thorns or a stylised wreath",
+      "whether the circular mark on the altar top is a carved emblem or a light reflection",
+      "whether the leaning slab at left is a door, mirror or plain stone panel"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 3,
+    "runtimeProjectionBytes": 797
+  },
+  "review-312": {
+    "reviewId": "review-312",
+    "existingSemantic": {
+      "scene": "A barefoot figure lies on a stone slab in a dark vaulted chamber, bandaging a forearm, beneath three swords set upright in arched wall niches and a fourth sword resting on a stone ledge below.",
+      "keyObjects": [
+        "three upright swords set into arched wall niches",
+        "one sword lying flat on a stone ledge in the lower right",
+        "strip of pale cloth wound around the figure's forearm",
+        "cushion behind the figure's head",
+        "tall narrow arched window with leaded lattice glazing",
+        "raised stone slab with carved arcade beneath it",
+        "short flight of stone steps at lower left",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the three niche swords are aligned in a row above and to the left of the figure",
+        "the fourth sword lies below the slab, on a ledge nearer the viewer",
+        "the window sits at the upper left, separated from the swords by dark wall",
+        "the steps descend from the slab toward the lower-left corner"
+      ],
+      "visualTensions": [
+        "the figure's small, contained gesture against the large dark room",
+        "the upright blades above versus the laid-down blade below"
+      ],
+      "deckSpecificMotifs": [
+        "gothic arched niches and tracery",
+        "aged, cracked stone texture",
+        "engraved-style monochrome rendering",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "a deliberate stop in activity",
+        "stillness held inside an enclosed space",
+        "attention turned to tending the body rather than to action"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the pale strip is bandage or torn garment",
+      "exact number of steps visible at lower left"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 2,
+    "runtimeProjectionBytes": 798
+  },
+  "review-313": {
+    "reviewId": "review-313",
+    "existingSemantic": {
+      "scene": "A crowned, dark-robed figure stands in a shadowed stone interior, driving a sword point-down into a torn document on a stone slab while his other hand holds open an iron gate onto a storm-lit landscape.",
+      "keyObjects": [
+        "sword held point-down, its blade catching a bright highlight",
+        "torn paper or parchment sheet split by the blade",
+        "rectangular stone slab or altar with a carved butterfly on its front face",
+        "spiked iron gate held open at the right",
+        "spiked crown on the figure's head",
+        "heavy dark cloak with a jewelled clasp at the chest",
+        "stone-paved floor",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the slab sits in the lower foreground, in front of the figure",
+        "the open gate occupies the right third of the image, framing the exterior",
+        "the figure stands between the dark interior wall on the left and the gate on the right",
+        "the distant castle sits behind the gate, lower than the figure's head"
+      ],
+      "visualTensions": [
+        "the still, enclosed interior against the turbulent sky outside",
+        "the bright blade against the surrounding darkness",
+        "the intact sheet of paper against its clean tear"
+      ],
+      "deckSpecificMotifs": [
+        "carved butterfly emblem on the altar face",
+        "spiked iron gate with spear-tipped finials",
+        "gothic spire skyline",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "emphasizedAspects": [
+        "a decision fixed and made visible, pinned to the page",
+        "authority exercised from a still, unreadable stance",
+        "the boundary between an interior of rule and an outside world"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "whether the sheet is a single document or two overlapping sheets",
+      "the exact number of spikes on the crown",
+      "whether the butterfly is carved or inlaid"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 2,
+    "runtimeProjectionBytes": 863
+  },
+  "review-314": {
+    "reviewId": "review-314",
+    "existingSemantic": {
+      "scene": "A robed figure stands on a stone tower platform blowing a long horn toward a star-filled sky, while many smaller robed figures wade through dark water holding open tablets and scrolls.",
+      "keyObjects": [
+        "long horn with flared bell",
+        "open tablets and scrolls held by the figures",
+        "stone tower platform with arched niches",
+        "armillary sphere on a stand",
+        "small lantern on the platform edge",
+        "large studded chest in the foreground",
+        "small rowing boat with a lantern",
+        "concentric ring lines in the sky"
+      ],
+      "spatialRelations": [
+        "the horn-blower stands above and left of the wading crowd",
+        "the wading figures are spread across the water between the tower and the horizon",
+        "the chest sits in the foreground below the tower platform",
+        "the boat floats at the lower right, separate from the waders"
+      ],
+      "visualTensions": [
+        "the single elevated figure against the many figures below",
+        "warm lantern light against the cold blue expanse",
+        "stillness of the tower against the motion of the water"
+      ],
+      "deckSpecificMotifs": [
+        "constellation lines connecting star points",
+        "concentric celestial rings",
+        "small gold star points scattered across the sky",
+        "nebulae rendered in violet and blue haze"
+      ],
+      "emphasizedAspects": [
+        "a summons that calls for a response",
+        "everything being brought into view at once",
+        "a moment of accounting before a wide sky"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of wading figures",
+      "whether the spheres are moons or planets",
+      "whether the seated figures in the niches are distinct individuals",
+      "the precise shape of the horn's bell"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 0,
+    "runtimeProjectionBytes": 745
+  },
+  "review-315": {
+    "reviewId": "review-315",
+    "existingSemantic": {
+      "scene": "A woman sits on the edge of a bed in a rustic wooden room, face buried in her hands, while a rack of swords hangs on the wall behind her and daylight enters through a curtained window.",
+      "keyObjects": [
+        "wooden wall rack holding upright swords with dark blades and brass-toned hilts",
+        "bed with dark green coverlet and embroidered pillow",
+        "multi-paned window with pale curtain",
+        "potted ferns on the windowsill",
+        "small clay jug on a low table",
+        "lit candle stub on a dish",
+        "wicker baskets holding leafy plants",
+        "sprigs of fern and mushrooms in the border"
+      ],
+      "spatialRelations": [
+        "the sword rack occupies the upper-left wall, behind and above the seated woman",
+        "the window sits to the right of the woman, its light falling across her back and the bed",
+        "the low table with jug and candle sits in the lower-left foreground, in front of the bed",
+        "baskets of greenery flank the lower corners, one left and one right"
+      ],
+      "visualTensions": [
+        "bright sunlit window against the dim, close interior",
+        "the still, self-shielding posture against the ordered row of blades on the wall"
+      ],
+      "deckSpecificMotifs": [
+        "botanical border of ferns, hops and mushrooms",
+        "moss-and-wood-grain rustic interior",
+        "amber shafts of light through foliage",
+        "hand-drawn engraved linework"
+      ],
+      "emphasizedAspects": [
+        "sleepless night-time distress",
+        "the mind turned inward and hidden",
+        "a private, enclosed hour"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of swords on the wall rack, as several overlap and fade into shadow",
+      "whether the small dish object beside the candle is a second vessel or part of the candle holder"
+    ],
+    "modelConfidence": "high",
+    "maskedItemCount": 0,
+    "runtimeProjectionBytes": 805
+  },
+  "review-316": {
+    "reviewId": "review-316",
+    "existingSemantic": {
+      "scene": "A cloaked figure walks away from a tent encampment at night, carrying a bundle of swords, while two more swords stand upright on a table in the left foreground beneath a star-filled sky with a low sun over distant mountains.",
+      "keyObjects": [
+        "bundle of swords held against the figure's shoulder",
+        "two upright swords standing point-up in cylindrical holders on a table",
+        "wooden table draped with a star-patterned cloth",
+        "large dark tent with a circular chart-like emblem on its side",
+        "small lanterns on the ground near the tent",
+        "scattered small cylindrical weights or cups on the tabletop",
+        "shallow water channel running through the rocks",
+        "[MASKED REGION — 印刷文字带已遮蔽，本轮不审此条]"
+      ],
+      "spatialRelations": [
+        "the table with the two upright swords sits in the left foreground, in front of and below the tent",
+        "the figure occupies the centre-right, between the tent on the left and the water and mountains on the right",
+        "the tent rises on the left, its peak reaching roughly two-thirds of the image height",
+        "the low sun sits on the horizon at the right, behind the water and mountain ridge"
+      ],
+      "visualTensions": [
+        "the figure's body faces away while the head turns back toward the camp",
+        "the warm sunlit horizon sits directly behind the departing figure",
+        "the two abandoned upright swords on the table contrast with the carried bundle"
+      ],
+      "deckSpecificMotifs": [
+        "constellation lines connecting star points across the sky",
+        "faint circular astrological or orbital diagrams overlaid on the starfield",
+        "gold star points scattered across cloth, cloak and sky",
+        "ornate gold border with corner compass rosettes"
+      ],
+      "emphasizedAspects": [
+        "departure from a camp while carrying something away",
+        "a deliberate, unhurried exit rather than a confrontation",
+        "something left behind at the point of origin"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of swords in the carried bundle (appears to be five, possibly six)",
+      "whether the small pale disc upper-left is a moon or a planet",
+      "whether the small objects on the tabletop are weights, cups or candle stubs",
+      "whether the upright objects on the table are two swords or a sword and a similar blade"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 1,
+    "runtimeProjectionBytes": 969
+  },
+  "review-317": {
+    "reviewId": "review-317",
+    "existingSemantic": {
+      "scene": "Two cloaked figures sit in a wooden rowboat on dark water, one rowing, beneath a star-filled night sky with a low glow at the horizon and a small domed pavilion on the far shore.",
+      "keyObjects": [
+        "wooden rowboat with visible planking and ribs",
+        "long wooden oar held by the standing figure",
+        "upright sword blades set along both gunwales",
+        "star-and-constellation pattern on the seated figure's cloak",
+        "small domed pavilion on the far shore",
+        "gold star points scattered across the sky",
+        "faint circular orbital rings drawn in the sky",
+        "decorative gold border frame with corner compass motifs"
+      ],
+      "spatialRelations": [
+        "the boat occupies the lower centre, its bow toward the viewer",
+        "swords rise vertically on the left and right sides of the boat, framing the figures",
+        "the pavilion sits on the right shore at the level of the horizon glow",
+        "the Milky Way band runs diagonally from upper left down toward the horizon glow"
+      ],
+      "visualTensions": [
+        "small dark boat against an immense star field",
+        "warm horizon glow against the cold blue-violet sky",
+        "upright blades cutting the horizontal line of water and horizon"
+      ],
+      "deckSpecificMotifs": [
+        "constellation lines linking gold star points",
+        "faint concentric orbital rings around celestial bodies",
+        "star-patterned cloth on the seated figure",
+        "gold corner compass and arc motifs in the border"
+      ],
+      "emphasizedAspects": [
+        "a crossing in progress over dark water",
+        "the burden travelling with the travellers, carried upright in the boat",
+        "movement that is steady and unhurried rather than dramatic"
+      ]
+    },
+    "modelSelfReportedUncertainty": [
+      "exact number of sword blades visible, as some overlap the gunwales and figures",
+      "whether the pale spheres in the sky are moons or planets",
+      "whether the seated figure's cloak pattern is embroidered or painted stars"
+    ],
+    "modelConfidence": "medium",
+    "maskedItemCount": 0,
+    "runtimeProjectionBytes": 790
+  }
+}

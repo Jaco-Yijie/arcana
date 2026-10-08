@@ -1,0 +1,250 @@
+{
+  "reviewId": "review-006",
+  "blindImage": "qa/visual-semantics/blind-review/review-006.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/pilot/reveal/review-006.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "two swords held upright by the kneeling figure",
+          "observed": "count not establishable — two hilts resolvable, blade group may be two or three",
+          "evidence": "Two cross-guards and two pommels are individually separable at the top of the bundle, but below the guards the blade shapes overlap against the figure's knee and cloak; I could resolve at least two blade edges and possibly a third. I did not establish a different number, only that the number is not establishable from the pixels. (The two blades lying on the ground ARE reliably two and that line is correct.)",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two swords held upright by the kneeling figure",
+            "with": "at least two swords held upright by the kneeling figure (a third may be present in the overlapping bundle)"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-006",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left foreground, occupying the left third",
+              "posture": "kneeling on the left knee with the right knee raised, torso leaning forward and down",
+              "gaze": "downward, eyes lowered toward the blades / the ground in front of the knee",
+              "heldObjects": [
+                "a gathered bundle of upright blades, gripped with both hands — the right hand around the grips at chest height, the left hand steadying the blades lower down"
+              ],
+              "clothing": "hooded green-grey cloak over a pale undershirt, layered ragged tunic, leather pouch at the hip, wrapped boots; dark tousled hair"
+            },
+            {
+              "position": "middle distance, right of center, standing on the path",
+              "posture": "standing/walking away from the viewer, body turned three-quarters away, cloak blowing to the left",
+              "gaze": "away from the viewer, up the path (head turned slightly so a sliver of profile shows)",
+              "heldObjects": [
+                "none resolvable"
+              ],
+              "clothing": "long hooded travelling cloak, belt with a hanging satchel; rendered soft and hazy"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword/blade held upright by the kneeling figure",
+              "count": null,
+              "countConfidence": "low",
+              "where": "clustered vertically against the kneeling figure's chest and right knee; two cross-guards and two pommels are individually resolvable at the top, but the blade shapes below overlap and may be two or three"
+            },
+            {
+              "type": "sword/blade lying on the wet ground",
+              "count": 2,
+              "countConfidence": "medium-high",
+              "where": "lower-center foreground in the mud and standing water — one running from upper-right to lower-left with its point at the left, and a second below it, roughly parallel, its point toward the bottom-left; the two overlap near the hilt of the lower one"
+            },
+            {
+              "type": "mushroom/toadstool",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "bottom-left corner on the painted border — a cluster of two larger caps plus one small one; a further pale cap sits at bottom-center-right"
+            },
+            {
+              "type": "loose leaf blowing in the air",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered mid-air above and around the distant figure, upper-right quadrant"
+            },
+            {
+              "type": "butterfly or moth",
+              "count": 1,
+              "countConfidence": "low",
+              "where": "top-right corner, sitting on the painted border ornament"
+            }
+          ],
+          "environment": [
+            "dense temperate forest of slim straight trunks receding into haze",
+            "a narrow muddy footpath running from bottom-center into the depth of the frame",
+            "standing water and puddles along the path, reflecting the sky",
+            "ferns and broadleaf undergrowth on both banks",
+            "fallen brown leaves over the ground",
+            "a painted ornamental border of vines, ferns and mushrooms framing all four sides"
+          ],
+          "lightSources": [
+            "diffuse bright daylight from the top-center/upper-right, behind the trees, creating a pale glow at the vanishing point of the path"
+          ],
+          "moonPhase": "not applicable — no moon or sun disc visible",
+          "spatialRelations": [
+            "the kneeling figure is in the near foreground at left; the walking figure is far up the same path at the right, much smaller and hazier",
+            "the two ground blades lie between the two figures in depth, nearer the viewer than the walking figure",
+            "the kneeling figure faces down and left, away from the departing figure; he does not look at her",
+            "the path physically connects both figures and both ground blades"
+          ],
+          "foreground": [
+            "kneeling figure and the bundle of upright blades",
+            "two blades lying in the mud and water",
+            "wet leaf litter, ferns, mushrooms on the border"
+          ],
+          "background": [
+            "receding forest trunks",
+            "the walking cloaked figure",
+            "bright hazy light at the end of the path"
+          ],
+          "palette": "muted greens, olive, grey-brown, pale cream light"
+        },
+        "uncertainObservations": [
+          "The number of blades held by the kneeling figure cannot be resolved: two hilts are clearly separate, but the overlapping blades below could belong to two or three weapons. I am not stating a number.",
+          "The total number of blades in the frame is therefore also indeterminate; I can only say 'two on the ground plus at least two held'.",
+          "The distant figure's sex, face and whether anything is carried in the hands are not resolvable at that scale.",
+          "The small pale caps at bottom-center-right may be mushrooms or pale flowers.",
+          "Whether the kneeling figure's eyes are open or closed cannot be determined."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "two swords held upright by the kneeling figure",
+          "observed": "held-blade count not establishable — two pommels and crossguards are clearly resolvable above the hands, but the overlapping blade edges below the grip may be two or three",
+          "evidence": "The blades below the hands overlap and are partly crossed by the cloak edge; I could not separate them one by one, so I recorded no count. The two grounded swords in the foreground are confirmed at two.",
+          "confidence": "low"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "small shoulder satchel on the departing figure",
+          "observed": "a dark shape at the departing figure's hip could be a pouch or bag, but at that scale and in that haze it cannot be confirmed as a satchel",
+          "evidence": "The departing figure is small, back-turned and veiled in mist; I recorded their carried items as indeterminate.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two swords held upright by the kneeling figure",
+            "with": "swords held upright by the kneeling figure (two hilts clearly visible; exact blade count obscured)"
+          },
+          {
+            "find": "small shoulder satchel on the departing figure",
+            "with": "a small bag or pouch at the departing figure's hip (indistinct)"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-006",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left foreground, large in frame",
+              "posture": "kneeling on one knee on the forest floor, torso bent forward over the objects in the hands",
+              "gaze": "downward, head bowed toward the blades held in front of the body",
+              "heldObjects": [
+                "upright sword-like blades, gripped point-down in front of the chest with both hands"
+              ],
+              "notes": "dark tousled hair, layered green cloak and hood pushed back, worn tunic, pouches at the belt, boots"
+            },
+            {
+              "position": "middle distance, right of center, on the path",
+              "posture": "standing/walking away from the viewer down the path",
+              "gaze": "away from viewer, up the path",
+              "heldObjects": [
+                "indeterminate — one arm is held out slightly from the body; nothing clearly resolvable"
+              ],
+              "notes": "long cloak or tattered wrap, smaller and hazier than the foreground figure"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword lying flat on the ground",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "lower center foreground, on the wet muddy path, lying roughly parallel and pointing toward the lower left; each has a visible crossguard and hilt at the upper right end"
+            },
+            {
+              "type": "sword held by the kneeling figure",
+              "count": null,
+              "countConfidence": "low",
+              "where": "held vertically, blades down, in front of the kneeling figure's chest; two distinct hilts and crossguards are clearly resolvable at different heights, and the blade cluster below the hands may contain a third edge"
+            },
+            {
+              "type": "mushroom",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a cluster of pale caps at the bottom left corner and a second cluster at the bottom right corner"
+            },
+            {
+              "type": "falling leaf drifting in the air",
+              "count": null,
+              "countConfidence": "low",
+              "where": "a scatter of small dark leaf shapes in the upper right against the bright background"
+            }
+          ],
+          "environment": [
+            "dense forest of tall straight trunks",
+            "ferns and low green undergrowth on both sides",
+            "a narrow muddy path with standing water and puddles running from the foreground into the distance",
+            "fallen leaves on the ground",
+            "a drawn vine-and-leaf decorative border around the whole image"
+          ],
+          "lightSources": [
+            "bright diffuse daylight from the far end of the path, upper center-right, glowing through the trees"
+          ],
+          "spatialRelations": [
+            "the kneeling figure is at the near end of the path on its left side; the walking figure is far down the same path, smaller and partly veiled in haze",
+            "the two grounded swords lie on the path between the viewer and the kneeling figure, below and to the right of the kneeling figure",
+            "the kneeling figure faces down and away from the receding figure, not toward them",
+            "the light source is directly behind the receding figure, silhouetting them"
+          ],
+          "foreground": [
+            "the kneeling figure and held blades",
+            "two swords on the wet path",
+            "mushrooms",
+            "fallen leaves",
+            "ferns"
+          ],
+          "background": [
+            "the walking figure",
+            "tree trunks",
+            "bright hazy light at the end of the path"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of blades in the kneeling figure's hands is NOT reliably countable: two hilts are clear, but the overlapping blades below the grip could be two or three — recorded as null rather than guessed",
+          "whether the receding figure carries anything cannot be determined",
+          "the receding figure's build, and therefore any relation to the kneeling figure, is not determinable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

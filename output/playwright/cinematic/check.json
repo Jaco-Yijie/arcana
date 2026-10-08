@@ -1,0 +1,83 @@
+[
+  {
+    "switching": 4,
+    "locking": true,
+    "lazyLoading": true,
+    "realCards": true
+  },
+  {
+    "failedSelection": "preserves current deck",
+    "retry": true
+  },
+  {
+    "width": 375,
+    "locale": "zh-CN",
+    "overflow": false,
+    "menu": true,
+    "cta": true
+  },
+  {
+    "width": 375,
+    "locale": "en-US",
+    "overflow": false,
+    "menu": true,
+    "cta": true
+  },
+  {
+    "width": 390,
+    "locale": "zh-CN",
+    "overflow": false,
+    "menu": true,
+    "cta": true
+  },
+  {
+    "width": 390,
+    "locale": "en-US",
+    "overflow": false,
+    "menu": true,
+    "cta": true
+  },
+  {
+    "width": 430,
+    "locale": "zh-CN",
+    "overflow": false,
+    "menu": true,
+    "cta": true
+  },
+  {
+    "width": 430,
+    "locale": "en-US",
+    "overflow": false,
+    "menu": true,
+    "cta": true
+  },
+  {
+    "reducedMotion": "static depth and brief crossfade"
+  },
+  {
+    "initialMediaFailure": "decorative fallback, functional CTA"
+  },
+  {
+    "liveLanguageSwitch": true
+  },
+  {
+    "path": "/spread",
+    "world": "legacy-forest",
+    "frozen": false
+  },
+  {
+    "path": "/table/shuffle",
+    "world": "legacy-classic",
+    "frozen": true
+  },
+  {
+    "path": "/table/draw",
+    "world": "legacy-classic",
+    "frozen": true
+  },
+  {
+    "path": "/reading",
+    "world": "legacy-classic",
+    "frozen": true
+  }
+]

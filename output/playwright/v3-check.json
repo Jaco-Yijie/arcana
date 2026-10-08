@@ -1,0 +1,63 @@
+{
+  "result": [
+    {
+      "route": "home",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "route": "home",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "route": "home",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "route": "home",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "route": "reading",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "route": "reading",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "route": "reading",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "route": "reading",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "route": "share",
+      "width": 360,
+      "overflow": false
+    },
+    {
+      "route": "share",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "route": "cover",
+      "width": 360,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "keyboardToggle": "passed",
+  "quote": "passed",
+  "reducedMotion": true
+}

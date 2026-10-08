@@ -1,0 +1,287 @@
+{
+  "reviewId": "review-506",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-506.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: corrected vs uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 1,
+    "uncertain": 1
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-506.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "nine swords mounted horizontally on the wall",
+          "observed": "盲观察记录：墙上水平排列的剑我上下数了两遍都是 8 把（剑柄朝 viewer-left、剑尖朝 viewer-right，等距堆叠成一列）。复看图像核实我当初记下的这个疑点后，自上缘到人物头发处仍只能数出 8 个剑柄，最下面一把之下是床栏与藤蔓装饰，没有第 9 把",
+          "evidence": "左侧墙面上的剑柄十字护手自上而下等距出现 8 次；最上一把紧贴边框、最下一把恰在人物发顶上方，其下即为金属床栏卷草纹",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "nine swords mounted horizontally on the wall",
+            "with": "eight swords mounted horizontally on the wall"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-506",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "画面中部偏左，坐在一张床上",
+              "posture": "坐姿，上身前倾，含胸驼背，双肘向前并拢；身体朝向 viewer-right",
+              "gaze": "低头，整张脸埋在双手掌心里，看不见面部与视线方向",
+              "heldObjects": [
+                "双手抬到脸部高度，手掌捂住整个面部；手中没有拿任何器物"
+              ],
+              "clothing": "白色/极浅的薄纱睡裙，领口宽大露出肩颈，袖口有蕾丝；银白色长发披散到腰部"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 8,
+              "countConfidence": "high",
+              "where": "画面 viewer-left 的墙面上，自画面上缘一直排到人物头部后方",
+              "orientation": "全部水平，剑柄朝 viewer-left，剑尖朝 viewer-right",
+              "arrangement": "上下等距堆叠成一列，像挂在墙上的陈列架"
+            },
+            {
+              "type": "bed",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面下半部，人物坐在上面",
+              "orientation": "床头朝 viewer-left，床面向 viewer-right 下方铺开",
+              "arrangement": "单张，铺着淡蓝紫色被褥与白色床单，左侧有一个白色枕头"
+            },
+            {
+              "type": "bedpost with finial",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面右下，床的 viewer-right 一角",
+              "orientation": "竖直柱身，顶端一个球形饰头",
+              "arrangement": "单根，连着带卷草纹的金属床栏"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面右下角，床边地面/台面上",
+              "orientation": "六角形灯笼，立放",
+              "arrangement": "单盏，内有暖黄色火焰"
+            },
+            {
+              "type": "full moon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面右上角，窗外天空中",
+              "orientation": "完整圆盘，表面可见环形山斑纹",
+              "arrangement": "单个，周围有云"
+            },
+            {
+              "type": "white flower",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面左下角，床边",
+              "orientation": "花朵朝向不一",
+              "arrangement": "一丛，花朵与叶片交叠数不清"
+            },
+            {
+              "type": "balustrade",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "画面 viewer-right 中部，窗外/阳台上",
+              "orientation": "水平栏杆，带竖直栏柱",
+              "arrangement": "一段"
+            }
+          ],
+          "environment": [
+            "夜晚的室内卧房，极浅的白、淡蓝、淡紫水彩调",
+            "viewer-left 是挂满剑的墙面，墙上爬着细碎的藤蔓与小花",
+            "viewer-right 是一处敞开的大窗/落地门，垂着白色薄纱帘",
+            "窗外可见栏杆、远处的海湾或湖面与淡蓝色山丘剪影",
+            "窗外天空有云，右上角悬着满月",
+            "床上铺着层层叠叠的淡蓝紫色被褥与白纱",
+            "画面四周有浅色细线边框，四角有藤蔓状角饰"
+          ],
+          "lightSources": [
+            "右上角的满月（冷光，画面主光源）",
+            "右下角灯笼内的暖黄火焰",
+            "窗外天空的弥散微光"
+          ],
+          "moonPhase": "full — 完整圆盘，盘面可见深浅斑纹，位于画面右上角窗外，周围环绕云层",
+          "spatialRelations": [
+            "成排的剑在人物的 viewer-left 后上方墙面上，剑尖全部指向人物所在的 viewer-right 方向",
+            "人物坐在床中部偏左，被褥向 viewer-right 下方铺展",
+            "枕头在人物的 viewer-left 侧",
+            "窗与月亮在人物的 viewer-right 上方",
+            "灯笼与床柱在人物的 viewer-right 下方前景",
+            "白色花丛在人物的 viewer-left 下方前景",
+            "栏杆与远景水面在窗外、人物的 viewer-right 后方"
+          ],
+          "foreground": [
+            "右下角的灯笼、床柱与金属床栏",
+            "左下角的白色花丛与叶簇",
+            "床前垂落的被褥与白纱"
+          ],
+          "background": [
+            "挂满剑的墙面与墙上藤蔓",
+            "敞开的窗、纱帘与栏杆",
+            "窗外的水面、远山、云与满月"
+          ]
+        },
+        "uncertainObservations": [
+          "墙上剑的数量我上下数了两遍都是 8 把，但最下面一把紧贴人物头发、最上面一把紧贴画面上缘，若上下还有被截断或被遮的，我无法确认",
+          "人物的面部完全被双手遮住，表情、年龄、性别都无法判断（只能从体态与发型粗分）",
+          "床左侧浅色块到底是枕头、靠垫还是堆起的被褥，分辨不出",
+          "窗外远景是海、湖还是云海，分辨不出",
+          "左下角白色花朵的种类（像白蔷薇或白芍药）分辨不出，数量也数不清",
+          "墙面上的细碎纹样是真实藤蔓还是壁纸图案，分辨不出",
+          "灯笼是立在地面、矮柜还是床头台上，被纱幔挡住看不清"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "nine swords mounted horizontally on the wall",
+          "observed": "墙上可见并可清点的剑是 8 把，沿竖直导轨等间距排成一列；最下面那把完全露出、其下方没有再出现剑身，所以「最下几把被头发遮住」这个数到 9 的理由与观察不符。唯一无法排除的是画面最上缘之外是否还有被截断／被遮蔽带盖住的一把，这一处无法判定，所以不敢断言 9 一定错",
+          "evidence": "盲观察记录：objects.sword count = 8、countConfidence = high，并在 uncertainObservations 里写明「竖直导轨还继续向画面最上缘延伸，顶端是否还有被画幅边缘截断的第 9 把无法确认」。复核这一条已记录的疑点时，最下一把剑下方只有床与头发，没有第 9 把",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-506",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center 偏 viewer-left 下方，坐在床上",
+              "posture": "坐姿，上半身直起并前倾，侧面朝向 viewer-right，双腿被床褥盖住看不见",
+              "gaze": "低头，脸完全被双手捂住，看不到眼睛与视线方向",
+              "heldObjects": [
+                "双手同时捂住自己的脸，手肘向前支在膝上方，手掌高度在面部"
+              ],
+              "clothing": "极长的银白色长发披散到腰以下；白色半透明薄纱长裙，露肩款，肩口与袖口有细密蕾丝"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 8,
+              "countConfidence": "high",
+              "where": "画面 viewer-left 的墙面上，占据左半边从上缘到约画面四成高处",
+              "orientation": "全部水平横置，剑尖朝 viewer-right，剑柄朝 viewer-left",
+              "arrangement": "沿一条竖直的装饰导轨自上而下等间距排成一列，共 8 层"
+            },
+            {
+              "type": "bed",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "占据画面下半部，从 viewer-left 延伸到 viewer-right 下角",
+              "orientation": "床头在 viewer-left，人物坐在床上面向 viewer-right",
+              "arrangement": "单个，上面堆着枕头与层层褶皱的浅紫／白色床品"
+            },
+            {
+              "type": "bedpost finial",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "画面 viewer-right 下部",
+              "orientation": "竖直立柱，顶端是球形雕饰",
+              "arrangement": "单个"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面 viewer-right 最下方，地面上",
+              "orientation": "竖直摆放的六角提灯，内部点着一簇暖黄火光",
+              "arrangement": "单个"
+            },
+            {
+              "type": "window",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面 viewer-right，一道从上缘贯通到下部的高窄开口",
+              "orientation": "竖直的拱形／长方形开口，外接阳台",
+              "arrangement": "单个"
+            },
+            {
+              "type": "balustrade",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "窗外的阳台上，画面 viewer-right 中部偏下",
+              "orientation": "水平栏杆，带一排车削的宝瓶柱",
+              "arrangement": "一道连续栏杆"
+            },
+            {
+              "type": "flower",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面 viewer-left 下角",
+              "orientation": "花头朝上／朝 viewer-right",
+              "arrangement": "一丛白色与淡紫色的花与枝叶"
+            }
+          ],
+          "environment": [
+            "室内卧室，墙上有浅浮雕线脚",
+            "窗口垂着大片半透明纱帘，帘子一直拖到床上",
+            "墙面与窗框上攀着细藤蔓",
+            "窗外是夜空、海湾水面与远处山影",
+            "远处海岸线上有几点橙色灯火，在水面上拉出倒影"
+          ],
+          "lightSources": [
+            "画面 viewer-right 上方的满月（冷白色，画面主光源）",
+            "画面 viewer-right 下方地面上的提灯（暖黄色）",
+            "窗外远岸的几点橙色灯火"
+          ],
+          "moonPhase": "full",
+          "spatialRelations": [
+            "8 把剑排成的那一列在人物的 viewer-left 上方，正悬在她头部与背部的后上方",
+            "满月在人物的 viewer-right 上方，隔着窗口",
+            "提灯在人物的 viewer-right 下方，位置最低",
+            "海面与远岸在窗外、位于栏杆之上",
+            "花丛在人物的 viewer-left 下方、床沿之外",
+            "人物低头的朝向与窗／月亮同在 viewer-right 一侧"
+          ],
+          "foreground": [
+            "床褥与层叠的纱织物",
+            "viewer-left 下角的花丛",
+            "viewer-right 下角的提灯与床柱"
+          ],
+          "background": [
+            "挂满剑的墙面",
+            "窗外的满月与夜空",
+            "海湾、远岸灯火与山影"
+          ]
+        },
+        "uncertainObservations": [
+          "墙上那一列剑清点为 8 把；竖直导轨还继续向画面最上缘延伸，顶端是否还有被画幅边缘截断的第 9 把无法确认",
+          "人物脸被双手完全遮住，表情与视线方向完全无法观察",
+          "无法判断人物是跪坐还是盘坐，下半身被床品遮住",
+          "画面 viewer-right 下方那根带球形顶的立柱判断为床柱，但也可能是别的立柱，不敢肯定",
+          "viewer-left 下角花丛的花种分辨不出",
+          "窗外水体是海还是大型湖泊，分辨不出"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

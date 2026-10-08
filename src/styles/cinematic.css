@@ -1,0 +1,98 @@
+:root { --motion-crossfade: 1000ms; --motion-hero-enter: 1200ms; }
+.cinematic-home { max-width: none; padding-inline: clamp(1.25rem, 5vw, 6rem); --cinema-pointer-x: 0; --cinema-pointer-y: 0; background: var(--cinema-base); }
+.cinema-worlds { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.cinematic-world { position: absolute; inset: 0; overflow: hidden; isolation: isolate; pointer-events: none; background: var(--cinema-base); }
+.cinema-fallback { position: absolute; inset: 0; background: radial-gradient(ellipse at 25% 40%, var(--cinema-light), var(--cinema-base) 75%); }
+.cinema-fallback > .world-signature { opacity: .28; }
+.cinema-background, .cinema-foreground { position: absolute; inset: -2%; transition: transform 220ms ease-out; }
+.cinema-background { transform: translate3d(calc(var(--cinema-pointer-x, 0) * var(--cinema-background-depth)), calc(var(--cinema-pointer-y, 0) * var(--cinema-background-depth)), 0); }
+.cinema-foreground { transform: translate3d(calc(var(--cinema-pointer-x, 0) * var(--cinema-foreground-depth)), calc(var(--cinema-pointer-y, 0) * var(--cinema-foreground-depth)), 0); }
+.cinema-media, .cinema-overlay { width: 100%; height: 100%; object-fit: cover; object-position: 35% center; }
+.cinema-light { position: absolute; inset: 0; background: radial-gradient(ellipse at 28% 42%, color-mix(in srgb, var(--cinema-light) 22%, transparent), transparent 55%); mix-blend-mode: screen; }
+.cinema-overlay { animation-duration: var(--motion-atmosphere); animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate; }
+.cinematic-world[data-motion='float'] .cinema-overlay { animation-name: cinema-veil; }
+.cinematic-world[data-motion='orbit'] .cinema-overlay { animation-name: cinema-orbit; transform-origin: 26% 52%; }
+.cinematic-world[data-motion='tide'] .cinema-overlay { animation-name: cinema-tide; }
+.cinematic-world[data-motion='sway'] .cinema-overlay { animation-name: cinema-sway; transform-origin: bottom; }
+.cinematic-world[data-motion='breathe'] .cinema-overlay { animation-name: cinema-breathe; }
+.cinema-texture { position: absolute; inset: 0; opacity: .09; background-image: url('/assets/identity/paper-grain.svg'); }
+.cinematic-world[data-texture='engraving'] .cinema-texture { background-image: repeating-linear-gradient(115deg, transparent 0 6px, var(--cinema-accent) 6px 6.4px); opacity: .025; }
+.cinematic-world[data-texture='water'] .cinema-texture { background-image: repeating-radial-gradient(ellipse at 25% 80%, transparent 0 40px, var(--cinema-accent) 41px, transparent 42px); opacity: .035; }
+.cinematic-world[data-texture='fibres'] .cinema-texture { background-image: repeating-linear-gradient(88deg, transparent 0 17px, var(--cinema-accent) 17px 17.5px); opacity: .035; }
+.cinema-shade { position: absolute; inset: 0; background: linear-gradient(90deg, transparent 35%, color-mix(in srgb, var(--cinema-base) 50%, transparent) 100%), linear-gradient(0deg, var(--cinema-base), transparent 28%, transparent 85%, color-mix(in srgb, var(--cinema-base) 40%, transparent)); }
+.cinema-incoming { animation: cinema-arrive var(--motion-crossfade) cubic-bezier(.4,0,.2,1) both; }
+.cinema-outgoing { animation: cinema-depart var(--motion-crossfade) cubic-bezier(.4,0,.2,1) both; }
+.cinematic-home .home-hero { width: 100%; max-width: 86rem; margin-inline: auto; min-height: min(760px, calc(100svh - 17rem)); }
+.cinema-card-stack { display: grid; min-width: 0; perspective: 1200px; }
+.cinema-card-layer { grid-area: 1 / 1; min-width: 0; }
+.cinematic-home .hero-card-stage { animation: none; min-height: clamp(22rem, 40vw, 35rem); }
+.cinematic-home .hero-card-stage::before, .cinematic-home .hero-card-stage > .ritual-scene { display: none; }
+.cinematic-home .hero-depth-plane { transform: translate3d(calc(var(--cinema-pointer-x, 0) * var(--cinema-card-depth)), calc(var(--cinema-pointer-y, 0) * var(--cinema-card-depth)), 0) rotateX(var(--depth-x, 0deg)) rotateY(var(--depth-y, 0deg)); }
+.cinematic-home .hero-card-entry { animation: none; opacity: 1; }
+.cinematic-home .hero-card-float { animation: cinema-float var(--motion-card-float) ease-in-out infinite alternate; animation-delay: calc(var(--card-index) * -2s); filter: drop-shadow(0 28px 18px color-mix(in srgb, var(--cinema-base) 70%, transparent)); }
+.cinematic-home [data-motion='orbit'] .hero-card-float { animation-name: cinema-card-orbit; }
+.cinematic-home [data-motion='tide'] .hero-card-float { animation-name: cinema-card-tide; }
+.cinematic-home [data-motion='sway'] .hero-card-float { animation-name: cinema-card-sway; }
+.cinematic-home [data-motion='still'] .hero-card-float { animation: none; }
+.cinematic-home [data-motion='breathe'] .hero-card-float { animation-name: cinema-card-breathe; }
+.cinematic-home .hero-card-float::before { display: none; }
+.cinematic-home .hero-brand-letter, .cinematic-home .hero-copy > .eyebrow, .cinematic-home .hero-tagline, .cinematic-home .hero-rule, .cinematic-home .hero-sigil { animation: none; opacity: 1; transform: none; }
+.cinematic-home .hero-copy { animation: none; padding-block: 2rem; }
+.cinematic-home .hero-brand { animation: none; filter: none; text-shadow: 0 2px 35px color-mix(in srgb, var(--cinema-accent) 18%, transparent); }
+.cinematic-home .site-navigation { position: relative; z-index: 40; margin-top: 1.2rem; padding: .8rem 1.1rem; border: 1px solid color-mix(in srgb, var(--cinema-accent) 19%, transparent); border-radius: 1rem; background: color-mix(in srgb, var(--cinema-base) 65%, transparent); backdrop-filter: blur(4px); box-shadow: inset 0 1px 0 color-mix(in srgb, var(--cinema-accent) 12%, transparent); }
+.cinematic-home .site-nav-panel { background: color-mix(in srgb, var(--cinema-base) 97%, var(--cinema-accent)); }
+.cinema-switcher { position: relative; width: min(100%, 86rem); margin: 0 auto 1.5rem; padding-block: 1.1rem; border-top: 1px solid color-mix(in srgb, var(--cinema-accent) 25%, transparent); }
+.cinema-switcher-heading { display: flex; justify-content: space-between; gap: 1rem; font-family: var(--font-ui); font-size: .75rem; letter-spacing: .1em; color: var(--color-text-mid); margin-bottom: 1rem; }
+.cinema-switcher-heading [role='status'] { font-family: var(--font-body); letter-spacing: .02em; }
+.cinema-deck-list { display: flex; gap: .5rem; overflow-x: auto; padding: .2rem .15rem .65rem; scrollbar-width: thin; scrollbar-color: var(--cinema-light) transparent; }
+.cinema-deck-option { display: flex; align-items: center; justify-content: center; gap: .55rem; flex: 1 0 auto; min-height: 3rem; padding: .65rem .9rem; border: 1px solid transparent; border-radius: .5rem; background: transparent; color: var(--color-text-mid); font-family: var(--font-display); font-size: .83rem; letter-spacing: .035em; cursor: pointer; }
+.cinema-deck-option small { display: block; font-family: var(--font-body); font-size: .62rem; letter-spacing: 0; margin-top: .1rem; }
+.cinema-deck-option[aria-pressed='true'] { color: var(--option-accent); border-color: color-mix(in srgb, var(--option-accent) 55%, transparent); background: color-mix(in srgb, var(--option-accent) 8%, transparent); }
+.cinema-deck-option:hover:not(:disabled) { background: color-mix(in srgb, var(--option-accent) 10%, transparent); }
+.cinema-deck-option:disabled { cursor: default; opacity: .5; }
+.cinema-deck-option[aria-pressed='true']:disabled { opacity: 1; }
+.cinema-deck-option:focus-visible { outline: 2px solid var(--option-accent); outline-offset: 2px; }
+.cinematic-atmosphere > :not(.cinematic-world) { display: none; }
+.cinematic-world[data-mode='table'] .cinema-media { opacity: .65; }
+.cinematic-world[data-mode='table'] .cinema-overlay { opacity: .65; animation-duration: calc(var(--motion-atmosphere) * 1.5); }
+.cinematic-world[data-mode='reading'] .cinema-media { opacity: .24; }
+.cinematic-world[data-mode='reading'] .cinema-foreground { opacity: .22; }
+.cinematic-world[data-mode='reading'] .cinema-overlay { animation-duration: calc(var(--motion-atmosphere) * 4); }
+.cinematic-world[data-mode='reading'] .cinema-light { opacity: .2; }
+.cinematic-world[data-mode='reading'] .cinema-fallback { background: var(--cinema-base); }
+.cinematic-world[data-mode='reading'] .cinema-fallback > * { opacity: .04; }
+@keyframes cinema-arrive { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cinema-depart { from { opacity: 1; } to { opacity: 0; } }
+@keyframes cinema-veil { from { transform: translate3d(-1%, 1%, 0); } to { transform: translate3d(1%, -1%, 0); } }
+@keyframes cinema-orbit { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+@keyframes cinema-tide { from { transform: translateY(1%) scaleX(.98); } to { transform: translateY(-1%) scaleX(1.02); } }
+@keyframes cinema-sway { from { transform: rotate(-1deg); } to { transform: rotate(1deg); } }
+@keyframes cinema-breathe { from { opacity: .48; } to { opacity: .85; } }
+@keyframes cinema-float { to { transform: translate3d(0,-12px,12px) rotateX(2deg); } }
+@keyframes cinema-card-orbit { from { transform: rotateY(-3deg); } to { transform: rotateY(3deg) translateZ(8px); } }
+@keyframes cinema-card-tide { to { transform: translate3d(4px,-7px,9px) rotateZ(1deg); } }
+@keyframes cinema-card-sway { from { transform: rotateZ(-1.3deg); } to { transform: rotateZ(1.3deg) translateY(-6px); } }
+@keyframes cinema-card-breathe { to { transform: translateZ(12px) scale(1.012); } }
+@media (max-width: 767px), (pointer: coarse) {
+  .cinematic-home { padding-inline: 1.25rem; }
+  .cinematic-home .site-navigation { margin-top: .6rem; backdrop-filter: none; }
+  .cinematic-home .home-hero { gap: 0; padding-block: 1rem 2rem; min-height: auto; }
+  .cinematic-home .hero-card-stage { min-height: 19rem; }
+  .cinematic-home .hero-copy { padding-top: 0; padding-bottom: 0; }
+  .cinematic-home .hero-depth-plane { transform: none; transition: none; }
+  .cinematic-home .hero-card-float { animation: none; filter: none; }
+  .cinema-background, .cinema-foreground { transform: none; transition: none; }
+  .cinema-media, .cinema-overlay { object-position: 27% center; }
+  .cinema-shade { background: linear-gradient(0deg, var(--cinema-base) 12%, transparent 80%); }
+  .cinema-foreground { opacity: .6; }
+  .cinema-light { display: none; }
+  .cinema-switcher-heading { flex-direction: column; gap: .4rem; }
+  .cinema-deck-option { min-height: 3.25rem; }
+}
+@media (prefers-reduced-motion: reduce), (update: slow) {
+  :root { --motion-crossfade: 180ms; }
+  .cinematic-world *, .cinematic-home .hero-card-float { animation: none !important; }
+  .cinematic-home .hero-depth-plane, .cinema-background, .cinema-foreground { transform: none; transition: none; }
+  .cinematic-home .cinema-incoming { animation: cinema-arrive 180ms ease both !important; }
+  .cinematic-home .cinema-outgoing { animation: cinema-depart 180ms ease both !important; }
+}

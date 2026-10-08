@@ -1,0 +1,336 @@
+{
+  "reviewId": "review-407",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-407.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs uncertain"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 1,
+    "uncertain": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-407.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-407",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center, slightly left of center, lower half of frame",
+              "posture": "standing upright, barefoot, weight on both feet, back turned to the viewer",
+              "gaze": "head faces away from viewer, toward the wall of niches; face not visible",
+              "heldObjects": [
+                "nothing gripped; right arm raised high toward the top-left niche with open hand, left arm extended forward-right so the hand touches/reaches into a lower niche holding a draped cloth"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "arched wall niche",
+              "count": 7,
+              "countConfidence": "high",
+              "where": "cut into the dark stone wall; 4 in the upper row, 3 visible in the lower row",
+              "orientation": "arched tops, all openings facing the viewer",
+              "arrangement": "two horizontal rows. Upper row of 4 is evenly spaced across the full width. Lower row is NOT evenly spaced: one niche at far left, then a wide gap where the standing figure's body blocks the wall, then two niches right of the figure. The gap behind the figure is wide enough to hide a probable eighth niche."
+            },
+            {
+              "type": "footed goblet / chalice",
+              "count": 7,
+              "countConfidence": "medium",
+              "where": "one seated inside each visible niche",
+              "orientation": "all upright, standing on their bases, bowls opening upward",
+              "arrangement": "same two-row layout as the niches: 4 across the top, 3 across the bottom with a gap at the lower-center where the figure stands"
+            },
+            {
+              "type": "object rising out of / resting in each goblet",
+              "count": 7,
+              "countConfidence": "medium",
+              "where": "upper row left-to-right: a coiled serpentine shape; a small crenellated tower/turret shape; a crown; a spray of leaves/palm frond. Lower row left-to-right: a key-like shape with a looped bow; a hanging draped cloth (the one the figure's hand is at); an open oval ring or wreath",
+              "orientation": "each sits vertically above the cup mouth",
+              "arrangement": "one per cup"
+            }
+          ],
+          "environment": [
+            "dark stone / masonry wall filling most of the frame",
+            "stone paved floor in the lower portion",
+            "interior, no sky visible",
+            "painted border lines at the left and right edges of the card"
+          ],
+          "lightSources": [
+            "no light source is visible in frame; a faint diffuse glow falls from the upper left and a pale patch of light lies on the floor behind the figure's feet"
+          ],
+          "moonPhase": "not applicable - no moon or sky visible",
+          "spatialRelations": [
+            "the figure stands with its back fully to the viewer, facing into the wall",
+            "the raised arm reaches up and to the left, hand near the leftmost upper niche but not touching the cup",
+            "the lowered arm reaches right, hand at the cloth-draped cup in the lower row",
+            "the figure's torso occupies the horizontal gap between the lower-left niche and the lower-center niche"
+          ],
+          "foreground": [
+            "stone floor slabs",
+            "the figure's bare feet and trailing robe hem"
+          ],
+          "background": [
+            "the niched wall; everything beyond is solid black"
+          ]
+        },
+        "uncertainObservations": [
+          "whether an eighth niche/cup is hidden behind the figure's body in the lower row - the lower-row spacing implies one, but nothing of it is visible",
+          "the identity of the small shapes inside several cups (serpent vs. vine, key vs. clasp, ring vs. wreath) is ambiguous at this brightness",
+          "the scene is extremely dark; low-contrast detail may be lost"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "seven arched wall niches",
+          "observed": "seven niches are individually resolvable, but the lower row's spacing breaks exactly where the figure's head and torso stand, so an eighth niche may be occluded",
+          "evidence": "Upper row niches are evenly spaced; the lower row jumps from the far-left niche straight to the centre one, a gap about twice the other spacing, and the figure's body fills that position. I cannot confirm or rule out a cup behind him, so the asserted total of seven is not verifiable.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-407",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left, standing on a paved floor",
+              "posture": "standing, barefoot, seen from behind (back to the viewer), facing the wall",
+              "gaze": "head faces the wall, away from the viewer, tilted slightly up toward the raised hand; face not visible",
+              "heldObjects": [
+                "a pale cloth/rag in the right hand"
+              ],
+              "armPosition": "left arm raised high and extended up-left toward the leftmost upper niche, bare hand open; right arm extended out to the right and slightly down, draping the cloth over the vessel in a lower niche",
+              "clothing": "long draped robe with a tattered/frayed hem reaching the ankles"
+            }
+          ],
+          "objects": [
+            {
+              "type": "footed cup / chalice standing in an arched wall niche",
+              "count": 7,
+              "countConfidence": "medium",
+              "where": "four in an upper row and three visible in a lower row across the wall",
+              "orientation": "all upright, mouth up, each standing on the niche floor",
+              "arrangement": "a grid of arched niches in two rows; upper row of four is evenly spaced left to right; the lower row has a conspicuous GAP directly behind the figure's head and torso, between the far-left lower niche and the center lower niche — a lower niche in that position would be hidden by the figure, so the true total may be 8"
+            },
+            {
+              "type": "emblem/contents sitting in or above each upper-row cup",
+              "count": 4,
+              "countConfidence": "medium",
+              "where": "upper row, left to right",
+              "orientation": "upright above each cup's mouth",
+              "arrangement": "(1) a coiled serpent shape, (2) a small crenellated tower, (3) a small crown, (4) a sprig of leaves/palm fronds"
+            },
+            {
+              "type": "emblem/contents in the visible lower-row cups",
+              "count": 3,
+              "countConfidence": "low",
+              "where": "lower row, left to right",
+              "orientation": "upright above each cup's mouth",
+              "arrangement": "(1) a small key-or-flower shaped object on a stem, (2) the cloth the figure is draping (its contents hidden by the cloth), (3) an oval ring/loop shape"
+            }
+          ],
+          "environment": [
+            "a dark stone/plaster wall filling most of the frame, cut with arched recessed niches",
+            "a paved stone floor in the lower third",
+            "very dim, low-contrast interior lighting; no sky, no window visible",
+            "aged border texture at the frame edges"
+          ],
+          "lightSources": [
+            "a soft light falling on the floor behind and around the figure from a source outside the frame (low and roughly behind the viewer/right), casting the figure's shadow forward toward the bottom of the frame",
+            "faint rim light on the niche edges and on the cups"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure stands directly in front of the wall, occluding the part of the lower row where an additional niche would fall",
+            "the raised left hand reaches toward the upper-left niche but does not appear to touch its cup",
+            "the right hand's cloth hangs over the mouth of the center lower niche's cup",
+            "the figure's shadow runs down the floor toward the viewer"
+          ],
+          "foreground": [
+            "paved floor",
+            "the figure's bare feet and frayed hem",
+            "cast shadow running toward the bottom edge"
+          ],
+          "background": [
+            "niched stone wall",
+            "cups in niches"
+          ]
+        },
+        "uncertainObservations": [
+          "The cup count is 7 individually resolvable; a possible 8th lower-row niche is occluded by the figure's body, exactly where the lower row's spacing breaks. I cannot confirm or rule it out.",
+          "The leftmost upper niche is close to the frame edge and slightly clipped; its cup is still visible.",
+          "Several emblem shapes (especially the lower row) are too dark to identify with confidence.",
+          "The direction and nature of the light source cannot be determined; only its effect on the floor is visible."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "uncertain",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "seven arched wall niches",
+          "observed": "I can see exactly seven niches (four upper, three lower), which matches, but I cannot establish that seven is the total: the lower row's spacing is irregular in a way that leaves room for one more niche hidden behind the figure. The upper row's four niche centres are evenly spaced (roughly 100-120 px apart at image scale), and the lower row's three visible centres sit at the far left, centre and right with a gap between the far-left and centre niche that is about double the gap between the centre and right niche — i.e. one niche-width of unexplained wall exactly where the figure's robe stands.",
+          "evidence": "Lower-left (key) niche, the figure's robe, and the lower-centre (cloth) niche in the bottom half of the wall. Brightening the image shows every niche sits on a bright ledge; a horizontal brightness scan along the lower ledge line finds lit ledge segments under the three visible lower niches but a completely dark span across the robe's width, so the wall there is occluded rather than shown to be blank. Nothing in the visible wall to either side of the robe shows a niche frame, and nothing rules one out.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-407",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-left of the image, standing on the floor in front of the wall, occupying roughly the lower two-thirds of the height",
+              "posture": "standing, seen from behind, weight on both feet, body slightly turned toward viewer-left; viewer-left arm raised high above the head, viewer-right arm extended horizontally to the side at about chest height; barefoot",
+              "gaze": "head seen from behind, turned slightly toward viewer-left and tilted up toward the raised hand; face not visible",
+              "heldObjects": [
+                "raised viewer-left hand: empty, palm open, fingers spread, reaching up toward the cup in the top-left niche without clearly touching it",
+                "extended viewer-right hand: gripping a pale cloth/veil at about chest height, the cloth hanging down over the cup in the lower-center niche"
+              ],
+              "clothing": "a long dark draped robe or toga with a shoulder wrap and long ragged vertical folds reaching the ankles; dark short/curly hair; bare feet"
+            }
+          ],
+          "objects": [
+            {
+              "type": "cup",
+              "count": 7,
+              "countConfidence": "medium",
+              "where": "set one per arched niche in the stone wall behind the figure, arranged in two horizontal rows",
+              "orientation": "all upright, standing on the niche ledges, each a stemmed goblet/chalice on a footed base",
+              "arrangement": "two rows: four in the upper row, three visible in the lower row, evenly spaced across the wall"
+            },
+            {
+              "type": "niche",
+              "count": 7,
+              "countConfidence": "medium",
+              "where": "cut into the stone wall that fills the whole background",
+              "orientation": "upright arched recesses with flat ledges at the bottom",
+              "arrangement": "two horizontal rows, four above and three visible below"
+            },
+            {
+              "type": "serpent",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "rising out of the cup in the top row, far viewer-left niche",
+              "orientation": "upright, reared in an S-curve with the head at the top",
+              "arrangement": "single, inside one cup"
+            },
+            {
+              "type": "tower",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "standing in the cup in the top row, second from viewer-left",
+              "orientation": "upright, crenellated battlement at the top",
+              "arrangement": "single, inside one cup"
+            },
+            {
+              "type": "crown",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "resting on/above the cup in the top row, third from viewer-left",
+              "orientation": "upright, points facing up",
+              "arrangement": "single, inside one cup"
+            },
+            {
+              "type": "leafy branch",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "rising from the cup in the top row, far viewer-right niche",
+              "orientation": "upright, fronds splaying symmetrically to both sides",
+              "arrangement": "single, inside one cup"
+            },
+            {
+              "type": "key",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "standing in the cup in the lower row, far viewer-left niche",
+              "orientation": "upright, trefoil/clover-shaped bow at the top, shaft down into the cup",
+              "arrangement": "single, inside one cup"
+            },
+            {
+              "type": "cloth",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "over the cup in the lower row, center niche; held at its upper corner by the figure's extended viewer-right hand",
+              "orientation": "hanging down, draping across the cup's bowl",
+              "arrangement": "single, inside/over one cup"
+            },
+            {
+              "type": "oval mirror or jewel",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "above the cup in the lower row, far viewer-right niche",
+              "orientation": "upright oval with a bright rim and a darker interior",
+              "arrangement": "single, inside one cup"
+            }
+          ],
+          "environment": [
+            "a large stone or masonry wall with heavy, grainy texture filling the entire background",
+            "arched recessed niches cut into the wall in two rows",
+            "a stone-tiled floor in the lower fifth of the image, receding toward the wall",
+            "a bright irregular patch of light cast on the floor around and to the viewer-right of the figure's feet",
+            "the figure's long shadow thrown across the floor toward the lower viewer-left",
+            "thin double-line decorative borders along the left and right edges of the image",
+            "no sky, window, horizon or outdoor element anywhere in frame"
+          ],
+          "lightSources": [
+            "an off-frame light from the viewer-right / front-right, inferred from the rim-lit right edges of the niche frames, the lit floor patch and the shadow falling to the viewer-left",
+            "a faint self-glow on each cup and its contents, brighter than the surrounding wall",
+            "no visible lamp, flame, candle or luminous body inside the frame"
+          ],
+          "moonPhase": "not visible — the scene is a closed interior wall with no sky in frame",
+          "spatialRelations": [
+            "the figure stands in front of the wall, between the viewer and the niches, occluding part of the lower row",
+            "the raised viewer-left hand is below and just right of the top-left niche holding the serpent cup",
+            "the extended viewer-right hand is immediately to the viewer-left of the lower-center cloth-draped cup",
+            "the upper row of four niches sits above the figure's shoulder line",
+            "the lower row of niches sits at roughly the figure's hip-to-chest height",
+            "the figure's shadow runs from the feet toward the lower viewer-left corner",
+            "the floor meets the wall just below the lower row of niches"
+          ],
+          "foreground": [
+            "the stone floor tiles and the lit patch",
+            "the figure's shadow",
+            "the lower hem of the robe"
+          ],
+          "background": [
+            "the textured stone wall",
+            "the two rows of arched niches with cups"
+          ]
+        },
+        "uncertainObservations": [
+          "The image is extremely dark overall; nearly all detail required brightness/contrast boosting to read, so counts and contents carry residual risk.",
+          "Cup count is the main uncertainty. I can see 7 cups (4 upper, 3 lower). The horizontal spacing of the lower row is irregular: the gap between the far-left (key) niche and the center (cloth) niche is roughly double the gap between the center and right niches, which is wide enough for one more niche to sit entirely behind the figure's robe. I could not confirm or rule out an 8th occluded cup; nothing in the visible wall edges to either side of the robe shows a niche frame.",
+          "The content of the lower-right cup reads as an upright oval with a bright rim — most consistent with a mirror or a large oval gem, but I cannot resolve which.",
+          "I cannot tell whether the figure is placing the cloth onto the lower-center cup or lifting it off.",
+          "Whether the raised hand actually touches the serpent cup's base is unclear; the fingertips appear to stop just short of the niche ledge.",
+          "The figure's sex, age and face are not determinable — the figure is seen entirely from behind.",
+          "The exact direction of the off-frame light is inferred from shadow and rim-light only; no light source is visible in frame."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

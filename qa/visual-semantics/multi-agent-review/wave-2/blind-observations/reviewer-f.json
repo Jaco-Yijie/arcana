@@ -1,0 +1,464 @@
+[
+ {
+  "reviewId": "review-206",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, behind a low mound",
+     "posture": "kneeling / crouching low, upper body hunched forward over the mound",
+     "gaze": "head bowed steeply downward, face angled down toward the mound; long lank hair falls over the face, features barely readable",
+     "heldObjects": [
+      "hilt of the large central sword, gripped with the left hand",
+      "right hand flat, palm-down, resting on top of the mound"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword (long blade, cruciform crossguard)",
+     "count": 3,
+     "countConfidence": "medium",
+     "where": "all three converge on the dark mound in the lower-center foreground: one at left (pommel upper-left, tip buried at the mound's left flank), one at center (gripped by the figure, tip buried in the top of the mound), one at right (pommel upper-right, tip buried at the mound's right flank)",
+     "orientation": "all three point-down, tips embedded in the mound; the center one is near-vertical, the outer two lean inward diagonally",
+     "arrangement": "a shallow inward-leaning fan / trio flanking the central upright one, with clear gaps between each; no sword lies flat"
+    },
+    {
+     "type": "bare dead tree",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "left edge, mid-upper frame",
+     "orientation": "upright, branches splayed right",
+     "arrangement": "single, isolated"
+    },
+    {
+     "type": "small dark specks that read as distant birds",
+     "count": null,
+     "countConfidence": "low",
+     "where": "right-of-center sky, just above and left of the distant towers",
+     "orientation": "indeterminate",
+     "arrangement": "loose scatter"
+    }
+   ],
+   "environment": [
+    "large flagstone / cobbled paved ground filling the lower and right foreground",
+    "a paved road or causeway winding from the mid-right foreground back to the horizon",
+    "low dark mound or heaped earth mass in the lower center, roughly waist-high to the kneeling figure",
+    "heavy roiling storm cloud filling most of the sky",
+    "silhouette of towers/spires on the right horizon",
+    "night"
+   ],
+   "lightSources": [
+    "a pale bright break in the clouds, upper right, behind which a diffuse glow sits — the only illumination; the disc itself is not cleanly resolved"
+   ],
+   "moonPhase": "uncertain",
+   "spatialRelations": [
+    "the figure kneels directly behind the mound, its torso filling the gap between the left and right swords",
+    "the central sword rises between the figure's body and the viewer, the figure's hand capping its hilt",
+    "the left and right swords lean inward toward the central one but do not touch it",
+    "the road recedes to the right, away from the figure, toward the distant towers"
+   ],
+   "foreground": [
+    "flagstones",
+    "the mound",
+    "the three embedded swords",
+    "the kneeling figure"
+   ],
+   "background": [
+    "bare tree at left",
+    "storm clouds",
+    "cloud-break glow upper right",
+    "distant towers right",
+    "receding road"
+   ]
+  },
+  "uncertainObservations": [
+   "overall tonality is extremely dark; low-value detail may be lost entirely",
+   "a small cross-shaped metal form sits on the mound surface at lower-center-right (near where the right sword's blade enters). It may be the right sword's own quillon, or the crossguard of a fourth, almost fully buried blade. I cannot resolve which, so the sword count of 3 covers only the three fully traceable blades",
+   "the figure's facial features and expression are not readable",
+   "whether the sky glow is a moon disc, a cloud-diffused moon, or a general lightening cannot be determined; no phase is visible"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-f"
+ },
+ {
+  "reviewId": "review-207",
+  "visibleFacts": {
+   "figureCount": 3,
+   "figures": [
+    {
+     "position": "center, tallest, occupying the upper half",
+     "posture": "standing, torso leaning slightly forward and to the right",
+     "gaze": "head bowed and turned to her left (viewer's right), looking down toward the kneeling right-hand figure",
+     "heldObjects": [
+      "a two-pan balance scale suspended from a horizontal beam, held in her right hand (viewer's left) at about waist height",
+      "a round pale disc pinched between the fingers of her left hand (viewer's right), extended out and down"
+     ]
+    },
+    {
+     "position": "lower left",
+     "posture": "kneeling, seen from behind and slightly in profile",
+     "gaze": "face turned right, toward the standing figure's center",
+     "heldObjects": [
+      "nothing; both hands raised in front of the chest, palms cupped upward and empty"
+     ]
+    },
+    {
+     "position": "right, mid-to-lower frame",
+     "posture": "kneeling, body turned three-quarters toward the viewer's left",
+     "gaze": "face turned up and left, looking toward the standing figure's extended hand",
+     "heldObjects": [
+      "nothing; both hands raised, palms cupped upward and open, positioned directly beneath the offered disc"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "round pale engraved disc",
+     "count": null,
+     "countConfidence": "low",
+     "where": "three distinct locations: one on each of the two scale pans, one held in the standing figure's extended hand, and a loose group lying flat on the ground across the bottom-center of the frame",
+     "orientation": "the two pan discs and the ground discs lie flat, face-up; the offered disc is held edge-on-tilted, face angled toward the kneeling right figure",
+     "arrangement": "2 on the balance pans (one per pan, left and right), 1 in transit mid-air between giver and receiver, and an irregular flat cluster on the ground with a couple of outliers separated to the right and upper-left of the cluster"
+    },
+    {
+     "type": "balance scale",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center-left, held by the standing figure",
+     "orientation": "hanging, beam roughly horizontal, both pans level with each other",
+     "arrangement": "two pans, one left one right, chains descending from the beam ends"
+    },
+    {
+     "type": "lit lantern",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right edge, on the ground beside the right-hand kneeling figure",
+     "orientation": "upright, standing on the ground",
+     "arrangement": "single"
+    }
+   ],
+   "environment": [
+    "very high-key, near-white watercolor palette throughout",
+    "hanging wisteria-like flowering vines draping the upper left",
+    "a stone balustrade and columns at the left edge, mid-frame",
+    "a broad body of still water in the right middle distance with a bright specular streak on it",
+    "faint pale spires / rooftops on the far shore, right",
+    "white blossoms banked along the bottom-left and bottom-right edges",
+    "a pale drapery or cloth spread on the ground beneath the ground-lying discs",
+    "a thin drawn border frame around the whole scene"
+   ],
+   "lightSources": [
+    "a large crescent moon, upper right",
+    "a small lit lantern on the ground at the right edge",
+    "broad diffuse ambient brightness with no single directional shadow pattern"
+   ],
+   "moonPhase": "crescent — a thin bright crescent with the lit limb on the right/outer side and the horns opening toward the lower left",
+   "spatialRelations": [
+    "the standing figure is between the two kneeling figures and taller than both; the two kneeling figures face inward toward her",
+    "the scale hangs on the standing figure's left side (viewer's left), above and behind the lower-left kneeling figure's raised hands",
+    "the offered disc sits in the open gap between the standing figure's fingertips and the right kneeling figure's cupped palms — it is not yet in contact with either",
+    "the ground discs lie forward of all three figures, nearest the bottom edge",
+    "the lower-left kneeling figure's raised empty hands receive nothing; the gap above them is empty"
+   ],
+   "foreground": [
+    "white blossoms bottom left and bottom right",
+    "the ground discs on pale cloth",
+    "the two kneeling figures"
+   ],
+   "background": [
+    "wisteria vines",
+    "stone balustrade and columns",
+    "water with light streak",
+    "distant spires",
+    "crescent moon",
+    "cloud"
+   ]
+  },
+  "uncertainObservations": [
+   "the ground discs overlap one another and sit against a near-white cloth of almost identical value; I can pick out roughly four in the tight bottom-center cluster, one separated to its right, and one to two very faint flat ovals just above the cluster, partly covered by the right figure's hem — I cannot resolve them individually with confidence, so the total disc count is null",
+   "the two discs on the balance pans are clearly one per pan and that sub-count is high confidence; the single disc in the giver's hand is likewise high confidence",
+   "whether the scene is daylight or night is genuinely ambiguous: the palette and sky read as bright daylight, yet a crescent moon and a lit lantern are both present",
+   "the engraved pattern on the discs is visible as a radial/starred motif but is too fine to describe reliably"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-f"
+ },
+ {
+  "reviewId": "review-208",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, filling the middle of the frame",
+     "posture": "kneeling / crouching low on one knee, torso pitched forward and down, heavy skirts pooled on the ground behind",
+     "gaze": "head turned right and tipped downward, looking down toward the ground where the lower hand reaches, not at the disc she holds",
+     "heldObjects": [
+      "a large round disc engraved with a five-pointed star, held up in the raised hand at about shoulder height",
+      "the other arm extended down and forward, fingers reaching toward a small plant in the soil — hand empty"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "round disc engraved with a five-pointed star",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center-right, held aloft in the figure's raised hand in front of the open gate",
+     "orientation": "upright, face turned toward the viewer, near-vertical",
+     "arrangement": "single, isolated — no others anywhere in frame"
+    },
+    {
+     "type": "rabbit / hare",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower right foreground, on the bare soil",
+     "orientation": "sitting upright on its haunches, ears raised, body and head turned left toward the figure",
+     "arrangement": "single"
+    },
+    {
+     "type": "small seedling sprouting from bare soil",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "ground, center-right, directly beneath the figure's lowered reaching hand",
+     "orientation": "growing upward, a few thin leaves",
+     "arrangement": "single sprout with scattered dry leaves and debris around it"
+    },
+    {
+     "type": "tall flowering plants along the left edge",
+     "count": null,
+     "countConfidence": "low",
+     "where": "left foreground margin, running bottom to mid-frame",
+     "orientation": "upright stems, blooms facing left/outward",
+     "arrangement": "a row/hedge; individual stems merge into darkness and cannot be separated"
+    },
+    {
+     "type": "crown worn on the head",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "on the figure's head, center-left",
+     "orientation": "upright, points rising",
+     "arrangement": "single, partly lost in dark hair"
+    }
+   ],
+   "environment": [
+    "a stone staircase climbing into darkness in the left background",
+    "a stone wall with an arched doorway/gateway, right of center",
+    "the arched gate's plank door standing open, swung outward toward the right",
+    "a stone urn or planter with trailing foliage on top of the wall, upper right",
+    "climbing vines and small flowers on the wall face",
+    "bare dark soil with fallen leaves covering the foreground ground",
+    "extremely low-key, near-monochrome dark sepia/charcoal tonality"
+   ],
+   "lightSources": [
+    "no lamp, candle, moon or sun is visible in frame",
+    "a soft diffuse light falls from the upper right; the engraved disc is by a wide margin the brightest object and appears to glow"
+   ],
+   "moonPhase": "not applicable — no moon or sky is visible",
+   "spatialRelations": [
+    "the figure kneels with her back to the staircase and her front toward the open gate",
+    "the raised disc is held in the opening of the gateway, between the figure and the open door",
+    "the lowered hand and the seedling are between the figure and the rabbit",
+    "the rabbit sits outside the gate on the same ground level, facing back toward the figure, roughly a body's length away",
+    "the flowering plants at the left edge are the nearest objects to the viewer"
+   ],
+   "foreground": [
+    "flowering plants left edge",
+    "bare leaf-strewn soil",
+    "the seedling",
+    "the rabbit"
+   ],
+   "background": [
+    "stone staircase",
+    "stone wall",
+    "arched open gate",
+    "urn on the wall",
+    "darkness above"
+   ]
+  },
+  "uncertainObservations": [
+   "the image is very dark overall; detail in the left half and upper area may be entirely unrecoverable",
+   "whether the scene is night or deep shade cannot be determined — no sky, sun or moon is visible",
+   "the headpiece reads as a crown but its exact form is obscured by hair and shadow",
+   "the species of the flowering plants at the left edge is not determinable, and they cannot be counted"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-f"
+ },
+ {
+  "reviewId": "review-212",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center, seated on the near edge of a bed",
+     "posture": "sitting upright on the edge of the bed, feet down on the floor, knees apart, seen entirely from behind",
+     "gaze": "head turned away from the viewer toward the window at the right; the face is not visible",
+     "heldObjects": [
+      "one hand raised high above the head, gripping the edge of the heavy curtain and holding it back"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword / dagger mounted in a wall case",
+     "count": 9,
+     "countConfidence": "high",
+     "where": "upper left quadrant, inside a dark rectangular wall-mounted frame divided by lattice bars into nine compartments — one blade per compartment: top row left/center/right, middle row left/center/right, bottom row left/center/right",
+     "orientation": "every blade is point-down, hilt uppermost, hanging vertically",
+     "arrangement": "a regular 3 × 3 grid, evenly spaced, no gaps and no overlaps"
+    },
+    {
+     "type": "bed",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "center-left, lower-middle of frame",
+     "orientation": "footboard toward the viewer's left, head at left; heaped dark bedding",
+     "arrangement": "single"
+    },
+    {
+     "type": "small bedside table with objects on it (a candle or small clock and a short stack of books)",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "far left, beside the bed's head",
+     "orientation": "upright",
+     "arrangement": "single table; the items on it are too dark to separate reliably"
+    },
+    {
+     "type": "tall arched window",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right side of frame, floor to near ceiling",
+     "orientation": "vertical",
+     "arrangement": "single, flanked by heavy drapes on both sides"
+    }
+   ],
+   "environment": [
+    "interior bedroom, dark panelled/plastered walls",
+    "a patterned rug over a cracked stone-slab floor",
+    "heavy floor-length curtains hanging on both sides of the window",
+    "through the window: a dense city skyline dominated by one tall pointed spire",
+    "pale overcast sky outside"
+   ],
+   "lightSources": [
+    "the window itself — pale exterior daylight is the only light, entering from the right and throwing long angled shadow bands across the floor toward the lower left"
+   ],
+   "moonPhase": "not applicable — no moon visible",
+   "spatialRelations": [
+    "the wall of nine mounted blades hangs on the wall above and behind the head of the bed, on the opposite side of the room from the window",
+    "the seated figure has its back to that wall of blades and faces the window",
+    "the raised arm reaches up and to the right to the curtain edge, opening the view",
+    "the figure's bare feet rest on the floor at the foot of the bed's near side",
+    "the cast light shafts run from the window across the floor and out of the lower-left of the scene"
+   ],
+   "foreground": [
+    "stone floor with cast light bands",
+    "rug",
+    "bed with bedding",
+    "seated figure"
+   ],
+   "background": [
+    "wall-mounted blade case",
+    "bedside table",
+    "curtains",
+    "window",
+    "city skyline and spire"
+   ]
+  },
+  "uncertainObservations": [
+   "the individual objects on the bedside table (a candle, a lamp, a small clock?) cannot be identified in the shadow",
+   "the blades are silhouetted highlights; whether they are long daggers or short swords cannot be determined, though all nine are individually and clearly resolvable as separate blades in separate compartments",
+   "the time of day reads as daylight (pale bright sky, hard cast shadows), but whether it is morning or another hour cannot be determined from the pixels"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-f"
+ },
+ {
+  "reviewId": "review-215",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, full length",
+     "posture": "standing, mid-stride — one leg forward and braced downhill on the path, the other back; torso twisted, weight forward; not seated, not kneeling",
+     "gaze": "head tipped back and turned up to the viewer's right, looking up at the raised blade — i.e. looking upward and to the side, not along the path ahead",
+     "heldObjects": [
+      "a sword gripped in the raised right hand (viewer's right), arm extended up and out",
+      "left arm lowered and back, hand open against a thick vine — empty"
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper center-right, raised above the figure's head",
+     "orientation": "point-up, blade tilted slightly to the right of vertical",
+     "arrangement": "single; leafy sprigs trail across and cling to the blade"
+    },
+    {
+     "type": "black bird",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left, perched on a thick vine",
+     "orientation": "perched, body and beak turned to the right, toward the figure",
+     "arrangement": "single"
+    },
+    {
+     "type": "pale mushrooms",
+     "count": null,
+     "countConfidence": "low",
+     "where": "bottom-left corner foreground",
+     "orientation": "upright, caps facing outward/up",
+     "arrangement": "a small overlapping cluster; caps overlap and some are cut off by the frame edge, so they cannot be counted individually"
+    },
+    {
+     "type": "white daisy-like flowers",
+     "count": null,
+     "countConfidence": "low",
+     "where": "bottom-right and bottom-center foreground, plus a few on the right mid-edge",
+     "orientation": "faces turned toward the viewer/upward",
+     "arrangement": "scattered among the ground foliage; too many and too overlapped to count"
+    }
+   ],
+   "environment": [
+    "dense forest of tall slender trees receding into haze",
+    "heavy twisting vines/brambles banked on both the left and right sides, arching inward toward the top",
+    "a narrow footpath running from the figure's feet back into the trees at the center",
+    "ferns, ivy and low green groundcover across the whole lower third",
+    "a decorative painted border with leaf and acorn motifs at the four corners"
+   ],
+   "lightSources": [
+    "bright sunlight from the upper center, streaming through the canopy behind the figure and producing visible light shafts"
+   ],
+   "moonPhase": "not applicable — no moon visible",
+   "spatialRelations": [
+    "the figure stands on the path with the vine banks framing it on both sides",
+    "the raised sword breaks upward into the brightest part of the canopy; leafy sprigs overlap the blade from the right",
+    "the perched bird is diagonally up-left of the figure, on the opposite side of the frame from the raised sword",
+    "the path recedes behind and to the right of the figure, i.e. the figure has stepped forward off the path's line toward the viewer's left",
+    "the head faces up-and-right while the leading foot points down-and-forward — head direction and direction of travel differ"
+   ],
+   "foreground": [
+    "mushrooms bottom left",
+    "ferns and ivy",
+    "white flowers bottom right",
+    "thick vines both sides",
+    "the striding figure"
+   ],
+   "background": [
+    "tall forest trunks",
+    "sunlit canopy haze",
+    "the receding path"
+   ]
+  },
+  "uncertainObservations": [
+   "mushroom and flower counts cannot be given — overlapping and cropped by the frame",
+   "small items on the figure's belt (pouches, a horn?) are visible but not individually identifiable",
+   "the bird's species cannot be determined beyond 'black bird'"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-f"
+ }
+]

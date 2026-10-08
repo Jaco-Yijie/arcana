@@ -1,0 +1,223 @@
+[
+ {
+  "reviewId": "review-101",
+  "verdict": "pass",
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-113",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects / scene",
+    "existing": "a gibbous moon in the upper right sky",
+    "observed": "a crescent moon in the upper right sky",
+    "evidence": "The lit portion is a clear crescent arcing along the right/lower-right rim of the disc; the remaining majority of the disc is a pale unlit grey circle (earthshine). Well under half the disc is bright, so it cannot be gibbous.",
+    "confidence": "high"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "beneath a gibbous moon",
+     "with": "beneath a crescent moon"
+    },
+    {
+     "find": "a gibbous moon in the upper right sky",
+     "with": "a crescent moon in the upper right sky"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-105",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene / keyObjects / spatialRelations",
+    "existing": "large dark horned silhouette cast on the rear wall",
+    "observed": "a large dark branching silhouette on the rear wall whose form is ambiguous",
+    "evidence": "The shape is a thick vertical trunk rising from behind the block that splits into two limbs curving outward and upward. It reads equally well as a bare tree or root mass as it does as a pair of horns, and the image is too low-key to settle which. The text itself flags whether the shape is cast or painted, but asserts 'horned' without hedging. I did not establish a tree — I established that the reading is not determinable.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "large dark horned silhouette cast on the rear wall",
+     "with": "large dark branching silhouette on the rear wall, readable as either horns or a bare tree"
+    },
+    {
+     "find": "with a large dark horned silhouette looming on the wall behind them",
+     "with": "with a large dark branching silhouette looming on the wall behind them"
+    },
+    {
+     "find": "the horned silhouette rises behind and above both figures, centred on the wall",
+     "with": "the branching silhouette rises behind and above both figures, centred on the wall"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-107",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "keyObjects",
+    "existing": "eight elongated shafts with fletched ends crossing the sky",
+    "observed": "far more than eight — roughly eighteen to twenty, in two separate diagonal clusters",
+    "evidence": "The sky holds two distinct clusters separated by a band of empty sky. Going one at a time I resolve about ten shafts in the upper cluster alone (y roughly 115-270) and about eight or nine in the lower cluster (y roughly 330-450). I cannot commit to an exact total, but eight is demonstrably too few: the upper cluster by itself exceeds it.",
+    "confidence": "high"
+   },
+   {
+    "field": "spatialRelations",
+    "existing": "the shafts sweep from upper right down toward the left, converging near the gate",
+    "observed": "the shafts are spread across the upper sky in two parallel-oriented clusters and do not converge; none approach the gate",
+    "evidence": "All shafts share the same tilt rather than converging on a point, and the lowest of them stops well above and to the right of the archway. The gate area is empty sky.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects / visualTensions",
+    "existing": "near ruin versus distant intact castle",
+    "observed": "the distant structures across the water are also broken — jagged, stub-topped towers",
+    "evidence": "The tall tower on the far bank has a ragged, broken crown, and the silhouette extending right of it is a row of irregular jagged stubs, not intact walls or roofs.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "eight elongated shafts with fletched ends crossing the sky",
+     "with": "many elongated shafts with fletched ends crossing the sky, in two loose diagonal clusters (roughly eighteen to twenty)"
+    },
+    {
+     "find": "while eight long shafts streak diagonally across a dark sky toward a distant castle silhouette above a still river",
+     "with": "while many long shafts streak diagonally across a dark sky above a distant ruined tower silhouette and a still river"
+    },
+    {
+     "find": "the shafts sweep from upper right down toward the left, converging near the gate",
+     "with": "the shafts sweep from upper right down toward the left in two clusters, spread across the upper sky without converging and never reaching the gate"
+    },
+    {
+     "find": "distant multi-towered castle silhouette",
+     "with": "distant silhouette of broken, multi-towered ruins"
+    },
+    {
+     "find": "near ruin versus distant intact castle",
+     "with": "near ruin versus further ruins across the water"
+    },
+    {
+     "find": "exact count of the streaking shafts (appears to be eight, some partially cropped or fading)",
+     "with": "exact count of the streaking shafts (well over a dozen, roughly eighteen to twenty; some partially cropped or fading)"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-109",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "scene / spatialRelations",
+    "existing": "the woman sits behind the bench, her hands and tools above the discs",
+    "observed": "her posture below the waist is not visible, so seated cannot be established",
+    "evidence": "Her torso is bent sharply forward over the bench and everything below roughly hip level is hidden behind the bench top and the draped cloth. There is no visible seat, stool, chair or thigh line. The forward lean is equally consistent with standing. I recorded her as leaning forward over the bench without committing to seated or standing.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "sits at a wooden workbench engraving a round metal disc",
+     "with": "leans over a workbench engraving a round metal disc"
+    },
+    {
+     "find": "the woman sits behind the bench, her hands and tools above the discs",
+     "with": "the woman is behind the bench, leaning forward over it, her hands and tools above the discs"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-111",
+  "verdict": "uncertain",
+  "issues": [
+   {
+    "field": "spatialRelations",
+    "existing": "the two figures face inward toward the central mask, framing it symmetrically",
+    "observed": "only the right figure is turned toward the mask; the left figure has his back to the viewer with his head tilted up toward the sky, and the two are not symmetric",
+    "evidence": "The left figure's arms are raised overhead and his head is tipped back and up at the starfield — his attention is upward, not at the plinth. He also stands markedly closer to the viewer and renders much larger than the right figure, so the pair does not frame the mask symmetrically.",
+    "confidence": "medium"
+   },
+   {
+    "field": "keyObjects",
+    "existing": "horned mask with two curved horns and dark eye openings",
+    "observed": "the two eye openings read as pale and faintly luminous against the dark mask face, not dark",
+    "evidence": "At the mask's centre the two almond eye shapes are distinctly lighter in value than the surrounding mask, reading as lit or glowing rather than as dark voids. The detail is small, so I hold this at medium confidence.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "the two figures face inward toward the central mask, framing it symmetrically",
+     "with": "the right figure is turned inward toward the central mask, while the left figure stands closer to the viewer with his back turned and his head tilted up toward the sky"
+    },
+    {
+     "find": "horned mask with two curved horns and dark eye openings",
+     "with": "horned mask with two curved horns and pale, faintly luminous eye openings"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ },
+ {
+  "reviewId": "review-117",
+  "verdict": "corrected",
+  "issues": [
+   {
+    "field": "scene / visualTensions",
+    "existing": "stands on a stony shore holding three swords",
+    "observed": "he is mid-stride, walking toward the viewer, not standing",
+    "evidence": "His trailing leg (viewer's left) has the heel lifted and the boot up on its toe, while the leading leg (viewer's right) is planted flat and forward, with his weight carried forward over it. That is a walking stride, not a standing pose.",
+    "confidence": "high"
+   },
+   {
+    "field": "keyObjects / scene",
+    "existing": "torn red-brown tunic with ragged hem",
+    "observed": "the tunic hem is an even, regular scalloped/dagged edge, matched by the same scalloping on the shoulder yoke — decorative, not damage",
+    "evidence": "The points along the hem are uniform in size and spacing, and the identical scalloped treatment is repeated on the shoulder yoke. Repeated regular scalloping in two separate places is a garment edge treatment, not tearing.",
+    "confidence": "medium"
+   }
+  ],
+  "suggestedPatch": {
+   "replace": [
+    {
+     "find": "stands on a stony shore holding three swords",
+     "with": "strides on a stony shore holding three swords"
+    },
+    {
+     "find": "the standing man faces left while the other two walk away from him",
+     "with": "the striding man faces left while the other two walk away from him"
+    },
+    {
+     "find": "the two fallen swords lie in the lower-left foreground, in front of and below the standing man",
+     "with": "the two fallen swords lie in the lower-left foreground, in front of and below the striding man"
+    },
+    {
+     "find": "A young man in a torn red tunic",
+     "with": "A young man in a red tunic with a dagged, scalloped hem"
+    },
+    {
+     "find": "torn red-brown tunic with ragged hem",
+     "with": "red-brown tunic with a dagged, scalloped hem and matching scalloped shoulder yoke"
+    }
+   ]
+  },
+  "reviewer": "reviewer-d"
+ }
+]

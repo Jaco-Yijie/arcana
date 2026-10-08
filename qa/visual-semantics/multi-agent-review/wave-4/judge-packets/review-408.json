@@ -1,0 +1,274 @@
+{
+  "reviewId": "review-408",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-408.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-408.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "two swords held upright by the foreground figure",
+          "observed": "both held blades hang DOWN at her sides — arms lowered, the left-hand blade angling down-left and the right-hand blade down-right, tips toward the ground",
+          "evidence": "Her hands are at hip height with the blades running downward past her skirt to the shoreline; neither blade rises above the grip. Same error repeats in visualTensions.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene",
+          "existing": "toward a moonlit horizon",
+          "observed": "bright overcast daylight; a pale moon disc is present in the upper right but the scene is daylit",
+          "evidence": "Sky is pale and bright with lit cloud, the shore and water read as flat daylight, no night value anywhere.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "three swords lying crossed on the ground",
+          "observed": "count not resolvable — at least 3 overlapping near-parallel blades lying flat, tips toward the right/lower right; could be more",
+          "evidence": "The foreground blades overlap and fade into the flowers and pebbles; I recorded null rather than a number, so this is flagged uncertain, not wrong.",
+          "confidence": "low"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two swords held upright by the foreground figure",
+            "with": "two swords held point-down at the foreground figure's sides, arms lowered"
+          },
+          {
+            "find": "the upright held swords contrast with the swords lying discarded on the ground",
+            "with": "the lowered, point-down held swords echo the swords lying discarded on the ground"
+          },
+          {
+            "find": "toward a moonlit horizon",
+            "with": "toward a bright daylit horizon under a pale moon"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-408",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left of center, foreground, on the shore",
+              "posture": "standing upright, seen from behind, back bare, long gown",
+              "gaze": "head turned over the left shoulder, face in profile looking down and to the viewer's left — away from the water she faces",
+              "heldObjects": [
+                "one blade in each hand, gripped at the hilt, arms hanging down at her sides"
+              ]
+            },
+            {
+              "position": "right middle distance, standing in shallow water",
+              "posture": "standing, seen from behind, semi-transparent/faded",
+              "gaze": "facing away from the viewer, out toward the open water",
+              "heldObjects": []
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade (long straight sword)",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "held one in each of the foreground figure's lowered hands",
+              "orientation": "both point DOWN toward the ground — the left-hand blade angles down and to the left, the right-hand blade angles down and to the right; neither is raised",
+              "arrangement": "one to each side of the figure, symmetrical, tips converging toward the ground"
+            },
+            {
+              "type": "blade lying flat on the ground",
+              "count": null,
+              "countConfidence": "low",
+              "where": "across the foreground strip at the bottom of the frame, in front of and below the figure",
+              "orientation": "lying flat and horizontal-to-diagonal, tips pointing to the right / lower right",
+              "arrangement": "overlapping near-parallel diagonals crossing each other; I can individually resolve at least 3 but the group blurs into the flowers and shoreline"
+            },
+            {
+              "type": "bird in flight",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "upper right sky",
+              "orientation": "wings spread, flying",
+              "arrangement": "scattered, one higher than the other"
+            }
+          ],
+          "environment": [
+            "stony/pebbled shore in the foreground with pale water lilies and chrysanthemum-like flowers",
+            "calm shallow sea with low ripples to the right",
+            "low scattered rocks in the water",
+            "soft cloud bank across the sky"
+          ],
+          "lightSources": [
+            "diffuse pale daylight, overall bright",
+            "a large pale moon disc at the upper right"
+          ],
+          "moonPhase": "uncertain — a large disc, the right portion brighter, partly hidden behind cloud and the frame edge",
+          "spatialRelations": [
+            "the foreground figure stands on land at the left; the water begins to her right",
+            "the distant second figure stands in the water well behind and to the right of her, moving away",
+            "the ground blades lie in front of the figure, between her feet and the bottom edge, not touching her",
+            "she is turned away from both the distant figure and the water"
+          ],
+          "foreground": [
+            "flowers, pebbles, the blades lying flat"
+          ],
+          "background": [
+            "sea, rocks, distant figure, clouds, moon, birds"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of blades lying on the ground cannot be counted reliably — they overlap and fade into the shoreline; at least 3, possibly more",
+          "whether the distant figure is a person, a reflection or a ghostly duplicate cannot be determined from the pixels",
+          "the bird count (2) is at small scale and could be 2 or 3",
+          "light reads as bright overcast daylight, not night, despite the visible moon"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "two swords held upright by the foreground figure",
+          "observed": "both blades are held hilt-up in the fists at hip height with the blades angled DOWN and outward; both points aim at the ground, neither is raised",
+          "evidence": "Each blade descends from the fist away from the body toward the wet ground, forming a shallow inverted V below the hips — no part of either blade rises above the hand.",
+          "confidence": "high"
+        },
+        {
+          "field": "visualTensions",
+          "existing": "the upright held swords contrast with the swords lying discarded on the ground",
+          "observed": "the held swords are lowered, points down, so the contrast with the grounded swords is one of grip, not of raised vs. lowered",
+          "evidence": "Same observation as above — the held blades point downward, not upward.",
+          "confidence": "high"
+        },
+        {
+          "field": "visualTensions",
+          "existing": "the two figures are separated by distance and face opposite directions",
+          "observed": "both figures have their backs to the viewer; the foreground figure's head is turned to the right and tilted down, oriented toward the water and the departing figure",
+          "evidence": "Her face is shown in near-profile turned toward the right of frame where the second figure stands, so the heads are not facing opposite ways.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two swords held upright by the foreground figure",
+            "with": "two swords held hilt-up with the blades angled down and outward, both points toward the ground"
+          },
+          {
+            "find": "the upright held swords contrast with the swords lying discarded on the ground",
+            "with": "the still-gripped swords, points lowered, contrast with the swords lying discarded on the ground"
+          },
+          {
+            "find": "the two figures are separated by distance and face opposite directions",
+            "with": "the two figures are separated by distance, both backs to the viewer, the near one's head turned toward the departing figure"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-408",
+        "visibleFacts": {
+          "figureCount": 2,
+          "figures": [
+            {
+              "position": "left of center, foreground, dominant",
+              "posture": "standing upright on wet ground, seen from behind in three-quarter rear view, back bare",
+              "gaze": "head turned to the viewer's right and tilted downward — looking back/down over her own shoulder toward the water and the distant figure, not forward",
+              "heldObjects": [
+                "one long straight blade in each hand — two blades total"
+              ]
+            },
+            {
+              "position": "middle distance, right side, standing in shallow water",
+              "posture": "standing upright, pale and semi-transparent, seen from behind",
+              "gaze": "head faces away from the viewer, out toward the water/horizon; face not visible",
+              "heldObjects": [
+                "none visible"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "long straight blade with a crossguard",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "held one in each of the standing figure's hands, at about hip height",
+              "orientation": "hilts UP in the fists, blades angled DOWN and outward away from the body — both points aimed at the ground, neither raised",
+              "arrangement": "a flanking pair, one on each side of the figure, forming a shallow inverted V"
+            },
+            {
+              "type": "long straight blade with a crossguard",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "lying flat on the wet ground across the bottom foreground of the frame",
+              "orientation": "all lying horizontal/flat on the ground, points toward the right side of the frame, hilts toward the left",
+              "arrangement": "laid roughly parallel on shallow diagonals, overlapping and crossing one another near the center; they do not form a ring or a fan"
+            },
+            {
+              "type": "pale round-headed flower (chrysanthemum/lotus-like)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered along the lower-left corner and bottom edge, among the grounded blades",
+              "orientation": "heads facing the viewer",
+              "arrangement": "scattered clumps; several are cut by the frame and too pale to separate"
+            },
+            {
+              "type": "bird in flight",
+              "count": 2,
+              "countConfidence": "medium",
+              "where": "right side of the sky, small and distant, above the horizon",
+              "orientation": "wings spread, flying toward the left/upper-left",
+              "arrangement": "two, separated, not in formation"
+            }
+          ],
+          "environment": [
+            "a flat wet tidal shore / shallow water plain filling the lower and right areas",
+            "patches of dark weed or moss on the wet ground and in the shallows",
+            "a still water surface with mirror reflections at the right",
+            "a low flat horizon",
+            "a sky filled with soft layered cloud"
+          ],
+          "lightSources": [
+            "a large pale luminous disc (moon) at the upper right, partly behind cloud",
+            "broad diffuse bright overcast light across the whole scene — it reads as daytime-bright, not night"
+          ],
+          "moonPhase": "uncertain — the visible portion reads as a large round disc with a slightly shaded lower-left limb, but cloud and the frame edge obscure it",
+          "spatialRelations": [
+            "the grounded blades lie in front of (nearer the viewer than) the standing figure, between her feet and the bottom edge",
+            "the two held blades hang outside the line of her hips on each side",
+            "the second, translucent figure stands well behind and to the right, in ankle-deep water, walking away from the viewer",
+            "the main figure's turned head is oriented toward that distant figure",
+            "her hair and drapery stream to the LEFT, away from the direction her head is turned"
+          ],
+          "foreground": [
+            "blades lying flat on wet ground",
+            "pale flowers",
+            "dark weed clumps"
+          ],
+          "background": [
+            "still shallow water with reflections",
+            "flat horizon",
+            "clouded sky with the pale disc",
+            "two small birds"
+          ]
+        },
+        "uncertainObservations": [
+          "The blades lying on the ground overlap heavily and their hilts are partly buried in the flowers and weed; 3 is my best resolved count but a fourth could be hidden under the crossings. Total blades in frame would then be 5.",
+          "Whether the distant translucent figure is a person or a figure-shaped mist column cannot be resolved with certainty.",
+          "Light source: bright and overcast; a moon-like disc is present but the illumination reads as daylight."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

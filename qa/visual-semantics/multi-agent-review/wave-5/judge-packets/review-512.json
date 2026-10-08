@@ -1,0 +1,407 @@
+{
+  "reviewId": "review-512",
+  "blindImage": "qa/visual-semantics/blind-review/wave-5/review-512.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain",
+    "verdict split: pass vs corrected"
+  ],
+  "reviewerCount": 3,
+  "verdictTally": {
+    "pass": 1,
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-5/reveal/review-512.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "pass",
+      "issues": [],
+      "suggestedPatch": null,
+      "blindObservation": {
+        "reviewId": "review-512",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "画面正中偏左，走在一条土路上",
+              "posture": "大步行走，身体朝向 viewer-right，后腿（viewer-left）蹬直、前腿屈膝前迈，上身前倾",
+              "gaze": "头向 viewer-left 回转，越过肩膀向后看；眼睛朝 viewer-left 偏下方，眉头微皱",
+              "heldObjects": [
+                "双臂抱着一捆剑，横在胸腹前；剑柄朝 viewer-right 上方，剑身朝 viewer-left 下方；双手（左手在下托住，右臂环在上）夹住剑束"
+              ],
+              "clothing": "蓝灰色束腰短袍，外披锈红色/砖红色带兜帽的披肩围巾，腰间系带并有小皮囊，米黄色紧身裤，小腿缠绑带的高帮靴；棕色卷发"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "被人物抱在胸前",
+              "orientation": "斜向，剑首朝 viewer-right 上方，剑尖朝 viewer-left 下方",
+              "arrangement": "成束，剑身并排呈扇形，剑柄错开成阶梯状"
+            },
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "画面左下，人物身后的地面上，靠近帐篷",
+              "orientation": "剑尖朝下插进/斜倚地面，剑柄朝上，剑身略向 viewer-right 倾斜",
+              "arrangement": "两把并列，几乎平行"
+            },
+            {
+              "type": "tent",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面 viewer-left 上部与中部",
+              "orientation": "斜向，帐门朝 viewer-right 敞开",
+              "arrangement": "单顶大帐，有尖顶与拉索"
+            },
+            {
+              "type": "banner",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "帐篷顶部旗杆上，画面左上",
+              "orientation": "竖直悬挂的长方形旗面",
+              "arrangement": "单面，深红底色上有一个浅色纹章图案"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "帐篷内部，画面左中",
+              "orientation": "立在帐内的小桌/箱上",
+              "arrangement": "单盏，玻璃罩内有橙黄色火光"
+            },
+            {
+              "type": "castle",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面右侧中景的山丘顶上",
+              "orientation": "正面朝向 viewer-left",
+              "arrangement": "单座，带雉堞的方塔与围墙，塔顶有一面小旗"
+            },
+            {
+              "type": "boulder",
+              "count": null,
+              "countConfidence": "low",
+              "where": "画面左下角与左缘",
+              "orientation": "不规则卧石",
+              "arrangement": "散落几块"
+            }
+          ],
+          "environment": [
+            "白天户外，浅米黄与褐绿色调的版画/铜版刻线风格",
+            "一条土路从画面左下向右上方的山丘蜿蜒",
+            "路两侧是乱石、草丛与矮灌木",
+            "右侧有一座长满植被的山丘，顶上立着城堡",
+            "天空多云，云层以细密的刻线表现",
+            "画面四周有米黄色装饰性边框，四角有卷草纹角饰"
+          ],
+          "lightSources": [
+            "帐篷内的提灯火光（暖色，画面左中）",
+            "天空的散射日光（无直接可见的太阳）"
+          ],
+          "moonPhase": "not visible — 白天多云天空，画面中没有月亮",
+          "spatialRelations": [
+            "人物在帐篷的 viewer-right 前方，正朝 viewer-right 走离帐篷",
+            "两把插地的剑在人物的 viewer-left 后方、帐篷前的地上",
+            "人物抱着的剑束位于其胸腹正前方，剑柄朝向 viewer-right",
+            "城堡在人物的 viewer-right 后上方的山丘上",
+            "旗帜在帐篷顶部、画面最左上",
+            "提灯在帐篷开口的内侧深处",
+            "土路从人物脚下向 viewer-right 上方通向城堡"
+          ],
+          "foreground": [
+            "行走中的人物与剑束",
+            "左下角的两把插地剑与大块卧石",
+            "脚下的土路与碎石草丛"
+          ],
+          "background": [
+            "帐篷、旗杆与旗帜",
+            "山丘与山顶城堡",
+            "刻线表现的多云天空"
+          ]
+        },
+        "uncertainObservations": [
+          "抱着的剑的数目：剑身部分我能数出 5 条并排的刃面，但清晰可见的轮形剑首只有 4 个，第 5 把的剑首应是被挡住了；所以 5 这个数只能算中等把握",
+          "旗面上的纹章图案是什么（像某种盘绕的兽形或花卉），分辨不出",
+          "腰间挂的是皮囊、钱袋还是刀鞘，看不清",
+          "帐篷内除提灯外还有一张桌子/箱子和若干杂物，具体是什么分辨不出",
+          "山丘城堡旗杆上小旗的颜色与纹样太小，看不清",
+          "人物的鞋是靴子还是裹腿加软鞋，分辨不出"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "visualTensions",
+          "existing": "the man's body moves away while his head turns back toward the tent",
+          "observed": "人物朝 viewer-left 迈步，头却向后扭转、越过右肩朝 viewer-right／画面后方看；而帐篷在他的 viewer-left 后方。回头的方向与帐篷所在的方向相反，他望向的是远处城堡所在的那一侧",
+          "evidence": "盲观察记录：gaze = 越过右肩朝 viewer-right／画面后方，眼睛斜向上后方；tent = 画面 viewer-left，从上缘延伸到中部；castle = 画面 viewer-right 远景山丘顶上；spatialRelations 明确写了「怀中剑捆的柄头指向城堡所在的那一侧」与「人物回头的方向与他迈步前进的方向相反」",
+          "confidence": "high"
+        },
+        {
+          "field": "spatialRelations",
+          "existing": "the two planted swords lie in the lower-left foreground, behind and below the man",
+          "observed": "两把插地的剑在人物的 viewer-left 前方（即他迈步前进的那一侧），而且处在最前景、比人物更靠近观者；位置在帐篷门口与画面下缘之间。说它们在人物「身后」与观察不符",
+          "evidence": "盲观察记录：objects.sword(count 2) where = 画面 viewer-left 前景地面，帐篷门口外的石地上；spatialRelations = 「两把插地的剑在人物的 viewer-left 前方、位于帐篷门口和画面下缘之间」；foreground 列表里第一项就是这两把剑",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the man's body moves away while his head turns back toward the tent",
+            "with": "the man's body moves away to the left while his head turns back over his right shoulder, away from the tent and toward the castle side of the frame"
+          },
+          {
+            "find": "the two planted swords lie in the lower-left foreground, behind and below the man",
+            "with": "the two planted swords stand point-down in the lower-left foreground, ahead of and below the man, between the tent's opening and the bottom edge"
+          },
+          {
+            "find": "while two more swords stand planted in the ground behind him",
+            "with": "while two more swords stand planted point-down in the foreground ahead of him"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-512",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center，略偏 viewer-left，占据画面中段",
+              "posture": "站立行走中，左腿在前右腿在后，上半身朝 viewer-left 前倾，整个人正往 viewer-left 方向迈步",
+              "gaze": "头向后扭转，越过右肩朝 viewer-right／画面后方看，眼睛斜向上后方",
+              "heldObjects": [
+                "双臂环抱一捆剑：右臂从上方压住、左手在腰腹高度托住剑身；剑刃朝 viewer-left 斜下方，剑柄朝 viewer-right 斜上方，剑柄高过他的肩膀"
+              ],
+              "clothing": "棕色卷发，不戴头饰；蓝灰色束腰短袍，袖口与下摆有金色缠枝刺绣；肩上披锈红色带兜帽的斗篷／围巾；腰间一条皮带挂着小皮袋；浅褐色紧腿裤；小腿打绑带，脚穿系带靴"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword",
+              "count": 5,
+              "countConfidence": "medium",
+              "where": "被人物抱在胸腹前，从画面中部伸向 viewer-right 上方",
+              "orientation": "斜置：剑尖朝 viewer-left 斜下方，剑柄／圆盘形柄头朝 viewer-right 斜上方",
+              "arrangement": "一捆并排、略成扇形叠压在一起"
+            },
+            {
+              "type": "sword",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "画面 viewer-left 前景地面，帐篷门口外的石地上",
+              "orientation": "剑尖朝下插入地面，剑柄朝上，两把都略向 viewer-right 倾斜",
+              "arrangement": "两把紧挨着并排"
+            },
+            {
+              "type": "tent",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面 viewer-left，从上缘延伸到中部",
+              "orientation": "尖顶帐篷，门帘向 viewer-right 敞开",
+              "arrangement": "单个"
+            },
+            {
+              "type": "banner",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "帐篷顶部的杆子上，画面上方 viewer-left",
+              "orientation": "竖直悬挂的方形锦旗",
+              "arrangement": "单个"
+            },
+            {
+              "type": "lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "帐篷内部，桌子上",
+              "orientation": "竖直摆放，内部有火光",
+              "arrangement": "单个"
+            },
+            {
+              "type": "castle",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "画面 viewer-right 远景的山丘顶上",
+              "orientation": "带城垛的方塔群，塔顶插一面小旗",
+              "arrangement": "单个建筑群"
+            }
+          ],
+          "environment": [
+            "多石的土路／山坡，从前景向 viewer-right 后方蜿蜒上行",
+            "帐篷内可见一张桌子和模糊的箱笼",
+            "坡地上散布灌木丛和草",
+            "天空占画面上三分之一，有大片细线刻画的云"
+          ],
+          "lightSources": [
+            "帐篷内桌上的提灯（暖黄色，画面 viewer-left 中部，是画面里唯一的点光源）",
+            "天空的泛光（日间漫射光，无可见日轮）"
+          ],
+          "moonPhase": "not visible — 天空只有云，没有月亮",
+          "spatialRelations": [
+            "帐篷在人物的 viewer-left 后方",
+            "两把插地的剑在人物的 viewer-left 前方、位于帐篷门口和画面下缘之间",
+            "城堡在人物的 viewer-right 后方远处，位置高于人物头顶",
+            "怀中剑捆的柄头指向城堡所在的那一侧",
+            "人物回头的方向与他迈步前进的方向相反"
+          ],
+          "foreground": [
+            "两把插在地上的剑",
+            "大块灰色岩石",
+            "碎石与杂草地面"
+          ],
+          "background": [
+            "山丘上的城堡",
+            "带云的天空",
+            "远处的灌木坡地"
+          ]
+        },
+        "uncertainObservations": [
+          "怀中剑的确切数量不能完全锁定：画面 viewer-right 上方能数出 4 个圆盘形柄头和 2 个金色十字护手，剑身一侧能数出约 5 条并排的剑面，下方能辨认出 3–4 个剑尖；综合判断是 5 把，但重叠严重，可能是 4 或 6",
+          "帐篷内除桌子与提灯外还有若干暗色块状物（像是箱子或家具），具体是什么分辨不出",
+          "人物腰带上挂的小物件只能看出是皮袋状，细节不清",
+          "锦旗上有一个深色纹章图案，图案内容分辨不出"
+        ],
+        "reviewConfidence": "high",
+        "reviewer": "reviewer-e"
+      }
+    },
+    {
+      "reviewer": "reviewer-f",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "bundle of swords held against the chest, blades crossing and hilts fanning upward",
+          "observed": "The blades do NOT cross. They lie parallel in a single gathered sheaf, all tilted the same way — points down to the viewer-left, grips and pommels fanning up to the viewer-right. What does lie across the bundle is a pair of gold cross-guards belonging to two of the swords; those are quillons crossing the blades, not blades crossing each other. (The hilts fanning upward is correct.)",
+          "evidence": "Carried bundle, roughly x=240-460 / y=280-430 in the 560x933 image. At 6x the blade faces above the hands run as a neat parallel fan with no intersections, and the blade tips emerging below the hands (x=190-330 / y=420-540) stay parallel all the way down.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "bundle of swords held against the chest, blades crossing and hilts fanning upward",
+            "with": "bundle of swords held against the chest, blades parallel in a single sheaf and hilts fanning upward"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-512",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "centre of the frame, striding across the middle and lower middle of the card",
+              "posture": "walking/striding, body in three-quarter view turned toward the viewer; both boots point to the VIEWER-RIGHT, the near leg swung forward in mid-step — he is moving to the viewer-right, away from the tent; torso hunched slightly over the bundle he clutches",
+              "gaze": "head turned BACK over his shoulder to the VIEWER-LEFT and tilted slightly down, eyes directed back toward the tent and the ground he is leaving; brow furrowed. This is a definite backward over-the-shoulder look, opposite to his direction of travel",
+              "heldObjects": [
+                "both arms wrapped around a bundle of swords hugged diagonally across his chest; the lower (viewer-left) hand grips the blades from below and the upper hand clamps them against his chest",
+                "the blades point DOWN to the viewer-left and the grips/pommels fan UP to the viewer-right past his shoulder",
+                "he grips the bare blades, not the hilts"
+              ],
+              "clothing": "slate-blue belted tunic with gold embroidered hems and cuffs; a thick rust-brown hooded scarf/cowl bunched around the neck and shoulders; buff hose; calf-high boots with criss-cross wrapped lacing; curly brown hair, bare head"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword (carried in the arms)",
+              "count": null,
+              "countConfidence": "low",
+              "where": "clutched diagonally across the figure's chest, centre of the frame",
+              "orientation": "all tilted the same way — points DOWN to the viewer-left, pommels UP to the viewer-right; parallel, not crossed",
+              "arrangement": "a single gathered bundle fanned slightly like a sheaf. I can resolve FOUR round disc-shaped pommels on wrapped grips sticking out to the upper right, TWO gold cross-guards lying across the blades, and about FIVE pale blade faces in the fan below the hands; these three counts do not reconcile cleanly, so I will not state a total"
+            },
+            {
+              "type": "sword (left behind, standing in the ground)",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "lower-LEFT of the frame, planted among rocks on the ground just outside the tent",
+              "orientation": "both VERTICAL-ish with points DOWN driven into the earth, hilts up, blades leaning slightly to the viewer-right",
+              "arrangement": "the two stand side by side and PARALLEL, overlapping but not crossed; both have wrapped grips, round disc pommels and straight gold cross-guards like the carried ones"
+            },
+            {
+              "type": "pavilion tent",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "left third of the frame, behind the figure",
+              "orientation": "conical/peaked roof with the entrance flap open toward the viewer-right",
+              "arrangement": "single large tent with guy ropes and a separate upright pole at the far left"
+            },
+            {
+              "type": "banner / pennon",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "flying from a crossbar at the apex of the tent pole, upper-left",
+              "orientation": "hanging vertically from a horizontal bar, fringed at the bottom",
+              "arrangement": "single rust-red banner bearing a dark rampant beast device"
+            },
+            {
+              "type": "oil lamp / lantern",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "inside the tent, on a chest or low table, visible through the open flap",
+              "orientation": "upright, standing",
+              "arrangement": "single, lit, casting a warm glow inside the tent"
+            },
+            {
+              "type": "hilltop castle",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "right background, on a rocky hill",
+              "orientation": "seen from below and to the left",
+              "arrangement": "one crenellated keep and curtain wall with a small flag/pennant on the tower"
+            }
+          ],
+          "environment": [
+            "a stony, rutted dirt path/track running from the lower-left up to the viewer-right toward the castle hill",
+            "scattered boulders and tufts of scrub grass over the ground",
+            "an overcast sky of fine engraved horizontal hatching with banked clouds",
+            "a printed double-rule border with ornamental corners around the whole picture"
+          ],
+          "lightSources": [
+            "flat overcast daylight across the scene — the brightest areas are the pale sky and the ground",
+            "the lit oil lamp inside the tent, the only warm light, glowing from the tent's interior at the viewer-left"
+          ],
+          "moonPhase": "not visible — overcast daytime sky, no moon",
+          "spatialRelations": [
+            "the tent stands BEHIND the figure on the viewer-LEFT; the castle hill is AHEAD of him on the viewer-RIGHT",
+            "the two planted swords are on the ground at the lower-LEFT, between the tent and the figure, behind his trailing leg",
+            "his head is turned back toward the tent and the two planted swords while his feet carry him to the viewer-right",
+            "the carried bundle crosses his torso from lower-left to upper-right; the pommels project past his right shoulder into the sky",
+            "the banner flies above and to the left of his head",
+            "no clear cast shadow is drawn under the figure"
+          ],
+          "foreground": [
+            "the rocky track and boulders",
+            "the two swords planted in the ground at the lower-left",
+            "the figure's legs and boots"
+          ],
+          "background": [
+            "the pavilion tent with its banner and glowing lamp (left)",
+            "the hilltop castle with its pennant (right)",
+            "the hatched overcast sky"
+          ]
+        },
+        "uncertainObservations": [
+          "The number of swords in the carried bundle is the thing I most want to report and the thing I am least sure of. At maximum enlargement I count 4 round pommels on wrapped grips, 2 gold cross-guards and roughly 5 bright blade faces. Blades and grips overlap, so a total of either five or six is possible; I refuse to pick one.",
+          "I count 4 blade tips emerging below his hands, but the lower tips merge into his tunic and at least one more may be hidden.",
+          "The two swords at the lower-left read to me as driven point-first into the ground, but they could instead be leaning against an unseen rock; the very tips are lost in the stones.",
+          "Whether his backward look is aimed at the tent, at the two planted swords, or simply downward cannot be settled; the eye direction is back and down to the viewer-left in all readings.",
+          "The device on the banner is a rampant quadruped, probably a lion, but it is too small to identify with confidence.",
+          "There is no clearly drawn cast shadow anywhere in this card, so I report no shadow direction."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-f"
+      }
+    }
+  ]
+}

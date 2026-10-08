@@ -1,0 +1,244 @@
+{
+  "reviewId": "review-316",
+  "blindImage": "qa/visual-semantics/blind-review/wave-3/review-316.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-3/reveal/review-316.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "two upright swords standing point-up in cylindrical holders on a table",
+          "observed": "two swords standing hilt-up with blades driven point-DOWN into cylindrical holders on the table",
+          "evidence": "Both swords show cross-guards and ring pommels at the top and each blade tapers downward into the short cylindrical socket at the table surface; nothing points skyward.",
+          "confidence": "high"
+        },
+        {
+          "field": "visualTensions",
+          "existing": "the figure's body faces away while the head turns back toward the camp",
+          "observed": "the body faces away and the head is turned to the right, toward the lit horizon — away from the tent, which is on the left",
+          "evidence": "The lit edge of the cheek and jaw falls on the right side of the head, catching the gold horizon glow; the hair mass sits at the back-left of the skull, so the face is aimed right, not back toward the tent.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two upright swords standing point-up in cylindrical holders on a table",
+            "with": "two swords standing hilt-up, blades driven point-down into cylindrical holders on a table"
+          },
+          {
+            "find": "the figure's body faces away while the head turns back toward the camp",
+            "with": "the figure's body faces away and the head is turned toward the lit horizon, away from the camp"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-316",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-right, occupying roughly the middle third of the frame",
+              "posture": "standing, seen from behind, weight on the forward leg, head turned slightly right toward the horizon",
+              "gaze": "toward the right, at the glowing horizon over water",
+              "heldObjects": [
+                "a bundle of bladed weapons strapped/carried against the back, hilts uppermost"
+              ],
+              "clothing": "long dark cloak/coat with gold-thread embroidery and star-like flecks, tall boots"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword (standing in the stone/map table)",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "left of frame, planted in the flat table surface at the table's far edge",
+              "orientation": "hilts up, blades driven point-DOWN into the table top",
+              "arrangement": "side by side, roughly parallel, a small gap between them; both toward the left half of the table"
+            },
+            {
+              "type": "sword/blade carried on the figure's back",
+              "count": null,
+              "countConfidence": "low",
+              "where": "against the figure's back, upper-center of frame",
+              "orientation": "hilts up and fanned slightly apart at the top; blades angle DOWN behind the body",
+              "arrangement": "a tight fan/cluster in a single holder; individual blades overlap and merge into the dark cloak so they cannot be separated one by one"
+            },
+            {
+              "type": "small vessel/candle-like object on the table",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered across the map table surface, lower-left quadrant",
+              "orientation": "upright",
+              "arrangement": "scattered, several small dark shapes"
+            }
+          ],
+          "environment": [
+            "night sky filled with stars and a broad milky-way band",
+            "faint gold circular/astronomical diagrams overlaid on the sky",
+            "a large embroidered tent or canopy at the left, its fabric printed with circle-and-star diagrams",
+            "a low table or platform at lower left bearing a map or chart",
+            "wet stony ground and a shallow winding waterway running from lower-center to the right horizon",
+            "distant mountain ridge on the right horizon",
+            "a thin pole or standard at the far right edge",
+            "an ornate thin gold frame border inside the image edges"
+          ],
+          "lightSources": [
+            "warm gold glow at the horizon on the right (low sun), reflected as a bright streak on the water",
+            "a pale round moon high in the upper left",
+            "one or two tiny warm lamp points near the tent at mid-left"
+          ],
+          "moonPhase": "uncertain — a round pale disc with mottled shading, reads as full or near-full but the terminator cannot be resolved",
+          "spatialRelations": [
+            "the standing figure is between the tent/table at left and the lit horizon at right, with its back to the viewer",
+            "the two planted swords are well to the left of and below the figure, not touching it",
+            "the waterway leads from the figure's feet toward the glow on the horizon"
+          ],
+          "foreground": [
+            "map table with two downward-planted swords",
+            "wet rocky ground",
+            "the standing figure"
+          ],
+          "background": [
+            "starfield and diagrams",
+            "mountains",
+            "lit horizon and water"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of blades carried on the figure's back cannot be resolved: at least 3 hilts are separable at the top but the shafts below overlap and blend with the dark cloak",
+          "moon phase not determinable",
+          "the small objects on the map table may be candles, vials or weights — not resolvable",
+          "whether the glow on the right horizon is sunrise or sunset is not determinable"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    },
+    {
+      "reviewer": "reviewer-e",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "two upright swords standing point-up in cylindrical holders on a table",
+          "observed": "two swords standing point-DOWN, blades driven into the cylindrical holders with the ornate cross-guards and pommels uppermost",
+          "evidence": "On both blades the decorated cross-guard and pommel are clearly at the top and the blade narrows downward into the small round base on the table.",
+          "confidence": "high"
+        },
+        {
+          "field": "model self-reported uncertainty",
+          "existing": "exact number of swords in the carried bundle (appears to be five, possibly six)",
+          "observed": "only 4 cross-guards/pommels are individually resolvable at the top of the bundle; the overlapping shafts below make any total unconfirmable",
+          "evidence": "The bundle is tightly overlapped and partly behind the cloak, so neither five nor six can be supported from the pixels.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two upright swords standing point-up in cylindrical holders on a table",
+            "with": "two swords standing point-down, hilts uppermost, set into cylindrical holders on a table"
+          },
+          {
+            "find": "exact number of swords in the carried bundle (appears to be five, possibly six)",
+            "with": "exact number of swords in the carried bundle (at least four hilts resolvable; total not determinable)"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-316",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center-right, standing on a wet rocky shoreline",
+              "posture": "standing, mid-stride, walking toward the right/away from the viewer; back mostly turned, head turned in left profile",
+              "gaze": "head turned back and slightly downward, over the shoulder, toward the table at the left",
+              "heldObjects": [
+                "a bundle of long blades clasped under/against the right arm, held diagonally against the body"
+              ],
+              "clothing": "long heavy embroidered cloak/coat with a fur or layered collar, boots"
+            }
+          ],
+          "objects": [
+            {
+              "type": "sword/blade — carried bundle",
+              "count": null,
+              "countConfidence": "low",
+              "where": "clasped against the walking figure's right side, hilts projecting above the shoulder/arm",
+              "orientation": "point-DOWN — the ornate cross-guards and pommels are at the TOP, the blades run downward past the hip toward the ground",
+              "arrangement": "a tight overlapping bundle, not a spread arrangement. At least 4 separate cross-guards/pommels are individually resolvable at the top; the shafts below overlap heavily so the true total cannot be confirmed"
+            },
+            {
+              "type": "sword/blade — planted upright",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "on the stone table/platform at the left, set into small round weighted bases or stands",
+              "orientation": "vertical, point-DOWN into the base, elaborate cross-guard and pommel uppermost",
+              "arrangement": "the two stand side by side near the left edge of the table, roughly parallel, a small gap between them; they are clearly separate from the carried bundle"
+            },
+            {
+              "type": "small candle/lamp or marker on the table",
+              "count": null,
+              "countConfidence": "low",
+              "where": "scattered across the map-covered table surface in the lower left",
+              "orientation": "upright",
+              "arrangement": "scattered, several small objects, too dim and small to count individually"
+            }
+          ],
+          "environment": [
+            "night sky filled with dense stars and a visible galactic band",
+            "overlaid gold geometric circle/orbit diagrams across the sky",
+            "a large peaked tent or pavilion at the left with guy ropes and a pennant pole",
+            "a stone table or plinth covered with a map/chart and a draped cloth",
+            "wet rocky tidal shoreline with standing pools and reflections running to the right",
+            "low mountains on the far horizon",
+            "a thin bare pole or mast at the right edge",
+            "a narrow decorative inner border line around the whole image"
+          ],
+          "lightSources": [
+            "a warm orange glow at the horizon on the right (low sun, disc not clearly separable from the glow), reflected in the water",
+            "a small warm lamp glow inside/beside the tent at the left",
+            "ambient starlight"
+          ],
+          "moonPhase": "uncertain — a pale round body sits in the upper left sky, partly shaded; the lit fraction cannot be reliably read",
+          "spatialRelations": [
+            "the figure walks rightward, away from the tent and table, toward the glowing horizon",
+            "the two planted blades remain behind on the table at the left, on the opposite side of the frame from the direction of travel",
+            "the carried bundle sits between the figure's body and the right side of the frame",
+            "the tent is behind and left of the figure; the water channel recedes to the right toward the horizon glow"
+          ],
+          "foreground": [
+            "stone table with map and draped cloth",
+            "wet rock and tidal pools",
+            "the figure's legs and boots"
+          ],
+          "background": [
+            "tent",
+            "mountains",
+            "starfield and geometric sky diagrams",
+            "horizon glow"
+          ]
+        },
+        "uncertainObservations": [
+          "the number of blades in the carried bundle is NOT determinable — 4 hilts are individually resolvable but the overlapping shafts below leave open whether more are hidden; recorded as null deliberately",
+          "a second smaller pale disc appears lower-left of the large one in the sky; it may be a planet, a lens artifact, or part of the drawn diagram",
+          "the horizon light is a diffuse glow; whether a solar disc is actually painted in it cannot be confirmed",
+          "small objects on the table (candles, weights, instruments) are too dim to identify or count"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-e"
+      }
+    }
+  ]
+}

@@ -21,6 +21,7 @@ import { IS_STREAMLIT } from '@/features/reading/streamlitTransport'
 import {
   StreamReadingError,
   extractPartial,
+  extractPartialActions,
   extractPartialCards,
   extractPartialRelationships,
   extractPartialStringList,
@@ -99,6 +100,12 @@ export interface PartialReading {
   relationships: string[]
   narrative: string | null
   answer: string | null
+  /** V2.5 */
+  driver: { coreIssue: string; whyItMatters: string | null } | null
+  /** V2.4 */
+  actions: { action: string; reason: string; timeframe?: string }[]
+  /** V2.4 */
+  watchFor: string[]
   reflections: string[]
 }
 
@@ -109,6 +116,9 @@ const EMPTY_PARTIAL: PartialReading = {
   relationships: [],
   narrative: null,
   answer: null,
+  driver: null,
+  actions: [],
+  watchFor: [],
   reflections: [],
 }
 
@@ -192,8 +202,14 @@ export function useReading(
                   /* 牌之后的四段同样边写边放。它们原本要等 done 才一次性出现，
                      那 9.6 秒（占总时长 48%）屏上没有任何新内容。 */
                   relationships: extractPartialRelationships(acc),
+                  driver: (() => {
+                    const coreIssue = extractPartial(acc, 'coreIssue')
+                    return coreIssue ? { coreIssue, whyItMatters: extractPartial(acc, 'whyItMatters') } : null
+                  })(),
                   narrative: extractPartial(acc, 'narrative'),
                   answer: extractPartial(acc, 'answerToQuestion'),
+                  actions: extractPartialActions(acc),
+                  watchFor: extractPartialStringList(acc, 'watchFor'),
                   reflections: extractPartialStringList(acc, 'reflectionQuestions'),
                 })
               },

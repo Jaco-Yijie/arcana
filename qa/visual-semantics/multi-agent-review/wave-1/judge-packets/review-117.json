@@ -1,0 +1,335 @@
+{
+  "reviewId": "review-117",
+  "blindImage": "qa/visual-semantics/blind-review/wave-1/review-117.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-1/reveal/review-117.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-b",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "keyObjects",
+          "existing": "two swords lying crossed on the ground at lower left",
+          "observed": "the two ground swords lie separate and roughly parallel; they neither cross nor overlap",
+          "evidence": "Both are fully visible hilt to tip. The upper one has its hilt to the upper left and its point to the lower right; the lower one repeats that orientation, offset down and to the right. There is clear bare earth between them along their whole length — no intersection point anywhere.",
+          "confidence": "high"
+        },
+        {
+          "field": "scene / visualTensions",
+          "existing": "A young man in a torn red tunic stands on a stony shore holding three swords",
+          "observed": "the foreground figure is walking, mid-stride, not standing",
+          "evidence": "His forward boot is planted flat while the rear boot is lifted onto its toe with the heel clear of the ground, the trailing leg extended behind him, and the torso carried forward over the leading foot. The posture is unambiguously a stride in progress, directed toward the viewer's right.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "three swords held by the foreground man (one in hand, two against his chest)",
+          "observed": "one in the lowered hand is certain and two in the shoulder bundle are confirmable, but a third in the bundle cannot be ruled out",
+          "evidence": "Two rounded pommels are clearly separable above the shoulder line and two crossguards with two descending blade lengths are visible against the chest — so the stated two is the confirmable minimum, not an established total. Additional blade edges behind the cradling arm are hidden by the arm and torso. I recorded this as null rather than a number, so the assertion of exactly three total is unsupported, not wrong.",
+          "confidence": "medium"
+        },
+        {
+          "field": "keyObjects",
+          "existing": "ornamental border with floral corner motifs and a V at the top",
+          "observed": "floral corner motifs are present, but no V-shaped ornament is visible at the top; the one centred ornament I can see sits at the bottom of the frame",
+          "evidence": "The top border at centre is plain double ruling with no motif interrupting it. Curling floral flourishes occupy the upper left and upper right corners. A small dark centred ornament sits on the divider above the blank panel at the bottom edge of the frame.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "two swords lying crossed on the ground at lower left",
+            "with": "two swords lying separate and roughly parallel on the ground at lower left"
+          },
+          {
+            "find": "the two fallen swords lie in the lower-left foreground, in front of and below the standing man",
+            "with": "the two fallen swords lie separate and roughly parallel in the lower-left foreground, in front of and below the walking man"
+          },
+          {
+            "find": "A young man in a torn red tunic stands on a stony shore holding three swords",
+            "with": "A young man in a torn red tunic walks along a stony shore mid-stride, holding swords"
+          },
+          {
+            "find": "the standing man faces left while the other two walk away from him",
+            "with": "the man strides to the right while turning his head to look back to the left, as the other two walk away from him"
+          },
+          {
+            "find": "three swords held by the foreground man (one in hand, two against his chest)",
+            "with": "swords held by the foreground man (one in the lowered hand; at least two cradled against the shoulder, exact bundle count not determinable)"
+          },
+          {
+            "find": "three swords are held close to the body while two lie discarded on the ground",
+            "with": "several swords are held close to the body while two lie discarded on the ground"
+          },
+          {
+            "find": "ornamental border with floral corner motifs and a V at the top",
+            "with": "ornamental border with floral corner motifs and a centred ornament at the bottom"
+          },
+          {
+            "find": "whether the two swords on the ground are crossed or simply overlapping",
+            "with": "(resolved: the two ground swords are separate and roughly parallel, neither crossed nor overlapping)"
+          },
+          {
+            "find": "confidence=high",
+            "with": "confidence=medium"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-117",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "foreground, right of center, occupying most of the frame height",
+              "posture": "walking forward toward the viewer's right, left leg forward, head turned back over the shoulder",
+              "gaze": "turned to the viewer's left, back along the path, eyes toward the two receding figures",
+              "heldObjects": [
+                "one blade gripped at the hilt in the lowered right hand (viewer's left), point angled down and back",
+                "a bundle of blades cradled against the left shoulder in the crook of the left arm (viewer's right)"
+              ],
+              "appearance": "young, curly light hair, rust-red tunic with scalloped hem over pale sleeves, belt with pouches, grey trousers, boots with wrapped bindings"
+            },
+            {
+              "position": "middle distance, left of center, on the path",
+              "posture": "walking away from the viewer, back turned",
+              "gaze": "away, down the path",
+              "heldObjects": [
+                "none visible"
+              ],
+              "appearance": "tunic and belt, light hair"
+            },
+            {
+              "position": "further middle distance, far left, on the same path",
+              "posture": "walking away from the viewer, back turned, smaller and further off",
+              "gaze": "away, down the path",
+              "heldObjects": [
+                "none visible"
+              ],
+              "appearance": "small pale silhouette, too distant for detail"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade lying flat on the ground",
+              "count": 2,
+              "countConfidence": "high",
+              "where": "lower left foreground on the bare earth — one nearer the top with its hilt to the left and point to the lower right, the second below and roughly parallel to it. Both are fully visible, hilt to tip, and do not overlap"
+            },
+            {
+              "type": "blade held point-down in the lowered hand",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "foreground figure's right hand (viewer's left), blade running down past the knee"
+            },
+            {
+              "type": "blade in the shoulder bundle",
+              "count": null,
+              "countConfidence": "low",
+              "where": "cradled against the foreground figure's left shoulder. Two rounded pommels are clearly separable above the shoulder line, and at least two crossguards are visible against the chest, with blade lengths descending past the hip. Whether the bundle holds 2 or 3 cannot be settled — the blades overlap and the ones behind are hidden by the arm and torso"
+            },
+            {
+              "type": "blade, total visible in the frame",
+              "count": null,
+              "countConfidence": "low",
+              "where": "at least 5 are individually confirmed (2 on the ground, 1 in the lowered hand, 2 in the bundle). The bundle may contain a third, giving 6. Recorded as null rather than guessed"
+            }
+          ],
+          "environment": [
+            "a worn dirt path running from the lower left into the middle distance",
+            "tufted grass and low scrub along the path edges and the right margin",
+            "a broad body of still water in the middle distance",
+            "low mountains / headland on the left horizon",
+            "a sky of long horizontal cloud streaks rendered in fine parallel hatching",
+            "an ornate ruled border frame with foliate corner flourishes and an empty cartouche panel across the bottom"
+          ],
+          "lightSources": [
+            "diffuse overcast daylight; no sun disc visible"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the foreground figure walks to the right while looking back to the left, toward the two figures receding up the path",
+            "the two blades on the ground lie behind and to the left of the foreground figure, left on the path he has come from",
+            "the water and mountains sit behind the path, above the horizon of the mid-ground",
+            "the bundle of blades is on the far side of the figure's body from the single lowered blade"
+          ],
+          "foreground": [
+            "the walking figure",
+            "the two blades on the ground",
+            "bare earth, stones and grass tufts"
+          ],
+          "background": [
+            "two receding figures",
+            "water",
+            "mountains",
+            "hatched sky"
+          ],
+          "palette": "sepia and ink-line engraving style with muted rust-red and grey-blue washes on aged paper"
+        },
+        "uncertainObservations": [
+          "The number of blades in the shoulder bundle is the critical unresolved item: 2 pommels and roughly 2 crossguards are visible, but a third blade hidden behind the arm cannot be ruled out. Recorded as null on purpose.",
+          "Therefore the total blade count in the image is also null — it is at least 5 and at most about 6.",
+          "The far-left background figure is small enough that its posture beyond 'walking away' is not determinable.",
+          "The bottom cartouche panel is blank in this rendering; whether it is meant to carry text is not visible."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-b"
+      }
+    },
+    {
+      "reviewer": "reviewer-d",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "scene / visualTensions",
+          "existing": "stands on a stony shore holding three swords",
+          "observed": "he is mid-stride, walking toward the viewer, not standing",
+          "evidence": "His trailing leg (viewer's left) has the heel lifted and the boot up on its toe, while the leading leg (viewer's right) is planted flat and forward, with his weight carried forward over it. That is a walking stride, not a standing pose.",
+          "confidence": "high"
+        },
+        {
+          "field": "keyObjects / scene",
+          "existing": "torn red-brown tunic with ragged hem",
+          "observed": "the tunic hem is an even, regular scalloped/dagged edge, matched by the same scalloping on the shoulder yoke — decorative, not damage",
+          "evidence": "The points along the hem are uniform in size and spacing, and the identical scalloped treatment is repeated on the shoulder yoke. Repeated regular scalloping in two separate places is a garment edge treatment, not tearing.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "stands on a stony shore holding three swords",
+            "with": "strides on a stony shore holding three swords"
+          },
+          {
+            "find": "the standing man faces left while the other two walk away from him",
+            "with": "the striding man faces left while the other two walk away from him"
+          },
+          {
+            "find": "the two fallen swords lie in the lower-left foreground, in front of and below the standing man",
+            "with": "the two fallen swords lie in the lower-left foreground, in front of and below the striding man"
+          },
+          {
+            "find": "A young man in a torn red tunic",
+            "with": "A young man in a red tunic with a dagged, scalloped hem"
+          },
+          {
+            "find": "torn red-brown tunic with ragged hem",
+            "with": "red-brown tunic with a dagged, scalloped hem and matching scalloped shoulder yoke"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-117",
+        "visibleFacts": {
+          "figureCount": 3,
+          "figures": [
+            {
+              "position": "right of center, foreground, filling most of the right half of the frame",
+              "posture": "walking / mid-stride toward the viewer and slightly to the viewer's left, one boot forward and planted, the other trailing",
+              "gaze": "head turned to the viewer's left, looking off to the side and slightly back over the shoulder; eyes open, mouth closed, calm expression",
+              "heldObjects": [
+                "one blade held point-down in the lowered hand on the viewer's left, blade angled forward and down",
+                "a bundle of blades cradled upright against the right shoulder with the other arm, pommels up"
+              ],
+              "details": "young man with curly light-brown hair, reddish-brown tunic with a scalloped/dagged hem and shoulder yoke, off-white full sleeves showing at the forearms, a belt with a hanging pouch at the hip, grey-blue trousers, brown ankle boots, pale cloth wrapping wound around one lower leg above the boot"
+            },
+            {
+              "position": "left middle ground, on the path",
+              "posture": "walking away from the viewer along the path",
+              "gaze": "facing away; head turned slightly so only the back/side of the head is seen",
+              "heldObjects": [],
+              "details": "grey-blue tunic belted at the waist, darker leggings, light-brown hair"
+            },
+            {
+              "position": "far left, further back on the path, smaller in scale",
+              "posture": "walking away from the viewer",
+              "gaze": "facing away; face not visible",
+              "heldObjects": [],
+              "details": "tan/pale tunic, too distant for further detail"
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade held in the foreground figure's lowered hand",
+              "count": 1,
+              "countConfidence": "high",
+              "where": "viewer's left of the figure, point angled down toward the ground"
+            },
+            {
+              "type": "blade cradled against the foreground figure's shoulder",
+              "count": null,
+              "countConfidence": "low",
+              "where": "upper right of the figure; see uncertainObservations"
+            },
+            {
+              "type": "blade lying flat on the ground",
+              "count": 2,
+              "countConfidence": "medium-high",
+              "where": "lower-left foreground on the dirt/grass; two separate blades lying roughly parallel, each with hilt and pommel toward the left and blade running down-right, the lower one closer to the bottom edge"
+            },
+            {
+              "type": "belt pouch",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "hanging at the foreground figure's left hip"
+            },
+            {
+              "type": "mountain / rocky headland",
+              "count": null,
+              "countConfidence": "low",
+              "where": "left background, rising above the water; one prominent peak with lower ridges merging behind it"
+            }
+          ],
+          "environment": [
+            "a dirt path/track running from the lower foreground back toward the left middle ground",
+            "scrubby grass, small plants and loose stones either side of the path",
+            "a body of water (lake or sea inlet) across the middle ground",
+            "hills and a mountain on the far left horizon",
+            "a large sky filled with hatched linework clouds",
+            "a decorative printed border with ornamental corner flourishes and a blank panel at the bottom",
+            "cross-hatched engraving/woodcut rendering throughout, tinted in browns, reds and grey-blues"
+          ],
+          "lightSources": [
+            "diffuse daylight; the sky is bright and overcast-to-broken, no sun disk visible in frame"
+          ],
+          "moonPhase": null,
+          "spatialRelations": [
+            "the two background figures walk away up the path to the left, while the foreground figure walks toward the viewer — they move in opposite directions",
+            "the two blades on the ground lie behind and to the left of the foreground figure, between him and the departing figures",
+            "the foreground figure's turned head points back toward the two departing figures and the abandoned ground blades",
+            "the water and mountains sit behind everything, at roughly the figure's hip height in the frame"
+          ],
+          "foreground": [
+            "the striding figure",
+            "two blades lying on the ground at lower left",
+            "dirt path, grass tufts and stones"
+          ],
+          "background": [
+            "two small walking figures",
+            "water",
+            "mountain and hills",
+            "hatched cloudy sky"
+          ]
+        },
+        "uncertainObservations": [
+          "I cannot reliably count the blades cradled against the shoulder. Two round pommels are clearly and separately resolvable at the top, and I can trace two distinct crossguards and at least two descending blade faces — but the figure's forearm crosses the bundle and there is a further hilt-like shape behind the arm that may be a third blade or may be the edge of one already counted. I record that sub-count as null; it is two or three.",
+          "Because of that, the total number of blades in the image is also not something I will commit to — the individually confident sub-counts are: one in the lowered hand, two on the ground.",
+          "The two ground blades are partly obscured by grass and the lower one runs close to the border; a third, fully hidden blade in the grass cannot be ruled out, though I see no evidence of one.",
+          "The middle-ground figure's sex, and whether either background figure carries anything, cannot be determined at that scale.",
+          "The bottom border panel is blank in the artwork itself (not a mask) and carries no readable text."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-d"
+      }
+    }
+  ]
+}

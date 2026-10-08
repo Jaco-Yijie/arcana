@@ -1,0 +1,205 @@
+{
+  "reviewId": "review-415",
+  "blindImage": "qa/visual-semantics/blind-review/wave-4/review-415.png",
+  "escalationReasons": [
+    "reviewer raised corrected/uncertain"
+  ],
+  "reviewerCount": 2,
+  "verdictTally": {
+    "corrected": 2
+  },
+  "existingSemanticFile": "qa/visual-semantics/multi-agent-review/wave-4/reveal/review-415.md",
+  "reviewers": [
+    {
+      "reviewer": "reviewer-a",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "visualTensions",
+          "existing": "the blindfold covers the eyes while the body faces the light",
+          "observed": "the bright canopy break is BEHIND her; she walks down the path toward the viewer, backlit, with her back to the light",
+          "evidence": "The single light source is a sun shaft breaking through the canopy at upper centre-right, which falls on the path behind her and rims her shoulders; her feet and body advance toward the bottom of the frame.",
+          "confidence": "high"
+        },
+        {
+          "field": "visualTensions",
+          "existing": "the cloth binds her hands and head yet trails loose and free",
+          "observed": "only the head/eyes are wound; both hands are free — her left hand grips the shawl edge at her chest, her right arm hangs down and out with fingers open",
+          "evidence": "No cloth passes around either wrist; the pale strips hang from the shawl and the head wrap across the skirt, not from her hands.",
+          "confidence": "high"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the blindfold covers the eyes while the body faces the light",
+            "with": "the blindfold covers the eyes while the body walks out of the light, her back to the sunlit gap behind her"
+          },
+          {
+            "find": "the cloth binds her hands and head yet trails loose and free",
+            "with": "the cloth is wound over her eyes while both hands stay free, one holding the shawl and one hanging open, the loose ends trailing"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-415",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of frame, standing on a dirt path",
+              "posture": "standing upright, mid-stride, both bare feet on the wet path, weight on the near foot; not seated, not kneeling",
+              "gaze": "eyes are covered by a pale cloth band wound around the head; the head is turned to the figure's left (viewer's right) and slightly up, away from the direction the body and feet face",
+              "heldObjects": [
+                "no weapon or vessel in either hand; her viewer-right hand (her left) is raised to her chest gripping the edge of the draped shawl; her viewer-left arm hangs down and is extended slightly out and forward from the body, fingers open and loose"
+              ],
+              "clothing": "long pale cream layered skirt, a wrapped patterned green-grey shawl over the shoulders and one arm, a sash/pouch at the waist, trailing pale ribbons/strips hanging from the shawl and the head wrap; long dark braided hair; barefoot"
+            }
+          ],
+          "objects": [
+            {
+              "type": "upright sword planted in the ground",
+              "count": 7,
+              "countConfidence": "medium",
+              "where": "standing in the earth on both sides of the path — 3 on the viewer-left of the figure, 4 on the viewer-right",
+              "orientation": "all vertical with the pommel and crossguard at the TOP and the blade running DOWN into the soil; the points are buried, not raised",
+              "arrangement": "two flanking files, one on each side of the path, forming an avenue/corridor the figure walks through; the gap is the open path down the middle, and there is a wide unobstructed opening directly ahead of the figure (no blade blocks the path itself)"
+            },
+            {
+              "type": "mushrooms / toadstools",
+              "count": null,
+              "countConfidence": "low",
+              "where": "lower-left corner, painted as part of the decorative border",
+              "orientation": "upright caps on stalks",
+              "arrangement": "a small cluster; individual caps overlap so an exact count is unreliable"
+            }
+          ],
+          "environment": [
+            "dense green summer woodland, tall trunks on both sides, heavy leaf canopy overhead",
+            "a muddy, leaf-littered path with standing water/puddles running from the foreground into the distance",
+            "ivy and ferns on the ground and climbing the trunks",
+            "an ornate painted border frame around the whole image with foliage/mushroom/fern motifs in the corners"
+          ],
+          "lightSources": [
+            "bright daylight sun breaking through the canopy from the upper center-right, throwing a bright shaft down the path behind the figure"
+          ],
+          "moonPhase": "no moon visible — this is a daylight scene",
+          "spatialRelations": [
+            "the figure walks toward the viewer, coming down the path out of the bright gap between the trees",
+            "the planted blades flank her on both sides and are set back into the undergrowth off the path; she is between the two files, not behind or in front of them",
+            "her head is turned back over her shoulder to the viewer's right while her body and feet continue toward the viewer — head direction and travel direction differ",
+            "the blades stand roughly in receding perspective, the nearest ones largest at the left and right edges"
+          ],
+          "foreground": [
+            "wet muddy path with reflective puddles and scattered leaves",
+            "border mushrooms lower left, fern and lily-of-the-valley sprays lower right"
+          ],
+          "background": [
+            "sunlit break in the woodland canopy, hazy pale-green light",
+            "receding tree trunks and ivy"
+          ]
+        },
+        "uncertainObservations": [
+          "Blade count is my best individual tally (left: 3, right: 4) but the group is partly screened by foliage and trunks and the outer ones are clipped by the painted border, so an eighth blade could be hidden at either edge or behind the figure. Treat 7 as probable, not certain.",
+          "Whether the cloth over the eyes is a deliberate binding or simply a head wrap that has slipped cannot be determined; it does clearly cover both eyes.",
+          "Exact mushroom count in the corner is not resolvable."
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-a"
+      }
+    },
+    {
+      "reviewer": "reviewer-c",
+      "verdict": "corrected",
+      "issues": [
+        {
+          "field": "visualTensions",
+          "existing": "the cloth binds her hands and head yet trails loose and free",
+          "observed": "only the head is bound (blindfold); the hands are free — the left arm hangs down and out with the hand open and empty, the right hand loosely grips the shawl at her chest",
+          "evidence": "The pale strip hangs from the chest/right hand down across the skirt; no loop or wrap crosses either wrist, and the extended left hand shows spread, unbound fingers.",
+          "confidence": "medium"
+        }
+      ],
+      "suggestedPatch": {
+        "replace": [
+          {
+            "find": "the cloth binds her hands and head yet trails loose and free",
+            "with": "the cloth covers her eyes yet her hands are free, one open and reaching, the strip trailing loose"
+          }
+        ]
+      },
+      "blindObservation": {
+        "reviewId": "review-415",
+        "visibleFacts": {
+          "figureCount": 1,
+          "figures": [
+            {
+              "position": "center of frame, on a forest path",
+              "posture": "STANDING, mid-stride walking forward toward the viewer / down the path, barefoot, weight on the left leg",
+              "gaze": "eyes covered by a pale cloth band tied around the head (blindfolded); the face is turned to the viewer's right, three-quarter, not straight ahead along the path",
+              "heldObjects": [
+                "right hand raised to the chest, gripping the edge of a green shawl",
+                "left arm extended down and out to the side, hand open, fingers spread, empty"
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "type": "blade (long sword) planted in the ground",
+              "count": 8,
+              "countConfidence": "medium",
+              "where": "four on the left side of the path, four on the right side",
+              "orientation": "every one is vertical and driven POINT-DOWN into the earth, hilt and pommel uppermost, crossguards level",
+              "arrangement": "two flanking rows lining the path and receding into the distance; a wide open gap down the middle where the figure walks; nothing planted in front of or behind her on the path itself"
+            },
+            {
+              "type": "mushroom",
+              "count": 3,
+              "countConfidence": "medium",
+              "where": "lower left corner, on the bank",
+              "orientation": "caps up on upright stalks",
+              "arrangement": "clustered"
+            },
+            {
+              "type": "fern frond",
+              "count": 1,
+              "countConfidence": "medium",
+              "where": "lower right corner",
+              "orientation": "arcing up and to the left",
+              "arrangement": "single large frond with a small white bell-flower stem beside it"
+            }
+          ],
+          "environment": [
+            "a narrow earth and leaf-litter path running away from the viewer",
+            "ivy-covered tree trunks on both sides",
+            "dense green canopy overhead",
+            "mossy banks and ground foliage",
+            "an ornamental drawn border frame with leaf motifs around the whole image"
+          ],
+          "lightSources": [
+            "daylight breaking through the canopy from behind the figure, upper center — a bright gap in the leaves; warm and clearly daytime"
+          ],
+          "moonPhase": "no moon visible",
+          "spatialRelations": [
+            "the figure stands between the two rows of planted blades, level with roughly the second blade of each row",
+            "the path continues past her toward the bright canopy gap behind",
+            "her extended left hand reaches toward, but does not touch, the left-hand row"
+          ],
+          "foreground": [
+            "mushrooms at lower left, fern at lower right, wet leaf-strewn path",
+            "the nearest planted blade on each side"
+          ],
+          "background": [
+            "forest trunks, ivy, the bright canopy opening"
+          ]
+        },
+        "uncertainObservations": [
+          "the blade count of 4 + 4 is my best resolution; the farthest blade in each row is small and partly screened by foliage, so the true total could be 7 or 9",
+          "I cannot tell whether the cloth over the eyes is tied at the back or simply draped"
+        ],
+        "reviewConfidence": "medium",
+        "reviewer": "reviewer-c"
+      }
+    }
+  ]
+}

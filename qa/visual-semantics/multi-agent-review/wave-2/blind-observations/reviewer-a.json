@@ -1,0 +1,715 @@
+[
+ {
+  "reviewId": "review-203",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, occupying the middle horizontal band of the frame",
+     "posture": "lying down on the back, full length, on a long stone/carved bier or chest, head resting on a dark pillow at left, body covered by a deep-blue star-patterned coverlet",
+     "gaze": "eyes appear closed, face turned slightly upward and to the right",
+     "heldObjects": [],
+     "notes": "hands rest folded on the chest over the coverlet; dark curly shoulder-length hair"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 3,
+     "countConfidence": "high",
+     "where": "mounted point-down on the dark wall above the reclining figure; counted individually left-to-right at roughly one-third, center, and two-thirds of the frame width, each fully separated from its neighbours with clear dark gaps"
+    },
+    {
+     "type": "sword",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "a separate blade laid horizontally, hilt at left, across the ornate front panel of the stone chest in the lower foreground, below and in front of the reclining figure"
+    },
+    {
+     "type": "armillary sphere on a stand",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower left, on a tripod base beside the head of the bier"
+    },
+    {
+     "type": "lantern",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right edge, standing on the bier's far end; a small warm flame inside a metal cage"
+    },
+    {
+     "type": "arched window",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left, tall pointed arch filled with a nebula/starfield and round planetary bodies"
+    },
+    {
+     "type": "round planetary body inside the window",
+     "count": null,
+     "countConfidence": "low",
+     "where": "within the arched window; at least two large discs are visible (one upper area, one mid-left) plus smaller bright points that may or may not be additional discs"
+    },
+    {
+     "type": "pillow",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "under the figure's head, left end of the bier"
+    },
+    {
+     "type": "conifer tree silhouette",
+     "count": null,
+     "countConfidence": "low",
+     "where": "dark spiky silhouettes along the lower portion of the window opening; individual trunks are not separable"
+    }
+   ],
+   "environment": [
+    "dark stone interior chamber",
+    "wall covered in faint engraved circles, grids and constellation lines",
+    "polished dark floor bearing a large circular star-chart inlay in the lower third",
+    "carved stone bier/sarcophagus-like chest with panelled sides"
+   ],
+   "lightSources": [
+    "glowing nebula/starfield through the arched window, upper left",
+    "small warm lantern flame at right",
+    "faint ambient glitter from stars embedded in the wall and coverlet"
+   ],
+   "moonPhase": "no moon resolvable; round bodies in the window are lit discs but their phase cannot be determined",
+   "spatialRelations": [
+    "the three wall swords hang in a row directly above the reclining figure's torso and legs",
+    "the single horizontal sword on the chest front is below the figure and points the opposite axis (horizontal vs vertical)",
+    "the armillary sphere is at the head end, the lantern at the foot end, bracketing the bier",
+    "the circular floor star-chart lies in front of and below the chest, nearest the viewer"
+   ],
+   "foreground": [
+    "polished floor with circular star-chart inlay",
+    "front panel of the stone chest with the horizontal sword"
+   ],
+   "background": [
+    "dark engraved wall with the three hanging swords",
+    "arched window with nebula and planets"
+   ]
+  },
+  "uncertainObservations": [
+   "total number of blades in the frame is ambiguous as a single class: three are wall-mounted and one is a separate horizontal blade on the chest — I report them as two distinct groups rather than one summed count",
+   "the number of round planetary discs inside the window cannot be resolved; some bright shapes may be nebula clouds rather than bodies",
+   "whether the figure's eyes are fully closed or narrowly open cannot be resolved at this resolution",
+   "it is unclear whether the figure is asleep or otherwise; only the reclining posture is recorded"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-215",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, standing on a slope of tangled vines",
+     "posture": "standing, striding/braced — left leg forward and bent, right leg extended back onto a lower vine; torso twisted toward the viewer's right",
+     "gaze": "upward and to the right, toward the raised blade",
+     "heldObjects": [
+      "a sword, gripped in the raised right hand, blade angled up and to the right"
+     ],
+     "notes": "curly dark hair; wears a layered green-brown hooded tunic with a belt and pouches, rolled sleeves, and tall boots; the left hand is lowered and resting on/gripping a vine"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "raised aloft in the figure's right hand, upper center-right; leafy sprigs appear entwined near the blade"
+    },
+    {
+     "type": "bird",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper left, a black bird perched in profile on a horizontal vine/branch, facing right"
+    },
+    {
+     "type": "mushroom",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower left corner; a cluster of pale capped mushrooms — at least four caps are distinguishable but overlapping and partly cut off by the frame edge"
+    },
+    {
+     "type": "white flower",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower right and lower center; several small white star-shaped blooms scattered among foliage, too many and too overlapping to count"
+    },
+    {
+     "type": "path",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "a narrow earthen track running from the lower center up into the misty forest behind the figure"
+    },
+    {
+     "type": "tree trunk",
+     "count": null,
+     "countConfidence": "low",
+     "where": "background forest; numerous vertical trunks fading into haze, not individually separable"
+    },
+    {
+     "type": "decorative border frame",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "a pale carved botanical border running around all four edges of the artwork"
+    }
+   ],
+   "environment": [
+    "dense green forest with hanging ivy and thick braided vines",
+    "sunlight streaming down through the canopy from upper center",
+    "ferns, moss and leaf litter on the ground",
+    "misty depth behind the figure"
+   ],
+   "lightSources": [
+    "bright diffuse sunlight breaking through the canopy at upper center, creating visible light shafts"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the raised sword points up toward the brightest part of the canopy",
+    "the perched bird is diagonally up-left from the figure's head, roughly level with the sword hilt",
+    "the path recedes between the figure and the right-hand mass of vines",
+    "heavy vine coils frame the figure on both left and right"
+   ],
+   "foreground": [
+    "mushroom cluster lower left",
+    "broad leaves, ferns and white flowers along the bottom edge",
+    "thick vine ropes"
+   ],
+   "background": [
+    "hazy sunlit forest of vertical trunks",
+    "the ascending path"
+   ]
+  },
+  "uncertainObservations": [
+   "exact mushroom count in the lower-left cluster cannot be resolved — caps overlap and the frame cuts through them",
+   "the number of white flowers is not countable",
+   "whether the green sprigs near the blade are attached to the sword or are background foliage passing in front of it cannot be determined",
+   "the bird's species is not determinable; only a dark silhouette with a pointed beak is visible"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-214",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "dead center, seated",
+     "posture": "seated upright and frontal on a low stone bench/plinth, knees together, long robes spilling down over the seat; both arms lowered and held symmetrically out to the sides",
+     "gaze": "cannot be determined — a pale cloth band is tied across the eyes, with its loose ends trailing to the figure's right",
+     "heldObjects": [
+      "a sword in each hand — one in the left hand, one in the right"
+     ],
+     "notes": "dark upswept hair; deep blue-purple robe/cloak over a star-flecked gown; a pendant and an ornate circular belt ornament at the waist"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "held one per hand and crossed in an X in front of the figure's chest; each blade traced individually from its hilt at the figure's hip up past the opposite shoulder to the upper corners of the frame"
+    },
+    {
+     "type": "blindfold",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "pale band tied across the seated figure's eyes"
+    },
+    {
+     "type": "crescent moon",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper center, above the figure's head, between the two crossed blades"
+    },
+    {
+     "type": "armillary sphere on a pedestal",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower left corner, on a tall stand"
+    },
+    {
+     "type": "lantern",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower right, standing on the stone floor beside the bench; warm flame inside"
+    },
+    {
+     "type": "stone bench / seat",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "beneath the figure, a broad flat slab on a stepped base"
+    },
+    {
+     "type": "island landmass",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one at mid-left with a small columned structure on top, one at mid-right; both sit on the horizon across the water"
+    },
+    {
+     "type": "building",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "a small pale colonnaded structure on the left-hand island"
+    }
+   ],
+   "environment": [
+    "night sky dense with stars, constellation lines and concentric orbital rings",
+    "purple nebula band across the upper right",
+    "a wide calm body of water spanning the middle of the frame with a light reflection trail",
+    "stone terrace/floor in the lower third, with an inlaid circular pattern at bottom right"
+   ],
+   "lightSources": [
+    "the crescent moon upper center",
+    "the lantern flame lower right",
+    "stars and glowing constellation lines throughout the sky",
+    "a reflected light path on the water below the moon"
+   ],
+   "moonPhase": "crescent — a clear thin waxing-shaped crescent with the lit limb on the lower-left and the dark disc faintly visible",
+   "spatialRelations": [
+    "the two swords cross in an X centered on the figure's chest, their points running off toward the upper-left and upper-right corners",
+    "the crescent moon sits directly above the figure's head in the V formed between the two blades",
+    "the armillary sphere and the lantern sit at opposite lower corners, framing the seated figure symmetrically",
+    "water and islands lie behind the figure, at the level of the figure's lap"
+   ],
+   "foreground": [
+    "stone terrace floor",
+    "armillary sphere at lower left",
+    "lantern at lower right"
+   ],
+   "background": [
+    "starry sky with orbital rings",
+    "crescent moon",
+    "water and two island landmasses"
+   ]
+  },
+  "uncertainObservations": [
+   "the exact number of distinct landmasses on the horizon is uncertain; the right-hand mass may be one island or two overlapping",
+   "whether the figure's seat is a plain bench or a more elaborate throne cannot be determined — the robes cover most of it",
+   "small bright points along the far shoreline may be lights or stars reflected; not resolvable"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-202",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left of center, lower-middle of the frame",
+     "posture": "standing / mid-stride, seen from behind, walking away from the viewer up a path; barefoot, right leg forward",
+     "gaze": "away from the viewer — the head is turned slightly right, face not visible",
+     "heldObjects": [
+      "a tall staff or pole raised in the right hand, with a ring-shaped wreath fixed near its top"
+     ],
+     "notes": "ragged layered robe with torn hem; a satchel/pouch slung across the back on a strap; dark tousled hair"
+    }
+   ],
+   "objects": [
+    {
+     "type": "disembodied arm and hand",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "emerging from the left edge / a dark doorway at upper left, reaching down and to the right toward the wreath; a pale ribbon or cloth hangs from it"
+    },
+    {
+     "type": "wreath / ring",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "near the top of the staff the walking figure holds, upper left of center"
+    },
+    {
+     "type": "upright pole/stave set in a stone planter box",
+     "count": 4,
+     "countConfidence": "medium",
+     "where": "ranged along the right side of the path; counted one at a time from the far right inward — (1) the tallest, far right, running off the top of the frame into a large ornate box at lower right; (2) next inward, box at mid-right; (3) next inward, a shorter one with a smaller box; (4) the innermost and shortest, nearest the path edge"
+    },
+    {
+     "type": "stone planter box",
+     "count": 4,
+     "countConfidence": "medium",
+     "where": "one at the base of each upright pole on the right side, receding up the path"
+    },
+    {
+     "type": "path",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "a cobbled/flagstone track running from the bottom center up and to the right, curving toward the distant wall"
+    },
+    {
+     "type": "wall with battlements",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right background, a crenellated fortification silhouette across the top of the slope"
+    },
+    {
+     "type": "arched gateway / door",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "center right, set into the base of the distant wall where the path terminates; faintly lit"
+    },
+    {
+     "type": "doorway or window frame",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "upper left, a dark rectangular opening from which the reaching arm emerges"
+    },
+    {
+     "type": "cast shadow",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "a long shadow of the figure and staff thrown down-right across the path in the foreground"
+    }
+   ],
+   "environment": [
+    "near-monochrome dark sepia/charcoal scene, very low light",
+    "night or deep dusk",
+    "rough stone ground and cobbled path",
+    "steep dark slope on the right"
+   ],
+   "lightSources": [
+    "a faint glow from the arched opening in the distant wall",
+    "an unseen light from the upper left casting the figure's shadow down and to the right"
+   ],
+   "moonPhase": "no moon visible",
+   "spatialRelations": [
+    "the reaching arm's hand is very close to, and appears to be meeting, the wreath on the walker's staff",
+    "the row of planted poles recedes along the right side of the path, growing shorter with distance",
+    "the path leads from the figure's feet up to the arched opening in the battlemented wall",
+    "the figure's shadow points away from the upper-left light, back toward the lower right"
+   ],
+   "foreground": [
+    "the walking figure and the shadow",
+    "the nearest large ornate planter box at lower right",
+    "cobbled ground"
+   ],
+   "background": [
+    "crenellated wall and arched opening",
+    "dark sky"
+   ]
+  },
+  "uncertainObservations": [
+   "I deliberately do NOT give a single summed count for the pole/stave class. They fall into separate groups: 4 planted in boxes on the right (medium confidence), 1 held by the walking figure, and possibly 1 held by the disembodied arm",
+   "it is genuinely unclear whether the disembodied arm holds a separate pole or is grasping/hanging the wreath onto the walker's own staff — the two overlap in a dark region",
+   "the count of planted poles is medium, not high: the image is extremely dark, the two middle poles are close together, and the farthest one fades into the slope. If a fifth exists further up the path it would not be separable from the background at this exposure",
+   "whether the pale hanging element by the arm is a ribbon, banner or sleeve cannot be determined",
+   "the figure's footwear state (barefoot vs dark wrappings) is only probable, not certain"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-201",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "left half of the frame, filling the full height",
+     "posture": "standing, shown in three-quarter/profile view facing the viewer's right; head inclined downward",
+     "gaze": "downward and to the right; eyes appear closed or nearly closed",
+     "heldObjects": [],
+     "notes": "both hands raised and clasped together in front of the chest; very pale silver-white curly hair gathered up with floral ornaments; wearing a pale translucent layered gown with a wide veil-like cape or sheer wings of fabric spreading behind the shoulders"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "two blades planted point-down into the ground, pommels up — one at center of frame just in front of the figure's skirt, one further right and slightly lower in the frame; each hilt and crossguard is individually visible"
+    },
+    {
+     "type": "crescent moon",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right, among pale clouds"
+    },
+    {
+     "type": "stone balustrade / railing",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "middle right, running along the edge of a terrace above the water"
+    },
+    {
+     "type": "urn or planter with foliage",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right edge, on top of the terrace wall"
+    },
+    {
+     "type": "white flower",
+     "count": null,
+     "countConfidence": "low",
+     "where": "scattered across the lower left and lower right foreground; pale roses/blooms blending into the near-white palette, not individually countable"
+    },
+    {
+     "type": "body of water",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "middle right background, with a bright horizontal shimmer of reflected light"
+    }
+   ],
+   "environment": [
+    "overall extremely pale, high-key white / lavender palette, like a washed watercolour",
+    "clouded sky occupying the upper right",
+    "a terrace or garden ledge overlooking water",
+    "pale flowering foliage along the bottom edge"
+   ],
+   "lightSources": [
+    "the crescent moon upper right",
+    "diffuse bright sky light; a glinting reflection line on the water"
+   ],
+   "moonPhase": "crescent — lit limb on the right/lower-right, with the remainder of the disc faintly suggested",
+   "spatialRelations": [
+    "the figure stands at left with the two planted swords to her right, between her and the water",
+    "the nearer sword's blade disappears into the pale foliage at the bottom of the frame",
+    "the crescent moon is high above and to the right of the bowed head",
+    "the water and balustrade recede behind the swords"
+   ],
+   "foreground": [
+    "pale blooms and foliage across the bottom",
+    "the two planted sword hilts"
+   ],
+   "background": [
+    "clouded sky with crescent moon",
+    "water with light reflection",
+    "terrace balustrade and urn"
+   ]
+  },
+  "uncertainObservations": [
+   "the sword count is medium confidence only: the palette is nearly white-on-white and the figure's wide sheer cape passes in front of the area to her right, so an additional blade concealed behind the drapery could not be ruled out. I resolved exactly two hilts",
+   "whether the pale structures behind the shoulders are a fabric cape, a veil, or wings cannot be determined — they read as translucent layered material",
+   "the figure's eyes may be closed or simply downcast; not resolvable",
+   "the exact moon phase reading is low-contrast against the bright cloud and could be slightly fuller than a thin crescent",
+   "the number of white blooms is not countable"
+  ],
+  "reviewConfidence": "medium",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-213",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, standing on a circular stone platform in the lower third",
+     "posture": "standing, seen from behind; left arm fully extended straight upward; body slightly turned; long heavy cloak falling to the platform",
+     "gaze": "away from the viewer, apparently upward along the raised arm; face not visible",
+     "heldObjects": [
+      "a single sword gripped in the raised hand, blade pointing straight up and glowing along its length"
+     ],
+     "notes": "dark hooded/collared cloak covered in star and constellation patterning, with a circular medallion ornament at the hip"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "held vertically overhead in the figure's raised hand, running up the center of the frame; it is the only blade in the image"
+    },
+    {
+     "type": "crown",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper center, drawn in glowing golden line-light, floating directly above the sword's tip"
+    },
+    {
+     "type": "laurel / leafy branch made of light",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "one sweeping out to the left of the crown and one to the right, forming a symmetrical wreath shape around it"
+    },
+    {
+     "type": "large planetary body",
+     "count": null,
+     "countConfidence": "low",
+     "where": "one large cratered disc at mid-left; at least one smaller disc at upper right and another faint one at mid-right — the smaller ones are dim and partly lost in nebula, so a reliable total is not possible"
+    },
+    {
+     "type": "armillary sphere on a pedestal",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "left side, on a stone plinth beside the platform"
+    },
+    {
+     "type": "large astrolabe / engraved disc",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right side, a circular concentric-ringed dial mounted on a stone base"
+    },
+    {
+     "type": "celestial globe on a stand",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "lower right, a sphere on a short pedestal in front of the astrolabe"
+    },
+    {
+     "type": "lantern",
+     "count": 2,
+     "countConfidence": "medium",
+     "where": "one small warm lantern on the left plinth beside the armillary sphere; one on the right beside the astrolabe"
+    },
+    {
+     "type": "circular stone platform",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "lower center, incised with concentric rings and radial star-chart lines, with a low curved parapet at its far edge"
+    },
+    {
+     "type": "mountain range",
+     "count": 1,
+     "countConfidence": "medium",
+     "where": "right background, dark peaks along the horizon"
+    }
+   ],
+   "environment": [
+    "vast night sky filled with stars, nebula clouds, constellation lines and concentric orbital arcs",
+    "a bright golden sunset or sunrise band low on the horizon at center",
+    "a broad body of water reflecting the horizon glow",
+    "a stone observatory-like terrace in the foreground"
+   ],
+   "lightSources": [
+    "the glowing sword blade itself",
+    "the golden crown and laurel line-light above it",
+    "the golden band of light at the horizon, center",
+    "two small lantern flames, lower left and lower right",
+    "stars and luminous constellation lines"
+   ],
+   "moonPhase": "not determinable — the visible discs read as fully lit or partly shaded planetary bodies rather than a clear lunar crescent",
+   "spatialRelations": [
+    "the raised sword points directly up at the floating crown, which sits between the two light-branches",
+    "the figure stands at the center of the circular platform, back to the viewer, facing the horizon glow",
+    "the armillary sphere and the astrolabe sit at opposite sides, flanking the platform",
+    "the horizon light and its water reflection form a vertical bright axis that lines up with the sword and crown"
+   ],
+   "foreground": [
+    "circular incised stone platform",
+    "armillary sphere and plinth at left",
+    "astrolabe and globe at right",
+    "the standing figure"
+   ],
+   "background": [
+    "starfield with nebulae and orbital rings",
+    "planetary discs",
+    "sunset horizon over water",
+    "distant mountains and shoreline"
+   ]
+  },
+  "uncertainObservations": [
+   "the number of planetary/round celestial bodies cannot be reliably counted — one large disc at mid-left is clear, but the two smaller candidates on the right are dim and overlap nebula texture",
+   "the lantern count is medium: the right-hand light source is small and partly occluded by the astrolabe base",
+   "whether the lower-right sphere is a celestial globe, an orb, or another planter cannot be determined",
+   "no facial features or hair are visible; the figure's hood/collar obscures the head"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-a"
+ },
+ {
+  "reviewId": "review-205",
+  "visibleFacts": {
+   "figureCount": 1,
+   "figures": [
+    {
+     "position": "center-left, seated on a moss-covered rock",
+     "posture": "seated, body angled to the viewer's left, legs folded/tucked to the left, long pale skirt spread over the rock; both arms crossed over the chest",
+     "gaze": "cannot be determined — a green cloth band is tied across the eyes; the head is turned up and to the right",
+     "heldObjects": [
+      "a sword in each hand, both held upright against the chest"
+     ],
+     "notes": "dark hair pinned up with leaves/sprigs; wears a green knitted shawl over a cream lace bodice and long cream skirt"
+    }
+   ],
+   "objects": [
+    {
+     "type": "sword",
+     "count": 2,
+     "countConfidence": "high",
+     "where": "crossed over the figure's chest — the left hand grips one whose hilt is at the figure's right shoulder, the right hand grips the other whose hilt is at the left shoulder; both blades point upward and their lower portions cross over the lap"
+    },
+    {
+     "type": "blindfold",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "green fabric band tied across the seated figure's eyes, ends trailing behind"
+    },
+    {
+     "type": "crescent moon",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "upper right, in a pale patch of daylight sky above the treeline"
+    },
+    {
+     "type": "mushroom",
+     "count": null,
+     "countConfidence": "low",
+     "where": "bottom left corner; a small cluster of pale-stemmed mushrooms — roughly three to four caps are suggested but they overlap and the frame edge cuts through them"
+    },
+    {
+     "type": "white flower",
+     "count": null,
+     "countConfidence": "low",
+     "where": "lower left, several small white blooms with yellow centers among the ferns; overlapping and partly cut off"
+    },
+    {
+     "type": "stream / river",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "right side, dark reflective water running from the middle distance down toward the lower right"
+    },
+    {
+     "type": "boulder",
+     "count": null,
+     "countConfidence": "low",
+     "where": "mossy rocks along the near bank at center and right; individual rocks merge into one another"
+    },
+    {
+     "type": "decorative border frame",
+     "count": 1,
+     "countConfidence": "high",
+     "where": "pale carved botanical border around the edges of the artwork, with cone and bracket-fungus motifs at the corners"
+    }
+   ],
+   "environment": [
+    "daylight woodland glade",
+    "dense green canopy and undergrowth, ferns and moss",
+    "a stream with a rocky bank on the right",
+    "pale blue-green sky visible through a gap in the trees at upper right"
+   ],
+   "lightSources": [
+    "soft daylight from the upper right, with visible light shafts angling down through the trees",
+    "the crescent moon is present in the lit sky but is not the dominant light"
+   ],
+   "moonPhase": "crescent — a distinct thin crescent with the lit limb on the left, visible in a daytime-looking sky",
+   "spatialRelations": [
+    "the two swords form a narrow X across the figure's torso, hilts at opposite shoulders",
+    "the figure's blindfolded head is turned toward the upper right, the same direction as the moon and the light source, though the eyes are covered",
+    "the stream lies behind and to the right of the seated figure",
+    "the mushroom and flower cluster sit in the near foreground at lower left, below the figure's skirt"
+   ],
+   "foreground": [
+    "mossy ground, ferns, mushrooms and white flowers along the bottom",
+    "the seated figure on the rock"
+   ],
+   "background": [
+    "sunlit woodland",
+    "stream",
+    "sky gap with the crescent moon"
+   ]
+  },
+  "uncertainObservations": [
+   "exact mushroom count at lower left is not resolvable — caps overlap and the frame edge clips the cluster",
+   "the number of white flowers cannot be counted",
+   "a crescent moon appearing in what reads as a daylit sky is a visible tension within the frame, noted as an observation rather than explained",
+   "whether the band across the eyes is a blindfold or a wrapped headband that happens to cover the eyes cannot be fully distinguished, though it does cover both eyes",
+   "the individual boulders along the bank cannot be separated"
+  ],
+  "reviewConfidence": "high",
+  "reviewer": "reviewer-a"
+ }
+]
